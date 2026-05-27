@@ -1,0 +1,4303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gatilhos para Oportunidades — Guia HighLevel</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+
+<meta name="description" content="Guia completo dos gatilhos de Oportunidades do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 04/12 do guia oficial em português." />
+<meta name="author" content="Magnetic Funnels" />
+<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, gatilhos, oportunidades, CRM, workflow, PT-BR" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Gatilhos para Oportunidades — Guia HighLevel" />
+<meta property="og:description" content="Guia completo dos gatilhos de Oportunidades do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 04/12 do guia oficial em português." />
+<meta property="og:site_name" content="Magnetic Funnels" />
+<meta property="og:locale" content="pt_BR" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gatilhos para Oportunidades — Guia HighLevel" />
+<meta name="twitter:description" content="Guia completo dos gatilhos de Oportunidades do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 04/12 do guia oficial em português." />
+
+
+<!--
+  ═══════════════════════════════════════════════════════════════════════════
+  CONFIGURAÇÃO DO GUIA
+  ═══════════════════════════════════════════════════════════════════════════
+
+  Este arquivo usa o TEMA HIGHLEVEL.
+  Para gerar a versão Magnetic Funnels, use o arquivo guia-magnetic-funnels.html
+
+  ───── LINKS PARA SUBSTITUIR (Ctrl+F em cada placeholder) ─────
+
+  https://magneticflows.com/30-dias     → HighLevel 30 dias grátis (afiliação)
+  https://gokollab.com/highlevelbrasil        → Comunidade gratuita Magnetic Flows
+  https://chat.whatsapp.com/JGPLBTmaTLq7do2FqfjALQ          → Grupo WhatsApp
+  https://br.magneticfunnels.io        → Assinatura paga Magnetic Funnels
+
+  ───── TEXTOS DE MARCA (pesquise e edite se quiser mudar o tom) ─────
+
+  Produto principal: "HighLevel" (linha 43 em diante no conteúdo)
+  Texto CTA fixo: busque por "CTA-FIXO" nos comentários HTML
+  Texto CTAs contextuais: busque por "CTA-CONTEXTUAL"
+
+  ═══════════════════════════════════════════════════════════════════════════
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎨 SISTEMA DE TEMAS
+     Altere estas variáveis pra trocar completamente o visual do guia.
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  :root {
+    /* ───── TEMA HIGHLEVEL · Branding oficial HighLevel ───── */
+    --brand-name: 'HighLevel';
+
+    /* Cores primárias oficiais HighLevel */
+    --brand-accent: #FEB902;          /* Capture Yellow — cor principal da marca */
+    --brand-accent-deep: #d69c00;     /* Amarelo mais escuro pra hovers/sombras */
+    --brand-secondary: #188AF5;       /* Nurture Blue — azul oficial, usado em CTAs secundários */
+    --brand-ink: #0B223F;             /* Space Blue — azul escuro oficial, base do texto */
+    --brand-ink-soft: #1a3254;        /* Variação mais clara do Space Blue */
+
+    /* Papéis / fundos (neutros que funcionam com o Space Blue) */
+    --brand-paper: #f7f9fc;           /* Off-white frio */
+    --brand-paper-warm: #eef2f8;      /* Cards alternados — azul muito suave */
+    --brand-paper-dim: #dde4ef;
+
+    /* Tons derivados */
+    --muted: #4a5a70;                 /* Cinza azulado (não cinza puro) */
+    --soft: #7a8799;
+    --success: #10b981;               /* Close Green aproximado */
+
+    /* Mockup do HighLevel — reproduz o ambiente escuro do canvas real */
+    --ghl-bg: #0B223F;                /* Space Blue oficial — fundo do canvas */
+    --ghl-surface: #13304f;           /* Superfície dos nós */
+    --ghl-border: #2a4868;
+    --ghl-text: #f7f9fc;
+    --ghl-text-dim: #9bb0cc;
+    --ghl-accent: #188AF5;            /* Nurture Blue */
+    --ghl-yellow: #FEB902;            /* Capture Yellow */
+    --ghl-green: #10b981;
+    --ghl-purple: #a855f7;
+    --ghl-orange: #f59e0b;
+    --ghl-pink: #ec4899;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     RESET E BASE
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', -apple-system, sans-serif;
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+    line-height: 1.55;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(255, 74, 28, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 85% 80%, rgba(184, 145, 47, 0.04) 0%, transparent 50%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     LAYOUT GLOBAL
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .app {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ───── SIDEBAR ───── */
+  aside {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 32px 24px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1.5px solid var(--brand-ink);
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside::-webkit-scrollbar { width: 6px; }
+  aside::-webkit-scrollbar-thumb { background: rgba(245,241,232,0.15); }
+
+  .side-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    color: var(--brand-accent);
+  }
+
+  .side-brand .brand-thin {
+    font-weight: 300;
+    color: var(--brand-paper);
+  }
+
+  .side-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.5);
+    margin-bottom: 28px;
+  }
+
+  .side-search {
+    width: 100%;
+    background: rgba(245,241,232,0.06);
+    border: 1px solid rgba(245,241,232,0.15);
+    color: var(--brand-paper);
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-bottom: 24px;
+    transition: border-color 0.2s;
+  }
+
+  .side-search:focus {
+    outline: none;
+    border-color: var(--brand-secondary);
+  }
+
+  .side-search::placeholder { color: rgba(245,241,232,0.4); }
+
+  .side-section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.4);
+    margin-bottom: 10px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+  }
+
+  .side-section-label:first-of-type {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .side-link {
+    font-size: 13px;
+    padding: 8px 12px;
+    color: rgba(245,241,232,0.75);
+    text-decoration: none;
+    display: block;
+    border-left: 2px solid transparent;
+    line-height: 1.3;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+
+  .side-link:hover {
+    color: var(--brand-paper);
+    background: rgba(254, 185, 2, 0.08);
+    border-left-color: var(--brand-accent);
+  }
+
+  .side-link .side-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: rgba(245,241,232,0.4);
+    margin-right: 8px;
+  }
+
+  .side-link.active {
+    color: var(--brand-accent);
+    background: rgba(254, 185, 2, 0.1);
+    border-left-color: var(--brand-accent);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎯 CTA FIXO NA SIDEBAR (card promocional)
+     Edite textos — busque por "CTA-FIXO" neste arquivo
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .side-cta-fixed {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+  }
+
+  .side-cta-card {
+    background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-accent-deep) 100%);
+    padding: 20px;
+    border-radius: 4px;
+    color: var(--brand-paper);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .side-cta-card::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  }
+
+  .side-cta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 8px;
+  }
+
+  .side-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .side-cta-desc {
+    font-size: 12px;
+    line-height: 1.45;
+    opacity: 0.92;
+    margin-bottom: 14px;
+  }
+
+  .side-cta-btn {
+    display: inline-block;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 9px 14px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border: 1px solid var(--brand-ink);
+  }
+
+  .side-cta-btn:hover {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  /* ───── MAIN ───── */
+  main {
+    padding: 0;
+    min-width: 0;
+  }
+
+  .hero-area {
+    padding: 64px 72px 48px;
+    border-bottom: 1.5px solid var(--brand-ink);
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-paper);
+    background: var(--brand-ink);
+    padding: 6px 12px;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--brand-accent);
+    /* Destaque adicional: sublinhado underline invisível visível só em acento */
+    background: linear-gradient(180deg, transparent 68%, rgba(254, 185, 2, 0.25) 68%, rgba(254, 185, 2, 0.25) 88%, transparent 88%);
+    padding: 0 4px;
+  }
+
+  .hero-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 720px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    padding-top: 28px;
+    border-top: 1px solid var(--brand-ink);
+  }
+
+  .hero-stat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .hero-stat-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--brand-accent);
+    display: block;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+
+  .hero-stat-label { color: var(--muted); }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎯 HERO CTA — BANNER DE ABERTURA
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .hero-cta {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-left: 4px solid var(--brand-accent);
+  }
+
+  .hero-cta-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .hero-cta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .hero-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  .hero-cta-title em {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--brand-accent);
+  }
+
+  .hero-cta-sub {
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+
+  .hero-cta-btn {
+    background: var(--brand-accent);
+    color: var(--brand-paper);
+    padding: 14px 24px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .hero-cta-btn:hover {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     BLOCOS DE GATILHO
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .trigger-block {
+    padding: 72px 72px;
+    border-bottom: 1.5px solid var(--brand-ink);
+    scroll-margin-top: 20px;
+  }
+
+  .trigger-block:nth-of-type(even) {
+    background: var(--brand-paper-warm);
+  }
+
+  .trigger-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .trigger-num {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 0.8;
+    color: var(--brand-accent);
+    letter-spacing: -0.04em;
+    min-width: 90px;
+  }
+
+  .trigger-titles { flex: 1; }
+
+  .trigger-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .trigger-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+
+  .trigger-en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  .trigger-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .info-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--brand-ink);
+    background: var(--brand-paper);
+  }
+
+  .info-tag.schedule {
+    background: var(--brand-secondary);
+    color: var(--brand-paper);
+    border-color: var(--brand-secondary);
+  }
+
+  .info-tag.realtime {
+    background: var(--success);
+    color: var(--brand-paper);
+    border-color: var(--success);
+  }
+
+  /* ───── SEÇÕES INTERNAS ───── */
+  .tblock {
+    margin-bottom: 40px;
+  }
+
+  .tblock-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .tblock-label::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--brand-accent);
+  }
+
+  .tblock-content {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--brand-ink);
+    max-width: 780px;
+  }
+
+  .tblock-content p + p { margin-top: 14px; }
+
+  .tblock-content strong {
+    font-weight: 600;
+    background: rgba(255, 74, 28, 0.12);
+    padding: 1px 4px;
+  }
+
+  /* ───── USE CASES ───── */
+  .use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .use-case {
+    background: var(--brand-paper);
+    border: 1px solid var(--brand-ink);
+    padding: 20px;
+  }
+
+  .trigger-block:nth-of-type(even) .use-case {
+    background: var(--brand-paper-dim);
+  }
+
+  .use-case-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .use-case-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .use-case-desc {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ───── FILTROS ───── */
+  .filters-grid {
+    display: grid;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .filter-item {
+    border: 1px solid var(--brand-ink);
+    background: var(--brand-paper);
+    overflow: hidden;
+  }
+
+  .trigger-block:nth-of-type(even) .filter-item {
+    background: var(--brand-paper);
+  }
+
+  .filter-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px dashed rgba(11,11,12,0.15);
+    flex-wrap: wrap;
+  }
+
+  .filter-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .filter-en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .filter-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    margin-left: auto;
+  }
+
+  .filter-type.required {
+    background: var(--brand-accent);
+  }
+
+  .filter-body {
+    padding: 16px 20px 18px;
+  }
+
+  .filter-desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--brand-ink);
+    margin-bottom: 10px;
+  }
+
+  .filter-impact {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--muted);
+    padding-left: 16px;
+    border-left: 2px solid var(--brand-accent);
+    
+  }
+
+  .filter-impact strong {
+    font-style: normal;
+    color: var(--brand-ink);
+    font-weight: 600;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🖥️ MOCKUP VISUAL DO HIGHLEVEL
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .ghl-mockup {
+    background: var(--ghl-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin-top: 8px;
+  }
+
+  .ghl-toolbar {
+    background: var(--ghl-surface);
+    border-bottom: 1px solid var(--ghl-border);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .ghl-workflow-name {
+    font-size: 14px;
+    color: var(--ghl-text);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ghl-workflow-name::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--ghl-green);
+    border-radius: 50%;
+  }
+
+  .ghl-toolbar-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .ghl-btn {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 6px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+
+  .ghl-btn:hover:not(:disabled) {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-text);
+  }
+
+  .ghl-btn:disabled { cursor: not-allowed; opacity: 0.7; }
+
+  .ghl-btn.primary {
+    background: var(--ghl-accent);
+    border-color: var(--ghl-accent);
+    color: white;
+  }
+
+  .ghl-btn.primary:hover { background: #4a8ae8; }
+
+  .ghl-btn.play {
+    background: var(--brand-accent);
+    border-color: var(--brand-accent);
+    color: white;
+    font-weight: 500;
+  }
+
+  .ghl-canvas {
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
+    background-size: 16px 16px;
+    background-color: var(--ghl-bg);
+    padding: 48px 24px 72px;
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .ghl-node {
+    width: 320px;
+    background: var(--ghl-surface);
+    border: 1.5px solid var(--ghl-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+
+  .ghl-node.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .ghl-node.active {
+    border-color: var(--ghl-accent);
+    box-shadow: 0 0 0 3px rgba(91, 155, 255, 0.2);
+  }
+
+  .ghl-node:hover {
+    border-color: var(--ghl-accent);
+    transform: translateY(-1px);
+  }
+
+  .ghl-node.active:hover { transform: translateY(0); }
+
+  .ghl-node-header {
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--ghl-border);
+  }
+
+  .ghl-node-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .ghl-node-icon.trigger { background: var(--ghl-purple); }
+  .ghl-node-icon.action-email { background: var(--ghl-accent); }
+  .ghl-node-icon.action-notify { background: var(--ghl-orange); }
+  .ghl-node-icon.action-pipeline { background: var(--ghl-green); }
+  .ghl-node-icon.action-tag { background: #ec4899; }
+  .ghl-node-icon.action-wait { background: #64748b; }
+
+  .ghl-node-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ghl-text-dim);
+    margin-bottom: 2px;
+  }
+
+  .ghl-node-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ghl-text);
+    line-height: 1.3;
+  }
+
+  .ghl-node-body {
+    padding: 10px 14px 12px;
+  }
+
+  .ghl-node-param {
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    line-height: 1.5;
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+
+  .ghl-node-param:last-child { margin-bottom: 0; }
+
+  .ghl-node-param .pk {
+    color: #7c8494;
+    min-width: 58px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+  }
+
+  .ghl-node-param .pv { color: var(--ghl-text); }
+
+  .ghl-node-param .pv.highlight {
+    background: rgba(91, 155, 255, 0.15);
+    color: #85b0ff;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+
+  .ghl-connector {
+    width: 2px;
+    height: 36px;
+    background: var(--ghl-border);
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 7px solid var(--ghl-border);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  .click-hint {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--ghl-text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .ghl-node.active .click-hint {
+    color: var(--ghl-accent);
+    opacity: 1;
+  }
+
+  /* ───── CONFIG PANEL ───── */
+  .config-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    background: var(--ghl-surface);
+    border-left: 1px solid var(--ghl-border);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    overflow-y: auto;
+  }
+
+  .config-panel.open { transform: translateX(0); }
+
+  .config-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--ghl-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    background: var(--ghl-surface);
+    z-index: 2;
+  }
+
+  .config-kind {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ghl-accent);
+    margin-bottom: 6px;
+  }
+
+  .config-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ghl-text);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .config-close {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .config-close:hover {
+    color: var(--ghl-text);
+    border-color: var(--ghl-accent);
+  }
+
+  .config-body { padding: 20px; }
+
+  .config-section { margin-bottom: 24px; }
+  .config-section:last-child { margin-bottom: 0; }
+
+  .config-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ghl-text-dim);
+    margin-bottom: 8px;
+  }
+
+  .config-field {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--ghl-text);
+    border-radius: 4px;
+  }
+
+  .config-field.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .config-field.dropdown::after {
+    content: '▾';
+    color: var(--ghl-text-dim);
+    margin-left: 8px;
+  }
+
+  .config-field.highlight {
+    border-color: var(--ghl-accent);
+    background: rgba(91, 155, 255, 0.08);
+  }
+
+  .config-desc {
+    font-size: 12px;
+    color: var(--ghl-text-dim);
+    line-height: 1.5;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 2px solid var(--brand-accent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .config-desc strong {
+    color: var(--ghl-text);
+    font-weight: 500;
+  }
+
+  .anim-indicator {
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ghl-text);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 5;
+  }
+
+  .anim-indicator.visible { opacity: 1; }
+
+  .anim-indicator .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--brand-accent);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+  }
+
+  .mockup-caption {
+    padding: 14px 20px;
+    background: var(--ghl-surface);
+    border-top: 1px solid var(--ghl-border);
+    font-size: 12px;
+    color: var(--ghl-text-dim);
+    text-align: center;
+    
+  }
+
+  /* ───── CALLOUT ───── */
+  .callout {
+    display: flex;
+    gap: 16px;
+    padding: 20px 24px;
+    margin-top: 20px;
+    border: 1px solid var(--brand-ink);
+  }
+
+  .callout.warning {
+    background: #f9e9d9;
+    border-color: var(--brand-accent-deep);
+  }
+
+  .callout.tip {
+    background: #e8e4d3;
+    border-color: var(--brand-secondary);
+  }
+
+  .callout-icon {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1;
+    flex-shrink: 0;
+    color: var(--brand-accent-deep);
+  }
+
+  .callout.tip .callout-icon { color: var(--brand-secondary); }
+
+  .callout-content {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .callout-content strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎯 CTAs CONTEXTUAIS — aparecem no meio do conteúdo
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .cta-contextual {
+    margin: 48px 0;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .cta-contextual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--brand-accent);
+  }
+
+  .cta-contextual::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,74,28,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .cta-ctx-content { position: relative; z-index: 2; }
+
+  .cta-ctx-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-secondary);
+    margin-bottom: 12px;
+  }
+
+  .cta-ctx-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 10px;
+    max-width: 520px;
+  }
+
+  .cta-ctx-title em {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--brand-accent);
+  }
+
+  .cta-ctx-desc {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    max-width: 560px;
+  }
+
+  .cta-ctx-btn {
+    background: var(--brand-accent);
+    color: var(--brand-paper);
+    padding: 16px 28px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-ctx-btn:hover {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  /* Variação secundária (outline) */
+  .cta-contextual.secondary {
+    background: var(--brand-paper-warm);
+    color: var(--brand-ink);
+  }
+
+  .cta-contextual.secondary::after {
+    background: radial-gradient(circle, rgba(184,145,47,0.1) 0%, transparent 65%);
+  }
+
+  .cta-contextual.secondary .cta-ctx-tag { color: var(--brand-accent-deep); }
+
+  .cta-contextual.secondary .cta-ctx-btn {
+    background: transparent;
+    color: var(--brand-ink);
+    border: 1.5px solid var(--brand-ink);
+  }
+
+  .cta-contextual.secondary .cta-ctx-btn:hover {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     RODAPÉ COM CTAs
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .guide-footer {
+    padding: 80px 72px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+  }
+
+  .footer-top {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 56px;
+  }
+
+  .footer-top h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--brand-accent);
+    letter-spacing: -0.015em;
+  }
+
+  .footer-top p {
+    font-size: 1rem;
+    color: rgba(245,241,232,0.75);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  /* CTA principal do rodapé = HighLevel */
+  .footer-main-cta {
+    background: var(--brand-accent);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-main-cta::after {
+    content: '';
+    position: absolute;
+    top: -60%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(11,11,12,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .footer-main-cta-text {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-main-cta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-ink);
+    opacity: 0.75;
+    margin-bottom: 12px;
+  }
+
+  .footer-main-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--brand-ink);
+    margin-bottom: 8px;
+  }
+
+  .footer-main-cta-title em {
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .footer-main-cta-sub {
+    font-size: 1rem;
+    color: var(--brand-ink);
+    opacity: 0.85;
+  }
+
+  .footer-main-cta-btn {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 18px 32px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-main-cta-btn:hover {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  /* Grid de outros CTAs */
+  .footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .footer-link-card {
+    background: rgba(245,241,232,0.04);
+    border: 1px solid rgba(245,241,232,0.15);
+    padding: 24px;
+    text-decoration: none;
+    color: var(--brand-paper);
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-link-card:hover {
+    background: rgba(254, 185, 2, 0.08);
+    border-color: var(--brand-accent);
+    transform: translateY(-2px);
+  }
+
+  .footer-link-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+  }
+
+  .footer-link-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .footer-link-desc {
+    font-size: 0.88rem;
+    color: rgba(245,241,232,0.65);
+    line-height: 1.45;
+    margin-top: 4px;
+  }
+
+  .footer-link-arrow {
+    margin-top: auto;
+    padding-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+  }
+
+  .footer-legal {
+    padding-top: 56px;
+    margin-top: 56px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.4);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     MOBILE
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  @media (max-width: 900px) {
+    .app { grid-template-columns: 1fr; }
+    aside {
+      position: relative;
+      height: auto;
+      max-height: none;
+      padding: 24px 20px;
+    }
+    .side-cta-fixed { margin-top: 24px; }
+    .hero-area, .trigger-block, .guide-footer {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .trigger-head {
+      flex-direction: column;
+      gap: 8px;
+    }
+    .trigger-num { font-size: 3rem; min-width: auto; }
+    .hero-stats { gap: 32px; }
+    .cta-contextual, .footer-main-cta {
+      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 28px;
+    }
+    .config-panel { width: 100%; }
+    .ghl-node { width: 100%; max-width: 320px; }
+  }
+
+  .trigger-block.hidden { display: none; }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     TOP NAV BAR · Toggle entre HL ↔ MF + Voltar ao Índice
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    background: var(--brand-ink);
+    color: white;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .top-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  .top-nav-home {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .top-nav-home:hover { opacity: 1; }
+
+  .top-nav-home .arrow { font-size: 16px; }
+
+  .top-nav-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .top-nav-breadcrumb {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .top-nav-breadcrumb strong {
+    color: white;
+    font-weight: 600;
+  }
+
+  /* Toggle HL ↔ MF */
+  .top-nav-toggle {
+    display: inline-flex;
+    background: rgba(255,255,255,0.08);
+    border-radius: 100px;
+    padding: 3px;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+
+  .toggle-btn {
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    background: transparent;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .toggle-btn:hover {
+    color: white;
+  }
+
+  .toggle-btn.active {
+    background: var(--brand-accent);
+    color: var(--brand-ink);
+  }
+
+  /* Mobile menu button */
+  .mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     BOTÃO VOLTAR AO TOPO
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 400;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--brand-accent);
+    color: var(--brand-ink);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: inherit;
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .back-to-top:hover {
+    background: var(--brand-accent-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     NAV PREV/NEXT (rodapé, antes do guide-footer)
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .cat-nav {
+    max-width: 960px;
+    margin: 48px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .cat-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 24px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .cat-nav-link:hover {
+    border-color: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+
+  .cat-nav-link.next { text-align: right; }
+
+  .cat-nav-link.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .cat-nav-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .cat-nav-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--brand-ink);
+    letter-spacing: -0.01em;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     MOBILE
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  @media (max-width: 900px) {
+    .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+
+    /* A sidebar vira um drawer */
+    aside {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      height: 100vh !important;
+      width: 85%;
+      max-width: 340px;
+      z-index: 800;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      padding-top: 16px !important;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    }
+
+    aside.open {
+      transform: translateX(0);
+    }
+
+    /* Overlay atrás do drawer */
+    .drawer-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .drawer-overlay.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Esconde breadcrumb longo no mobile pra economizar espaço */
+    .top-nav-breadcrumb { display: none; }
+
+    /* Nav prev/next */
+    .cat-nav {
+      grid-template-columns: 1fr;
+      margin: 32px auto;
+    }
+
+    .cat-nav-link.next {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .top-nav { padding: 8px 12px; gap: 8px; }
+    .top-nav-home { font-size: 11px; }
+    .toggle-btn { padding: 5px 10px; font-size: 11px; }
+    .back-to-top {
+      bottom: 16px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+
+
+
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎯 NOVA UI v2 — Painel de configuração com fidelidade HighLevel
+     Mostra o painel lateral real do HighLevel com tipos de campo corretos:
+     dropdowns, tag pickers, multi-selects, toggles, conditional logic.
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .hl-panel-wrapper {
+    background: var(--ghl-bg);
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .hl-panel-context {
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
+    background-size: 16px 16px;
+    background-color: var(--ghl-bg);
+    padding: 32px;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hl-canvas-hint {
+    flex: 1;
+    min-width: 220px;
+    color: var(--ghl-text-dim);
+    font-size: 13px;
+    line-height: 1.6;
+    padding-top: 8px;
+  }
+
+  .hl-canvas-hint strong { color: var(--ghl-text); font-weight: 500; }
+  .hl-canvas-hint .arrow {
+    display: inline-block;
+    color: var(--brand-accent);
+    margin: 0 4px;
+    font-weight: 600;
+  }
+
+  /* The right-side slide-in panel that HighLevel really uses */
+  .hl-panel {
+    width: 420px;
+    max-width: 100%;
+    background: var(--ghl-surface);
+    border: 1px solid var(--ghl-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+  }
+
+  .hl-panel-head {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--ghl-border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0,0,0,0.15);
+  }
+
+  .hl-panel-back {
+    color: var(--ghl-text-dim);
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .hl-panel-title {
+    flex: 1;
+    font-size: 14px;
+    color: var(--ghl-text);
+    font-weight: 500;
+  }
+
+  .hl-panel-title .en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ghl-text-dim);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    display: block;
+  }
+
+  .hl-panel-body {
+    padding: 18px;
+    max-height: 720px;
+    overflow-y: auto;
+  }
+
+  .hl-field-group {
+    margin-bottom: 16px;
+  }
+
+  .hl-field-group:last-child { margin-bottom: 0; }
+
+  .hl-field-label {
+    font-size: 12px;
+    color: var(--ghl-text);
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hl-field-label .req {
+    color: #ef4444;
+    font-weight: 600;
+  }
+
+  .hl-field-help {
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  /* HL Input — single line text field */
+  .hl-input {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text);
+    padding: 9px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: inherit;
+  }
+
+  .hl-input.placeholder {
+    color: var(--ghl-text-dim);
+    font-style: italic;
+  }
+
+  /* HL Dropdown — single-select with caret */
+  .hl-dropdown {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text);
+    padding: 9px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .hl-dropdown::after {
+    content: '▾';
+    color: var(--ghl-text-dim);
+    font-size: 11px;
+  }
+
+  .hl-dropdown.has-value { color: var(--ghl-text); }
+  .hl-dropdown.placeholder { color: var(--ghl-text-dim); font-style: italic; }
+
+  /* HL Multi-select — multiple chips inside */
+  .hl-multiselect {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    padding: 6px 8px;
+    min-height: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .hl-multiselect-chip {
+    background: rgba(91, 155, 255, 0.18);
+    border: 1px solid rgba(91, 155, 255, 0.4);
+    color: var(--ghl-text);
+    padding: 3px 8px 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hl-multiselect-chip::after {
+    content: '×';
+    color: var(--ghl-text-dim);
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .hl-multiselect-input {
+    background: transparent;
+    border: 0;
+    color: var(--ghl-text-dim);
+    font-size: 11px;
+    flex: 1;
+    min-width: 80px;
+    padding: 3px 4px;
+    font-style: italic;
+    font-family: inherit;
+  }
+
+  /* HL Tag picker — yellow chips, HL accent */
+  .hl-tag-picker {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    padding: 6px 8px;
+    min-height: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .hl-tag-chip {
+    background: rgba(254, 185, 2, 0.18);
+    border: 1px solid rgba(254, 185, 2, 0.45);
+    color: var(--ghl-text);
+    padding: 3px 8px 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hl-tag-chip::after {
+    content: '×';
+    color: var(--ghl-text-dim);
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  /* HL Toggle / switch */
+  .hl-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--ghl-text);
+  }
+
+  .hl-toggle {
+    width: 32px;
+    height: 18px;
+    background: var(--ghl-border);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .hl-toggle::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.2s;
+  }
+
+  .hl-toggle.on { background: var(--ghl-green); }
+  .hl-toggle.on::after { left: 16px; }
+
+  /* HL Number input with operator */
+  .hl-number-row {
+    display: flex;
+    gap: 6px;
+  }
+
+  .hl-number-row .hl-dropdown { flex: 1; }
+  .hl-number-row .hl-input { width: 100px; }
+
+  /* HL Field row with operator dropdown beside it */
+  .hl-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  /* HL Section heading inside panel */
+  .hl-section-head {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ghl-text-dim);
+    padding: 8px 0;
+    margin: 16px 0 8px;
+    border-top: 1px solid var(--ghl-border);
+  }
+
+  .hl-section-head:first-child { border-top: 0; margin-top: 0; }
+
+  /* HL Filter row (inside the Filters section) */
+  .hl-filter-row {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid var(--ghl-border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+
+  .hl-filter-row .hl-filter-label {
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    margin-bottom: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Conditional sub-field shown when parent selected */
+  .hl-conditional {
+    border-left: 2px solid var(--brand-accent);
+    padding-left: 10px;
+    margin-top: 8px;
+  }
+
+  .hl-conditional-note {
+    font-size: 10px;
+    color: var(--brand-accent);
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  /* Add-Filter button */
+  .hl-add-filter {
+    background: transparent;
+    border: 1px dashed var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 8px;
+  }
+
+  .hl-add-filter:hover {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-text);
+  }
+
+  /* Save trigger button at the bottom of the panel */
+  .hl-panel-footer {
+    padding: 12px 18px;
+    border-top: 1px solid var(--ghl-border);
+    background: rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .hl-btn-save {
+    background: var(--ghl-green);
+    border: 0;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .hl-btn-cancel {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* ─── Field-spec legend (shows TYPE / OPERATORS / OPTIONS) ─── */
+  .field-spec {
+    background: rgba(11, 34, 63, 0.04);
+    border: 1px solid rgba(11, 34, 63, 0.1);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .field-spec-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding: 4px 0;
+  }
+
+  .field-spec-key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    padding-top: 2px;
+  }
+
+  .field-spec-val {
+    color: var(--brand-ink);
+  }
+
+  .field-spec-val .opt-chip {
+    display: inline-block;
+    background: rgba(11, 34, 63, 0.08);
+    border: 1px solid rgba(11, 34, 63, 0.15);
+    padding: 1px 8px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    margin: 2px 3px 2px 0;
+    color: var(--brand-ink);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .field-spec-val .op-chip {
+    display: inline-block;
+    background: rgba(91, 155, 255, 0.12);
+    border: 1px solid rgba(91, 155, 255, 0.3);
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin: 2px 3px 2px 0;
+    color: var(--brand-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  /* HL Panel intro caption */
+  .hl-panel-caption {
+    padding: 14px 20px;
+    background: var(--ghl-surface);
+    border-top: 1px solid var(--ghl-border);
+    font-size: 12px;
+    color: var(--ghl-text-dim);
+    text-align: center;
+  }
+
+  .hl-panel-caption strong { color: var(--ghl-yellow); font-weight: 500; }
+
+  /* When opt-chip / op-chip render INSIDE the dark HL panel, override colors */
+  .hl-panel .opt-chip,
+  .hl-conditional .opt-chip {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--ghl-text);
+  }
+  .hl-panel .op-chip,
+  .hl-conditional .op-chip {
+    background: rgba(91, 155, 255, 0.18);
+    border: 1px solid rgba(91, 155, 255, 0.4);
+    color: var(--ghl-text);
+  }
+
+  @media (max-width: 768px) {
+    .hl-panel { width: 100%; }
+    .hl-panel-context { padding: 16px; gap: 16px; flex-direction: column-reverse; }
+    .hl-canvas-hint { padding-top: 0; }
+    .field-spec-row { grid-template-columns: 1fr; gap: 2px; }
+    .field-spec-key { padding-top: 0; }
+  }
+
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV — toggle HL/MF + voltar ao índice -->
+<div class="top-nav">
+  <div class="top-nav-left">
+    <button class="mobile-menu-btn" onclick="toggleDrawer()" aria-label="Abrir menu">☰</button>
+    <a href="index.html" class="top-nav-home">
+      <span class="arrow">←</span>
+      <span>Voltar ao índice</span>
+    </a>
+    <div class="top-nav-divider"></div>
+    <div class="top-nav-breadcrumb">Categoria <strong>04/12</strong> · <strong>Oportunidades</strong></div>
+  </div>
+</div>
+
+
+<div class="app">
+
+<aside>
+  <div class="side-brand">Gatilhos<br><span class="brand-thin">HighLevel.</span></div>
+  <div class="side-cat">Categoria 04 · Oportunidades</div>
+
+  <input type="text" class="side-search" id="search" placeholder="Buscar gatilho..." />
+
+  <div class="side-section-label">Ciclo de Vida</div>
+  <nav class="side-nav">
+    <a href="#g1" class="side-link"><span class="side-num">01</span>Oportunidade Criada</a>
+    <a href="#g2" class="side-link"><span class="side-num">02</span>Oportunidade Alterada</a>
+  </nav>
+
+  <div class="side-section-label">Mudanças de Status</div>
+  <nav class="side-nav">
+    <a href="#g3" class="side-link"><span class="side-num">03</span>Mudança de Status</a>
+    <a href="#g4" class="side-link"><span class="side-num">04</span>Mudança de Estágio</a>
+  </nav>
+
+  <div class="side-section-label">Sinais de Alerta</div>
+  <nav class="side-nav">
+    <a href="#g5" class="side-link"><span class="side-num">05</span>Oportunidade Ociosa</a>
+  </nav>
+
+  <div class="side-cta-fixed">
+    <div class="side-cta-card">
+      <div class="side-cta-tag">Afiliado oficial · Oferta exclusiva</div>
+      <div class="side-cta-title">Crie sua ferramenta.</div>
+      <div class="side-cta-desc">
+        Tenha seu próprio HighLevel e venda pra sua audiência. Trial 30 dias + treinamento + sessões ao vivo + suporte em PT-BR.
+      </div>
+      <a href="https://magneticflows.com/30-dias" target="_blank" class="side-cta-btn">Começar trial →</a>
+    </div>
+  </div>
+</aside>
+
+<main>
+
+<div class="hero-area">
+  <span class="hero-tag">Parte 1 · Gatilhos · Categoria 04/12</span>
+  <h1 class="hero-title">Tudo que acontece no seu <em>pipeline de vendas</em> pode virar automação.</h1>
+  <p class="hero-desc">
+    Oportunidades são onde a grana mora. Cada oportunidade representa uma venda em andamento — e cada mudança nela (criação, alteração de valor, avanço de estágio, ociosidade) é uma chance de disparar uma automação que mantém o pipeline saudável e a equipe alinhada.
+  </p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">5</span>
+      <span class="hero-stat-label">Gatilhos cobertos</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">35+</span>
+      <span class="hero-stat-label">Filtros explicados</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">4</span>
+      <span class="hero-stat-label">Mockups interativos</span>
+    </div>
+  </div>
+
+  <div class="hero-cta">
+    <div class="hero-cta-text">
+      <div class="hero-cta-tag">⚡ Pra quem quer vender SaaS</div>
+      <div class="hero-cta-title">Quer ter sua <em>própria ferramenta</em> e vender pra sua audiência?</div>
+      <div class="hero-cta-sub">Trial HighLevel 30 dias + treinamento completo + sessões ao vivo + suporte em PT-BR. Tudo pelo nosso link de afiliado.</div>
+    </div>
+    <a href="https://magneticflows.com/30-dias" target="_blank" class="hero-cta-btn">Começar trial →</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 01 — OPORTUNIDADE CRIADA
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g1" data-name="oportunidade criada opportunity created">
+  <div class="trigger-head">
+    <div class="trigger-num">01</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Ciclo de Vida</div>
+      <h2 class="trigger-name">Oportunidade Criada</h2>
+      <div class="trigger-en">Opportunity Created</div>
+      <div class="trigger-tags">
+        <span class="info-tag realtime">Tempo real</span>
+        <span class="info-tag">★ Fundamental</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara sempre que uma nova oportunidade nasce no sistema — seja criada manualmente, via formulário, por outra automação, ou por integração externa.</p>
+      <p>É o ponto de partida do funil de vendas automatizado. Toda oportunidade nova merece pelo menos uma reação: notificação pro responsável, atribuição de tarefa, segmentação por valor, entrada em sequência de nutrição.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Alto ticket → alerta</div>
+        <div class="use-case-desc">Lead Value &gt; R$ 50.000 → notifica gerente de vendas + tag "High Ticket" + prioriza no pipeline.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Nova oportunidade → sequência</div>
+        <div class="use-case-desc">Status "Novo" → dispara sequência de emails de apresentação da empresa.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Distribuição por dono</div>
+        <div class="use-case-desc">Se não tem usuário atribuído → round-robin automático entre vendedores disponíveis.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 04</div>
+        <div class="use-case-title">Tarefa de follow-up</div>
+        <div class="use-case-desc">Cria tarefa automática pro dono "Ligar em até 24h".</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis — 7 opções</div>
+    <div class="filters-grid">
+
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Usuário Atribuído</div>
+          <div class="filter-en">Assigned To</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Filtra oportunidades atribuídas a um usuário específico.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> fluxos customizados por vendedor. Oportunidades do Carlos rodam um script; as da Maria, outro.</div>
+        </div>
+      </div>
+
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Tem Tag</div>
+          <div class="filter-en">Has Tag</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Dispara só pra oportunidades com tag específica.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> permite segmentar oportunidades por campanha ou fonte (ex.: tag "Lead Meta Ads" tem fluxo distinto de "Lead Indicação").</div>
+        </div>
+      </div>
+
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Pipeline</div>
+          <div class="filter-en">Pipeline</div>
+          <div class="filter-type required">principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Qual pipeline monitorar. Contas costumam ter múltiplos — Vendas, Renovação, Upsell, Onboarding.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> essencial pra isolar fluxos. Oportunidade no pipeline de Vendas reage diferente de uma no de Renovação.</div>
+        </div>
+      </div>
+
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Valor do Lead</div>
+          <div class="filter-en">Lead Value</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Condições por valor: maior que X, menor que Y, entre X e Y.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> tratamento VIP pra altos tickets. Leads de R$ 100k+ merecem ligação imediata; leads menores entram em sequência automatizada.</div>
+        </div>
+      </div>
+
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Razão de Perda</div>
+          <div class="filter-en">Lost Reason</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Segmenta por motivo de perda (quando aplicável — oportunidade criada já como perdida).</div>
+          <div class="filter-impact"><strong>Impacto:</strong> raramente usado em "criada" (mais útil em "alterada"). Serve pra análises de importação em lote.</div>
+        </div>
+      </div>
+
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Status</div>
+          <div class="filter-en">Status</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Status atual: <em>Open</em>, <em>Won</em>, <em>Lost</em>, <em>Abandoned</em>.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> quase sempre "Open" (novas oportunidades nascem abertas). Filtrar por status diferente é raro.</div>
+        </div>
+      </div>
+
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Campos Customizados</div>
+          <div class="filter-en">Custom Fields (Opp + Contact)</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Pode filtrar por campos customizados tanto da oportunidade quanto do contato associado.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> segmentação muito fina. Ex.: só rodar pra oportunidades com campo "Segmento = Saúde" e contato com "Faturamento &gt; R$ 50k/mês".</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G1 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Múltiplos pickers tipados: <span class='arrow'>→</span> <strong>In Pipeline</strong> pipeline picker, <span class='arrow'>→</span> <strong>Pipeline Stage</strong> dropdown <em>filtrado pela pipeline</em> (lógica condicional), <span class='arrow'>→</span> <strong>Assigned To</strong> user picker, <span class='arrow'>→</span> <strong>Status</strong> dropdown Open/Won/Lost/Abandoned.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Opportunity Created</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Opportunity Created" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters · AND logic</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">In Pipeline</div>
+        <div class="hl-dropdown has-value">Vendas — Magnetic Funnels SaaS</div>
+      </div>
+
+      <div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
+        <div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Stages filtrados pela Pipeline acima</div>
+        <div class="hl-filter-label">Pipeline Stage</div>
+        <div class="hl-dropdown has-value">Novo Lead</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Assigned To</div>
+        <div class="hl-dropdown has-value">Ana · SDR</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Status</div>
+        <div class="hl-field-row">
+          <div class="hl-dropdown has-value">Is</div>
+          <div class="hl-dropdown has-value">Open</div>
+        </div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">Opções de Status</div>
+          <div class="field-spec-val" style="margin-top:4px;">
+            <span class="opt-chip">Open</span><span class="opt-chip">Won</span>
+            <span class="opt-chip">Lost</span><span class="opt-chip">Abandoned</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Lead Value</div>
+        <div class="hl-field-row">
+          <div class="hl-dropdown has-value">Greater Than</div>
+          <input class="hl-input" value="2997" style="width: 100px;">
+        </div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando uma nova oportunidade é criada no pipeline</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCKUP -->
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g1">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Vendas/ 01 — Alto Ticket · Alerta Gerente</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g1">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g1-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">Opportunity Created</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv">Vendas Internas</span></div>
+            <div class="ghl-node-param"><span class="pk">Valor</span><span class="pv highlight">&gt; R$ 50.000</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g1-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">!</div>
+            <div>
+              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-title">Internal Notification</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Canais</span><span class="pv">SMS + Email</span></div>
+            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv highlight">Gerente de Vendas</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g1-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">#</div>
+            <div>
+              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-title">Add Opportunity Tag</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">High Ticket · Prioridade Máxima</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g1-4">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">📋</div>
+            <div>
+              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-title">Create Task</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Título</span><span class="pv highlight">Ligar em 1h — High Ticket</span></div>
+            <div class="ghl-node-param"><span class="pk">Responsável</span><span class="pv">Dono da Oportunidade</span></div>
+          </div>
+        </div>
+
+        <div class="config-panel">
+          <div class="config-header">
+            <div>
+              <div class="config-kind">—</div>
+              <div class="config-title">—</div>
+            </div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 02 — OPORTUNIDADE ALTERADA
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g2" data-name="oportunidade alterada opportunity changed">
+  <div class="trigger-head">
+    <div class="trigger-num">02</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Ciclo de Vida</div>
+      <h2 class="trigger-name">Oportunidade Alterada</h2>
+      <div class="trigger-en">Opportunity Changed</div>
+      <div class="trigger-tags">
+        <span class="info-tag realtime">Tempo real</span>
+        <span class="info-tag">Sensível</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara sempre que qualquer campo da oportunidade é editado — valor, status, nome, pipeline, estágio, campos customizados. É o gatilho mais <strong>sensível</strong> da categoria.</p>
+      <p>Por pegar qualquer edição, se você usar sem filtros vai disparar centenas de vezes ao dia. O poder dele está em filtrar precisamente o que importa — ex.: "só quando o valor muda pra mais de X", "só quando um campo customizado específico é preenchido".</p>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <div class="callout-icon">!</div>
+    <div class="callout-content">
+      <strong>Cuidado com loops e volume</strong>
+      Se você usar esse gatilho sem filtros, qualquer alteração dispara — inclusive as que a própria automação faz. Resultado: loop infinito ou execuções desnecessárias. Sempre filtre por pipeline + condição específica.
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Diferença vs "Mudança de Status"</div>
+    <div class="tblock-content">
+      <p><strong>Oportunidade Alterada</strong> (este gatilho) dispara em <em>qualquer mudança</em>. <strong>Mudança de Status</strong> (gatilho 03) só em mudanças de status (Open → Won, por exemplo). Use o status-changed quando só quer saber sobre transições de status; este, quando também importa alterações em valor, nome, campo custom etc.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Valor subiu → alerta</div>
+        <div class="use-case-desc">Valor &gt; R$ 50k → gerente recebe notificação (oportunidade ganhou importância).</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Campo custom preenchido</div>
+        <div class="use-case-desc">Campo "Data da Reunião" foi preenchido → cria lembrete automático 1 dia antes.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Mudança de dono</div>
+        <div class="use-case-desc">Usuário atribuído mudou → notifica o novo responsável com briefing.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis — 7 opções</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Usuário Atribuído</div>
+          <div class="filter-en">Assigned To</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Mesmo filtro do "Criada" — por vendedor responsável.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> segmenta por equipe.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Tem Tag</div>
+          <div class="filter-en">Has Tag</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Só oportunidades com tag específica.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> reduz escopo pra só o que importa.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Pipeline</div>
+          <div class="filter-en">Pipeline</div>
+          <div class="filter-type required">principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Essencial pra isolar fluxos.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> sempre preencha — evita reações em pipelines irrelevantes.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Valor do Lead</div>
+          <div class="filter-en">Lead Value</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Condições de valor (maior/menor/entre).</div>
+          <div class="filter-impact"><strong>Impacto:</strong> reage só a mudanças que colocaram a oportunidade acima/abaixo de um limiar.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Razão de Perda</div>
+          <div class="filter-en">Lost Reason</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Motivo da perda, se aplicável.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> útil quando o fluxo reage a perda — ex.: "Perda por preço" pede análise de precificação; "Perda por timing" pede nurturing futuro.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Status</div>
+          <div class="filter-en">Status</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Status atual: Open, Won, Lost, Abandoned.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> combine com outros filtros pra captar mudanças específicas.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Campos Customizados</div>
+          <div class="filter-en">Custom Fields</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Da oportunidade ou do contato.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> essencial pra lógica avançada — ex.: "campo Data da Proposta foi preenchido" dispara fluxo de acompanhamento.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g2">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Oportunidades/ 02 — Opp Alterada · Audit Trail</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g2">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        
+        <div class="ghl-node" data-node-id="g2-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">Oportunidade Alterada</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Filtro</span><span class="pv">Qualquer campo</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g2-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-condition">?</div>
+            <div>
+              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-title">If/Else</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Opp.value mudou?</span><span class="pv highlight">TRUE</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g2-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-title">Slack Message</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Canal</span><span class="pv highlight">#vendas-alertas</span></div>
+            <div class="ghl-node-param"><span class="pk">Texto</span><span class="pv">Valor mudou de X para Y</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g2-4">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Envio de Dados</div>
+              <div class="ghl-node-title">Google Sheets</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Planilha</span><span class="pv highlight">Audit Log · Mudanças</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G2 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Operadores avançados: <span class='arrow'>→</span> <strong>Has Changed</strong> / <strong>Has Changed To</strong> / <strong>Equals</strong> em quase todos os campos, <span class='arrow'>→</span> <strong>Added</strong> / <strong>Removed</strong> em campos checkbox customizados.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Opportunity Changed</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Opportunity Changed" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters · AND logic</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Assigned To</div>
+        <div class="hl-field-row">
+          <div class="hl-dropdown has-value">Has Changed</div>
+          <div class="hl-dropdown placeholder">Qualquer usuário</div>
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Lead Value</div>
+        <div class="hl-field-row">
+          <div class="hl-dropdown has-value">Has Changed To</div>
+          <input class="hl-input" value="≥ 5000" style="width: 100px;">
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Custom Field — Produto Interesse (checkbox)</div>
+        <div class="hl-field-row">
+          <div class="hl-dropdown has-value">Added</div>
+          <div class="hl-dropdown has-value">Plano Pro</div>
+        </div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">Operadores em campos checkbox</div>
+          <div class="field-spec-val" style="margin-top:4px;">
+            <span class="op-chip">Added</span><span class="op-chip">Removed</span>
+            <span class="op-chip">Equals</span><span class="op-chip">Has Changed</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando qualquer campo da oportunidade muda</strong>
+      </div>
+    </div>
+  </div>
+</div><!-- ═══════════════════════════════════════════════════════════════════════
+     🎯 CTA-CONTEXTUAL
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" style="padding: 0 72px; border-bottom: none; background: transparent;">
+  <div class="cta-contextual">
+    <div class="cta-ctx-content">
+      <div class="cta-ctx-tag">⚡ Pipeline vivo = vendas no piloto automático</div>
+      <div class="cta-ctx-title">Automações de pipeline <em>evitam que oportunidades esfriem</em> e sumam.</div>
+      <div class="cta-ctx-desc">
+        Trial 30 dias + treinamento + sessões ao vivo. Monte seu fluxo de acompanhamento com suporte PT-BR.
+      </div>
+    </div>
+    <a href="https://magneticflows.com/30-dias" target="_blank" class="cta-ctx-btn">Começar trial →</a>
+  </div>
+
+
+  </div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 03 — MUDANÇA DE STATUS (Opportunity Status Changed)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g3" data-name="mudança status opportunity status changed">
+  <div class="trigger-head">
+    <div class="trigger-num">03</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Mudanças de Status</div>
+      <h2 class="trigger-name">Mudança de Status em Oportunidade</h2>
+      <div class="trigger-en">Opportunity Status Changed</div>
+      <div class="trigger-tags">
+        <span class="info-tag realtime">Tempo real</span>
+        <span class="info-tag">Vendas ganhas/perdidas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara especificamente quando o <strong>status</strong> de uma oportunidade muda. Status é diferente de estágio — os 4 possíveis são: <em>Open</em> (aberto), <em>Won</em> (ganho), <em>Lost</em> (perdido), <em>Abandoned</em> (abandonado).</p>
+      <p>A grande vantagem desse gatilho sobre "Oportunidade Alterada" é o filtro único de <strong>Moved From Status</strong> — você pode reagir a transições específicas como "Open → Won" ou "Open → Lost", evitando disparos falsos.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Ganhou venda → financeiro</div>
+        <div class="use-case-desc">Negociação → Ganhou → notifica financeiro pra iniciar faturamento + envia contrato pro cliente.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Perdeu → feedback</div>
+        <div class="use-case-desc">Aberto → Perdido (valor &gt; R$ 15k) → pede feedback por email pra entender motivo.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Abandonado → reengajamento</div>
+        <div class="use-case-desc">Aberto → Abandonado → 15 dias depois, tenta reabrir com nova oferta.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 04</div>
+        <div class="use-case-title">Ganhou → onboarding</div>
+        <div class="use-case-desc">Status = Won → adiciona a novo pipeline "Onboarding" automaticamente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis — 7 opções (2 exclusivos)</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Status de Origem</div>
+          <div class="filter-en">Moved From Status</div>
+          <div class="filter-type required">★ exclusivo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Status de onde a oportunidade veio antes da mudança.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> o filtro mais valioso desse gatilho. Permite reações específicas: "De Open pra Won" (vitória direta) vs "De Lost pra Open" (reativação).</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Status de Destino</div>
+          <div class="filter-en">Moved To Status</div>
+          <div class="filter-type required">★ exclusivo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Novo status pra onde a oportunidade foi.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> combine com Origem pra capturar transições específicas. "Moved From = Open + Moved To = Won" = venda fechada agora mesmo.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Pipeline</div>
+          <div class="filter-en">Pipeline</div>
+          <div class="filter-type required">principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Pipeline específico.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> sempre preencha.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Usuário Atribuído</div>
+          <div class="filter-en">Assigned To</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Por responsável.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> diferenciar tratamento por vendedor.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Tem Tag</div>
+          <div class="filter-en">Has Tag</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Filtra por tag da oportunidade.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> segmentação por campanha ou fonte.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Valor do Lead</div>
+          <div class="filter-en">Lead Value</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Por valor monetário.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> tratamento diferenciado pra alto ticket. Ex.: feedback só pedido em perdas de R$ 15k+.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Razão de Perda</div>
+          <div class="filter-en">Lost Reason</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Motivo registrado da perda.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> segmentação fina em análise de perda. "Preço" dispara fluxo A (reoferta com desconto); "Timing" dispara B (nurturing de 6 meses).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G3 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Mais focado que o Opportunity Changed: <span class='arrow'>→</span> <strong>Status</strong> dropdown com 4 opções fixas + operadores Has Changed / Has Changed To, <span class='arrow'>→</span> quando Status = Lost, dropdown <strong>Lost Reason</strong> aparece (lógica condicional).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Opportunity Status Changed</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Opportunity Status Changed" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters · AND logic</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">In Pipeline</div>
+        <div class="hl-dropdown has-value">Vendas — Magnetic Funnels SaaS</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Status</div>
+        <div class="hl-field-row">
+          <div class="hl-dropdown has-value">Has Changed To</div>
+          <div class="hl-dropdown has-value">Won</div>
+        </div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">Operadores</div>
+          <div class="field-spec-val" style="margin-top:4px;">
+            <span class="op-chip">Is</span><span class="op-chip">Is Not</span>
+            <span class="op-chip">Has Changed</span><span class="op-chip">Has Changed To</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
+        <div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Aparece quando Status = Lost</div>
+        <div class="hl-filter-label">Lost Reason</div>
+        <div class="hl-dropdown has-value">Preço Alto</div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara especificamente quando o status (Open/Won/Lost/Abandoned) muda</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCKUP -->
+    <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo · Parâmetros reais</div>
+    <div class="ghl-mockup" data-mockup="g3">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Oportunidades/ 03 — Status Alterado · Celebrar ou Resgatar</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g3">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        
+        <div class="ghl-node" data-node-id="g3-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Opportunity Status Changed</div>
+              <div class="ghl-node-title">Status Mudou</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Opp Status Change Handler</span></div><div class="ghl-node-param"><span class="pk">Filter · Pipeline</span><span class="pv">Vendas Principal</span></div><div class="ghl-node-param"><span class="pk">Filter · In Pipeline Stage</span><span class="pv">Won, Lost, Abandoned</span></div><div class="ghl-node-param"><span class="pk">Filter · Opportunity Value</span><span class="pv">Greater than 5000</span></div><div class="ghl-node-param"><span class="pk">Filter · Assigned to User</span><span class="pv">Qualquer</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g3-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-condition">?</div>
+            <div>
+              <div class="ghl-node-type">Action · If/Else</div>
+              <div class="ghl-node-title">Won ou Lost?</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Roteamento por novo status</span></div><div class="ghl-node-param"><span class="pk">Branch 1</span><span class="pv">Won → celebração</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Condition</span><span class="pv">opportunity.status Equals "Won"</span></div><div class="ghl-node-param"><span class="pk">Branch 2</span><span class="pv">Lost → resgate</span></div><div class="ghl-node-param"><span class="pk">Branch 2 · Condition</span><span class="pv">opportunity.status Equals "Lost"</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g3-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📨</div>
+            <div>
+              <div class="ghl-node-type">Action · Slack Message</div>
+              <div class="ghl-node-title">Alerta Won</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Celebrar venda no Slack</span></div><div class="ghl-node-param"><span class="pk">Webhook URL</span><span class="pv">hooks.slack.com/services/XXX/YYY/ZZZ</span></div><div class="ghl-node-param"><span class="pk">Channel</span><span class="pv">#vendas-vitorias</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">🎉 VENDA FECHADA · R$ {{opportunity.monetary_value}}
+🏆 {{u...</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g3-4">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Email</div>
+              <div class="ghl-node-title">Resgate Lost</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Email de resgate pós-perda</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">{{user.first_name}}</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">{{contact.first_name}}, podemos conversar?</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Resgate Lost · Email 1</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver TODOS os parâmetros reais do HighLevel</div>
+    </div>
+  </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">De</span><span class="pv">Open</span></div>
+            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv highlight">Won (Ganhou)</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g3-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">!</div>
+            <div>
+              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-title">Internal Notification</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv highlight">Financeiro</span></div>
+            <div class="ghl-node-param"><span class="pk">Ação</span><span class="pv">Iniciar faturamento</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g3-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-title">Send Email</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">{{contact.email}}</span></div>
+            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Boas-vindas + Contrato</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g3-4">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">◎</div>
+            <div>
+              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-title">Add to Opportunity</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv highlight">Onboarding</span></div>
+            <div class="ghl-node-param"><span class="pk">Estágio</span><span class="pv">Novo Cliente</span></div>
+          </div>
+        </div>
+
+        <div class="config-panel">
+          <div class="config-header">
+            <div>
+              <div class="config-kind">—</div>
+              <div class="config-title">—</div>
+            </div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 04 — MUDANÇA DE ESTÁGIO (Pipeline State Changed)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g4" data-name="mudança estágio pipeline stage changed">
+  <div class="trigger-head">
+    <div class="trigger-num">04</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Mudanças de Status</div>
+      <h2 class="trigger-name">Mudança de Estágio no Pipeline</h2>
+      <div class="trigger-en">Pipeline State Changed</div>
+      <div class="trigger-tags">
+        <span class="info-tag realtime">Tempo real</span>
+        <span class="info-tag">★ Fundamental</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando uma oportunidade muda de <strong>estágio</strong> dentro do pipeline — ex.: "Qualificação" → "Proposta" → "Negociação" → "Fechamento".</p>
+      <p>Diferente da Mudança de Status (que é sobre Open/Won/Lost/Abandoned), este é sobre a <strong>posição no funil</strong>. É o gatilho perfeito pra gerenciar movimentação no pipeline — acionar tarefas específicas quando a oportunidade avança, disparar nurturing quando estaciona, alertar gerentes em estágios críticos.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">★</div>
+    <div class="callout-content">
+      <strong>Dica estratégica</strong>
+      Cada estágio do seu pipeline deveria ter pelo menos uma automação de acompanhamento. Ex.: entrou em "Proposta" → aguarda 3 dias → se não avançou, dispara follow-up. Assim, nenhuma oportunidade morre esquecida num estágio.
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Entrou em Proposta</div>
+        <div class="use-case-desc">Estágio = Proposta → envia PDF da proposta por email + cria lembrete em 3 dias.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Entrou em Negociação</div>
+        <div class="use-case-desc">Estágio = Negociação → notifica gerente pra acompanhar + libera desconto especial.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Retrocedeu no pipeline</div>
+        <div class="use-case-desc">Qualquer movimento "pra trás" → alerta pro vendedor investigar o que aconteceu.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 04</div>
+        <div class="use-case-title">Entrou em Fechamento</div>
+        <div class="use-case-desc">Estágio final → prepara ambiente de onboarding + notifica customer success.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis — 8 opções</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Pipeline</div>
+          <div class="filter-en">Pipeline</div>
+          <div class="filter-type required">principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Pipeline específico.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> obrigatório — sempre isole por pipeline.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Estágio</div>
+          <div class="filter-en">Pipeline Stage</div>
+          <div class="filter-type required">★ principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Estágio específico que dispara o fluxo.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> o filtro central. Cada estágio pode ter seu próprio fluxo. Combine com ações distintas pra cada momento da jornada de vendas.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Usuário Atribuído</div>
+          <div class="filter-en">Assigned To</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Por responsável.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> equipes grandes segmentam por vendedor.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Tem Tag</div>
+          <div class="filter-en">Has Tag</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Filtra por tag.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> separa fluxos por origem do lead.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Valor do Lead</div>
+          <div class="filter-en">Lead Value</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Por valor.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> alto ticket merece atenção diferenciada em cada estágio.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Razão de Perda</div>
+          <div class="filter-en">Lost Reason</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Motivo de perda, se aplicável.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> pouco usado aqui — faz mais sentido em status-changed.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Status</div>
+          <div class="filter-en">Status</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Status atual.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> geralmente "Open" quando se move entre estágios. Refinamento adicional.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Campos Customizados</div>
+          <div class="filter-en">Custom Fields</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Campos custom da oportunidade ou contato.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> segmentação fina.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G4 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">A dependência clássica: <span class='arrow'>→</span> <strong>In Pipeline</strong> pipeline picker, <span class='arrow'>→</span> <strong>Pipeline Stage</strong> dropdown filtrado pela pipeline (lógica condicional, <em>do estágio que entrou</em>).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Pipeline Stage Changed</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Pipeline Stage Changed" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters · AND logic</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">In Pipeline <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Vendas — Magnetic Funnels SaaS</div>
+      </div>
+
+      <div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
+        <div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Stages filtrados pela Pipeline acima</div>
+        <div class="hl-filter-label">Pipeline Stage (entrou nesse estágio)</div>
+        <div class="hl-dropdown has-value">Demo Marcada</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Assigned To</div>
+        <div class="hl-dropdown placeholder">Qualquer usuário</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Status</div>
+        <div class="hl-field-row">
+          <div class="hl-dropdown has-value">Is</div>
+          <div class="hl-dropdown has-value">Open</div>
+        </div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando a oportunidade muda de estágio dentro de uma pipeline</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCKUP -->
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g4">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Vendas/ 04 — Entrou em Negociação · Follow-up Ativo</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g4">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g4-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">Pipeline State Changed</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv">Vendas Internas</span></div>
+            <div class="ghl-node-param"><span class="pk">Estágio</span><span class="pv highlight">Negociação</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g4-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">!</div>
+            <div>
+              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-title">Internal Notification</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv highlight">Gerente + Dono</span></div>
+            <div class="ghl-node-param"><span class="pk">Urgência</span><span class="pv">Alta</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g4-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-wait">⏱</div>
+            <div>
+              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-title">Wait</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Duração</span><span class="pv highlight">3 dias</span></div>
+            <div class="ghl-node-param"><span class="pk">Se moveu</span><span class="pv">Parar fluxo</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g4-4">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">📋</div>
+            <div>
+              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-title">Create Task</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Título</span><span class="pv highlight">Cobrar resposta da negociação</span></div>
+            <div class="ghl-node-param"><span class="pk">Prazo</span><span class="pv">Mesmo dia</span></div>
+          </div>
+        </div>
+
+        <div class="config-panel">
+          <div class="config-header">
+            <div>
+              <div class="config-kind">—</div>
+              <div class="config-title">—</div>
+            </div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 05 — OPORTUNIDADE OCIOSA (Stale Opportunities)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g5" data-name="oportunidade ociosa stale opportunities">
+  <div class="trigger-head">
+    <div class="trigger-num">05</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Sinais de Alerta</div>
+      <h2 class="trigger-name">Oportunidade Ociosa</h2>
+      <div class="trigger-en">Stale Opportunities</div>
+      <div class="trigger-tags">
+        <span class="info-tag schedule">Agendado (diário)</span>
+        <span class="info-tag">Prevenção de perda</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando uma oportunidade fica <strong>parada sem nenhuma alteração</strong> por X dias. É o gatilho "anti-esquecimento" — aquele que resgata oportunidades que ficaram perdidas no pipeline.</p>
+      <p>Diferente dos outros dessa categoria, esse não é em tempo real — ele é <strong>avaliado diariamente</strong> pelo sistema, verificando quais oportunidades passaram do prazo definido sem atividade.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">5 dias sem mover → cobrar</div>
+        <div class="use-case-desc">Estágio Negociação ocioso 5 dias → notifica vendedor pra dar atualização.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">10 dias alto ticket → gerente</div>
+        <div class="use-case-desc">Oportunidade &gt; R$ 50k parada 10 dias → notifica gerente + cria tarefa de revisão.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">30 dias → descartar</div>
+        <div class="use-case-desc">Qualquer oportunidade parada 30 dias → mover automaticamente pra "Abandoned".</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 04</div>
+        <div class="use-case-title">Reengajar cliente</div>
+        <div class="use-case-desc">7 dias ociosa → email direto pro cliente: "Como podemos avançar?".</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis — 8 opções (1 exclusivo)</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Tempo de Ociosidade</div>
+          <div class="filter-en">Duration in Days</div>
+          <div class="filter-type required">★ exclusivo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Número de dias sem alteração que dispara o gatilho.</div>
+          <div class="filter-impact"><strong>Impacto crítico:</strong> calibre por estágio. "Proposta" 3 dias é razoável; "Qualificação" pode aceitar 7. Prazo menor = mais automações rodando + mais fricção com equipe.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Pipeline</div>
+          <div class="filter-en">Pipeline</div>
+          <div class="filter-type required">principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Pipeline a monitorar.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> cada pipeline tem ritmo próprio. Onboarding rápido; Vendas pode ser mais lento.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Estágio</div>
+          <div class="filter-en">Pipeline Stage</div>
+          <div class="filter-type required">importante</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Estágio específico.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> estágios diferentes têm toleerâncias diferentes. Crie fluxos separados pros mais críticos.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Usuário Atribuído</div>
+          <div class="filter-en">Assigned To</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Por responsável.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> identifica vendedores que mais abandonam oportunidades.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Valor do Lead</div>
+          <div class="filter-en">Lead Value</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Por valor monetário.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> alto ticket requer prazo menor (&lt; 5 dias) e escalação mais rápida.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Tem Tag · Razão de Perda · Status · Custom Fields</div>
+          <div class="filter-en">Outros filtros padrão</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Demais filtros comuns aos outros gatilhos da categoria.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> refinamento padrão — use pra segmentação fina.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g5">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Oportunidades/ 05 — Opp Ociosa · Reativar ou Abandonar</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g5">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        
+        <div class="ghl-node" data-node-id="g5-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">Oportunidade Ociosa</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Sem atividade</span><span class="pv highlight">7 dias</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g5-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-title">Send Email</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Ainda faz sentido?</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g5-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-wait">⏱</div>
+            <div>
+              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-title">Wait</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Duração</span><span class="pv">3 dias</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g5-4">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-condition">?</div>
+            <div>
+              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-title">If/Else</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Cliente respondeu?</span><span class="pv">NÃO</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g5-5">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-title">Update Opportunity Status</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Lost · Abandonou</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G5 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Três campos obrigatórios em cascata: <span class='arrow'>→</span> <strong>Duration in Days</strong> number, <span class='arrow'>→</span> <strong>In Pipeline</strong> pipeline picker, <span class='arrow'>→</span> <strong>Pipeline Stage</strong> dropdown condicional. ⚠️ Não é retroativo.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Stale Opportunities</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Stale Opportunities" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters · AND logic</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Duration in Days <span class="req">*</span></div>
+        <input class="hl-input" value="7" style="width: 100%;">
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">⚠️ Não retroativo — aplica apenas a oportunidades criadas após publicar</div>
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">In Pipeline <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Vendas — Magnetic Funnels SaaS</div>
+      </div>
+
+      <div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
+        <div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Stages filtrados pela Pipeline</div>
+        <div class="hl-filter-label">Pipeline Stage <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Aguardando Resposta</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Assigned To (opcional)</div>
+        <div class="hl-dropdown placeholder">Qualquer usuário</div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando uma oportunidade fica parada por N dias num estágio</strong>
+      </div>
+    </div>
+  </div>
+
+</div><!-- ═══════════════════════════════════════════════════════════════════════
+     RODAPÉ
+     ═══════════════════════════════════════════════════════════════════════ -->
+<!-- NAV PREV/NEXT entre categorias -->
+<nav class="cat-nav">
+  <a href="guia-highlevel-cat03.html" class="cat-nav-link prev">
+    <span class="cat-nav-label">← Anterior · Categoria 03</span>
+    <span class="cat-nav-name">Compromissos</span>
+  </a>
+  <a href="guia-highlevel-cat05.html" class="cat-nav-link next">
+    <span class="cat-nav-label">Próxima · Categoria 05 →</span>
+    <span class="cat-nav-name">Afiliados</span>
+  </a>
+</nav>
+
+<div class="guide-footer">
+
+  <div class="footer-top">
+    <h3>Categoria 04 completa.</h3>
+    <p>5 gatilhos que cobrem todo o ciclo de vida de uma oportunidade — desde o nascimento até o ganho, passando pela movimentação no pipeline e alertas de inatividade.</p>
+  </div>
+
+  <div class="footer-main-cta">
+    <div class="footer-main-cta-text">
+      <div class="footer-main-cta-tag">⚡ Crie sua ferramenta SaaS</div>
+      <div class="footer-main-cta-title">Tenha seu próprio <em>HighLevel</em> e venda.</div>
+      <div class="footer-main-cta-sub">Trial 30 dias · Treinamento completo · Sessões ao vivo · Suporte em PT-BR. Tudo via nosso link.</div>
+    </div>
+    <a href="https://magneticflows.com/30-dias" target="_blank" class="footer-main-cta-btn">Começar trial →</a>
+  </div>
+
+  <div class="footer-links-grid">
+    <a href="https://gokollab.com/highlevelbrasil" target="_blank" class="footer-link-card">
+      <span class="footer-link-tag">Grátis</span>
+      <span class="footer-link-title">Comunidade Magnetic Flows</span>
+      <span class="footer-link-desc">Entre pra comunidade gratuita e aprenda com outros usuários do HighLevel.</span>
+      <span class="footer-link-arrow">Entrar →</span>
+    </a>
+    <a href="https://chat.whatsapp.com/JGPLBTmaTLq7do2FqfjALQ" target="_blank" class="footer-link-card">
+      <span class="footer-link-tag">WhatsApp</span>
+      <span class="footer-link-title">Grupo Oficial WhatsApp</span>
+      <span class="footer-link-desc">Dicas diárias, novidades do HighLevel e networking direto no seu celular.</span>
+      <span class="footer-link-arrow">Entrar →</span>
+    </a>
+    
+    <a href="https://br.magneticfunnels.io" target="_blank" class="footer-link-card">
+      <span class="footer-link-tag">Assinatura</span>
+      <span class="footer-link-title">Magnetic Funnels Premium</span>
+      <span class="footer-link-desc">Suporte dedicado, automações exclusivas e mentorias mensais com o time.</span>
+      <span class="footer-link-arrow">Assinar →</span>
+    </a>
+  </div>
+
+  <div class="footer-legal">
+    Guia produzido pela Magnetic Funnels · Categoria 04 de 12 · Atualizado em 2026
+  </div>
+</div>
+
+</main>
+</div>
+
+<script>
+  const configData = {
+    // ===== Gatilho 01 =====
+    'g1-1': {
+      kind: 'Trigger · Gatilho',
+      title: 'Opportunity Created',
+      body: `
+        <div class="config-section">
+          <div class="config-label">Pipeline</div>
+          <div class="config-field dropdown highlight">Vendas Internas</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Valor do Lead</div>
+          <div class="config-field dropdown highlight">Greater than R$ 50.000</div>
+          <div class="config-desc"><strong>Impacto:</strong> só oportunidades de alto ticket disparam esse fluxo. Dispensa atenção especial imediata.</div>
+        </div>
+      `
+    },
+    'g1-2': {
+      kind: 'Action · Ferramenta Interna',
+      title: 'Internal Notification',
+      body: `
+        <div class="config-section">
+          <div class="config-label">Canais</div>
+          <div class="config-field highlight">✓ SMS ✓ Email</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Para</div>
+          <div class="config-field dropdown">Gerente de Vendas</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Mensagem</div>
+          <div class="config-field" style="white-space: pre-wrap;">🔥 NOVA OPORTUNIDADE HIGH TICKET
+{{contact.first_name}} — R$ {{opportunity.value}}
+Dono: {{opportunity.assigned_user}}
+Acompanhe hoje!</div>
+        </div>
+      `
+    },
+    'g1-3': {
+      kind: 'Action · Oportunidade',
+      title: 'Add Opportunity Tag',
+      body: `
+        <div class="config-section">
+          <div class="config-label">Tag</div>
+          <div class="config-field highlight">High Ticket · Prioridade Máxima</div>
+          <div class="config-desc">Tag permite filtrar essas oportunidades em relatórios e campanhas futuras.</div>
+        </div>
+      `
+    },
+    'g1-4': {
+      kind: 'Action · Ferramenta Interna',
+      title: 'Create Task',
+      body: `
+        <div class="config-section">
+          <div class="config-label">Título</div>
+          <div class="config-field highlight">Ligar em 1h — High Ticket · {{contact.first_name}}</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Responsável</div>
+          <div class="config-field dropdown">{{opportunity.assigned_user}}</div>
+          <div class="config-desc">Usa o dono da oportunidade — quem foi atribuído ao lead recebe a tarefa automaticamente.</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Prazo</div>
+          <div class="config-field">+1 hora</div>
+        </div>
+      `
+    },
+    // ===== Gatilho 03 =====
+    // ===== Gatilho 04 =====
+    'g4-1': {
+      kind: 'Trigger · Gatilho',
+      title: 'Pipeline State Changed',
+      body: `
+        <div class="config-section">
+          <div class="config-label">Pipeline</div>
+          <div class="config-field dropdown highlight">Vendas Internas</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Estágio</div>
+          <div class="config-field dropdown highlight">Negociação</div>
+          <div class="config-desc"><strong>Impacto:</strong> dispara toda vez que uma oportunidade chega em Negociação. Se ela passar direto (raro), o fluxo não roda.</div>
+        </div>
+      `
+    },
+    'g4-2': {
+      kind: 'Action · Ferramenta Interna',
+      title: 'Internal Notification',
+      body: `
+        <div class="config-section">
+          <div class="config-label">Para</div>
+          <div class="config-field highlight">Gerente + Dono da Oportunidade</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Urgência</div>
+          <div class="config-field">Alta</div>
+          <div class="config-desc">Negociação é o estágio mais crítico. Gerente acompanha de perto pra garantir fechamento.</div>
+        </div>
+      `
+    },
+    'g4-3': {
+      kind: 'Action · Temporização',
+      title: 'Wait',
+      body: `
+        <div class="config-section">
+          <div class="config-label">Duração</div>
+          <div class="config-field highlight">3 dias</div>
+          <div class="config-desc">Prazo razoável pra uma negociação avançar. Depois disso, precisa de ação.</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Se moveu de estágio</div>
+          <div class="config-field highlight">✓ Parar fluxo</div>
+          <div class="config-desc"><strong>Impacto:</strong> se a oportunidade já saiu de Negociação (venda fechada ou perdida), não faz sentido cobrar.</div>
+        </div>
+      `
+    },
+    'g4-4': {
+      kind: 'Action · Ferramenta Interna',
+      title: 'Create Task',
+      body: `
+        <div class="config-section">
+          <div class="config-label">Título</div>
+          <div class="config-field highlight">Cobrar resposta da negociação — {{contact.first_name}}</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Responsável</div>
+          <div class="config-field dropdown">{{opportunity.assigned_user}}</div>
+        </div>
+        <div class="config-section">
+          <div class="config-label">Prazo</div>
+          <div class="config-field">Mesmo dia</div>
+          <div class="config-desc">Urgência alta — vendedor precisa agir naquele dia.</div>
+        </div>
+      `
+    },
+    'g2-1': { kind: 'Trigger · Gatilho', title: 'Oportunidade Alterada', body: `<div class="config-section"><div class="config-label">Granularidade</div><div class="config-field">Dispara em qualquer campo mudado — valor, estágio, dono, descrição</div></div><div class="config-section"><div class="config-label">Importância</div><div class="config-field">Em vendas consultivas, mudanças em valor/desconto da opp merecem visibilidade pra gerência.</div></div>` },
+    'g2-2': { kind: 'Action · Lógica', title: 'Filtrar só mudanças de valor', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">opportunity.value != opportunity.value_previous</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Mudança de descrição/observações não precisa de alerta. Mudança de valor sim.</div></div>` },
+    'g2-3': { kind: 'Action · Comunicação', title: 'Slack Alert', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-alertas</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field" style="white-space: pre-wrap;">💰 Opp {{opp.name}} teve valor alterado
+📉 De: R$ {{opp.value_previous}}
+📈 Para: R$ {{opp.value}}
+👤 Por: {{user.name}}</div></div>` },
+    'g2-4': { kind: 'Action · Envio de Dados', title: 'Google Sheets (audit log)', body: `<div class="config-section"><div class="config-label">Planilha</div><div class="config-field">Audit Log · Mudanças</div></div><div class="config-section"><div class="config-label">Linhas adicionadas</div><div class="config-field">Timestamp | Opp | Campo | Valor Anterior | Valor Novo | Quem</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Compliance, análise de padrões, identificar vendedores que dão desconto excessivo.</div></div>` },
+    'g5-1': { kind: 'Trigger · Gatilho', title: 'Opp Ociosa 7 dias', body: `<div class="config-section"><div class="config-label">Threshold</div><div class="config-field">7 dias sem nenhuma atividade (email, call, reunião)</div></div><div class="config-section"><div class="config-label">Por quê esse número</div><div class="config-field">Curto o suficiente pra não perder momento, longo o suficiente pra não ser assediador.</div></div>` },
+    'g5-2': { kind: 'Action · Comunicação', title: 'Send Email (ressurreição)', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field">Ainda faz sentido?</div></div><div class="config-section"><div class="config-label">Assunto</div><div class="config-field">Devo fechar sua oportunidade?</div></div><div class="config-section"><div class="config-label">Tom</div><div class="config-field">Honesto, sem pressão. Contraintuitivo: perguntar se deve fechar faz muita gente voltar.</div></div>` },
+    'g5-3': { kind: 'Action · Temporização', title: 'Wait 3 dias', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field">3 dias</div></div><div class="config-section"><div class="config-label">Lógica</div><div class="config-field">Dar tempo pra pessoa responder o email. Se não responder em 3 dias, já era.</div></div>` },
+    'g5-4': { kind: 'Action · Lógica', title: 'Respondeu?', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">contact.last_reply > wait_start_time</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Termina fluxo — vendedor acompanha manualmente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Fecha como Lost</div></div>` },
+    'g5-5': { kind: 'Action · Oportunidade', title: 'Update Status = Lost', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field">Lost</div></div><div class="config-section"><div class="config-label">Lost Reason</div><div class="config-field">Abandonou · Sem resposta</div></div><div class="config-section"><div class="config-label">Por quê fechar</div><div class="config-field">Pipeline limpo é mais útil que pipeline inchado com opps mortas. Abre espaço pras ativas.</div></div>` },
+    'g3-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Status de Opp Mudou', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name</div><div class="config-field highlight">Descritivo</div></div><div class="config-section"><div class="config-label">Filter · Pipeline</div><div class="config-field highlight">Filtra por pipeline específico</div></div><div class="config-section"><div class="config-label">Filter · In Pipeline Stage</div><div class="config-field highlight">Multi-select de stages. Pode escolher só Won/Lost/Abandoned.</div></div><div class="config-section"><div class="config-label">Filter · From Stage</div><div class="config-field">Stage anterior. Útil pra detectar movimentos específicos.</div></div><div class="config-section"><div class="config-label">Filter · To Stage</div><div class="config-field">Stage novo após mudança</div></div><div class="config-section"><div class="config-label">Filter · Opportunity Value</div><div class="config-field">Filtra por valor ($$). Operators numéricos disponíveis.</div></div><div class="config-section"><div class="config-label">Filter · Has Tag</div><div class="config-field">Tag do contato dono da opp</div></div><div class="config-section"><div class="config-label">Filter · Opportunity Name</div><div class="config-field">Texto específico no nome</div></div><div class="config-section"><div class="config-label">Filter · Assigned to User</div><div class="config-field">Filtra por dono da opp</div></div><div class="config-section"><div class="config-label">Filter · Lost Reason</div><div class="config-field">Se status = Lost, pode filtrar por motivo específico</div></div>` },
+    'g3-2': { kind: 'Action · If/Else', title: 'Bifurcação por status', body: `<div class="config-section"><div class="config-label">Branch 1 Condition</div><div class="config-field highlight">opportunity.status Equals "Won"</div></div><div class="config-section"><div class="config-label">Branch 2 Condition</div><div class="config-field">opportunity.status Equals "Lost"</div></div><div class="config-section"><div class="config-label">Branch 3 None</div><div class="config-field">Abandoned (cai na None branch)</div></div>` },
+    'g3-3': { kind: 'Action · Slack Message', title: 'Notificar time', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Descritivo</div></div><div class="config-section"><div class="config-label">Webhook URL</div><div class="config-field highlight">URL do Slack Incoming Webhook. Configurar no app do Slack.</div></div><div class="config-section"><div class="config-label">Channel</div><div class="config-field">Canal destino (deve existir no workspace)</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field highlight">Texto com markdown Slack. Aceita merge fields.</div></div><div class="config-section"><div class="config-label">Advanced · Blocks</div><div class="config-field">Slack blocks pra formatação rica</div></div>` },
+    'g3-4': { kind: 'Action · Send Email', title: 'Email de resgate', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Template específico pra quem virou Lost</div></div><div class="config-section"><div class="config-label">Tom</div><div class="config-field">Humilde, perguntar motivo, sem forçar venda</div></div>` }
+  };
+
+  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+
+  function initMockup(mockup) {
+    const nodes = mockup.querySelectorAll('.ghl-node');
+    const connectors = mockup.querySelectorAll('.ghl-connector');
+    const panel = mockup.querySelector('.config-panel');
+    const panelKind = panel.querySelector('.config-kind');
+    const panelTitle = panel.querySelector('.config-title');
+    const panelBody = panel.querySelector('.config-body');
+    const closeBtn = panel.querySelector('.config-close');
+    const playBtn = mockup.querySelector('.ghl-btn.play');
+    const animIndicator = mockup.querySelector('.anim-indicator');
+    const animText = mockup.querySelector('.anim-text');
+
+    nodes.forEach(node => {
+      node.addEventListener('click', () => {
+        const id = node.dataset.nodeId;
+        const data = configData[id];
+        if (!data) return;
+        nodes.forEach(n => n.classList.remove('active'));
+        node.classList.add('active');
+        panelKind.textContent = data.kind;
+        panelTitle.textContent = data.title;
+        panelBody.innerHTML = data.body;
+        panel.classList.add('open');
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      panel.classList.remove('open');
+      nodes.forEach(n => n.classList.remove('active'));
+    });
+
+    function showAll() {
+      nodes.forEach(n => n.classList.add('visible'));
+      connectors.forEach(c => c.classList.add('visible'));
+    }
+    function hideAll() {
+      nodes.forEach(n => n.classList.remove('visible'));
+      connectors.forEach(c => c.classList.remove('visible'));
+    }
+    setTimeout(showAll, 100);
+
+    playBtn.addEventListener('click', async () => {
+      playBtn.disabled = true;
+      const originalText = playBtn.textContent;
+      playBtn.textContent = '● Reproduzindo...';
+      panel.classList.remove('open');
+      nodes.forEach(n => n.classList.remove('active'));
+      hideAll();
+      await sleep(400);
+      animIndicator.classList.add('visible');
+      const nodeArr = Array.from(nodes);
+      const connArr = Array.from(connectors);
+      for (let i = 0; i < nodeArr.length; i++) {
+        animText.textContent = i === 0 ? `Adicionando gatilho...` : `Adicionando ação ${i}...`;
+        await sleep(500);
+        nodeArr[i].classList.add('visible', 'active');
+        await sleep(400);
+        nodeArr[i].classList.remove('active');
+        if (i < connArr.length) {
+          animText.textContent = 'Conectando...';
+          await sleep(300);
+          connArr[i].classList.add('visible');
+        }
+      }
+      animText.textContent = 'Fluxo completo ✓';
+      await sleep(1000);
+      animIndicator.classList.remove('visible');
+      playBtn.disabled = false;
+      playBtn.textContent = originalText;
+    });
+  }
+
+  function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+  const search = document.getElementById('search');
+  const blocks = document.querySelectorAll('.trigger-block[id^="g"]');
+  const links = document.querySelectorAll('.side-link');
+
+  search.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    blocks.forEach(block => {
+      const name = (block.dataset.name || '').toLowerCase();
+      const nameEl = block.querySelector('.trigger-name')?.textContent.toLowerCase() || '';
+      const enEl = block.querySelector('.trigger-en')?.textContent.toLowerCase() || '';
+      const match = !q || name.includes(q) || nameEl.includes(q) || enEl.includes(q);
+      block.classList.toggle('hidden', !match);
+    });
+    links.forEach(link => {
+      const text = link.textContent.toLowerCase();
+      const match = !q || text.includes(q);
+      link.style.display = match ? '' : 'none';
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  blocks.forEach(b => observer.observe(b));
+
+  // ===== Back to top =====
+  const btnTop = document.createElement('button');
+  btnTop.className = 'back-to-top';
+  btnTop.innerHTML = '↑';
+  btnTop.setAttribute('aria-label', 'Voltar ao topo');
+  btnTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+  document.body.appendChild(btnTop);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) btnTop.classList.add('visible');
+    else btnTop.classList.remove('visible');
+  });
+
+  // ===== Drawer mobile =====
+  const overlay = document.createElement('div');
+  overlay.className = 'drawer-overlay';
+  document.body.appendChild(overlay);
+
+  window.toggleDrawer = function() {
+    const aside = document.querySelector('aside');
+    if (!aside) return;
+    aside.classList.toggle('open');
+    overlay.classList.toggle('visible');
+  };
+
+  overlay.addEventListener('click', toggleDrawer);
+
+  // Fechar drawer ao clicar em link da sidebar (mobile)
+  document.querySelectorAll('aside .side-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900) {
+        document.querySelector('aside').classList.remove('open');
+        overlay.classList.remove('visible');
+      }
+    });
+  });
+
+</script>
+
+</body>
+</html>

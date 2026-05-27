@@ -1,0 +1,3329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ações do HighLevel — Guia Magnetic Funnels</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+
+<meta name="description" content="Guia completo dos gatilhos de Contatos do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 01/12 do guia oficial em português." />
+<meta name="author" content="Magnetic Funnels" />
+<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, gatilhos, contatos, CRM, workflow, PT-BR" />
+
+<!-- Open Graph -->
+
+<!-- Twitter Card -->
+
+
+<!--
+  ═══════════════════════════════════════════════════════════════════════════
+  CONFIGURAÇÃO DO GUIA
+  ═══════════════════════════════════════════════════════════════════════════
+
+  Este arquivo usa o TEMA HIGHLEVEL.
+  Para gerar a versão Magnetic Funnels, use o arquivo guia-magnetic-funnels.html
+
+  ───── LINKS PARA SUBSTITUIR (Ctrl+F em cada placeholder) ─────
+
+  https://magneticflows.com/30-dias     → HighLevel 30 dias grátis (afiliação)
+  https://gokollab.com/highlevelbrasil        → Comunidade gratuita Magnetic Flows
+  https://chat.whatsapp.com/JGPLBTmaTLq7do2FqfjALQ          → Grupo WhatsApp
+  https://br.magneticfunnels.io        → Assinatura paga Magnetic Funnels
+
+  ───── TEXTOS DE MARCA (pesquise e edite se quiser mudar o tom) ─────
+
+  Produto principal: "HighLevel" (linha 43 em diante no conteúdo)
+  Texto CTA fixo: busque por "CTA-FIXO" nos comentários HTML
+  Texto CTAs contextuais: busque por "CTA-CONTEXTUAL"
+
+  ═══════════════════════════════════════════════════════════════════════════
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎨 SISTEMA DE TEMAS
+     Altere estas variáveis pra trocar completamente o visual do guia.
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  :root {
+    /* ───── TEMA HIGHLEVEL · Branding oficial HighLevel ───── */
+    --brand-name: 'HighLevel';
+
+    /* Cores primárias oficiais HighLevel */
+    --brand-accent: #FEB902;          /* Capture Yellow — cor principal da marca */
+    --brand-accent-deep: #d69c00;     /* Amarelo mais escuro pra hovers/sombras */
+    --brand-secondary: #188AF5;       /* Nurture Blue — azul oficial, usado em CTAs secundários */
+    --brand-ink: #0B223F;             /* Space Blue — azul escuro oficial, base do texto */
+    --brand-ink-soft: #1a3254;        /* Variação mais clara do Space Blue */
+
+    /* Papéis / fundos (neutros que funcionam com o Space Blue) */
+    --brand-paper: #f7f9fc;           /* Off-white frio */
+    --brand-paper-warm: #eef2f8;      /* Cards alternados — azul muito suave */
+    --brand-paper-dim: #dde4ef;
+
+    /* Tons derivados */
+    --muted: #4a5a70;                 /* Cinza azulado (não cinza puro) */
+    --soft: #7a8799;
+    --success: #10b981;               /* Close Green aproximado */
+
+    /* Mockup do HighLevel — reproduz o ambiente escuro do canvas real */
+    --ghl-bg: #0B223F;                /* Space Blue oficial — fundo do canvas */
+    --ghl-surface: #13304f;           /* Superfície dos nós */
+    --ghl-border: #2a4868;
+    --ghl-text: #f7f9fc;
+    --ghl-text-dim: #9bb0cc;
+    --ghl-accent: #188AF5;            /* Nurture Blue */
+    --ghl-yellow: #FEB902;            /* Capture Yellow */
+    --ghl-green: #10b981;
+    --ghl-purple: #a855f7;
+    --ghl-orange: #f59e0b;
+    --ghl-pink: #ec4899;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     RESET E BASE
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', -apple-system, sans-serif;
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+    line-height: 1.55;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(255, 74, 28, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 85% 80%, rgba(184, 145, 47, 0.04) 0%, transparent 50%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     LAYOUT GLOBAL
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .app {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ───── SIDEBAR ───── */
+  aside {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 32px 24px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1.5px solid var(--brand-ink);
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside::-webkit-scrollbar { width: 6px; }
+  aside::-webkit-scrollbar-thumb { background: rgba(245,241,232,0.15); }
+
+  .side-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    color: var(--brand-accent);
+  }
+
+  .side-brand .brand-thin {
+    font-weight: 300;
+    color: var(--brand-paper);
+  }
+
+  .side-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.5);
+    margin-bottom: 28px;
+  }
+
+  .side-search {
+    width: 100%;
+    background: rgba(245,241,232,0.06);
+    border: 1px solid rgba(245,241,232,0.15);
+    color: var(--brand-paper);
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-bottom: 24px;
+    transition: border-color 0.2s;
+  }
+
+  .side-search:focus {
+    outline: none;
+    border-color: var(--brand-secondary);
+  }
+
+  .side-search::placeholder { color: rgba(245,241,232,0.4); }
+
+  .side-section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.4);
+    margin-bottom: 10px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+  }
+
+  .side-section-label:first-of-type {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .side-link {
+    font-size: 13px;
+    padding: 8px 12px;
+    color: rgba(245,241,232,0.75);
+    text-decoration: none;
+    display: block;
+    border-left: 2px solid transparent;
+    line-height: 1.3;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+
+  .side-link:hover {
+    color: var(--brand-paper);
+    background: rgba(254, 185, 2, 0.08);
+    border-left-color: var(--brand-accent);
+  }
+
+  .side-link .side-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: rgba(245,241,232,0.4);
+    margin-right: 8px;
+  }
+
+  .side-link.active {
+    color: var(--brand-accent);
+    background: rgba(254, 185, 2, 0.1);
+    border-left-color: var(--brand-accent);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎯 CTA FIXO NA SIDEBAR (card promocional)
+     Edite textos — busque por "CTA-FIXO" neste arquivo
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .side-cta-fixed {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+  }
+
+  .side-cta-card {
+    background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-accent-deep) 100%);
+    padding: 20px;
+    border-radius: 4px;
+    color: var(--brand-paper);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .side-cta-card::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  }
+
+  .side-cta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 8px;
+  }
+
+  .side-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .side-cta-desc {
+    font-size: 12px;
+    line-height: 1.45;
+    opacity: 0.92;
+    margin-bottom: 14px;
+  }
+
+  .side-cta-btn {
+    display: inline-block;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 9px 14px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border: 1px solid var(--brand-ink);
+  }
+
+  .side-cta-btn:hover {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  /* ───── MAIN ───── */
+  main {
+    padding: 0;
+    min-width: 0;
+  }
+
+  .hero-area {
+    padding: 64px 72px 48px;
+    border-bottom: 1.5px solid var(--brand-ink);
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-paper);
+    background: var(--brand-ink);
+    padding: 6px 12px;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--brand-accent);
+    /* Destaque adicional: sublinhado underline invisível visível só em acento */
+    background: linear-gradient(180deg, transparent 68%, rgba(254, 185, 2, 0.25) 68%, rgba(254, 185, 2, 0.25) 88%, transparent 88%);
+    padding: 0 4px;
+  }
+
+  .hero-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 720px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    padding-top: 28px;
+    border-top: 1px solid var(--brand-ink);
+  }
+
+  .hero-stat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .hero-stat-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--brand-accent);
+    display: block;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+
+  .hero-stat-label { color: var(--muted); }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎯 HERO CTA — BANNER DE ABERTURA
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .hero-cta {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-left: 4px solid var(--brand-accent);
+  }
+
+  .hero-cta-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .hero-cta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .hero-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  .hero-cta-title em {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--brand-accent);
+  }
+
+  .hero-cta-sub {
+    font-size: 0.95rem;
+    opacity: 0.8;
+  }
+
+  .hero-cta-btn {
+    background: var(--brand-accent);
+    color: var(--brand-paper);
+    padding: 14px 24px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .hero-cta-btn:hover {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     BLOCOS DE GATILHO
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .trigger-block {
+    padding: 72px 72px;
+    border-bottom: 1.5px solid var(--brand-ink);
+    scroll-margin-top: 20px;
+  }
+
+  .trigger-block:nth-of-type(even) {
+    background: var(--brand-paper-warm);
+  }
+
+  .trigger-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .trigger-num {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 0.8;
+    color: var(--brand-accent);
+    letter-spacing: -0.04em;
+    min-width: 90px;
+  }
+
+  .trigger-titles { flex: 1; }
+
+  .trigger-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .trigger-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+
+  .trigger-en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  .trigger-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .info-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--brand-ink);
+    background: var(--brand-paper);
+  }
+
+  .info-tag.schedule {
+    background: var(--brand-secondary);
+    color: var(--brand-paper);
+    border-color: var(--brand-secondary);
+  }
+
+  .info-tag.realtime {
+    background: var(--success);
+    color: var(--brand-paper);
+    border-color: var(--success);
+  }
+
+  /* ───── SEÇÕES INTERNAS ───── */
+  .tblock {
+    margin-bottom: 40px;
+  }
+
+  .tblock-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .tblock-label::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--brand-accent);
+  }
+
+  .tblock-content {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--brand-ink);
+    max-width: 780px;
+  }
+
+  .tblock-content p + p { margin-top: 14px; }
+
+  .tblock-content strong {
+    font-weight: 600;
+    background: rgba(255, 74, 28, 0.12);
+    padding: 1px 4px;
+  }
+
+  /* ───── USE CASES ───── */
+  .use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .use-case {
+    background: var(--brand-paper);
+    border: 1px solid var(--brand-ink);
+    padding: 20px;
+  }
+
+  .trigger-block:nth-of-type(even) .use-case {
+    background: var(--brand-paper-dim);
+  }
+
+  .use-case-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .use-case-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .use-case-desc {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ───── FILTROS ───── */
+  .filters-grid {
+    display: grid;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .filter-item {
+    border: 1px solid var(--brand-ink);
+    background: var(--brand-paper);
+    overflow: hidden;
+  }
+
+  .trigger-block:nth-of-type(even) .filter-item {
+    background: var(--brand-paper);
+  }
+
+  .filter-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px dashed rgba(11,11,12,0.15);
+    flex-wrap: wrap;
+  }
+
+  .filter-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .filter-en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .filter-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    margin-left: auto;
+  }
+
+  .filter-type.required {
+    background: var(--brand-accent);
+  }
+
+  .filter-body {
+    padding: 16px 20px 18px;
+  }
+
+  .filter-desc {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--brand-ink);
+    margin-bottom: 10px;
+  }
+
+  .filter-impact {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--muted);
+    padding-left: 16px;
+    border-left: 2px solid var(--brand-accent);
+    
+  }
+
+  .filter-impact strong {
+    font-style: normal;
+    color: var(--brand-ink);
+    font-weight: 600;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🖥️ MOCKUP VISUAL DO HIGHLEVEL
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .ghl-mockup {
+    background: var(--ghl-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin-top: 8px;
+  }
+
+  .ghl-toolbar {
+    background: var(--ghl-surface);
+    border-bottom: 1px solid var(--ghl-border);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .ghl-workflow-name {
+    font-size: 14px;
+    color: var(--ghl-text);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ghl-workflow-name::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--ghl-green);
+    border-radius: 50%;
+  }
+
+  .ghl-toolbar-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .ghl-btn {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 6px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+
+  .ghl-btn:hover:not(:disabled) {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-text);
+  }
+
+  .ghl-btn:disabled { cursor: not-allowed; opacity: 0.7; }
+
+  .ghl-btn.primary {
+    background: var(--ghl-accent);
+    border-color: var(--ghl-accent);
+    color: white;
+  }
+
+  .ghl-btn.primary:hover { background: #4a8ae8; }
+
+  .ghl-btn.play {
+    background: var(--brand-accent);
+    border-color: var(--brand-accent);
+    color: white;
+    font-weight: 500;
+  }
+
+  .ghl-canvas {
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
+    background-size: 16px 16px;
+    background-color: var(--ghl-bg);
+    padding: 48px 24px 72px;
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .ghl-node {
+    width: 320px;
+    background: var(--ghl-surface);
+    border: 1.5px solid var(--ghl-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+
+  .ghl-node.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .ghl-node.active {
+    border-color: var(--ghl-accent);
+    box-shadow: 0 0 0 3px rgba(91, 155, 255, 0.2);
+  }
+
+  .ghl-node:hover {
+    border-color: var(--ghl-accent);
+    transform: translateY(-1px);
+  }
+
+  .ghl-node.active:hover { transform: translateY(0); }
+
+  .ghl-node-header {
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--ghl-border);
+  }
+
+  .ghl-node-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .ghl-node-icon.trigger { background: var(--ghl-purple); }
+  .ghl-node-icon.action-email { background: var(--ghl-accent); }
+  .ghl-node-icon.action-notify { background: var(--ghl-orange); }
+  .ghl-node-icon.action-pipeline { background: var(--ghl-green); }
+  .ghl-node-icon.action-tag { background: #ec4899; }
+  .ghl-node-icon.action-wait { background: #64748b; }
+
+  .ghl-node-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ghl-text-dim);
+    margin-bottom: 2px;
+  }
+
+  .ghl-node-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ghl-text);
+    line-height: 1.3;
+  }
+
+  .ghl-node-body {
+    padding: 10px 14px 12px;
+  }
+
+  .ghl-node-param {
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    line-height: 1.5;
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+
+  .ghl-node-param:last-child { margin-bottom: 0; }
+
+  .ghl-node-param .pk {
+    color: #7c8494;
+    min-width: 58px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+  }
+
+  .ghl-node-param .pv { color: var(--ghl-text); }
+
+  .ghl-node-param .pv.highlight {
+    background: rgba(91, 155, 255, 0.15);
+    color: #85b0ff;
+    padding: 0 5px;
+    border-radius: 3px;
+  }
+
+  .ghl-connector {
+    width: 2px;
+    height: 36px;
+    background: var(--ghl-border);
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 7px solid var(--ghl-border);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  .click-hint {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--ghl-text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .ghl-node.active .click-hint {
+    color: var(--ghl-accent);
+    opacity: 1;
+  }
+
+  /* ───── CONFIG PANEL ───── */
+  .config-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    background: var(--ghl-surface);
+    border-left: 1px solid var(--ghl-border);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    overflow-y: auto;
+  }
+
+  .config-panel.open { transform: translateX(0); }
+
+  .config-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--ghl-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    background: var(--ghl-surface);
+    z-index: 2;
+  }
+
+  .config-kind {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ghl-accent);
+    margin-bottom: 6px;
+  }
+
+  .config-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ghl-text);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .config-close {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .config-close:hover {
+    color: var(--ghl-text);
+    border-color: var(--ghl-accent);
+  }
+
+  .config-body { padding: 20px; }
+
+  .config-section { margin-bottom: 24px; }
+  .config-section:last-child { margin-bottom: 0; }
+
+  .config-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ghl-text-dim);
+    margin-bottom: 8px;
+  }
+
+  .config-field {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--ghl-text);
+    border-radius: 4px;
+  }
+
+  .config-field.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .config-field.dropdown::after {
+    content: '▾';
+    color: var(--ghl-text-dim);
+    margin-left: 8px;
+  }
+
+  .config-field.highlight {
+    border-color: var(--ghl-accent);
+    background: rgba(91, 155, 255, 0.08);
+  }
+
+  .config-desc {
+    font-size: 12px;
+    color: var(--ghl-text-dim);
+    line-height: 1.5;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 2px solid var(--brand-accent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .config-desc strong {
+    color: var(--ghl-text);
+    font-weight: 500;
+  }
+
+  .anim-indicator {
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ghl-text);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 5;
+  }
+
+  .anim-indicator.visible { opacity: 1; }
+
+  .anim-indicator .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--brand-accent);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+  }
+
+  .mockup-caption {
+    padding: 14px 20px;
+    background: var(--ghl-surface);
+    border-top: 1px solid var(--ghl-border);
+    font-size: 12px;
+    color: var(--ghl-text-dim);
+    text-align: center;
+    
+  }
+
+  /* ───── CALLOUT ───── */
+  .callout {
+    display: flex;
+    gap: 16px;
+    padding: 20px 24px;
+    margin-top: 20px;
+    border: 1px solid var(--brand-ink);
+  }
+
+  .callout.warning {
+    background: #f9e9d9;
+    border-color: var(--brand-accent-deep);
+  }
+
+  .callout.tip {
+    background: #e8e4d3;
+    border-color: var(--brand-secondary);
+  }
+
+  .callout-icon {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1;
+    flex-shrink: 0;
+    color: var(--brand-accent-deep);
+  }
+
+  .callout.tip .callout-icon { color: var(--brand-secondary); }
+
+  .callout-content {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .callout-content strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎯 CTAs CONTEXTUAIS — aparecem no meio do conteúdo
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .cta-contextual {
+    margin: 48px 0;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .cta-contextual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--brand-accent);
+  }
+
+  .cta-contextual::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,74,28,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .cta-ctx-content { position: relative; z-index: 2; }
+
+  .cta-ctx-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-secondary);
+    margin-bottom: 12px;
+  }
+
+  .cta-ctx-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 10px;
+    max-width: 520px;
+  }
+
+  .cta-ctx-title em {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--brand-accent);
+  }
+
+  .cta-ctx-desc {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    max-width: 560px;
+  }
+
+  .cta-ctx-btn {
+    background: var(--brand-accent);
+    color: var(--brand-paper);
+    padding: 16px 28px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-ctx-btn:hover {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  /* Variação secundária (outline) */
+  .cta-contextual.secondary {
+    background: var(--brand-paper-warm);
+    color: var(--brand-ink);
+  }
+
+  .cta-contextual.secondary::after {
+    background: radial-gradient(circle, rgba(184,145,47,0.1) 0%, transparent 65%);
+  }
+
+  .cta-contextual.secondary .cta-ctx-tag { color: var(--brand-accent-deep); }
+
+  .cta-contextual.secondary .cta-ctx-btn {
+    background: transparent;
+    color: var(--brand-ink);
+    border: 1.5px solid var(--brand-ink);
+  }
+
+  .cta-contextual.secondary .cta-ctx-btn:hover {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     RODAPÉ COM CTAs
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .guide-footer {
+    padding: 80px 72px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+  }
+
+  .footer-top {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 56px;
+  }
+
+  .footer-top h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--brand-accent);
+    letter-spacing: -0.015em;
+  }
+
+  .footer-top p {
+    font-size: 1rem;
+    color: rgba(245,241,232,0.75);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  /* CTA principal do rodapé = HighLevel */
+  .footer-main-cta {
+    background: var(--brand-accent);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-main-cta::after {
+    content: '';
+    position: absolute;
+    top: -60%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(11,11,12,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .footer-main-cta-text {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-main-cta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-ink);
+    opacity: 0.75;
+    margin-bottom: 12px;
+  }
+
+  .footer-main-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--brand-ink);
+    margin-bottom: 8px;
+  }
+
+  .footer-main-cta-title em {
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .footer-main-cta-sub {
+    font-size: 1rem;
+    color: var(--brand-ink);
+    opacity: 0.85;
+  }
+
+  .footer-main-cta-btn {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 18px 32px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-main-cta-btn:hover {
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+  }
+
+  /* Grid de outros CTAs */
+  .footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .footer-link-card {
+    background: rgba(245,241,232,0.04);
+    border: 1px solid rgba(245,241,232,0.15);
+    padding: 24px;
+    text-decoration: none;
+    color: var(--brand-paper);
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-link-card:hover {
+    background: rgba(254, 185, 2, 0.08);
+    border-color: var(--brand-accent);
+    transform: translateY(-2px);
+  }
+
+  .footer-link-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+  }
+
+  .footer-link-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .footer-link-desc {
+    font-size: 0.88rem;
+    color: rgba(245,241,232,0.65);
+    line-height: 1.45;
+    margin-top: 4px;
+  }
+
+  .footer-link-arrow {
+    margin-top: auto;
+    padding-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+  }
+
+  .footer-legal {
+    padding-top: 56px;
+    margin-top: 56px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.4);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     MOBILE
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  @media (max-width: 900px) {
+    .app { grid-template-columns: 1fr; }
+    aside {
+      position: relative;
+      height: auto;
+      max-height: none;
+      padding: 24px 20px;
+    }
+    .side-cta-fixed { margin-top: 24px; }
+    .hero-area, .trigger-block, .guide-footer {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .trigger-head {
+      flex-direction: column;
+      gap: 8px;
+    }
+    .trigger-num { font-size: 3rem; min-width: auto; }
+    .hero-stats { gap: 32px; }
+    .cta-contextual, .footer-main-cta {
+      grid-template-columns: 1fr;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 28px;
+    }
+    .config-panel { width: 100%; }
+    .ghl-node { width: 100%; max-width: 320px; }
+  }
+
+  .trigger-block.hidden { display: none; }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     TOP NAV BAR · Toggle entre HL ↔ MF + Voltar ao Índice
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    background: var(--brand-ink);
+    color: white;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .top-nav-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  .top-nav-home {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .top-nav-home:hover { opacity: 1; }
+
+  .top-nav-home .arrow { font-size: 16px; }
+
+  .top-nav-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255,255,255,0.15);
+  }
+
+  .top-nav-breadcrumb {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .top-nav-breadcrumb strong {
+    color: white;
+    font-weight: 600;
+  }
+
+  /* Toggle HL ↔ MF */
+  .top-nav-toggle {
+    display: inline-flex;
+    background: rgba(255,255,255,0.08);
+    border-radius: 100px;
+    padding: 3px;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+
+  .toggle-btn {
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    background: transparent;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .toggle-btn:hover {
+    color: white;
+  }
+
+  .toggle-btn.active {
+    background: var(--brand-accent);
+    color: var(--brand-ink);
+  }
+
+  /* Mobile menu button */
+  .mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     BOTÃO VOLTAR AO TOPO
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 400;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--brand-accent);
+    color: var(--brand-ink);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: inherit;
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .back-to-top:hover {
+    background: var(--brand-accent-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     NAV PREV/NEXT (rodapé, antes do guide-footer)
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .cat-nav {
+    max-width: 960px;
+    margin: 48px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .cat-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 24px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .cat-nav-link:hover {
+    border-color: var(--brand-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  }
+
+  .cat-nav-link.next { text-align: right; }
+
+  .cat-nav-link.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  .cat-nav-label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .cat-nav-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--brand-ink);
+    letter-spacing: -0.01em;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     MOBILE
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  @media (max-width: 900px) {
+    .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+
+    /* A sidebar vira um drawer */
+    aside {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      height: 100vh !important;
+      width: 85%;
+      max-width: 340px;
+      z-index: 800;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      padding-top: 16px !important;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    }
+
+    aside.open {
+      transform: translateX(0);
+    }
+
+    /* Overlay atrás do drawer */
+    .drawer-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .drawer-overlay.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Esconde breadcrumb longo no mobile pra economizar espaço */
+    .top-nav-breadcrumb { display: none; }
+
+    /* Nav prev/next */
+    .cat-nav {
+      grid-template-columns: 1fr;
+      margin: 32px auto;
+    }
+
+    .cat-nav-link.next {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .top-nav { padding: 8px 12px; gap: 8px; }
+    .top-nav-home { font-size: 11px; }
+    .toggle-btn { padding: 5px 10px; font-size: 11px; }
+    .back-to-top {
+      bottom: 16px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+
+
+  /* Ajustes específicos das páginas de Ações — mesma aparência dos gatilhos */
+
+  .acao-num {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: var(--brand-accent);
+    color: var(--brand-ink);
+    border-radius: 12px;
+    font-family: 'Bebas Neue', 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .acao-block {
+    padding: 48px 72px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .acao-head {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+    align-items: flex-start;
+  }
+
+  .acao-titles { flex: 1; min-width: 0; }
+
+  .acao-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .acao-name {
+    font-family: 'Bebas Neue', 'Poppins', sans-serif;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    color: var(--brand-ink);
+    margin-bottom: 4px;
+  }
+
+  .acao-en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  .acao-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  @media (max-width: 900px) {
+    .acao-block { padding: 32px 24px; }
+    .acao-head { gap: 16px; }
+    .acao-num { width: 40px; height: 40px; font-size: 18px; }
+  }
+
+
+
+
+
+  /* ═══════════════════════════════════════════════════════════════════════
+     🎯 NOVA UI v2 — Painel de configuração com fidelidade HighLevel
+     Mostra o painel lateral real do HighLevel com tipos de campo corretos:
+     dropdowns, tag pickers, multi-selects, toggles, conditional logic.
+     ═══════════════════════════════════════════════════════════════════════ */
+
+  .hl-panel-wrapper {
+    background: var(--ghl-bg);
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .hl-panel-context {
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
+    background-size: 16px 16px;
+    background-color: var(--ghl-bg);
+    padding: 32px;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hl-canvas-hint {
+    flex: 1;
+    min-width: 220px;
+    color: var(--ghl-text-dim);
+    font-size: 13px;
+    line-height: 1.6;
+    padding-top: 8px;
+  }
+
+  .hl-canvas-hint strong { color: var(--ghl-text); font-weight: 500; }
+  .hl-canvas-hint .arrow {
+    display: inline-block;
+    color: var(--brand-accent);
+    margin: 0 4px;
+    font-weight: 600;
+  }
+
+  /* The right-side slide-in panel that HighLevel really uses */
+  .hl-panel {
+    width: 420px;
+    max-width: 100%;
+    background: var(--ghl-surface);
+    border: 1px solid var(--ghl-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+  }
+
+  .hl-panel-head {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--ghl-border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0,0,0,0.15);
+  }
+
+  .hl-panel-back {
+    color: var(--ghl-text-dim);
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .hl-panel-title {
+    flex: 1;
+    font-size: 14px;
+    color: var(--ghl-text);
+    font-weight: 500;
+  }
+
+  .hl-panel-title .en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ghl-text-dim);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    display: block;
+  }
+
+  .hl-panel-body {
+    padding: 18px;
+    max-height: 720px;
+    overflow-y: auto;
+  }
+
+  .hl-field-group {
+    margin-bottom: 16px;
+  }
+
+  .hl-field-group:last-child { margin-bottom: 0; }
+
+  .hl-field-label {
+    font-size: 12px;
+    color: var(--ghl-text);
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hl-field-label .req {
+    color: #ef4444;
+    font-weight: 600;
+  }
+
+  .hl-field-help {
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  /* HL Input — single line text field */
+  .hl-input {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text);
+    padding: 9px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: inherit;
+  }
+
+  .hl-input.placeholder {
+    color: var(--ghl-text-dim);
+    font-style: italic;
+  }
+
+  /* HL Dropdown — single-select with caret */
+  .hl-dropdown {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text);
+    padding: 9px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .hl-dropdown::after {
+    content: '▾';
+    color: var(--ghl-text-dim);
+    font-size: 11px;
+  }
+
+  .hl-dropdown.has-value { color: var(--ghl-text); }
+  .hl-dropdown.placeholder { color: var(--ghl-text-dim); font-style: italic; }
+
+  /* HL Multi-select — multiple chips inside */
+  .hl-multiselect {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    padding: 6px 8px;
+    min-height: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .hl-multiselect-chip {
+    background: rgba(91, 155, 255, 0.18);
+    border: 1px solid rgba(91, 155, 255, 0.4);
+    color: var(--ghl-text);
+    padding: 3px 8px 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hl-multiselect-chip::after {
+    content: '×';
+    color: var(--ghl-text-dim);
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .hl-multiselect-input {
+    background: transparent;
+    border: 0;
+    color: var(--ghl-text-dim);
+    font-size: 11px;
+    flex: 1;
+    min-width: 80px;
+    padding: 3px 4px;
+    font-style: italic;
+    font-family: inherit;
+  }
+
+  /* HL Tag picker — yellow chips, HL accent */
+  .hl-tag-picker {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    padding: 6px 8px;
+    min-height: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .hl-tag-chip {
+    background: rgba(254, 185, 2, 0.18);
+    border: 1px solid rgba(254, 185, 2, 0.45);
+    color: var(--ghl-text);
+    padding: 3px 8px 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hl-tag-chip::after {
+    content: '×';
+    color: var(--ghl-text-dim);
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  /* HL Toggle / switch */
+  .hl-toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--ghl-text);
+  }
+
+  .hl-toggle {
+    width: 32px;
+    height: 18px;
+    background: var(--ghl-border);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .hl-toggle::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.2s;
+  }
+
+  .hl-toggle.on { background: var(--ghl-green); }
+  .hl-toggle.on::after { left: 16px; }
+
+  /* HL Number input with operator */
+  .hl-number-row {
+    display: flex;
+    gap: 6px;
+  }
+
+  .hl-number-row .hl-dropdown { flex: 1; }
+  .hl-number-row .hl-input { width: 100px; }
+
+  /* HL Field row with operator dropdown beside it */
+  .hl-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  /* HL Section heading inside panel */
+  .hl-section-head {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ghl-text-dim);
+    padding: 8px 0;
+    margin: 16px 0 8px;
+    border-top: 1px solid var(--ghl-border);
+  }
+
+  .hl-section-head:first-child { border-top: 0; margin-top: 0; }
+
+  /* HL Filter row (inside the Filters section) */
+  .hl-filter-row {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid var(--ghl-border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+
+  .hl-filter-row .hl-filter-label {
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    margin-bottom: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Conditional sub-field shown when parent selected */
+  .hl-conditional {
+    border-left: 2px solid var(--brand-accent);
+    padding-left: 10px;
+    margin-top: 8px;
+  }
+
+  .hl-conditional-note {
+    font-size: 10px;
+    color: var(--brand-accent);
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  /* Add-Filter button */
+  .hl-add-filter {
+    background: transparent;
+    border: 1px dashed var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 8px;
+  }
+
+  .hl-add-filter:hover {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-text);
+  }
+
+  /* Save trigger button at the bottom of the panel */
+  .hl-panel-footer {
+    padding: 12px 18px;
+    border-top: 1px solid var(--ghl-border);
+    background: rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .hl-btn-save {
+    background: var(--ghl-green);
+    border: 0;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .hl-btn-cancel {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* ─── Field-spec legend (shows TYPE / OPERATORS / OPTIONS) ─── */
+  .field-spec {
+    background: rgba(11, 34, 63, 0.04);
+    border: 1px solid rgba(11, 34, 63, 0.1);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .field-spec-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding: 4px 0;
+  }
+
+  .field-spec-key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    padding-top: 2px;
+  }
+
+  .field-spec-val {
+    color: var(--brand-ink);
+  }
+
+  .field-spec-val .opt-chip {
+    display: inline-block;
+    background: rgba(11, 34, 63, 0.08);
+    border: 1px solid rgba(11, 34, 63, 0.15);
+    padding: 1px 8px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    margin: 2px 3px 2px 0;
+    color: var(--brand-ink);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .field-spec-val .op-chip {
+    display: inline-block;
+    background: rgba(91, 155, 255, 0.12);
+    border: 1px solid rgba(91, 155, 255, 0.3);
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin: 2px 3px 2px 0;
+    color: var(--brand-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+  }
+
+  /* HL Panel intro caption */
+  .hl-panel-caption {
+    padding: 14px 20px;
+    background: var(--ghl-surface);
+    border-top: 1px solid var(--ghl-border);
+    font-size: 12px;
+    color: var(--ghl-text-dim);
+    text-align: center;
+  }
+
+  .hl-panel-caption strong { color: var(--ghl-yellow); font-weight: 500; }
+
+  /* When opt-chip / op-chip render INSIDE the dark HL panel, override colors */
+  .hl-panel .opt-chip,
+  .hl-conditional .opt-chip {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--ghl-text);
+  }
+  .hl-panel .op-chip,
+  .hl-conditional .op-chip {
+    background: rgba(91, 155, 255, 0.18);
+    border: 1px solid rgba(91, 155, 255, 0.4);
+    color: var(--ghl-text);
+  }
+
+  @media (max-width: 768px) {
+    .hl-panel { width: 100%; }
+    .hl-panel-context { padding: 16px; gap: 16px; flex-direction: column-reverse; }
+    .hl-canvas-hint { padding-top: 0; }
+    .field-spec-row { grid-template-columns: 1fr; gap: 2px; }
+    .field-spec-key { padding-top: 0; }
+  }
+
+
+</style>
+</head>
+<body>
+
+<!-- TOP NAV — toggle HL/MF + voltar ao índice -->
+<div class="top-nav">
+  <div class="top-nav-left">
+    <button class="mobile-menu-btn" onclick="toggleDrawer()" aria-label="Abrir menu">☰</button>
+    <a href="index.html" class="top-nav-home">
+      <span class="arrow">←</span>
+      <span>Voltar ao índice</span>
+    </a>
+    <div class="top-nav-divider"></div>
+    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>05/14</strong> · <strong>Workflow AI</strong></div>
+  </div>
+</div>
+
+<div class="app">
+
+<aside>
+  <div class="side-brand">Ações<br><span class="brand-thin">HighLevel.</span></div>
+  <div class="side-cat">Parte 2 · Ações · Categoria 05</div>
+
+  <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
+
+  <div class="side-section-label">Workflow AI · 5 ações</div>
+  <nav class="side-nav">
+    <a href="#a1" class="side-link"><span class="side-num">01</span>Generate Text (Texto)</a>
+    <a href="#a2" class="side-link"><span class="side-num">02</span>Parse Image (Analisar Imagem)</a>
+    <a href="#a3" class="side-link"><span class="side-num">03</span>Summarize Conversation</a>
+    <a href="#a4" class="side-link"><span class="side-num">04</span>Extract Info</a>
+    <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
+  </nav>
+
+  <div class="side-cta-fixed">
+    <div class="side-cta-card">
+      <div class="side-cta-tag">Afiliado oficial · Oferta exclusiva</div>
+      <div class="side-cta-title">Crie sua ferramenta.</div>
+      <div class="side-cta-desc">
+        Tenha seu próprio HighLevel e venda pra sua audiência. Trial 30 dias + treinamento + sessões ao vivo + suporte em PT-BR.
+      </div>
+      <a href="https://magneticflows.com/30-dias" target="_blank" class="side-cta-btn">Começar trial →</a>
+    </div>
+  </div>
+</aside>
+
+<main>
+<div class="hero-area">
+  <span class="hero-tag">Parte 2 · Ações · Categoria 05/14</span>
+  <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
+  <p class="hero-desc">As 5 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação. Ainda experimental mas poderoso.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">5</span>
+      <span class="hero-stat-label">Ações nesta categoria</span>
+    </div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">Parte 2</span>
+      <span class="hero-stat-label">do guia</span>
+    </div>
+  </div>
+</div>
+
+<div class="acao-block" id="a1" data-name="generate text (texto) ai generate text">
+  <div class="acao-head">
+    <div class="acao-num">01</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Generate Text (Texto)</h2>
+      <div class="acao-en">AI Generate Text</div>
+      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag">Experimental</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Gera texto customizado usando IA (GPT/Claude) baseado em prompt. Pode usar variáveis do contato pra personalizar — cada contato recebe algo único.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Email hiper-personalizado</div>
+  <div class="use-case-desc">AI usa histórico do contato + tags pra criar msg única.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Resposta a form</div>
+  <div class="use-case-desc">Survey preenchido → AI cria resposta customizada.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Legenda de post</div>
+  <div class="use-case-desc">AI gera variação de texto pra A/B test.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Prompt, modelo (GPT/Claude), temperatura, campo destino.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a1">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Generate · Email Hyper-Personalizado</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a1">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        
+        <div class="ghl-node" data-node-id="a1-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">Tag · Lead Quente</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a1-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">AI Generate Text</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv highlight">Email custom baseado em tags</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a1-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-title">Send Email</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Body</span><span class="pv highlight">{{ai.texto}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A1 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Model</strong> (gpt-4o-mini/4o/5/claude-sonnet), <span class='arrow'>→</span> <strong>Prompt</strong> com merge tags, <span class='arrow'>→</span> <strong>Save to</strong> custom value.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>GPT — Generate Text</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Gerar email personalizado" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Model <span class="req">*</span></div>
+<div class="hl-dropdown has-value">gpt-4o-mini</div>
+<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">gpt-4o-mini</span><span class="opt-chip">gpt-4o</span><span class="opt-chip">gpt-5</span><span class="opt-chip">claude-3.5-sonnet</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Prompt <span class="req">*</span></div>
+<textarea class="hl-input" rows="6" style="resize: vertical;">Você é um copywriter da Magnetic Funnels. Escreva email de re-engajamento pra {{contact.first_name}}, que trabalha com {{contact.tipo_negocio}}. Tom amigável, 100 palavras.</textarea></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Save Output to</div><div class="hl-dropdown has-value">{{contact.email_personalizado}}</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Gera texto via OpenAI GPT baseado em prompt</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a2" data-name="parse image (analisar imagem) ai parse image">
+  <div class="acao-head">
+    <div class="acao-num">02</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Parse Image (Analisar Imagem)</h2>
+      <div class="acao-en">AI Parse Image</div>
+      <div class="acao-tags"><span class="info-tag">Visão</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Analisa imagem com IA. Extrai texto (OCR), descreve conteúdo, identifica objetos. Útil pra extrair dados de comprovantes, notas fiscais, cartões.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Comprovante de pagamento</div>
+  <div class="use-case-desc">Cliente envia screenshot → AI lê valor e data.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Nota fiscal</div>
+  <div class="use-case-desc">NF recebida → AI extrai campos automaticamente.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Identificar produto</div>
+  <div class="use-case-desc">Foto enviada → AI identifica produto e direciona.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Campo de imagem, prompt (o que extrair), campo destino.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a2">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Parse Image · Comprovante Automático</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a2">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        
+        <div class="ghl-node" data-node-id="a2-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">WhatsApp Recebeu Imagem</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a2-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">👁</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">AI Parse Image</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Extract</span><span class="pv highlight">valor + data + banco</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a2-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">✎</div>
+            <div>
+              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-title">Update Contact Fields</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A2 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">OCR + análise visual: <span class='arrow'>→</span> <strong>Image URL</strong>, <span class='arrow'>→</span> <strong>Instruction Prompt</strong>, <span class='arrow'>→</span> <strong>Save to</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Parse Image (Vision)</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Extrair dados do invoice" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Image Source <span class="req">*</span></div><input class="hl-input" value="{{contact.invoice_upload_url}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Instruction Prompt</div>
+<textarea class="hl-input" rows="3" style="resize: vertical;">Extraia: nome da empresa, valor total, vencimento, CNPJ. Retorne JSON.</textarea></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Save Output to</div><div class="hl-dropdown has-value">{{contact.dados_invoice}}</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Extrai dados de imagem via AI Vision</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a3" data-name="summarize conversation summarize conversation">
+  <div class="acao-head">
+    <div class="acao-num">03</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Summarize Conversation</h2>
+      <div class="acao-en">Summarize Conversation</div>
+      <div class="acao-tags"><span class="info-tag">Produtividade</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Resume histórico de conversa do contato com IA. Útil pra handoff entre vendedores, notas de CRM, visualização rápida do relacionamento.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Handoff SDR→AE</div>
+  <div class="use-case-desc">AI resume pra AE entender contexto rápido.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Call prep</div>
+  <div class="use-case-desc">Antes de ligar, AI mostra últimas 10 interações resumidas.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Relatório pra gerente</div>
+  <div class="use-case-desc">Resumo semanal de conversas por cliente.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Período a considerar, comprimento do resumo.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a3">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Summarize · Handoff SDR→AE</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a3">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        
+        <div class="ghl-node" data-node-id="a3-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">Tag · Qualificado SDR</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a3-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">Summarize Conversation</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Período</span><span class="pv highlight">Últimos 30 dias</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a3-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">📋</div>
+            <div>
+              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-title">Add to Notes</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Nota</span><span class="pv highlight">{{ai.resumo}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A3 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Pra handoff humano-IA: <span class='arrow'>→</span> <strong>Channels</strong>, <span class='arrow'>→</span> <strong>Last N Messages</strong>, <span class='arrow'>→</span> <strong>Save to</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Summarize Conversation</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Resumir conversa pra SDR" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Channels to Include</div>
+<div class="hl-multiselect"><span class="hl-multiselect-chip">SMS</span><span class="hl-multiselect-chip">WhatsApp</span><span class="hl-multiselect-chip">Email</span></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Last N Messages</div><input class="hl-input" value="20"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Save Summary to</div><div class="hl-dropdown has-value">{{contact.ai_conversation_summary}}</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Resume histórico de Conversations com IA</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a4" data-name="extract info ai extract info">
+  <div class="acao-head">
+    <div class="acao-num">04</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Extract Info</h2>
+      <div class="acao-en">AI Extract Info</div>
+      <div class="acao-tags"><span class="info-tag">Parsing</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Extrai informações específicas de texto usando AI. Ex.: de uma mensagem não estruturada, extrai nome, email, necessidade. Faz o trabalho de campos estruturados sem form.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Email livre → campos</div>
+  <div class="use-case-desc">Cliente mandou email longo → AI extrai orçamento, prazo, requisitos.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">WhatsApp → dados</div>
+  <div class="use-case-desc">Conversa natural → AI separa dados estruturados.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Survey de texto aberto</div>
+  <div class="use-case-desc">Resposta discursiva → AI classifica em categorias.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Texto fonte, campos a extrair, schema esperado.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a4">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Extract · Email Livre → Campos</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a4">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        
+        <div class="ghl-node" data-node-id="a4-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">Email Recebido</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">AI Extract Info</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Extract</span><span class="pv highlight">orçamento, prazo, requisitos</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">✎</div>
+            <div>
+              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-title">Update Fields</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A4 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Source Text</strong>, <span class='arrow'>→</span> <strong>Fields to Extract</strong> (cada vira custom value).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Extract Info from Text</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Extrair dados do form livre" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Source Text <span class="req">*</span></div><input class="hl-input" value="{{contact.observacoes_form}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Fields to Extract</div>
+<div style="background:rgba(0,0,0,0.18);border:1px solid var(--ghl-border);border-radius:6px;padding:8px;">
+<div style="font-size: 11px; color: var(--ghl-text-dim); margin-bottom: 4px;">Field Name · Save to</div>
+<div class="hl-filter-row" style="margin-bottom: 4px;"><input class="hl-input" value="tipo_negocio" style="font-size: 11px;"></div>
+<div class="hl-filter-row" style="margin-bottom: 4px;"><input class="hl-input" value="faturamento_mensal_aproximado" style="font-size: 11px;"></div>
+<button class="hl-add-filter" style="margin-top: 4px;">+ Add Field</button></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Extrai campos estruturados de texto livre</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a5" data-name="classify ai classify">
+  <div class="acao-head">
+    <div class="acao-num">05</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Classify</h2>
+      <div class="acao-en">AI Classify</div>
+      <div class="acao-tags"><span class="info-tag">Categorização</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Classifica texto em categorias predefinidas com AI. Ex.: mensagem do cliente → categoria "Suporte técnico", "Vendas", "Reclamação", "Dúvida geral". Triage automático.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Triage de mensagem</div>
+  <div class="use-case-desc">Nova msg → AI classifica → roteia pra time certo.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Sentiment analysis</div>
+  <div class="use-case-desc">Feedback → classifica como positivo/neutro/negativo.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Urgência</div>
+  <div class="use-case-desc">Mensagem → classifica urgência → prioriza atendimento.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Categorias possíveis, texto fonte, campo destino.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a5">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Classify · Triage de Mensagens</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a5">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        
+        <div class="ghl-node" data-node-id="a5-1">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-title">Customer Reply</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a5-2">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">AI Classify</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Classes</span><span class="pv highlight">Suporte/Vendas/Reclamação</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a5-3">
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">👥</div>
+            <div>
+              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-title">Assign to Team</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Por</span><span class="pv highlight">{{ai.classe}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A5 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Source Text</strong>, <span class='arrow'>→</span> <strong>Categories</strong> (cada uma vira branch).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Classify Text</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Classificar intenção da resposta" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Source Text <span class="req">*</span></div><input class="hl-input" value="{{trigger.message_body}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Categories</div>
+<div class="hl-multiselect">
+<span class="hl-multiselect-chip">Interessado</span>
+<span class="hl-multiselect-chip">Quer Cancelar</span>
+<span class="hl-multiselect-chip">Pergunta de Preço</span>
+<span class="hl-multiselect-chip">Reclamação</span>
+<input class="hl-multiselect-input" placeholder="+ Categoria"></div></div>
+<div class="hl-section-head" style="color: var(--brand-accent);">⚡ Branches geradas</div>
+<div class="hl-field-help" style="color: var(--brand-accent);">Uma branch por categoria + 'Unclassified' fallback.</div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Classifica texto em uma de N categorias</strong>
+      </div>
+    </div>
+  </div>
+
+</div></main>
+</div>
+
+<nav class="cat-nav">
+  <a href="acoes-highlevel-cat04.html" class="cat-nav-link prev">
+    <span class="cat-nav-label">← Anterior · Categoria 04</span>
+    <span class="cat-nav-name">Ferramentas Internas</span>
+  </a>
+  <a href="acoes-highlevel-cat06.html" class="cat-nav-link next">
+    <span class="cat-nav-label">Próxima · Categoria 06 →</span>
+    <span class="cat-nav-name">Agendamentos</span>
+  </a>
+</nav>
+
+<div class="guide-footer">
+
+  <div class="footer-top">
+    <h3>Categoria 05 completa.</h3>
+    <p>5 ações de Workflow AI explicadas com impacto prático. Continue explorando as outras categorias.</p>
+  </div>
+
+  <div class="footer-main-cta">
+    <div class="footer-main-cta-text">
+      <div class="footer-main-cta-tag">⚡ Crie sua ferramenta SaaS</div>
+      <div class="footer-main-cta-title">Tenha seu próprio <em>HighLevel</em> e venda.</div>
+      <div class="footer-main-cta-sub">Trial 30 dias · Treinamento completo · Sessões ao vivo · Suporte em PT-BR. Tudo via nosso link.</div>
+    </div>
+    <a href="https://magneticflows.com/30-dias" target="_blank" class="footer-main-cta-btn">Começar trial →</a>
+  </div>
+
+  <div class="footer-links-grid">
+    <a href="https://gokollab.com/highlevelbrasil" target="_blank" class="footer-link-card">
+      <span class="footer-link-tag">Grátis</span>
+      <span class="footer-link-title">Comunidade Magnetic Flows</span>
+      <span class="footer-link-desc">Entre pra comunidade gratuita e aprenda com outros usuários do HighLevel.</span>
+      <span class="footer-link-arrow">Entrar →</span>
+    </a>
+    <a href="https://chat.whatsapp.com/JGPLBTmaTLq7do2FqfjALQ" target="_blank" class="footer-link-card">
+      <span class="footer-link-tag">WhatsApp</span>
+      <span class="footer-link-title">Grupo Oficial WhatsApp</span>
+      <span class="footer-link-desc">Dicas diárias, novidades do HighLevel e networking direto no seu celular.</span>
+      <span class="footer-link-arrow">Entrar →</span>
+    </a>
+    <a href="https://magneticflows.com/30-dias" target="_blank" class="footer-link-card">
+      <span class="footer-link-tag">HighLevel</span>
+      <span class="footer-link-title">HighLevel · Trial 30 dias</span>
+      <span class="footer-link-desc">Se preferir testar o HighLevel direto, resgate 30 dias grátis pelo nosso link de afiliado.</span>
+      <span class="footer-link-arrow">Resgatar →</span>
+    </a>
+  </div>
+
+  <div class="footer-legal">
+    Guia oficial Magnetic Funnels · Parte 2 · Categoria 05 de 14 · Atualizado em 2026
+  </div>
+</div>
+
+<script>
+  // Busca
+  const search = document.getElementById('search');
+  const blocks = document.querySelectorAll('.acao-block');
+  const links = document.querySelectorAll('.side-link');
+
+  search.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    blocks.forEach(block => {
+      const name = (block.dataset.name || '').toLowerCase();
+      const match = !q || name.includes(q);
+      block.style.display = match ? '' : 'none';
+    });
+    links.forEach(link => {
+      const text = link.textContent.toLowerCase();
+      link.style.display = (!q || text.includes(q)) ? '' : 'none';
+    });
+  });
+
+  // Active link on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        links.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  blocks.forEach(b => observer.observe(b));
+
+  // Back to top + Drawer (mesmo script dos guias de gatilhos)
+  const btnTop = document.createElement('button');
+  btnTop.className = 'back-to-top';
+  btnTop.innerHTML = '↑';
+  btnTop.setAttribute('aria-label', 'Voltar ao topo');
+  btnTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+  document.body.appendChild(btnTop);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) btnTop.classList.add('visible');
+    else btnTop.classList.remove('visible');
+  });
+
+  const overlay = document.createElement('div');
+  overlay.className = 'drawer-overlay';
+  document.body.appendChild(overlay);
+
+  window.toggleDrawer = function() {
+    const aside = document.querySelector('aside');
+    if (!aside) return;
+    aside.classList.toggle('open');
+    overlay.classList.toggle('visible');
+  };
+
+  overlay.addEventListener('click', toggleDrawer);
+
+  document.querySelectorAll('aside .side-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900) {
+        document.querySelector('aside').classList.remove('open');
+        overlay.classList.remove('visible');
+      }
+    });
+  });
+
+  const configData = {
+    'a1-1': { kind: 'Trigger', title: 'Lead virou quente', body: `` },
+    'a1-2': { kind: 'Action · Workflow AI', title: 'Gera texto', body: `<div class="config-section"><div class="config-label">Prompt</div><div class="config-field highlight">Escreva email consultivo pra {{contact.first_name}}, baseado nas tags {{contact.tags}}</div></div><div class="config-section"><div class="config-label">Output</div><div class="config-field">{{ai.texto}}</div></div>` },
+    'a1-3': { kind: 'Action · Comunicação', title: 'Envia texto gerado', body: `<div class="config-section"><div class="config-label">Body</div><div class="config-field highlight">{{ai.texto}}</div></div><div class="config-section"><div class="config-label">Resultado</div><div class="config-field">Cada lead recebe algo único</div></div>` },
+    'a2-1': { kind: 'Trigger', title: 'Imagem recebida', body: `` },
+    'a2-2': { kind: 'Action · Workflow AI', title: 'Parse imagem (comprovante)', body: `<div class="config-section"><div class="config-label">Prompt</div><div class="config-field highlight">Extraia valor pago, data da transação e banco de origem</div></div><div class="config-section"><div class="config-label">Output</div><div class="config-field">valor, data, banco</div></div>` },
+    'a2-3': { kind: 'Action · Contatos', title: 'Atualiza campos', body: `<div class="config-section"><div class="config-label">Campos</div><div class="config-field highlight">ultimo_pagamento_valor, ultimo_pagamento_data</div></div>` },
+    'a3-1': { kind: 'Trigger', title: 'Lead qualificado por SDR', body: `` },
+    'a3-2': { kind: 'Action · Workflow AI', title: 'Summarize', body: `<div class="config-section"><div class="config-label">Período</div><div class="config-field highlight">Últimos 30 dias</div></div><div class="config-section"><div class="config-label">Output</div><div class="config-field">{{ai.resumo}}</div></div>` },
+    'a3-3': { kind: 'Action · Contatos', title: 'Nota pro AE', body: `<div class="config-section"><div class="config-label">Conteúdo</div><div class="config-field highlight">{{ai.resumo}} — gerado em {{now}}</div></div><div class="config-section"><div class="config-label">AE lê</div><div class="config-field">Antes de ligar, entende contexto em 30s</div></div>` },
+    'a4-1': { kind: 'Trigger', title: 'Email recebido', body: `` },
+    'a4-2': { kind: 'Action · Workflow AI', title: 'Extract estruturado', body: `<div class="config-section"><div class="config-label">Schema</div><div class="config-field highlight">orçamento (R$), prazo (dias), requisitos (string)</div></div><div class="config-section"><div class="config-label">Input</div><div class="config-field">Corpo do email</div></div>` },
+    'a4-3': { kind: 'Action · Contatos', title: 'Atualiza campos', body: `<div class="config-section"><div class="config-label">Campos</div><div class="config-field highlight">budget, prazo, requisitos</div></div>` },
+    'a5-1': { kind: 'Trigger', title: 'Cliente respondeu', body: `` },
+    'a5-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Classes</div><div class="config-field highlight">Suporte · Vendas · Reclamação · Dúvida</div></div><div class="config-section"><div class="config-label">Input</div><div class="config-field">Conteúdo da mensagem</div></div>` },
+    'a5-3': { kind: 'Action · Contatos', title: 'Rotear automático', body: `<div class="config-section"><div class="config-label">Baseado em</div><div class="config-field highlight">{{ai.classe}}</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Cada mensagem vai pro time certo sem humano triar</div></div>` }
+  };
+
+  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  function initMockup(m) {
+    const nodes = m.querySelectorAll('.ghl-node');
+    const connectors = m.querySelectorAll('.ghl-connector');
+    const panel = m.querySelector('.config-panel');
+    const pk = panel.querySelector('.config-kind');
+    const pt = panel.querySelector('.config-title');
+    const pb = panel.querySelector('.config-body');
+    const cb = panel.querySelector('.config-close');
+    const pl = m.querySelector('.ghl-btn.play');
+    const ai = m.querySelector('.anim-indicator');
+    const at = m.querySelector('.anim-text');
+    nodes.forEach(n => n.addEventListener('click', () => {
+      const d = configData[n.dataset.nodeId];
+      if (!d) return;
+      nodes.forEach(x => x.classList.remove('active'));
+      n.classList.add('active');
+      pk.textContent = d.kind; pt.textContent = d.title; pb.innerHTML = d.body;
+      panel.classList.add('open');
+    }));
+    cb.addEventListener('click', () => { panel.classList.remove('open'); nodes.forEach(x => x.classList.remove('active')); });
+    setTimeout(() => { nodes.forEach(n => n.classList.add('visible')); connectors.forEach(c => c.classList.add('visible')); }, 100);
+    pl.addEventListener('click', async () => {
+      pl.disabled = true; const ot = pl.textContent; pl.textContent = '● Reproduzindo...';
+      panel.classList.remove('open'); nodes.forEach(n => n.classList.remove('active'));
+      nodes.forEach(n => n.classList.remove('visible')); connectors.forEach(c => c.classList.remove('visible'));
+      await sleep(400); ai.classList.add('visible');
+      const na = Array.from(nodes); const ca = Array.from(connectors);
+      for (let i = 0; i < na.length; i++) {
+        at.textContent = i === 0 ? 'Adicionando gatilho...' : `Adicionando ação ${i}...`;
+        await sleep(500); na[i].classList.add('visible', 'active'); await sleep(400); na[i].classList.remove('active');
+        if (i < ca.length) { at.textContent = 'Conectando...'; await sleep(300); ca[i].classList.add('visible'); }
+      }
+      at.textContent = 'Fluxo completo ✓'; await sleep(1000); ai.classList.remove('visible');
+      pl.disabled = false; pl.textContent = ot;
+    });
+  }
+  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+</script>
+
+</body>
+</html>
