@@ -2529,7 +2529,7 @@
             <input class="hl-input" value="Contact Created" readonly>
           </div>
 
-          <div class="hl-section-head">Filters · AND logic between rows</div>
+          <div class="hl-section-head">Filters</div>
 
           <div class="hl-filter-row">
             <div class="hl-filter-label">Has Tag</div>
@@ -2545,6 +2545,14 @@
             <div class="hl-tag-picker">
               <span class="hl-tag-chip">Cliente Pago</span>
               <input class="hl-multiselect-input" placeholder="+ Selecione tag">
+            </div>
+          </div>
+
+          <div class="hl-filter-row">
+            <div class="hl-filter-label">Created via Source</div>
+            <div class="hl-field-row">
+              <div class="hl-dropdown has-value">Is</div>
+              <div class="hl-dropdown has-value">Form Submission</div>
             </div>
           </div>
 
@@ -2641,76 +2649,6 @@
         </div>
       </div>
       <div class="mockup-caption">Clique em cada bloco pra ver TODOS os parâmetros reais do HighLevel</div>
-    </div>
-  </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Filtro</span><span class="pv highlight">Tipo = Customer</span></div>
-          </div>
-        </div>
-
-        <div class="ghl-connector"></div>
-
-        <div class="ghl-node" data-node-id="g1-2">
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
-              <div class="ghl-node-title">Send Email</div>
-            </div>
-          </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">{{contact.email}}</span></div>
-            <div class="ghl-node-param"><span class="pk">Assunto</span><span class="pv">Bem-vindo à família!</span></div>
-          </div>
-        </div>
-
-        <div class="ghl-connector"></div>
-
-        <div class="ghl-node" data-node-id="g1-3">
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-notify">!</div>
-            <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
-              <div class="ghl-node-title">Internal Notification</div>
-            </div>
-          </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Canal</span><span class="pv">Email + SMS</span></div>
-            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">Time de Sucesso</span></div>
-          </div>
-        </div>
-
-        <div class="ghl-connector"></div>
-
-        <div class="ghl-node" data-node-id="g1-4">
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-pipeline">◎</div>
-            <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
-              <div class="ghl-node-title">Create Opportunity</div>
-            </div>
-          </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv">Onboarding</span></div>
-            <div class="ghl-node-param"><span class="pk">Estágio</span><span class="pv highlight">Novo Cliente</span></div>
-          </div>
-        </div>
-
-        <div class="config-panel">
-          <div class="config-header">
-            <div>
-              <div class="config-kind">—</div>
-              <div class="config-title">—</div>
-            </div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração · Ou reproduza a montagem passo a passo</div>
     </div>
   </div>
 
@@ -5477,66 +5415,9 @@
   <div class="footer-top">
     <h3>Categoria 01 completa.</h3>
     <p>12 gatilhos de contato, todos os filtros explicados com impacto prático e mockups visuais reproduzindo a tela do HighLevel. Próximas 12 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Filtro</span><span class="pv">Todas tasks</span></div>
-          </div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="g12-2">
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-condition">?</div>
-            <div>
-              <div class="ghl-node-type">Action · Lógica</div>
-              <div class="ghl-node-title">If/Else</div>
-            </div>
-          </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Condição</span><span class="pv highlight">Task.title contém "fechamento"</span></div>
-          </div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="g12-3">
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
-              <div class="ghl-node-title">Slack Message</div>
-            </div>
-          </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Canal</span><span class="pv highlight">#vendas-vitorias</span></div>
-            <div class="ghl-node-param"><span class="pk">Mensagem</span><span class="pv">🎉 Venda fechada!</span></div>
-          </div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="g12-4">
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-tag">#</div>
-            <div>
-              <div class="ghl-node-type">Action · Contato</div>
-              <div class="ghl-node-title">Add Contact Tag</div>
-            </div>
-          </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Cliente Ativo</span></div>
-          </div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
   </div>
 
-</div><!-- CTA PRINCIPAL: HighLevel 30 dias grátis -->
+  <!-- CTA PRINCIPAL: HighLevel 30 dias grátis -->
   <div class="footer-main-cta">
     <div class="footer-main-cta-text">
       <div class="footer-main-cta-tag">⚡ Crie sua ferramenta SaaS</div>
