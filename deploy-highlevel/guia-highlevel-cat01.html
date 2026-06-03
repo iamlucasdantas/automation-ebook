@@ -2987,13 +2987,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">!</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">Gerente de Vendas</span></div>
-            <div class="ghl-node-param"><span class="pk">Prioridade</span><span class="pv">Alta</span></div>
+            <div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Gerente de Vendas</span></div>
+            <div class="ghl-node-param"><span class="pk">Type</span><span class="pv">In-app + Email</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Lead virou Quente</span></div>
+            <div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{contact.first_name}} mudou pra Quente. Liga agora.</span></div>
           </div>
         </div>
 
@@ -3005,13 +3007,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">◎</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Update Opportunity</div>
               <div class="ghl-node-title">Update Opportunity</div>
             </div>
           </div>
           <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Opportunity</span><span class="pv">Contact's Latest Opportunity</span></div>
             <div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv">Follow-up Prioritário</span></div>
-            <div class="ghl-node-param"><span class="pk">Ação</span><span class="pv highlight">Mover para topo</span></div>
+            <div class="ghl-node-param"><span class="pk">Stage</span><span class="pv highlight">Quente · Topo da fila</span></div>
+            <div class="ghl-node-param"><span class="pk">Status</span><span class="pv">Open</span></div>
           </div>
         </div>
 
@@ -3157,12 +3161,13 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contato</div>
+              <div class="ghl-node-type">Action · Add Tag</div>
               <div class="ghl-node-title">Add Contact Tag</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Pausar Todas Campanhas</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Marcar DND</span></div>
+            <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">DND Active</span></div>
           </div>
         </div>
 
@@ -3172,14 +3177,16 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-notify">!</div>
+            <div class="ghl-node-icon action-notify">⊘</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
-              <div class="ghl-node-title">Remove from Workflows</div>
+              <div class="ghl-node-type">Action · Workflow</div>
+              <div class="ghl-node-title">Remove Contact from Workflows</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Escopo</span><span class="pv">Todas as automações ativas</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Pausar campanhas ativas</span></div>
+            <div class="ghl-node-param"><span class="pk">Workflows</span><span class="pv highlight">All Active Workflows</span></div>
+            <div class="ghl-node-param"><span class="pk">Selection</span><span class="pv">Multi-select dropdown</span></div>
           </div>
         </div>
 
@@ -3410,13 +3417,16 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">!</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Canal</span><span class="pv">Email + SMS</span></div>
-            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">Time Comercial</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Avisar time da nova tag</span></div>
+            <div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Time Comercial</span></div>
+            <div class="ghl-node-param"><span class="pk">Type</span><span class="pv">In-app + Email + SMS</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Nova tag adicionada</span></div>
+            <div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{contact.first_name}} foi marcado como Consultoria. Verifica.</span></div>
           </div>
         </div>
 
@@ -3428,13 +3438,16 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Send Email</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">{{contact.email}}</span></div>
-            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Agenda de Consultoria</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Confirmar agenda consultoria</span></div>
+            <div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@empresa.com.br</span></div>
+            <div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Lucas · Magnetic Funnels</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">{{contact.first_name}}, sua consultoria está marcada</span></div>
+            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Agenda de Consultoria</span></div>
           </div>
         </div>
 
@@ -3446,7 +3459,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">◎</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Create Opportunity</div>
               <div class="ghl-node-title">Create Opportunity</div>
             </div>
           </div>
@@ -3766,12 +3779,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Send Email</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Oferta Exclusiva</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Oferta lead quente</span></div>
+            <div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@empresa.com.br</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">{{contact.first_name}}, oferta exclusiva pra você</span></div>
+            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Oferta Exclusiva</span></div>
           </div>
         </div>
 
@@ -3783,11 +3799,12 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contato</div>
+              <div class="ghl-node-type">Action · Add Tag</div>
               <div class="ghl-node-title">Add Contact Tag</div>
             </div>
           </div>
           <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Tag boost lead quente</span></div>
             <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Lead Quente Educação</span></div>
           </div>
         </div>
@@ -4014,12 +4031,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Send Email</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Cupom Aniversário 20%</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Cupom aniversário</span></div>
+            <div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">marketing@empresa.com.br</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Feliz aniversário, {{contact.first_name}}! 🎂 Cupom dentro</span></div>
+            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Cupom Aniversário 20%</span></div>
           </div>
         </div>
 
@@ -4031,11 +4051,12 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contato</div>
+              <div class="ghl-node-type">Action · Add Tag</div>
               <div class="ghl-node-title">Add Contact Tag</div>
             </div>
           </div>
           <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Marcar cupom aniversário</span></div>
             <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Cupom Aniversário Ativo</span></div>
           </div>
         </div>
@@ -4317,12 +4338,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Send Email</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Renovação Contrato</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Aviso renovação 7 dias</span></div>
+            <div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">contas@empresa.com.br</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Seu contrato renova em 7 dias</span></div>
+            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Renovação Contrato</span></div>
           </div>
         </div>
 
@@ -4332,15 +4356,18 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-notify">!</div>
+            <div class="ghl-node-icon action-notify">✓</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Create Task</div>
               <div class="ghl-node-title">Create Task</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Título</span><span class="pv highlight">Ligar em 2 dias</span></div>
-            <div class="ghl-node-param"><span class="pk">Responsável</span><span class="pv">Gerente de Conta</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Ligar gerente de conta</span></div>
+            <div class="ghl-node-param"><span class="pk">Title</span><span class="pv highlight">Ligar pra confirmar renovação</span></div>
+            <div class="ghl-node-param"><span class="pk">Description</span><span class="pv">Contrato vence em 5 dias. Confirmar valor + tirar dúvidas.</span></div>
+            <div class="ghl-node-param"><span class="pk">Assigned To</span><span class="pv">Gerente de Conta</span></div>
+            <div class="ghl-node-param"><span class="pk">Due Date</span><span class="pv">+2 days</span></div>
           </div>
         </div>
 
@@ -4543,12 +4570,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Condição</span><span class="pv highlight">Nota contém "reunião"</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Nota contém reunião?</span></div>
+            <div class="ghl-node-param"><span class="pk">Field</span><span class="pv">Custom Value · Note Body</span></div>
+            <div class="ghl-node-param"><span class="pk">Operator</span><span class="pv">Contains</span></div>
+            <div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">reunião</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -4556,15 +4586,18 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-notify">📋</div>
+            <div class="ghl-node-icon action-notify">✓</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Create Task</div>
               <div class="ghl-node-title">Create Task</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Título</span><span class="pv highlight">Follow-up pós-reunião em 2 dias</span></div>
-            <div class="ghl-node-param"><span class="pk">Responsável</span><span class="pv">Dono do contato</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Follow-up pós-reunião</span></div>
+            <div class="ghl-node-param"><span class="pk">Title</span><span class="pv highlight">Follow-up pós-reunião</span></div>
+            <div class="ghl-node-param"><span class="pk">Description</span><span class="pv">Retomar pontos da reunião marcada na nota</span></div>
+            <div class="ghl-node-param"><span class="pk">Assigned To</span><span class="pv">Contact Owner</span></div>
+            <div class="ghl-node-param"><span class="pk">Due Date</span><span class="pv">+2 days</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -4574,11 +4607,12 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contato</div>
+              <div class="ghl-node-type">Action · Add Tag</div>
               <div class="ghl-node-title">Add Contact Tag</div>
             </div>
           </div>
           <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Marcar contato em relacionamento</span></div>
             <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Em Relacionamento Ativo</span></div>
           </div>
         </div>
@@ -4768,15 +4802,16 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
+            <div class="ghl-node-icon action-email">↗</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
-              <div class="ghl-node-title">Slack Message</div>
+              <div class="ghl-node-type">Action · Webhook</div>
+              <div class="ghl-node-title">Outbound Webhook (Slack)</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Canal</span><span class="pv highlight">#auditoria-notas</span></div>
-            <div class="ghl-node-param"><span class="pk">Conteúdo</span><span class="pv">Nota modificada por {{user.name}}</span></div>
+            <div class="ghl-node-param"><span class="pk">URL</span><span class="pv highlight">hooks.slack.com/services/T0.../B0.../...</span></div>
+            <div class="ghl-node-param"><span class="pk">Method</span><span class="pv">POST</span></div>
+            <div class="ghl-node-param"><span class="pk">Body</span><span class="pv">{"text":"Nota modificada por {{user.name}}"}</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -4784,15 +4819,18 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
+            <div class="ghl-node-icon action-email">↗</div>
             <div>
-              <div class="ghl-node-type">Action · Envio de Dados</div>
+              <div class="ghl-node-type">Action · Webhook</div>
               <div class="ghl-node-title">Outbound Webhook</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">URL</span><span class="pv highlight">log de auditoria externo</span></div>
-            <div class="ghl-node-param"><span class="pk">Payload</span><span class="pv">contact_id + old + new</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Audit log externo</span></div>
+            <div class="ghl-node-param"><span class="pk">URL</span><span class="pv highlight">https://audit.empresa.com.br/api/note-changed</span></div>
+            <div class="ghl-node-param"><span class="pk">Method</span><span class="pv">POST</span></div>
+            <div class="ghl-node-param"><span class="pk">Headers</span><span class="pv">Content-Type: application/json + X-Token</span></div>
+            <div class="ghl-node-param"><span class="pk">Body</span><span class="pv">{"contact_id":"{{contact.id}}","field":"note","old":"","new":""}</span></div>
           </div>
         </div>
         <div class="config-panel">
@@ -4965,12 +5003,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Condição</span><span class="pv highlight">Task.priority = High</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Task é prioridade Alta?</span></div>
+            <div class="ghl-node-param"><span class="pk">Field</span><span class="pv">Task Custom Field · Priority</span></div>
+            <div class="ghl-node-param"><span class="pk">Operator</span><span class="pv">Equals</span></div>
+            <div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">High</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -4978,15 +5019,18 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
+            <div class="ghl-node-icon action-notify">🔔</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Tipo</span><span class="pv highlight">SMS + App</span></div>
-            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">Responsável da task</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Avisar responsável da task</span></div>
+            <div class="ghl-node-param"><span class="pk">User</span><span class="pv">Task Assignee</span></div>
+            <div class="ghl-node-param"><span class="pk">Type</span><span class="pv highlight">In-app + SMS</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Task de alta prioridade pra você</span></div>
+            <div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{task.title}} — vence em {{task.due_date}}. Olha agora.</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -4994,14 +5038,17 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-wait">⏱</div>
+            <div class="ghl-node-icon action-wait">📅</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
-              <div class="ghl-node-title">Set Event Date</div>
+              <div class="ghl-node-type">Action · Set Event Date</div>
+              <div class="ghl-node-title">Set Event Start Date</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Campo</span><span class="pv highlight">SLA de 4h</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Marcar SLA 4h</span></div>
+            <div class="ghl-node-param"><span class="pk">Event Date Field</span><span class="pv highlight">Custom Field · SLA Deadline</span></div>
+            <div class="ghl-node-param"><span class="pk">Date Value</span><span class="pv">Workflow Time + 4 hours</span></div>
+            <div class="ghl-node-param"><span class="pk">Timezone</span><span class="pv">America/Sao_Paulo</span></div>
           </div>
         </div>
         <div class="config-panel">
@@ -5180,15 +5227,18 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
+            <div class="ghl-node-icon action-notify">🔔</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">Responsável</span></div>
-            <div class="ghl-node-param"><span class="pk">Via</span><span class="pv">App + Email</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Lembrete responsável</span></div>
+            <div class="ghl-node-param"><span class="pk">User</span><span class="pv">Task Assignee</span></div>
+            <div class="ghl-node-param"><span class="pk">Type</span><span class="pv">In-app + Email</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Task vence em 24h</span></div>
+            <div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{task.title}} ({{contact.first_name}}) — vence em 24h.</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -5198,12 +5248,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Duração</span><span class="pv">24 horas</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Esperar dia da task</span></div>
+            <div class="ghl-node-param"><span class="pk">Wait Type</span><span class="pv">Wait For Time Delay</span></div>
+            <div class="ghl-node-param"><span class="pk">Duration</span><span class="pv highlight">24 hours</span></div>
+            <div class="ghl-node-param"><span class="pk">Day & Time Restriction</span><span class="pv">Any day · Any time</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -5213,12 +5266,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Condição</span><span class="pv highlight">Task ainda aberta?</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Task ainda aberta?</span></div>
+            <div class="ghl-node-param"><span class="pk">Field</span><span class="pv">Task · Status</span></div>
+            <div class="ghl-node-param"><span class="pk">Operator</span><span class="pv">Is</span></div>
+            <div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">Open</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -5226,15 +5282,18 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
+            <div class="ghl-node-icon action-notify">🔔</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv highlight">Gerente do responsável</span></div>
-            <div class="ghl-node-param"><span class="pk">Assunto</span><span class="pv">Task vencida sem atenção</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Escalar pro gerente</span></div>
+            <div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Gerente do responsável</span></div>
+            <div class="ghl-node-param"><span class="pk">Type</span><span class="pv">Email + In-app</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Task vencida sem atenção</span></div>
+            <div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{task.title}} venceu sem ser concluída por {{assignee.name}}.</span></div>
           </div>
         </div>
         <div class="config-panel">
@@ -5429,12 +5488,15 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Condição</span><span class="pv highlight">Task.title contém "fechamento"</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Task de fechamento?</span></div>
+            <div class="ghl-node-param"><span class="pk">Field</span><span class="pv">Task · Title</span></div>
+            <div class="ghl-node-param"><span class="pk">Operator</span><span class="pv">Contains</span></div>
+            <div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">fechamento</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -5442,15 +5504,16 @@
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
+            <div class="ghl-node-icon action-email">↗</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
-              <div class="ghl-node-title">Slack Message</div>
+              <div class="ghl-node-type">Action · Webhook</div>
+              <div class="ghl-node-title">Outbound Webhook (Slack)</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Canal</span><span class="pv highlight">#vendas-vitorias</span></div>
-            <div class="ghl-node-param"><span class="pk">Mensagem</span><span class="pv">🎉 Venda fechada!</span></div>
+            <div class="ghl-node-param"><span class="pk">URL</span><span class="pv highlight">hooks.slack.com/services/T0.../B0.../...</span></div>
+            <div class="ghl-node-param"><span class="pk">Method</span><span class="pv">POST</span></div>
+            <div class="ghl-node-param"><span class="pk">Body</span><span class="pv">{"text":"🎉 Venda fechada!"}</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -5460,11 +5523,12 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contato</div>
+              <div class="ghl-node-type">Action · Add Tag</div>
               <div class="ghl-node-title">Add Contact Tag</div>
             </div>
           </div>
           <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv">Marcar cliente ativo</span></div>
             <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Cliente Ativo</span></div>
           </div>
         </div>
@@ -5631,7 +5695,7 @@
       `
     },
     'g2-2': {
-      kind: 'Action · Ferramenta Interna',
+      kind: 'Action · Workflow',
       title: 'Internal Notification',
       body: `
         <div class="config-section">
@@ -5651,7 +5715,7 @@
       `
     },
     'g2-3': {
-      kind: 'Action · Oportunidade',
+      kind: 'Action · Opportunity',
       title: 'Update Opportunity',
       body: `
         <div class="config-section">
@@ -5683,7 +5747,7 @@
       `
     },
     'g3-2': {
-      kind: 'Action · Contato',
+      kind: 'Action · Contact',
       title: 'Add Contact Tag',
       body: `
         <div class="config-section">
@@ -5694,7 +5758,7 @@
       `
     },
     'g3-3': {
-      kind: 'Action · Ferramenta Interna',
+      kind: 'Action · Workflow',
       title: 'Remove from Workflows',
       body: `
         <div class="config-section">
@@ -5722,7 +5786,7 @@
       `
     },
     'g4-2': {
-      kind: 'Action · Ferramenta Interna',
+      kind: 'Action · Workflow',
       title: 'Internal Notification',
       body: `
         <div class="config-section">
@@ -5744,7 +5808,7 @@ Atender em até 1h.</div>
       `
     },
     'g4-3': {
-      kind: 'Action · Comunicação',
+      kind: 'Action · Communication',
       title: 'Send Email',
       body: `
         <div class="config-section">
@@ -5762,7 +5826,7 @@ Atender em até 1h.</div>
       `
     },
     'g4-4': {
-      kind: 'Action · Oportunidade',
+      kind: 'Action · Opportunity',
       title: 'Create Opportunity',
       body: `
         <div class="config-section">
@@ -5802,7 +5866,7 @@ Atender em até 1h.</div>
       `
     },
     'g5-2': {
-      kind: 'Action · Comunicação',
+      kind: 'Action · Communication',
       title: 'Send Email',
       body: `
         <div class="config-section">
@@ -5813,7 +5877,7 @@ Atender em até 1h.</div>
       `
     },
     'g5-3': {
-      kind: 'Action · Contato',
+      kind: 'Action · Contact',
       title: 'Add Contact Tag',
       body: `
         <div class="config-section">
@@ -5841,7 +5905,7 @@ Atender em até 1h.</div>
       `
     },
     'g6-2': {
-      kind: 'Action · Comunicação',
+      kind: 'Action · Communication',
       title: 'Send Email',
       body: `
         <div class="config-section">
@@ -5855,7 +5919,7 @@ Atender em até 1h.</div>
       `
     },
     'g6-3': {
-      kind: 'Action · Contato',
+      kind: 'Action · Contact',
       title: 'Add Contact Tag',
       body: `
         <div class="config-section">
@@ -5887,7 +5951,7 @@ Atender em até 1h.</div>
       `
     },
     'g7-2': {
-      kind: 'Action · Comunicação',
+      kind: 'Action · Communication',
       title: 'Send Email',
       body: `
         <div class="config-section">
@@ -5898,7 +5962,7 @@ Atender em até 1h.</div>
       `
     },
     'g7-3': {
-      kind: 'Action · Ferramenta Interna',
+      kind: 'Action · Workflow',
       title: 'Create Task',
       body: `
         <div class="config-section">
@@ -5916,41 +5980,41 @@ Atender em até 1h.</div>
       `
     },
     'g8-1': { kind: 'Trigger · Gatilho', title: 'Nota Adicionada', body: `<div class="config-section"><div class="config-label">Monitorar</div><div class="config-field highlight">Qualquer nota nova (todos os contatos)</div></div><div class="config-section"><div class="config-label">Descrição</div><div class="config-field">Dispara assim que alguém da equipe adiciona uma nota. Útil pra garantir que follow-ups sejam criados automaticamente após interações registradas.</div></div>` },
-    'g8-2': { kind: 'Action · Lógica', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">trigger.note contains "reunião"</div></div><div class="config-section"><div class="config-label">Branch TRUE</div><div class="config-field">Prossegue com criação de task e tag</div></div><div class="config-section"><div class="config-label">Branch FALSE</div><div class="config-field">Não faz nada (nota de rotina)</div></div>` },
-    'g8-3': { kind: 'Action · Ferramenta Interna', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field">Follow-up pós-reunião em 2 dias</div></div><div class="config-section"><div class="config-label">Descrição</div><div class="config-field">Ligar pra cliente confirmando próximos passos discutidos na reunião de {{note.created_at}}</div></div><div class="config-section"><div class="config-label">Responsável</div><div class="config-field">Dono atual do contato</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">+2 dias úteis</div></div>` },
-    'g8-4': { kind: 'Action · Contato', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Em Relacionamento Ativo</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Permite segmentar contatos que estão recebendo atenção humana ativa pra campanhas mais brandas.</div></div>` },
+    'g8-2': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">trigger.note contains "reunião"</div></div><div class="config-section"><div class="config-label">Branch TRUE</div><div class="config-field">Prossegue com criação de task e tag</div></div><div class="config-section"><div class="config-label">Branch FALSE</div><div class="config-field">Não faz nada (nota de rotina)</div></div>` },
+    'g8-3': { kind: 'Action · Create Task', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field">Follow-up pós-reunião em 2 dias</div></div><div class="config-section"><div class="config-label">Descrição</div><div class="config-field">Ligar pra cliente confirmando próximos passos discutidos na reunião de {{note.created_at}}</div></div><div class="config-section"><div class="config-label">Responsável</div><div class="config-field">Dono atual do contato</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">+2 dias úteis</div></div>` },
+    'g8-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Em Relacionamento Ativo</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Permite segmentar contatos que estão recebendo atenção humana ativa pra campanhas mais brandas.</div></div>` },
     'g9-1': { kind: 'Trigger · Gatilho', title: 'Nota Alterada', body: `<div class="config-section"><div class="config-label">Evento</div><div class="config-field">Qualquer nota existente foi editada</div></div><div class="config-section"><div class="config-label">Por que monitorar</div><div class="config-field">Em equipes grandes, rastrear quem muda o quê evita mal-entendidos. Notas são evidência de interações — alterar sem registro cria zonas cinzentas.</div></div>` },
-    'g9-2': { kind: 'Action · Comunicação', title: 'Slack Message', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#auditoria-notas</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field" style="white-space: pre-wrap;">⚠ Nota editada
+    'g9-2': { kind: 'Action · Webhook', title: 'Outbound Webhook (Slack)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#auditoria-notas</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field" style="white-space: pre-wrap;">⚠ Nota editada
 👤 Contato: {{contact.first_name}} {{contact.last_name}}
 ✏ Editado por: {{user.name}}
 📝 Conteúdo atual: {{note.body}}</div></div>` },
-    'g9-3': { kind: 'Action · Envio de Dados', title: 'Outbound Webhook (auditoria)', body: `<div class="config-section"><div class="config-label">URL</div><div class="config-field">https://logs.suaempresa.com/audit</div></div><div class="config-section"><div class="config-label">Method</div><div class="config-field">POST</div></div><div class="config-section"><div class="config-label">Headers</div><div class="config-field">Authorization: Bearer {{customValue.audit_token}}</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">JSON com contact_id, note_id, user, timestamp</div></div>` },
+    'g9-3': { kind: 'Action · Webhook', title: 'Outbound Webhook (auditoria)', body: `<div class="config-section"><div class="config-label">URL</div><div class="config-field">https://logs.suaempresa.com/audit</div></div><div class="config-section"><div class="config-label">Method</div><div class="config-field">POST</div></div><div class="config-section"><div class="config-label">Headers</div><div class="config-field">Authorization: Bearer {{customValue.audit_token}}</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">JSON com contact_id, note_id, user, timestamp</div></div>` },
     'g10-1': { kind: 'Trigger · Gatilho', title: 'Tarefa Adicionada', body: `<div class="config-section"><div class="config-label">Monitorar</div><div class="config-field">Qualquer task criada em qualquer contato</div></div><div class="config-section"><div class="config-label">Contexto</div><div class="config-field">Tasks são criadas automaticamente (ex.: follow-up) OU manualmente. Esse fluxo trata ambos os casos garantindo SLA de resposta.</div></div>` },
-    'g10-2': { kind: 'Action · Lógica', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">task.priority equals "High"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Dispara alerta + conta SLA</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Segue fluxo normal sem alerta</div></div>` },
-    'g10-3': { kind: 'Action · Comunicação', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field">SMS + Notificação in-app</div></div><div class="config-section"><div class="config-label">Destinatário</div><div class="config-field">{{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field">🔴 Task de alta prioridade criada. SLA de 4h. Contato: {{contact.first_name}}. Abrir: {{task.url}}</div></div>` },
-    'g10-4': { kind: 'Action · Temporização', title: 'Set Event Date (SLA)', body: `<div class="config-section"><div class="config-label">Campo a setar</div><div class="config-field">sla_deadline</div></div><div class="config-section"><div class="config-label">Calcular como</div><div class="config-field">now() + 4 horas</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Outro workflow monitora se task foi completada antes do SLA. Se não, escala pro gerente.</div></div>` },
+    'g10-2': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">task.priority equals "High"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Dispara alerta + conta SLA</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Segue fluxo normal sem alerta</div></div>` },
+    'g10-3': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field">SMS + Notificação in-app</div></div><div class="config-section"><div class="config-label">Destinatário</div><div class="config-field">{{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field">🔴 Task de alta prioridade criada. SLA de 4h. Contato: {{contact.first_name}}. Abrir: {{task.url}}</div></div>` },
+    'g10-4': { kind: 'Action · Set Event Date', title: 'Set Event Start Date', body: `<div class="config-section"><div class="config-label">Campo a setar</div><div class="config-field">sla_deadline</div></div><div class="config-section"><div class="config-label">Calcular como</div><div class="config-field">now() + 4 horas</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Outro workflow monitora se task foi completada antes do SLA. Se não, escala pro gerente.</div></div>` },
     'g11-1': { kind: 'Trigger · Gatilho', title: 'Lembrete de Tarefa', body: `<div class="config-section"><div class="config-label">Quando dispara</div><div class="config-field highlight">24 horas antes do vencimento</div></div><div class="config-section"><div class="config-label">Propósito</div><div class="config-field">Evitar que tasks passem batido. Esse lembrete não é pro cliente — é pra equipe.</div></div>` },
-    'g11-2': { kind: 'Action · Comunicação', title: 'Internal Notification (primeiro toque)', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field">App + Email</div></div><div class="config-section"><div class="config-label">Para</div><div class="config-field">{{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Assunto</div><div class="config-field">⏰ Task vence amanhã: {{task.title}}</div></div>` },
-    'g11-3': { kind: 'Action · Temporização', title: 'Wait 24h', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field">1 dia</div></div><div class="config-section"><div class="config-label">Lógica</div><div class="config-field">Depois de 24h (já passou da data de vencimento), verifica se a task foi fechada.</div></div>` },
-    'g11-4': { kind: 'Action · Lógica', title: 'Task ainda aberta?', body: `<div class="config-section"><div class="config-label">Checa</div><div class="config-field">task.status != "completed"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Escala pro gerente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Termina fluxo — task foi feita a tempo</div></div>` },
-    'g11-5': { kind: 'Action · Comunicação', title: 'Escalation Notification', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">Gerente de {{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field" style="white-space: pre-wrap;">⚠ Task vencida sem conclusão
+    'g11-2': { kind: 'Action · Communication', title: 'Internal Notification (primeiro toque)', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field">App + Email</div></div><div class="config-section"><div class="config-label">Para</div><div class="config-field">{{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Assunto</div><div class="config-field">⏰ Task vence amanhã: {{task.title}}</div></div>` },
+    'g11-3': { kind: 'Action · Timing', title: 'Wait 24h', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field">1 dia</div></div><div class="config-section"><div class="config-label">Lógica</div><div class="config-field">Depois de 24h (já passou da data de vencimento), verifica se a task foi fechada.</div></div>` },
+    'g11-4': { kind: 'Action · If/Else', title: 'Task ainda aberta?', body: `<div class="config-section"><div class="config-label">Checa</div><div class="config-field">task.status != "completed"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Escala pro gerente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Termina fluxo — task foi feita a tempo</div></div>` },
+    'g11-5': { kind: 'Action · Communication', title: 'Escalation Notification', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">Gerente de {{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field" style="white-space: pre-wrap;">⚠ Task vencida sem conclusão
 Responsável: {{task.assigned_to}}
 Contato: {{contact.name}}
 Task: {{task.title}}</div></div>` },
     'g12-1': { kind: 'Trigger · Gatilho', title: 'Tarefa Completada', body: `<div class="config-section"><div class="config-label">Quando</div><div class="config-field">Toda vez que uma task é marcada como done</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Celebra fechamentos importantes, atualiza status do contato, registra métrica.</div></div>` },
-    'g12-2': { kind: 'Action · Lógica', title: 'If/Else (é task de fechamento?)', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">task.title contains "fechamento"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Celebra no Slack + tag de cliente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Task rotineira, não faz nada especial</div></div>` },
-    'g12-3': { kind: 'Action · Comunicação', title: 'Slack Message (celebração)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-vitorias</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field" style="white-space: pre-wrap;">🎉 Nova venda fechada!
+    'g12-2': { kind: 'Action · If/Else', title: 'If/Else (é task de fechamento?)', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">task.title contains "fechamento"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Celebra no Slack + tag de cliente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Task rotineira, não faz nada especial</div></div>` },
+    'g12-3': { kind: 'Action · Communication', title: 'Slack Message (celebração)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-vitorias</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field" style="white-space: pre-wrap;">🎉 Nova venda fechada!
 🏆 Vendedor: {{user.name}}
 💰 Cliente: {{contact.first_name}} {{contact.last_name}}
 📝 Task: {{task.title}}</div></div>` },
-    'g12-4': { kind: 'Action · Contato', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente Ativo</div></div><div class="config-section"><div class="config-label">Remove tags</div><div class="config-field">Em Negociação, Lead Quente</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Triggers de pós-venda (onboarding, upsell, review request) usam essa tag como porta de entrada.</div></div>` },
+    'g12-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente Ativo</div></div><div class="config-section"><div class="config-label">Remove tags</div><div class="config-field">Em Negociação, Lead Quente</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Triggers de pós-venda (onboarding, upsell, review request) usam essa tag como porta de entrada.</div></div>` },
     'g12-1': { kind: 'Trigger · Gatilho', title: 'Tarefa Completada', body: `<div class="config-section"><div class="config-label">Quando</div><div class="config-field">Toda vez que uma task é marcada como done</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Celebra fechamentos importantes, atualiza status do contato, registra métrica.</div></div>` },
-    'g12-2': { kind: 'Action · Lógica', title: 'If/Else (é task de fechamento?)', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">task.title contains "fechamento"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Celebra no Slack + tag de cliente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Task rotineira, não faz nada especial</div></div>` },
-    'g12-3': { kind: 'Action · Comunicação', title: 'Slack Message (celebração)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-vitorias</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field" style="white-space: pre-wrap;">🎉 Nova venda fechada!
+    'g12-2': { kind: 'Action · If/Else', title: 'If/Else (é task de fechamento?)', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">task.title contains "fechamento"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Celebra no Slack + tag de cliente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Task rotineira, não faz nada especial</div></div>` },
+    'g12-3': { kind: 'Action · Communication', title: 'Slack Message (celebração)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-vitorias</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field" style="white-space: pre-wrap;">🎉 Nova venda fechada!
 🏆 Vendedor: {{user.name}}
 💰 Cliente: {{contact.first_name}} {{contact.last_name}}
 📝 Task: {{task.title}}</div></div>` },
-    'g12-4': { kind: 'Action · Contato', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente Ativo</div></div><div class="config-section"><div class="config-label">Remove tags</div><div class="config-field">Em Negociação, Lead Quente</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Triggers de pós-venda (onboarding, upsell, review request) usam essa tag como porta de entrada.</div></div>` },
+    'g12-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente Ativo</div></div><div class="config-section"><div class="config-label">Remove tags</div><div class="config-field">Em Negociação, Lead Quente</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Triggers de pós-venda (onboarding, upsell, review request) usam essa tag como porta de entrada.</div></div>` },
     'g1-1': { kind: 'Trigger · Contact Created', title: 'Contato Criado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name</div><div class="config-field highlight">Descritivo, tipo "New Contact Welcome Sequence"</div></div><div class="config-section"><div class="config-label">O que faz</div><div class="config-field">Dispara a workflow sempre que um novo contato é criado no CRM (manual, via form ou via API).</div></div><div class="config-section"><div class="config-label">Filter · Has Tag</div><div class="config-field highlight">Filtra por tag específica. Exemplo: só "Lead · Formulário" pra não pegar imports manuais.</div></div><div class="config-section"><div class="config-label">Filter · Custom Fields</div><div class="config-field">Permite filtrar por qualquer campo custom (ex.: Industry Type = SaaS, Lead Score > 50).</div></div><div class="config-section"><div class="config-label">Filter · Created via Source</div><div class="config-field highlight">Manual / Form / API / Import. Útil pra não disparar em bulk imports.</div></div><div class="config-section"><div class="config-label">Multiple Tag Filters (AND)</div><div class="config-field">Pode combinar múltiplas tags. Ex.: "Lead" AND NOT "Cliente".</div></div>` },
     'g1-2': { kind: 'Action · Send Email', title: 'Enviar Email de Boas-vindas', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Nome descritivo da ação pra identificar no workflow</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field highlight">Nome do remetente que aparece no inbox do contato</div></div><div class="config-section"><div class="config-label">From Email</div><div class="config-field">Email de origem (precisa estar autenticado no subaccount)</div></div><div class="config-section"><div class="config-label">Reply-to Email</div><div class="config-field">Email pra onde respostas são direcionadas (diferente do From)</div></div><div class="config-section"><div class="config-label">CC / BCC</div><div class="config-field">Opcional. Destinatários em cópia não aparecem nas stats.</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Assunto do email. Aceita merge fields: {{contact.first_name}}</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field">Dropdown com templates salvos. Ou editor direto.</div></div><div class="config-section"><div class="config-label">Sync Edits to Template</div><div class="config-field">ON = mudanças no workflow afetam o template original (bi-direcional). OFF = mudanças ficam só no workflow.</div></div><div class="config-section"><div class="config-label">Attachments</div><div class="config-field">URLs de arquivos PDF, imagens, etc. (não é upload direto)</div></div><div class="config-section"><div class="config-label">Send Test Mail</div><div class="config-field">Campo pra testar antes de publicar</div></div><div class="config-section"><div class="config-label">UTM Parameters</div><div class="config-field">Tracking de campanhas: utm_source, utm_medium, utm_campaign</div></div><div class="config-section"><div class="config-label">Tracking</div><div class="config-field">Open tracking + Click tracking (ambos ON por padrão)</div></div>` },
     'g1-3': { kind: 'Action · Assign to User', title: 'Atribuir Contato a Usuário', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Nome descritivo (ex.: "Assign to Sales Rep")</div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field highlight">Dropdown multi-select. Pode ser 1 usuário ou vários.</div></div><div class="config-section"><div class="config-label">Split Traffic</div><div class="config-field highlight">Equally (round-robin 1:1:1) ou Unequally (com pesos)</div></div><div class="config-section"><div class="config-label">Traffic Weightage</div><div class="config-field">Só aparece se Unequally. Ex.: Senior peso 2, Junior peso 1.</div></div><div class="config-section"><div class="config-label">Only Apply to Unassigned Contacts</div><div class="config-field highlight">ON = não reatribui quem já tem dono. OFF = pode sobrescrever.</div></div><div class="config-section"><div class="config-label">User Picker Mode</div><div class="config-field">Standard (lista manual) ou Dynamic (user ID de variável do workflow)</div></div>` },
