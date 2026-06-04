@@ -820,6 +820,49 @@
     transform: translateY(12px) scale(0.96);
   }
 
+  .ghl-node:has(.ghl-node-icon.trigger) {
+    border-left: 3px solid var(--ghl-purple);
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.06) 0%, var(--ghl-surface) 60%);
+  }
+
+  .ghl-node-controls {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.18s;
+    z-index: 2;
+  }
+
+  .ghl-node:hover .ghl-node-controls,
+  .ghl-node.active .ghl-node-controls {
+    opacity: 1;
+  }
+
+  .ghl-node-control {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1;
+  }
+
+  .ghl-node-control:hover {
+    background: var(--ghl-accent);
+    color: white;
+    border-color: var(--ghl-accent);
+  }
+
   .ghl-node.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -916,7 +959,7 @@
 
   .ghl-connector {
     width: 2px;
-    height: 36px;
+    height: 48px;
     background: var(--ghl-border);
     position: relative;
     opacity: 0;
@@ -924,6 +967,37 @@
   }
 
   .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ghl-bg);
+    border: 1.5px dashed var(--ghl-text-dim);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .ghl-connector:hover::before {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-accent);
+    border-style: solid;
+    background: var(--ghl-surface);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
   .ghl-connector::after {
     content: '';
@@ -2527,7 +2601,7 @@
         <input class="hl-input" value="Opportunity Created" readonly>
       </div>
 
-      <div class="hl-section-head">Filters · AND logic</div>
+      <div class="hl-section-head">Filters</div>
 
       <div class="hl-filter-row">
         <div class="hl-filter-label">In Pipeline</div>
@@ -2598,6 +2672,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
 
         <div class="ghl-node" data-node-id="g1-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2615,11 +2690,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">!</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
@@ -2632,11 +2708,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Add Opportunity Tag</div>
             </div>
           </div>
@@ -2648,11 +2725,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g1-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">📋</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Create Task</div>
             </div>
           </div>
@@ -2837,6 +2915,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="g2-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2851,11 +2930,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g2-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
@@ -2865,12 +2945,13 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g2-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
-              <div class="ghl-node-title">Slack Message</div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Outbound Webhook (Slack)</div>
             </div>
           </div>
           <div class="ghl-node-body">
@@ -2880,11 +2961,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g2-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Envio de Dados</div>
+              <div class="ghl-node-type">Action · Webhook</div>
               <div class="ghl-node-title">Google Sheets</div>
             </div>
           </div>
@@ -2928,7 +3010,7 @@
         <input class="hl-input" value="Opportunity Changed" readonly>
       </div>
 
-      <div class="hl-section-head">Filters · AND logic</div>
+      <div class="hl-section-head">Filters</div>
 
       <div class="hl-filter-row">
         <div class="hl-filter-label">Assigned To</div>
@@ -3150,7 +3232,7 @@
         <input class="hl-input" value="Opportunity Status Changed" readonly>
       </div>
 
-      <div class="hl-section-head">Filters · AND logic</div>
+      <div class="hl-section-head">Filters</div>
 
       <div class="hl-filter-row">
         <div class="hl-filter-label">In Pipeline</div>
@@ -3208,6 +3290,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="g3-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3220,6 +3303,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g3-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
@@ -3232,11 +3316,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g3-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📨</div>
             <div>
-              <div class="ghl-node-type">Action · Slack Message</div>
+              <div class="ghl-node-type">Action · Webhook</div>
               <div class="ghl-node-title">Alerta Won</div>
             </div>
           </div>
@@ -3245,6 +3330,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g3-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
@@ -3275,11 +3361,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g3-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">!</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
@@ -3292,11 +3379,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g3-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
@@ -3309,11 +3397,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g3-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">◎</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Add to Opportunity</div>
             </div>
           </div>
@@ -3516,7 +3605,7 @@
         <input class="hl-input" value="Pipeline Stage Changed" readonly>
       </div>
 
-      <div class="hl-section-head">Filters · AND logic</div>
+      <div class="hl-section-head">Filters</div>
 
       <div class="hl-filter-row">
         <div class="hl-filter-label">In Pipeline <span class="req">*</span></div>
@@ -3572,6 +3661,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
 
         <div class="ghl-node" data-node-id="g4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3589,11 +3679,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">!</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
@@ -3606,11 +3697,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait</div>
             </div>
           </div>
@@ -3623,11 +3715,12 @@
         <div class="ghl-connector"></div>
 
         <div class="ghl-node" data-node-id="g4-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">📋</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Create Task</div>
             </div>
           </div>
@@ -3791,6 +3884,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="g5-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3805,11 +3899,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g5-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
@@ -3819,11 +3914,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g5-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait</div>
             </div>
           </div>
@@ -3833,11 +3929,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g5-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
@@ -3847,11 +3944,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g5-5">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Update Opportunity Status</div>
             </div>
           </div>
@@ -3896,7 +3994,7 @@
         <input class="hl-input" value="Stale Opportunities" readonly>
       </div>
 
-      <div class="hl-section-head">Filters · AND logic</div>
+      <div class="hl-section-head">Filters</div>
 
       <div class="hl-filter-row">
         <div class="hl-filter-label">Duration in Days <span class="req">*</span></div>
@@ -4010,145 +4108,7 @@
         </div>
         <div class="config-section">
           <div class="config-label">Valor do Lead</div>
-          <div class="config-field dropdown highlight">Greater than R$ 50.000</div>
-          <div class="config-desc"><strong>Impacto:</strong> só oportunidades de alto ticket disparam esse fluxo. Dispensa atenção especial imediata.</div>
-        </div>
-      `
-    },
-    'g1-2': {
-      kind: 'Action · Ferramenta Interna',
-      title: 'Internal Notification',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Canais</div>
-          <div class="config-field highlight">✓ SMS ✓ Email</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Para</div>
-          <div class="config-field dropdown">Gerente de Vendas</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Mensagem</div>
-          <div class="config-field" style="white-space: pre-wrap;">🔥 NOVA OPORTUNIDADE HIGH TICKET
-{{contact.first_name}} — R$ {{opportunity.value}}
-Dono: {{opportunity.assigned_user}}
-Acompanhe hoje!</div>
-        </div>
-      `
-    },
-    'g1-3': {
-      kind: 'Action · Oportunidade',
-      title: 'Add Opportunity Tag',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Tag</div>
-          <div class="config-field highlight">High Ticket · Prioridade Máxima</div>
-          <div class="config-desc">Tag permite filtrar essas oportunidades em relatórios e campanhas futuras.</div>
-        </div>
-      `
-    },
-    'g1-4': {
-      kind: 'Action · Ferramenta Interna',
-      title: 'Create Task',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Título</div>
-          <div class="config-field highlight">Ligar em 1h — High Ticket · {{contact.first_name}}</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Responsável</div>
-          <div class="config-field dropdown">{{opportunity.assigned_user}}</div>
-          <div class="config-desc">Usa o dono da oportunidade — quem foi atribuído ao lead recebe a tarefa automaticamente.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Prazo</div>
-          <div class="config-field">+1 hora</div>
-        </div>
-      `
-    },
-    // ===== Gatilho 03 =====
-    // ===== Gatilho 04 =====
-    'g4-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Pipeline State Changed',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Pipeline</div>
-          <div class="config-field dropdown highlight">Vendas Internas</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Estágio</div>
-          <div class="config-field dropdown highlight">Negociação</div>
-          <div class="config-desc"><strong>Impacto:</strong> dispara toda vez que uma oportunidade chega em Negociação. Se ela passar direto (raro), o fluxo não roda.</div>
-        </div>
-      `
-    },
-    'g4-2': {
-      kind: 'Action · Ferramenta Interna',
-      title: 'Internal Notification',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Para</div>
-          <div class="config-field highlight">Gerente + Dono da Oportunidade</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Urgência</div>
-          <div class="config-field">Alta</div>
-          <div class="config-desc">Negociação é o estágio mais crítico. Gerente acompanha de perto pra garantir fechamento.</div>
-        </div>
-      `
-    },
-    'g4-3': {
-      kind: 'Action · Temporização',
-      title: 'Wait',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Duração</div>
-          <div class="config-field highlight">3 dias</div>
-          <div class="config-desc">Prazo razoável pra uma negociação avançar. Depois disso, precisa de ação.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Se moveu de estágio</div>
-          <div class="config-field highlight">✓ Parar fluxo</div>
-          <div class="config-desc"><strong>Impacto:</strong> se a oportunidade já saiu de Negociação (venda fechada ou perdida), não faz sentido cobrar.</div>
-        </div>
-      `
-    },
-    'g4-4': {
-      kind: 'Action · Ferramenta Interna',
-      title: 'Create Task',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Título</div>
-          <div class="config-field highlight">Cobrar resposta da negociação — {{contact.first_name}}</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Responsável</div>
-          <div class="config-field dropdown">{{opportunity.assigned_user}}</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Prazo</div>
-          <div class="config-field">Mesmo dia</div>
-          <div class="config-desc">Urgência alta — vendedor precisa agir naquele dia.</div>
-        </div>
-      `
-    },
-    'g2-1': { kind: 'Trigger · Gatilho', title: 'Oportunidade Alterada', body: `<div class="config-section"><div class="config-label">Granularidade</div><div class="config-field">Dispara em qualquer campo mudado — valor, estágio, dono, descrição</div></div><div class="config-section"><div class="config-label">Importância</div><div class="config-field">Em vendas consultivas, mudanças em valor/desconto da opp merecem visibilidade pra gerência.</div></div>` },
-    'g2-2': { kind: 'Action · Lógica', title: 'Filtrar só mudanças de valor', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">opportunity.value != opportunity.value_previous</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Mudança de descrição/observações não precisa de alerta. Mudança de valor sim.</div></div>` },
-    'g2-3': { kind: 'Action · Comunicação', title: 'Slack Alert', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-alertas</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field" style="white-space: pre-wrap;">💰 Opp {{opp.name}} teve valor alterado
-📉 De: R$ {{opp.value_previous}}
-📈 Para: R$ {{opp.value}}
-👤 Por: {{user.name}}</div></div>` },
-    'g2-4': { kind: 'Action · Envio de Dados', title: 'Google Sheets (audit log)', body: `<div class="config-section"><div class="config-label">Planilha</div><div class="config-field">Audit Log · Mudanças</div></div><div class="config-section"><div class="config-label">Linhas adicionadas</div><div class="config-field">Timestamp | Opp | Campo | Valor Anterior | Valor Novo | Quem</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Compliance, análise de padrões, identificar vendedores que dão desconto excessivo.</div></div>` },
-    'g5-1': { kind: 'Trigger · Gatilho', title: 'Opp Ociosa 7 dias', body: `<div class="config-section"><div class="config-label">Threshold</div><div class="config-field">7 dias sem nenhuma atividade (email, call, reunião)</div></div><div class="config-section"><div class="config-label">Por quê esse número</div><div class="config-field">Curto o suficiente pra não perder momento, longo o suficiente pra não ser assediador.</div></div>` },
-    'g5-2': { kind: 'Action · Comunicação', title: 'Send Email (ressurreição)', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field">Ainda faz sentido?</div></div><div class="config-section"><div class="config-label">Assunto</div><div class="config-field">Devo fechar sua oportunidade?</div></div><div class="config-section"><div class="config-label">Tom</div><div class="config-field">Honesto, sem pressão. Contraintuitivo: perguntar se deve fechar faz muita gente voltar.</div></div>` },
-    'g5-3': { kind: 'Action · Temporização', title: 'Wait 3 dias', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field">3 dias</div></div><div class="config-section"><div class="config-label">Lógica</div><div class="config-field">Dar tempo pra pessoa responder o email. Se não responder em 3 dias, já era.</div></div>` },
-    'g5-4': { kind: 'Action · Lógica', title: 'Respondeu?', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">contact.last_reply > wait_start_time</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Termina fluxo — vendedor acompanha manualmente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Fecha como Lost</div></div>` },
-    'g5-5': { kind: 'Action · Oportunidade', title: 'Update Status = Lost', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field">Lost</div></div><div class="config-section"><div class="config-label">Lost Reason</div><div class="config-field">Abandonou · Sem resposta</div></div><div class="config-section"><div class="config-label">Por quê fechar</div><div class="config-field">Pipeline limpo é mais útil que pipeline inchado com opps mortas. Abre espaço pras ativas.</div></div>` },
-    'g3-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Status de Opp Mudou', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name</div><div class="config-field highlight">Descritivo</div></div><div class="config-section"><div class="config-label">Filter · Pipeline</div><div class="config-field highlight">Filtra por pipeline específico</div></div><div class="config-section"><div class="config-label">Filter · In Pipeline Stage</div><div class="config-field highlight">Multi-select de stages. Pode escolher só Won/Lost/Abandoned.</div></div><div class="config-section"><div class="config-label">Filter · From Stage</div><div class="config-field">Stage anterior. Útil pra detectar movimentos específicos.</div></div><div class="config-section"><div class="config-label">Filter · To Stage</div><div class="config-field">Stage novo após mudança</div></div><div class="config-section"><div class="config-label">Filter · Opportunity Value</div><div class="config-field">Filtra por valor ($$). Operators numéricos disponíveis.</div></div><div class="config-section"><div class="config-label">Filter · Has Tag</div><div class="config-field">Tag do contato dono da opp</div></div><div class="config-section"><div class="config-label">Filter · Opportunity Name</div><div class="config-field">Texto específico no nome</div></div><div class="config-section"><div class="config-label">Filter · Assigned to User</div><div class="config-field">Filtra por dono da opp</div></div><div class="config-section"><div class="config-label">Filter · Lost Reason</div><div class="config-field">Se status = Lost, pode filtrar por motivo específico</div></div>` },
-    'g3-2': { kind: 'Action · If/Else', title: 'Bifurcação por status', body: `<div class="config-section"><div class="config-label">Branch 1 Condition</div><div class="config-field highlight">opportunity.status Equals "Won"</div></div><div class="config-section"><div class="config-label">Branch 2 Condition</div><div class="config-field">opportunity.status Equals "Lost"</div></div><div class="config-section"><div class="config-label">Branch 3 None</div><div class="config-field">Abandoned (cai na None branch)</div></div>` },
-    'g3-3': { kind: 'Action · Slack Message', title: 'Notificar time', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Descritivo</div></div><div class="config-section"><div class="config-label">Webhook URL</div><div class="config-field highlight">URL do Slack Incoming Webhook. Configurar no app do Slack.</div></div><div class="config-section"><div class="config-label">Channel</div><div class="config-field">Canal destino (deve existir no workspace)</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field highlight">Texto com markdown Slack. Aceita merge fields.</div></div><div class="config-section"><div class="config-label">Advanced · Blocks</div><div class="config-field">Slack blocks pra formatação rica</div></div>` },
-    'g3-4': { kind: 'Action · Send Email', title: 'Email de resgate', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Template específico pra quem virou Lost</div></div><div class="config-section"><div class="config-label">Tom</div><div class="config-field">Humilde, perguntar motivo, sem forçar venda</div></div>` }
+          <div class="config-field dropdown highlight">Greater than R$ 50.000</div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

@@ -812,6 +812,49 @@
     transform: translateY(12px) scale(0.96);
   }
 
+  .ghl-node:has(.ghl-node-icon.trigger) {
+    border-left: 3px solid var(--ghl-purple);
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.06) 0%, var(--ghl-surface) 60%);
+  }
+
+  .ghl-node-controls {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.18s;
+    z-index: 2;
+  }
+
+  .ghl-node:hover .ghl-node-controls,
+  .ghl-node.active .ghl-node-controls {
+    opacity: 1;
+  }
+
+  .ghl-node-control {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1;
+  }
+
+  .ghl-node-control:hover {
+    background: var(--ghl-accent);
+    color: white;
+    border-color: var(--ghl-accent);
+  }
+
   .ghl-node.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -908,7 +951,7 @@
 
   .ghl-connector {
     width: 2px;
-    height: 36px;
+    height: 48px;
     background: var(--ghl-border);
     position: relative;
     opacity: 0;
@@ -916,6 +959,37 @@
   }
 
   .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ghl-bg);
+    border: 1.5px dashed var(--ghl-text-dim);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .ghl-connector:hover::before {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-accent);
+    border-style: solid;
+    background: var(--ghl-surface);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
   .ghl-connector::after {
     content: '';
@@ -2474,6 +2548,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a1-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2486,6 +2561,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👤</div>
@@ -2498,6 +2574,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
@@ -2578,11 +2655,12 @@
 </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👤</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Create Contact</div>
             </div>
           </div>
@@ -2590,11 +2668,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
@@ -2676,6 +2755,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a2-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2688,11 +2768,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">🔍</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Find Contact</div>
             </div>
           </div>
@@ -2700,11 +2781,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
@@ -2712,11 +2794,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
@@ -2849,6 +2932,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a3-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2861,11 +2945,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">✎</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Update Contact Field</div>
             </div>
           </div>
@@ -2873,11 +2958,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">✎</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Update Contact Field</div>
             </div>
           </div>
@@ -3013,6 +3099,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3025,11 +3112,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
@@ -3037,11 +3125,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">⭐</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Modify Engagement Score</div>
             </div>
           </div>
@@ -3168,6 +3257,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a5-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3180,11 +3270,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Remove Tag</div>
             </div>
           </div>
@@ -3192,11 +3283,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
@@ -3326,6 +3418,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a6-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3338,6 +3431,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👥</div>
@@ -3350,6 +3444,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">🔔</div>
@@ -3432,11 +3527,12 @@
 </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👥</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Assign to User</div>
             </div>
           </div>
@@ -3444,11 +3540,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">📧</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
@@ -3530,6 +3627,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3542,11 +3640,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👤</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Remove Assigned User</div>
             </div>
           </div>
@@ -3554,11 +3653,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a7-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👥</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Assign to User (novo)</div>
             </div>
           </div>
@@ -3677,6 +3777,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a8-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3689,11 +3790,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a8-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">📁</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Edit Conversation</div>
             </div>
           </div>
@@ -3824,6 +3926,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a9-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3836,11 +3939,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a9-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
@@ -3848,11 +3952,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a9-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">🚫</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Enable DND</div>
             </div>
           </div>
@@ -3860,11 +3965,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a9-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
@@ -4002,6 +4108,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a10-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4014,11 +4121,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a10-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">📝</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add to Notes</div>
             </div>
           </div>
@@ -4026,11 +4134,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a10-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
@@ -4156,6 +4265,7 @@ Próximo passo: agendar demo.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a11-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4168,11 +4278,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a11-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">📋</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Task</div>
             </div>
           </div>
@@ -4180,12 +4291,13 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a11-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">📧</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
-              <div class="ghl-node-title">Slack Message</div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Outbound Webhook (Slack)</div>
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Canal</span><span class="pv highlight">#vendas-vip</span></div></div>
@@ -4321,6 +4433,7 @@ Próximo passo: agendar demo.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a12-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4333,11 +4446,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a12-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">📋</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Copy Contact</div>
             </div>
           </div>
@@ -4468,6 +4582,7 @@ Próximo passo: agendar demo.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a13-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4480,11 +4595,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
@@ -4492,11 +4608,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait</div>
             </div>
           </div>
@@ -4504,11 +4621,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">🗑</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Delete Contact</div>
             </div>
           </div>
@@ -4627,6 +4745,7 @@ Próximo passo: agendar demo.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a14-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4639,11 +4758,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a14-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">⭐</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Modify Engagement Score</div>
             </div>
           </div>
@@ -4651,11 +4771,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a14-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
@@ -4663,11 +4784,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a14-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
@@ -4797,6 +4919,7 @@ Próximo passo: agendar demo.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a15-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4809,11 +4932,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a15-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👁</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Contact Followers</div>
             </div>
           </div>
@@ -4821,11 +4945,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a15-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">📧</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
@@ -4950,6 +5075,7 @@ Próximo passo: agendar demo.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a16-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4962,11 +5088,12 @@ Próximo passo: agendar demo.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a16-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👁</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Remove Contact Followers</div>
             </div>
           </div>
@@ -5153,48 +5280,48 @@ Próximo passo: agendar demo.</textarea>
 
   const configData = {
     'a2-1': { kind: 'Trigger · Gatilho', title: 'Inbound Webhook (Hotmart)', body: `<div class="config-section"><div class="config-label">Evento</div><div class="config-field">Compra aprovada</div></div><div class="config-section"><div class="config-label">Payload</div><div class="config-field">buyer_email, product_id, value</div></div>` },
-    'a2-2': { kind: 'Action · Contatos', title: 'Find Contact', body: `<div class="config-section"><div class="config-label">Busca por</div><div class="config-field highlight">Email (identificador único)</div></div><div class="config-section"><div class="config-label">Valor</div><div class="config-field">{{webhook.buyer_email}}</div></div><div class="config-section"><div class="config-label">Por quê email</div><div class="config-field">Phone pode variar formato, nome repete</div></div>` },
-    'a2-3': { kind: 'Action · Lógica', title: 'If/Else Contato existe?', body: `<div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Só adiciona tag</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Criaria contato novo primeiro</div></div>` },
-    'a2-4': { kind: 'Action · Contatos', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente · Curso X</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Dispara fluxo de pós-venda automaticamente</div></div>` },
+    'a2-2': { kind: 'Action · Contacts', title: 'Find Contact', body: `<div class="config-section"><div class="config-label">Busca por</div><div class="config-field highlight">Email (identificador único)</div></div><div class="config-section"><div class="config-label">Valor</div><div class="config-field">{{webhook.buyer_email}}</div></div><div class="config-section"><div class="config-label">Por quê email</div><div class="config-field">Phone pode variar formato, nome repete</div></div>` },
+    'a2-3': { kind: 'Action · If/Else', title: 'If/Else Contato existe?', body: `<div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Só adiciona tag</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Criaria contato novo primeiro</div></div>` },
+    'a2-4': { kind: 'Action · Contacts', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente · Curso X</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Dispara fluxo de pós-venda automaticamente</div></div>` },
     'a3-1': { kind: 'Trigger', title: 'Appointment Booked', body: `<div class="config-section"><div class="config-label">Calendar</div><div class="config-field">Consultoria 30min</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Agendou consulta = lead quente morno</div></div>` },
-    'a3-2': { kind: 'Action · Contatos', title: 'Update Field (temperatura)', body: `<div class="config-section"><div class="config-label">Campo customizado</div><div class="config-field highlight">temperatura_lead</div></div><div class="config-section"><div class="config-label">Novo valor</div><div class="config-field">Morno</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Smart lists filtram por temperatura</div></div>` },
-    'a3-3': { kind: 'Action · Contatos', title: 'Update Field (data)', body: `<div class="config-section"><div class="config-label">Campo</div><div class="config-field highlight">data_primeira_call</div></div><div class="config-section"><div class="config-label">Valor</div><div class="config-field">{{appointment.date}}</div></div><div class="config-section"><div class="config-label">Trigger futuro</div><div class="config-field">Workflow de follow-up usa essa data</div></div>` },
+    'a3-2': { kind: 'Action · Contacts', title: 'Update Field (temperatura)', body: `<div class="config-section"><div class="config-label">Campo customizado</div><div class="config-field highlight">temperatura_lead</div></div><div class="config-section"><div class="config-label">Novo valor</div><div class="config-field">Morno</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Smart lists filtram por temperatura</div></div>` },
+    'a3-3': { kind: 'Action · Contacts', title: 'Update Field (data)', body: `<div class="config-section"><div class="config-label">Campo</div><div class="config-field highlight">data_primeira_call</div></div><div class="config-section"><div class="config-label">Valor</div><div class="config-field">{{appointment.date}}</div></div><div class="config-section"><div class="config-label">Trigger futuro</div><div class="config-field">Workflow de follow-up usa essa data</div></div>` },
     'a4-1': { kind: 'Trigger', title: 'Email Link Clicked', body: `<div class="config-section"><div class="config-label">Link</div><div class="config-field">/precos</div></div><div class="config-section"><div class="config-label">Sinal</div><div class="config-field">Click em preços = intenção de compra</div></div>` },
-    'a4-2': { kind: 'Action · Contatos', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Interesse · Preços</div></div><div class="config-section"><div class="config-label">Também pode</div><div class="config-field">Variar tag: Interesse · {{email.subject}}</div></div>` },
-    'a4-3': { kind: 'Action · Contatos', title: 'Score +15', body: `<div class="config-section"><div class="config-label">Ajuste</div><div class="config-field">Adicionar</div></div><div class="config-section"><div class="config-label">Pontos</div><div class="config-field">+15</div></div><div class="config-section"><div class="config-label">Por quê esse valor</div><div class="config-field">Clique em página de preço vale +15 (clique normal = +5)</div></div>` },
+    'a4-2': { kind: 'Action · Contacts', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Interesse · Preços</div></div><div class="config-section"><div class="config-label">Também pode</div><div class="config-field">Variar tag: Interesse · {{email.subject}}</div></div>` },
+    'a4-3': { kind: 'Action · Contacts', title: 'Score +15', body: `<div class="config-section"><div class="config-label">Ajuste</div><div class="config-field">Adicionar</div></div><div class="config-section"><div class="config-label">Pontos</div><div class="config-field">+15</div></div><div class="config-section"><div class="config-label">Por quê esse valor</div><div class="config-field">Clique em página de preço vale +15 (clique normal = +5)</div></div>` },
     'a5-1': { kind: 'Trigger', title: 'Opp virou Won', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field">Won</div></div><div class="config-section"><div class="config-label">Momento</div><div class="config-field">Transição lead → cliente</div></div>` },
-    'a5-2': { kind: 'Action · Contatos', title: 'Remove Tag antiga', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Lead · Em Negociação</div></div><div class="config-section"><div class="config-label">Por quê remover</div><div class="config-field">Evita mandar email de "ainda tá avaliando?" pra quem já comprou</div></div>` },
-    'a5-3': { kind: 'Action · Contatos', title: 'Add Tag nova', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Cliente · Ativo</div></div><div class="config-section"><div class="config-label">Dispara</div><div class="config-field">Workflow de onboarding</div></div>` },
+    'a5-2': { kind: 'Action · Contacts', title: 'Remove Tag antiga', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Lead · Em Negociação</div></div><div class="config-section"><div class="config-label">Por quê remover</div><div class="config-field">Evita mandar email de "ainda tá avaliando?" pra quem já comprou</div></div>` },
+    'a5-3': { kind: 'Action · Contacts', title: 'Add Tag nova', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Cliente · Ativo</div></div><div class="config-section"><div class="config-label">Dispara</div><div class="config-field">Workflow de onboarding</div></div>` },
     'a7-1': { kind: 'Trigger', title: 'Tag "Redistribuir"', body: `<div class="config-section"><div class="config-label">Uso</div><div class="config-field">Você adiciona tag manualmente em todos os contatos de um vendedor que saiu</div></div>` },
-    'a7-2': { kind: 'Action · Contatos', title: 'Remove Assigned User', body: `<div class="config-section"><div class="config-label">Escopo</div><div class="config-field">Contato atual do fluxo</div></div>` },
-    'a7-3': { kind: 'Action · Contatos', title: 'Reassign Round-Robin', body: `<div class="config-section"><div class="config-label">Split</div><div class="config-field">Equally</div></div><div class="config-section"><div class="config-label">Resultado</div><div class="config-field">Leads divididos entre vendedores atuais</div></div>` },
+    'a7-2': { kind: 'Action · Contacts', title: 'Remove Assigned User', body: `<div class="config-section"><div class="config-label">Escopo</div><div class="config-field">Contato atual do fluxo</div></div>` },
+    'a7-3': { kind: 'Action · Contacts', title: 'Reassign Round-Robin', body: `<div class="config-section"><div class="config-label">Split</div><div class="config-field">Equally</div></div><div class="config-section"><div class="config-label">Resultado</div><div class="config-field">Leads divididos entre vendedores atuais</div></div>` },
     'a8-1': { kind: 'Trigger', title: 'Opp perdida', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field">Lost</div></div><div class="config-section"><div class="config-label">Motivo</div><div class="config-field">Lead desistiu, não responde, etc.</div></div>` },
-    'a8-2': { kind: 'Action · Contatos', title: 'Edit Conversation', body: `<div class="config-section"><div class="config-label">Archive</div><div class="config-field highlight">Sim</div></div><div class="config-section"><div class="config-label">Mark as Read</div><div class="config-field">Sim</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Limpa inbox do vendedor, arquiva conversa finalizada</div></div>` },
+    'a8-2': { kind: 'Action · Contacts', title: 'Edit Conversation', body: `<div class="config-section"><div class="config-label">Archive</div><div class="config-field highlight">Sim</div></div><div class="config-section"><div class="config-label">Mark as Read</div><div class="config-field">Sim</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Limpa inbox do vendedor, arquiva conversa finalizada</div></div>` },
     'a9-1': { kind: 'Trigger', title: 'Hard Bounce Email', body: `<div class="config-section"><div class="config-label">Evento</div><div class="config-field">Hard Bounce</div></div><div class="config-section"><div class="config-label">Por quê agir</div><div class="config-field">Continuar mandando pra email inválido queima reputação</div></div>` },
-    'a9-2': { kind: 'Action · Lógica', title: 'If bounces >= 3', body: `<div class="config-section"><div class="config-label">Threshold</div><div class="config-field">3 bounces</div></div><div class="config-section"><div class="config-label">Campo usado</div><div class="config-field">custom value bounce_count</div></div>` },
-    'a9-3': { kind: 'Action · Contatos', title: 'Enable DND (Email only)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field highlight">Email</div></div><div class="config-section"><div class="config-label">Outros canais</div><div class="config-field">SMS e WhatsApp continuam liberados</div></div>` },
-    'a9-4': { kind: 'Action · Contatos', title: 'Tag pra limpeza', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Email Inválido</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Relatório de bounce, limpeza periódica</div></div>` },
+    'a9-2': { kind: 'Action · If/Else', title: 'If bounces >= 3', body: `<div class="config-section"><div class="config-label">Threshold</div><div class="config-field">3 bounces</div></div><div class="config-section"><div class="config-label">Campo usado</div><div class="config-field">custom value bounce_count</div></div>` },
+    'a9-3': { kind: 'Action · Contacts', title: 'Enable DND (Email only)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field highlight">Email</div></div><div class="config-section"><div class="config-label">Outros canais</div><div class="config-field">SMS e WhatsApp continuam liberados</div></div>` },
+    'a9-4': { kind: 'Action · Contacts', title: 'Tag pra limpeza', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Email Inválido</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Relatório de bounce, limpeza periódica</div></div>` },
     'a10-1': { kind: 'Trigger', title: 'Appointment No Show', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field">No Show</div></div>` },
-    'a10-2': { kind: 'Action · Contatos', title: 'Add to Notes', body: `<div class="config-section"><div class="config-label">Conteúdo</div><div class="config-field highlight">Não compareceu à consulta agendada em {{appointment.start_time}}. Contatar pra reagendar.</div></div><div class="config-section"><div class="config-label">Registro</div><div class="config-field">Fica no histórico pra sempre</div></div>` },
-    'a10-3': { kind: 'Action · Contatos', title: 'Tag de controle', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">No Show · 1x</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Após 3 no-shows, workflow específico trata</div></div>` },
+    'a10-2': { kind: 'Action · Contacts', title: 'Add to Notes', body: `<div class="config-section"><div class="config-label">Conteúdo</div><div class="config-field highlight">Não compareceu à consulta agendada em {{appointment.start_time}}. Contatar pra reagendar.</div></div><div class="config-section"><div class="config-label">Registro</div><div class="config-field">Fica no histórico pra sempre</div></div>` },
+    'a10-3': { kind: 'Action · Contacts', title: 'Tag de controle', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">No Show · 1x</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Após 3 no-shows, workflow específico trata</div></div>` },
     'a11-1': { kind: 'Trigger', title: 'Opp Created > R$ 50k', body: `<div class="config-section"><div class="config-label">Valor</div><div class="config-field">> R$ 50.000</div></div><div class="config-section"><div class="config-label">Por quê filtrar</div><div class="config-field">High-ticket merece atenção humana imediata</div></div>` },
-    'a11-2': { kind: 'Action · Contatos', title: 'Add Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight">Ligar em 1h · Lead VIP</div></div><div class="config-section"><div class="config-label">Descrição</div><div class="config-field">Lead high-ticket {{contact.name}} ({{opportunity.value}}). Ligar imediatamente.</div></div><div class="config-section"><div class="config-label">Due In</div><div class="config-field">1 hora</div></div><div class="config-section"><div class="config-label">Atribuído</div><div class="config-field">Gerente de Vendas</div></div>` },
-    'a11-3': { kind: 'Action · Comunicação', title: 'Slack Alert', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-vip</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field">🔥 NOVO LEAD VIP: {{contact.name}} · {{opportunity.value}}. Task criada pro gerente.</div></div>` },
+    'a11-2': { kind: 'Action · Contacts', title: 'Add Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight">Ligar em 1h · Lead VIP</div></div><div class="config-section"><div class="config-label">Descrição</div><div class="config-field">Lead high-ticket {{contact.name}} ({{opportunity.value}}). Ligar imediatamente.</div></div><div class="config-section"><div class="config-label">Due In</div><div class="config-field">1 hora</div></div><div class="config-section"><div class="config-label">Atribuído</div><div class="config-field">Gerente de Vendas</div></div>` },
+    'a11-3': { kind: 'Action · Communication', title: 'Slack Alert', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-vip</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field">🔥 NOVO LEAD VIP: {{contact.name}} · {{opportunity.value}}. Task criada pro gerente.</div></div>` },
     'a12-1': { kind: 'Trigger', title: 'Tag Adicionada', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Redirecionar Cliente X</div></div><div class="config-section"><div class="config-label">Cenário</div><div class="config-field">Você é agência, lead veio pra você mas é do cliente X</div></div>` },
-    'a12-2': { kind: 'Action · Contatos', title: 'Copy Contact', body: `<div class="config-section"><div class="config-label">Conta destino</div><div class="config-field highlight">Subconta Cliente X</div></div><div class="config-section"><div class="config-label">Copiar tags</div><div class="config-field">Sim</div></div><div class="config-section"><div class="config-label">Copy custom fields</div><div class="config-field">Sim</div></div><div class="config-section"><div class="config-label">Update if exists</div><div class="config-field">Sim</div></div><div class="config-section"><div class="config-label">⚠ CUSTO</div><div class="config-field">$0.01 por execução</div></div>` },
+    'a12-2': { kind: 'Action · Contacts', title: 'Copy Contact', body: `<div class="config-section"><div class="config-label">Conta destino</div><div class="config-field highlight">Subconta Cliente X</div></div><div class="config-section"><div class="config-label">Copiar tags</div><div class="config-field">Sim</div></div><div class="config-section"><div class="config-label">Copy custom fields</div><div class="config-field">Sim</div></div><div class="config-section"><div class="config-label">Update if exists</div><div class="config-field">Sim</div></div><div class="config-section"><div class="config-label">⚠ CUSTO</div><div class="config-field">$0.01 por execução</div></div>` },
     'a13-1': { kind: 'Trigger', title: 'Form LGPD Opt-Out', body: `<div class="config-section"><div class="config-label">Form</div><div class="config-field">Formulário específico de exclusão de dados</div></div>` },
-    'a13-2': { kind: 'Action · Comunicação', title: 'Email de confirmação', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field">Confirmação de Exclusão</div></div><div class="config-section"><div class="config-label">Conteúdo</div><div class="config-field">Seus dados serão excluídos em 72h. Se foi engano, responda este email.</div></div>` },
-    'a13-3': { kind: 'Action · Temporização', title: 'Wait 72h', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field highlight">72 horas</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Janela de desistência conforme LGPD</div></div>` },
-    'a13-4': { kind: 'Action · Contatos', title: 'Delete Contact', body: `<div class="config-section"><div class="config-label">⚠</div><div class="config-field highlight">Ação irreversível</div></div><div class="config-section"><div class="config-label">Apaga</div><div class="config-field">Contato + histórico + conversas</div></div>` },
+    'a13-2': { kind: 'Action · Communication', title: 'Email de confirmação', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field">Confirmação de Exclusão</div></div><div class="config-section"><div class="config-label">Conteúdo</div><div class="config-field">Seus dados serão excluídos em 72h. Se foi engano, responda este email.</div></div>` },
+    'a13-3': { kind: 'Action · Wait', title: 'Wait 72h', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field highlight">72 horas</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Janela de desistência conforme LGPD</div></div>` },
+    'a13-4': { kind: 'Action · Contacts', title: 'Delete Contact', body: `<div class="config-section"><div class="config-label">⚠</div><div class="config-field highlight">Ação irreversível</div></div><div class="config-section"><div class="config-label">Apaga</div><div class="config-field">Contato + histórico + conversas</div></div>` },
     'a14-1': { kind: 'Trigger', title: 'Clique em link premium', body: `<div class="config-section"><div class="config-label">Link</div><div class="config-field">Oferta Premium</div></div>` },
-    'a14-2': { kind: 'Action · Contatos', title: 'Score +20', body: `<div class="config-section"><div class="config-label">Ajuste</div><div class="config-field highlight">Add</div></div><div class="config-section"><div class="config-label">Pontos</div><div class="config-field">+20</div></div><div class="config-section"><div class="config-label">Rationale</div><div class="config-field">Clique em oferta = interesse real, vale +20</div></div>` },
-    'a14-3': { kind: 'Action · Lógica', title: 'If score > 100', body: `<div class="config-section"><div class="config-label">Threshold</div><div class="config-field highlight">100 pontos acumulados</div></div>` },
-    'a14-4': { kind: 'Action · Contatos', title: 'Tag Super Quente', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Super Quente</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Workflow especial ativa atenção prioritária do comercial</div></div>` },
+    'a14-2': { kind: 'Action · Contacts', title: 'Score +20', body: `<div class="config-section"><div class="config-label">Ajuste</div><div class="config-field highlight">Add</div></div><div class="config-section"><div class="config-label">Pontos</div><div class="config-field">+20</div></div><div class="config-section"><div class="config-label">Rationale</div><div class="config-field">Clique em oferta = interesse real, vale +20</div></div>` },
+    'a14-3': { kind: 'Action · If/Else', title: 'If score > 100', body: `<div class="config-section"><div class="config-label">Threshold</div><div class="config-field highlight">100 pontos acumulados</div></div>` },
+    'a14-4': { kind: 'Action · Contacts', title: 'Tag Super Quente', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Super Quente</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Workflow especial ativa atenção prioritária do comercial</div></div>` },
     'a15-1': { kind: 'Trigger', title: 'Tag VIP adicionada', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente VIP</div></div>` },
-    'a15-2': { kind: 'Action · Contatos', title: 'Add 3 Followers', body: `<div class="config-section"><div class="config-label">Usuários</div><div class="config-field highlight">CEO, Gerente Vendas, CS Lead</div></div><div class="config-section"><div class="config-label">Acesso</div><div class="config-field">Veem conversas e recebem notificações</div></div>` },
-    'a15-3': { kind: 'Action · Comunicação', title: 'Notif interna', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field">Cliente VIP {{contact.name}} adicionado. CEO, Gerente e CS agora têm acesso.</div></div>` },
+    'a15-2': { kind: 'Action · Contacts', title: 'Add 3 Followers', body: `<div class="config-section"><div class="config-label">Usuários</div><div class="config-field highlight">CEO, Gerente Vendas, CS Lead</div></div><div class="config-section"><div class="config-label">Acesso</div><div class="config-field">Veem conversas e recebem notificações</div></div>` },
+    'a15-3': { kind: 'Action · Communication', title: 'Notif interna', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field">Cliente VIP {{contact.name}} adicionado. CEO, Gerente e CS agora têm acesso.</div></div>` },
     'a16-1': { kind: 'Trigger', title: 'Tag Onboarding OK', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Onboarding Concluído</div></div><div class="config-section"><div class="config-label">Quando</div><div class="config-field">Cliente completou os 60 dias iniciais</div></div>` },
-    'a16-2': { kind: 'Action · Contatos', title: 'Remove Follower (CS)', body: `<div class="config-section"><div class="config-label">Usuário</div><div class="config-field highlight">CS Onboarding</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">CS especializado em onboarding pode focar em novos. CS de retenção assume.</div></div>` },
+    'a16-2': { kind: 'Action · Contacts', title: 'Remove Follower (CS)', body: `<div class="config-section"><div class="config-label">Usuário</div><div class="config-field highlight">CS Onboarding</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">CS especializado em onboarding pode focar em novos. CS de retenção assume.</div></div>` },
     'a1-1': { kind: 'Trigger · Inbound Webhook', title: 'Webhook de Entrada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name</div><div class="config-field highlight">Nome do trigger (ex.: "Hotmart Purchase Sync")</div></div><div class="config-section"><div class="config-label">Webhook URL</div><div class="config-field highlight">URL única gerada pelo HighLevel. Configure na Hotmart como destino.</div></div><div class="config-section"><div class="config-label">Sample Payload</div><div class="config-field">Envia um payload de teste pra HL reconhecer campos disponíveis pro mapeamento</div></div><div class="config-section"><div class="config-label">Filters</div><div class="config-field">Pode filtrar por valor de campo do payload (ex.: só eventos "purchase.approved")</div></div>` },
     'a1-2': { kind: 'Action · Create Contact', title: 'Criar Contato', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Nome descritivo da ação</div></div><div class="config-section"><div class="config-label">Email</div><div class="config-field highlight">Campo obrigatório. Map com {{inboundWebhookRequest.email}}</div></div><div class="config-section"><div class="config-label">First Name / Last Name</div><div class="config-field">Mapeamento de campos do webhook</div></div><div class="config-section"><div class="config-label">Phone</div><div class="config-field">Formato internacional recomendado</div></div><div class="config-section"><div class="config-label">Country / Timezone</div><div class="config-field">Útil pra workflows que respeitam time window</div></div><div class="config-section"><div class="config-label">Source</div><div class="config-field">Tag de origem (Hotmart, Form, Manual, etc.)</div></div><div class="config-section"><div class="config-label">Custom Fields</div><div class="config-field">Pode popular qualquer custom field criado na conta</div></div><div class="config-section"><div class="config-label">Duplicate Handling</div><div class="config-field">Default: cria duplicata se email existir. Melhor: usar Find Contact antes.</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field">Pode atribuir direto na criação</div></div>` },
     'a1-3': { kind: 'Action · Add Contact Tag', title: 'Adicionar Tag', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Nome descritivo</div></div><div class="config-section"><div class="config-label">Tags</div><div class="config-field highlight">Múltiplas separadas por vírgula. Aceita variáveis dinâmicas.</div></div><div class="config-section"><div class="config-label">Best Practice</div><div class="config-field">Use prefixos organizados: "Cliente ·", "Origem ·", "Interesse ·"</div></div>` },

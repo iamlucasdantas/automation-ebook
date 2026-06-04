@@ -812,6 +812,49 @@
     transform: translateY(12px) scale(0.96);
   }
 
+  .ghl-node:has(.ghl-node-icon.trigger) {
+    border-left: 3px solid var(--ghl-purple);
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.06) 0%, var(--ghl-surface) 60%);
+  }
+
+  .ghl-node-controls {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.18s;
+    z-index: 2;
+  }
+
+  .ghl-node:hover .ghl-node-controls,
+  .ghl-node.active .ghl-node-controls {
+    opacity: 1;
+  }
+
+  .ghl-node-control {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1;
+  }
+
+  .ghl-node-control:hover {
+    background: var(--ghl-accent);
+    color: white;
+    border-color: var(--ghl-accent);
+  }
+
   .ghl-node.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -908,7 +951,7 @@
 
   .ghl-connector {
     width: 2px;
-    height: 36px;
+    height: 48px;
     background: var(--ghl-border);
     position: relative;
     opacity: 0;
@@ -916,6 +959,37 @@
   }
 
   .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ghl-bg);
+    border: 1.5px dashed var(--ghl-text-dim);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .ghl-connector:hover::before {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-accent);
+    border-style: solid;
+    background: var(--ghl-surface);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
   .ghl-connector::after {
     content: '';
@@ -2474,6 +2548,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a1-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2486,6 +2561,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
@@ -2498,6 +2574,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👥</div>
@@ -2510,6 +2587,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👥</div>
@@ -2581,11 +2659,12 @@
 </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
@@ -2593,11 +2672,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">🎯</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Assign to Senior</div>
             </div>
           </div>
@@ -2605,11 +2685,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email Padrão</div>
             </div>
           </div>
@@ -2691,6 +2772,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a2-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2703,6 +2785,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
@@ -2715,6 +2798,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
@@ -2727,6 +2811,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
@@ -2793,11 +2878,12 @@
 </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email 1</div>
             </div>
           </div>
@@ -2805,11 +2891,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait</div>
             </div>
           </div>
@@ -2817,11 +2904,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email 2</div>
             </div>
           </div>
@@ -2903,6 +2991,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a3-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2915,11 +3004,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait Until Event</div>
             </div>
           </div>
@@ -2927,11 +3017,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📱</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send SMS Lembrete</div>
             </div>
           </div>
@@ -3053,6 +3144,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3065,11 +3157,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Set Event Date</div>
             </div>
           </div>
@@ -3188,6 +3281,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a5-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3200,11 +3294,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email 1</div>
             </div>
           </div>
@@ -3212,11 +3307,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">🎯</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">Goal Event</div>
             </div>
           </div>
@@ -3224,11 +3320,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email 2</div>
             </div>
           </div>
@@ -3349,6 +3446,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a6-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3361,11 +3459,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">🧮</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">Math Operation</div>
             </div>
           </div>
@@ -3373,11 +3472,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email Comissão</div>
             </div>
           </div>
@@ -3497,6 +3597,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3509,11 +3610,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">🌐</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">Update Custom Value</div>
             </div>
           </div>
@@ -3631,6 +3733,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a8-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3643,11 +3746,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a8-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📅</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Create Calendar Event</div>
             </div>
           </div>
@@ -3767,6 +3871,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a9-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3779,11 +3884,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a9-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">❌</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Cancel All Events</div>
             </div>
           </div>
@@ -3899,6 +4005,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a10-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3911,11 +4018,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a10-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🔗</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Call Workflow</div>
             </div>
           </div>
@@ -3923,11 +4031,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a10-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag Pós-Onboarding</div>
             </div>
           </div>
@@ -4043,6 +4152,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a11-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4055,11 +4165,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a11-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">➕</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Add to Workflow</div>
             </div>
           </div>
@@ -4067,11 +4178,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a11-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">➕</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Add to Workflow</div>
             </div>
           </div>
@@ -4186,6 +4298,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a12-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4198,11 +4311,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a12-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">➖</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Remove from Workflow</div>
             </div>
           </div>
@@ -4210,11 +4324,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a12-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">➖</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Remove from Workflow</div>
             </div>
           </div>
@@ -4324,6 +4439,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a13-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4336,11 +4452,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email 1</div>
             </div>
           </div>
@@ -4348,11 +4465,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
             <div>
-              <div class="ghl-node-type">Action · Lógica</div>
+              <div class="ghl-node-type">Action · If/Else</div>
               <div class="ghl-node-title">If respondeu?</div>
             </div>
           </div>
@@ -4360,11 +4478,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🛑</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Remove Current WF</div>
             </div>
           </div>
@@ -4480,6 +4599,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a14-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4492,11 +4612,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a14-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait 5min</div>
             </div>
           </div>
@@ -4504,11 +4625,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a14-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🔗</div>
             <div>
-              <div class="ghl-node-type">Action · Envio de Dados</div>
+              <div class="ghl-node-type">Action · Webhook</div>
               <div class="ghl-node-title">Retry Webhook</div>
             </div>
           </div>
@@ -4516,11 +4638,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a14-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">↩</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Jump to Action</div>
             </div>
           </div>
@@ -4637,6 +4760,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a15-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4649,11 +4773,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a15-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🛑</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Stop Workflow</div>
             </div>
           </div>
@@ -4769,6 +4894,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a16-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4781,11 +4907,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a16-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🔄</div>
             <div>
-              <div class="ghl-node-type">Action · Ferramenta Interna</div>
+              <div class="ghl-node-type">Action · Workflow</div>
               <div class="ghl-node-title">Restart Workflow</div>
             </div>
           </div>
@@ -4965,44 +5092,44 @@
 
   const configData = {
     'a3-1': { kind: 'Trigger', title: 'Agendamento criado', body: `` },
-    'a3-2': { kind: 'Action · Temporização', title: 'Wait until 24h antes', body: `<div class="config-section"><div class="config-label">Data base</div><div class="config-field highlight">appointment.start_time</div></div><div class="config-section"><div class="config-label">Offset</div><div class="config-field">-24 horas</div></div>` },
-    'a3-3': { kind: 'Action · Comunicação', title: 'SMS lembrete', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Lembre: consulta amanhã {{appointment.start_time}}</div></div>` },
+    'a3-2': { kind: 'Action · Wait', title: 'Wait until 24h antes', body: `<div class="config-section"><div class="config-label">Data base</div><div class="config-field highlight">appointment.start_time</div></div><div class="config-section"><div class="config-label">Offset</div><div class="config-field">-24 horas</div></div>` },
+    'a3-3': { kind: 'Action · Communication', title: 'SMS lembrete', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Lembre: consulta amanhã {{appointment.start_time}}</div></div>` },
     'a4-1': { kind: 'Trigger', title: 'Contrato assinado', body: `` },
-    'a4-2': { kind: 'Action · Temporização', title: 'Define data renovação', body: `<div class="config-section"><div class="config-label">Nome do evento</div><div class="config-field highlight">data_renovacao</div></div><div class="config-section"><div class="config-label">Data calculada</div><div class="config-field">now() + 12 meses</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Workflow dispara 30 dias antes</div></div>` },
+    'a4-2': { kind: 'Action · Wait', title: 'Define data renovação', body: `<div class="config-section"><div class="config-label">Nome do evento</div><div class="config-field highlight">data_renovacao</div></div><div class="config-section"><div class="config-label">Data calculada</div><div class="config-field">now() + 12 meses</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Workflow dispara 30 dias antes</div></div>` },
     'a5-1': { kind: 'Trigger', title: 'Entrou em nurture', body: `` },
-    'a5-2': { kind: 'Action · Comunicação', title: 'Email #1', body: `` },
-    'a5-3': { kind: 'Action · Lógica', title: 'Goal: Comprou', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">opportunity.status = Won</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Sai do fluxo, marca como convertido</div></div><div class="config-section"><div class="config-label">Métrica</div><div class="config-field">% conversão do workflow</div></div>` },
-    'a5-4': { kind: 'Action · Comunicação', title: 'Email #2 (só pra quem não bateu goal)', body: `` },
+    'a5-2': { kind: 'Action · Communication', title: 'Email #1', body: `` },
+    'a5-3': { kind: 'Action · If/Else', title: 'Goal: Comprou', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">opportunity.status = Won</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Sai do fluxo, marca como convertido</div></div><div class="config-section"><div class="config-label">Métrica</div><div class="config-field">% conversão do workflow</div></div>` },
+    'a5-4': { kind: 'Action · Communication', title: 'Email #2 (só pra quem não bateu goal)', body: `` },
     'a6-1': { kind: 'Trigger', title: 'Venda fechada', body: `` },
-    'a6-2': { kind: 'Action · Lógica', title: 'Calcula 10% de comissão', body: `<div class="config-section"><div class="config-label">Operação</div><div class="config-field highlight">opportunity.value × 0.1</div></div><div class="config-section"><div class="config-label">Campo destino</div><div class="config-field">custom.comissao_valor</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Relatório mensal de comissões</div></div>` },
-    'a6-3': { kind: 'Action · Comunicação', title: 'Notifica vendedor', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Venda fechada! Comissão: R$ {{custom.comissao_valor}}</div></div>` },
+    'a6-2': { kind: 'Action · If/Else', title: 'Calcula 10% de comissão', body: `<div class="config-section"><div class="config-label">Operação</div><div class="config-field highlight">opportunity.value × 0.1</div></div><div class="config-section"><div class="config-label">Campo destino</div><div class="config-field">custom.comissao_valor</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Relatório mensal de comissões</div></div>` },
+    'a6-3': { kind: 'Action · Communication', title: 'Notifica vendedor', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Venda fechada! Comissão: R$ {{custom.comissao_valor}}</div></div>` },
     'a7-1': { kind: 'Trigger', title: 'Data específica', body: `` },
-    'a7-2': { kind: 'Action · Lógica', title: 'Muda custom value global', body: `<div class="config-section"><div class="config-label">Custom Value</div><div class="config-field highlight">preco_curso</div></div><div class="config-section"><div class="config-label">Novo valor</div><div class="config-field">R$ 497</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Todos os emails/SMS referenciando {{cv.preco_curso}} mostram preço novo automaticamente</div></div>` },
+    'a7-2': { kind: 'Action · If/Else', title: 'Muda custom value global', body: `<div class="config-section"><div class="config-label">Custom Value</div><div class="config-field highlight">preco_curso</div></div><div class="config-section"><div class="config-label">Novo valor</div><div class="config-field">R$ 497</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Todos os emails/SMS referenciando {{cv.preco_curso}} mostram preço novo automaticamente</div></div>` },
     'a8-1': { kind: 'Trigger', title: 'Vendedor em campo', body: `` },
-    'a8-2': { kind: 'Action · Ferramenta Interna', title: 'Bloqueio automático', body: `<div class="config-section"><div class="config-label">Calendário</div><div class="config-field highlight">Vendedor</div></div><div class="config-section"><div class="config-label">Título</div><div class="config-field">Em campo - cliente {{contact.name}}</div></div><div class="config-section"><div class="config-label">Duração</div><div class="config-field">8h (dia inteiro)</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Impede outros agendamentos</div></div>` },
+    'a8-2': { kind: 'Action · Workflow', title: 'Bloqueio automático', body: `<div class="config-section"><div class="config-label">Calendário</div><div class="config-field highlight">Vendedor</div></div><div class="config-section"><div class="config-label">Título</div><div class="config-field">Em campo - cliente {{contact.name}}</div></div><div class="config-section"><div class="config-label">Duração</div><div class="config-field">8h (dia inteiro)</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Impede outros agendamentos</div></div>` },
     'a9-1': { kind: 'Trigger', title: 'Assinatura cancelada', body: `` },
-    'a9-2': { kind: 'Action · Ferramenta Interna', title: 'Cancel Events', body: `<div class="config-section"><div class="config-label">Filtro</div><div class="config-field highlight">Futuros (não passados)</div></div><div class="config-section"><div class="config-label">Liberação de horários</div><div class="config-field">Outros clientes podem usar</div></div>` },
+    'a9-2': { kind: 'Action · Workflow', title: 'Cancel Events', body: `<div class="config-section"><div class="config-label">Filtro</div><div class="config-field highlight">Futuros (não passados)</div></div><div class="config-section"><div class="config-label">Liberação de horários</div><div class="config-field">Outros clientes podem usar</div></div>` },
     'a10-1': { kind: 'Trigger', title: 'Novo cliente', body: `` },
-    'a10-2': { kind: 'Action · Ferramenta Interna', title: 'Chama sub-fluxo', body: `<div class="config-section"><div class="config-label">Workflow chamado</div><div class="config-field highlight">Onboarding Básico · Reutilizável</div></div><div class="config-section"><div class="config-label">Vantagem</div><div class="config-field">Mesma lógica usada em 5 fluxos principais</div></div><div class="config-section"><div class="config-label">Modularização</div><div class="config-field">Mudanças no onboarding afetam tudo</div></div>` },
-    'a10-3': { kind: 'Action · Contatos', title: 'Tag final', body: `` },
+    'a10-2': { kind: 'Action · Workflow', title: 'Chama sub-fluxo', body: `<div class="config-section"><div class="config-label">Workflow chamado</div><div class="config-field highlight">Onboarding Básico · Reutilizável</div></div><div class="config-section"><div class="config-label">Vantagem</div><div class="config-field">Mesma lógica usada em 5 fluxos principais</div></div><div class="config-section"><div class="config-label">Modularização</div><div class="config-field">Mudanças no onboarding afetam tudo</div></div>` },
+    'a10-3': { kind: 'Action · Contacts', title: 'Tag final', body: `` },
     'a11-1': { kind: 'Trigger', title: 'Lead novo', body: `` },
-    'a11-2': { kind: 'Action · Ferramenta Interna', title: 'Add to Nurture', body: `<div class="config-section"><div class="config-label">WF destino</div><div class="config-field highlight">Nurture Email · 21 dias</div></div><div class="config-section"><div class="config-label">Execução</div><div class="config-field">Paralela (não bloqueia)</div></div>` },
-    'a11-3': { kind: 'Action · Ferramenta Interna', title: 'Add to Scoring', body: `<div class="config-section"><div class="config-label">WF destino</div><div class="config-field highlight">Lead Scoring Tracking</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Roda em paralelo com nurture</div></div>` },
+    'a11-2': { kind: 'Action · Workflow', title: 'Add to Nurture', body: `<div class="config-section"><div class="config-label">WF destino</div><div class="config-field highlight">Nurture Email · 21 dias</div></div><div class="config-section"><div class="config-label">Execução</div><div class="config-field">Paralela (não bloqueia)</div></div>` },
+    'a11-3': { kind: 'Action · Workflow', title: 'Add to Scoring', body: `<div class="config-section"><div class="config-label">WF destino</div><div class="config-field highlight">Lead Scoring Tracking</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Roda em paralelo com nurture</div></div>` },
     'a12-1': { kind: 'Trigger', title: 'Cliente comprou', body: `` },
-    'a12-2': { kind: 'Action · Ferramenta Interna', title: 'Remove de nurture', body: `<div class="config-section"><div class="config-label">WF</div><div class="config-field highlight">Nurture · Lead Frio</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Evita mandar "compre agora" pra quem já comprou</div></div>` },
-    'a12-3': { kind: 'Action · Ferramenta Interna', title: 'Remove de re-engagement', body: `<div class="config-section"><div class="config-label">WF</div><div class="config-field highlight">Re-engagement · 30d</div></div>` },
+    'a12-2': { kind: 'Action · Workflow', title: 'Remove de nurture', body: `<div class="config-section"><div class="config-label">WF</div><div class="config-field highlight">Nurture · Lead Frio</div></div><div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Evita mandar "compre agora" pra quem já comprou</div></div>` },
+    'a12-3': { kind: 'Action · Workflow', title: 'Remove de re-engagement', body: `<div class="config-section"><div class="config-label">WF</div><div class="config-field highlight">Re-engagement · 30d</div></div>` },
     'a13-1': { kind: 'Trigger', title: 'Entrou em nurture', body: `` },
-    'a13-2': { kind: 'Action · Comunicação', title: 'Email #1', body: `` },
-    'a13-3': { kind: 'Action · Lógica', title: 'Respondeu?', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">contact.last_reply recente</div></div>` },
-    'a13-4': { kind: 'Action · Ferramenta Interna', title: 'Sai do fluxo atual', body: `<div class="config-section"><div class="config-label">Efeito</div><div class="config-field highlight">Para execução aqui — outras ações não rodam</div></div>` },
+    'a13-2': { kind: 'Action · Communication', title: 'Email #1', body: `` },
+    'a13-3': { kind: 'Action · If/Else', title: 'Respondeu?', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">contact.last_reply recente</div></div>` },
+    'a13-4': { kind: 'Action · Workflow', title: 'Sai do fluxo atual', body: `<div class="config-section"><div class="config-label">Efeito</div><div class="config-field highlight">Para execução aqui — outras ações não rodam</div></div>` },
     'a14-1': { kind: 'Trigger', title: 'Webhook falhou', body: `` },
-    'a14-2': { kind: 'Action · Temporização', title: 'Wait 5 min', body: `` },
-    'a14-3': { kind: 'Action · Envio de Dados', title: 'Retry', body: `` },
-    'a14-4': { kind: 'Action · Ferramenta Interna', title: 'Jump (loop)', body: `<div class="config-section"><div class="config-label">Destino</div><div class="config-field highlight">Wait 5min</div></div><div class="config-section"><div class="config-label">⚠</div><div class="config-field">Cuidado: precisa condição de saída pra evitar loop infinito</div></div>` },
+    'a14-2': { kind: 'Action · Wait', title: 'Wait 5 min', body: `` },
+    'a14-3': { kind: 'Action · Webhook', title: 'Retry', body: `` },
+    'a14-4': { kind: 'Action · Workflow', title: 'Jump (loop)', body: `<div class="config-section"><div class="config-label">Destino</div><div class="config-field highlight">Wait 5min</div></div><div class="config-section"><div class="config-label">⚠</div><div class="config-field">Cuidado: precisa condição de saída pra evitar loop infinito</div></div>` },
     'a15-1': { kind: 'Trigger', title: 'Admin aciona kill switch', body: `` },
-    'a15-2': { kind: 'Action · Ferramenta Interna', title: 'Para workflow global', body: `<div class="config-section"><div class="config-label">Efeito</div><div class="config-field highlight">TODOS os contatos saem do workflow</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Bug crítico detectado, campanha acabou, etc.</div></div>` },
+    'a15-2': { kind: 'Action · Workflow', title: 'Para workflow global', body: `<div class="config-section"><div class="config-label">Efeito</div><div class="config-field highlight">TODOS os contatos saem do workflow</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Bug crítico detectado, campanha acabou, etc.</div></div>` },
     'a16-1': { kind: 'Trigger', title: 'Cliente voltou após sumir', body: `` },
-    'a16-2': { kind: 'Action · Ferramenta Interna', title: 'Restart WF', body: `<div class="config-section"><div class="config-label">Efeito</div><div class="config-field highlight">Cliente volta pra ação 1 do workflow</div></div><div class="config-section"><div class="config-label">Use case</div><div class="config-field">Cliente inativo 6m volta → recomeça nurture</div></div>` },
+    'a16-2': { kind: 'Action · Workflow', title: 'Restart WF', body: `<div class="config-section"><div class="config-label">Efeito</div><div class="config-field highlight">Cliente volta pra ação 1 do workflow</div></div><div class="config-section"><div class="config-label">Use case</div><div class="config-field">Cliente inativo 6m volta → recomeça nurture</div></div>` },
     'a1-1': { kind: 'Trigger', title: 'Nova Opportunity criada', body: `<div class="config-section"><div class="config-label">Pipeline</div><div class="config-field highlight">Filtra por pipeline (ex.: Vendas B2B vs Suporte)</div></div>` },
     'a1-2': { kind: 'Action · If/Else', title: 'Lógica Condicional Completa', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Formule como PERGUNTA pra ficar claro o que testa</div></div><div class="config-section"><div class="config-label">Branch Name</div><div class="config-field highlight">Cada branch tem nome. Aparece no canvas. Renomear é essencial pra legibilidade.</div></div><div class="config-section"><div class="config-label">Conditional Event / Field</div><div class="config-field highlight">Dropdown com TODOS os campos testáveis: contact, opportunity, appointment, tags...</div></div><div class="config-section"><div class="config-label">Operator · Texto</div><div class="config-field">Equals, Not equals, Contains, Does not contain, Starts with, Ends with, Is empty, Is not empty</div></div><div class="config-section"><div class="config-label">Operator · Numérico</div><div class="config-field">Equals, Not equals, Greater than, Less than, Greater than or equal, Less than or equal, Between</div></div><div class="config-section"><div class="config-label">Operator · Data/Hora</div><div class="config-field">Is, Is not, Is after, Is on or after, Is before, Is on or before, Is today, Is tomorrow, Is yesterday</div></div><div class="config-section"><div class="config-label">Operator · Tags/Multi-select</div><div class="config-field">Includes, Does not include</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field highlight">Hardcoded (texto/número) OU Dynamic Value (variável do workflow)</div></div><div class="config-section"><div class="config-label">Dynamic Values</div><div class="config-field">Compara com output de action anterior ou campo custom dinâmico. Evita hard-coding.</div></div><div class="config-section"><div class="config-label">Add Segment</div><div class="config-field">Adiciona segunda condição na MESMA branch</div></div><div class="config-section"><div class="config-label">AND / OR entre segments</div><div class="config-field highlight">AND = ambas precisam ser true. OR = uma basta.</div></div><div class="config-section"><div class="config-label">Add Branch</div><div class="config-field highlight">Cada branch é um caminho diferente. Múltiplas branches possíveis.</div></div><div class="config-section"><div class="config-label">Avaliação Top-Down</div><div class="config-field">HL testa branches em ORDEM. Primeira que bate = contato vai por ela.</div></div><div class="config-section"><div class="config-label">None Branch</div><div class="config-field highlight">Criada automaticamente. Roda quando nenhuma condição de nenhuma branch bate. Pode renomear mas não remover.</div></div><div class="config-section"><div class="config-label">Reorder Branches</div><div class="config-field">Pode arrastar pra reordenar (except None que fica sempre por último)</div></div><div class="config-section"><div class="config-label">Duplicate Branch</div><div class="config-field">3 pontinhos > Duplicate. Cria cópia com "(copy)"</div></div><div class="config-section"><div class="config-label">Includes/Does not include · Default AND</div><div class="config-field">Quando usa múltiplos valores, default é AND (contato precisa ter TODAS). Pode mudar pra OR.</div></div>` },
     'a1-3': { kind: 'Action · Assign Enterprise', title: 'Top AE', body: `<div class="config-section"><div class="config-label">Users</div><div class="config-field highlight">Usuário específico pra leads enterprise</div></div><div class="config-section"><div class="config-label">Branch</div><div class="config-field">Esta action só roda pra quem caiu na branch Enterprise</div></div>` },

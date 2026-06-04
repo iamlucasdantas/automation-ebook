@@ -812,6 +812,49 @@
     transform: translateY(12px) scale(0.96);
   }
 
+  .ghl-node:has(.ghl-node-icon.trigger) {
+    border-left: 3px solid var(--ghl-purple);
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.06) 0%, var(--ghl-surface) 60%);
+  }
+
+  .ghl-node-controls {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.18s;
+    z-index: 2;
+  }
+
+  .ghl-node:hover .ghl-node-controls,
+  .ghl-node.active .ghl-node-controls {
+    opacity: 1;
+  }
+
+  .ghl-node-control {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1;
+  }
+
+  .ghl-node-control:hover {
+    background: var(--ghl-accent);
+    color: white;
+    border-color: var(--ghl-accent);
+  }
+
   .ghl-node.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -908,7 +951,7 @@
 
   .ghl-connector {
     width: 2px;
-    height: 36px;
+    height: 48px;
     background: var(--ghl-border);
     position: relative;
     opacity: 0;
@@ -916,6 +959,37 @@
   }
 
   .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ghl-bg);
+    border: 1.5px dashed var(--ghl-text-dim);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .ghl-connector:hover::before {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-accent);
+    border-style: solid;
+    background: var(--ghl-surface);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
   .ghl-connector::after {
     content: '';
@@ -2483,6 +2557,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a1-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2495,6 +2570,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
@@ -2507,6 +2583,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
@@ -2519,6 +2596,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
@@ -2587,11 +2665,12 @@
 </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
@@ -2599,11 +2678,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait</div>
             </div>
           </div>
@@ -2611,11 +2691,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
@@ -2697,6 +2778,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a2-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2709,6 +2791,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
@@ -2721,6 +2804,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📱</div>
@@ -2786,11 +2870,12 @@ Dúvidas? Responde aqui.</textarea>
 </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📱</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send SMS</div>
             </div>
           </div>
@@ -2816,7 +2901,7 @@ Dúvidas? Responde aqui.</textarea>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
       <h2 class="acao-name">Mensagem no Slack</h2>
-      <div class="acao-en">Slack Message</div>
+      <div class="acao-en">Outbound Webhook (Slack)</div>
       <div class="acao-tags"><span class="info-tag">Interno</span></div>
     </div>
   </div>
@@ -2872,6 +2957,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a3-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2884,12 +2970,13 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📨</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
-              <div class="ghl-node-title">Slack Message</div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Outbound Webhook (Slack)</div>
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Canal</span><span class="pv highlight">#vendas-vip</span></div><div class="ghl-node-param"><span class="pk">Mensagem</span><span class="pv">Novo lead VIP!</span></div></div>
@@ -2922,7 +3009,7 @@ Dúvidas? Responde aqui.</textarea>
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Slack Message</span>
+              <span>Outbound Webhook (Slack)</span>
             </div>
           </div>
           <div class="hl-panel-body">
@@ -3009,6 +3096,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3021,11 +3109,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📞</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Call</div>
             </div>
           </div>
@@ -3147,6 +3236,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a5-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3159,11 +3249,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🎙</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Voicemail</div>
             </div>
           </div>
@@ -3279,6 +3370,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a6-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3291,11 +3383,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💬</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Facebook Messenger</div>
             </div>
           </div>
@@ -3414,6 +3507,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3426,11 +3520,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💬</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Reply to IG Comment</div>
             </div>
           </div>
@@ -3438,11 +3533,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a7-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💬</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Instagram DM</div>
             </div>
           </div>
@@ -3561,6 +3657,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a8-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3573,11 +3670,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a8-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">📱</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Manual Action · SMS</div>
             </div>
           </div>
@@ -3696,6 +3794,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a9-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3708,11 +3807,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a9-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait</div>
             </div>
           </div>
@@ -3720,11 +3820,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a9-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-notify">📞</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Manual Action · Call</div>
             </div>
           </div>
@@ -3842,6 +3943,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a10-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3854,11 +3956,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a10-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🔔</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
@@ -3981,6 +4084,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a11-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3993,11 +4097,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a11-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
             <div>
-              <div class="ghl-node-type">Action · Temporização</div>
+              <div class="ghl-node-type">Action · Wait</div>
               <div class="ghl-node-title">Wait</div>
             </div>
           </div>
@@ -4005,11 +4110,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a11-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">⭐</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Review Request</div>
             </div>
           </div>
@@ -4130,6 +4236,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a12-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4142,11 +4249,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a12-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📱</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">WhatsApp Oficial</div>
             </div>
           </div>
@@ -4273,6 +4381,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a13-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4285,11 +4394,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🤖</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Conversation AI Email</div>
             </div>
           </div>
@@ -4410,6 +4520,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a14-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4422,11 +4533,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a14-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🤖</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Conversation AI SMS</div>
             </div>
           </div>
@@ -4545,6 +4657,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a15-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4557,11 +4670,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a15-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📝</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Form via SMS</div>
             </div>
           </div>
@@ -4679,6 +4793,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a16-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4691,11 +4806,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a16-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📋</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Survey via SMS</div>
             </div>
           </div>
@@ -4812,6 +4928,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a17-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4824,11 +4941,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a17-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🤖</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Voice AI Call</div>
             </div>
           </div>
@@ -4950,6 +5068,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a18-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -4962,11 +5081,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a18-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💬</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Reply to FB Comment</div>
             </div>
           </div>
@@ -5085,6 +5205,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -5097,11 +5218,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💬</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Reply to IG Comment</div>
             </div>
           </div>
@@ -5109,11 +5231,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💬</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Instagram DM</div>
             </div>
           </div>
@@ -5230,6 +5353,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a20-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -5242,6 +5366,7 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a20-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">🤖</div>
@@ -5254,11 +5379,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a20-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email</div>
             </div>
           </div>
@@ -5378,6 +5504,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a21-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -5390,11 +5517,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a21-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📞</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">SMS via Número Suporte</div>
             </div>
           </div>
@@ -5511,6 +5639,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a22-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -5523,11 +5652,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a22-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📱</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">SMS via Pool</div>
             </div>
           </div>
@@ -5644,6 +5774,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a23-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -5656,11 +5787,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a23-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📍</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">GMB Confirmation</div>
             </div>
           </div>
@@ -5777,6 +5909,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a24-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -5789,11 +5922,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a24-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📱</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">SMS Shortcode</div>
             </div>
           </div>
@@ -5912,6 +6046,7 @@ Dúvidas? Responde aqui.</textarea>
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a25-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -5924,11 +6059,12 @@ Dúvidas? Responde aqui.</textarea>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a25-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">📎</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Email + Attach</div>
             </div>
           </div>
@@ -6111,62 +6247,62 @@ Dúvidas? Responde aqui.</textarea>
 
   const configData = {
     'a3-1': { kind: 'Trigger', title: 'Oportunidade High-Ticket', body: `` },
-    'a3-2': { kind: 'Action · Comunicação', title: 'Slack Alert', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field highlight">#vendas-vip</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field" style="white-space: pre-wrap;">🔥 *LEAD VIP*
+    'a3-2': { kind: 'Action · Communication', title: 'Slack Alert', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field highlight">#vendas-vip</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field" style="white-space: pre-wrap;">🔥 *LEAD VIP*
 👤 {{contact.first_name}} {{contact.last_name}}
 💰 {{opportunity.value}}
 📞 {{contact.phone}}
 🔗 Abrir: {{contact.url}}</div></div>` },
     'a4-1': { kind: 'Trigger', title: 'Novo contato', body: `` },
-    'a4-2': { kind: 'Action · Comunicação', title: 'Verification Call', body: `<div class="config-section"><div class="config-label">Call Timeout</div><div class="config-field highlight">60 segundos</div></div><div class="config-section"><div class="config-label">Call Whisper</div><div class="config-field">Verification call for new lead</div></div><div class="config-section"><div class="config-label">Connect After Keypress</div><div class="config-field">Ativo (cliente precisa apertar 1)</div></div>` },
+    'a4-2': { kind: 'Action · Communication', title: 'Verification Call', body: `<div class="config-section"><div class="config-label">Call Timeout</div><div class="config-field highlight">60 segundos</div></div><div class="config-section"><div class="config-label">Call Whisper</div><div class="config-field">Verification call for new lead</div></div><div class="config-section"><div class="config-label">Connect After Keypress</div><div class="config-field">Ativo (cliente precisa apertar 1)</div></div>` },
     'a5-1': { kind: 'Trigger', title: 'Ligação não atendida', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field">No Answer</div></div>` },
-    'a5-2': { kind: 'Action · Comunicação', title: 'Deixa voicemail', body: `<div class="config-section"><div class="config-label">Arquivo de áudio</div><div class="config-field highlight">vm_oferta_exclusiva.mp3</div></div><div class="config-section"><div class="config-label">Duração típica</div><div class="config-field">15-30 segundos</div></div><div class="config-section"><div class="config-label">Objetivo</div><div class="config-field">Não parecer spam, soar humano</div></div>` },
+    'a5-2': { kind: 'Action · Communication', title: 'Deixa voicemail', body: `<div class="config-section"><div class="config-label">Arquivo de áudio</div><div class="config-field highlight">vm_oferta_exclusiva.mp3</div></div><div class="config-section"><div class="config-label">Duração típica</div><div class="config-field">15-30 segundos</div></div><div class="config-section"><div class="config-label">Objetivo</div><div class="config-field">Não parecer spam, soar humano</div></div>` },
     'a6-1': { kind: 'Trigger', title: 'Comentou em post FB', body: `<div class="config-section"><div class="config-label">Post</div><div class="config-field">Promoção X</div></div>` },
-    'a6-2': { kind: 'Action · Comunicação', title: 'FB Messenger DM', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Olá! Sobre o que você comentou...</div></div><div class="config-section"><div class="config-label">⚠</div><div class="config-field">Janela 24h: só funciona se interagiu em 24h</div></div>` },
+    'a6-2': { kind: 'Action · Communication', title: 'FB Messenger DM', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Olá! Sobre o que você comentou...</div></div><div class="config-section"><div class="config-label">⚠</div><div class="config-field">Janela 24h: só funciona se interagiu em 24h</div></div>` },
     'a7-1': { kind: 'Trigger', title: 'Comentário com palavra-chave', body: `<div class="config-section"><div class="config-label">Palavra</div><div class="config-field highlight">EU QUERO</div></div>` },
-    'a7-2': { kind: 'Action · Comunicação', title: 'Resposta pública', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Olha sua DM 📩</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Outros veem e também comentam → viralização</div></div>` },
-    'a7-3': { kind: 'Action · Comunicação', title: 'DM automática', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Oi {{contact.first_name}}! Aqui o link da oferta: {{offer.url}}. Usa o cupom INSTA10 pra 10% off.</div></div>` },
+    'a7-2': { kind: 'Action · Communication', title: 'Resposta pública', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Olha sua DM 📩</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Outros veem e também comentam → viralização</div></div>` },
+    'a7-3': { kind: 'Action · Communication', title: 'DM automática', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Oi {{contact.first_name}}! Aqui o link da oferta: {{offer.url}}. Usa o cupom INSTA10 pra 10% off.</div></div>` },
     'a8-1': { kind: 'Trigger', title: 'Cliente cancelou', body: `` },
-    'a8-2': { kind: 'Action · Comunicação', title: 'Manual SMS (humano envia)', body: `<div class="config-section"><div class="config-label">Template pré-preenchido</div><div class="config-field highlight">Oi {{contact.first_name}}, soube que cancelou... podemos conversar?</div></div><div class="config-section"><div class="config-label">Atribuído</div><div class="config-field">Gerente CS (não time geral)</div></div><div class="config-section"><div class="config-label">Por quê manual</div><div class="config-field">Retenção exige toque humano, automático soa frio</div></div>` },
+    'a8-2': { kind: 'Action · Communication', title: 'Manual SMS (humano envia)', body: `<div class="config-section"><div class="config-label">Template pré-preenchido</div><div class="config-field highlight">Oi {{contact.first_name}}, soube que cancelou... podemos conversar?</div></div><div class="config-section"><div class="config-label">Atribuído</div><div class="config-field">Gerente CS (não time geral)</div></div><div class="config-section"><div class="config-label">Por quê manual</div><div class="config-field">Retenção exige toque humano, automático soa frio</div></div>` },
     'a9-1': { kind: 'Trigger', title: 'Proposta Enviada', body: `` },
-    'a9-2': { kind: 'Action · Temporização', title: 'Wait 3 dias', body: `<div class="config-section"><div class="config-label">Lógica</div><div class="config-field">Tempo razoável pra cliente ler proposta</div></div>` },
-    'a9-3': { kind: 'Action · Comunicação', title: 'Task de ligação', body: `<div class="config-section"><div class="config-label">Nome da task</div><div class="config-field highlight">Follow-up Proposta · 3d</div></div><div class="config-section"><div class="config-label">Aparece em</div><div class="config-field">Agenda do vendedor com link pra abrir opp</div></div>` },
+    'a9-2': { kind: 'Action · Wait', title: 'Wait 3 dias', body: `<div class="config-section"><div class="config-label">Lógica</div><div class="config-field">Tempo razoável pra cliente ler proposta</div></div>` },
+    'a9-3': { kind: 'Action · Communication', title: 'Task de ligação', body: `<div class="config-section"><div class="config-label">Nome da task</div><div class="config-field highlight">Follow-up Proposta · 3d</div></div><div class="config-section"><div class="config-label">Aparece em</div><div class="config-field">Agenda do vendedor com link pra abrir opp</div></div>` },
     'a10-1': { kind: 'Trigger', title: 'Form de emergência', body: `` },
-    'a10-2': { kind: 'Action · Comunicação', title: 'Notif interna crítica', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field highlight">SMS + App + Email</div></div><div class="config-section"><div class="config-label">Destinatário</div><div class="config-field">Usuário de plantão 24h</div></div><div class="config-section"><div class="config-label">SLA</div><div class="config-field">15 minutos de resposta</div></div>` },
+    'a10-2': { kind: 'Action · Communication', title: 'Notif interna crítica', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field highlight">SMS + App + Email</div></div><div class="config-section"><div class="config-label">Destinatário</div><div class="config-field">Usuário de plantão 24h</div></div><div class="config-section"><div class="config-label">SLA</div><div class="config-field">15 minutos de resposta</div></div>` },
     'a11-1': { kind: 'Trigger', title: 'Consulta concluída', body: `` },
-    'a11-2': { kind: 'Action · Temporização', title: 'Wait 3 dias', body: `<div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Cliente digere serviço + vê resultados antes de avaliar</div></div>` },
-    'a11-3': { kind: 'Action · Comunicação', title: 'Review Request', body: `<div class="config-section"><div class="config-label">Review Type</div><div class="config-field highlight">Email + WhatsApp</div></div><div class="config-section"><div class="config-label">Plataforma</div><div class="config-field">Google Reviews</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field">Oi {{contact.first_name}}, como foi sua experiência? Se tiver 30s, uma avaliação ajuda muita gente: {{review.link}}</div></div>` },
+    'a11-2': { kind: 'Action · Wait', title: 'Wait 3 dias', body: `<div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Cliente digere serviço + vê resultados antes de avaliar</div></div>` },
+    'a11-3': { kind: 'Action · Communication', title: 'Review Request', body: `<div class="config-section"><div class="config-label">Review Type</div><div class="config-field highlight">Email + WhatsApp</div></div><div class="config-section"><div class="config-label">Plataforma</div><div class="config-field">Google Reviews</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field">Oi {{contact.first_name}}, como foi sua experiência? Se tiver 30s, uma avaliação ajuda muita gente: {{review.link}}</div></div>` },
     'a12-1': { kind: 'Trigger', title: '24h antes da consulta', body: `` },
-    'a12-2': { kind: 'Action · Comunicação', title: 'WhatsApp Oficial (API Meta)', body: `<div class="config-section"><div class="config-label">Template aprovado</div><div class="config-field highlight">lembrete_consulta</div></div><div class="config-section"><div class="config-label">Variáveis</div><div class="config-field">{{appointment.date}}, {{appointment.time}}</div></div><div class="config-section"><div class="config-label">⚠ Obrigatório</div><div class="config-field">Template tem que ter sido aprovado pela Meta antes</div></div>` },
+    'a12-2': { kind: 'Action · Communication', title: 'WhatsApp Oficial (API Meta)', body: `<div class="config-section"><div class="config-label">Template aprovado</div><div class="config-field highlight">lembrete_consulta</div></div><div class="config-section"><div class="config-label">Variáveis</div><div class="config-field">{{appointment.date}}, {{appointment.time}}</div></div><div class="config-section"><div class="config-label">⚠ Obrigatório</div><div class="config-field">Template tem que ter sido aprovado pela Meta antes</div></div>` },
     'a13-1': { kind: 'Trigger', title: 'Cliente respondeu email', body: `` },
-    'a13-2': { kind: 'Action · Comunicação', title: 'AI responde por email', body: `<div class="config-section"><div class="config-label">Tom</div><div class="config-field highlight">Helpful + profissional</div></div><div class="config-section"><div class="config-label">Base de conhecimento</div><div class="config-field">FAQ + documentação</div></div><div class="config-section"><div class="config-label">Fallback</div><div class="config-field">Se AI não souber, cria task pra humano</div></div>` },
+    'a13-2': { kind: 'Action · Communication', title: 'AI responde por email', body: `<div class="config-section"><div class="config-label">Tom</div><div class="config-field highlight">Helpful + profissional</div></div><div class="config-section"><div class="config-label">Base de conhecimento</div><div class="config-field">FAQ + documentação</div></div><div class="config-section"><div class="config-label">Fallback</div><div class="config-field">Se AI não souber, cria task pra humano</div></div>` },
     'a14-1': { kind: 'Trigger', title: 'Lead entrou via SMS', body: `` },
-    'a14-2': { kind: 'Action · Comunicação', title: 'AI qualifica via SMS', body: `<div class="config-section"><div class="config-label">Prompt</div><div class="config-field highlight">Pergunte nome, empresa e qual o problema. Se cliente pedir humano, escale.</div></div><div class="config-section"><div class="config-label">Após qualificar</div><div class="config-field">Passa dados pra vendedor humano</div></div>` },
+    'a14-2': { kind: 'Action · Communication', title: 'AI qualifica via SMS', body: `<div class="config-section"><div class="config-label">Prompt</div><div class="config-field highlight">Pergunte nome, empresa e qual o problema. Se cliente pedir humano, escale.</div></div><div class="config-section"><div class="config-label">Após qualificar</div><div class="config-field">Passa dados pra vendedor humano</div></div>` },
     'a15-1': { kind: 'Trigger', title: 'Novo lead tagged', body: `` },
-    'a15-2': { kind: 'Action · Comunicação', title: 'Form via SMS', body: `<div class="config-section"><div class="config-label">Form</div><div class="config-field highlight">Qualificação 3 perguntas</div></div><div class="config-section"><div class="config-label">SMS</div><div class="config-field">Oi {{contact.first_name}}! 3 perguntas rápidas pra agilizar seu atendimento: {{form.url}}</div></div><div class="config-section"><div class="config-label">Taxa de conversão</div><div class="config-field">SMS > email em 3-5x</div></div>` },
+    'a15-2': { kind: 'Action · Communication', title: 'Form via SMS', body: `<div class="config-section"><div class="config-label">Form</div><div class="config-field highlight">Qualificação 3 perguntas</div></div><div class="config-section"><div class="config-label">SMS</div><div class="config-field">Oi {{contact.first_name}}! 3 perguntas rápidas pra agilizar seu atendimento: {{form.url}}</div></div><div class="config-section"><div class="config-label">Taxa de conversão</div><div class="config-field">SMS > email em 3-5x</div></div>` },
     'a16-1': { kind: 'Trigger', title: 'Trigger date · 3 meses após compra', body: `` },
-    'a16-2': { kind: 'Action · Comunicação', title: 'Survey NPS via SMS', body: `<div class="config-section"><div class="config-label">Survey</div><div class="config-field highlight">NPS Trimestral</div></div><div class="config-section"><div class="config-label">SMS</div><div class="config-field">{{contact.first_name}}, 30 segundos do seu tempo: {{survey.url}}</div></div>` },
+    'a16-2': { kind: 'Action · Communication', title: 'Survey NPS via SMS', body: `<div class="config-section"><div class="config-label">Survey</div><div class="config-field highlight">NPS Trimestral</div></div><div class="config-section"><div class="config-label">SMS</div><div class="config-field">{{contact.first_name}}, 30 segundos do seu tempo: {{survey.url}}</div></div>` },
     'a17-1': { kind: 'Trigger', title: '48h antes de consulta', body: `` },
-    'a17-2': { kind: 'Action · Comunicação', title: 'Voice AI faz ligação', body: `<div class="config-section"><div class="config-label">Script</div><div class="config-field highlight">Olá {{contact.first_name}}, a {{company}} lembrando: consulta em 48h. Você pode confirmar pressionando 1, ou cancelar pressionando 2.</div></div>` },
+    'a17-2': { kind: 'Action · Communication', title: 'Voice AI faz ligação', body: `<div class="config-section"><div class="config-label">Script</div><div class="config-field highlight">Olá {{contact.first_name}}, a {{company}} lembrando: consulta em 48h. Você pode confirmar pressionando 1, ou cancelar pressionando 2.</div></div>` },
     'a18-1': { kind: 'Trigger', title: 'Comentou "preço" no FB', body: `` },
-    'a18-2': { kind: 'Action · Comunicação', title: 'Resposta pública no post', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Oi {{contact.first_name}}! Acabei de te mandar DM com detalhes 📩</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Outros veem → social proof → mais DMs</div></div>` },
+    'a18-2': { kind: 'Action · Communication', title: 'Resposta pública no post', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Oi {{contact.first_name}}! Acabei de te mandar DM com detalhes 📩</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Outros veem → social proof → mais DMs</div></div>` },
     'a19-1': { kind: 'Trigger', title: 'Comentário EU QUERO', body: `<div class="config-section"><div class="config-label">Contém</div><div class="config-field highlight">EU QUERO</div></div>` },
-    'a19-2': { kind: 'Action · Comunicação', title: 'Reply pública', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">DM enviada! 🔥</div></div>` },
-    'a19-3': { kind: 'Action · Comunicação', title: 'DM direta', body: `<div class="config-section"><div class="config-label">Conteúdo</div><div class="config-field highlight" style="white-space: pre-wrap;">Oi {{contact.first_name}}! Link: {{offer.url}}
+    'a19-2': { kind: 'Action · Communication', title: 'Reply pública', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">DM enviada! 🔥</div></div>` },
+    'a19-3': { kind: 'Action · Communication', title: 'DM direta', body: `<div class="config-section"><div class="config-label">Conteúdo</div><div class="config-field highlight" style="white-space: pre-wrap;">Oi {{contact.first_name}}! Link: {{offer.url}}
 Cupom: INSTA20
 Válido 24h</div></div>` },
     'a20-1': { kind: 'Trigger', title: 'Lead virou Quente', body: `` },
     'a20-2': { kind: 'Action · Workflow AI', title: 'Gera email custom', body: `<div class="config-section"><div class="config-label">Prompt</div><div class="config-field highlight">Escreva um email personalizado pra {{contact.first_name}}, baseado nas tags {{contact.tags}}. Tom consultivo, máximo 5 linhas.</div></div><div class="config-section"><div class="config-label">Output</div><div class="config-field">{{ai.email_body}}</div></div>` },
-    'a20-3': { kind: 'Action · Comunicação', title: 'Envia email gerado', body: `<div class="config-section"><div class="config-label">Body</div><div class="config-field highlight">{{ai.email_body}}</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Cada lead recebe email único, não template frio</div></div>` },
+    'a20-3': { kind: 'Action · Communication', title: 'Envia email gerado', body: `<div class="config-section"><div class="config-label">Body</div><div class="config-field highlight">{{ai.email_body}}</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Cada lead recebe email único, não template frio</div></div>` },
     'a21-1': { kind: 'Trigger', title: 'Tag Suporte', body: `` },
-    'a21-2': { kind: 'Action · Comunicação', title: 'SMS via número específico', body: `<div class="config-section"><div class="config-label">Número</div><div class="config-field highlight">+55 11 3000-0001 (suporte)</div></div><div class="config-section"><div class="config-label">Por quê separar</div><div class="config-field">Cliente identifica número como suporte, não se mistura com vendas</div></div>` },
+    'a21-2': { kind: 'Action · Communication', title: 'SMS via número específico', body: `<div class="config-section"><div class="config-label">Número</div><div class="config-field highlight">+55 11 3000-0001 (suporte)</div></div><div class="config-section"><div class="config-label">Por quê separar</div><div class="config-field">Cliente identifica número como suporte, não se mistura com vendas</div></div>` },
     'a22-1': { kind: 'Trigger', title: 'Campanha de 10k SMS', body: `` },
-    'a22-2': { kind: 'Action · Comunicação', title: 'Distribuir entre 10 números', body: `<div class="config-section"><div class="config-label">Pool</div><div class="config-field highlight">10 números rotativos</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Distribui carga, evita bloqueio por operadora, aumenta entrega</div></div>` },
+    'a22-2': { kind: 'Action · Communication', title: 'Distribuir entre 10 números', body: `<div class="config-section"><div class="config-label">Pool</div><div class="config-field highlight">10 números rotativos</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Distribui carga, evita bloqueio por operadora, aumenta entrega</div></div>` },
     'a23-1': { kind: 'Trigger', title: 'Mensagem GMB', body: `` },
-    'a23-2': { kind: 'Action · Comunicação', title: 'Resposta via GMB', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Obrigado pelo contato! Funcionamos de seg-sex 9h-18h. Quer agendar? {{calendar.url}}</div></div>` },
+    'a23-2': { kind: 'Action · Communication', title: 'Resposta via GMB', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Obrigado pelo contato! Funcionamos de seg-sex 9h-18h. Quer agendar? {{calendar.url}}</div></div>` },
     'a24-1': { kind: 'Trigger', title: 'Pagamento falhou', body: `` },
-    'a24-2': { kind: 'Action · Comunicação', title: 'SMS via código curto', body: `<div class="config-section"><div class="config-label">Shortcode</div><div class="config-field highlight">40404</div></div><div class="config-section"><div class="config-label">Entrega</div><div class="config-field">Máxima — operadoras priorizam shortcodes</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field">⚠ Seu cartão expirou. Atualize aqui: {{billing.url}}</div></div>` },
+    'a24-2': { kind: 'Action · Communication', title: 'SMS via código curto', body: `<div class="config-section"><div class="config-label">Shortcode</div><div class="config-field highlight">40404</div></div><div class="config-section"><div class="config-label">Entrega</div><div class="config-field">Máxima — operadoras priorizam shortcodes</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field">⚠ Seu cartão expirou. Atualize aqui: {{billing.url}}</div></div>` },
     'a25-1': { kind: 'Trigger', title: 'Fatura paga', body: `` },
-    'a25-2': { kind: 'Action · Comunicação', title: 'Email com NF anexa', body: `<div class="config-section"><div class="config-label">Arquivo</div><div class="config-field highlight">NF-{{invoice.id}}.pdf</div></div><div class="config-section"><div class="config-label">Source</div><div class="config-field">URL pública gerada pelo sistema</div></div><div class="config-section"><div class="config-label">Email body</div><div class="config-field">Obrigado! Segue sua NF anexa.</div></div>` },
+    'a25-2': { kind: 'Action · Communication', title: 'Email com NF anexa', body: `<div class="config-section"><div class="config-label">Arquivo</div><div class="config-field highlight">NF-{{invoice.id}}.pdf</div></div><div class="config-section"><div class="config-label">Source</div><div class="config-field">URL pública gerada pelo sistema</div></div><div class="config-section"><div class="config-label">Email body</div><div class="config-field">Obrigado! Segue sua NF anexa.</div></div>` },
     'a1-1': { kind: 'Trigger · Contact Created', title: 'Novo Contato', body: `<div class="config-section"><div class="config-label">Filter · Has Tag</div><div class="config-field highlight">Lead Magnet — só quem baixou o material entra aqui</div></div>` },
     'a1-2': { kind: 'Action · Send Email', title: 'Enviar Email (parâmetros completos)', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Nome identificador no workflow. Deixa óbvio qual email é.</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field highlight">Nome do remetente no inbox. Pode usar {{user.first_name}} pra personalizar.</div></div><div class="config-section"><div class="config-label">From Email</div><div class="config-field highlight">Email de origem. Precisa estar autenticado no sub-account (DKIM/SPF).</div></div><div class="config-section"><div class="config-label">Reply-to Email</div><div class="config-field">Email pra onde respostas vão. Útil quando From é "marketing@" mas respostas vão pra "suporte@".</div></div><div class="config-section"><div class="config-label">CC</div><div class="config-field">Cópia. Não aparece nas stats de abertura/clique.</div></div><div class="config-section"><div class="config-label">BCC</div><div class="config-field">Cópia oculta. Mesmo tratamento de stats.</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field highlight">Assunto. Aceita {{contact.x}} e custom values. Evite spam words.</div></div><div class="config-section"><div class="config-label">Preview Text</div><div class="config-field">Texto que aparece no inbox antes de abrir. Primeiros 90 chars importantes.</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Dropdown de templates salvos na conta. Ou "blank" pra editor direto.</div></div><div class="config-section"><div class="config-label">Sync Edits to Template</div><div class="config-field highlight">ON = mudanças aqui afetam o template original (e vice-versa). OFF = local ao workflow.</div></div><div class="config-section"><div class="config-label">Email Body</div><div class="config-field">Editor drag-and-drop ou HTML custom. Aceita merge fields e trigger links.</div></div><div class="config-section"><div class="config-label">Attachments</div><div class="config-field">URLs públicas de PDFs, imagens. NÃO é upload local.</div></div><div class="config-section"><div class="config-label">Test Emails</div><div class="config-field">Campo pra digitar email de teste e clicar "Send Test Mail".</div></div><div class="config-section"><div class="config-label">UTM Parameters</div><div class="config-field">Adiciona parâmetros UTM a todos os links do email automaticamente.</div></div><div class="config-section"><div class="config-label">Tags on Actions</div><div class="config-field">Taggeia contato automaticamente ao abrir ou clicar.</div></div><div class="config-section"><div class="config-label">AI Generation</div><div class="config-field">Botão "Write with AI" que gera conteúdo baseado em descrição + tom.</div></div>` },
     'a1-3': { kind: 'Action · Wait', title: 'Temporização', body: `<div class="config-section"><div class="config-label">Action Name</div><div class="config-field highlight">Nome descritivo</div></div><div class="config-section"><div class="config-label">Wait Type</div><div class="config-field highlight">Duration (fixo) / Wait for Event / Wait until Date</div></div><div class="config-section"><div class="config-label">Duration</div><div class="config-field highlight">Minutes / Hours / Days / Weeks</div></div><div class="config-section"><div class="config-label">Wait Until Event</div><div class="config-field">Aguarda evento específico (ex.: email aberto) com timeout opcional</div></div><div class="config-section"><div class="config-label">Time Window</div><div class="config-field">Pode respeitar horário comercial da conta</div></div><div class="config-section"><div class="config-label">Skip Weekends</div><div class="config-field">Pula finais de semana</div></div>` },

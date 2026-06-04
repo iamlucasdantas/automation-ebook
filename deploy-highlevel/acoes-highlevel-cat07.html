@@ -812,6 +812,49 @@
     transform: translateY(12px) scale(0.96);
   }
 
+  .ghl-node:has(.ghl-node-icon.trigger) {
+    border-left: 3px solid var(--ghl-purple);
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.06) 0%, var(--ghl-surface) 60%);
+  }
+
+  .ghl-node-controls {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.18s;
+    z-index: 2;
+  }
+
+  .ghl-node:hover .ghl-node-controls,
+  .ghl-node.active .ghl-node-controls {
+    opacity: 1;
+  }
+
+  .ghl-node-control {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1;
+  }
+
+  .ghl-node-control:hover {
+    background: var(--ghl-accent);
+    color: white;
+    border-color: var(--ghl-accent);
+  }
+
   .ghl-node.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -908,7 +951,7 @@
 
   .ghl-connector {
     width: 2px;
-    height: 36px;
+    height: 48px;
     background: var(--ghl-border);
     position: relative;
     opacity: 0;
@@ -916,6 +959,37 @@
   }
 
   .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ghl-bg);
+    border: 1.5px dashed var(--ghl-text-dim);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .ghl-connector:hover::before {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-accent);
+    border-style: solid;
+    background: var(--ghl-surface);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
   .ghl-connector::after {
     content: '';
@@ -2467,6 +2541,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a1-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2479,11 +2554,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">💼</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Create Opportunity</div>
             </div>
           </div>
@@ -2604,6 +2680,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a2-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2616,11 +2693,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">✎</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Update Opportunity</div>
             </div>
           </div>
@@ -2738,6 +2816,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a3-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2750,11 +2829,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">➡</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Move Pipeline Stage</div>
             </div>
           </div>
@@ -2872,6 +2952,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2884,11 +2965,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">🔀</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Move Between Pipelines</div>
             </div>
           </div>
@@ -3007,6 +3089,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a5-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3019,11 +3102,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">🏷</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Update Status</div>
             </div>
           </div>
@@ -3143,6 +3227,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a6-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3155,11 +3240,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">🗑</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Delete Opportunity</div>
             </div>
           </div>
@@ -3275,6 +3361,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3287,11 +3374,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">👤</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Assign Owner</div>
             </div>
           </div>
@@ -3407,6 +3495,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a8-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3419,11 +3508,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a8-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">#</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
@@ -3542,6 +3632,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a9-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3554,11 +3645,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a9-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-pipeline">#</div>
             <div>
-              <div class="ghl-node-type">Action · Oportunidade</div>
+              <div class="ghl-node-type">Action · Opportunity</div>
               <div class="ghl-node-title">Remove Tag</div>
             </div>
           </div>
@@ -3737,23 +3829,23 @@
 
   const configData = {
     'a1-1': { kind: 'Trigger', title: 'Form de demo', body: `` },
-    'a1-2': { kind: 'Action · Oportunidade', title: 'Create Opp', body: `<div class="config-section"><div class="config-label">Pipeline</div><div class="config-field highlight">Vendas B2B</div></div><div class="config-section"><div class="config-label">Estágio inicial</div><div class="config-field">Demo Agendada</div></div><div class="config-section"><div class="config-label">Valor</div><div class="config-field">{{form.valor_estimado}}</div></div><div class="config-section"><div class="config-label">Atribuir</div><div class="config-field">Round-robin AE</div></div>` },
+    'a1-2': { kind: 'Action · Opportunity', title: 'Create Opp', body: `<div class="config-section"><div class="config-label">Pipeline</div><div class="config-field highlight">Vendas B2B</div></div><div class="config-section"><div class="config-label">Estágio inicial</div><div class="config-field">Demo Agendada</div></div><div class="config-section"><div class="config-label">Valor</div><div class="config-field">{{form.valor_estimado}}</div></div><div class="config-section"><div class="config-label">Atribuir</div><div class="config-field">Round-robin AE</div></div>` },
     'a2-1': { kind: 'Trigger', title: 'Demo realizada', body: `` },
-    'a2-2': { kind: 'Action · Oportunidade', title: 'Avança estágio', body: `<div class="config-section"><div class="config-label">Estágio</div><div class="config-field highlight">Proposta</div></div><div class="config-section"><div class="config-label">Adiciona tag</div><div class="config-field">demo-realizada</div></div><div class="config-section"><div class="config-label">Update campos</div><div class="config-field">Data demo, notas</div></div>` },
+    'a2-2': { kind: 'Action · Opportunity', title: 'Avança estágio', body: `<div class="config-section"><div class="config-label">Estágio</div><div class="config-field highlight">Proposta</div></div><div class="config-section"><div class="config-label">Adiciona tag</div><div class="config-field">demo-realizada</div></div><div class="config-section"><div class="config-label">Update campos</div><div class="config-field">Data demo, notas</div></div>` },
     'a3-1': { kind: 'Trigger', title: 'Proposta enviada', body: `` },
-    'a3-2': { kind: 'Action · Oportunidade', title: 'Move estágio', body: `<div class="config-section"><div class="config-label">De</div><div class="config-field">Proposta</div></div><div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">Aguardando Resposta</div></div>` },
+    'a3-2': { kind: 'Action · Opportunity', title: 'Move estágio', body: `<div class="config-section"><div class="config-label">De</div><div class="config-field">Proposta</div></div><div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">Aguardando Resposta</div></div>` },
     'a4-1': { kind: 'Trigger', title: 'Venda fechada', body: `` },
-    'a4-2': { kind: 'Action · Oportunidade', title: 'Muda pipeline', body: `<div class="config-section"><div class="config-label">Pipeline destino</div><div class="config-field highlight">Onboarding</div></div><div class="config-section"><div class="config-label">Estágio destino</div><div class="config-field">Kick-off</div></div>` },
+    'a4-2': { kind: 'Action · Opportunity', title: 'Muda pipeline', body: `<div class="config-section"><div class="config-label">Pipeline destino</div><div class="config-field highlight">Onboarding</div></div><div class="config-section"><div class="config-label">Estágio destino</div><div class="config-field">Kick-off</div></div>` },
     'a5-1': { kind: 'Trigger', title: 'Opp sem atividade 60d', body: `` },
-    'a5-2': { kind: 'Action · Oportunidade', title: 'Marca Abandoned', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight">Abandoned</div></div><div class="config-section"><div class="config-label">Lost Reason</div><div class="config-field">Sem resposta 60+ dias</div></div>` },
+    'a5-2': { kind: 'Action · Opportunity', title: 'Marca Abandoned', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight">Abandoned</div></div><div class="config-section"><div class="config-label">Lost Reason</div><div class="config-field">Sem resposta 60+ dias</div></div>` },
     'a6-1': { kind: 'Trigger', title: 'Admin confirma duplicata', body: `` },
-    'a6-2': { kind: 'Action · Oportunidade', title: 'Delete Opp', body: `<div class="config-section"><div class="config-label">⚠</div><div class="config-field highlight">Irreversível</div></div>` },
+    'a6-2': { kind: 'Action · Opportunity', title: 'Delete Opp', body: `<div class="config-section"><div class="config-label">⚠</div><div class="config-field highlight">Irreversível</div></div>` },
     'a7-1': { kind: 'Trigger', title: 'Nova opp', body: `` },
-    'a7-2': { kind: 'Action · Oportunidade', title: 'Round-robin', body: `<div class="config-section"><div class="config-label">Split</div><div class="config-field highlight">Equally</div></div><div class="config-section"><div class="config-label">Time</div><div class="config-field">AE 1, 2, 3, 4</div></div>` },
+    'a7-2': { kind: 'Action · Opportunity', title: 'Round-robin', body: `<div class="config-section"><div class="config-label">Split</div><div class="config-field highlight">Equally</div></div><div class="config-section"><div class="config-label">Time</div><div class="config-field">AE 1, 2, 3, 4</div></div>` },
     'a8-1': { kind: 'Trigger', title: 'Opp high-ticket', body: `` },
-    'a8-2': { kind: 'Action · Oportunidade', title: 'Tag Enterprise', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Enterprise</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Smart list, relatórios</div></div>` },
+    'a8-2': { kind: 'Action · Opportunity', title: 'Tag Enterprise', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Enterprise</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Smart list, relatórios</div></div>` },
     'a9-1': { kind: 'Trigger', title: 'Venda fechada', body: `` },
-    'a9-2': { kind: 'Action · Oportunidade', title: 'Remove tag antiga', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">em-negociacao</div></div>` }
+    'a9-2': { kind: 'Action · Opportunity', title: 'Remove tag antiga', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">em-negociacao</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

@@ -812,6 +812,49 @@
     transform: translateY(12px) scale(0.96);
   }
 
+  .ghl-node:has(.ghl-node-icon.trigger) {
+    border-left: 3px solid var(--ghl-purple);
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.06) 0%, var(--ghl-surface) 60%);
+  }
+
+  .ghl-node-controls {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.18s;
+    z-index: 2;
+  }
+
+  .ghl-node:hover .ghl-node-controls,
+  .ghl-node.active .ghl-node-controls {
+    opacity: 1;
+  }
+
+  .ghl-node-control {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1;
+  }
+
+  .ghl-node-control:hover {
+    background: var(--ghl-accent);
+    color: white;
+    border-color: var(--ghl-accent);
+  }
+
   .ghl-node.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -908,7 +951,7 @@
 
   .ghl-connector {
     width: 2px;
-    height: 36px;
+    height: 48px;
     background: var(--ghl-border);
     position: relative;
     opacity: 0;
@@ -916,6 +959,37 @@
   }
 
   .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ghl-bg);
+    border: 1.5px dashed var(--ghl-text-dim);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .ghl-connector:hover::before {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-accent);
+    border-style: solid;
+    background: var(--ghl-surface);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 
   .ghl-connector::after {
     content: '';
@@ -2463,6 +2537,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a1-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2475,6 +2550,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💰</div>
@@ -2487,6 +2563,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-wait">⏱</div>
@@ -2499,6 +2576,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-condition">?</div>
@@ -2564,6 +2642,7 @@
 </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💰</div>
@@ -2650,6 +2729,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a2-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2662,6 +2742,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">💳</div>
@@ -2784,6 +2865,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a3-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2796,6 +2878,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">✓</div>
@@ -2808,11 +2891,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Comunicação</div>
+              <div class="ghl-node-type">Action · Communication</div>
               <div class="ghl-node-title">Send Confirmação</div>
             </div>
           </div>
@@ -2930,6 +3014,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -2942,6 +3027,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">↩</div>
@@ -2954,11 +3040,12 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">#</div>
             <div>
-              <div class="ghl-node-type">Action · Contatos</div>
+              <div class="ghl-node-type">Action · Contacts</div>
               <div class="ghl-node-title">Add Tag Ex-Cliente</div>
             </div>
           </div>
@@ -3079,6 +3166,7 @@
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
         
         <div class="ghl-node" data-node-id="a5-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
@@ -3091,6 +3179,7 @@
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">❌</div>
@@ -3281,10 +3370,10 @@
     'a2-2': { kind: 'Action · Pagamentos', title: 'Link de pagamento', body: `<div class="config-section"><div class="config-label">Valor</div><div class="config-field highlight">R$ 197</div></div><div class="config-section"><div class="config-label">Descrição</div><div class="config-field">Upsell Módulo Avançado</div></div><div class="config-section"><div class="config-label">Canal de envio</div><div class="config-field">WhatsApp (conversão maior)</div></div>` },
     'a3-1': { kind: 'Trigger', title: 'Admin confirma PIX', body: `` },
     'a3-2': { kind: 'Action · Pagamentos', title: 'Marca como Paid', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight">Paid</div></div><div class="config-section"><div class="config-label">Método</div><div class="config-field">PIX externo</div></div>` },
-    'a3-3': { kind: 'Action · Comunicação', title: 'Confirma ao cliente', body: `` },
+    'a3-3': { kind: 'Action · Communication', title: 'Confirma ao cliente', body: `` },
     'a4-1': { kind: 'Trigger', title: 'Reembolso solicitado em janela de garantia', body: `` },
     'a4-2': { kind: 'Action · Pagamentos', title: 'Reembolso total', body: `<div class="config-section"><div class="config-label">Valor</div><div class="config-field highlight">Total</div></div><div class="config-section"><div class="config-label">Gateway</div><div class="config-field">Stripe</div></div><div class="config-section"><div class="config-label">⚠</div><div class="config-field">Ação financeira real</div></div>` },
-    'a4-3': { kind: 'Action · Contatos', title: 'Tag ex-cliente', body: `` },
+    'a4-3': { kind: 'Action · Contacts', title: 'Tag ex-cliente', body: `` },
     'a5-1': { kind: 'Trigger', title: 'Cartão recusou 3x', body: `` },
     'a5-2': { kind: 'Action · Pagamentos', title: 'Cancel graceful', body: `<div class="config-section"><div class="config-label">Quando</div><div class="config-field highlight">Ao fim do período pago</div></div><div class="config-section"><div class="config-label">Mantém</div><div class="config-field">Histórico do cliente</div></div>` },
     'a1-1': { kind: 'Trigger · Documents & Contracts', title: 'Contrato assinado', body: `<div class="config-section"><div class="config-label">Filter · Status</div><div class="config-field highlight">Sent / Viewed / Signed/Accepted / Completed / Declined</div></div><div class="config-section"><div class="config-label">Filter · Template</div><div class="config-field highlight">Qual template de contrato específico</div></div><div class="config-section"><div class="config-label">Filter · Recipient Type</div><div class="config-field highlight">Contact (cliente) ou Business User (interno)</div></div><div class="config-section"><div class="config-label">Filter · Value</div><div class="config-field highlight">Valor monetário do contrato (Greater than, Equals, etc.)</div></div>` },
