@@ -3042,17 +3042,8 @@
 </div>
 <script>
   const configData = {
-    'g1-1': { kind: 'Trigger', title: 'Abandoned Cart', body: `<div class="config-section"><div class="config-label">Tempo</div><div class="config-field">30 minutos</div></div><div class="config-section"><div class="config-label">Valor</div><div class="config-field">> $100</div></div>` },
-    'g1-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Assunto</div><div class="config-field">Você esqueceu algo!</div></div><div class="config-section"><div class="config-label">Desconto</div><div class="config-field">DESCONTO10</div></div>` },
-    'g1-3': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field">24 horas</div></div>` },
-    'g1-4': { kind: 'Action · Communication', title: 'Send Email (Urgência)', body: `<div class="config-section"><div class="config-label">Assunto</div><div class="config-field">Última chance - 15% off</div></div>` },
-    'g2-1': { kind: 'Trigger', title: 'Compra Shopify', body: `` },
-    'g2-2': { kind: 'Action · Communication', title: 'Agradecimento', body: `` },
-    'g2-3': { kind: 'Action · Contacts', title: 'Tag de comprador', body: `` },
-    'g2-4': { kind: 'Action · Marketing', title: 'Add audience', body: `<div class="config-section"><div class="config-label">Audience</div><div class="config-field highlight">Compradores</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Lookalike pra novas campanhas</div></div>` },
-    'g3-1': { kind: 'Trigger', title: 'Pedido entregue', body: `` },
-    'g3-2': { kind: 'Action · Wait', title: 'Wait 7 dias', body: `<div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Cliente usa produto antes</div></div>` },
-    'g3-3': { kind: 'Action · Communication', title: 'Pedido de review', body: `<div class="config-section"><div class="config-label">Plataforma</div><div class="config-field highlight">Google</div></div>` }
+    'g1-1': { kind: 'Trigger', title: 'Abandoned Cart', body: `<div class="config-section"><div class="config-label">Tempo</div><div class="config-field highlight">30 minutos</div></div>` },
+    'g1-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Assunto</div><div class="config-field highlight">Você esqueceu algo!</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

@@ -3443,21 +3443,8 @@
   });
 
   const configData = {
-    'a1-1': { kind: 'Trigger', title: 'Form de afiliação', body: `` },
-    'a1-2': { kind: 'Action · Afiliados', title: 'Cria afiliado', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight">Ativo</div></div><div class="config-section"><div class="config-label">Gera link único</div><div class="config-field">{{affiliate.link}}</div></div>` },
-    'a1-3': { kind: 'Action · Communication', title: 'Kit boas-vindas', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Link + banners + guia</div></div>` },
-    'a2-1': { kind: 'Trigger', title: 'Afiliado top', body: `` },
-    'a2-2': { kind: 'Action · Afiliados', title: 'Inscreve em campanha VIP', body: `<div class="config-section"><div class="config-label">Campanha</div><div class="config-field highlight">Lançamento Q2 · Comissão 50%</div></div><div class="config-section"><div class="config-label">Acesso</div><div class="config-field">Materiais exclusivos</div></div>` },
-    'a3-1': { kind: 'Trigger', title: 'Fim da BF', body: `` },
-    'a3-2': { kind: 'Action · Afiliados', title: 'Remove todos', body: `<div class="config-section"><div class="config-label">Campanha</div><div class="config-field highlight">BF 2026</div></div>` },
-    'a4-1': { kind: 'Trigger', title: 'Comissão pendente 30d', body: `` },
-    'a4-2': { kind: 'Action · If/Else', title: 'Confere sem refund', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">order.refunded = false</div></div>` },
-    'a4-3': { kind: 'Action · Afiliados', title: 'Aprova comissão', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight">Approved</div></div>` },
-    'a5-1': { kind: 'Trigger', title: 'Dia 10 do mês', body: `` },
-    'a5-2': { kind: 'Action · If/Else', title: 'Threshold R$ 100', body: `` },
-    'a5-3': { kind: 'Action · Afiliados', title: 'Paga via PIX', body: `<div class="config-section"><div class="config-label">Método</div><div class="config-field highlight">PIX</div></div><div class="config-section"><div class="config-label">Chave</div><div class="config-field">{{affiliate.pix}}</div></div><div class="config-section"><div class="config-label">⚠</div><div class="config-field">Movimentação real</div></div>` },
-    'a6-1': { kind: 'Trigger', title: '+10 vendas no mês', body: `` },
-    'a6-2': { kind: 'Action · Afiliados', title: 'Atualiza tier', body: `<div class="config-section"><div class="config-label">Campo</div><div class="config-field">tier</div></div><div class="config-section"><div class="config-label">Valor</div><div class="config-field highlight">Gold</div></div><div class="config-section"><div class="config-label">Benefícios</div><div class="config-field">Comissão maior, suporte prioritário</div></div>` }
+    'a5-3': { kind: 'Action · Afiliados', title: 'Pay Commission', body: `<div class="config-section"><div class="config-label">Método</div><div class="config-field highlight">PIX</div></div>` },
+    'a6-2': { kind: 'Action · Afiliados', title: 'Update Custom Field', body: `<div class="config-section"><div class="config-label">Campo</div><div class="config-field">tier</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

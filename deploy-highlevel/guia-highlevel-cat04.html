@@ -4097,18 +4097,21 @@
 
 <script>
   const configData = {
-    // ===== Gatilho 01 =====
-    'g1-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Opportunity Created',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Pipeline</div>
-          <div class="config-field dropdown highlight">Vendas Internas</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Valor do Lead</div>
-          <div class="config-field dropdown highlight">Greater than R$ 50.000</div>` }
+    'g1-1': { kind: 'Trigger', title: 'Opportunity Created', body: `<div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Vendas Internas</div></div>` },
+    'g1-2': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Canais</div><div class="config-field">SMS + Email</div></div>` },
+    'g1-4': { kind: 'Action · Workflow', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight dropdown">Ligar em 1h — High Ticket</div></div>` },
+    'g2-3': { kind: 'Action · Communication', title: 'Outbound Webhook (Slack)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field highlight">#vendas-alertas</div></div>` },
+    'g3-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Status Mudou', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Opp Status Change Handler</div></div><div class="config-section"><div class="config-label">Filter · Pipeline</div><div class="config-field dropdown">Vendas Principal</div></div><div class="config-section"><div class="config-label">Filter · In Pipeline Stage</div><div class="config-field dropdown">Won, Lost, Abandoned</div></div><div class="config-section"><div class="config-label">Filter · Opportunity Value</div><div class="config-field">Greater than 5000</div></div>` },
+    'g3-2': { kind: 'Action · If/Else', title: 'Won ou Lost?', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Roteamento por novo status</div></div><div class="config-section"><div class="config-label">Branch 1</div><div class="config-field">Won → celebração</div></div><div class="config-section"><div class="config-label">Branch 1 · Condition</div><div class="config-field">opportunity.status Equals &quot;Won&quot;</div></div><div class="config-section"><div class="config-label">Branch 2</div><div class="config-field">Lost → resgate</div></div>` },
+    'g3-3': { kind: 'Action · Webhook', title: 'Alerta Won', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Celebrar venda no Slack</div></div><div class="config-section"><div class="config-label">Webhook URL</div><div class="config-field">hooks.slack.com/services/XXX/YYY/ZZZ</div></div><div class="config-section"><div class="config-label">Channel</div><div class="config-field">#vendas-vitorias</div></div>` },
+    'g3-4': { kind: 'Action · Send Email', title: 'Resgate Lost', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email de resgate pós-perda</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">{{user.first_name}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, podemos conversar?</div></div>` },
+    'g3-2': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">Financeiro</div></div>` },
+    'g3-3': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">{{contact.email}}</div></div>` },
+    'g3-4': { kind: 'Action · Opportunity', title: 'Add to Opportunity', body: `<div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field highlight dropdown">Onboarding</div></div>` },
+    'g4-1': { kind: 'Trigger', title: 'Pipeline State Changed', body: `<div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Vendas Internas</div></div>` },
+    'g4-2': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">Gerente + Dono</div></div>` },
+    'g4-3': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field highlight">3 dias</div></div>` },
+    'g4-4': { kind: 'Action · Workflow', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight">Cobrar resposta da negociação</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

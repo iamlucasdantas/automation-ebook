@@ -6695,15 +6695,35 @@
 <script>
   // ========== BANCO DE DADOS DE CONFIGURAÇÕES ==========
   const configData = {
-    // ===== Gatilho 01 — Inbound Webhook =====
-    // ===== Gatilho 02 — Call Status =====
-    'g2-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Call Status',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Direção da Ligação</div>
-          <div class="config-field dropdown highlight">Incoming (Recebida)</div>` }
+    'g1-1': { kind: 'Trigger · Form Submitted', title: 'Formulário Enviado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Qualificação Lead Form</div></div><div class="config-section"><div class="config-label">Filter · Form Is</div><div class="config-field">Form Qualificação B2B</div></div>` },
+    'g1-2': { kind: 'Action · Add Contact Tag', title: 'Tag Origem', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tag Lead Form B2B</div></div>` },
+    'g1-3': { kind: 'Action · If/Else', title: 'Segmenta por Empresa', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Empresa tem &gt;50 funcionários?</div></div><div class="config-section"><div class="config-label">Branch 1 · Name</div><div class="config-field">Enterprise</div></div><div class="config-section"><div class="config-label">Branch 1 · Condition</div><div class="config-field">custom.funcionarios Greater than 50</div></div>` },
+    'g1-4': { kind: 'Action · Assign to User', title: 'Roteamento', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Enterprise → AE Senior</div></div><div class="config-section"><div class="config-label">Users *</div><div class="config-field">AE Senior Team (2 pessoas)</div></div>` },
+    'g1-2': { kind: 'Action · Contact', title: 'Find Contact', body: `<div class="config-section"><div class="config-label">Busca</div><div class="config-field">Email: {{trigger.email}}</div></div>` },
+    'g1-4': { kind: 'Action · Opportunity', title: 'Create Opportunity', body: `<div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Vendas Hotmart</div></div>` },
+    'g2-1': { kind: 'Trigger', title: 'Call Status', body: `<div class="config-section"><div class="config-label">Direção</div><div class="config-field highlight">Incoming (Recebida)</div></div>` },
+    'g2-2': { kind: 'Action · Communication', title: 'Send SMS', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">{{contact.phone}}</div></div>` },
+    'g2-3': { kind: 'Action · Workflow', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight">Retornar ligação de {{contact.first_name}}</div></div>` },
+    'g3-1': { kind: 'Trigger', title: 'Email Events', body: `<div class="config-section"><div class="config-label">Evento</div><div class="config-field highlight">Clicked</div></div>` },
+    'g3-2': { kind: 'Action · Opportunity', title: 'Create Opportunity', body: `<div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Black Friday</div></div>` },
+    'g3-3': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">Email + SMS</div></div>` },
+    'g4-1': { kind: 'Trigger', title: 'Customer Replied', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field highlight">Instagram DM</div></div>` },
+    'g4-2': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field">12 segundos</div></div>` },
+    'g4-3': { kind: 'Action · Communication', title: 'Send Instagram Reply', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">{{contact.first_name}}</div></div>` },
+    'g5-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field">Confirmação Webinar</div></div>` },
+    'g5-3': { kind: 'Action · Opportunity', title: 'Create Opportunity', body: `<div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Webinar · Funil Venda</div></div>` },
+    'g6-2': { kind: 'Action · If/Else', title: 'If/Else', body: `<div class="config-section"><div class="config-label">NPS >= 9</div><div class="config-field highlight">Promotor</div></div>` },
+    'g6-3': { kind: 'Action · Communication', title: 'Review Request', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field highlight">Email + WhatsApp</div></div>` },
+    'g6-4': { kind: 'Action · Workflow', title: 'Create Task (CS)', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight">Resgatar cliente detrator</div></div>` },
+    'g7-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Input</div><div class="config-field highlight">respostas do quiz</div></div>` },
+    'g7-3': { kind: 'Action · Contact', title: 'Update Contact Field', body: `<div class="config-section"><div class="config-label">Campo</div><div class="config-field highlight">perfil_investidor</div></div>` },
+    'g8-4': { kind: 'Action · Workflow', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight dropdown">Novo lead Meta — ligar em 15min</div></div>` },
+    'g10-2': { kind: 'Action · Workflow', title: 'Create Task (AE)', body: `<div class="config-section"><div class="config-label">Atribuir</div><div class="config-field highlight">Account Executive Senior</div></div>` },
+    'g11-3': { kind: 'Action · Contact', title: 'Modify Engagement Score', body: `<div class="config-section"><div class="config-label">Ação</div><div class="config-field highlight">Adicionar</div></div>` },
+    'g12-1': { kind: 'Trigger', title: 'Vídeo Assistido em Funil', body: `<div class="config-section"><div class="config-label">Vídeo</div><div class="config-field">VSL Produto Principal</div></div>` },
+    'g13-1': { kind: 'Trigger', title: 'Visualização de Página', body: `<div class="config-section"><div class="config-label">URL *</div><div class="config-field highlight">/precos</div></div>` },
+    'g16-1': { kind: 'Trigger', title: 'Nova Avaliação Recebida', body: `<div class="config-section"><div class="config-label">Plataforma</div><div class="config-field highlight">Google Reviews</div></div>` },
+    'g17-4': { kind: 'Action · If/Else', title: 'If/Else', body: `<div class="config-section"><div class="config-label">Quente</div><div class="config-field dropdown">Vai pra SDR</div></div><div class="config-section"><div class="config-label">Morno</div><div class="config-field">Nurture</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

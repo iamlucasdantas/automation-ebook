@@ -3158,7 +3158,11 @@
 
 <script>
   const configData = {
-    'g1-1': { kind: 'Trigger · Gatilho', title: 'Affiliate Created', body: `<div class="config-section"><div class="config-label">Monitorar</div><div class="config-field dropdown highlight">Todos os afiliados</div>` }
+    'g1-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Boas-vindas Afiliado</div></div>` },
+    'g2-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Kit de Vendas Afiliado</div></div>` },
+    'g3-2': { kind: 'Action · Communication', title: 'Send Email (Afiliado)', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">{{affiliate.email}}</div></div>` },
+    'g3-3': { kind: 'Action · Workflow', title: 'Create Task (CS)', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight">Acompanhar novo cliente vindo de afiliado</div></div>` },
+    'g4-2': { kind: 'Action · Communication', title: 'Send WhatsApp', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">{{affiliate.phone}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

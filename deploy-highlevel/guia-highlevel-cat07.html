@@ -4717,39 +4717,11 @@
 </div>
 <script>
   const configData = {
-    'g1-1': { kind: 'Trigger', title: 'Invoice', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field">Sent (Enviada)</div></div>` },
-    'g1-2': { kind: 'Action · Wait', title: 'Set Event Date', body: `<div class="config-section"><div class="config-label">Campo</div><div class="config-field">Data de Vencimento</div></div>` },
-    'g1-3': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Quando</div><div class="config-field">3 dias antes do evento</div></div>` },
-    'g1-4': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Assunto</div><div class="config-field">Sua cobrança vence em 3 dias</div></div><div class="config-section"><div class="config-label">Inclui</div><div class="config-field">Link pagamento</div></div>` },
-    'g2-1': { kind: 'Trigger', title: 'Payment Received', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field">Failed</div></div><div class="config-section"><div class="config-label">Origem</div><div class="config-field">Membership</div></div>` },
-    'g2-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field">Pagamento Falhou - Urgente</div></div><div class="config-section"><div class="config-label">Inclui</div><div class="config-field">Link atualizar cartão</div></div>` },
-    'g2-3': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">Equipe CS</div></div><div class="config-section"><div class="config-label">Ação</div><div class="config-field">Contatar em 24h</div></div>` },
-    'g2-4': { kind: 'Action · Contact', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Pagamento Falho · Assinatura</div></div>` },
-    'g3-1': { kind: 'Trigger', title: 'Order Form Submitted', body: `<div class="config-section"><div class="config-label">Form</div><div class="config-field highlight">Checkout Principal</div></div><div class="config-section"><div class="config-label">Momento</div><div class="config-field">Cliente clicou "comprar" mas pode ainda não ter pago</div></div>` },
-    'g3-2': { kind: 'Action · Opportunity', title: 'Cria opp', body: `<div class="config-section"><div class="config-label">Estágio</div><div class="config-field highlight">Aguardando Pagamento</div></div>` },
-    'g3-3': { kind: 'Action · Communication', title: 'Email de confirmação', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Pedido recebido, aguardando pagamento</div></div>` },
-    'g4-1': { kind: 'Trigger', title: 'Ordem submetida', body: `<div class="config-section"><div class="config-label">Significado</div><div class="config-field highlight">Cliente completou form de compra</div></div>` },
-    'g4-2': { kind: 'Action · Wait', title: 'Wait 30min', body: `<div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Dá tempo pra processar pagamento</div></div>` },
-    'g4-3': { kind: 'Action · If/Else', title: 'Verifica pagamento', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">order.status != paid</div></div>` },
-    'g4-4': { kind: 'Action · Communication', title: 'Email de recuperação', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Notamos que não finalizou. Link pra pagar</div></div>` },
-    'g5-1': { kind: 'Trigger', title: 'Contrato assinado', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field highlight">Contrato</div></div>` },
-    'g5-2': { kind: 'Action · Pagamentos', title: 'Cria cobrança', body: `<div class="config-section"><div class="config-label">Valor</div><div class="config-field highlight">{{contract.value}}</div></div>` },
-    'g5-3': { kind: 'Action · Communication', title: 'Boas-vindas formal', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Cliente novo</div></div>` },
-    'g6-1': { kind: 'Trigger', title: 'Evento de subscription', body: `<div class="config-section"><div class="config-label">Eventos</div><div class="config-field highlight">Created/Renewal/Canceled</div></div>` },
-    'g6-2': { kind: 'Action · Communication', title: 'Agradecimento', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Renovação confirmada, obrigado!</div></div>` },
-    'g6-3': { kind: 'Action · Contacts', title: 'Score lealdade', body: `<div class="config-section"><div class="config-label">Pontos</div><div class="config-field highlight">+20</div></div><div class="config-section"><div class="config-label">Racional</div><div class="config-field">Renovação = cliente fiel</div></div>` },
-    'g7-1': { kind: 'Trigger', title: 'Reembolso aprovado', body: `` },
-    'g7-2': { kind: 'Action · Cursos', title: 'Remove acesso', body: `` },
-    'g7-3': { kind: 'Action · Contacts', title: 'Tag ex-cliente', body: `` },
-    'g7-4': { kind: 'Action · Communication', title: 'Email pedindo feedback', body: `<div class="config-section"><div class="config-label">Objetivo</div><div class="config-field highlight">Entender motivo do refund pra melhorar</div></div>` },
-    'g8-1': { kind: 'Trigger', title: 'Cupom aplicado', body: `<div class="config-section"><div class="config-label">Código</div><div class="config-field highlight">INSTA10</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Rastrear canal de origem</div></div>` },
-    'g8-2': { kind: 'Action · Contacts', title: 'Tag origem', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Veio via · Instagram</div></div>` },
-    'g8-3': { kind: 'Action · Webhook', title: 'Log no Sheets', body: `<div class="config-section"><div class="config-label">Planilha</div><div class="config-field highlight">Performance Cupons</div></div>` },
-    'g9-1': { kind: 'Trigger', title: 'Cupom esgotado', body: `` },
-    'g9-2': { kind: 'Action · Communication', title: 'Alerta marketing', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field highlight">#marketing</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field">Cupom X atingiu limite, precisa novo</div></div>` },
-    'g9-3': { kind: 'Action · If/Else', title: 'Rotaciona cupom', body: `<div class="config-section"><div class="config-label">Custom Value</div><div class="config-field highlight">cupom_ativo</div></div>` },
-    'g10-1': { kind: 'Trigger', title: 'Cupom expirou', body: `` },
-    'g10-2': { kind: 'Action · Communication', title: 'Email nova oferta', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Cupom X expirou, mas temos Y!</div></div>` }
+    'g1-4': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Assunto</div><div class="config-field highlight">Sua cobrança vence em 3 dias</div></div>` },
+    'g2-1': { kind: 'Trigger', title: 'Payment Received', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight dropdown">Failed</div></div>` },
+    'g2-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Pagamento Falhou - Urgente</div></div>` },
+    'g2-3': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">Equipe CS</div></div>` },
+    'g9-3': { kind: 'Action · If/Else', title: 'Update Custom Value', body: `<div class="config-section"><div class="config-label">Variável</div><div class="config-field highlight">cupom_ativo</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

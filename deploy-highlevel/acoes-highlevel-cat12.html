@@ -3316,18 +3316,7 @@
   });
 
   const configData = {
-    'a1-1': { kind: 'Trigger', title: 'Cliente liga', body: `` },
-    'a1-2': { kind: 'Action · IVR', title: 'TTS ou áudio', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Olá, bem-vindo à empresa X. Sua ligação é importante...</div></div><div class="config-section"><div class="config-label">Voz</div><div class="config-field">PT-BR feminina</div></div>` },
-    'a2-1': { kind: 'Trigger', title: 'Após TTS inicial', body: `` },
-    'a2-2': { kind: 'Action · IVR', title: 'Menu numérico', body: `<div class="config-section"><div class="config-label">Opções</div><div class="config-field highlight">1 Vendas · 2 Suporte · 3 Financeiro</div></div><div class="config-section"><div class="config-label">Timeout</div><div class="config-field">5s (repete se não digitar)</div></div>` },
-    'a3-1': { kind: 'Trigger', title: 'Cliente em Financeiro', body: `` },
-    'a3-2': { kind: 'Action · IVR', title: 'Capturar CPF', body: `<div class="config-section"><div class="config-label">Dígitos</div><div class="config-field highlight">11</div></div><div class="config-section"><div class="config-label">Timeout</div><div class="config-field">10s</div></div><div class="config-section"><div class="config-label">Destino</div><div class="config-field">campo cpf</div></div>` },
-    'a3-3': { kind: 'Action · Contacts', title: 'Salva no contato', body: `` },
-    'a4-1': { kind: 'Trigger', title: 'Cliente quer suporte', body: `` },
-    'a4-2': { kind: 'Action · IVR', title: 'Transfere ligação', body: `<div class="config-section"><div class="config-label">Destino</div><div class="config-field highlight">+55 11 3000-5000 · Suporte</div></div><div class="config-section"><div class="config-label">Timeout</div><div class="config-field">30s</div></div>` },
-    'a5-1': { kind: 'Trigger', title: 'Ligação fora do expediente', body: `` },
-    'a5-2': { kind: 'Action · IVR', title: 'Mensagem de despedida', body: `<div class="config-section"><div class="config-label">Texto</div><div class="config-field highlight">Fora do horário comercial. Ligue de segunda a sexta, 9h-18h.</div></div>` },
-    'a5-3': { kind: 'Action · IVR', title: 'Encerra chamada', body: `` }
+    'a2-2': { kind: 'Action · IVR', title: 'IVR Menu', body: `<div class="config-section"><div class="config-label">1</div><div class="config-field">Vendas</div></div><div class="config-section"><div class="config-label">2</div><div class="config-field highlight">Suporte</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);
