@@ -5672,353 +5672,49 @@
 <script>
   // ========== BANCO DE DADOS DE CONFIGURAÇÕES ==========
   const configData = {
-    // ===== Gatilho 01 — Contact Created =====
-    // ===== Gatilho 02 — Contact Changed =====
-    'g2-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Contact Changed',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Tipo de Mudança</div>
-          <div class="config-field dropdown highlight">Custom Field</div>
-          <div class="config-desc">Detecta alterações em campos criados por você, não nativos.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Campo Monitorado</div>
-          <div class="config-field dropdown">Temperatura do Lead</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Valor Detectado</div>
-          <div class="config-field highlight">= "Quente"</div>
-          <div class="config-desc"><strong>Impacto:</strong> só dispara quando o campo passa pra "Quente". Mudanças pra outros valores são ignoradas.</div>
-        </div>
-      `
-    },
-    'g2-2': {
-      kind: 'Action · Workflow',
-      title: 'Internal Notification',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Canal</div>
-          <div class="config-field highlight">SMS + Push</div>
-          <div class="config-desc">Prioridade alta merece canais imediatos.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Destinatário</div>
-          <div class="config-field dropdown">Gerente de Vendas</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Mensagem</div>
-          <div class="config-field" style="white-space: pre-wrap;">🔥 LEAD QUENTE IDENTIFICADO
-{{contact.first_name}} — contactar em 1h.</div>
-        </div>
-      `
-    },
-    'g2-3': {
-      kind: 'Action · Opportunity',
-      title: 'Update Opportunity',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Ação</div>
-          <div class="config-field dropdown highlight">Mover para Topo da Pipeline</div>
-          <div class="config-desc"><strong>Impacto:</strong> prioriza visualmente o lead na pipeline pra equipe ver primeiro.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Pipeline</div>
-          <div class="config-field dropdown">Follow-up Prioritário</div>
-        </div>
-      `
-    },
-    // ===== Gatilho 03 — Contact DND =====
-    'g3-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Contact DND',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Status Monitorado</div>
-          <div class="config-field dropdown highlight">DND Ativado</div>
-          <div class="config-desc">Dispara no momento que o contato bloqueia comunicação.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Canais</div>
-          <div class="config-field highlight">Todos os canais</div>
-          <div class="config-desc"><strong>Impacto:</strong> só dispara quando o contato bloqueia tudo, não apenas um canal.</div>
-        </div>
-      `
-    },
-    'g3-2': {
-      kind: 'Action · Contact',
-      title: 'Add Contact Tag',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Tag</div>
-          <div class="config-field highlight">Pausar Todas Campanhas</div>
-          <div class="config-desc">Tag serve como "sinal vermelho" pra outras automações que usam filtro de tag.</div>
-        </div>
-      `
-    },
-    'g3-3': {
-      kind: 'Action · Workflow',
-      title: 'Remove from Workflows',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Escopo</div>
-          <div class="config-field dropdown highlight">Todas as automações ativas</div>
-          <div class="config-desc"><strong>Impacto crítico:</strong> tira o contato imediatamente de qualquer fluxo em andamento. Compliance total.</div>
-        </div>
-      `
-    },
-    // ===== Gatilho 04 — Contact Tag =====
-    'g4-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Contact Tag',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Tipo de Evento</div>
-          <div class="config-field dropdown highlight">Tag Added</div>
-          <div class="config-desc">Dispara no momento em que a tag é adicionada.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Nome da Tag</div>
-          <div class="config-field dropdown highlight">Lead Consultoria 1:1</div>
-          <div class="config-desc"><strong>Filtro crítico:</strong> só dispara pra essa tag. Outras tags não ativam esse fluxo.</div>
-        </div>
-      `
-    },
-    'g4-2': {
-      kind: 'Action · Workflow',
-      title: 'Internal Notification',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Canais</div>
-          <div class="config-field highlight">✓ Email ✓ SMS</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Destinatário</div>
-          <div class="config-field dropdown">Grupo: Time Comercial</div>
-          <div class="config-desc">Grupo garante que sempre terá alguém disponível.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Mensagem</div>
-          <div class="config-field" style="white-space: pre-wrap;">🔥 Novo lead de consultoria!
-{{contact.first_name}} {{contact.last_name}}
-{{contact.email}} · {{contact.phone}}
-Atender em até 1h.</div>
-        </div>
-      `
-    },
-    'g4-3': {
-      kind: 'Action · Communication',
-      title: 'Send Email',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Destinatário</div>
-          <div class="config-field">{{contact.email}}</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Assunto</div>
-          <div class="config-field highlight">{{contact.first_name}}, sua consultoria 1:1 está a caminho</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Template</div>
-          <div class="config-field dropdown">Agenda de Consultoria · com link Calendly</div>
-        </div>
-      `
-    },
-    'g4-4': {
-      kind: 'Action · Opportunity',
-      title: 'Create Opportunity',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Pipeline</div>
-          <div class="config-field dropdown highlight">Consultoria</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Estágio</div>
-          <div class="config-field dropdown highlight">Novo Lead</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Valor</div>
-          <div class="config-field">R$ 1.500,00</div>
-          <div class="config-desc">Alimenta relatórios de forecast de vendas.</div>
-        </div>
-      `
-    },
-    // ===== Gatilho 05 — Engagement Score =====
-    'g5-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Engagement Score',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Operador</div>
-          <div class="config-field dropdown highlight">Greater than</div>
-          <div class="config-desc">Maior que — operador mais usado pra capturar leads quentes.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Valor</div>
-          <div class="config-field highlight">200</div>
-          <div class="config-desc"><strong>Impacto:</strong> só contatos com score acima de 200 entram.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Nicho</div>
-          <div class="config-field dropdown">Educação</div>
-        </div>
-      `
-    },
-    'g5-2': {
-      kind: 'Action · Communication',
-      title: 'Send Email',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Template</div>
-          <div class="config-field dropdown highlight">Oferta Exclusiva · Consultoria Educação</div>
-          <div class="config-desc">Template específico pro segmento mostra que você entende o negócio dele.</div>
-        </div>
-      `
-    },
-    'g5-3': {
-      kind: 'Action · Contact',
-      title: 'Add Contact Tag',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Tag</div>
-          <div class="config-field highlight">Lead Quente Educação</div>
-          <div class="config-desc">Segmenta pra campanhas futuras focadas no nicho de educação.</div>
-        </div>
-      `
-    },
-    // ===== Gatilho 06 — Birthday =====
-    'g6-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Birthday Reminder',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Timing</div>
-          <div class="config-field dropdown highlight">7 dias antes do aniversário</div>
-          <div class="config-desc">Dá tempo pro cliente usar o cupom durante a semana do aniversário.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Horário de disparo</div>
-          <div class="config-field">08:00 (fuso da subconta · fixo)</div>
-          <div class="config-desc"><strong>Importante:</strong> não dá pra mudar o horário — é sempre 8h da manhã.</div>
-        </div>
-      `
-    },
-    'g6-2': {
-      kind: 'Action · Communication',
-      title: 'Send Email',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Template</div>
-          <div class="config-field dropdown highlight">Cupom Aniversário 20% OFF</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Assunto</div>
-          <div class="config-field">{{contact.first_name}}, seu presente de aniversário chegou 🎁</div>
-        </div>
-      `
-    },
-    'g6-3': {
-      kind: 'Action · Contact',
-      title: 'Add Contact Tag',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Tag</div>
-          <div class="config-field highlight">Cupom Aniversário Ativo</div>
-          <div class="config-desc">Permite filtrar em campanhas futuras quem ainda não usou o cupom.</div>
-        </div>
-      `
-    },
-    // ===== Gatilho 07 — Custom Date =====
-    'g7-1': {
-      kind: 'Trigger · Gatilho',
-      title: 'Custom Date Reminder',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Campo Data</div>
-          <div class="config-field dropdown highlight">Data de Renovação (custom)</div>
-          <div class="config-desc">Campo customizado criado na subconta pra registrar quando o contrato vence.</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Timing</div>
-          <div class="config-field dropdown highlight">7 dias antes</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Repetir Anualmente</div>
-          <div class="config-field highlight">✓ Ativado (Match on Year)</div>
-          <div class="config-desc"><strong>Impacto crítico:</strong> garante que o lembrete dispara todo ano na mesma data.</div>
-        </div>
-      `
-    },
-    'g7-2': {
-      kind: 'Action · Communication',
-      title: 'Send Email',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Template</div>
-          <div class="config-field dropdown highlight">Renovação de Contrato · Resumo + CTA</div>
-          <div class="config-desc">Inclui resumo do contrato atual e botão pra renovar com um clique.</div>
-        </div>
-      `
-    },
-    'g7-3': {
-      kind: 'Action · Workflow',
-      title: 'Create Task',
-      body: `
-        <div class="config-section">
-          <div class="config-label">Título</div>
-          <div class="config-field highlight">Ligar em 2 dias — Confirmar renovação</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Responsável</div>
-          <div class="config-field dropdown">Gerente de Conta (dono do contato)</div>
-        </div>
-        <div class="config-section">
-          <div class="config-label">Prazo</div>
-          <div class="config-field">+2 dias</div>
-        </div>
-      `
-    },
-    'g8-1': { kind: 'Trigger · Gatilho', title: 'Nota Adicionada', body: `<div class="config-section"><div class="config-label">Monitorar</div><div class="config-field highlight">Qualquer nota nova (todos os contatos)</div></div><div class="config-section"><div class="config-label">Descrição</div><div class="config-field">Dispara assim que alguém da equipe adiciona uma nota. Útil pra garantir que follow-ups sejam criados automaticamente após interações registradas.</div></div>` },
-    'g8-2': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">trigger.note contains "reunião"</div></div><div class="config-section"><div class="config-label">Branch TRUE</div><div class="config-field">Prossegue com criação de task e tag</div></div><div class="config-section"><div class="config-label">Branch FALSE</div><div class="config-field">Não faz nada (nota de rotina)</div></div>` },
-    'g8-3': { kind: 'Action · Create Task', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field">Follow-up pós-reunião em 2 dias</div></div><div class="config-section"><div class="config-label">Descrição</div><div class="config-field">Ligar pra cliente confirmando próximos passos discutidos na reunião de {{note.created_at}}</div></div><div class="config-section"><div class="config-label">Responsável</div><div class="config-field">Dono atual do contato</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">+2 dias úteis</div></div>` },
-    'g8-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field highlight">Em Relacionamento Ativo</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Permite segmentar contatos que estão recebendo atenção humana ativa pra campanhas mais brandas.</div></div>` },
-    'g9-1': { kind: 'Trigger · Gatilho', title: 'Nota Alterada', body: `<div class="config-section"><div class="config-label">Evento</div><div class="config-field">Qualquer nota existente foi editada</div></div><div class="config-section"><div class="config-label">Por que monitorar</div><div class="config-field">Em equipes grandes, rastrear quem muda o quê evita mal-entendidos. Notas são evidência de interações — alterar sem registro cria zonas cinzentas.</div></div>` },
-    'g9-2': { kind: 'Action · Webhook', title: 'Outbound Webhook (Slack)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#auditoria-notas</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field" style="white-space: pre-wrap;">⚠ Nota editada
-👤 Contato: {{contact.first_name}} {{contact.last_name}}
-✏ Editado por: {{user.name}}
-📝 Conteúdo atual: {{note.body}}</div></div>` },
-    'g9-3': { kind: 'Action · Webhook', title: 'Outbound Webhook (auditoria)', body: `<div class="config-section"><div class="config-label">URL</div><div class="config-field">https://logs.suaempresa.com/audit</div></div><div class="config-section"><div class="config-label">Method</div><div class="config-field">POST</div></div><div class="config-section"><div class="config-label">Headers</div><div class="config-field">Authorization: Bearer {{customValue.audit_token}}</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">JSON com contact_id, note_id, user, timestamp</div></div>` },
-    'g10-1': { kind: 'Trigger · Gatilho', title: 'Tarefa Adicionada', body: `<div class="config-section"><div class="config-label">Monitorar</div><div class="config-field">Qualquer task criada em qualquer contato</div></div><div class="config-section"><div class="config-label">Contexto</div><div class="config-field">Tasks são criadas automaticamente (ex.: follow-up) OU manualmente. Esse fluxo trata ambos os casos garantindo SLA de resposta.</div></div>` },
-    'g10-2': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field highlight">task.priority equals "High"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Dispara alerta + conta SLA</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Segue fluxo normal sem alerta</div></div>` },
-    'g10-3': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field">SMS + Notificação in-app</div></div><div class="config-section"><div class="config-label">Destinatário</div><div class="config-field">{{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field">🔴 Task de alta prioridade criada. SLA de 4h. Contato: {{contact.first_name}}. Abrir: {{task.url}}</div></div>` },
-    'g10-4': { kind: 'Action · Set Event Date', title: 'Set Event Start Date', body: `<div class="config-section"><div class="config-label">Campo a setar</div><div class="config-field">sla_deadline</div></div><div class="config-section"><div class="config-label">Calcular como</div><div class="config-field">now() + 4 horas</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Outro workflow monitora se task foi completada antes do SLA. Se não, escala pro gerente.</div></div>` },
-    'g11-1': { kind: 'Trigger · Gatilho', title: 'Lembrete de Tarefa', body: `<div class="config-section"><div class="config-label">Quando dispara</div><div class="config-field highlight">24 horas antes do vencimento</div></div><div class="config-section"><div class="config-label">Propósito</div><div class="config-field">Evitar que tasks passem batido. Esse lembrete não é pro cliente — é pra equipe.</div></div>` },
-    'g11-2': { kind: 'Action · Communication', title: 'Internal Notification (primeiro toque)', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field">App + Email</div></div><div class="config-section"><div class="config-label">Para</div><div class="config-field">{{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Assunto</div><div class="config-field">⏰ Task vence amanhã: {{task.title}}</div></div>` },
-    'g11-3': { kind: 'Action · Timing', title: 'Wait 24h', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field">1 dia</div></div><div class="config-section"><div class="config-label">Lógica</div><div class="config-field">Depois de 24h (já passou da data de vencimento), verifica se a task foi fechada.</div></div>` },
-    'g11-4': { kind: 'Action · If/Else', title: 'Task ainda aberta?', body: `<div class="config-section"><div class="config-label">Checa</div><div class="config-field">task.status != "completed"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Escala pro gerente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Termina fluxo — task foi feita a tempo</div></div>` },
-    'g11-5': { kind: 'Action · Communication', title: 'Escalation Notification', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">Gerente de {{task.assigned_to}}</div></div><div class="config-section"><div class="config-label">Texto</div><div class="config-field" style="white-space: pre-wrap;">⚠ Task vencida sem conclusão
-Responsável: {{task.assigned_to}}
-Contato: {{contact.name}}
-Task: {{task.title}}</div></div>` },
-    'g12-1': { kind: 'Trigger · Gatilho', title: 'Tarefa Completada', body: `<div class="config-section"><div class="config-label">Quando</div><div class="config-field">Toda vez que uma task é marcada como done</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Celebra fechamentos importantes, atualiza status do contato, registra métrica.</div></div>` },
-    'g12-2': { kind: 'Action · If/Else', title: 'If/Else (é task de fechamento?)', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">task.title contains "fechamento"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Celebra no Slack + tag de cliente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Task rotineira, não faz nada especial</div></div>` },
-    'g12-3': { kind: 'Action · Communication', title: 'Slack Message (celebração)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-vitorias</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field" style="white-space: pre-wrap;">🎉 Nova venda fechada!
-🏆 Vendedor: {{user.name}}
-💰 Cliente: {{contact.first_name}} {{contact.last_name}}
-📝 Task: {{task.title}}</div></div>` },
-    'g12-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente Ativo</div></div><div class="config-section"><div class="config-label">Remove tags</div><div class="config-field">Em Negociação, Lead Quente</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Triggers de pós-venda (onboarding, upsell, review request) usam essa tag como porta de entrada.</div></div>` },
-    'g12-1': { kind: 'Trigger · Gatilho', title: 'Tarefa Completada', body: `<div class="config-section"><div class="config-label">Quando</div><div class="config-field">Toda vez que uma task é marcada como done</div></div><div class="config-section"><div class="config-label">Uso</div><div class="config-field">Celebra fechamentos importantes, atualiza status do contato, registra métrica.</div></div>` },
-    'g12-2': { kind: 'Action · If/Else', title: 'If/Else (é task de fechamento?)', body: `<div class="config-section"><div class="config-label">Condição</div><div class="config-field">task.title contains "fechamento"</div></div><div class="config-section"><div class="config-label">TRUE</div><div class="config-field">Celebra no Slack + tag de cliente</div></div><div class="config-section"><div class="config-label">FALSE</div><div class="config-field">Task rotineira, não faz nada especial</div></div>` },
-    'g12-3': { kind: 'Action · Communication', title: 'Slack Message (celebração)', body: `<div class="config-section"><div class="config-label">Canal</div><div class="config-field">#vendas-vitorias</div></div><div class="config-section"><div class="config-label">Mensagem</div><div class="config-field" style="white-space: pre-wrap;">🎉 Nova venda fechada!
-🏆 Vendedor: {{user.name}}
-💰 Cliente: {{contact.first_name}} {{contact.last_name}}
-📝 Task: {{task.title}}</div></div>` },
-    'g12-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Tag</div><div class="config-field">Cliente Ativo</div></div><div class="config-section"><div class="config-label">Remove tags</div><div class="config-field">Em Negociação, Lead Quente</div></div><div class="config-section"><div class="config-label">Uso posterior</div><div class="config-field">Triggers de pós-venda (onboarding, upsell, review request) usam essa tag como porta de entrada.</div></div>` },
     'g1-1': { kind: 'Trigger · Contact Created', title: 'Contato Criado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">New Contact Welcome Sequence</div></div><div class="config-section"><div class="config-label">Has Tag</div><div class="config-field"><span class="opt-chip">Lead Formulário</span> <span class="opt-chip">VIP</span></div></div><div class="config-section"><div class="config-label">Doesn't Have Tag</div><div class="config-field"><span class="opt-chip">Cliente Pago</span></div></div><div class="config-section"><div class="config-label">Created via Source</div><div class="config-field dropdown">Is — Form Submission</div></div><div class="config-section"><div class="config-label">Custom Field — Origem do Lead</div><div class="config-field dropdown">Is — Site Institucional</div></div>` },
     'g1-2': { kind: 'Action · Send Email', title: 'Enviar Boas-vindas', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Boas-vindas — Email #1</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Lucas · Magnetic Funnels</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@empresa.com.br</div></div><div class="config-section"><div class="config-label">Reply-to Email</div><div class="config-field">suporte@empresa.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Bem-vindo, {{contact.first_name}}! 🎉</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Welcome Series · Email 1 (BR)</div></div><div class="config-section"><div class="config-label">Sync Edits to Template</div><div class="config-field">⚪ OFF</div></div><div class="config-section"><div class="config-label">Attachments</div><div class="config-field">guia-inicio-rapido.pdf</div></div>` },
     'g1-3': { kind: 'Action · Assign to User', title: 'Atribuir a SDR', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Round-robin SDR Team</div></div><div class="config-section"><div class="config-label">Users *</div><div class="config-field"><span class="opt-chip">Ana</span> <span class="opt-chip">Bruno</span> <span class="opt-chip">Carlos</span> <span class="opt-chip">Diego</span></div></div><div class="config-section"><div class="config-label">Split Traffic</div><div class="config-field dropdown">Equally (round-robin)</div></div><div class="config-section"><div class="config-label">Only Apply to Unassigned Contacts</div><div class="config-field">🟢 ON</div></div>` },
-    'g1-4': { kind: 'Action · Internal Notification', title: 'Avisar SDR', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Notificar SDR atribuído</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">SMS</span> <span class="opt-chip">In-app</span></div></div><div class="config-section"><div class="config-label">User Type *</div><div class="config-field dropdown">Assigned User</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">🔥 Novo lead pra você</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">Novo lead: {{contact.first_name}} ({{contact.phone}}). Liga já.</div></div>` }
+    'g1-4': { kind: 'Action · Internal Notification', title: 'Avisar SDR', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Notificar SDR atribuído</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">SMS</span> <span class="opt-chip">In-app</span></div></div><div class="config-section"><div class="config-label">User Type *</div><div class="config-field dropdown">Assigned User</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">🔥 Novo lead pra você</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">Novo lead: {{contact.first_name}} ({{contact.phone}}). Liga já.</div></div>` },
+    'g2-1': { kind: 'Trigger · Contact Changed', title: 'Alterações no Contato', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Lead virou Quente</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field dropdown">Has Changed — Qualquer usuário</div></div><div class="config-section"><div class="config-label">DND Status</div><div class="config-field dropdown">Has Changed To — Enabled</div></div><div class="config-section"><div class="config-label">Tag</div><div class="config-field dropdown">Added — Lead Quente</div></div><div class="config-section"><div class="config-label">Custom Field — Temperatura</div><div class="config-field dropdown highlight">Has Changed To — Quente</div></div>` },
+    'g2-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Alerta lead quente</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Gerente de Vendas</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Lead virou Quente</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">{{contact.first_name}} mudou pra Quente. Liga agora.</div></div>` },
+    'g2-3': { kind: 'Action · Update Opportunity', title: 'Update Opportunity', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Mover pro topo da fila</div></div><div class="config-section"><div class="config-label">Opportunity *</div><div class="config-field dropdown">Contact's Latest Opportunity</div></div><div class="config-section"><div class="config-label">Pipeline</div><div class="config-field dropdown">Follow-up Prioritário</div></div><div class="config-section"><div class="config-label">Stage</div><div class="config-field dropdown highlight">Quente · Topo da fila</div></div><div class="config-section"><div class="config-label">Status</div><div class="config-field dropdown">Open</div></div>` },
+    'g3-1': { kind: 'Trigger · Contact DND', title: 'Contato Ativou DND', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">DND ativado</div></div><div class="config-section"><div class="config-label">DND Status *</div><div class="config-field dropdown">Enabled</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field dropdown">All Channels</div></div>` },
+    'g3-2': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar DND</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">DND Active</span></div></div>` },
+    'g3-3': { kind: 'Action · Workflow', title: 'Remove Contact from Workflows', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Pausar campanhas ativas</div></div><div class="config-section"><div class="config-label">Workflows *</div><div class="config-field dropdown">All Active Workflows</div></div><div class="config-section"><div class="config-label">Selection</div><div class="config-field">Multi-select dropdown</div></div>` },
+    'g4-1': { kind: 'Trigger · Contact Tag', title: 'Tag Adicionada/Removida', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Novo lead consultoria</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Lead Consultoria 1:1</span></div></div>` },
+    'g4-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time da nova tag</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Time Comercial</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span> <span class="opt-chip">SMS</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Nova tag adicionada</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">{{contact.first_name}} foi marcado como Consultoria.</div></div>` },
+    'g4-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Confirmar agenda consultoria</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Lucas · Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, sua consultoria está marcada</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Agenda de Consultoria</div></div>` },
+    'g4-4': { kind: 'Action · Create Opportunity', title: 'Create Opportunity', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar oportunidade consultoria</div></div><div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Consultoria</div></div><div class="config-section"><div class="config-label">Stage *</div><div class="config-field dropdown">Novo Lead</div></div><div class="config-section"><div class="config-label">Status</div><div class="config-field dropdown">Open</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field">R$ 1.500,00</div></div>` },
+    'g5-1': { kind: 'Trigger · Contact Engagement Score', title: 'Pontuação de Engajamento', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Lead quente — score</div></div><div class="config-section"><div class="config-label">Score Threshold *</div><div class="config-field dropdown">Greater Than — 75</div></div><div class="config-section"><div class="config-label">Has Tag</div><div class="config-field"><span class="opt-chip">Trial Ativo</span></div></div>` },
+    'g5-2': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Oferta lead quente</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@empresa.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, oferta exclusiva pra você</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Oferta Exclusiva</div></div>` },
+    'g5-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tag boost lead quente</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Lead Quente Educação</span></div></div>` },
+    'g6-1': { kind: 'Trigger · Birthday Reminder', title: 'Lembrete de Aniversário', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom aniversário</div></div><div class="config-section"><div class="config-label">Before Number of Days</div><div class="config-field">3</div></div><div class="config-section"><div class="config-label">After Number of Days</div><div class="config-field">0</div></div><div class="config-section"><div class="config-label">Match on year</div><div class="config-field">🟢 ON</div></div><div class="config-section"><div class="config-label">Has Tag</div><div class="config-field"><span class="opt-chip">Cliente Ativo</span></div></div>` },
+    'g6-2': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Cupom aniversário</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">marketing@empresa.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Feliz aniversário, {{contact.first_name}}! 🎂 Cupom dentro</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Cupom Aniversário 20%</div></div>` },
+    'g6-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar cupom aniversário</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cupom Aniversário Ativo</span></div></div>` },
+    'g7-1': { kind: 'Trigger · Custom Date Reminder', title: 'Lembrete de Data Personalizada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Aviso renovação</div></div><div class="config-section"><div class="config-label">Custom Date Field *</div><div class="config-field dropdown">Data de Renovação do Contrato</div></div><div class="config-section"><div class="config-label">Before Number of Days</div><div class="config-field">7</div></div><div class="config-section"><div class="config-label">After Number of Days</div><div class="config-field">0</div></div><div class="config-section"><div class="config-label">Match on year</div><div class="config-field">🟢 ON</div></div>` },
+    'g7-2': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso renovação 7 dias</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">contas@empresa.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Seu contrato renova em 7 dias</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Renovação Contrato</div></div>` },
+    'g7-3': { kind: 'Action · Create Task', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Ligar gerente de conta</div></div><div class="config-section"><div class="config-label">Title *</div><div class="config-field">Ligar pra confirmar renovação</div></div><div class="config-section"><div class="config-label">Description</div><div class="config-field">Contrato vence em 5 dias. Confirmar valor + tirar dúvidas.</div></div><div class="config-section"><div class="config-label">Assigned To</div><div class="config-field dropdown">Gerente de Conta</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">+2 days</div></div>` },
+    'g8-1': { kind: 'Trigger · Note Added', title: 'Nota Adicionada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Nota nova</div></div><div class="config-section"><div class="config-label">Note Body Contains</div><div class="config-field">reunião</div></div><div class="config-section"><div class="config-label">Added By User</div><div class="config-field dropdown">Qualquer usuário</div></div><div class="config-section"><div class="config-label">Has Tag</div><div class="config-field"><span class="opt-chip">VIP</span></div></div>` },
+    'g8-2': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Nota contém reunião?</div></div><div class="config-section"><div class="config-label">Field</div><div class="config-field dropdown">Custom Value · Note Body</div></div><div class="config-section"><div class="config-label">Operator</div><div class="config-field dropdown">Contains</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field">reunião</div></div>` },
+    'g8-3': { kind: 'Action · Create Task', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Follow-up pós-reunião</div></div><div class="config-section"><div class="config-label">Title *</div><div class="config-field">Follow-up pós-reunião</div></div><div class="config-section"><div class="config-label">Description</div><div class="config-field">Retomar pontos discutidos na reunião</div></div><div class="config-section"><div class="config-label">Assigned To</div><div class="config-field dropdown">Contact Owner</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">+2 days</div></div>` },
+    'g8-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar contato em relacionamento</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Em Relacionamento Ativo</span></div></div>` },
+    'g9-1': { kind: 'Trigger · Note Changed', title: 'Nota Alterada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Auditoria notas</div></div><div class="config-section"><div class="config-label">Has Tag</div><div class="config-field"><span class="opt-chip">VIP</span></div></div><div class="config-section"><div class="config-label">Doesn't Have Tag</div><div class="config-field"><span class="opt-chip">Arquivado</span></div></div>` },
+    'g9-2': { kind: 'Action · Webhook', title: 'Outbound Webhook (Slack)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar Slack auditoria</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field">hooks.slack.com/services/T0.../B0.../...</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">Headers</div><div class="config-field">Content-Type: application/json</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">{"text":"Nota modificada por {{user.name}}"}</div></div>` },
+    'g9-3': { kind: 'Action · Webhook', title: 'Outbound Webhook', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Audit log externo</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field">https://audit.empresa.com.br/api/note-changed</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">Headers</div><div class="config-field">Content-Type: application/json + X-Token</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">{"contact_id":"{{contact.id}}","field":"note","old":"","new":""}</div></div>` },
+    'g10-1': { kind: 'Trigger · Task Added', title: 'Tarefa Adicionada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Triagem task</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field dropdown">Carlos · SDR Sênior</div></div><div class="config-section"><div class="config-label">Task Title Contains</div><div class="config-field">Follow-up</div></div><div class="config-section"><div class="config-label">Task Custom Field — Prioridade</div><div class="config-field dropdown">Is — Alta</div></div>` },
+    'g10-2': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Task é prioridade Alta?</div></div><div class="config-section"><div class="config-label">Field</div><div class="config-field dropdown">Task Custom Field · Priority</div></div><div class="config-section"><div class="config-label">Operator</div><div class="config-field dropdown">Equals</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field">High</div></div>` },
+    'g10-3': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar responsável da task</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Task Assignee</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">SMS</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Task alta prioridade pra você</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">{{task.title}} — vence em {{task.due_date}}.</div></div>` },
+    'g10-4': { kind: 'Action · Set Event Date', title: 'Set Event Start Date', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar SLA 4h</div></div><div class="config-section"><div class="config-label">Event Date Field *</div><div class="config-field dropdown">Custom Field · SLA Deadline</div></div><div class="config-section"><div class="config-label">Date Value *</div><div class="config-field">Workflow Time + 4 hours</div></div><div class="config-section"><div class="config-label">Timezone</div><div class="config-field dropdown">America/Sao_Paulo</div></div>` },
+    'g11-1': { kind: 'Trigger · Task Reminder', title: 'Lembrete de Tarefa', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Lembrete vencimento</div></div><div class="config-section"><div class="config-label">When *</div><div class="config-field dropdown">Before</div></div><div class="config-section"><div class="config-label">Number of Days *</div><div class="config-field">3</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field dropdown">Qualquer usuário</div></div>` },
+    'g11-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Lembrete responsável</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Task Assignee</div></div><div class="config-section"><div class="config-label">Notification Type</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Task vence em 24h</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">{{task.title}} ({{contact.first_name}}) — vence em 24h.</div></div>` },
+    'g11-3': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Esperar dia da task</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait For Time Delay</div></div><div class="config-section"><div class="config-label">Duration *</div><div class="config-field highlight">24 hours</div></div><div class="config-section"><div class="config-label">Day & Time Restriction</div><div class="config-field">Any day · Any time</div></div>` },
+    'g11-4': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Task ainda aberta?</div></div><div class="config-section"><div class="config-label">Field</div><div class="config-field dropdown">Task · Status</div></div><div class="config-section"><div class="config-label">Operator</div><div class="config-field dropdown">Is</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field">Open</div></div>` },
+    'g11-5': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Escalar pro gerente</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Gerente do responsável</div></div><div class="config-section"><div class="config-label">Notification Type</div><div class="config-field"><span class="opt-chip">Email</span> <span class="opt-chip">In-app</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Task vencida sem atenção</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">{{task.title}} venceu sem ser concluída por {{assignee.name}}.</div></div>` },
+    'g12-1': { kind: 'Trigger · Task Completed', title: 'Tarefa Completada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pós-fechamento</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field dropdown">Ana · SDR</div></div><div class="config-section"><div class="config-label">Task Custom Field — Resultado</div><div class="config-field dropdown">Is — Cliente Confirmou Compra</div></div>` },
+    'g12-2': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Task de fechamento?</div></div><div class="config-section"><div class="config-label">Field</div><div class="config-field dropdown">Task · Title</div></div><div class="config-section"><div class="config-label">Operator</div><div class="config-field dropdown">Contains</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field">fechamento</div></div>` },
+    'g12-3': { kind: 'Action · Webhook', title: 'Outbound Webhook (Slack)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Celebrar venda no Slack</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field">hooks.slack.com/services/T0.../B0.../...</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">{"text":"🎉 Venda fechada por {{user.name}}!"}</div></div>` },
+    'g12-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar cliente ativo</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cliente Ativo</span></div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========
