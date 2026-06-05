@@ -2766,8 +2766,7 @@
               <div class="ghl-node-title">Add Contact Tag</div>
             </div>
           </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Cancelou · Aguardando Reagendar</span></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Contact Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Nova Tag</span></div></div>
           </div>
         </div>
 
@@ -2995,8 +2994,7 @@
               <div class="ghl-node-title">Customer Booked Appointment</div>
             </div>
           </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Calendário</span><span class="pv highlight">Consultas Odontológicas</span></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Customer Booked Appointment</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
           </div>
         </div>
 
@@ -3144,6 +3142,8 @@
     'g1-1': { kind: 'Trigger', title: 'Appointment Status', body: `<div class="config-section"><div class="config-label">Calendário</div><div class="config-field">Consultoria</div></div><div class="config-section"><div class="config-label">Status</div><div class="config-field highlight dropdown">Cancelled</div></div>` },
     'g1-2': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Duração</div><div class="config-field">3 minutos</div></div>` },
     'g1-3': { kind: 'Action · Communication', title: 'Send WhatsApp', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">{{contact.phone}}</div></div>` },
+    'g1-4': { kind: 'Action · Contact', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Contact Tag</div></div>` },
+    'g2-1': { kind: 'Trigger', title: 'Customer Booked Appointment', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Customer Booked Appointment</div></div>` },
     'g2-2': { kind: 'Action · Communication', title: 'Send WhatsApp', body: `<div class="config-section"><div class="config-label">Tipo</div><div class="config-field">Confirmação imediata</div></div>` },
     'g2-3': { kind: 'Action · Wait', title: 'Wait — Event Date', body: `<div class="config-section"><div class="config-label">Base</div><div class="config-field">Data do Evento</div></div>` },
     'g2-4': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Lembrete 24h</div></div>` }

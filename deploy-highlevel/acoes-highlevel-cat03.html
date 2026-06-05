@@ -2544,7 +2544,7 @@
               <div class="ghl-node-title">Opportunity Won</div>
             </div>
           </div>
-          <div class="ghl-node-body"></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Opportunity Won</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
@@ -2698,7 +2698,7 @@
               <div class="ghl-node-title">Invoice Paid</div>
             </div>
           </div>
-          <div class="ghl-node-body"></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Invoice Paid</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
@@ -2843,7 +2843,7 @@
               <div class="ghl-node-title">Contact Created</div>
             </div>
           </div>
-          <div class="ghl-node-body"></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Contact Created</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-2">
@@ -3037,8 +3037,11 @@
   });
 
   const configData = {
+    'a1-1': { kind: 'Trigger', title: 'Opportunity Won', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Opportunity Won</div></div>` },
     'a1-2': { kind: 'Action · Webhook', title: 'Outbound Webhook', body: `<div class="config-section"><div class="config-label">URL *</div><div class="config-field highlight">n8n.sua-empresa.com/webhook</div></div><div class="config-section"><div class="config-label">Method</div><div class="config-field dropdown">POST</div></div>` },
+    'a2-1': { kind: 'Trigger', title: 'Invoice Paid', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Invoice Paid</div></div>` },
     'a2-2': { kind: 'Action · Webhook', title: 'Google Sheets', body: `<div class="config-section"><div class="config-label">Planilha</div><div class="config-field highlight">Vendas 2026</div></div>` },
+    'a3-1': { kind: 'Trigger', title: 'Contact Created', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Contact Created</div></div>` },
     'a3-2': { kind: 'Action · Webhook', title: 'Custom API Call', body: `<div class="config-section"><div class="config-label">Endpoint</div><div class="config-field highlight">/api/v2/customers</div></div>` }
   };
 

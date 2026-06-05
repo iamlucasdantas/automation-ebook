@@ -2544,7 +2544,7 @@
               <div class="ghl-node-title">Appointment Booked</div>
             </div>
           </div>
-          <div class="ghl-node-body"></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Appointment Booked</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
@@ -2557,7 +2557,7 @@
               <div class="ghl-node-title">Wait 5min</div>
             </div>
           </div>
-          <div class="ghl-node-body"></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Wait 5min</span></div><div class="ghl-node-param"><span class="pk">Wait Type</span><span class="pv highlight">Wait For Time Delay</span></div><div class="ghl-node-param"><span class="pk">Duration</span><span class="pv highlight">1 hour</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
@@ -2570,7 +2570,7 @@
               <div class="ghl-node-title">Update Appointment Status</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Confirmed</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Update Appointment Status</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2693,7 +2693,7 @@
               <div class="ghl-node-title">Tag · Upgrade VIP</div>
             </div>
           </div>
-          <div class="ghl-node-body"></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag · Upgrade VIP</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
@@ -2706,7 +2706,7 @@
               <div class="ghl-node-title">Reassign Appointment</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Novo dono</span><span class="pv highlight">AE Senior</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Reassign Appointment</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Usuário responsável</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2827,7 +2827,7 @@
               <div class="ghl-node-title">No-Show Count = 3</div>
             </div>
           </div>
-          <div class="ghl-node-body"></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">No-Show Count = 3</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-2">
@@ -2840,7 +2840,7 @@
               <div class="ghl-node-title">Cancel Appointment</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Escopo</span><span class="pv highlight">Futuros</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Cancel Appointment</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-3">
@@ -2853,7 +2853,7 @@
               <div class="ghl-node-title">Send Email Política</div>
             </div>
           </div>
-          <div class="ghl-node-body"></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email Política</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email Política</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3029,14 +3029,14 @@
   });
 
   const configData = {
-    'a1-1': { kind: 'Trigger', title: 'Agendamento criado', body: `` },
-    'a1-2': { kind: 'Action · Wait', title: 'Wait 5min', body: `<div class="config-section"><div class="config-label">Por quê</div><div class="config-field">Confirma que cliente não desistiu logo</div></div>` },
-    'a1-3': { kind: 'Action · Agendamentos', title: 'Auto-confirmar', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight">Confirmed</div></div><div class="config-section"><div class="config-label">Efeito</div><div class="config-field">Evita fazer vendedor confirmar manualmente</div></div>` },
-    'a2-1': { kind: 'Trigger', title: 'Cliente virou VIP', body: `` },
-    'a2-2': { kind: 'Action · Agendamentos', title: 'Transfere appointment', body: `<div class="config-section"><div class="config-label">De</div><div class="config-field">SDR</div></div><div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">AE Senior</div></div><div class="config-section"><div class="config-label">Notifica</div><div class="config-field">Ambos</div></div>` },
-    'a3-1': { kind: 'Trigger', title: '3º no-show do cliente', body: `` },
-    'a3-2': { kind: 'Action · Agendamentos', title: 'Cancela futuros', body: `<div class="config-section"><div class="config-label">Filtro</div><div class="config-field highlight">Todos futuros do contato</div></div>` },
-    'a3-3': { kind: 'Action · Communication', title: 'Explica política', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Após 3 no-shows removemos agendamentos. Se quiser reagendar, ligue.</div></div>` }
+    'a1-1': { kind: 'Trigger', title: 'Appointment Booked', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Appointment Booked</div></div>` },
+    'a1-2': { kind: 'Action · Wait', title: 'Wait 5min', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Wait 5min</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field highlight dropdown">Wait For Time Delay</div></div>` },
+    'a1-3': { kind: 'Action · Agendamentos', title: 'Update Appointment Status', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Update Appointment Status</div></div>` },
+    'a2-1': { kind: 'Trigger', title: 'Tag · Upgrade VIP', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Tag · Upgrade VIP</div></div>` },
+    'a2-2': { kind: 'Action · Agendamentos', title: 'Reassign Appointment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Reassign Appointment</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field highlight dropdown">Usuário responsável</div></div>` },
+    'a3-1': { kind: 'Trigger', title: 'No-Show Count = 3', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">No-Show Count = 3</div></div>` },
+    'a3-2': { kind: 'Action · Agendamentos', title: 'Cancel Appointment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Cancel Appointment</div></div>` },
+    'a3-3': { kind: 'Action · Communication', title: 'Send Email Política', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email Política</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email Política</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

@@ -2527,7 +2527,7 @@
     <div class="ghl-node-icon action-email">💬</div>
     <div><div class="ghl-node-type">Action · Social</div><div class="ghl-node-title">Reply to Comment</div></div>
   </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Texto</span><span class="pv highlight">Olá! Verifica sua DM 📩</span></div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Reply to Comment</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div>
 </div>
 </div>
 <div class="ghl-connector"></div>
@@ -2538,7 +2538,7 @@
     <div class="ghl-node-icon action-email">💬</div>
     <div><div class="ghl-node-type">Action · Social</div><div class="ghl-node-title">Send Facebook DM</div></div>
   </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Conteúdo</span><span class="pv highlight">Preço + link promo</span></div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Facebook DM</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div>
 </div>
 </div>
 <div class="ghl-connector"></div>
@@ -2549,7 +2549,7 @@
     <div class="ghl-node-icon action-tag">#</div>
     <div><div class="ghl-node-type">Action · Contact</div><div class="ghl-node-title">Add Contact Tag</div></div>
   </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Interessado Promoção FB</span></div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Contact Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Nova Tag</span></div></div>
 </div>
 </div>
 <div class="config-panel">
@@ -2754,8 +2754,7 @@
               <div class="ghl-node-title">IG Comment</div>
             </div>
           </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Contém</span><span class="pv highlight">EU QUERO</span></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">IG Comment</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -2769,8 +2768,7 @@
               <div class="ghl-node-title">Reply to IG Comment</div>
             </div>
           </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Texto</span><span class="pv highlight">DM enviada! 📩</span></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Reply to IG Comment</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -2784,8 +2782,7 @@
               <div class="ghl-node-title">Send Instagram DM</div>
             </div>
           </div>
-          <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Link + cupom</span></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Instagram DM</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div>
           </div>
         </div>
         <div class="config-panel">
@@ -2913,7 +2910,13 @@
 </div>
 <script>
   const configData = {
-    'g1-1': { kind: 'Trigger', title: 'Facebook Comment', body: `<div class="config-section"><div class="config-label">Post</div><div class="config-field highlight">Promoção Final de Ano</div></div>` }
+    'g1-1': { kind: 'Trigger', title: 'Facebook Comment', body: `<div class="config-section"><div class="config-label">Post</div><div class="config-field highlight">Promoção Final de Ano</div></div>` },
+    'g1-2': { kind: 'Action · Social', title: 'Reply to Comment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Reply to Comment</div></div>` },
+    'g1-3': { kind: 'Action · Social', title: 'Send Facebook DM', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Facebook DM</div></div>` },
+    'g1-4': { kind: 'Action · Contact', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Contact Tag</div></div>` },
+    'g2-1': { kind: 'Trigger', title: 'IG Comment', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">IG Comment</div></div>` },
+    'g2-2': { kind: 'Action · Communication', title: 'Reply to IG Comment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Reply to IG Comment</div></div>` },
+    'g2-3': { kind: 'Action · Communication', title: 'Send Instagram DM', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Instagram DM</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);

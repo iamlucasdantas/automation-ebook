@@ -2481,7 +2481,7 @@
     <div class="ghl-node-icon trigger">T</div>
     <div><div class="ghl-node-type">Trigger</div><div class="ghl-node-title">Certificate Issued</div></div>
   </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Modelo</span><span class="pv highlight">Cert. Marketing Digital</span></div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Certificate Issued</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
 </div>
 </div>
 <div class="ghl-connector"></div>
@@ -2504,7 +2504,7 @@
     <div class="ghl-node-icon action-tag">#</div>
     <div><div class="ghl-node-type">Action · Contact</div><div class="ghl-node-title">Add Contact Tag</div></div>
   </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Certificado · Marketing Digital</span></div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Contact Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Nova Tag</span></div></div>
 </div>
 </div>
 <div class="ghl-connector"></div>
@@ -2515,7 +2515,7 @@
     <div class="ghl-node-icon action-wait">⏱</div>
     <div><div class="ghl-node-type">Action · Wait</div><div class="ghl-node-title">Wait</div></div>
   </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Duração</span><span class="pv">3 dias</span></div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Wait</span></div><div class="ghl-node-param"><span class="pk">Wait Type</span><span class="pv highlight">Wait For Time Delay</span></div><div class="ghl-node-param"><span class="pk">Duration</span><span class="pv highlight">1 hour</span></div></div>
 </div>
 </div>
 <div class="ghl-connector"></div>
@@ -2526,7 +2526,7 @@
     <div class="ghl-node-icon action-email">@</div>
     <div><div class="ghl-node-type">Action · Communication</div><div class="ghl-node-title">Send Email (Indicação)</div></div>
   </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Incentivo</span><span class="pv highlight">30% off próximo curso</span></div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email (Indicação)</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email (Indicação)</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div>
 </div>
 </div>
 <div class="config-panel">
@@ -2629,7 +2629,11 @@
 </div>
 <script>
   const configData = {
-    'g1-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Parabéns Certificação</div></div>` }
+    'g1-1': { kind: 'Trigger', title: 'Certificate Issued', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Certificate Issued</div></div>` },
+    'g1-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Parabéns Certificação</div></div>` },
+    'g1-3': { kind: 'Action · Contact', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Contact Tag</div></div>` },
+    'g1-4': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Wait</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field highlight dropdown">Wait For Time Delay</div></div>` },
+    'g1-5': { kind: 'Action · Communication', title: 'Send Email (Indicação)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email (Indicação)</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email (Indicação)</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);
