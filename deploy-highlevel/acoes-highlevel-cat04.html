@@ -2557,7 +2557,7 @@
               <div class="ghl-node-title">Nova Opp</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Nova Opp</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Nova Opp</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-2">
@@ -2570,7 +2570,7 @@
               <div class="ghl-node-title">Segmentação Tripla</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Qual nível da oportunidade?</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Name</span><span class="pv">Enterprise (> R$ 50k)</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Condition 1</span><span class="pv">opportunity.monetary_value Greater than 50000</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Logic</span><span class="pv">AND</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Condition 2</span><span class="pv">contact.tags Includes "Empresa Grande"</span></div><div class="ghl-node-param"><span class="pk">Branch 2 · Name</span><span class="pv">Mid-Market (R$ 10k-50k)</span></div><div class="ghl-node-param"><span class="pk">Branch 2 · Condition 1</span><span class="pv">opportunity.monetary_value Between 10000 AND 50000</span></div><div class="ghl-node-param"><span class="pk">Branch 3 · None</span><span class="pv">SMB (até R$ 10k)</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Qual nível da oportunidade?</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Name</span><span class="pv">Enterprise (> R$ 50k)</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Condition 1</span><span class="pv">opportunity.monetary_value Greater than 50000</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Logic</span><span class="pv">AND</span></div><div class="ghl-node-param"><span class="pk">Branch 1 · Condition 2</span><span class="pv">contact.tags Includes "Magnetic Funnels Grande"</span></div><div class="ghl-node-param"><span class="pk">Branch 2 · Name</span><span class="pv">Mid-Market (R$ 10k-50k)</span></div><div class="ghl-node-param"><span class="pk">Branch 2 · Condition 1</span><span class="pv">opportunity.monetary_value Between 10000 AND 50000</span></div><div class="ghl-node-param"><span class="pk">Branch 3 · None</span><span class="pv">SMB (até R$ 10k)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
@@ -2668,7 +2668,7 @@
               <div class="ghl-node-title">If/Else</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">If/Else</span></div><div class="ghl-node-param"><span class="pk">Field</span><span class="pv highlight">Campo a comparar</span></div><div class="ghl-node-param"><span class="pk">Operator</span><span class="pv">Equals</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">Valor esperado</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">If/Else</span></div><div class="ghl-node-param"><span class="pk">Field</span><span class="pv highlight">Custom Value · Status</span></div><div class="ghl-node-param"><span class="pk">Operator</span><span class="pv">Equals</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">Qualificado</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
@@ -2681,7 +2681,7 @@
               <div class="ghl-node-title">Assign to Senior</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Assign to Senior</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Usuário responsável</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Assign to Senior</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Round-robin SDR</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-4">
@@ -2694,7 +2694,7 @@
               <div class="ghl-node-title">Send Email Padrão</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email Padrão</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email Padrão</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email Padrão</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email Padrão</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2781,7 +2781,7 @@
               <div class="ghl-node-title">Email Enviado</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Email Enviado</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Email Enviado</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-2">
@@ -2887,7 +2887,7 @@
               <div class="ghl-node-title">Send Email 1</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a2-3">
@@ -2913,7 +2913,7 @@
               <div class="ghl-node-title">Send Email 2</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3000,7 +3000,7 @@
               <div class="ghl-node-title">Appointment Booked</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Appointment Booked</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Appointment Booked</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-2">
@@ -3026,7 +3026,7 @@
               <div class="ghl-node-title">Send SMS Lembrete</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send SMS Lembrete</span></div><div class="ghl-node-param"><span class="pk">To</span><span class="pv">{{contact.phone}}</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">Mensagem dinâmica usando merge fields</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send SMS Lembrete</span></div><div class="ghl-node-param"><span class="pk">To</span><span class="pv">{{contact.phone}}</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">Oi {{contact.first_name}}, tudo bem?</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3153,7 +3153,7 @@
               <div class="ghl-node-title">Contract Signed</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Contract Signed</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Contract Signed</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-2">
@@ -3290,7 +3290,7 @@
               <div class="ghl-node-title">Nurture Tag</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Nurture Tag</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Nurture Tag</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-2">
@@ -3303,7 +3303,7 @@
               <div class="ghl-node-title">Send Email 1</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-3">
@@ -3329,7 +3329,7 @@
               <div class="ghl-node-title">Send Email 2</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3455,7 +3455,7 @@
               <div class="ghl-node-title">Opportunity Won</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Opportunity Won</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Opportunity Won</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a6-2">
@@ -3481,7 +3481,7 @@
               <div class="ghl-node-title">Send Email Comissão</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email Comissão</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email Comissão</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email Comissão</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email Comissão</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3606,7 +3606,7 @@
               <div class="ghl-node-title">Date · Black Friday</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Date · Black Friday</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Date · Black Friday</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a7-2">
@@ -3742,7 +3742,7 @@
               <div class="ghl-node-title">Tag Added · Em Campo</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag Added · Em Campo</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag Added · Em Campo</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a8-2">
@@ -3880,7 +3880,7 @@
               <div class="ghl-node-title">Subscription Canceled</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Subscription Canceled</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Subscription Canceled</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a9-2">
@@ -3893,7 +3893,7 @@
               <div class="ghl-node-title">Cancel All Events</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Cancel All Events</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Cancel All Events</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -4014,7 +4014,7 @@
               <div class="ghl-node-title">Tag Added · Cliente Novo</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag Added · Cliente Novo</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag Added · Cliente Novo</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a10-2">
@@ -4027,7 +4027,7 @@
               <div class="ghl-node-title">Call Workflow</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Call Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Call Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a10-3">
@@ -4161,7 +4161,7 @@
               <div class="ghl-node-title">Lead Captured</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Lead Captured</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Lead Captured</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a11-2">
@@ -4174,7 +4174,7 @@
               <div class="ghl-node-title">Add to Workflow</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add to Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add to Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a11-3">
@@ -4187,7 +4187,7 @@
               <div class="ghl-node-title">Add to Workflow</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add to Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add to Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -4307,7 +4307,7 @@
               <div class="ghl-node-title">Opportunity Won</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Opportunity Won</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Opportunity Won</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a12-2">
@@ -4448,7 +4448,7 @@
               <div class="ghl-node-title">Tag Nurture</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag Nurture</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag Nurture</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-2">
@@ -4461,7 +4461,7 @@
               <div class="ghl-node-title">Send Email 1</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">sender@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Empresa</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-3">
@@ -4474,7 +4474,7 @@
               <div class="ghl-node-title">If respondeu?</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">If respondeu?</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">If respondeu?</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a13-4">
@@ -4487,7 +4487,7 @@
               <div class="ghl-node-title">Remove Current WF</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remove Current WF</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remove Current WF</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -4608,7 +4608,7 @@
               <div class="ghl-node-title">Webhook Failed</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Webhook Failed</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Webhook Failed</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a14-2">
@@ -4647,7 +4647,7 @@
               <div class="ghl-node-title">Jump to Action</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Jump to Action</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Jump to Action</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -4769,7 +4769,7 @@
               <div class="ghl-node-title">Tag · KILL SWITCH</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag · KILL SWITCH</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag · KILL SWITCH</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a15-2">
@@ -4782,7 +4782,7 @@
               <div class="ghl-node-title">Stop Workflow</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Stop Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Stop Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -4903,7 +4903,7 @@
               <div class="ghl-node-title">Tag Added · Reativado</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag Added · Reativado</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag Added · Reativado</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a16-2">
@@ -4916,7 +4916,7 @@
               <div class="ghl-node-title">Restart Workflow</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Restart Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Ver documentação HighLevel pra detalhes específicos</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Restart Workflow</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -5092,25 +5092,25 @@
 
   const configData = {
     'a1-1': { kind: 'Trigger · Opportunity Created', title: 'Nova Opp', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Nova Opp</div></div>` },
-    'a1-2': { kind: 'Action · If/Else', title: 'If/Else', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">If/Else</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Campo a comparar</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Equals</div></div>` },
-    'a1-3': { kind: 'Action · Contacts', title: 'Assign to Senior', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Assign to Senior</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field highlight dropdown">Usuário responsável</div></div>` },
-    'a1-4': { kind: 'Action · Communication', title: 'Send Email Padrão', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email Padrão</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email Padrão</div></div>` },
+    'a1-2': { kind: 'Action · If/Else', title: 'If/Else', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">If/Else</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Value · Status</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Equals</div></div>` },
+    'a1-3': { kind: 'Action · Contacts', title: 'Assign to Senior', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Assign to Senior</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field highlight dropdown">Round-robin SDR</div></div>` },
+    'a1-4': { kind: 'Action · Communication', title: 'Send Email Padrão', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email Padrão</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email Padrão</div></div>` },
     'a2-1': { kind: 'Trigger · Email Sent', title: 'Email Enviado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Email Enviado</div></div>` },
-    'a2-2': { kind: 'Action · Communication', title: 'Send Email 1', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 1</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 1</div></div>` },
+    'a2-2': { kind: 'Action · Communication', title: 'Send Email 1', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 1</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 1</div></div>` },
     'a2-3': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Wait</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field highlight dropdown">Wait For Time Delay</div></div>` },
-    'a2-4': { kind: 'Action · Communication', title: 'Send Email 2', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 2</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 2</div></div>` },
+    'a2-4': { kind: 'Action · Communication', title: 'Send Email 2', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 2</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 2</div></div>` },
     'a3-1': { kind: 'Trigger', title: 'Appointment Booked', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Appointment Booked</div></div>` },
     'a3-2': { kind: 'Action · Wait', title: 'Wait Until Event', body: `<div class="config-section"><div class="config-label">Base</div><div class="config-field">appointment.start_time</div></div>` },
     'a3-3': { kind: 'Action · Communication', title: 'Send SMS Lembrete', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send SMS Lembrete</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field">{{contact.phone}}</div></div>` },
     'a4-1': { kind: 'Trigger', title: 'Contract Signed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Contract Signed</div></div>` },
     'a4-2': { kind: 'Action · Wait', title: 'Set Event Date', body: `<div class="config-section"><div class="config-label">Evento</div><div class="config-field">data_renovacao</div></div>` },
     'a5-1': { kind: 'Trigger', title: 'Nurture Tag', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Nurture Tag</div></div>` },
-    'a5-2': { kind: 'Action · Communication', title: 'Send Email 1', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 1</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 1</div></div>` },
+    'a5-2': { kind: 'Action · Communication', title: 'Send Email 1', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 1</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 1</div></div>` },
     'a5-3': { kind: 'Action · If/Else', title: 'Goal Event', body: `<div class="config-section"><div class="config-label">Meta</div><div class="config-field highlight">Comprou</div></div>` },
-    'a5-4': { kind: 'Action · Communication', title: 'Send Email 2', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 2</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 2</div></div>` },
+    'a5-4': { kind: 'Action · Communication', title: 'Send Email 2', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 2</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 2</div></div>` },
     'a6-1': { kind: 'Trigger', title: 'Opportunity Won', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Opportunity Won</div></div>` },
     'a6-2': { kind: 'Action · If/Else', title: 'Math Operation', body: `<div class="config-section"><div class="config-label">Operação</div><div class="config-field highlight">opp.value × 0.1</div></div>` },
-    'a6-3': { kind: 'Action · Communication', title: 'Send Email Comissão', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email Comissão</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email Comissão</div></div>` },
+    'a6-3': { kind: 'Action · Communication', title: 'Send Email Comissão', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email Comissão</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email Comissão</div></div>` },
     'a7-1': { kind: 'Trigger', title: 'Date · Black Friday', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Date · Black Friday</div></div>` },
     'a7-2': { kind: 'Action · If/Else', title: 'Update Custom Value', body: `<div class="config-section"><div class="config-label">Variável</div><div class="config-field highlight">preco_curso</div></div>` },
     'a8-1': { kind: 'Trigger', title: 'Tag Added · Em Campo', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Tag Added · Em Campo</div></div>` },
@@ -5127,7 +5127,7 @@
     'a12-2': { kind: 'Action · Workflow', title: 'Remove from Workflow', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remove from Workflow</div></div>` },
     'a12-3': { kind: 'Action · Workflow', title: 'Remove from Workflow', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remove from Workflow</div></div>` },
     'a13-1': { kind: 'Trigger', title: 'Tag Nurture', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Tag Nurture</div></div>` },
-    'a13-2': { kind: 'Action · Communication', title: 'Send Email 1', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 1</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">sender@empresa.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Empresa</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 1</div></div>` },
+    'a13-2': { kind: 'Action · Communication', title: 'Send Email 1', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email 1</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email 1</div></div>` },
     'a13-3': { kind: 'Action · If/Else', title: 'If respondeu?', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">If respondeu?</div></div>` },
     'a13-4': { kind: 'Action · Workflow', title: 'Remove Current WF', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remove Current WF</div></div>` },
     'a14-1': { kind: 'Trigger', title: 'Webhook Failed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Webhook Failed</div></div>` },
