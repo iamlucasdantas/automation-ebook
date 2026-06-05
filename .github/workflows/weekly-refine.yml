@@ -1,0 +1,43 @@
+name: Weekly mockup refine
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'  # Every Monday 12:00 UTC (09:00 BRT)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Apply mechanical refinements
+        run: python3 scripts/auto-refine.py
+
+      - name: Commit and open PR if changes
+        run: |
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No drift detected — nothing to do."
+            exit 0
+          fi
+          BRANCH="auto-refine/$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add deploy-highlevel/
+          git commit -m "Weekly mockup refine ($(date -u +%Y-%m-%d))"
+          git push origin "$BRANCH"
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "Weekly mockup refine — $(date -u +%Y-%m-%d)" \
+            --body "Automated refinement run by scripts/auto-refine.py. Review the diff, then merge to publish."
+        env:
+          GH_TOKEN: ${{ github.token }}
