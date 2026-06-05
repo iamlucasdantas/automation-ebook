@@ -2487,7 +2487,7 @@
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
-            <div><div class="ghl-node-type">Trigger</div><div class="ghl-node-title">Affiliate Created</div></div>
+            <div><div class="ghl-node-type">Trigger · Affiliate Created</div><div class="ghl-node-title">Affiliate Created</div></div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Affiliate Created</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
           </div>
@@ -2651,7 +2651,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Afiliado Inscrito em Campanha</div>
               <div class="ghl-node-title">Afiliado Inscrito em Campanha</div>
             </div>
           </div>
@@ -2846,7 +2846,7 @@
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
-            <div><div class="ghl-node-type">Trigger</div><div class="ghl-node-title">New Affiliate Sales</div></div>
+            <div><div class="ghl-node-type">Trigger · New Affiliate Sales</div><div class="ghl-node-title">New Affiliate Sales</div></div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">New Affiliate Sales</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
           </div>
@@ -3015,7 +3015,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Lead Criado por Afiliado</div>
               <div class="ghl-node-title">Lead Criado por Afiliado</div>
             </div>
           </div>
@@ -3153,16 +3153,16 @@
 
 <script>
   const configData = {
-    'g1-1': { kind: 'Trigger', title: 'Affiliate Created', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Affiliate Created</div></div>` },
+    'g1-1': { kind: 'Trigger · Affiliate Created', title: 'Affiliate Created', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Affiliate Created</div></div>` },
     'g1-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Boas-vindas Afiliado</div></div>` },
     'g1-3': { kind: 'Action · Afiliado', title: 'Add to Campaign', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add to Campaign</div></div>` },
-    'g2-1': { kind: 'Trigger', title: 'Afiliado Inscrito em Campanha', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Afiliado Inscrito em Campanha</div></div>` },
+    'g2-1': { kind: 'Trigger · Afiliado Inscrito em Campanha', title: 'Afiliado Inscrito em Campanha', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Afiliado Inscrito em Campanha</div></div>` },
     'g2-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Kit de Vendas Afiliado</div></div>` },
     'g2-3': { kind: 'Action · Contact', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Tag</div></div>` },
-    'g3-1': { kind: 'Trigger', title: 'New Affiliate Sales', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">New Affiliate Sales</div></div>` },
+    'g3-1': { kind: 'Trigger · New Affiliate Sales', title: 'New Affiliate Sales', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">New Affiliate Sales</div></div>` },
     'g3-2': { kind: 'Action · Communication', title: 'Send Email (Afiliado)', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field">{{affiliate.email}}</div></div>` },
     'g3-3': { kind: 'Action · Workflow', title: 'Create Task (CS)', body: `<div class="config-section"><div class="config-label">Título</div><div class="config-field highlight">Acompanhar novo cliente vindo de afiliado</div></div>` },
-    'g4-1': { kind: 'Trigger', title: 'Lead Criado por Afiliado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Lead Criado por Afiliado</div></div>` },
+    'g4-1': { kind: 'Trigger · Lead Criado por Afiliado', title: 'Lead Criado por Afiliado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Lead Criado por Afiliado</div></div>` },
     'g4-2': { kind: 'Action · Communication', title: 'Send WhatsApp', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">{{affiliate.phone}}</div></div>` },
     'g4-3': { kind: 'Action · Webhook', title: 'Google Sheets', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Google Sheets</div></div>` }
   };

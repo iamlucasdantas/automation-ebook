@@ -2511,7 +2511,7 @@
   <span class="click-hint">clique para ver ↗</span>
   <div class="ghl-node-header">
     <div class="ghl-node-icon trigger">T</div>
-    <div><div class="ghl-node-type">Trigger</div><div class="ghl-node-title">Invoice</div></div>
+    <div><div class="ghl-node-type">Trigger · Invoice</div><div class="ghl-node-title">Invoice</div></div>
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Invoice</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
 </div>
@@ -2733,7 +2733,7 @@
   <span class="click-hint">clique para ver ↗</span>
   <div class="ghl-node-header">
     <div class="ghl-node-icon trigger">T</div>
-    <div><div class="ghl-node-type">Trigger</div><div class="ghl-node-title">Payment Received</div></div>
+    <div><div class="ghl-node-type">Trigger · Payment Received</div><div class="ghl-node-title">Payment Received</div></div>
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Failed</span></div>
 <div class="ghl-node-param"><span class="pk">Origem</span><span class="pv highlight">Membership</span></div>
@@ -2976,7 +2976,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Order Form Submitted</div>
               <div class="ghl-node-title">Order Form Submitted</div>
             </div>
           </div>
@@ -3205,7 +3205,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Ordem Submetida</div>
               <div class="ghl-node-title">Ordem Submetida</div>
             </div>
           </div>
@@ -3444,7 +3444,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Documento Assinado</div>
               <div class="ghl-node-title">Documento Assinado</div>
             </div>
           </div>
@@ -3661,7 +3661,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Subscription Event</div>
               <div class="ghl-node-title">Subscription Event</div>
             </div>
           </div>
@@ -3884,7 +3884,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Refund Processed</div>
               <div class="ghl-node-title">Refund Processed</div>
             </div>
           </div>
@@ -4163,7 +4163,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Cupom Aplicado</div>
               <div class="ghl-node-title">Cupom Aplicado</div>
             </div>
           </div>
@@ -4378,7 +4378,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Cupom Limite Atingido</div>
               <div class="ghl-node-title">Cupom Limite Atingido</div>
             </div>
           </div>
@@ -4563,7 +4563,7 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger</div>
+              <div class="ghl-node-type">Trigger · Cupom Expirou</div>
               <div class="ghl-node-title">Cupom Expirou</div>
             </div>
           </div>
@@ -4687,38 +4687,38 @@
 </div>
 <script>
   const configData = {
-    'g1-1': { kind: 'Trigger', title: 'Invoice', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Invoice</div></div>` },
+    'g1-1': { kind: 'Trigger · Invoice', title: 'Invoice', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Invoice</div></div>` },
     'g1-2': { kind: 'Action · Wait', title: 'Set Event Date', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Set Event Date</div></div><div class="config-section"><div class="config-label">Event Date Field *</div><div class="config-field highlight dropdown">Custom Field · Date</div></div>` },
     'g1-3': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Wait</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field highlight dropdown">Wait For Time Delay</div></div>` },
     'g1-4': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Assunto</div><div class="config-field highlight">Sua cobrança vence em 3 dias</div></div>` },
-    'g2-1': { kind: 'Trigger', title: 'Payment Received', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight dropdown">Failed</div></div>` },
+    'g2-1': { kind: 'Trigger · Payment Received', title: 'Payment Received', body: `<div class="config-section"><div class="config-label">Status</div><div class="config-field highlight dropdown">Failed</div></div>` },
     'g2-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Template</div><div class="config-field highlight">Pagamento Falhou - Urgente</div></div>` },
     'g2-3': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Para</div><div class="config-field highlight">Equipe CS</div></div>` },
     'g2-4': { kind: 'Action · Contact', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Contact Tag</div></div>` },
-    'g3-1': { kind: 'Trigger', title: 'Order Form Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Order Form Submitted</div></div>` },
+    'g3-1': { kind: 'Trigger · Order Form Submitted', title: 'Order Form Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Order Form Submitted</div></div>` },
     'g3-2': { kind: 'Action · Opportunity', title: 'Create Opportunity', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Create Opportunity</div></div><div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field highlight dropdown">Pipeline de Vendas</div></div><div class="config-section"><div class="config-label">Stage *</div><div class="config-field highlight dropdown">Novo Lead</div></div><div class="config-section"><div class="config-label">Status</div><div class="config-field dropdown">Open</div></div>` },
     'g3-3': { kind: 'Action · Communication', title: 'Send Email Recuperação', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email Recuperação</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email Recuperação</div></div>` },
-    'g4-1': { kind: 'Trigger', title: 'Ordem Submetida', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Ordem Submetida</div></div>` },
+    'g4-1': { kind: 'Trigger · Ordem Submetida', title: 'Ordem Submetida', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Ordem Submetida</div></div>` },
     'g4-2': { kind: 'Action · Wait', title: 'Wait 30min', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Wait 30min</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field highlight dropdown">Wait For Time Delay</div></div>` },
     'g4-3': { kind: 'Action · If/Else', title: 'If pago?', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">If pago?</div></div>` },
     'g4-4': { kind: 'Action · Communication', title: 'Send Recuperação', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Recuperação</div></div>` },
-    'g5-1': { kind: 'Trigger', title: 'Documento Assinado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Documento Assinado</div></div>` },
+    'g5-1': { kind: 'Trigger · Documento Assinado', title: 'Documento Assinado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Documento Assinado</div></div>` },
     'g5-2': { kind: 'Action · Pagamentos', title: 'Create Invoice', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Create Invoice</div></div><div class="config-section"><div class="config-label">Amount</div><div class="config-field highlight">R$ valor</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">+7 days</div></div>` },
     'g5-3': { kind: 'Action · Communication', title: 'Send Boas-vindas', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Boas-vindas</div></div>` },
-    'g6-1': { kind: 'Trigger', title: 'Subscription Event', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Subscription Event</div></div>` },
+    'g6-1': { kind: 'Trigger · Subscription Event', title: 'Subscription Event', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Subscription Event</div></div>` },
     'g6-2': { kind: 'Action · Communication', title: 'Send Agradecimento', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Agradecimento</div></div>` },
     'g6-3': { kind: 'Action · Contacts', title: 'Score +20 (loyalty)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Score +20 (loyalty)</div></div>` },
-    'g7-1': { kind: 'Trigger', title: 'Refund Processed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Refund Processed</div></div>` },
+    'g7-1': { kind: 'Trigger · Refund Processed', title: 'Refund Processed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Refund Processed</div></div>` },
     'g7-2': { kind: 'Action · Cursos', title: 'Remove Offer Access', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remove Offer Access</div></div>` },
     'g7-3': { kind: 'Action · Contacts', title: 'Add Tag Ex-Cliente', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Tag Ex-Cliente</div></div>` },
     'g7-4': { kind: 'Action · Communication', title: 'Send Email Feedback', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email Feedback</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email Feedback</div></div>` },
-    'g8-1': { kind: 'Trigger', title: 'Cupom Aplicado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom Aplicado</div></div>` },
+    'g8-1': { kind: 'Trigger · Cupom Aplicado', title: 'Cupom Aplicado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom Aplicado</div></div>` },
     'g8-2': { kind: 'Action · Contacts', title: 'Add Tag Origem', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Tag Origem</div></div>` },
     'g8-3': { kind: 'Action · Webhook', title: 'Google Sheets', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Google Sheets</div></div>` },
-    'g9-1': { kind: 'Trigger', title: 'Cupom Limite Atingido', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom Limite Atingido</div></div>` },
+    'g9-1': { kind: 'Trigger · Cupom Limite Atingido', title: 'Cupom Limite Atingido', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom Limite Atingido</div></div>` },
     'g9-2': { kind: 'Action · Communication', title: 'Slack Alert', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Slack Alert</div></div>` },
     'g9-3': { kind: 'Action · If/Else', title: 'Update Custom Value', body: `<div class="config-section"><div class="config-label">Variável</div><div class="config-field highlight">cupom_ativo</div></div>` },
-    'g10-1': { kind: 'Trigger', title: 'Cupom Expirou', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom Expirou</div></div>` },
+    'g10-1': { kind: 'Trigger · Cupom Expirou', title: 'Cupom Expirou', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom Expirou</div></div>` },
     'g10-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email</div></div>` }
   };
 
