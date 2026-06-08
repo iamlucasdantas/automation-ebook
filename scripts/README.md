@@ -31,11 +31,27 @@ Transformations applied (in order):
 Files in `HAND_CRAFTED` are skipped — they are maintained at higher
 fidelity by hand.
 
+## append-changelog.py
+
+After `auto-refine.py` runs in the weekly workflow, this script appends
+a new entry at the top of `CHANGELOG.md` listing the files that drifted
+and what the refine pass did. Skipped if no drift was detected.
+
+```bash
+python3 scripts/append-changelog.py
+```
+
 ## Weekly automation
 
-`.github/workflows/weekly-refine.yml` runs this script every Monday
-at 09:00 BRT. If any drift is detected, it opens a PR against `main`
-with the diff.
+`.github/workflows/weekly-refine.yml` runs every Monday at 09:00 BRT:
+
+1. `auto-refine.py` applies the mechanical refinements.
+2. `append-changelog.py` records the changes in `CHANGELOG.md`.
+3. If any drift was detected, a PR is opened against `main` carrying
+   both the file diffs and the new CHANGELOG entry.
+
+Open the [Changelog](../CHANGELOG.md) anytime to see what's changed
+session-by-session.
 
 For deeper improvements that need judgment (e.g., per-action HL field
 research, copy editing), open a Claude Code session from the GitHub

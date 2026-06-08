@@ -21,6 +21,9 @@ jobs:
       - name: Apply mechanical refinements
         run: python3 scripts/auto-refine.py
 
+      - name: Append CHANGELOG entry if changes
+        run: python3 scripts/append-changelog.py
+
       - name: Commit and open PR if changes
         run: |
           if [[ -z "$(git status --porcelain)" ]]; then
@@ -31,13 +34,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
-          git add deploy-highlevel/
+          git add deploy-highlevel/ CHANGELOG.md
           git commit -m "Weekly mockup refine ($(date -u +%Y-%m-%d))"
           git push origin "$BRANCH"
           gh pr create \
             --base main \
             --head "$BRANCH" \
             --title "Weekly mockup refine — $(date -u +%Y-%m-%d)" \
-            --body "Automated refinement run by scripts/auto-refine.py. Review the diff, then merge to publish."
+            --body "Automated refinement run by scripts/auto-refine.py. Review the diff (incl. CHANGELOG entry), then merge to publish."
         env:
           GH_TOKEN: ${{ github.token }}
