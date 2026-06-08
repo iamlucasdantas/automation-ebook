@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-08 — Content · New Integration Categories
+**Add Integrações Externas: 4 new triggers (cat13) + 12 new actions (cat15)**
+
+- New file `guia-highlevel-cat13.html` — Triggers: Integrações Externas
+  - Google Forms · Nova Resposta (Polling 5 min, OAuth)
+  - Typeform · Nova Entrada (Tempo real, OAuth)
+  - Apify · Ator Finalizado (Polling 5 min, API Key)
+  - Vapi · Chamada IA Finalizada (Tempo real, Webhook)
+- New file `acoes-highlevel-cat15.html` — Actions: Integrações Externas
+  - Google Forms (4): Buscar por ID, Buscar por Nome, Buscar Resposta por ID, Buscar Respostas por Nome
+  - Apify (3): Executar Ator, Buscar Itens do Dataset, Iniciar Tarefa
+  - Vapi (2): Criar Chamada IA, Criar Chat IA
+  - Klaviyo (2): Criar/Atualizar Contato, Adicionar à Lista
+  - HubSpot (1): Criar/Atualizar Contato
+- Updated `index.html`: stats → 78 gatilhos / 119 ações / 197 painéis / 30 mockups; tabs 13 cat / 15 cat
+- Updated `guia-highlevel-cat12.html`: breadcrumb 12/13, nav → cat13
+- Updated `acoes-highlevel-cat14.html`: breadcrumb 14/15, nav → cat15
+- Updated `sitemap.xml`: added 2 new page URLs
+
+---
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
