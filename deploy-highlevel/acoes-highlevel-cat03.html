@@ -2437,11 +2437,12 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Envio de Dados · 3 ações</div>
+  <div class="side-section-label">Envio de Dados · 4 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Webhook de Saída</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Google Sheets</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Enviar Dados pra API Custom</a>
+    <a href="#a4" class="side-link"><span class="side-num">04</span>Custom Code</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2460,10 +2461,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 03/14</span>
   <h1 class="hero-title">Ações de <em>Envio de Dados</em>.</h1>
-  <p class="hero-desc">As ações de envio de dados são o inverso do Webhook de Entrada. Enquanto o webhook recebe, essas ações ENVIAM dados pra fora — pra Make, n8n, Zapier, planilhas ou qualquer API externa.</p>
+  <p class="hero-desc">As ações de envio de dados são o inverso do Webhook de Entrada. Enquanto o webhook recebe, essas ações ENVIAM dados pra fora — pra Make, n8n, Zapier, planilhas, qualquer API externa, ou via código JavaScript customizado.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">3</span>
+      <span class="hero-stat-num">4</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -2912,6 +2913,168 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a4" data-name="custom code código customizado javascript avançado">
+  <div class="acao-head">
+    <div class="acao-num">04</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Integração</div>
+      <h2 class="acao-name">Código Customizado</h2>
+      <div class="acao-en">Custom Code</div>
+      <div class="acao-tags">
+        <span class="info-tag">JavaScript</span>
+        <span class="info-tag">Avançado</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Executa código JavaScript customizado dentro do workflow. Dá acesso a todos os dados do contato via InputData, permite fazer chamadas HTTP externas, manipular strings/datas/arrays, e retornar variáveis customizadas pra usar nos próximos passos. Desde 2024, tem gerador de código com IA: descreva em português o que quer fazer e o sistema gera o código.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Formatação avançada</div>
+        <div class="use-case-desc">Pega campos do formulário + formata + calcula score personalizado.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Chamada HTTP customizada</div>
+        <div class="use-case-desc">Envia dados pra API sem webhook padrão, com lógica de retry.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Transformação de dados</div>
+        <div class="use-case-desc">Converte formato de data, normaliza telefone, capitaliza nome.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Action Name (obrigatório), Code Editor (JavaScript), Properties/Input (pares chave-valor com dados do contato), Output Properties (variáveis retornadas para os próximos passos).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a4">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Envio de Dados/ a4 — Custom Code · Score Personalizado</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a4">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Form Submitted</div>
+              <div class="ghl-node-title">Form Submitted</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Form Submitted</span></div><div class="ghl-node-param"><span class="pk">Form</span><span class="pv">Formulário Qualificação</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">&lt;/&gt;</div>
+            <div>
+              <div class="ghl-node-type">Action · Custom Code</div>
+              <div class="ghl-node-title">Custom Code</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Calcular Score Lead</span></div><div class="ghl-node-param"><span class="pk">Properties</span><span class="pv">nome, empresa, faturamento</span></div><div class="ghl-node-param"><span class="pk">Output</span><span class="pv highlight">score_lead, segmento</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">F</div>
+            <div>
+              <div class="ghl-node-type">Action · Contact</div>
+              <div class="ghl-node-title">Update Contact Field</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Update Contact Field</span></div><div class="ghl-node-param"><span class="pk">Field</span><span class="pv highlight dropdown">Custom Field · Status</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv">Atualizado via workflow</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A4 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Custom Code: <span class='arrow'>→</span> <strong>Properties</strong> (inputs do contato), <span class='arrow'>→</span> <strong>Code Editor</strong> (JS), <span class='arrow'>→</span> <strong>Output Properties</strong> (variáveis retornadas).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Custom Code</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Calcular Score Lead" readonly></div>
+<div class="hl-section-head">Properties (Input)</div>
+<div class="hl-filter-row"><div class="hl-filter-label">nome</div><input class="hl-input" value="{{contact.first_name}} {{contact.last_name}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">empresa</div><input class="hl-input" value="{{contact.company_name}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">faturamento</div><input class="hl-input" value="{{contact.custom_faturamento}}"></div>
+<div class="hl-section-head">Code Editor</div>
+<div class="hl-filter-row">
+<textarea class="hl-input" rows="5" style="resize: vertical; font-family: 'JetBrains Mono', monospace; font-size: 11px;">// Exemplo de score simples
+const score = inputData.faturamento > 100000 ? 8 : 4;
+const segmento = score >= 7 ? 'enterprise' : 'smb';
+return { score_lead: score, segmento };</textarea></div>
+<div class="hl-section-head" style="color: var(--brand-accent);">⚡ Generate with AI</div>
+<div class="hl-field-help" style="color: var(--brand-accent);">Descreva em português o que quer fazer — o HighLevel gera o código automaticamente.</div>
+<div class="hl-section-head">Output Properties</div>
+<div class="hl-filter-row"><div class="hl-filter-label">score_lead</div><input class="hl-input" value="score_lead" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">segmento</div><input class="hl-input" value="segmento" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Executa JavaScript customizado e retorna variáveis pro próximo passo do workflow</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -2930,7 +3093,7 @@
 
   <div class="footer-top">
     <h3>Categoria 03 completa.</h3>
-    <p>3 ações de Envio de Dados explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>4 ações de Envio de Dados explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3042,7 +3205,10 @@
     'a2-1': { kind: 'Trigger · Invoice Paid', title: 'Invoice Paid', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Invoice Paid</div></div>` },
     'a2-2': { kind: 'Action · Webhook', title: 'Google Sheets', body: `<div class="config-section"><div class="config-label">Planilha</div><div class="config-field highlight">Vendas 2026</div></div>` },
     'a3-1': { kind: 'Trigger · Contact Created', title: 'Contact Created', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Contact Created</div></div>` },
-    'a3-2': { kind: 'Action · Webhook', title: 'Custom API Call', body: `<div class="config-section"><div class="config-label">Endpoint</div><div class="config-field highlight">/api/v2/customers</div></div>` }
+    'a3-2': { kind: 'Action · Webhook', title: 'Custom API Call', body: `<div class="config-section"><div class="config-label">Endpoint</div><div class="config-field highlight">/api/v2/customers</div></div>` },
+    'a4-1': { kind: 'Trigger · Form Submitted', title: 'Form Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Form Submitted</div></div>` },
+    'a4-2': { kind: 'Action · Custom Code', title: 'Custom Code', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Calcular Score Lead</div></div><div class="config-section"><div class="config-label">Properties</div><div class="config-field">nome, empresa, faturamento</div></div>` },
+    'a4-3': { kind: 'Action · Contact', title: 'Update Contact Field', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Update Contact Field</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · Status</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);
