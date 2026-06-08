@@ -2560,7 +2560,7 @@
               <div class="ghl-node-title">Grant Group Access</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Group Access</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Group Access</span></div><div class="ghl-node-param"><span class="pk">Invoice Source</span><span class="pv highlight">Curso</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Paid</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2693,7 +2693,7 @@
               <div class="ghl-node-title">Revoke Group Access</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Group Access</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Group Access</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2826,7 +2826,7 @@
               <div class="ghl-node-title">Grant Private Channel</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Private Channel</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Private Channel</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2962,7 +2962,7 @@
               <div class="ghl-node-title">Revoke Channel</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Channel</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Channel</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3412,13 +3412,10 @@
 
   const configData = {
     'a1-1': { kind: 'Trigger · Invoice Paid · Curso', title: 'Invoice Paid · Curso', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Invoice Paid · Curso</div></div>` },
-    'a1-2': { kind: 'Action · Comunidades', title: 'Grant Group Access', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Grant Group Access</div></div>` },
+    'a1-2': { kind: 'Action · Comunidades', title: 'Grant Group Access', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Grant Group Access</div></div><div class="config-section"><div class="config-label">Invoice Source</div><div class="config-field highlight">Curso</div></div>` },
     'a2-1': { kind: 'Trigger · Sub Canceled', title: 'Sub Canceled', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Sub Canceled</div></div>` },
-    'a2-2': { kind: 'Action · Comunidades', title: 'Revoke Group Access', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Revoke Group Access</div></div>` },
     'a3-1': { kind: 'Trigger · Atingiu Nível 5', title: 'Atingiu Nível 5', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Atingiu Nível 5</div></div>` },
-    'a3-2': { kind: 'Action · Comunidades', title: 'Grant Private Channel', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Grant Private Channel</div></div>` },
     'a4-1': { kind: 'Trigger · Desceu pra Nível 3', title: 'Desceu pra Nível 3', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Desceu pra Nível 3</div></div>` },
-    'a4-2': { kind: 'Action · Comunidades', title: 'Revoke Channel', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Revoke Channel</div></div>` },
     'a5-1': { kind: 'Trigger · Pontos > 1000', title: 'Pontos > 1000', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pontos &amp;gt; 1000</div></div>` },
     'a5-2': { kind: 'Action · Comunidades', title: 'Assign Level', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Assign Level</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field highlight dropdown">Round-robin SDR</div></div>` },
     'a6-1': { kind: 'Trigger · Data · Lançamento Curso', title: 'Data · Lançamento Curso', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Data · Lançamento Curso</div></div>` },

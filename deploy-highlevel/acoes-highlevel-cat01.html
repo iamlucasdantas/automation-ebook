@@ -3134,7 +3134,7 @@
               <div class="ghl-node-title">Modify Engagement Score</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Modify Engagement Score</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Modify Engagement Score</span></div><div class="ghl-node-param"><span class="pk">Webhook URL</span><span class="pv highlight">services/leadconnectorhq/hooks/...</span></div><div class="ghl-node-param"><span class="pk">Sample Payload</span><span class="pv">{&quot;product_id&quot;:&quot;...&quot;,&quot;buyer_email&quot;:&quot;...&quot;}</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -4630,7 +4630,7 @@ Próximo passo: agendar demo.</textarea>
               <div class="ghl-node-title">Delete Contact</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Delete Contact</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Delete Contact</span></div><div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv highlight">Vendas</span></div><div class="ghl-node-param"><span class="pk">From Stage</span><span class="pv">Qualquer</span></div><div class="ghl-node-param"><span class="pk">To Stage</span><span class="pv">Qualquer</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -4941,7 +4941,7 @@ Próximo passo: agendar demo.</textarea>
               <div class="ghl-node-title">Add Contact Followers</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Contact Followers</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Contact Followers</span></div><div class="ghl-node-param"><span class="pk">Event Type</span><span class="pv highlight">Link Clicked</span></div><div class="ghl-node-param"><span class="pk">Campaign</span><span class="pv">Campaign específica</span></div><div class="ghl-node-param"><span class="pk">Link URL</span><span class="pv">URL específica</span></div></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a15-3">
@@ -5097,7 +5097,7 @@ Próximo passo: agendar demo.</textarea>
               <div class="ghl-node-title">Remove Contact Followers</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remove Contact Followers</span></div><div class="ghl-node-param"><span class="pk">Configuração</span><span class="pv">Configurar conforme necessidade</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remove Contact Followers</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Assigned User</span></div><div class="ghl-node-param"><span class="pk">Notification Type</span><span class="pv highlight">In-app + Email</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv highlight">{{contact.first_name}} precisa de atenção.</span></div></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -5291,7 +5291,7 @@ Próximo passo: agendar demo.</textarea>
     'a3-3': { kind: 'Action · Contacts', title: 'Update Contact Field', body: `<div class="config-section"><div class="config-label">Campo</div><div class="config-field highlight">data_primeira_call</div></div>` },
     'a4-1': { kind: 'Trigger · Email Link Clicked', title: 'Email Link Clicked', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Email Link Clicked</div></div>` },
     'a4-2': { kind: 'Action · Contacts', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Tag</div></div>` },
-    'a4-3': { kind: 'Action · Contacts', title: 'Modify Engagement Score', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Modify Engagement Score</div></div>` },
+    'a4-3': { kind: 'Action · Contacts', title: 'Modify Engagement Score', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Modify Engagement Score</div></div><div class="config-section"><div class="config-label">Webhook URL</div><div class="config-field highlight">services/leadconnectorhq/hooks/...</div></div>` },
     'a5-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Opportunity Status Changed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Opportunity Status Changed</div></div>` },
     'a5-2': { kind: 'Action · Contacts', title: 'Remove Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remove Tag</div></div>` },
     'a5-3': { kind: 'Action · Contacts', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Tag</div></div>` },
@@ -5318,16 +5318,16 @@ Próximo passo: agendar demo.</textarea>
     'a13-1': { kind: 'Trigger · Form · Solicitar Exclusão', title: 'Form · Solicitar Exclusão', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Form · Solicitar Exclusão</div></div>` },
     'a13-2': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email</div></div>` },
     'a13-3': { kind: 'Action · Wait', title: 'Wait', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Wait</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field highlight dropdown">Wait For Time Delay</div></div>` },
-    'a13-4': { kind: 'Action · Contacts', title: 'Delete Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Delete Contact</div></div>` },
+    'a13-4': { kind: 'Action · Contacts', title: 'Delete Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Delete Contact</div></div><div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field highlight dropdown">Vendas</div></div><div class="config-section"><div class="config-label">From Stage</div><div class="config-field">Qualquer</div></div>` },
     'a14-1': { kind: 'Trigger · Email Link Clicked', title: 'Email Link Clicked', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Email Link Clicked</div></div>` },
     'a14-2': { kind: 'Action · Contacts', title: 'Modify Engagement Score', body: `<div class="config-section"><div class="config-label">Ajuste</div><div class="config-field highlight">Add</div></div>` },
     'a14-3': { kind: 'Action · If/Else', title: 'If/Else', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">If/Else</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Value · Status</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Equals</div></div>` },
     'a14-4': { kind: 'Action · Contacts', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Tag</div></div>` },
     'a15-1': { kind: 'Trigger · Tag Added', title: 'Tag Added', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Tag Added</div></div>` },
-    'a15-2': { kind: 'Action · Contacts', title: 'Add Contact Followers', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Contact Followers</div></div>` },
+    'a15-2': { kind: 'Action · Contacts', title: 'Add Contact Followers', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add Contact Followers</div></div><div class="config-section"><div class="config-label">Event Type</div><div class="config-field highlight">Link Clicked</div></div><div class="config-section"><div class="config-label">Campaign</div><div class="config-field">Campaign específica</div></div>` },
     'a15-3': { kind: 'Action · Communication', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Internal Notification</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field highlight dropdown">Assigned User</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Internal Notification</div></div>` },
     'a16-1': { kind: 'Trigger · Tag Added', title: 'Tag Added', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Tag Added</div></div>` },
-    'a16-2': { kind: 'Action · Contacts', title: 'Remove Contact Followers', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remove Contact Followers</div></div>` }
+    'a16-2': { kind: 'Action · Contacts', title: 'Remove Contact Followers', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remove Contact Followers</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field highlight dropdown">Assigned User</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);
