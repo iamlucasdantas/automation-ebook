@@ -33,6 +33,7 @@ ROOT = os.path.join(os.path.dirname(__file__), '..', 'deploy-highlevel')
 # bodies + configData are preserved as-is.
 HAND_CRAFTED = {
     os.path.join(ROOT, 'guia-highlevel-cat01.html'),
+    os.path.join(ROOT, 'guia-highlevel-cat02.html'),
 }
 
 # ---------- 1. Label standardization ----------
