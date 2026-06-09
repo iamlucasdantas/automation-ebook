@@ -2437,13 +2437,15 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Marketing · 5 ações</div>
+  <div class="side-section-label">Marketing · 7 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Adicionar a Campanha</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Remover de Campanha</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Adicionar à Audiência Facebook</a>
     <a href="#a4" class="side-link"><span class="side-num">04</span>Remover de Audiência FB</a>
     <a href="#a5" class="side-link"><span class="side-num">05</span>Adicionar ao Smart List</a>
+    <a href="#a6" class="side-link"><span class="side-num">06</span>Adicionar ao Google Analytics</a>
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Adicionar ao Google Ads</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2462,10 +2464,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 09/14</span>
   <h1 class="hero-title">Ações de <em>Marketing</em>.</h1>
-  <p class="hero-desc">5 ações pra operações de marketing — adicionar/remover de campanhas, listas, tags de marketing, integração com Facebook Audiences.</p>
+  <p class="hero-desc">7 ações pra operações de marketing — campanhas, Smart Lists, Facebook Audiences, Google Analytics e Google Ads. Rastreie conversões e publique audiências direto do HighLevel.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">5</span>
+      <span class="hero-stat-num">7</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3141,6 +3143,184 @@
     </div>
   </div>
 
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     AÇÃO 06 — ADICIONAR AO GOOGLE ANALYTICS (Add to Google Analytics)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="acao-block" id="a6" data-name="google analytics evento rastreamento conversão ga4">
+  <div class="acao-head">
+    <div class="acao-num">06</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Marketing · Analytics</div>
+      <h2 class="acao-name">Adicionar ao Google Analytics</h2>
+      <div class="acao-en">Add to Google Analytics</div>
+      <div class="acao-tags">
+        <span class="info-tag">Nativo</span>
+        <span class="info-tag">GA4</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Envia um <strong>evento personalizado</strong> para o Google Analytics 4 com dados do contato — sem precisar de código, sem pixel, diretamente do workflow. Perfeito para rastrear conversões offline: formulários preenchidos, consultas agendadas, pagamentos realizados.</p>
+      <p>Requer que sua conta Google Analytics esteja conectada na subconta HighLevel (Settings → Integrations → Google Analytics).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Rastrear lead qualificado</div>
+        <div class="use-case-desc">Tag "Lead Quente" adicionada → Add to Google Analytics com evento "qualified_lead" → atribui conversão à campanha correta.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Conversão offline no GA4</div>
+        <div class="use-case-desc">Pagamento recebido → enviar evento "purchase" com valor → GA4 reporta ROI real por canal de aquisição.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Audiências de remarketing</div>
+        <div class="use-case-desc">Contato agendou consulta → evento "appointment_booked" → GA4 cria audiência para remarketing com Google Ads.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 04</div>
+        <div class="use-case-title">Funil de conversão detalhado</div>
+        <div class="use-case-desc">Cada etapa do funil gera um evento diferente: "lead_created", "demo_scheduled", "proposal_sent", "deal_closed".</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A6 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Campos: <span class='arrow'>→</span> <strong>Analytics Type</strong> (GA4 / Universal), <span class='arrow'>→</span> <strong>Tracking ID</strong>, <span class='arrow'>→</span> <strong>Event Name</strong>, <span class='arrow'>→</span> <strong>Parameters</strong> (chave/valor).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Add to Google Analytics</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Rastrear lead qualificado — GA4" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Analytics Type <span class="req">*</span></div><div class="hl-dropdown has-value">Google Analytics 4</div><div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Google Analytics 4</span><span class="opt-chip">Universal Analytics</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Tracking ID <span class="req">*</span></div><input class="hl-input" value="G-XXXXXXXXXX" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Event Name <span class="req">*</span></div><input class="hl-input" value="qualified_lead" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Parameters</div><div class="hl-dropdown has-value">lead_source · {{contact.source}}</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Envia evento customizado para GA4 sem código</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     AÇÃO 07 — ADICIONAR AO GOOGLE ADS (Add to Google Ads)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="acao-block" id="a7" data-name="google ads conversão adwords remarketing offline">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Marketing · Ads</div>
+      <h2 class="acao-name">Adicionar ao Google Ads</h2>
+      <div class="acao-en">Add to Google Ads</div>
+      <div class="acao-tags">
+        <span class="info-tag">Nativo</span>
+        <span class="info-tag">Google Ads</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Envia um <strong>evento de conversão</strong> diretamente para o Google Ads via API — sem tag no site, sem pixel. Ideal para rastrear conversões offline: quando o cliente liga, agenda, paga ou fecha negócio depois de ter clicado num anúncio.</p>
+      <p>Requer que sua conta Google Ads esteja conectada na subconta HighLevel. Permite que o algoritmo do Google Ads otimize os lances para o que realmente importa — conversão real, não só clique.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Conversão de agendamento</div>
+        <div class="use-case-desc">Cliente clicou no anúncio → agendou consulta → Add to Google Ads "appointment_booked" → Google otimiza pra quem agenda.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Conversão de venda</div>
+        <div class="use-case-desc">Pagamento confirmado → enviar evento "purchase" com valor → Google Ads calcula ROAS real da campanha.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Smart Bidding preciso</div>
+        <div class="use-case-desc">Sinalizar para o Google Ads quem virou cliente de alto valor → algoritmo busca pessoas com perfil similar → custo por aquisição cai.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 04</div>
+        <div class="use-case-title">Audiência de remarketing</div>
+        <div class="use-case-desc">Oportunidade perdida → Add to Google Ads como audiência de remarketing → re-exibir anúncios com oferta diferente.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A7 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Campos: <span class='arrow'>→</span> <strong>Conversion Action</strong> (dropdown das conversões do Google Ads), <span class='arrow'>→</span> <strong>Conversion Value</strong>, <span class='arrow'>→</span> <strong>Transaction ID</strong> (deduplicação).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Add to Google Ads</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Conversão agendamento — Google Ads" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Conversion Action <span class="req">*</span></div><div class="hl-dropdown has-value">Agendamento Confirmado</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Conversion Value</div><input class="hl-input" value="{{opportunity.monetary_value}}" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Currency Code</div><div class="hl-dropdown has-value">BRL</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Transaction ID</div><input class="hl-input" value="{{contact.id}}" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Envia conversão offline para Google Ads via API — sem pixel no site</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3159,7 +3339,7 @@
 
   <div class="footer-top">
     <h3>Categoria 09 completa.</h3>
-    <p>5 ações de Marketing explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>7 ações de Marketing explicadas com impacto prático — incluindo as novas integrações nativas com Google Analytics e Google Ads.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3193,7 +3373,7 @@
   </div>
 
   <div class="footer-legal">
-    Guia oficial Magnetic Funnels · Parte 2 · Categoria 09 de 14 · Atualizado em 2026
+    Guia oficial Magnetic Funnels · Parte 2 · Categoria 09 de 14 · Atualizado em 09 de junho de 2026
   </div>
 </div>
 

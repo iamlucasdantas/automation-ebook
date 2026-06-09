@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-09 — Content
+**Add 3 new native triggers and 2 new native actions**
+
+- **Gatilho 18 · Agendador (Scheduler)** added to cat02 (Eventos): native contactless time-based trigger supporting Hourly/Daily/Weekly/Monthly/Custom/Cron schedules. First contactless trigger in the guide.
+- **Gatilho 03 · Reserva de Serviço (Service Booking v2)** added to cat03 (Compromissos): new Services v2 trigger with filters for Service, Category, Status, Location.
+- **Gatilho 04 · Avaliação de Produto (Product Review Submitted)** added to cat08 (Shopify/Ecommerce): fires when customer submits a product review; filters by Rating, Product, Store, Keywords.
+- **Ação 06 · Adicionar ao Google Analytics** added to cat09 (Marketing): native GA4 event sending without code; supports Event Name and Parameters.
+- **Ação 07 · Adicionar ao Google Ads** added to cat09 (Marketing): native offline conversion tracking for Google Ads via API; supports Conversion Action, Value, Currency, Transaction ID.
+- index.html stats updated: 74→77 gatilhos, 107→109 ações, 181→186 painéis, 28→31 mockups.
+- All updated pages stamped with "Atualizado em 09 de junho de 2026".
+
+---
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
