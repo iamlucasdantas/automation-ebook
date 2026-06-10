@@ -10,6 +10,17 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-10 — Content
+**Add new native triggers and actions: Google Lead Form, Empresas, Objetos**
+
+- NEW: Trigger g19 `Google Lead Form Submitted` added to Categoria 02 (Eventos) — integration released Dec 2025
+- NEW: Categoria 13 `Empresas` with 2 triggers: `Company Created` + `Company Changed` — native B2B account-level automation
+- NEW: Categoria de Ações 15 `Empresas & Objetos` with 4 actions: `Find Company`, `Add Associated Records to Workflow`, `Remove Associated Records from Workflow`, `Find Object Record`
+- Updated index.html: 76→79 triggers, 108→112 actions, 26→28 categories, Eventos count 18→19
+- Added last update date display (10/06/2026) to homepage hero section
+
+---
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
