@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-11 — Content
+**Add 9 new native triggers and 15 new actions — Cal.com, Custom Objects, Google Contacts, Workflow AI**
+
+- **Gatilhos · Cat03 (Compromissos):** +4 Cal.com triggers — Booking Created, Booking Rescheduled, Booking Cancelled, Meeting Ended. Category grows from 2 → 6 triggers.
+- **Ações · Cat05 (Workflow AI):** +2 actions — AI Agent (autonomous multi-step execution) and AI Decision Maker (AI-powered branch routing). Category grows from 5 → 7 actions.
+- **Ações · Cat06 (Agendamentos):** +4 Cal.com actions — Create Booking, Cancel Booking, Reschedule Booking, Find Booking. Category grows from 3 → 7 actions.
+- **Nova Cat13 (Gatilhos · Objetos Personalizados):** 3 new triggers — Object Created, Object Updated, Object Deleted. Full interactive mockups.
+- **Nova Cat14 (Gatilhos · Google Contatos):** 2 new triggers — New Google Contact, New Google Group. Full interactive mockups.
+- **Nova Cat15 (Ações · Objetos Personalizados):** 3 new actions — Create Object Record, Update Object Record, Find Object Record.
+- **Nova Cat16 (Ações · Google Contatos):** 6 new actions — Create Contact, Update Contact, Find Contact, Find or Create Contact, Create Group, Add Contact to Group.
+- **index.html:** Updated hero stats (76→85 gatilhos, 108→123 ações, 184→208 painéis, 31→43 mockups), tab counts (12→14 cats / 14→16 cats), added new category cards for cat13–cat16, updated last-update date to 11/06/2026.
+- Total: 85 gatilhos · 123 ações · 30 categorias
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
