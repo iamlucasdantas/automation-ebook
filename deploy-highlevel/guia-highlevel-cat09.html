@@ -2614,8 +2614,8 @@
 </div>
 <script>
   const configData = {
-    'g1-1': { kind: 'Trigger · Start IVR Trigger', title: 'Start IVR Trigger', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Start IVR Trigger</div></div>` },
-    'g1-3': { kind: 'Action · IVR', title: 'IVR Menu Route', body: `<div class="config-section"><div class="config-label">Opção 1</div><div class="config-field">Vendas → Ramal 100</div></div><div class="config-section"><div class="config-label">Opção 2</div><div class="config-field">Suporte → Ramal 200</div></div>` }
+    'g1-1': { kind: 'Trigger · IVR Started', title: 'IVR Started', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Atendimento IVR — roteamento</div></div><div class="config-section"><div class="config-label">IVR Number *</div><div class="config-field highlight dropdown">+55 11 4000-1000 (pool principal)</div></div><div class="config-section"><div class="config-label">Direction *</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Time Window</div><div class="config-field">08:00–22:00 BRT (weekdays)</div></div>` },
+    'g1-2': { kind: 'Action · If/Else', title: 'If/Else (horário comercial?)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Direcionar por horário</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Custom Value · current_time_brt</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Between</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">08:00 – 18:00 weekdays</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);
