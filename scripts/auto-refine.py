@@ -43,6 +43,7 @@ HAND_CRAFTED = {
     os.path.join(ROOT, 'guia-highlevel-cat09.html'),
     os.path.join(ROOT, 'guia-highlevel-cat10.html'),
     os.path.join(ROOT, 'guia-highlevel-cat11.html'),
+    os.path.join(ROOT, 'guia-highlevel-cat12.html'),
 }
 
 # ---------- 1. Label standardization ----------
