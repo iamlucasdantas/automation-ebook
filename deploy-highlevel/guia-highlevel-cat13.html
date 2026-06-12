@@ -3,16 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ações do HighLevel — Guia Magnetic Funnels</title>
+<title>Gatilhos de Agendamento — Guia HighLevel</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
 
-<meta name="description" content="Guia completo dos gatilhos de Contatos do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 01/12 do guia oficial em português." />
+<meta name="description" content="Guia completo do gatilho Agendador de Workflow do HighLevel. Único gatilho sem contato — dispara por horário. Parte 13/13 do guia oficial em português." />
 <meta name="author" content="Magnetic Funnels" />
-<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, gatilhos, contatos, CRM, workflow, PT-BR" />
+<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, gatilhos, certificados, CRM, workflow, PT-BR" />
 
 <!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Gatilhos de Agendamento — Guia HighLevel" />
+<meta property="og:description" content="Guia completo do gatilho Agendador de Workflow do HighLevel. Único gatilho sem contato — dispara por horário. Parte 13/13 do guia oficial em português." />
+<meta property="og:site_name" content="Magnetic Funnels" />
+<meta property="og:locale" content="pt_BR" />
 
 <!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gatilhos de Agendamento — Guia HighLevel" />
+<meta name="twitter:description" content="Guia completo do gatilho Agendador de Workflow do HighLevel. Único gatilho sem contato — dispara por horário. Parte 13/13 do guia oficial em português." />
 
 
 <!--
@@ -1852,78 +1860,6 @@
 
 
 
-  /* Ajustes específicos das páginas de Ações — mesma aparência dos gatilhos */
-
-  .acao-num {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    background: var(--brand-accent);
-    color: var(--brand-ink);
-    border-radius: 12px;
-    font-family: 'Bebas Neue', 'Poppins', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .acao-block {
-    padding: 48px 72px;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  .acao-head {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 32px;
-    align-items: flex-start;
-  }
-
-  .acao-titles { flex: 1; min-width: 0; }
-
-  .acao-cat {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--brand-accent);
-    margin-bottom: 8px;
-    font-weight: 600;
-  }
-
-  .acao-name {
-    font-family: 'Bebas Neue', 'Poppins', sans-serif;
-    font-size: clamp(28px, 4vw, 38px);
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    line-height: 1.1;
-    color: var(--brand-ink);
-    margin-bottom: 4px;
-  }
-
-  .acao-en {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
-
-  .acao-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-
-  @media (max-width: 900px) {
-    .acao-block { padding: 32px 24px; }
-    .acao-head { gap: 16px; }
-    .acao-num { width: 40px; height: 40px; font-size: 18px; }
-  }
-
-
-
 
 
   /* ═══════════════════════════════════════════════════════════════════════
@@ -2416,7 +2352,7 @@
 </head>
 <body>
 
-<!-- TOP NAV — toggle HL/MF + voltar ao índice -->
+<!-- TOP NAV -->
 <div class="top-nav">
   <div class="top-nav-left">
     <button class="mobile-menu-btn" onclick="toggleDrawer()" aria-label="Abrir menu">☰</button>
@@ -2425,902 +2361,194 @@
       <span>Voltar ao índice</span>
     </a>
     <div class="top-nav-divider"></div>
-    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>05/14</strong> · <strong>Workflow AI</strong></div>
+    <div class="top-nav-breadcrumb">Parte 1 · Gatilhos · <strong>13/13</strong> · <strong>Agendamento</strong></div>
   </div>
 </div>
 
 <div class="app">
-
 <aside>
-  <div class="side-brand">Ações<br><span class="brand-thin">HighLevel.</span></div>
-  <div class="side-cat">Parte 2 · Ações · Categoria 05</div>
+  <div class="side-brand">Gatilhos<br><span class="brand-thin">HighLevel.</span></div>
+  <div class="side-cat">Categoria 13 · Agendamento</div>
+  <input type="text" class="side-search" id="search" placeholder="Buscar gatilho..." />
 
-  <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
-
-  <div class="side-section-label">Workflow AI · 6 ações</div>
-  <nav class="side-nav">
-    <a href="#a1" class="side-link"><span class="side-num">01</span>Generate Text (Texto)</a>
-    <a href="#a2" class="side-link"><span class="side-num">02</span>Parse Image (Analisar Imagem)</a>
-    <a href="#a3" class="side-link"><span class="side-num">03</span>Summarize Conversation</a>
-    <a href="#a4" class="side-link"><span class="side-num">04</span>Extract Info</a>
-    <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
-    <a href="#a6" class="side-link"><span class="side-num">06</span>AI Agent</a>
-  </nav>
+  <div class="side-section-label">Agendamento</div>
+<nav class="side-nav">
+<a href="#g1" class="side-link"><span class="side-num">01</span>Agendador de Workflow</a>
+</nav>
 
   <div class="side-cta-fixed">
     <div class="side-cta-card">
       <div class="side-cta-tag">Afiliado oficial · Oferta exclusiva</div>
       <div class="side-cta-title">Crie sua ferramenta.</div>
-      <div class="side-cta-desc">
-        Tenha seu próprio HighLevel e venda pra sua audiência. Trial 30 dias + treinamento + sessões ao vivo + suporte em PT-BR.
-      </div>
+      <div class="side-cta-desc">Crie suas automações enquanto aprende. 30 dias sem pagar nada pra quem leu esse guia.</div>
       <a href="https://magneticflows.com/30-dias" target="_blank" class="side-cta-btn">Começar trial →</a>
     </div>
   </div>
 </aside>
-
 <main>
+
 <div class="hero-area">
-  <span class="hero-tag">Parte 2 · Ações · Categoria 05/14</span>
-  <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 6 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação. Ainda experimental mas poderoso.</p>
+  <span class="hero-tag">Parte 1 · Gatilhos · Categoria 13/13</span>
+  <h1 class="hero-title">O gatilho que <em>não precisa de contato</em>.</h1>
+  <p class="hero-desc">O único gatilho sem contato do HighLevel — Workflow Scheduler dispara por horário, não por evento. Ideal pra jobs recorrentes: relatórios diários, sync de dados, pings de webhook e limpeza de CRM. Pode rodar a cada hora, todo dia, toda semana, no último dia do mês, ou uma só vez numa data específica.</p>
   <div class="hero-stats">
-    <div class="hero-stat">
-      <span class="hero-stat-num">6</span>
-      <span class="hero-stat-label">Ações nesta categoria</span>
+    <div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">Gatilho coberto</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">4+</span><span class="hero-stat-label">Opções de frequência</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">Mockup interativo</span></div>
+  </div>
+
+  <div class="hero-cta">
+    <div class="hero-cta-text">
+      <div class="hero-cta-tag">⚡ Pra quem quer vender SaaS</div>
+      <div class="hero-cta-title">Quer ter sua <em>própria ferramenta</em> e vender pra sua audiência?</div>
+      <div class="hero-cta-sub">Trial 30 dias + treinamento + sessões ao vivo + suporte em PT-BR.</div>
     </div>
-    <div class="hero-stat">
-      <span class="hero-stat-num">Parte 2</span>
-      <span class="hero-stat-label">do guia</span>
-    </div>
+    <a href="https://magneticflows.com/30-dias" target="_blank" class="hero-cta-btn">Começar trial →</a>
   </div>
 </div>
 
-<div class="acao-block" id="a1" data-name="generate text (texto) ai generate text">
-  <div class="acao-head">
-    <div class="acao-num">01</div>
-    <div class="acao-titles">
-      <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Generate Text (Texto)</h2>
-      <div class="acao-en">AI Generate Text</div>
-      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag">Experimental</span></div>
+<div class="trigger-block" id="g1" data-name="agendador workflow scheduler contactless schedule">
+  <div class="trigger-head">
+    <div class="trigger-num">01</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Agendamento</div>
+      <h2 class="trigger-name">Agendador de Workflow</h2>
+      <div class="trigger-en">Workflow Scheduler</div>
+      <div class="trigger-tags">
+        <span class="info-tag schedule">Agendado</span>
+        <span class="info-tag">Sem Contato</span>
+        <span class="info-tag">Recorrente</span>
+      </div>
     </div>
   </div>
 
   <div class="tblock">
-    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-label">O que esse gatilho faz</div>
     <div class="tblock-content">
-      <p>Gera texto customizado usando IA (GPT/Claude) baseado em prompt. Pode usar variáveis do contato pra personalizar — cada contato recebe algo único.</p>
+      <p>Dispara um workflow em horário definido — sem precisar de um contato ou evento. É o único gatilho "contactless" do HighLevel: você define o clock e o workflow roda automaticamente, ideal pra tarefas recorrentes de operação, relatórios, integrações e manutenção de dados.</p>
+      <p>Diferente de todos os outros gatilhos, o Scheduler não envolve um contato específico. Ele aciona ações contactless como <strong>Outbound Webhook</strong>, <strong>Google Sheets</strong>, <strong>Custom Values</strong>, <strong>Create Task</strong> e notificações internas.</p>
     </div>
   </div>
 
   <div class="tblock">
-    <div class="tblock-label">Quando usar</div>
+    <div class="tblock-label">Quando usar na operação</div>
     <div class="use-cases">
       <div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Email hiper-personalizado</div>
-  <div class="use-case-desc">AI usa histórico do contato + tags pra criar msg única.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Resposta a form</div>
-  <div class="use-case-desc">Survey preenchido → AI cria resposta customizada.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Legenda de post</div>
-  <div class="use-case-desc">AI gera variação de texto pra A/B test.</div>
-</div>
-
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Relatório diário</div>
+        <div class="use-case-desc">Todo dia às 8h → webhook envia métricas do dia anterior pro Google Sheets do time.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Limpeza de CRM</div>
+        <div class="use-case-desc">Toda segunda-feira → busca contatos sem atividade há 90 dias e adiciona tag "Reativar".</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Post semanal</div>
+        <div class="use-case-desc">Toda sexta às 18h → webhook dispara post de engajamento nas redes sociais.</div>
+      </div>
     </div>
   </div>
 
   <div class="tblock">
-    <div class="tblock-label">Configurações principais</div>
-    <div class="tblock-content">
-      <p>Prompt, modelo (GPT/Claude), temperatura, campo destino.</p>
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Frequência</div>
+          <div class="filter-en">Frequency</div>
+          <div class="filter-type required">principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Define quando o workflow dispara. Opções: <strong>Interval</strong> (a cada X min/horas), <strong>Daily</strong> (todo dia num horário), <strong>Weekly</strong> (dia da semana + horário), <strong>Monthly</strong> (dia do mês + horário), <strong>Specific Date/Time</strong> (execução única), <strong>Cron</strong> (expressão avançada).</div>
+          <div class="filter-impact"><strong>Impacto:</strong> Cada opção revela campos adicionais específicos. Interval libera intervalo em minutos/horas; Daily libera o campo de horário; Weekly libera dia da semana + horário; Monthly libera dia do mês.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Fuso Horário</div>
+          <div class="filter-en">Timezone</div>
+          <div class="filter-type">opcional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Define o fuso para cálculo dos horários. Padrão: fuso da subconta.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> Crucial pra horários de relatório e regras de negócio local. Use "America/Sao_Paulo" pra BRT.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Pular Finais de Semana</div>
+          <div class="filter-en">Skip Weekends</div>
+          <div class="filter-type">toggle</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Quando ativo, runs agendadas pra sábado ou domingo são puladas automaticamente.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> Perfeito pra jobs exclusivamente comerciais — relatórios de equipe, notificações de vendas, etc.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Data de Encerramento</div>
+          <div class="filter-en">End Date</div>
+          <div class="filter-type">opcional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">O scheduler para de rodar após esta data. Útil pra campanhas com duração definida.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> Sem End Date o scheduler roda indefinidamente. Defina quando tiver uma campanha com prazo.</div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a1">
+    <div class="ghl-mockup" data-mockup="g1">
       <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Workflow AI/ Generate · Email Hyper-Personalizado</div>
+        <div class="ghl-workflow-name">/Agendamento/ 01 — Relatório Diário de Leads</div>
         <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a1">▶ Reproduzir montagem</button>
+          <button class="ghl-btn play" data-play="g1">▶ Reproduzir montagem</button>
           <button class="ghl-btn">Save</button>
           <button class="ghl-btn primary">Publish</button>
         </div>
       </div>
       <div class="ghl-canvas">
         <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a1-1">
+        <div class="ghl-node" data-node-id="g1-1">
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger · Tag · Lead Quente</div>
-              <div class="ghl-node-title">Tag · Lead Quente</div>
+              <div class="ghl-node-type">Trigger · Workflow Scheduler</div>
+              <div class="ghl-node-title">Agendador — Relatório Diário</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag · Lead Quente</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Frequency</span><span class="pv highlight">Daily · 08:00</span></div>
+            <div class="ghl-node-param"><span class="pk">Timezone</span><span class="pv">America/Sao_Paulo</span></div>
+            <div class="ghl-node-param"><span class="pk">Skip Weekends</span><span class="pv">🟢 ON</span></div>
+          </div>
         </div>
         <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a1-2">
+        <div class="ghl-node" data-node-id="g1-2">
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🤖</div>
+            <div class="ghl-node-icon action-pipeline">W</div>
             <div>
-              <div class="ghl-node-type">Action · Workflow AI</div>
-              <div class="ghl-node-title">AI Generate Text</div>
+              <div class="ghl-node-type">Action · Data Export</div>
+              <div class="ghl-node-title">Outbound Webhook</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">AI Generate Text</span></div><div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv highlight">Prompt customizado com merge fields</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.resultado</span></div><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o-mini</span></div></div></div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Webhook relatório diário</span></div>
+            <div class="ghl-node-param"><span class="pk">URL</span><span class="pv">https://hooks.n8n.io/leads-report</span></div>
+            <div class="ghl-node-param"><span class="pk">Method</span><span class="pv">POST</span></div>
+          </div>
         </div>
         <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a1-3">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
-            <div>
-              <div class="ghl-node-type">Action · Communication</div>
-              <div class="ghl-node-title">Send Email</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
-
-  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A1 ═════════════════════ -->
-  <div class="tblock">
-    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
-    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
-      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
-    </p>
-    <div class="hl-panel-wrapper">
-      <div class="hl-panel-context">
-        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Model</strong> (gpt-4o-mini/4o/5/claude-sonnet), <span class='arrow'>→</span> <strong>Prompt</strong> com merge tags, <span class='arrow'>→</span> <strong>Save to</strong> custom value.</div>
-        <div class="hl-panel">
-          <div class="hl-panel-head">
-            <span class="hl-panel-back">←</span>
-            <div class="hl-panel-title">
-              <span class="en">Action Configuration</span>
-              <span>GPT — Generate Text</span>
-            </div>
-          </div>
-          <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Gerar email personalizado" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Model <span class="req">*</span></div>
-<div class="hl-dropdown has-value">gpt-4o-mini</div>
-<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">gpt-4o-mini</span><span class="opt-chip">gpt-4o</span><span class="opt-chip">gpt-5</span><span class="opt-chip">claude-3.5-sonnet</span></div></div></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Prompt <span class="req">*</span></div>
-<textarea class="hl-input" rows="6" style="resize: vertical;">Você é um copywriter da Magnetic Funnels. Escreva email de re-engajamento pra {{contact.first_name}}, que trabalha com {{contact.tipo_negocio}}. Tom amigável, 100 palavras.</textarea></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Save Output to</div><div class="hl-dropdown has-value">{{contact.email_personalizado}}</div></div>
-</div>
-          <div class="hl-panel-footer">
-            <button class="hl-btn-cancel">Cancel</button>
-            <button class="hl-btn-save">Save Action</button>
-          </div>
-        </div>
-      </div>
-      <div class="hl-panel-caption">
-        <strong>Gera texto via OpenAI GPT baseado em prompt</strong>
-      </div>
-    </div>
-  </div>
-
-</div><div class="acao-block" id="a2" data-name="parse image (analisar imagem) ai parse image">
-  <div class="acao-head">
-    <div class="acao-num">02</div>
-    <div class="acao-titles">
-      <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Parse Image (Analisar Imagem)</h2>
-      <div class="acao-en">AI Parse Image</div>
-      <div class="acao-tags"><span class="info-tag">Visão</span></div>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">O que esta ação faz</div>
-    <div class="tblock-content">
-      <p>Analisa imagem com IA. Extrai texto (OCR), descreve conteúdo, identifica objetos. Útil pra extrair dados de comprovantes, notas fiscais, cartões.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Quando usar</div>
-    <div class="use-cases">
-      <div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Comprovante de pagamento</div>
-  <div class="use-case-desc">Cliente envia screenshot → AI lê valor e data.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Nota fiscal</div>
-  <div class="use-case-desc">NF recebida → AI extrai campos automaticamente.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Identificar produto</div>
-  <div class="use-case-desc">Foto enviada → AI identifica produto e direciona.</div>
-</div>
-
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Configurações principais</div>
-    <div class="tblock-content">
-      <p>Campo de imagem, prompt (o que extrair), campo destino.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a2">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Workflow AI/ Parse Image · Comprovante Automático</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a2">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a2-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · WhatsApp Recebeu Imagem</div>
-              <div class="ghl-node-title">WhatsApp Recebeu Imagem</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">WhatsApp Recebeu Imagem</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a2-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🤖</div>
-            <div>
-              <div class="ghl-node-type">Action · Workflow AI</div>
-              <div class="ghl-node-title">AI Parse Image</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">AI Parse Image</span></div><div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv highlight">Prompt customizado com merge fields</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.resultado</span></div><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o-mini</span></div></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a2-3">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-tag">✎</div>
-            <div>
-              <div class="ghl-node-type">Action · Contacts</div>
-              <div class="ghl-node-title">Update Contact Fields</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Update Contact Fields</span></div><div class="ghl-node-param"><span class="pk">Field</span><span class="pv highlight">Custom Field · Status</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">Atualizado via workflow</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
-
-  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A2 ═════════════════════ -->
-  <div class="tblock">
-    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
-    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
-      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
-    </p>
-    <div class="hl-panel-wrapper">
-      <div class="hl-panel-context">
-        <div class="hl-canvas-hint">OCR + análise visual: <span class='arrow'>→</span> <strong>Image URL</strong>, <span class='arrow'>→</span> <strong>Instruction Prompt</strong>, <span class='arrow'>→</span> <strong>Save to</strong>.</div>
-        <div class="hl-panel">
-          <div class="hl-panel-head">
-            <span class="hl-panel-back">←</span>
-            <div class="hl-panel-title">
-              <span class="en">Action Configuration</span>
-              <span>Parse Image (Vision)</span>
-            </div>
-          </div>
-          <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Extrair dados do invoice" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Image Source <span class="req">*</span></div><input class="hl-input" value="{{contact.invoice_upload_url}}"></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Instruction Prompt</div>
-<textarea class="hl-input" rows="3" style="resize: vertical;">Extraia: nome da empresa, valor total, vencimento, CNPJ. Retorne JSON.</textarea></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Save Output to</div><div class="hl-dropdown has-value">{{contact.dados_invoice}}</div></div>
-</div>
-          <div class="hl-panel-footer">
-            <button class="hl-btn-cancel">Cancel</button>
-            <button class="hl-btn-save">Save Action</button>
-          </div>
-        </div>
-      </div>
-      <div class="hl-panel-caption">
-        <strong>Extrai dados de imagem via AI Vision</strong>
-      </div>
-    </div>
-  </div>
-
-</div><div class="acao-block" id="a3" data-name="summarize conversation summarize conversation">
-  <div class="acao-head">
-    <div class="acao-num">03</div>
-    <div class="acao-titles">
-      <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Summarize Conversation</h2>
-      <div class="acao-en">Summarize Conversation</div>
-      <div class="acao-tags"><span class="info-tag">Produtividade</span></div>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">O que esta ação faz</div>
-    <div class="tblock-content">
-      <p>Resume histórico de conversa do contato com IA. Útil pra handoff entre vendedores, notas de CRM, visualização rápida do relacionamento.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Quando usar</div>
-    <div class="use-cases">
-      <div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Handoff SDR→AE</div>
-  <div class="use-case-desc">AI resume pra AE entender contexto rápido.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Call prep</div>
-  <div class="use-case-desc">Antes de ligar, AI mostra últimas 10 interações resumidas.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Relatório pra gerente</div>
-  <div class="use-case-desc">Resumo semanal de conversas por cliente.</div>
-</div>
-
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Configurações principais</div>
-    <div class="tblock-content">
-      <p>Período a considerar, comprimento do resumo.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a3">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Workflow AI/ Summarize · Handoff SDR→AE</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a3">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a3-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Tag · Qualificado SDR</div>
-              <div class="ghl-node-title">Tag · Qualificado SDR</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag · Qualificado SDR</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a3-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🤖</div>
-            <div>
-              <div class="ghl-node-type">Action · Workflow AI</div>
-              <div class="ghl-node-title">Summarize Conversation</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Summarize Conversation</span></div><div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv highlight">Prompt customizado com merge fields</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.resultado</span></div><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o-mini</span></div></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a3-3">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-notify">📝</div>
-            <div>
-              <div class="ghl-node-type">Action · Contacts</div>
-              <div class="ghl-node-title">Add to Notes</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add to Notes</span></div><div class="ghl-node-param"><span class="pk">Body</span><span class="pv highlight">Nota automática gerada pelo workflow</span></div></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
-
-  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A3 ═════════════════════ -->
-  <div class="tblock">
-    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
-    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
-      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
-    </p>
-    <div class="hl-panel-wrapper">
-      <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Pra handoff humano-IA: <span class='arrow'>→</span> <strong>Channels</strong>, <span class='arrow'>→</span> <strong>Last N Messages</strong>, <span class='arrow'>→</span> <strong>Save to</strong>.</div>
-        <div class="hl-panel">
-          <div class="hl-panel-head">
-            <span class="hl-panel-back">←</span>
-            <div class="hl-panel-title">
-              <span class="en">Action Configuration</span>
-              <span>Summarize Conversation</span>
-            </div>
-          </div>
-          <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Resumir conversa pra SDR" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Channels to Include</div>
-<div class="hl-multiselect"><span class="hl-multiselect-chip">SMS</span><span class="hl-multiselect-chip">WhatsApp</span><span class="hl-multiselect-chip">Email</span></div></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Last N Messages</div><input class="hl-input" value="20"></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Save Summary to</div><div class="hl-dropdown has-value">{{contact.ai_conversation_summary}}</div></div>
-</div>
-          <div class="hl-panel-footer">
-            <button class="hl-btn-cancel">Cancel</button>
-            <button class="hl-btn-save">Save Action</button>
-          </div>
-        </div>
-      </div>
-      <div class="hl-panel-caption">
-        <strong>Resume histórico de Conversations com IA</strong>
-      </div>
-    </div>
-  </div>
-
-</div><div class="acao-block" id="a4" data-name="extract info ai extract info">
-  <div class="acao-head">
-    <div class="acao-num">04</div>
-    <div class="acao-titles">
-      <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Extract Info</h2>
-      <div class="acao-en">AI Extract Info</div>
-      <div class="acao-tags"><span class="info-tag">Parsing</span></div>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">O que esta ação faz</div>
-    <div class="tblock-content">
-      <p>Extrai informações específicas de texto usando AI. Ex.: de uma mensagem não estruturada, extrai nome, email, necessidade. Faz o trabalho de campos estruturados sem form.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Quando usar</div>
-    <div class="use-cases">
-      <div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Email livre → campos</div>
-  <div class="use-case-desc">Cliente mandou email longo → AI extrai orçamento, prazo, requisitos.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">WhatsApp → dados</div>
-  <div class="use-case-desc">Conversa natural → AI separa dados estruturados.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Survey de texto aberto</div>
-  <div class="use-case-desc">Resposta discursiva → AI classifica em categorias.</div>
-</div>
-
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Configurações principais</div>
-    <div class="tblock-content">
-      <p>Texto fonte, campos a extrair, schema esperado.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a4">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Workflow AI/ Extract · Email Livre → Campos</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a4">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a4-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Email Recebido</div>
-              <div class="ghl-node-title">Email Recebido</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Email Recebido</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a4-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🤖</div>
-            <div>
-              <div class="ghl-node-type">Action · Workflow AI</div>
-              <div class="ghl-node-title">AI Extract Info</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">AI Extract Info</span></div><div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv highlight">Prompt customizado com merge fields</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.resultado</span></div><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o-mini</span></div></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a4-3">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-tag">✎</div>
-            <div>
-              <div class="ghl-node-type">Action · Contacts</div>
-              <div class="ghl-node-title">Update Fields</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Update Fields</span></div><div class="ghl-node-param"><span class="pk">Field</span><span class="pv highlight">Custom Field · Status</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">Atualizado via workflow</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
-
-  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A4 ═════════════════════ -->
-  <div class="tblock">
-    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
-    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
-      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
-    </p>
-    <div class="hl-panel-wrapper">
-      <div class="hl-panel-context">
-        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Source Text</strong>, <span class='arrow'>→</span> <strong>Fields to Extract</strong> (cada vira custom value).</div>
-        <div class="hl-panel">
-          <div class="hl-panel-head">
-            <span class="hl-panel-back">←</span>
-            <div class="hl-panel-title">
-              <span class="en">Action Configuration</span>
-              <span>Extract Info from Text</span>
-            </div>
-          </div>
-          <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Extrair dados do form livre" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Source Text <span class="req">*</span></div><input class="hl-input" value="{{contact.observacoes_form}}"></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Fields to Extract</div>
-<div style="background:rgba(0,0,0,0.18);border:1px solid var(--ghl-border);border-radius:6px;padding:8px;">
-<div style="font-size: 11px; color: var(--ghl-text-dim); margin-bottom: 4px;">Field Name · Save to</div>
-<div class="hl-filter-row" style="margin-bottom: 4px;"><input class="hl-input" value="tipo_negocio" style="font-size: 11px;"></div>
-<div class="hl-filter-row" style="margin-bottom: 4px;"><input class="hl-input" value="faturamento_mensal_aproximado" style="font-size: 11px;"></div>
-<button class="hl-add-filter" style="margin-top: 4px;">+ Add Field</button></div></div>
-</div>
-          <div class="hl-panel-footer">
-            <button class="hl-btn-cancel">Cancel</button>
-            <button class="hl-btn-save">Save Action</button>
-          </div>
-        </div>
-      </div>
-      <div class="hl-panel-caption">
-        <strong>Extrai campos estruturados de texto livre</strong>
-      </div>
-    </div>
-  </div>
-
-</div><div class="acao-block" id="a5" data-name="classify ai classify">
-  <div class="acao-head">
-    <div class="acao-num">05</div>
-    <div class="acao-titles">
-      <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Classify</h2>
-      <div class="acao-en">AI Classify</div>
-      <div class="acao-tags"><span class="info-tag">Categorização</span></div>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">O que esta ação faz</div>
-    <div class="tblock-content">
-      <p>Classifica texto em categorias predefinidas com AI. Ex.: mensagem do cliente → categoria "Suporte técnico", "Vendas", "Reclamação", "Dúvida geral". Triage automático.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Quando usar</div>
-    <div class="use-cases">
-      <div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Triage de mensagem</div>
-  <div class="use-case-desc">Nova msg → AI classifica → roteia pra time certo.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Sentiment analysis</div>
-  <div class="use-case-desc">Feedback → classifica como positivo/neutro/negativo.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Urgência</div>
-  <div class="use-case-desc">Mensagem → classifica urgência → prioriza atendimento.</div>
-</div>
-
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Configurações principais</div>
-    <div class="tblock-content">
-      <p>Categorias possíveis, texto fonte, campo destino.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a5">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Workflow AI/ Classify · Triage de Mensagens</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a5">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a5-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Customer Reply</div>
-              <div class="ghl-node-title">Customer Reply</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Customer Reply</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a5-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🤖</div>
-            <div>
-              <div class="ghl-node-type">Action · Workflow AI</div>
-              <div class="ghl-node-title">AI Classify</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">AI Classify</span></div><div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv highlight">Prompt customizado com merge fields</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.resultado</span></div><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o-mini</span></div></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a5-3">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-pipeline">👥</div>
-            <div>
-              <div class="ghl-node-type">Action · Contacts</div>
-              <div class="ghl-node-title">Assign to Team</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Assign to Team</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Round-robin SDR</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
-
-  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A5 ═════════════════════ -->
-  <div class="tblock">
-    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
-    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
-      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
-    </p>
-    <div class="hl-panel-wrapper">
-      <div class="hl-panel-context">
-        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Source Text</strong>, <span class='arrow'>→</span> <strong>Categories</strong> (cada uma vira branch).</div>
-        <div class="hl-panel">
-          <div class="hl-panel-head">
-            <span class="hl-panel-back">←</span>
-            <div class="hl-panel-title">
-              <span class="en">Action Configuration</span>
-              <span>Classify Text</span>
-            </div>
-          </div>
-          <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Classificar intenção da resposta" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Source Text <span class="req">*</span></div><input class="hl-input" value="{{trigger.message_body}}"></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Categories</div>
-<div class="hl-multiselect">
-<span class="hl-multiselect-chip">Interessado</span>
-<span class="hl-multiselect-chip">Quer Cancelar</span>
-<span class="hl-multiselect-chip">Pergunta de Preço</span>
-<span class="hl-multiselect-chip">Reclamação</span>
-<input class="hl-multiselect-input" placeholder="+ Categoria"></div></div>
-<div class="hl-section-head" style="color: var(--brand-accent);">⚡ Branches geradas</div>
-<div class="hl-field-help" style="color: var(--brand-accent);">Uma branch por categoria + 'Unclassified' fallback.</div>
-</div>
-          <div class="hl-panel-footer">
-            <button class="hl-btn-cancel">Cancel</button>
-            <button class="hl-btn-save">Save Action</button>
-          </div>
-        </div>
-      </div>
-      <div class="hl-panel-caption">
-        <strong>Classifica texto em uma de N categorias</strong>
-      </div>
-    </div>
-  </div>
-
-</div><div class="acao-block" id="a6" data-name="ai agent invocar agente ia agent studio">
-  <div class="acao-head">
-    <div class="acao-num">06</div>
-    <div class="acao-titles">
-      <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">AI Agent</h2>
-      <div class="acao-en">Invoke Agent Studio Agent</div>
-      <div class="acao-tags"><span class="info-tag">Agente IA</span><span class="info-tag">Agent Studio</span></div>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">O que esta ação faz</div>
-    <div class="tblock-content">
-      <p>Invoca um agente criado no Agent Studio dentro de um workflow. Passa contexto do contato pro agente, recebe a resposta e continua o fluxo. É a ponte entre automações lineares e agentes IA autônomos — você pode usar um agente treinado em base de conhecimento, conectado a APIs e com múltiplos passos internos, acionado diretamente de qualquer workflow.</p>
-      <p>Diferente de AI Generate Text (LLM simples), o AI Agent executa um agente completo com memória, ferramentas e lógica própria — podendo pesquisar na web, consultar seu CRM, criar tarefas ou enviar mensagens.</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Quando usar</div>
-    <div class="use-cases">
-      <div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Qualificação de lead</div>
-  <div class="use-case-desc">Lead novo → AI Agent qualifica com base no histórico + dados do CRM → cria oportunidade.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Resposta inteligente</div>
-  <div class="use-case-desc">Cliente envia dúvida → AI Agent consulta base de conhecimento + responde via SMS.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Handoff pro humano</div>
-  <div class="use-case-desc">AI Agent detecta objeção complexa → cria task pro vendedor + envia notificação interna.</div>
-</div>
-
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Configurações principais</div>
-    <div class="tblock-content">
-      <p>Selecione o agente do Agent Studio, defina goal e tone. O workflow bifurca em <strong>AI Responded</strong> (agente concluiu) e <strong>Handoff to Human</strong> (agente sinalizou escalonamento).</p>
-    </div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a6">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Workflow AI/ AI Agent · Qualificação Automática de Lead</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a6">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-
-        <div class="ghl-node" data-node-id="a6-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Form Submitted</div>
-              <div class="ghl-node-title">Form Submitted</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Trigger Name</span><span class="pv highlight">Formulário Lead · Qualificação</span></div><div class="ghl-node-param"><span class="pk">Form</span><span class="pv">Formulário de Qualificação Magnetic</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a6-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🤖</div>
-            <div>
-              <div class="ghl-node-type">Action · Workflow AI</div>
-              <div class="ghl-node-title">AI Agent</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Agent</span><span class="pv highlight">Qualificador de Leads · v2</span></div><div class="ghl-node-param"><span class="pk">Goal</span><span class="pv">Qualificar lead e criar oportunidade</span></div><div class="ghl-node-param"><span class="pk">Tone</span><span class="pv">Profissional</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a6-3">
+        <div class="ghl-node" data-node-id="g1-3">
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
           <span class="click-hint">clique para ver ↗</span>
           <div class="ghl-node-header">
@@ -3330,7 +2558,10 @@
               <div class="ghl-node-title">Internal Notification</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Notificar SDR — Lead Qualificado</span></div><div class="ghl-node-param"><span class="pk">To</span><span class="pv">sdr@magneticflows.com.br</span></div></div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Notificação relatório enviado</span></div>
+            <div class="ghl-node-param"><span class="pk">To</span><span class="pv">lucas@magneticflows.com.br</span></div>
+          </div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3344,189 +2575,119 @@
     </div>
   </div>
 
-
-
-  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A6 ═════════════════════ -->
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G1 ═════════════════════ -->
   <div class="tblock">
     <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
     <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
-      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">AI Studio: <span class='arrow'>→</span> <strong>AI Agent</strong> dropdown lista agentes do Agent Studio, <span class='arrow'>→</span> <strong>Goal</strong> (instrução de alto nível), <span class='arrow'>→</span> <strong>Tone</strong>, <span class='arrow'>→</span> branches: <strong>AI Responded</strong> / <strong>Handoff to Human</strong>.</div>
+        <div class="hl-canvas-hint">Único trigger: <span class='arrow'>→</span> <strong>Frequency</strong> dropdown revela campos extras: <strong>Interval</strong> (X min/horas), <strong>Daily</strong> (hora), <strong>Weekly</strong> (dia + hora), <strong>Monthly</strong> (dia do mês + hora), <strong>Specific Date</strong> (data/hora única). Botão <strong>Check Trigger Schedule</strong> mostra as próximas 5 execuções antes de publicar.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
-              <span class="en">Action Configuration</span>
-              <span>AI Agent</span>
+              <span class="en">Trigger Configuration</span>
+              <span>Workflow Scheduler</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Qualificar lead com AI Agent" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">AI Agent <span class="req">*</span></div><div class="hl-dropdown has-value">Qualificador de Leads · v2</div></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Goal</div><input class="hl-input" value="Qualificar lead, criar oportunidade se score ≥ 7"></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Tone</div><div class="hl-dropdown has-value">Profissional</div></div>
-<div class="hl-section-head" style="color: var(--brand-accent);">⚡ Branches geradas</div>
-<div class="hl-field-help" style="color: var(--brand-accent);">AI Responded · Handoff to Human</div>
-</div>
+            <div class="hl-field-group">
+              <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+              <input class="hl-input" value="Agendador — Relatório Diário de Leads" readonly>
+            </div>
+
+            <div class="hl-section-head">Schedule Configuration</div>
+
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Frequency <span class="req">*</span></div>
+              <div class="hl-dropdown has-value">Daily</div>
+            </div>
+
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Time <span class="req">*</span></div>
+              <input class="hl-input" value="08:00" readonly>
+            </div>
+
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Timezone</div>
+              <div class="hl-dropdown has-value">America/Sao_Paulo (BRT)</div>
+            </div>
+
+            <div class="hl-toggle-row">
+              <span>Skip Weekends</span>
+              <div class="hl-toggle on"></div>
+            </div>
+
+            <div class="hl-filter-row" style="margin-top:8px;">
+              <div class="hl-filter-label">End Date</div>
+              <input class="hl-input placeholder" placeholder="(opcional)" readonly>
+            </div>
+
+            <button class="hl-add-filter" style="margin-top:12px;">⏱ Check Trigger Schedule</button>
+
+            <div class="hl-section-head" style="color: var(--brand-accent);">⚡ Próximas execuções (preview)</div>
+            <div class="hl-field-help" style="color: var(--brand-accent);">Seg 16/06 08:00 · Ter 17/06 08:00 · Qua 18/06 08:00 · Qui 19/06 08:00 · Sex 20/06 08:00</div>
+          </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
-            <button class="hl-btn-save">Save Action</button>
+            <button class="hl-btn-save">Save Trigger</button>
           </div>
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Invoca agente Agent Studio dentro do workflow — resposta IA ou escalonamento humano</strong>
+        <strong>Único trigger sem contato — dispara por horário, sem precisar de um contato ativo</strong>
       </div>
     </div>
   </div>
 
 </div>
-</main>
-</div>
 
+<!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
-  <a href="acoes-highlevel-cat04.html" class="cat-nav-link prev">
-    <span class="cat-nav-label">← Anterior · Categoria 04</span>
-    <span class="cat-nav-name">Ferramentas Internas</span>
+  <a href="guia-highlevel-cat12.html" class="cat-nav-link prev">
+    <span class="cat-nav-label">← Anterior · Categoria 12</span>
+    <span class="cat-nav-name">Certificados</span>
   </a>
-  <a href="acoes-highlevel-cat06.html" class="cat-nav-link next">
-    <span class="cat-nav-label">Próxima · Categoria 06 →</span>
-    <span class="cat-nav-name">Agendamentos</span>
+  <a href="index.html" class="cat-nav-link next">
+    <span class="cat-nav-label">Fim · Voltar →</span>
+    <span class="cat-nav-name">Índice completo</span>
   </a>
 </nav>
 
 <div class="guide-footer">
-
   <div class="footer-top">
-    <h3>Categoria 05 completa.</h3>
-    <p>6 ações de Workflow AI explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <h3>Categoria 13 completa.</h3>
+    <p>1 gatilho de Agendamento explicado com impacto prático e mockup visual.</p>
   </div>
 
   <div class="footer-main-cta">
     <div class="footer-main-cta-text">
       <div class="footer-main-cta-tag">⚡ Crie sua ferramenta SaaS</div>
       <div class="footer-main-cta-title">Tenha seu próprio <em>HighLevel</em> e venda.</div>
-      <div class="footer-main-cta-sub">Trial 30 dias · Treinamento completo · Sessões ao vivo · Suporte em PT-BR. Tudo via nosso link.</div>
+      <div class="footer-main-cta-sub">Trial 30 dias + treinamento + sessões ao vivo + suporte em PT-BR.</div>
     </div>
     <a href="https://magneticflows.com/30-dias" target="_blank" class="footer-main-cta-btn">Começar trial →</a>
   </div>
 
   <div class="footer-links-grid">
-    <a href="https://gokollab.com/highlevelbrasil" target="_blank" class="footer-link-card">
-      <span class="footer-link-tag">Grátis</span>
-      <span class="footer-link-title">Comunidade Magnetic Flows</span>
-      <span class="footer-link-desc">Entre pra comunidade gratuita e aprenda com outros usuários do HighLevel.</span>
-      <span class="footer-link-arrow">Entrar →</span>
-    </a>
-    <a href="https://chat.whatsapp.com/JGPLBTmaTLq7do2FqfjALQ" target="_blank" class="footer-link-card">
-      <span class="footer-link-tag">WhatsApp</span>
-      <span class="footer-link-title">Grupo Oficial WhatsApp</span>
-      <span class="footer-link-desc">Dicas diárias, novidades do HighLevel e networking direto no seu celular.</span>
-      <span class="footer-link-arrow">Entrar →</span>
-    </a>
-    <a href="https://magneticflows.com/30-dias" target="_blank" class="footer-link-card">
-      <span class="footer-link-tag">HighLevel</span>
-      <span class="footer-link-title">HighLevel · Trial 30 dias</span>
-      <span class="footer-link-desc">Se preferir testar o HighLevel direto, resgate 30 dias grátis pelo nosso link de afiliado.</span>
-      <span class="footer-link-arrow">Resgatar →</span>
-    </a>
+    <a href="https://gokollab.com/highlevelbrasil" target="_blank" class="footer-link-card"><span class="footer-link-tag">Grátis</span><span class="footer-link-title">Comunidade Magnetic Flows</span><span class="footer-link-desc">Entre pra comunidade e aprenda com outros usuários.</span><span class="footer-link-arrow">Entrar →</span></a>
+    <a href="https://chat.whatsapp.com/JGPLBTmaTLq7do2FqfjALQ" target="_blank" class="footer-link-card"><span class="footer-link-tag">WhatsApp</span><span class="footer-link-title">Grupo Oficial WhatsApp</span><span class="footer-link-desc">Dicas diárias direto no celular.</span><span class="footer-link-arrow">Entrar →</span></a>
+    <a href="https://br.magneticfunnels.io" target="_blank" class="footer-link-card"><span class="footer-link-tag">Assinatura</span><span class="footer-link-title">Magnetic Funnels Premium</span><span class="footer-link-desc">Suporte dedicado e mentorias mensais.</span><span class="footer-link-arrow">Assinar →</span></a>
   </div>
 
-  <div class="footer-legal">
-    Guia oficial Magnetic Funnels · Parte 2 · Categoria 05 de 14 · Atualizado em 2026-06-12
-  </div>
+  <div class="footer-legal">Guia produzido pela Magnetic Funnels · Categoria 13 de 13 · Atualizado em 2026-06-12</div>
+</div>
+
+</main>
 </div>
 
 <script>
-  // Busca
-  const search = document.getElementById('search');
-  const blocks = document.querySelectorAll('.acao-block');
-  const links = document.querySelectorAll('.side-link');
-
-  search.addEventListener('input', (e) => {
-    const q = e.target.value.toLowerCase().trim();
-    blocks.forEach(block => {
-      const name = (block.dataset.name || '').toLowerCase();
-      const match = !q || name.includes(q);
-      block.style.display = match ? '' : 'none';
-    });
-    links.forEach(link => {
-      const text = link.textContent.toLowerCase();
-      link.style.display = (!q || text.includes(q)) ? '' : 'none';
-    });
-  });
-
-  // Active link on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        links.forEach(l => {
-          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
-        });
-      }
-    });
-  }, { rootMargin: '-30% 0px -60% 0px' });
-
-  blocks.forEach(b => observer.observe(b));
-
-  // Back to top + Drawer (mesmo script dos guias de gatilhos)
-  const btnTop = document.createElement('button');
-  btnTop.className = 'back-to-top';
-  btnTop.innerHTML = '↑';
-  btnTop.setAttribute('aria-label', 'Voltar ao topo');
-  btnTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
-  document.body.appendChild(btnTop);
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) btnTop.classList.add('visible');
-    else btnTop.classList.remove('visible');
-  });
-
-  const overlay = document.createElement('div');
-  overlay.className = 'drawer-overlay';
-  document.body.appendChild(overlay);
-
-  window.toggleDrawer = function() {
-    const aside = document.querySelector('aside');
-    if (!aside) return;
-    aside.classList.toggle('open');
-    overlay.classList.toggle('visible');
-  };
-
-  overlay.addEventListener('click', toggleDrawer);
-
-  document.querySelectorAll('aside .side-link').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 900) {
-        document.querySelector('aside').classList.remove('open');
-        overlay.classList.remove('visible');
-      }
-    });
-  });
-
   const configData = {
-    'a1-1': { kind: 'Trigger · Tag · Lead Quente', title: 'Tag · Lead Quente', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Tag · Lead Quente</div></div>` },
-    'a1-2': { kind: 'Action · Workflow AI', title: 'AI Generate Text', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI Generate Text</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Prompt customizado com merge fields</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field">ai.resultado</div></div>` },
-    'a1-3': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Send Email</div></div>` },
-    'a2-1': { kind: 'Trigger · WhatsApp Recebeu Imagem', title: 'WhatsApp Recebeu Imagem', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">WhatsApp Recebeu Imagem</div></div>` },
-    'a2-2': { kind: 'Action · Workflow AI', title: 'AI Parse Image', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI Parse Image</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Prompt customizado com merge fields</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field">ai.resultado</div></div>` },
-    'a2-3': { kind: 'Action · Contacts', title: 'Update Contact Fields', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Update Contact Fields</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · Status</div></div>` },
-    'a3-1': { kind: 'Trigger · Tag · Qualificado SDR', title: 'Tag · Qualificado SDR', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Tag · Qualificado SDR</div></div>` },
-    'a3-2': { kind: 'Action · Workflow AI', title: 'Summarize Conversation', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Summarize Conversation</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Prompt customizado com merge fields</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field">ai.resultado</div></div>` },
-    'a3-3': { kind: 'Action · Contacts', title: 'Add to Notes', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Add to Notes</div></div>` },
-    'a4-1': { kind: 'Trigger · Email Recebido', title: 'Email Recebido', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Email Recebido</div></div>` },
-    'a4-2': { kind: 'Action · Workflow AI', title: 'AI Extract Info', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI Extract Info</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Prompt customizado com merge fields</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field">ai.resultado</div></div>` },
-    'a4-3': { kind: 'Action · Contacts', title: 'Update Fields', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Update Fields</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · Status</div></div>` },
-    'a5-1': { kind: 'Trigger · Customer Reply', title: 'Customer Reply', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Customer Reply</div></div>` },
-    'a5-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI Classify</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Prompt customizado com merge fields</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field">ai.resultado</div></div>` },
-    'a5-3': { kind: 'Action · Contacts', title: 'Assign to Team', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Assign to Team</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field highlight dropdown">Round-robin SDR</div></div>` },
-    'a6-1': { kind: 'Trigger · Form Submitted', title: 'Form Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Formulário Lead · Qualificação</div></div><div class="config-section"><div class="config-label">Form *</div><div class="config-field highlight dropdown">Formulário de Qualificação Magnetic</div></div>` },
-    'a6-2': { kind: 'Action · Workflow AI', title: 'AI Agent', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Qualificar lead com AI Agent</div></div><div class="config-section"><div class="config-label">AI Agent *</div><div class="config-field highlight dropdown">Qualificador de Leads · v2</div></div><div class="config-section"><div class="config-label">Goal</div><div class="config-field">Qualificar lead, criar oportunidade se score ≥ 7</div></div><div class="config-section"><div class="config-label">Tone</div><div class="config-field dropdown">Profissional</div></div><div class="config-section"><div class="config-label">Branches</div><div class="config-field"><span class="opt-chip">AI Responded</span> <span class="opt-chip">Handoff to Human</span></div></div>` },
-    'a6-3': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Notificar SDR — Lead Qualificado</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field">sdr@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Lead qualificado pela IA — ação imediata</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field highlight">{{contact.first_name}} foi qualificado pelo AI Agent. Score: {{ai.score}}. Verificar no CRM.</div></div>` }
+    'g1-1': { kind: 'Trigger · Workflow Scheduler', title: 'Agendador de Workflow', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Agendador — Relatório Diário de Leads</div></div><div class="config-section"><div class="config-label">Frequency *</div><div class="config-field highlight dropdown">Daily</div></div><div class="config-section"><div class="config-label">Time *</div><div class="config-field highlight">08:00</div></div><div class="config-section"><div class="config-label">Timezone</div><div class="config-field dropdown">America/Sao_Paulo (BRT)</div></div><div class="config-section"><div class="config-label">Skip Weekends</div><div class="config-field">🟢 ON</div></div><div class="config-section"><div class="config-label">End Date</div><div class="config-field">— (sem encerramento)</div></div>` },
+    'g1-2': { kind: 'Action · Data Export', title: 'Outbound Webhook', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Webhook — relatório diário leads</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field highlight">https://hooks.n8n.io/leads-daily-report</div></div><div class="config-section"><div class="config-label">Method</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field highlight">{"date":"{{today}}","location_id":"{{location.id}}"}</div></div>` },
+    'g1-3': { kind: 'Action · Workflow', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Notificação interna — relatório enviado</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field highlight">Relatório diário de leads enviado com sucesso.</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(initMockup);
@@ -3568,6 +2729,61 @@
   }
   function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
+  const s = document.getElementById('search');
+  const bl = document.querySelectorAll('.trigger-block[id^="g"]');
+  const ln = document.querySelectorAll('.side-link');
+  s.addEventListener('input', e => {
+    const q = e.target.value.toLowerCase().trim();
+    bl.forEach(b => {
+      const nm = (b.dataset.name || '').toLowerCase();
+      const ne = b.querySelector('.trigger-name')?.textContent.toLowerCase() || '';
+      const en = b.querySelector('.trigger-en')?.textContent.toLowerCase() || '';
+      b.classList.toggle('hidden', !(!q || nm.includes(q) || ne.includes(q) || en.includes(q)));
+    });
+    ln.forEach(l => { l.style.display = (!q || l.textContent.toLowerCase().includes(q)) ? '' : 'none'; });
+  });
+
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      ln.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    }
+  }), { rootMargin: '-30% 0px -60% 0px' });
+  bl.forEach(b => obs.observe(b));
+
+  const btnTop = document.createElement('button');
+  btnTop.className = 'back-to-top';
+  btnTop.innerHTML = '↑';
+  btnTop.setAttribute('aria-label', 'Voltar ao topo');
+  btnTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+  document.body.appendChild(btnTop);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) btnTop.classList.add('visible');
+    else btnTop.classList.remove('visible');
+  });
+
+  const overlay = document.createElement('div');
+  overlay.className = 'drawer-overlay';
+  document.body.appendChild(overlay);
+
+  window.toggleDrawer = function() {
+    const aside = document.querySelector('aside');
+    if (!aside) return;
+    aside.classList.toggle('open');
+    overlay.classList.toggle('visible');
+  };
+
+  overlay.addEventListener('click', toggleDrawer);
+
+  document.querySelectorAll('aside .side-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900) {
+        document.querySelector('aside').classList.remove('open');
+        overlay.classList.remove('visible');
+      }
+    });
+  });
 </script>
 
 </body>
