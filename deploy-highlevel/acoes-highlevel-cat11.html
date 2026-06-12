@@ -2556,7 +2556,7 @@
               <div class="ghl-node-title">Grant Offer Access</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Offer Access</span></div><div class="ghl-node-param"><span class="pk">Invoice Source</span><span class="pv highlight">Compra</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Paid</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Offer Access</span></div><div class="ghl-node-param"><span class="pk">Invoice Source</span><span class="pv highlight">Compra</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Paid</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a1-3">
@@ -2702,7 +2702,7 @@
               <div class="ghl-node-title">Remove Offer Access</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remove Offer Access</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remove Offer Access</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2882,7 +2882,10 @@
     'a2-1': { kind: 'Trigger · Refund Processed', title: 'Refund Processed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Refund Processed</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
   function initMockup(m) {
     const nodes = m.querySelectorAll('.ghl-node');
     const connectors = m.querySelectorAll('.ghl-connector');

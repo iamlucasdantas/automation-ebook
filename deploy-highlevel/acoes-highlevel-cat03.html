@@ -3045,7 +3045,10 @@
     'a3-2': { kind: 'Action · Webhook', title: 'Custom API Call', body: `<div class="config-section"><div class="config-label">Endpoint</div><div class="config-field highlight">/api/v2/customers</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
   function initMockup(m) {
     const nodes = m.querySelectorAll('.ghl-node');
     const connectors = m.querySelectorAll('.ghl-connector');

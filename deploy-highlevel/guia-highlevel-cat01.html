@@ -4560,7 +4560,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Nota Adicionada</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g8-2">
@@ -4793,7 +4792,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Nota Alterada</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g9-2">
@@ -4991,7 +4989,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tarefa Adicionada</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g10-2">
@@ -5216,7 +5213,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Lembrete de Tarefa</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g11-2">
@@ -5474,7 +5470,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tarefa Completada</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros adicionais</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g12-2">
@@ -5713,7 +5708,10 @@
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
 
   function initMockup(mockup) {
     const nodes = mockup.querySelectorAll('.ghl-node');

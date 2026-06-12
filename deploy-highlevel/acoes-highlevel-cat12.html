@@ -2559,7 +2559,7 @@
               <div class="ghl-node-title">Say Message</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Say Message</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Say Message</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2841,7 +2841,7 @@
               <div class="ghl-node-title">Gather Input</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Gather Input</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Gather Input</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a3-3">
@@ -2991,7 +2991,7 @@
               <div class="ghl-node-title">Transfer Call</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Transfer Call</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Transfer Call</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3129,7 +3129,7 @@
               <div class="ghl-node-title">Say Message</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Say Message</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Say Message</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a5-3">
@@ -3324,7 +3324,10 @@
     'a5-1': { kind: 'Trigger · Ligou Fora Horário', title: 'Ligou Fora Horário', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Ligou Fora Horário</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
   function initMockup(m) {
     const nodes = m.querySelectorAll('.ghl-node');
     const connectors = m.querySelectorAll('.ghl-connector');

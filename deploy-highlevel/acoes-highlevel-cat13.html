@@ -2560,7 +2560,7 @@
               <div class="ghl-node-title">Grant Group Access</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Group Access</span></div><div class="ghl-node-param"><span class="pk">Invoice Source</span><span class="pv highlight">Curso</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Paid</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Group Access</span></div><div class="ghl-node-param"><span class="pk">Invoice Source</span><span class="pv highlight">Curso</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Paid</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2693,7 +2693,7 @@
               <div class="ghl-node-title">Revoke Group Access</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Group Access</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Group Access</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2826,7 +2826,7 @@
               <div class="ghl-node-title">Grant Private Channel</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Private Channel</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Private Channel</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2962,7 +2962,7 @@
               <div class="ghl-node-title">Revoke Channel</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Channel</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Channel</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3098,7 +3098,7 @@
               <div class="ghl-node-title">Assign Level</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Assign Level</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Round-robin SDR</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Assign Level</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Round-robin SDR</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3422,7 +3422,10 @@
     'a6-2': { kind: 'Action · Comunidades', title: 'Post to Community', body: `<div class="config-section"><div class="config-label">Grupo</div><div class="config-field highlight">Geral</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
   function initMockup(m) {
     const nodes = m.querySelectorAll('.ghl-node');
     const connectors = m.querySelectorAll('.ghl-connector');

@@ -2838,7 +2838,7 @@
               <div class="ghl-node-title">Move Pipeline Stage</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Move Pipeline Stage</span></div><div class="ghl-node-param"><span class="pk">Form</span><span class="pv highlight">Demo Agendada</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Move Pipeline Stage</span></div><div class="ghl-node-param"><span class="pk">Form</span><span class="pv highlight">Demo Agendada</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3111,7 +3111,7 @@
               <div class="ghl-node-title">Update Status</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Update Status</span></div><div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv highlight">Vendas</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Won</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Update Status</span></div><div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv highlight">Vendas</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Won</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3249,7 +3249,7 @@
               <div class="ghl-node-title">Delete Opportunity</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Delete Opportunity</span></div><div class="ghl-node-param"><span class="pk">Tag Operation</span><span class="pv highlight">Added</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Duplicata Confirmada</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Delete Opportunity</span></div><div class="ghl-node-param"><span class="pk">Tag Operation</span><span class="pv highlight">Added</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Duplicata Confirmada</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3383,7 +3383,7 @@
               <div class="ghl-node-title">Assign Owner</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Assign Owner</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Round-robin SDR</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Assign Owner</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Round-robin SDR</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3517,7 +3517,7 @@
               <div class="ghl-node-title">Add Tag</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Add Tag</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Add Tag</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3654,7 +3654,7 @@
               <div class="ghl-node-title">Remove Tag</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remove Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Lead Frio</span></div></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remove Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Lead Frio</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3848,7 +3848,10 @@
     'a9-2': { kind: 'Action · Opportunity', title: 'Remove Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remove Tag</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
   function initMockup(m) {
     const nodes = m.querySelectorAll('.ghl-node');
     const connectors = m.querySelectorAll('.ghl-connector');

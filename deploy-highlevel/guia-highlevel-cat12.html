@@ -2483,7 +2483,6 @@
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Certificate Issued</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
 </div>
-</div>
 <div class="ghl-connector"></div>
 <div class="ghl-node" data-node-id="g1-2">
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
@@ -2506,7 +2505,6 @@
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Contact Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Tag · Categorizar</span></div></div>
 </div>
-</div>
 <div class="ghl-connector"></div>
 <div class="ghl-node" data-node-id="g1-4">
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
@@ -2517,7 +2515,6 @@
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Wait</span></div><div class="ghl-node-param"><span class="pk">Wait Type</span><span class="pv highlight">Wait For Time Delay</span></div><div class="ghl-node-param"><span class="pk">Duration</span><span class="pv highlight">1 hour</span></div></div>
 </div>
-</div>
 <div class="ghl-connector"></div>
 <div class="ghl-node" data-node-id="g1-5">
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
@@ -2527,7 +2524,6 @@
     <div><div class="ghl-node-type">Action · Communication</div><div class="ghl-node-title">Send Email (Indicação)</div></div>
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email (Indicação)</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email (Indicação)</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
-</div>
 </div>
 <div class="config-panel">
   <div class="config-header">
@@ -2636,7 +2632,10 @@
     'g1-5': { kind: 'Action · Send Email', title: 'Send Email (upsell pro próximo nível)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Upsell próximo nível de curso</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">cursos@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Próximo nível: especialização avançada</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Upsell Especialização</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
   function initMockup(m) {
     const nodes = m.querySelectorAll('.ghl-node');
     const connectors = m.querySelectorAll('.ghl-connector');

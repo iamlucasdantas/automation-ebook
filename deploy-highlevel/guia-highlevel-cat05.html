@@ -2490,7 +2490,6 @@
             <div><div class="ghl-node-type">Trigger · Affiliate Created</div><div class="ghl-node-title">Affiliate Created</div></div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Affiliate Created</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g1-2">
@@ -2514,7 +2513,6 @@
             <div><div class="ghl-node-type">Action · Afiliado</div><div class="ghl-node-title">Add to Campaign</div></div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add to Campaign</span></div></div>
-          </div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2656,7 +2654,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Afiliado Inscrito em Campanha</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g2-2">
@@ -2686,7 +2683,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Add Tag</span></div></div>
-          </div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -2849,7 +2845,6 @@
             <div><div class="ghl-node-type">Trigger · New Affiliate Sales</div><div class="ghl-node-title">New Affiliate Sales</div></div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">New Affiliate Sales</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g3-2">
@@ -3020,7 +3015,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Lead Criado por Afiliado</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g4-2">
@@ -3050,7 +3044,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Google Sheets</span></div></div>
-          </div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3165,7 +3158,10 @@
     'g4-2': { kind: 'Action · Send WhatsApp', title: 'Send WhatsApp (afiliado novo lead)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">WhatsApp pro afiliado avisando lead</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field highlight">{{affiliate.phone}}</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">WhatsApp — Novo Lead Afiliado</div></div><div class="config-section"><div class="config-label">Variables</div><div class="config-field">{{contact.first_name}} + {{contact.email}} + {{affiliate.dashboard_url}}</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
   function initMockup(m) { const nodes = m.querySelectorAll('.ghl-node'); const connectors = m.querySelectorAll('.ghl-connector'); const panel = m.querySelector('.config-panel'); const pk = panel.querySelector('.config-kind'); const pt = panel.querySelector('.config-title'); const pb = panel.querySelector('.config-body'); const cb = panel.querySelector('.config-close'); const pl = m.querySelector('.ghl-btn.play'); const ai = m.querySelector('.anim-indicator'); const at = m.querySelector('.anim-text'); nodes.forEach(n => n.addEventListener('click', () => { const d = configData[n.dataset.nodeId]; if (!d) return; nodes.forEach(x => x.classList.remove('active')); n.classList.add('active'); pk.textContent = d.kind; pt.textContent = d.title; pb.innerHTML = d.body; panel.classList.add('open'); })); cb.addEventListener('click', () => { panel.classList.remove('open'); nodes.forEach(x => x.classList.remove('active')); }); setTimeout(() => { nodes.forEach(n => n.classList.add('visible')); connectors.forEach(c => c.classList.add('visible')); }, 100); pl.addEventListener('click', async () => { pl.disabled = true; const ot = pl.textContent; pl.textContent = '● Reproduzindo...'; panel.classList.remove('open'); nodes.forEach(n => n.classList.remove('active')); nodes.forEach(n => n.classList.remove('visible')); connectors.forEach(c => c.classList.remove('visible')); await sleep(400); ai.classList.add('visible'); const na = Array.from(nodes); const ca = Array.from(connectors); for (let i = 0; i < na.length; i++) { at.textContent = i === 0 ? 'Adicionando gatilho...' : `Adicionando ação ${i}...`; await sleep(500); na[i].classList.add('visible', 'active'); await sleep(400); na[i].classList.remove('active'); if (i < ca.length) { at.textContent = 'Conectando...'; await sleep(300); ca[i].classList.add('visible'); } } at.textContent = 'Fluxo completo ✓'; await sleep(1000); ai.classList.remove('visible'); pl.disabled = false; pl.textContent = ot; }); }
   function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
   const s = document.getElementById('search'); const bl = document.querySelectorAll('.trigger-block[id^="g"]'); const ln = document.querySelectorAll('.side-link');

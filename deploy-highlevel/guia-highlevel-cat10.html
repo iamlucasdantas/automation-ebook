@@ -2530,7 +2530,6 @@
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Reply to Comment</span></div></div>
 </div>
-</div>
 <div class="ghl-connector"></div>
 <div class="ghl-node" data-node-id="g1-3">
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
@@ -2541,7 +2540,6 @@
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Facebook DM</span></div></div>
 </div>
-</div>
 <div class="ghl-connector"></div>
 <div class="ghl-node" data-node-id="g1-4">
           <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
@@ -2551,7 +2549,6 @@
     <div><div class="ghl-node-type">Action · Contact</div><div class="ghl-node-title">Add Contact Tag</div></div>
   </div>
   <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Contact Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Tag · Categorizar</span></div></div>
-</div>
 </div>
 <div class="config-panel">
   <div class="config-header">
@@ -2756,7 +2753,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">IG Comment</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g2-2">
@@ -2770,7 +2766,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Reply to IG Comment</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Categorizar contato</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g2-3">
@@ -2784,7 +2779,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Instagram DM</span></div></div>
-          </div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3124,7 +3118,10 @@
     'g3-1': { kind: 'Trigger · TikTok Comments', title: 'TikTok Comments', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Comentário TikTok com palavra-chave</div></div><div class="config-section"><div class="config-label">Account *</div><div class="config-field dropdown">TikTok Business — Magnetic</div></div><div class="config-section"><div class="config-label">Video</div><div class="config-field dropdown">Qualquer vídeo</div></div><div class="config-section"><div class="config-label">Keyword Filter *</div><div class="config-field highlight">EU QUERO, info, preço</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
   function initMockup(m) {
     const nodes = m.querySelectorAll('.ghl-node');
     const connectors = m.querySelectorAll('.ghl-connector');

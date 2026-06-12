@@ -2718,7 +2718,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Opportunity Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Add Opportunity Tag</span></div></div>
-          </div>
         </div>
 
         <div class="ghl-connector"></div>
@@ -2924,7 +2923,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Oportunidade Alterada</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g2-2">
@@ -2938,7 +2936,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">If/Else</span></div><div class="ghl-node-param"><span class="pk">Field</span><span class="pv highlight">Custom Value · Status</span></div><div class="ghl-node-param"><span class="pk">Operator</span><span class="pv">Equals</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">Qualificado</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g2-3">
@@ -2968,7 +2965,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Google Sheets</span></div></div>
-          </div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3890,7 +3886,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Oportunidade Ociosa</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g5-2">
@@ -3904,7 +3899,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g5-3">
@@ -3918,7 +3912,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Wait</span></div><div class="ghl-node-param"><span class="pk">Wait Type</span><span class="pv highlight">Wait For Time Delay</span></div><div class="ghl-node-param"><span class="pk">Duration</span><span class="pv highlight">1 hour</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g5-4">
@@ -3932,7 +3925,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">If/Else</span></div><div class="ghl-node-param"><span class="pk">Field</span><span class="pv highlight">Custom Value · Status</span></div><div class="ghl-node-param"><span class="pk">Operator</span><span class="pv">Equals</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">Qualificado</span></div></div>
-          </div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g5-5">
@@ -3946,7 +3938,6 @@
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Update Opportunity Status</span></div><div class="ghl-node-param"><span class="pk">Opportunity</span><span class="pv highlight">Contact&#x27;s Latest Opportunity</span></div><div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv">Pipeline ativa do contato</span></div><div class="ghl-node-param"><span class="pk">Stage</span><span class="pv highlight">Próximo estágio</span></div></div>
-          </div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -4110,7 +4101,10 @@
     'g5-5': { kind: 'Action · Update Opportunity', title: 'Update Opportunity Status', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar como Lost</div></div><div class="config-section"><div class="config-label">Opportunity *</div><div class="config-field highlight dropdown">Contact&#x27;s Latest Opportunity</div></div><div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Vendas Internas</div></div><div class="config-section"><div class="config-label">Status *</div><div class="config-field highlight dropdown">Lost</div></div><div class="config-section"><div class="config-label">Lost Reason</div><div class="config-field dropdown">Sem resposta 19+ dias</div></div>` }
   };
 
-  document.querySelectorAll('.ghl-mockup').forEach(initMockup);
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
 
   function initMockup(mockup) {
     const nodes = mockup.querySelectorAll('.ghl-node');
