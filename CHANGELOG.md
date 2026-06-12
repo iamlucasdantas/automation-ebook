@@ -10,6 +10,23 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-12 — Content
+**Add Workflow Scheduler trigger (Cat 13) and AI Agent action (Cat 05)**
+
+- **New trigger category:** `guia-highlevel-cat13.html` — Agendamento (Scheduler)
+  - 1 novo gatilho: Workflow Scheduler (único gatilho contactless do HighLevel)
+  - Dispara por horário (Daily/Weekly/Monthly/Interval/Specific Date)
+  - Configurações: Frequency, Time, Timezone, Skip Weekends, End Date
+  - 1 mockup interativo + painel HL de fidelidade
+- **New action:** `acoes-highlevel-cat05.html` — AI Agent (Invoke Agent Studio Agent)
+  - Ação 06 na categoria Workflow AI
+  - Invoca agentes do Agent Studio dentro de workflows
+  - Branches: AI Responded / Handoff to Human
+  - 1 mockup interativo + painel HL de fidelidade
+- **Updated** `index.html`: 76→77 gatilhos, 108→109 ações, 184→188 painéis, 31→33 mockups, data de atualização adicionada
+- **Updated** `guia-highlevel-cat12.html`: nav next agora aponta para cat13
+- **Updated** `sitemap.xml`: guia-highlevel-cat13.html adicionado
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
