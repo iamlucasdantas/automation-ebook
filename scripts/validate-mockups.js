@@ -9,7 +9,14 @@
  * Usage: PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/validate-mockups.js
  * Exits 1 if any page has a broken mockup.
  */
-const { chromium } = require('playwright');
+// Resolve playwright from the global install when not installed locally
+// (e.g. when running ad hoc on a workstation without a package.json).
+let chromium;
+try {
+  ({ chromium } = require('playwright'));
+} catch {
+  ({ chromium } = require('/opt/node22/lib/node_modules/playwright'));
+}
 const fs = require('fs');
 const path = require('path');
 

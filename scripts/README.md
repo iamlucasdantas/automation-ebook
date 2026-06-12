@@ -31,6 +31,21 @@ Transformations applied (in order):
 Files in `HAND_CRAFTED` are skipped — they are maintained at higher
 fidelity by hand.
 
+## validate-mockups.js
+
+Loads every category page in headless Chromium (Playwright) and fails
+if any mockup is missing its `.config-panel`, has nodes that never
+reach `.visible`, or throws a JS error during init. This is the only
+check that catches DOM-level issues like orphan `</div>` tags pushing
+elements out of their container — `node --check` happily passes those.
+
+```bash
+PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node scripts/validate-mockups.js
+```
+
+The weekly workflow runs this right after `auto-refine.py`, so any
+drift that breaks a mockup blocks the PR before merge.
+
 ## append-changelog.py
 
 After `auto-refine.py` runs in the weekly workflow, this script appends

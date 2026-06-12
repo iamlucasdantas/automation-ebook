@@ -21,6 +21,14 @@ jobs:
       - name: Apply mechanical refinements
         run: python3 scripts/auto-refine.py
 
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+
+      - name: Headless-validate every mockup
+        run: node scripts/validate-mockups.js
+
       - name: Append CHANGELOG entry if changes
         run: python3 scripts/append-changelog.py
 
