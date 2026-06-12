@@ -4317,12 +4317,11 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon trigger">T</div>
             <div>
-              <div class="ghl-node-type">Trigger · Quiz Respondido</div>
+              <div class="ghl-node-type">Trigger · Quiz Submitted</div>
               <div class="ghl-node-title">Quiz Respondido</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Quiz Respondido</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Quiz Perfil Investidor</span></div><div class="ghl-node-param"><span class="pk">Quiz Name</span><span class="pv">Quiz Diagnóstico — Magnetic Flows</span></div><div class="ghl-node-param"><span class="pk">Overall Score</span><span class="pv">Greater Than 75</span></div><div class="ghl-node-param"><span class="pk">Category Score · Maturidade Digital</span><span class="pv">Between 60–80</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="g7-2">
@@ -4336,8 +4335,10 @@
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Input</span><span class="pv highlight">respostas do quiz</span></div>
-            <div class="ghl-node-param"><span class="pk">Classes</span><span class="pv">Conservador/Moderado/Arrojado</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Classificar perfil investidor</span></div>
+            <div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv">Classifique em Conservador/Moderado/Arrojado baseado em: {{quiz.responses}}</span></div>
+            <div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.perfil_investidor</span></div>
+            <div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o-mini</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -4347,13 +4348,14 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-tag">✎</div>
             <div>
-              <div class="ghl-node-type">Action · Contact</div>
+              <div class="ghl-node-type">Action · Update Contact</div>
               <div class="ghl-node-title">Update Contact Field</div>
             </div>
           </div>
           <div class="ghl-node-body">
-            <div class="ghl-node-param"><span class="pk">Campo</span><span class="pv highlight">perfil_investidor</span></div>
-            <div class="ghl-node-param"><span class="pk">Valor</span><span class="pv">{{ai.classification}}</span></div>
+            <div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Salvar perfil no contato</span></div>
+            <div class="ghl-node-param"><span class="pk">Field</span><span class="pv">Custom Field · perfil_investidor</span></div>
+            <div class="ghl-node-param"><span class="pk">Value</span><span class="pv">{{ai.perfil_investidor}}</span></div>
           </div>
         </div>
         <div class="ghl-connector"></div>
@@ -4363,12 +4365,11 @@
           <div class="ghl-node-header">
             <div class="ghl-node-icon action-email">@</div>
             <div>
-              <div class="ghl-node-type">Action · Communication</div>
-              <div class="ghl-node-title">Send Email</div>
+              <div class="ghl-node-type">Action · Send Email</div>
+              <div class="ghl-node-title">Send Email (personalizado por perfil)</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
-          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Resultado do quiz por perfil</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Lucas · Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">{{contact.first_name}}, seu perfil é {{ai.perfil_investidor}} 🎯</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Resultado Quiz — {{ai.perfil_investidor}}</span></div><div class="ghl-node-param"><span class="pk">Conditional Content</span><span class="pv">Bloco dinâmico por perfil (Cons/Mod/Arro)</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -6870,9 +6871,10 @@
     'g6-2': { kind: 'Action · If/Else', title: 'If/Else (NPS Promotor?)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">NPS é Promotor?</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Survey Response · pergunta_nps</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Greater than or equal</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">9</div></div>` },
     'g6-3': { kind: 'Action · Send Review Request', title: 'Send Review Request', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Pedir review pro promotor</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field"><span class="opt-chip">Email</span> <span class="opt-chip">WhatsApp</span></div></div><div class="config-section"><div class="config-label">Review Source</div><div class="config-field dropdown">Google + Facebook</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Pedido de Review — Promotor</div></div>` },
     'g6-4': { kind: 'Action · Create Task', title: 'Create Task (CS Recovery)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Resgatar cliente detrator</div></div><div class="config-section"><div class="config-label">Title *</div><div class="config-field highlight">Resgatar cliente detrator (NPS &lt; 7)</div></div><div class="config-section"><div class="config-label">Description</div><div class="config-field">Ligar pra entender insatisfação e proposta de melhoria.</div></div><div class="config-section"><div class="config-label">Assigned To</div><div class="config-field dropdown">Gerente de CS</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">+1 day</div></div><div class="config-section"><div class="config-label">Priority</div><div class="config-field dropdown">High</div></div>` },
-    'g7-1': { kind: 'Trigger · Quiz Submitted', title: 'Quiz Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Quiz Perfil Investidor</div></div><div class="config-section"><div class="config-label">Quiz *</div><div class="config-field highlight dropdown">Quiz Perfil Investidor</div></div>` },
-    'g7-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Classificar perfil investidor</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Classifique o perfil em Conservador/Moderado/Arrojado baseado nas respostas: {{quiz.responses}}</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field">ai.perfil_investidor</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o-mini</div></div>` },
+    'g7-1': { kind: 'Trigger · Quiz Submitted', title: 'Quiz Respondido', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Quiz Perfil Investidor</div></div><div class="config-section"><div class="config-label">Quiz Name *</div><div class="config-field highlight dropdown">Quiz Diagnóstico — Magnetic Flows</div></div><div class="config-section"><div class="config-label">Overall Score</div><div class="config-field dropdown">Greater Than 75</div></div><div class="config-section"><div class="config-label">Category Score · Maturidade Digital</div><div class="config-field highlight">Between 60–80</div></div>` },
+    'g7-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Classificar perfil investidor</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Classifique em Conservador/Moderado/Arrojado baseado em: {{quiz.responses}}</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field">ai.perfil_investidor</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o-mini</div></div>` },
     'g7-3': { kind: 'Action · Update Contact', title: 'Update Contact Field', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Salvar perfil no contato</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · perfil_investidor</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{ai.perfil_investidor}}</div></div>` },
+    'g7-4': { kind: 'Action · Send Email', title: 'Send Email (personalizado por perfil)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Resultado do quiz por perfil</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">From Name</div><div class="config-field">Lucas · Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, seu perfil é {{ai.perfil_investidor}} 🎯</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Resultado Quiz — {{ai.perfil_investidor}}</div></div><div class="config-section"><div class="config-label">Conditional Content</div><div class="config-field">Bloco dinâmico por perfil (Cons/Mod/Arro)</div></div>` }
     'g8-1': { kind: 'Trigger · Facebook Lead Form Submitted', title: 'Facebook Lead Form Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Captura FB Lead Ad</div></div><div class="config-section"><div class="config-label">Page *</div><div class="config-field dropdown">Magnetic Flows — página oficial</div></div><div class="config-section"><div class="config-label">Form *</div><div class="config-field highlight dropdown">Lead Form — Curso Avançado</div></div>` },
     'g8-2': { kind: 'Action · Send SMS', title: 'Send SMS', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">SMS imediato pós-captura</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field">{{contact.phone}}</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">Oi {{contact.first_name}}! Obrigado pelo interesse. Em 5 min te ligo 📞</div></div>` },
     'g8-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar origem FB Lead Ad</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Origem Facebook Ads</span> <span class="opt-chip">Lead Quente</span></div></div>` },
