@@ -2437,7 +2437,7 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Contatos · 16 ações</div>
+  <div class="side-section-label">Contatos · 18 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Criar Contato</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Encontrar Contato</a>
@@ -5154,6 +5154,304 @@ Próximo passo: agendar demo.</textarea>
     </div>
   </div>
 
+<div class="acao-block" id="a17" data-name="criar registro associado create associated record objeto customizado custom object">
+  <div class="acao-head">
+    <div class="acao-num">17</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Criar Registro Associado</h2>
+      <div class="acao-en">Create an Associated Record</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Cria um novo registro de Objeto Customizado (Custom Object) diretamente dentro de um workflow e associa esse registro ao contato em contexto. Permite criar relações estruturadas entre contatos e objetos como "Projetos", "Contratos", "Pedidos", "Atendimentos" ou qualquer objeto que você criou nos Custom Objects do HighLevel.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+<div class="use-case">
+  <div class="use-case-label">Caso 01</div>
+  <div class="use-case-title">Criar contrato automaticamente</div>
+  <div class="use-case-desc">Oportunidade fechada → cria registro de "Contrato" com data de início, valor e tipo de plano, associado ao contato.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 02</div>
+  <div class="use-case-title">Abrir chamado de suporte</div>
+  <div class="use-case-desc">Tag "Precisa de Suporte" adicionada → cria registro de "Ticket" com prioridade e descrição automáticos.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 03</div>
+  <div class="use-case-title">Registrar projeto</div>
+  <div class="use-case-desc">Formulário de onboarding preenchido → cria objeto "Projeto" com nome, prazo e responsável pré-preenchidos.</div>
+</div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p><strong>Object Type:</strong> Seleciona qual Custom Object criar (dropdown com seus objetos). <strong>Field Mapping:</strong> Mapeia campos do objeto para valores do workflow (merge fields, campos do contato, valores fixos). <strong>Association:</strong> Associa automaticamente ao contato em contexto.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a17">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Contatos/ Create Associated Record · Contrato</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a17">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a17-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Opportunity Won</div>
+              <div class="ghl-node-title">Opportunity Won</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Venda fechada</span></div><div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv">Vendas Principal</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a17-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">📋</div>
+            <div>
+              <div class="ghl-node-type">Action · Contacts</div>
+              <div class="ghl-node-title">Create an Associated Record</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Criar contrato do cliente</span></div><div class="ghl-node-param"><span class="pk">Object Type</span><span class="pv highlight">Contrato</span></div><div class="ghl-node-param"><span class="pk">Field: Valor</span><span class="pv">{{opportunity.value}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A17 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Requer que você tenha Custom Objects criados em Settings → Custom Objects. O objeto criado é automaticamente associado ao contato em contexto.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Create an Associated Record</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Action Name <span class="req">*</span></div>
+        <input class="hl-input" value="Criar contrato do cliente" readonly>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Object Type</div>
+        <div class="hl-dropdown has-value">Contrato</div>
+      </div>
+      <div class="hl-section-head">Field Mapping</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Valor do Contrato</div>
+        <input class="hl-input" value="{{opportunity.value}}" readonly>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Data de Início</div>
+        <input class="hl-input" value="{{date.today}}" readonly>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Plano</div>
+        <div class="hl-dropdown has-value">Mensal</div>
+      </div>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Cria registro de Contrato associado ao contato quando a venda é fechada</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a18" data-name="atualizar registro associado update associated record objeto customizado custom object">
+  <div class="acao-head">
+    <div class="acao-num">18</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Atualizar Registro Associado</h2>
+      <div class="acao-en">Update an Associated Record</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Modifica campos de um registro de Objeto Customizado já existente que está associado ao contato em contexto. Use quando o objeto já foi criado e você precisa atualizar campos — como mudar status de um projeto, registrar uma renovação, ou atualizar dados de um chamado de suporte.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+<div class="use-case">
+  <div class="use-case-label">Caso 01</div>
+  <div class="use-case-title">Marcar contrato como ativo</div>
+  <div class="use-case-desc">Primeiro pagamento recebido → atualiza campo "Status" do Contrato associado para "Ativo".</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 02</div>
+  <div class="use-case-title">Fechar ticket de suporte</div>
+  <div class="use-case-desc">Problema resolvido → atualiza Ticket com status "Resolvido" e data de fechamento.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 03</div>
+  <div class="use-case-title">Renovar assinatura</div>
+  <div class="use-case-desc">Pagamento de renovação → atualiza data de vencimento e ciclo do contrato.</div>
+</div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p><strong>Object Type:</strong> Qual Custom Object atualizar. <strong>Find Record By:</strong> Como localizar o registro certo (ID, campo único, ou o mais recente associado). <strong>Field Updates:</strong> Quais campos atualizar e com quais valores.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a18">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Contatos/ Update Associated Record · Status Contrato</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a18">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a18-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Payment Received</div>
+              <div class="ghl-node-title">Payment Received</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Primeiro pagamento</span></div><div class="ghl-node-param"><span class="pk">Payment Type</span><span class="pv">One Time</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a18-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">✏️</div>
+            <div>
+              <div class="ghl-node-type">Action · Contacts</div>
+              <div class="ghl-node-title">Update an Associated Record</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Ativar contrato</span></div><div class="ghl-node-param"><span class="pk">Object Type</span><span class="pv highlight">Contrato</span></div><div class="ghl-node-param"><span class="pk">Field: Status</span><span class="pv highlight">Ativo</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A18 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Use "Find Record By: Most Recent Associated" para sempre atualizar o objeto mais recente associado ao contato.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Update an Associated Record</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Action Name <span class="req">*</span></div>
+        <input class="hl-input" value="Ativar contrato" readonly>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Object Type</div>
+        <div class="hl-dropdown has-value">Contrato</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Find Record By</div>
+        <div class="hl-dropdown has-value">Most Recent Associated</div>
+      </div>
+      <div class="hl-section-head">Fields to Update</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Status</div>
+        <div class="hl-dropdown has-value">Ativo</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Data de Ativação</div>
+        <input class="hl-input" value="{{date.today}}" readonly>
+      </div>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Atualiza o contrato mais recente do contato para Status = Ativo</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -5172,7 +5470,7 @@ Próximo passo: agendar demo.</textarea>
 
   <div class="footer-top">
     <h3>Categoria 01 completa.</h3>
-    <p>16 ações de Contatos explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>18 ações de Contatos — incluindo Create/Update Associated Record para Custom Objects. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -5327,7 +5625,11 @@ Próximo passo: agendar demo.</textarea>
     'a15-2': { kind: 'Action · Add Contact Followers', title: 'Add Contact Followers', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Adicionar gerentes como followers</div></div><div class="config-section"><div class="config-label">Followers *</div><div class="config-field"><span class="opt-chip">Gerente Vendas</span> <span class="opt-chip">CEO</span> <span class="opt-chip">Head of Growth</span></div></div>` },
     'a15-3': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar followers do novo lead</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">All Followers</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">⭐ Novo lead estratégico</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{contact.first_name}} virou Lead Estratégico. Acompanhem o pipeline.</div></div>` },
     'a16-1': { kind: 'Trigger · Tag Added', title: 'Tag Added (Lead Perdido)', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Lead perdido — limpar followers</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Lead Perdido</span></div></div>` },
-    'a16-2': { kind: 'Action · Remove Contact Followers', title: 'Remove Contact Followers', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Limpar todos followers</div></div><div class="config-section"><div class="config-label">Followers *</div><div class="config-field highlight dropdown">All Followers</div></div><div class="config-section"><div class="config-label">Notify on Removal</div><div class="config-field">⚪ OFF</div></div>` }
+    'a16-2': { kind: 'Action · Remove Contact Followers', title: 'Remove Contact Followers', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Limpar todos followers</div></div><div class="config-section"><div class="config-label">Followers *</div><div class="config-field highlight dropdown">All Followers</div></div><div class="config-section"><div class="config-label">Notify on Removal</div><div class="config-field">⚪ OFF</div></div>` },
+    'a17-1': { kind: 'Trigger · Opportunity Won', title: 'Opportunity Won', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Venda fechada</div></div><div class="config-section"><div class="config-label">Pipeline</div><div class="config-field dropdown">Vendas Principal</div></div><div class="config-section"><div class="config-label">Stage</div><div class="config-field dropdown">Fechado · Won</div></div>` },
+    'a17-2': { kind: 'Action · Create an Associated Record', title: 'Create an Associated Record', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar contrato do cliente</div></div><div class="config-section"><div class="config-label">Object Type *</div><div class="config-field highlight dropdown">Contrato</div></div><div class="config-section"><div class="config-label">Valor do Contrato</div><div class="config-field">{{opportunity.value}}</div></div><div class="config-section"><div class="config-label">Data de Início</div><div class="config-field">{{date.today}}</div></div><div class="config-section"><div class="config-label">Plano</div><div class="config-field dropdown">Mensal</div></div>` },
+    'a18-1': { kind: 'Trigger · Payment Received', title: 'Payment Received', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Primeiro pagamento</div></div><div class="config-section"><div class="config-label">Payment Type</div><div class="config-field dropdown">One Time</div></div>` },
+    'a18-2': { kind: 'Action · Update an Associated Record', title: 'Update an Associated Record', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Ativar contrato</div></div><div class="config-section"><div class="config-label">Object Type *</div><div class="config-field highlight dropdown">Contrato</div></div><div class="config-section"><div class="config-label">Find Record By</div><div class="config-field dropdown">Most Recent Associated</div></div><div class="config-section"><div class="config-label">Status</div><div class="config-field highlight dropdown">Ativo</div></div><div class="config-section"><div class="config-label">Data de Ativação</div><div class="config-field">{{date.today}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

@@ -10,6 +10,28 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-13 — Content
+**Add 5 new native HighLevel triggers and actions (78 gatilhos · 111 ações)**
+
+New native triggers:
+- **Scheduler** (g19, cat02 Eventos): Contactless, time-based trigger — Daily/Weekly/Monthly/Cron. Fires without a contact in context. Ideal for recurring reports, webhook pings and scheduled syncs.
+- **Company Changed** (g13, cat01 Contatos): Fires when any field on a Company record changes. Filters by field, operator (Has Changed / Has Changed To) and value. B2B-focused.
+
+New native actions:
+- **Create an Associated Record** (a17, acoes-cat01 Contatos): Creates a new Custom Object record and automatically associates it with the contact in context. Supports full field mapping.
+- **Update an Associated Record** (a18, acoes-cat01 Contatos): Updates fields of an existing Custom Object record linked to the contact. Configurable lookup strategy (most recent / by field).
+- **Add Associated Records to Workflow** (a18, acoes-cat04 Ferramentas Internas): Enrolls related Contacts, Companies or Custom Objects into another workflow — enables B2B cascade automations.
+
+Stats before → after:
+- Gatilhos: 76 → 78
+- Ações: 108 → 111
+- Painéis HighLevel: 184 → 189
+- Mockups interativos: 31 → 33
+
+Homepage updated with new counts and last-update date (13/06/2026).
+
+---
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
