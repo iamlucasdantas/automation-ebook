@@ -10,6 +10,18 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-14 — Content
+**Add new native HighLevel triggers, actions, and Workflow Scheduler category**
+
+- **guia-highlevel-cat02.html** — Adicionado gatilho g19: Inbound Email (Email Recebido). Dispara quando email chega na caixa do HighLevel. Mockup: Inbound Email → AI Classify → Assign to User. Footer: 18→19 gatilhos.
+- **guia-highlevel-cat03.html** — Adicionado gatilho g3: Service Booking (Reserva de Serviço) — Services v2. Mockup: Service Booking → Send WhatsApp → Add Tag. Footer: 2→3 gatilhos.
+- **guia-highlevel-cat08.html** — Adicionado gatilho g4: Abandoned Checkout (E-commerce) — nativo HL + Shopify. Mockup: Abandoned Checkout → Send Email → Wait. Footer: 3→4 gatilhos. Título da categoria atualizado para E-commerce.
+- **guia-highlevel-cat13.html** — NOVO ARQUIVO. Categoria 13: Agendador de Workflow (Workflow Scheduler). 1 gatilho com 4 padrões de agendamento (Daily/Weekly/Monthly/Custom). Mockup: Workflow Scheduler → Outbound Webhook → Internal Notification. Painel HL com prévia das próximas execuções.
+- **acoes-highlevel-cat02.html** — Adicionadas 3 ações de Conversation AI: a26 (Update Bot), a27 (Transfer Bot), a28 (Human Handover). Footer: 25→28 ações.
+- **acoes-highlevel-cat05.html** — Adicionada ação a6: AI Agent (agente autônomo multi-etapa). Footer: 5→6 ações.
+- **guia-highlevel-cat12.html** — Nav atualizado: "Fim" → "Próxima · Categoria 13". Footer-legal: "12 de 12" → "12 de 13".
+- **index.html** — Contadores atualizados: 76→80 gatilhos, 108→112 ações, 184→213 painéis, 31→37 mockups. Tabs: 12→13 categorias. Cat13 card adicionado. Data de atualização: 14 de junho de 2026.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

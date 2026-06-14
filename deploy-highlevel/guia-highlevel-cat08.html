@@ -2376,6 +2376,7 @@
   <div class="side-section-label">Pré-compra</div>
 <nav class="side-nav">
 <a href="#g1" class="side-link"><span class="side-num">01</span>Carrinho Abandonado</a>
+<a href="#g4" class="side-link"><span class="side-num">04</span>Checkout Abandonado (E-commerce)</a>
 </nav>
 <div class="side-section-label">Venda</div>
 <nav class="side-nav">
@@ -2985,6 +2986,195 @@
     </div>
   </div>
 
+</div>
+
+<div class="trigger-block" id="g4" data-name="checkout abandonado abandoned checkout ecommerce lojas hl">
+  <div class="trigger-head">
+    <div class="trigger-num">04</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">E-commerce HL</div>
+      <h2 class="trigger-name">Checkout Abandonado</h2>
+      <div class="trigger-en">Abandoned Checkout</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">E-commerce</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um visitante avança para o checkout nas <strong>Lojas E-commerce nativas do HighLevel</strong> (ou Shopify), insere o email, mas não conclui a compra. Diferente do "Carrinho Abandonado" (que captura saídas da página de produto), este gatilho atua na etapa de checkout — intenção de compra mais alta.</p>
+      <p>Configure a janela de abandono (ex: 30-60 min após iniciar o checkout sem concluir) e use para recuperação com cupom ou urgência.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Recuperação com cupom</div><div class="use-case-desc">Checkout abandonado → email 30 min depois com cupom de 10% para finalizar.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Sequência de urgência</div><div class="use-case-desc">Sem compra em 1h → SMS de urgência · 24h → email final com oferta expirando.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Assistência humana</div><div class="use-case-desc">Alto valor no carrinho + checkout abandonado → notificação interna para SDR entrar em contato.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Loja</div>
+    <div class="filter-en">Store Name</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Loja HL ou conexão Shopify específica.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Workflows diferentes por loja ou marca.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Valor Mínimo do Carrinho</div>
+    <div class="filter-en">Cart Value</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Valor mínimo para acionar o fluxo de recuperação.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Focar esforços em checkouts de alto valor.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Janela de Abandono</div>
+    <div class="filter-en">Abandonment Window (min)</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Tempo em minutos após início do checkout sem conclusão.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Define quando o gatilho considera o checkout abandonado.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g4">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/E-commerce/ 04 — Checkout Abandonado → Recuperação com Cupom</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g4">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Abandoned Checkout</div>
+              <div class="ghl-node-title">Abandoned Checkout</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Checkout abandonado — cupom 10%</span></div><div class="ghl-node-param"><span class="pk">Store</span><span class="pv">Loja Principal HL</span></div><div class="ghl-node-param"><span class="pk">Abandonment Window</span><span class="pv">30 min</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Send Email</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Email checkout abandonado + cupom</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">{{contact.first_name}}, você esqueceu algo 🛒 — 10% OFF pra você</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Checkout Recovery — Cupom 10%</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">⏱</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Tools</div>
+              <div class="ghl-node-title">Wait</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Aguardar 24h para 2º nudge</span></div><div class="ghl-node-param"><span class="pk">Wait Type</span><span class="pv">Time Delay · 24 hours</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G4 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Requer Loja E-commerce HL configurada (ou Shopify conectado). Janela de abandono define o delay antes do gatilho disparar.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Abandoned Checkout</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Checkout abandonado — cupom 10%" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Store Name <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Loja Principal HL</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Abandonment Window (min) <span class="req">*</span></div>
+        <input class="hl-input" value="30" readonly>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Min Cart Value</div>
+        <input class="hl-input" value="R$ 50,00" readonly>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara 30 min após início do checkout sem conclusão — alta intenção de compra, ótimo para cupom de recuperação</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat07.html" class="cat-nav-link prev">
@@ -3000,7 +3190,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 08 completa.</h3>
-    <p>3 gatilhos de Shopify explicados com impacto prático e mockups visuais.</p>
+    <p>4 gatilhos de E-commerce (Shopify + Lojas HL) explicados com impacto prático e mockups visuais.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3019,7 +3209,7 @@
     <a href="https://br.magneticfunnels.io" target="_blank" class="footer-link-card"><span class="footer-link-tag">Assinatura</span><span class="footer-link-title">Magnetic Funnels Premium</span><span class="footer-link-desc">Suporte dedicado e mentorias mensais.</span><span class="footer-link-arrow">Assinar →</span></a>
   </div>
 
-  <div class="footer-legal">Guia produzido pela Magnetic Funnels · Categoria 08 de 12 · Atualizado em 2026</div>
+  <div class="footer-legal">Guia produzido pela Magnetic Funnels · Categoria 08 de 13 · Atualizado em 14 de junho de 2026</div>
 </div>
 
 </main>
@@ -3035,7 +3225,10 @@
     'g2-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar cliente comprou</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Comprou Loja</span> <span class="opt-chip">Cliente Ativo</span> <span class="opt-chip">LTV Track</span></div></div>` },
     'g3-1': { kind: 'Trigger · Order Completed', title: 'Order Completed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pedido entregue — pedir review</div></div><div class="config-section"><div class="config-label">Store *</div><div class="config-field dropdown">Loja Principal</div></div><div class="config-section"><div class="config-label">Min Order Value</div><div class="config-field">R$ 50,00</div></div>` },
     'g3-2': { kind: 'Action · Wait', title: 'Wait (5 dias)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aguardar 5 dias após entrega</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait For Time Delay</div></div><div class="config-section"><div class="config-label">Duration *</div><div class="config-field highlight">5 days</div></div>` },
-    'g3-3': { kind: 'Action · Send Review Request', title: 'Send Review Request', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Pedir review do produto</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field"><span class="opt-chip">Email</span> <span class="opt-chip">WhatsApp</span></div></div><div class="config-section"><div class="config-label">Review Source</div><div class="config-field dropdown">Google + Site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Pedido de Review — Pós-Compra</div></div>` }
+    'g3-3': { kind: 'Action · Send Review Request', title: 'Send Review Request', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Pedir review do produto</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field"><span class="opt-chip">Email</span> <span class="opt-chip">WhatsApp</span></div></div><div class="config-section"><div class="config-label">Review Source</div><div class="config-field dropdown">Google + Site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Pedido de Review — Pós-Compra</div></div>` },
+    'g4-1': { kind: 'Trigger · Abandoned Checkout', title: 'Abandoned Checkout', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Checkout abandonado — cupom 10%</div></div><div class="config-section"><div class="config-label">Store Name *</div><div class="config-field highlight dropdown">Loja Principal HL</div></div><div class="config-section"><div class="config-label">Abandonment Window (min) *</div><div class="config-field">30</div></div><div class="config-section"><div class="config-label">Min Cart Value</div><div class="config-field">R$ 50,00</div></div>` },
+    'g4-2': { kind: 'Action · Send Email', title: 'Send Email (checkout recovery + cupom)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email checkout abandonado + cupom</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">loja@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, você esqueceu algo 🛒 — 10% OFF pra você</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Checkout Recovery — Cupom 10%</div></div><div class="config-section"><div class="config-label">Variables</div><div class="config-field">{{checkout.url}} + cupom VOLTA10 (10% off)</div></div>` },
+    'g4-3': { kind: 'Action · Wait', title: 'Wait (24h para 2º nudge)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aguardar 24h para segundo nudge</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait For Time Delay</div></div><div class="config-section"><div class="config-label">Duration *</div><div class="config-field highlight">24 hours</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
