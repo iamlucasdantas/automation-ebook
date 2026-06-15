@@ -2361,7 +2361,7 @@
       <span>Voltar ao índice</span>
     </a>
     <div class="top-nav-divider"></div>
-    <div class="top-nav-breadcrumb">Categoria <strong>02/12</strong> · <strong>Eventos</strong></div>
+    <div class="top-nav-breadcrumb">Categoria <strong>02/13</strong> · <strong>Eventos</strong></div>
   </div>
 </div>
 
@@ -2423,6 +2423,11 @@
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
   </nav>
 
+  <div class="side-section-label">Email de Entrada</div>
+  <nav class="side-nav">
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Email de Entrada</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        ============================================================ -->
@@ -2452,7 +2457,7 @@
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">18</span>
+      <span class="hero-stat-num">19</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -6747,7 +6752,194 @@
     </div>
   </div>
 
-</div><!-- ═══════════════════════════════════════════════════════════════════════
+</div>
+
+<div class="trigger-block" id="g19" data-name="email entrada inbound email caixa entrada recebido cold email">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Email de Entrada</div>
+      <h2 class="trigger-name">Email de Entrada</h2>
+      <div class="trigger-en">Inbound Email</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Email</span><span class="info-tag">Captura de Lead</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara toda vez que um novo email chega em qualquer caixa de entrada configurada no HighLevel — incluindo <strong>emails frios de remetentes desconhecidos</strong> que ainda não são contatos no CRM.</p>
+      <p>Diferente do gatilho "Contato Respondeu" (que só dispara quando um contato existente responde a uma mensagem sua), o Email de Entrada captura todo email recebido: cold emails, respostas em threads existentes e emails de novos leads. Você pode filtrar por caixa de entrada, remetente, assunto, corpo ou presença de anexos.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Captura de cold email</div><div class="use-case-desc">Email frio chega → criar contato automaticamente → adicionar tag "Cold Lead" → notificar vendas.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Intake de documentos</div><div class="use-case-desc">Email com anexo → criar tarefa de revisão → notificar equipe responsável com link do documento.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Roteamento de suporte</div><div class="use-case-desc">Email chega com "urgente" no assunto → escalar prioridade → atribuir para gerente de CS direto.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Caixa de Entrada</div>
+    <div class="filter-en">Mailbox</div>
+    <div class="filter-type">opcional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por caixa de entrada específica do HighLevel. Útil quando você tem múltiplos endereços (vendas@, suporte@, financeiro@) com fluxos distintos.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Permite criar workflows separados por departamento sem misturar filas de email.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Remetente</div>
+    <div class="filter-en">Sender</div>
+    <div class="filter-type">opcional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por endereço de email do remetente. Pode usar contém, é igual a, ou domínio específico (ex: @empresa.com.br).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Ideal pra capturar apenas emails de domínios corporativos e excluir spam automaticamente.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Assunto</div>
+    <div class="filter-en">Subject</div>
+    <div class="filter-type">opcional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra pelo conteúdo do assunto do email. Suporta operadores: contém, começa com, termina com, é igual a.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Detectar emails urgentes ("URGENTE"), propostas recebidas ("Proposta") ou pedidos de orçamento.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Tem Anexo</div>
+    <div class="filter-en">Has Attachment</div>
+    <div class="filter-type">opcional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra emails que contêm ou não contêm arquivos anexados.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Criar intake automático de documentos — contratos, proposta de cliente, NF enviada.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Fonte de Resposta</div>
+    <div class="filter-en">Workflow Reply Source</div>
+    <div class="filter-type">opcional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Controla se o gatilho deve ou não disparar para respostas dentro de threads existentes.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Evita loops de automação ao receber respostas a emails que o próprio workflow enviou.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+  <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+  <div class="ghl-mockup" data-mockup="g19">
+    <div class="ghl-toolbar">
+      <div class="ghl-workflow-name">/Email/ 01 — Email Frio Recebido → Capturar Lead + Notificar Vendas</div>
+      <div class="ghl-toolbar-right">
+        <button class="ghl-btn play" data-play="g19">▶ Reproduzir montagem</button>
+        <button class="ghl-btn">Save</button>
+        <button class="ghl-btn primary">Publish</button>
+      </div>
+    </div>
+    <div class="ghl-canvas"><div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+<div class="ghl-node" data-node-id="g19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+  <span class="click-hint">clique para ver ↗</span>
+  <div class="ghl-node-header">
+    <div class="ghl-node-icon trigger">T</div>
+    <div><div class="ghl-node-type">Trigger · Inbound Email</div><div class="ghl-node-title">Email de Entrada</div></div>
+  </div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Mailbox</span><span class="pv highlight">vendas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">contém: orçamento</span></div><div class="ghl-node-param"><span class="pk">Reply Source</span><span class="pv">Novos emails apenas</span></div></div>
+</div>
+<div class="ghl-connector"></div>
+<div class="ghl-node" data-node-id="g19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+  <span class="click-hint">clique para ver ↗</span>
+  <div class="ghl-node-header">
+    <div class="ghl-node-icon action-pipeline">+</div>
+    <div><div class="ghl-node-type">Action · Contact</div><div class="ghl-node-title">Find or Create Contact</div></div>
+  </div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Match por</span><span class="pv">Email do remetente</span></div><div class="ghl-node-param"><span class="pk">Se não encontrar</span><span class="pv highlight">Criar novo contato</span></div></div>
+</div>
+<div class="ghl-connector"></div>
+<div class="ghl-node" data-node-id="g19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+  <span class="click-hint">clique para ver ↗</span>
+  <div class="ghl-node-header">
+    <div class="ghl-node-icon action-tag">🏷</div>
+    <div><div class="ghl-node-type">Action · Tag</div><div class="ghl-node-title">Add Contact Tag</div></div>
+  </div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Tags</span><span class="pv highlight">Cold Lead · Email Entrada</span></div></div>
+</div>
+<div class="ghl-connector"></div>
+<div class="ghl-node" data-node-id="g19-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+  <span class="click-hint">clique para ver ↗</span>
+  <div class="ghl-node-header">
+    <div class="ghl-node-icon action-notify">🔔</div>
+    <div><div class="ghl-node-type">Action · Notification</div><div class="ghl-node-title">Internal Notification</div></div>
+  </div>
+  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Para</span><span class="pv">Time de Vendas</span></div><div class="ghl-node-param"><span class="pk">Mensagem</span><span class="pv highlight">Email de orçamento recebido de {{contact.email}}</span></div></div>
+</div>
+</div>
+
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Painel de configuração HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Configure a caixa de entrada monitorada e os filtros de captura. O gatilho dispara para <strong>todos os emails recebidos</strong> que passarem nos filtros — inclusive de remetentes novos que não são contatos ainda.</div>
+        <div class="hl-panel" style="width:360px;flex-shrink:0;">
+          <div class="hl-panel-header">
+            <div class="hl-panel-title"><span>Inbound Email</span></div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-section-head">Workflow Trigger Name *</div>
+            <input class="hl-input" value="Email de orçamento recebido" readonly>
+            <div class="hl-section-head">Filters</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Mailbox</div>
+              <div class="hl-dropdown has-value">vendas@magneticflows.com.br</div>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Subject</div>
+              <div class="hl-field-row">
+                <div class="hl-dropdown has-value">contains</div>
+                <input class="hl-input" value="orçamento" readonly>
+              </div>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Workflow Reply Source</div>
+              <div class="hl-dropdown has-value">New threads only</div>
+            </div>
+          </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Novo gatilho nativo — captura qualquer email recebido, incluindo cold emails de remetentes desconhecidos</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
 <!-- NAV PREV/NEXT entre categorias -->
@@ -6766,7 +6958,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>18 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>19 gatilhos de eventos explicados com impacto prático e mockups visuais. Inclui o novo gatilho de Email de Entrada para captura de cold emails nativamente no HighLevel.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6871,7 +7063,11 @@
     'g17-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Primeira impressão prospecto</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Soube que você passou pelo nosso site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Cold Outreach — Prospecto</div></div>` },
     'g18-1': { kind: 'Trigger · Transcript Generated', title: 'Transcript Generated', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Transcript Generated</div></div><div class="config-section"><div class="config-label">Call Type</div><div class="config-field dropdown">Normal Calls</div></div><div class="config-section"><div class="config-label">Call Direction</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Call Duration (s)</div><div class="config-field">120</div></div>` },
     'g18-2': { kind: 'Action · Workflow AI', title: 'AI · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI · Resumo da Call</div></div><div class="config-section"><div class="config-label">Prompt</div><div class="config-field">Resuma a conversa em 3 pontos: interesse, objeção e próximo passo.</div></div>` },
-    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` }
+    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` },
+    'g19-1': { kind: 'Trigger · Inbound Email', title: 'Email de Entrada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Email de orçamento recebido</div></div><div class="config-section"><div class="config-label">Mailbox</div><div class="config-field dropdown">vendas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field"><span class="opt-chip">contains</span> orçamento</div></div><div class="config-section"><div class="config-label">Workflow Reply Source</div><div class="config-field dropdown">New threads only</div></div>` },
+    'g19-2': { kind: 'Action · Contact', title: 'Find or Create Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Capturar remetente</div></div><div class="config-section"><div class="config-label">Search Field</div><div class="config-field dropdown">Email</div></div><div class="config-section"><div class="config-label">Match Value</div><div class="config-field highlight">{{inboundEmail.from_email}}</div></div><div class="config-section"><div class="config-label">On No Match</div><div class="config-field dropdown">Create new contact</div></div>` },
+    'g19-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tag cold lead</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cold Lead</span> <span class="opt-chip">Email Entrada</span></div></div>` },
+    'g19-4': { kind: 'Action · Internal Notification', title: 'Notificar Vendas', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Alerta email orçamento</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Time de Vendas</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">Email de orçamento recebido de {{inboundEmail.from_email}} — assunto: {{inboundEmail.subject}}</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

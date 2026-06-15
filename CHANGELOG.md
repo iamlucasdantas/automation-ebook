@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-15 — Content
+**Add new native triggers and actions: Inbound Email, Manus AI, Browse AI**
+
+- **Inbound Email trigger** added to Cat 02 (Eventos) as trigger #19:
+  fires when any email arrives in HL mailboxes, including cold emails from
+  new senders. Includes 5 filters (Mailbox, Sender, Subject, Has Attachment,
+  Workflow Reply Source) and 1 interactive mockup.
+- **New Cat 13 — Integrações Nativas (Triggers)**: 3 new triggers:
+  Manus Nova Tarefa Criada, Manus Tarefa Parada, Browse AI Nova Tarefa Concluída.
+  Manus triggers react to AI agent task lifecycle events. Browse AI trigger fires
+  via webhook when a scraping robot completes. All with mockups and config panels.
+- **New Cat 15 — Integrações Nativas (Ações)**: 10 new actions:
+  Manus (6): Criar Tarefa, Obter Tarefa, Atualizar Tarefa, Buscar Tarefas,
+  Deletar Tarefa, Continuar Tarefa com Prompt;
+  Browse AI (4): Executar Tarefa, Execução em Massa, Obter Tarefa, Obter Execução em Massa.
+- **index.html updated**: 76→80 gatilhos, 108→118 ações, 12→13 cat (triggers),
+  14→15 cat (ações), 184→212 painéis, 31→37 mockups. Date: 15 Jun 2026.
+- All new integrations are native HighLevel (no Zapier/Make needed).
+  Sources: help.gohighlevel.com articles 155000007351 (Manus), Browse AI changelog,
+  155000007650 (Inbound Email).
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
