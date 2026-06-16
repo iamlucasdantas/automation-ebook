@@ -10,6 +10,32 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-16 — Content
+**Add 2 new native triggers: Form Partially Completed + Product Review Submitted**
+
+- **Gatilho 19 — Formulário Parcialmente Preenchido** (Form Partially Completed):
+  Added to cat02 (Eventos). Fires when a contact starts filling a HighLevel form
+  but does not submit it. Includes mockup (g19) with a 15-min wait + SMS recovery
+  sequence, interactive HL config panel, 3 use cases, and 2 filter explanations.
+  Native trigger released in 2026 for lead nurture / form abandonment flows.
+
+- **Gatilho 4 — Avaliação de Produto Submetida** (Product Review Submitted):
+  Added to cat08 (Shopify & Ecommerce Nativa). Fires when a customer submits a
+  product review on a native HighLevel e-commerce store. Includes mockup (g4) with
+  an If/Else by rating + Internal Notification branch, interactive HL config panel,
+  3 use cases, and 3 filter explanations (Rating, Product, Store). Added to
+  HighLevel's official support portal February 19, 2026.
+
+- **index.html updated**:
+  - Trigger count: 76 → 78
+  - Painéis HighLevel: 184 → 186
+  - Mockups interativos: 31 → 33
+  - cat02 stats: 18 gatilhos / 8 mockups → 19 gatilhos / 9 mockups
+  - cat08 stats: 3 gatilhos / 1 mockup → 4 gatilhos / 2 mockups
+  - cat08 title: "Shopify" → "Shopify & Ecommerce"
+  - Added "Atualizado em 16 jun 2026" badge to hero section
+  - Updated footer with last update date
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
