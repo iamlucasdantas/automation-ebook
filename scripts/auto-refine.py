@@ -275,6 +275,17 @@ TRANSFORMS = [
 ]
 
 
+def rebuild_search_index():
+    """Run scripts/build-search-index.py at the end of a refine pass so the
+    JSON index stays in sync with the source of truth."""
+    import subprocess
+    here = os.path.dirname(__file__)
+    subprocess.run(
+        ['python3', os.path.join(here, 'build-search-index.py')],
+        check=True,
+    )
+
+
 def process_file(fp):
     with open(fp) as f:
         orig = f.read()
@@ -307,6 +318,18 @@ def main():
             if s != orig:
                 print(f'would change: {os.path.basename(fp)}')
                 sys.exit(1)
+        # Index drift counts as a change too — the index is part of the
+        # deployed surface.
+        index_path = os.path.join(ROOT, 'search-index.json')
+        if os.path.exists(index_path):
+            with open(index_path) as f:
+                before = f.read()
+            rebuild_search_index()
+            with open(index_path) as f:
+                after = f.read()
+            if before != after:
+                print('would change: search-index.json')
+                sys.exit(1)
         print('all files clean')
         return
 
@@ -314,6 +337,12 @@ def main():
     for fp in files:
         if process_file(fp):
             changed.append(os.path.basename(fp))
+
+    # Always rebuild the search index — it's idempotent and depends on the
+    # current state of all category pages, not just the ones the refine
+    # transforms touched. (For example a hand-edit to a trigger title needs
+    # to surface in the index.)
+    rebuild_search_index()
 
     if changed:
         print(f'updated {len(changed)} files:')

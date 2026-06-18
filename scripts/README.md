@@ -31,6 +31,25 @@ Transformations applied (in order):
 Files in `HAND_CRAFTED` are skipped — they are maintained at higher
 fidelity by hand.
 
+## build-search-index.py
+
+Walks every category page and builds `deploy-highlevel/search-index.json`
+— one entry per trigger / action with the PT name, English name,
+category, info-tag chips, description, keyword list (from `data-name`),
+and the URL+anchor to jump to.
+
+The client-side search (`deploy-highlevel/search.js`) fetches that JSON
+on first open and runs fuzzy matching against name + EN + category +
+tags + keywords + description.
+
+`auto-refine.py` rebuilds the index automatically at the end of every
+run, so it's always in sync with the deployed pages. `--check` flags
+index drift as a change too.
+
+```bash
+python3 scripts/build-search-index.py
+```
+
 ## validate-mockups.js
 
 Loads every category page in headless Chromium (Playwright) and fails

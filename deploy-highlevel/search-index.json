@@ -1,0 +1,2398 @@
+{
+  "generated_at": null,
+  "total": 183,
+  "items": [
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Criação de Contato",
+      "en": "Contact Created",
+      "category": "Eventos de Existência",
+      "tags": [
+        "Tempo real",
+        "Mais usado"
+      ],
+      "description": "Dispara toda vez que um novo contato aparece no seu CRM — não importa por qual caminho ele chegou: formulário no site, integração com Typeform ou Elementor, cadastro manual, importação de CSV, API, ou até mensagem recebida no Instagram/Facebook/WhatsApp/SMS.",
+      "keywords": "criação contato created",
+      "href": "guia-highlevel-cat01.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Alterações no Contato",
+      "en": "Contact Changed",
+      "category": "Eventos de Existência",
+      "tags": [
+        "Tempo real",
+        "Reativo"
+      ],
+      "description": "Dispara quando qualquer informação de um contato que já existe é alterada — e-mail, telefone, cidade, tags, campos customizados, status de \"Não Perturbe\", usuário responsável.",
+      "keywords": "alterações changed mudança",
+      "href": "guia-highlevel-cat01.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Contato Ativou DND",
+      "en": "Contact DND",
+      "category": "Comportamento e Preferências",
+      "tags": [
+        "Tempo real",
+        "Compliance"
+      ],
+      "description": "DND é \"Do Not Disturb\" — Não Perturbe. Dispara quando um contato ativa ou desativa o bloqueio de comunicação, seja por canal específico ou todos de uma vez.",
+      "keywords": "dnd não perturbe",
+      "href": "guia-highlevel-cat01.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Tag Adicionada ou Removida",
+      "en": "Contact Tag",
+      "category": "Comportamento e Preferências",
+      "tags": [
+        "Tempo real",
+        "Versátil"
+      ],
+      "description": "Dispara quando uma tag é adicionada ou removida de um contato. Tags no HighLevel funcionam como rótulos multiuso — você usa pra classificar, segmentar, agrupar.",
+      "keywords": "tag adicionada removida",
+      "href": "guia-highlevel-cat01.html#g4"
+    },
+    {
+      "id": "g5",
+      "type": "Gatilho",
+      "name": "Pontuação de Engajamento",
+      "en": "Contact Engagement Score",
+      "category": "Comportamento e Preferências",
+      "tags": [
+        "Tempo real",
+        "Avançado"
+      ],
+      "description": "O HighLevel calcula automaticamente uma pontuação de engajamento pra cada contato, baseada em cliques em e-mail, respostas a SMS, interações, agendamentos etc. Esse gatilho dispara quando a pontuação atinge um valor específico.",
+      "keywords": "pontuação engajamento score",
+      "href": "guia-highlevel-cat01.html#g5"
+    },
+    {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Lembrete de Aniversário",
+      "en": "Birthday Reminder",
+      "category": "Baseados em Datas",
+      "tags": [
+        "Roda 8h da manhã",
+        "Relacionamento"
+      ],
+      "description": "Baseado no campo nativo Birthdate (Data de Nascimento). Dispara em relação à data de aniversário do contato — antes, no dia, ou depois. Sempre roda às 8h da manhã no fuso horário da subconta.",
+      "keywords": "aniversário birthday",
+      "href": "guia-highlevel-cat01.html#g6"
+    },
+    {
+      "id": "g7",
+      "type": "Gatilho",
+      "name": "Lembrete de Data Personalizada",
+      "en": "Custom Date Reminder",
+      "category": "Baseados em Datas",
+      "tags": [
+        "Roda 8h da manhã",
+        "Flexível"
+      ],
+      "description": "Funciona parecido com o Birthday Reminder, mas em cima de qualquer campo customizado de data que você criar no CRM — vencimento de contrato, aniversário de contratação, próxima consulta, vencimento do cartão.",
+      "keywords": "data personalizada custom date",
+      "href": "guia-highlevel-cat01.html#g7"
+    },
+    {
+      "id": "g8",
+      "type": "Gatilho",
+      "name": "Nota Adicionada",
+      "en": "Note Added",
+      "category": "Notas e Tarefas",
+      "tags": [
+        "Tempo real",
+        "Interno"
+      ],
+      "description": "Dispara quando alguém da sua equipe adiciona uma nota no registro de um contato. Notas no HighLevel são textos livres que a equipe usa pra registrar interações, detalhes de ligação, observações.",
+      "keywords": "nota adicionada note added",
+      "href": "guia-highlevel-cat01.html#g8"
+    },
+    {
+      "id": "g9",
+      "type": "Gatilho",
+      "name": "Nota Alterada",
+      "en": "Note Changed",
+      "category": "Notas e Tarefas",
+      "tags": [
+        "Tempo real",
+        "Interno"
+      ],
+      "description": "Parecido com Note Added, mas dispara quando uma nota existente é editada. Útil quando a atualização importa mais que a criação original — ex.: agente de suporte atualizou nota com resolução final de um ticket.",
+      "keywords": "nota alterada note changed",
+      "href": "guia-highlevel-cat01.html#g9"
+    },
+    {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Tarefa Adicionada",
+      "en": "Task Added",
+      "category": "Notas e Tarefas",
+      "tags": [
+        "Tempo real",
+        "Gestão"
+      ],
+      "description": "Dispara sempre que uma tarefa nova é adicionada ao registro de um contato. Tarefas no HighLevel são atividades atribuídas a um usuário.",
+      "keywords": "tarefa adicionada task added",
+      "href": "guia-highlevel-cat01.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Lembrete de Tarefa",
+      "en": "Task Reminder",
+      "category": "Notas e Tarefas",
+      "tags": [
+        "Roda 8h da manhã",
+        "Gestão"
+      ],
+      "description": "Roda com base nos prazos das tarefas. Dispara X dias antes ou depois da data de vencimento, sempre às 8h da manhã no fuso da subconta.",
+      "keywords": "lembrete tarefa task reminder",
+      "href": "guia-highlevel-cat01.html#g11"
+    },
+    {
+      "id": "g12",
+      "type": "Gatilho",
+      "name": "Tarefa Completada",
+      "en": "Task Completed",
+      "category": "Notas e Tarefas",
+      "tags": [
+        "Tempo real",
+        "Follow-up"
+      ],
+      "description": "Dispara quando uma tarefa é marcada como concluída. Perfeito pra ações de follow-up pós-conclusão — disparar o próximo passo automático assim que o atual é cumprido.",
+      "keywords": "tarefa completada task completed",
+      "href": "guia-highlevel-cat01.html#g12"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Webhook de Entrada",
+      "en": "Inbound Webhook",
+      "category": "Integrações & Webhooks",
+      "tags": [
+        "Tempo real",
+        "Pago · $0,01/exec",
+        "Integrações"
+      ],
+      "description": "Esse é o gatilho mais importante pra quem integra o HighLevel com outras ferramentas como Make, n8n, Zapier, Hotmart, Stripe, Shopify — enfim, qualquer sistema externo que mande dados.",
+      "keywords": "webhook entrada inbound integração",
+      "href": "guia-highlevel-cat02.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Status de Ligação",
+      "en": "Call Status",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Telefonia"
+      ],
+      "description": "O nome é enganoso — na verdade esse gatilho deveria se chamar \"Chamada Feita ou Recebida\". Ele dispara toda vez que uma ligação acontece no sistema, seja outgoing (feita pela sua equipe) ou incoming (recebida).",
+      "keywords": "status ligação call telefone chamada",
+      "href": "guia-highlevel-cat02.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Eventos de Email",
+      "en": "Email Events",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Engajamento"
+      ],
+      "description": "Reage a interações específicas que o destinatário faz com seus emails: abriu, clicou num link, marcou como spam, descadastrou, ou o email voltou (bounced).",
+      "keywords": "eventos email abertura clique",
+      "href": "guia-highlevel-cat02.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Contato Respondeu",
+      "en": "Customer Replied",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "★ Mais usado",
+        "Multicanal"
+      ],
+      "description": "Esse é o gatilho mais usado do HighLevel. Aprender a usar bem vai mudar seu jogo. Ele dispara sempre que um contato responde uma mensagem — SMS, WhatsApp, Instagram DM, Facebook Messenger, Google Meu Negócio.",
+      "keywords": "contato respondeu resposta replied whatsapp instagram",
+      "href": "guia-highlevel-cat02.html#g4"
+    },
+    {
+      "id": "g5",
+      "type": "Gatilho",
+      "name": "Formulário Preenchido",
+      "en": "Form Submitted",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Tempo real",
+        "Lead capture"
+      ],
+      "description": "Dispara sempre que um formulário nativo do HighLevel é enviado. Pode ser um formulário simples de captura de email, um formulário de qualificação com múltiplos campos, ou um formulário embutido numa landing page.",
+      "keywords": "formulário preenchido form submitted",
+      "href": "guia-highlevel-cat02.html#g5"
+    },
+    {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Survey Respondido",
+      "en": "Survey Submitted",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Tempo real",
+        "Pesquisa"
+      ],
+      "description": "Parecido com Form Submitted, mas específico pra pesquisas (surveys do HighLevel). Surveys são diferentes de forms: podem ter múltiplas páginas, lógica condicional, perguntas com pontuação.",
+      "keywords": "survey pesquisa respondido submitted",
+      "href": "guia-highlevel-cat02.html#g6"
+    },
+    {
+      "id": "g7",
+      "type": "Gatilho",
+      "name": "Quiz Respondido",
+      "en": "Quiz Submitted",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Tempo real",
+        "Engajamento"
+      ],
+      "description": "Dispara quando alguém completa um quiz. Diferente do survey, quiz tem pontuação e resultados calculados — ideal pra mecânicas de \"descubra seu perfil\", avaliações com nota, ou lead magnets interativos.",
+      "keywords": "quiz respondido submitted avaliação pontuação",
+      "href": "guia-highlevel-cat02.html#g7"
+    },
+    {
+      "id": "g8",
+      "type": "Gatilho",
+      "name": "Formulário de Lead do Facebook",
+      "en": "Facebook Lead Form Submitted",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Tempo real",
+        "Meta Ads"
+      ],
+      "description": "Dispara sempre que alguém preenche um Lead Form nas campanhas do Facebook/Instagram (Meta Ads). A grande vantagem: o lead vai direto pro HighLevel em segundos, sem você precisar baixar CSV ou usar Zapier.",
+      "keywords": "facebook lead form meta ads",
+      "href": "guia-highlevel-cat02.html#g8"
+    },
+    {
+      "id": "g9",
+      "type": "Gatilho",
+      "name": "Formulário de Lead do TikTok",
+      "en": "TikTok Lead Form Submitted",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Tempo real",
+        "TikTok Ads"
+      ],
+      "description": "Mesma lógica do Facebook Lead Form, mas pra campanhas no TikTok. Captura leads instantaneamente de Lead Ads TikTok e dispara automações.",
+      "keywords": "tiktok lead form ads",
+      "href": "guia-highlevel-cat02.html#g9"
+    },
+    {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Formulário de Lead do LinkedIn",
+      "en": "LinkedIn Lead Form Submitted",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Tempo real",
+        "LinkedIn Ads",
+        "B2B"
+      ],
+      "description": "Lead forms do LinkedIn chegando direto ao HighLevel. Especialmente valioso pra quem vende B2B — leads do LinkedIn costumam ser mais qualificados e de maior ticket.",
+      "keywords": "linkedin lead form ads b2b",
+      "href": "guia-highlevel-cat02.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Link de Gatilho",
+      "en": "Trigger Link",
+      "category": "Engajamento & Rastreamento",
+      "tags": [
+        "Tempo real",
+        "Versátil"
+      ],
+      "description": "Trigger Links são URLs especiais que você cria no HighLevel. Quando o contato clica nelas (em qualquer canal — email, SMS, WhatsApp, landing page), o gatilho dispara.",
+      "keywords": "link gatilho trigger clique",
+      "href": "guia-highlevel-cat02.html#g11"
+    },
+    {
+      "id": "g12",
+      "type": "Gatilho",
+      "name": "Vídeo Assistido em Funil",
+      "en": "Video Tracking",
+      "category": "Engajamento & Rastreamento",
+      "tags": [
+        "Tempo real",
+        "Engajamento profundo"
+      ],
+      "description": "Dispara quando um lead assiste X% de um vídeo hospedado num funil/landing page do HighLevel. Quem assiste 50% ou mais é um lead quente; quem assiste 100% é praticamente um comprador em potencial.",
+      "keywords": "vídeo video tracking funil porcentagem",
+      "href": "guia-highlevel-cat02.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Visualização de Página",
+      "en": "Funnel/Website Page View",
+      "category": "Engajamento & Rastreamento",
+      "tags": [
+        "Tempo real",
+        "Com UTM"
+      ],
+      "description": "Dispara sempre que um contato visita uma página específica do seu funil ou website. Permite rastrear interesse silencioso — quem viu sua página de preços, quem voltou mais de uma vez, quem chegou por uma campanha específica.",
+      "keywords": "visualização página view funnel website utm",
+      "href": "guia-highlevel-cat02.html#g13"
+    },
+    {
+      "id": "g14",
+      "type": "Gatilho",
+      "name": "Validação de Número",
+      "en": "Number Validation",
+      "category": "Validação & Erros",
+      "tags": [
+        "Tempo real",
+        "SMS nativo"
+      ],
+      "description": "Dispara quando o HighLevel valida um número de telefone do contato e detecta status específico — inválido, incapaz de receber SMS, ou válido. Só funciona com SMS nativo do HighLevel, não com integrações externas tipo Wazzap/Stevo.",
+      "keywords": "validação número phone sms capable",
+      "href": "guia-highlevel-cat02.html#g14"
+    },
+    {
+      "id": "g15",
+      "type": "Gatilho",
+      "name": "Erro de Mensagem SMS",
+      "en": "Messaging Error - SMS",
+      "category": "Validação & Erros",
+      "tags": [
+        "Tempo real",
+        "Compliance"
+      ],
+      "description": "Dispara quando uma mensagem SMS retorna erro de entrega. Cada código de erro indica um problema específico — número inativo, operadora bloqueou, DND ativo, número fixo etc.",
+      "keywords": "erro mensagem sms messaging error código",
+      "href": "guia-highlevel-cat02.html#g15"
+    },
+    {
+      "id": "g16",
+      "type": "Gatilho",
+      "name": "Nova Avaliação Recebida",
+      "en": "New Review Received",
+      "category": "Outros",
+      "tags": [
+        "Tempo real",
+        "Reputação"
+      ],
+      "description": "Dispara quando chega uma nova avaliação no Google Meu Negócio ou Facebook. Diferente dos outros gatilhos, este não está vinculado a um contato específico — serve pra gestão de reputação.",
+      "keywords": "avaliação review recebida google facebook",
+      "href": "guia-highlevel-cat02.html#g16"
+    },
+    {
+      "id": "g17",
+      "type": "Gatilho",
+      "name": "Novo Prospecto",
+      "en": "Prospect Generated",
+      "category": "Outros",
+      "tags": [
+        "Tempo real",
+        "Prospect Tool"
+      ],
+      "description": "Dispara quando um novo prospecto é gerado pela Ferramenta de Prospecção do HighLevel — seja manualmente no app, via widget incorporado no site, ou via Prospect AI.",
+      "keywords": "prospecto prospect ai conversão widget",
+      "href": "guia-highlevel-cat02.html#g17"
+    },
+    {
+      "id": "g18",
+      "type": "Gatilho",
+      "name": "Transcript Gerado",
+      "en": "Transcript Generated",
+      "category": "Chamadas &amp; IA",
+      "tags": [
+        "Pós-chamada",
+        "Voice AI",
+        "Novo"
+      ],
+      "description": "Dispara imediatamente após o HighLevel gerar o transcript (transcrição) de uma chamada. Funciona com Voice AI, IVR e chamadas normais via LC Phone.",
+      "keywords": "transcript gerado transcript generated chamada ligação ia",
+      "href": "guia-highlevel-cat02.html#g18"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Status de Compromisso",
+      "en": "Appointment Status",
+      "category": "Agendamentos",
+      "tags": [
+        "Tempo real",
+        "★ Principal",
+        "Versátil"
+      ],
+      "description": "Dispara sempre que o status de um compromisso muda: alguém confirma, reagenda, cancela, marca como no-show, ou completa a consulta. É o gatilho central de qualquer operação que usa calendário — clínicas, consultórios, serviços, consultorias.",
+      "keywords": "status compromisso appointment agendamento",
+      "href": "guia-highlevel-cat03.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Contato Marcou Agendamento",
+      "en": "Customer Booked Appointment",
+      "category": "Agendamentos",
+      "tags": [
+        "Tempo real"
+      ],
+      "description": "Dispara sempre que um cliente agenda um compromisso de forma independente — usando seu link de agendamento (Calendly-style). Não dispara quando sua equipe agenda manualmente pelo sistema.",
+      "keywords": "customer booked appointment agendamento marcou",
+      "href": "guia-highlevel-cat03.html#g2"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Oportunidade Criada",
+      "en": "Opportunity Created",
+      "category": "Ciclo de Vida",
+      "tags": [
+        "Tempo real",
+        "★ Fundamental"
+      ],
+      "description": "Dispara sempre que uma nova oportunidade nasce no sistema — seja criada manualmente, via formulário, por outra automação, ou por integração externa.",
+      "keywords": "oportunidade criada opportunity created",
+      "href": "guia-highlevel-cat04.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Oportunidade Alterada",
+      "en": "Opportunity Changed",
+      "category": "Ciclo de Vida",
+      "tags": [
+        "Tempo real",
+        "Sensível"
+      ],
+      "description": "Dispara sempre que qualquer campo da oportunidade é editado — valor, status, nome, pipeline, estágio, campos customizados. É o gatilho mais sensível da categoria.",
+      "keywords": "oportunidade alterada opportunity changed",
+      "href": "guia-highlevel-cat04.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Mudança de Status em Oportunidade",
+      "en": "Opportunity Status Changed",
+      "category": "Mudanças de Status",
+      "tags": [
+        "Tempo real",
+        "Vendas ganhas/perdidas"
+      ],
+      "description": "Dispara especificamente quando o status de uma oportunidade muda. Status é diferente de estágio — os 4 possíveis são: Open (aberto), Won (ganho), Lost (perdido), Abandoned (abandonado).",
+      "keywords": "mudança status opportunity status changed",
+      "href": "guia-highlevel-cat04.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Mudança de Estágio no Pipeline",
+      "en": "Pipeline State Changed",
+      "category": "Mudanças de Status",
+      "tags": [
+        "Tempo real",
+        "★ Fundamental"
+      ],
+      "description": "Dispara quando uma oportunidade muda de estágio dentro do pipeline — ex.: \"Qualificação\" → \"Proposta\" → \"Negociação\" → \"Fechamento\".",
+      "keywords": "mudança estágio pipeline stage changed",
+      "href": "guia-highlevel-cat04.html#g4"
+    },
+    {
+      "id": "g5",
+      "type": "Gatilho",
+      "name": "Oportunidade Ociosa",
+      "en": "Stale Opportunities",
+      "category": "Sinais de Alerta",
+      "tags": [
+        "Agendado (diário)",
+        "Prevenção de perda"
+      ],
+      "description": "Dispara quando uma oportunidade fica parada sem nenhuma alteração por X dias. É o gatilho \"anti-esquecimento\" — aquele que resgata oportunidades que ficaram perdidas no pipeline.",
+      "keywords": "oportunidade ociosa stale opportunities",
+      "href": "guia-highlevel-cat04.html#g5"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Afiliado Criado",
+      "en": "Affiliate Created",
+      "category": "Ciclo de Vida do Afiliado",
+      "tags": [
+        "Tempo real",
+        "Onboarding"
+      ],
+      "description": "Dispara toda vez que um novo afiliado é cadastrado no sistema — seja manualmente pelo admin, ou via ação \"Adicionar ao Gerenciador de Afiliados\" de outra automação.",
+      "keywords": "afiliado criado affiliate created",
+      "href": "guia-highlevel-cat05.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Afiliado Inscrito em Campanha",
+      "en": "Affiliate Enrolled in Campaign",
+      "category": "Ciclo de Vida do Afiliado",
+      "tags": [
+        "Tempo real",
+        "Por campanha"
+      ],
+      "description": "Dispara quando um afiliado é adicionado a uma campanha específica. Afiliado pode estar em múltiplas campanhas — cada campanha tem comissão, link e materiais próprios.",
+      "keywords": "afiliado inscrito campanha affiliate enrolled",
+      "href": "guia-highlevel-cat05.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Nova Venda de Afiliado",
+      "en": "New Affiliate Sales",
+      "category": "Performance",
+      "tags": [
+        "Tempo real",
+        "★ Principal"
+      ],
+      "description": "Dispara quando um afiliado realiza uma venda bem-sucedida — seja compra única ou recorrente. É o gatilho que celebra o resultado e alimenta a motivação do afiliado.",
+      "keywords": "nova venda afiliado new affiliate sales",
+      "href": "guia-highlevel-cat05.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Lead Criado por Afiliado",
+      "en": "Lead Created (by Affiliate)",
+      "category": "Performance",
+      "tags": [
+        "Tempo real",
+        "Pré-venda"
+      ],
+      "description": "Dispara quando um novo lead é referenciado por um afiliado — ainda não é venda, é só a entrada do lead via link de afiliado. Instante ideal pra manter o afiliado engajado mesmo antes da conversão.",
+      "keywords": "lead criado afiliado created by",
+      "href": "guia-highlevel-cat05.html#g4"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Categoria Iniciada",
+      "en": "Category Started",
+      "category": "Progresso em Curso",
+      "tags": [
+        "Tempo real",
+        "Engajamento inicial"
+      ],
+      "description": "Dispara quando um aluno começa uma categoria específica dentro de um curso. Categoria é um agrupamento de aulas — o equivalente a um \"módulo\" do curso.",
+      "keywords": "categoria iniciada category started",
+      "href": "guia-highlevel-cat06.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Categoria Completada",
+      "en": "Category Completed",
+      "category": "Progresso em Curso",
+      "tags": [
+        "Tempo real",
+        "Gamificação"
+      ],
+      "description": "Dispara quando o aluno termina todas as aulas de uma categoria. Diferente do \"iniciada\", aqui a pessoa comprovou consumo real do conteúdo.",
+      "keywords": "categoria completada category completed",
+      "href": "guia-highlevel-cat06.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Aula Iniciada",
+      "en": "Lesson Started",
+      "category": "Progresso em Curso",
+      "tags": [
+        "Tempo real",
+        "Granular"
+      ],
+      "description": "Mais granular que os anteriores — dispara quando aluno começa uma aula específica dentro de uma categoria.",
+      "keywords": "aula iniciada lesson started",
+      "href": "guia-highlevel-cat06.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Aula Completada",
+      "en": "Lesson Completed",
+      "category": "Progresso em Curso",
+      "tags": [
+        "Tempo real",
+        "Mais usado"
+      ],
+      "description": "Dispara quando aluno completa uma aula. Um dos gatilhos mais usados em plataformas de curso — permite reconhecimento imediato.",
+      "keywords": "aula completada lesson completed",
+      "href": "guia-highlevel-cat06.html#g4"
+    },
+    {
+      "id": "g5",
+      "type": "Gatilho",
+      "name": "Nova Inscrição",
+      "en": "New Signup",
+      "category": "Inscrições e Acesso",
+      "tags": [
+        "Tempo real",
+        "Onboarding"
+      ],
+      "description": "Dispara quando um novo cliente se inscreve em um produto, serviço ou assinatura. É o momento zero do onboarding.",
+      "keywords": "nova inscrição new signup",
+      "href": "guia-highlevel-cat06.html#g5"
+    },
+    {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Dar Acesso a Oferta",
+      "en": "Offer Access Granted",
+      "category": "Inscrições e Acesso",
+      "tags": [
+        "Tempo real",
+        "Memberships"
+      ],
+      "description": "Dispara quando acesso a uma oferta é concedido — pode ser compra, presente, liberação manual, ou concedido por outra automação.",
+      "keywords": "dar acesso a oferta offer access granted",
+      "href": "guia-highlevel-cat06.html#g6"
+    },
+    {
+      "id": "g7",
+      "type": "Gatilho",
+      "name": "Remover Acesso a Oferta",
+      "en": "Offer Access Removed",
+      "category": "Inscrições e Acesso",
+      "tags": [
+        "Tempo real",
+        "Churn"
+      ],
+      "description": "Dispara quando o acesso a uma oferta é removido — expiração, cancelamento, inadimplência, ou remoção manual.",
+      "keywords": "remover acesso a oferta offer access removed",
+      "href": "guia-highlevel-cat06.html#g7"
+    },
+    {
+      "id": "g8",
+      "type": "Gatilho",
+      "name": "Dar Acesso a Produto",
+      "en": "Product Access Granted",
+      "category": "Inscrições e Acesso",
+      "tags": [
+        "Tempo real",
+        "Membership/Curso"
+      ],
+      "description": "Similar ao \"Dar Acesso a Oferta\", mas na camada de produto (geralmente cursos dentro de uma oferta ampla).",
+      "keywords": "dar acesso a produto product access granted",
+      "href": "guia-highlevel-cat06.html#g8"
+    },
+    {
+      "id": "g9",
+      "type": "Gatilho",
+      "name": "Remover Acesso a Produto",
+      "en": "Product Access Removed",
+      "category": "Inscrições e Acesso",
+      "tags": [
+        "Tempo real",
+        "Churn"
+      ],
+      "description": "Dispara quando acesso a um produto específico é removido. Mesmo princípio do \"Remover Oferta\", mas mais granular.",
+      "keywords": "remover acesso a produto product access removed",
+      "href": "guia-highlevel-cat06.html#g9"
+    },
+    {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Produto Iniciado",
+      "en": "Product Started",
+      "category": "Conclusão e Atividade",
+      "tags": [
+        "Tempo real",
+        "Onboarding"
+      ],
+      "description": "Dispara quando aluno começa efetivamente o consumo do curso (primeira aula assistida). Diferente do \"Acesso Concedido\" — aqui a pessoa entrou pra valer.",
+      "keywords": "produto iniciado product started",
+      "href": "guia-highlevel-cat06.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Produto Completado",
+      "en": "Product Completed",
+      "category": "Conclusão e Atividade",
+      "tags": [
+        "Tempo real",
+        "★ Marco"
+      ],
+      "description": "O grande marco — aluno concluiu 100% do curso. É a hora de celebrar, pedir feedback, entregar certificado e sugerir o próximo curso (upsell).",
+      "keywords": "produto completado product completed",
+      "href": "guia-highlevel-cat06.html#g11"
+    },
+    {
+      "id": "g12",
+      "type": "Gatilho",
+      "name": "Login de Usuário",
+      "en": "User Login",
+      "category": "Conclusão e Atividade",
+      "tags": [
+        "Tempo real",
+        "Atividade"
+      ],
+      "description": "Dispara sempre que um aluno faz login na plataforma. É o gatilho mais frequente da categoria — use com filtros pra evitar rodar em todo acesso.",
+      "keywords": "login de usuário user login",
+      "href": "guia-highlevel-cat06.html#g12"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Cobrança (Invoice)",
+      "en": "Invoice",
+      "category": "Recebimento",
+      "tags": [
+        "Tempo real",
+        "Financeiro"
+      ],
+      "description": "Dispara quando uma cobrança muda de status — enviada ou paga. Fundamental pra acompanhamento financeiro.",
+      "keywords": "cobrança (invoice) invoice",
+      "href": "guia-highlevel-cat07.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Pagamento Recebido",
+      "en": "Payment Received",
+      "category": "Recebimento",
+      "tags": [
+        "Tempo real",
+        "★ Principal"
+      ],
+      "description": "Gatilho mais poderoso da categoria. Dispara em qualquer pagamento registrado — sucesso ou falha — e permite filtrar por origem (calendário, formulário, funil, cobrança, assinatura, etc.).",
+      "keywords": "pagamento recebido payment received",
+      "href": "guia-highlevel-cat07.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Ordem em Formulário",
+      "en": "Order Form Submission",
+      "category": "Ordens de Compra",
+      "tags": [
+        "Tempo real",
+        "Checkout"
+      ],
+      "description": "Dispara quando um formulário com informação de pagamento é preenchido — mas o pagamento NÃO precisa ter sido concluído. Ideal pra capturar leads que começaram o checkout.",
+      "keywords": "ordem em formulário order form submission",
+      "href": "guia-highlevel-cat07.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Ordem Submetida",
+      "en": "Order Submitted",
+      "category": "Ordens de Compra",
+      "tags": [
+        "Tempo real",
+        "Venda"
+      ],
+      "description": "Dispara quando um pedido é CONCLUÍDO com pagamento bem-sucedido. Diferente do \"Ordem em Formulário\", aqui é a venda realizada.",
+      "keywords": "ordem submetida order submitted",
+      "href": "guia-highlevel-cat07.html#g4"
+    },
+    {
+      "id": "g5",
+      "type": "Gatilho",
+      "name": "Documentos e Contratos",
+      "en": "Documents & Contracts",
+      "category": "Contratos e Assinaturas",
+      "tags": [
+        "Tempo real",
+        "Contratos"
+      ],
+      "description": "Dispara em mudanças de status de documentos/contratos — enviados, visualizados, assinados, completados.",
+      "keywords": "documentos e contratos documents & contracts",
+      "href": "guia-highlevel-cat07.html#g5"
+    },
+    {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Assinatura (Subscription)",
+      "en": "Subscription",
+      "category": "Contratos e Assinaturas",
+      "tags": [
+        "Tempo real",
+        "Recorrência"
+      ],
+      "description": "Dispara em mudanças de status de assinaturas recorrentes — ativação, cancelamento, trial, em atraso, falha, expiração.",
+      "keywords": "assinatura (subscription) subscription",
+      "href": "guia-highlevel-cat07.html#g6"
+    },
+    {
+      "id": "g7",
+      "type": "Gatilho",
+      "name": "Reembolso",
+      "en": "Refund",
+      "category": "Devolução",
+      "tags": [
+        "Tempo real",
+        "Devolução"
+      ],
+      "description": "Dispara em qualquer reembolso — sucesso ou falha, total ou parcial, de qualquer origem (calendar, invoice, funnel, membership, etc.).",
+      "keywords": "reembolso refund",
+      "href": "guia-highlevel-cat07.html#g7"
+    },
+    {
+      "id": "g8",
+      "type": "Gatilho",
+      "name": "Cupom Aplicado",
+      "en": "Coupon Code Applied",
+      "category": "Cupons",
+      "tags": [
+        "Tempo real",
+        "Promoção"
+      ],
+      "description": "Dispara no momento em que um cupom é aplicado no checkout — independentemente de a compra ser finalizada. Indica alta intenção de compra.",
+      "keywords": "cupom aplicado coupon code applied",
+      "href": "guia-highlevel-cat07.html#g8"
+    },
+    {
+      "id": "g9",
+      "type": "Gatilho",
+      "name": "Limite de Cupom Atingido",
+      "en": "Coupon Redemption Limit Reached",
+      "category": "Cupons",
+      "tags": [
+        "Tempo real",
+        "Operação"
+      ],
+      "description": "Dispara quando um cupom com limite máximo de resgates atinge esse limite (após a última transação bem-sucedida).",
+      "keywords": "limite de cupom atingido coupon redemption limit reached",
+      "href": "guia-highlevel-cat07.html#g9"
+    },
+    {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Cupom Expirado",
+      "en": "Coupon Code Expired",
+      "category": "Cupons",
+      "tags": [
+        "Schedule",
+        "Reengajamento"
+      ],
+      "description": "Dispara quando um cupom atinge data de expiração e se torna inativo. Avaliação é feita pelo sistema quando o momento chega.",
+      "keywords": "cupom expirado coupon code expired",
+      "href": "guia-highlevel-cat07.html#g10"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Carrinho Abandonado",
+      "en": "Abandoned Cart",
+      "category": "Pré-compra",
+      "tags": [
+        "Tempo real",
+        "★ Fundamental"
+      ],
+      "description": "Dispara quando um cliente adiciona itens mas não finaliza a compra dentro de um tempo especificado. É o gatilho mais valioso de ecommerce — recuperar 10-20% desses carrinhos é aumento direto de receita.",
+      "keywords": "carrinho abandonado abandoned cart",
+      "href": "guia-highlevel-cat08.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Compra Feita",
+      "en": "Order Placed",
+      "category": "Venda",
+      "tags": [
+        "Tempo real",
+        "Confirmação"
+      ],
+      "description": "Dispara quando o cliente finaliza uma compra na Shopify. Ponto de conversão máximo — hora de celebrar, fidelizar e gerar próxima venda.",
+      "keywords": "compra feita order placed",
+      "href": "guia-highlevel-cat08.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Pedido Concluído",
+      "en": "Order Fulfilled",
+      "category": "Pós-venda",
+      "tags": [
+        "Tempo real",
+        "Feedback"
+      ],
+      "description": "Dispara quando o pedido é marcado como concluído — geralmente quando o produto é entregue. Momento perfeito pra pedir feedback e avaliação.",
+      "keywords": "pedido concluído order fulfilled",
+      "href": "guia-highlevel-cat08.html#g3"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Iniciar Gatilho IVR",
+      "en": "Start IVR Trigger",
+      "category": "Atendimento Automatizado",
+      "tags": [
+        "Tempo real",
+        "Telefonia"
+      ],
+      "description": "Dispara toda vez que alguém liga pra um número configurado no HighLevel. Permite criar sistema de resposta interativa com menus de voz, transferências de ramais e mensagens automáticas.",
+      "keywords": "iniciar gatilho ivr start ivr trigger",
+      "href": "guia-highlevel-cat09.html#g1"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Comentários do Facebook",
+      "en": "Facebook Comment on a Post",
+      "category": "Engajamento Social",
+      "tags": [
+        "Tempo real",
+        "Engajamento"
+      ],
+      "description": "Dispara quando alguém comenta em um post específico da sua página do Facebook. Permite responder em massa com personalização.",
+      "keywords": "comentários do facebook facebook comment on a post",
+      "href": "guia-highlevel-cat10.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Comentários do Instagram",
+      "en": "Instagram Comment on a Post",
+      "category": "Engajamento Social",
+      "tags": [
+        "Tempo real",
+        "Alto ROI"
+      ],
+      "description": "Mesma lógica do Facebook Comments, mas pra posts do Instagram. A plataforma mais poderosa pra conversão direta via DM.",
+      "keywords": "comentários do instagram instagram comment on a post",
+      "href": "guia-highlevel-cat10.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Comentários do TikTok",
+      "en": "TikTok – Comment(s) On A Video",
+      "category": "Engajamento Social",
+      "tags": [
+        "Tempo real",
+        "Alto ROI",
+        "Novo"
+      ],
+      "description": "Dispara quando alguém comenta em um vídeo do TikTok conectado à conta. Mesma lógica dos gatilhos de Facebook e Instagram, mas agora para o canal com maior alcance orgânico do momento.",
+      "keywords": "comentários do tiktok tiktok comment on a video",
+      "href": "guia-highlevel-cat10.html#g3"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Acesso a Grupo",
+      "en": "Group Access Granted",
+      "category": "Grupos",
+      "tags": [
+        "Tempo real",
+        "Onboarding"
+      ],
+      "description": "Dispara quando um usuário recebe acesso a um grupo dentro da comunidade. Ponto inicial pra onboarding personalizado do novo membro.",
+      "keywords": "acesso a grupo group access granted",
+      "href": "guia-highlevel-cat11.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Remoção de Grupo",
+      "en": "Group Access Revoked",
+      "category": "Grupos",
+      "tags": [
+        "Tempo real",
+        "Churn"
+      ],
+      "description": "Dispara quando o acesso de um membro ao grupo é revogado — pode ser por cancelamento de assinatura, expiração, ou remoção administrativa.",
+      "keywords": "remoção de grupo group access revoked",
+      "href": "guia-highlevel-cat11.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Acesso Concedido a Canal Privado",
+      "en": "Private Channel Access Granted",
+      "category": "Canais Privados",
+      "tags": [
+        "Tempo real",
+        "Exclusividade"
+      ],
+      "description": "Dispara quando membro ganha acesso a um canal privado DENTRO de um grupo. Permite celebrar conquista de acesso exclusivo.",
+      "keywords": "acesso concedido a canal privado private channel access granted",
+      "href": "guia-highlevel-cat11.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Remoção de Acesso a Canal Privado",
+      "en": "Private Channel Access Removed",
+      "category": "Canais Privados",
+      "tags": [
+        "Tempo real",
+        "Gestão"
+      ],
+      "description": "Dispara quando o acesso a um canal privado é revogado (degradação de plano, cancelamento, mudança de nível).",
+      "keywords": "remoção de acesso a canal privado private channel access removed",
+      "href": "guia-highlevel-cat11.html#g4"
+    },
+    {
+      "id": "g5",
+      "type": "Gatilho",
+      "name": "Mudança de Nível na Classificação",
+      "en": "Community Group Member Leaderboard Level Changed",
+      "category": "Gamificação",
+      "tags": [
+        "Tempo real",
+        "Gamificação"
+      ],
+      "description": "Dispara quando o nível de um membro no leaderboard da comunidade muda. Gamificação = engajamento contínuo.",
+      "keywords": "mudança de nível na classificação community group member leaderboard level changed",
+      "href": "guia-highlevel-cat11.html#g5"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Certificado Enviado",
+      "en": "Certificate Issued",
+      "category": "Conclusão",
+      "tags": [
+        "Tempo real",
+        "Conclusão de curso"
+      ],
+      "description": "Dispara quando um certificado é emitido e enviado a um aluno. Normalmente acionado após \"Produto Completado\" (cat 06), mas pode ser emitido manualmente.",
+      "keywords": "certificado enviado certificate issued",
+      "href": "guia-highlevel-cat12.html#g1"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Contato",
+      "en": "Create Contact",
+      "category": "Ação",
+      "tags": [
+        "Integrações"
+      ],
+      "description": "",
+      "keywords": "criar contato create contact",
+      "href": "acoes-highlevel-cat01.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Encontrar Contato",
+      "en": "Find Contact",
+      "category": "Ação",
+      "tags": [
+        "Integrações"
+      ],
+      "description": "",
+      "keywords": "encontrar contato find contact",
+      "href": "acoes-highlevel-cat01.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Atualizar Campos do Contato",
+      "en": "Update Contact Field",
+      "category": "Ação",
+      "tags": [
+        "Sem limite"
+      ],
+      "description": "",
+      "keywords": "atualizar campos do contato update contact field",
+      "href": "acoes-highlevel-cat01.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Adicionar Tag ao Contato",
+      "en": "Add Contact Tag",
+      "category": "Ação",
+      "tags": [
+        "★ Mais usada"
+      ],
+      "description": "",
+      "keywords": "adicionar tag ao contato add contact tag",
+      "href": "acoes-highlevel-cat01.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Remover Tag do Contato",
+      "en": "Remove Contact Tag",
+      "category": "Ação",
+      "tags": [
+        "Higiene"
+      ],
+      "description": "",
+      "keywords": "remover tag do contato remove contact tag",
+      "href": "acoes-highlevel-cat01.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Atribuir a Usuário",
+      "en": "Assign to User",
+      "category": "Ação",
+      "tags": [
+        "Equipes"
+      ],
+      "description": "",
+      "keywords": "atribuir a usuário assign to user",
+      "href": "acoes-highlevel-cat01.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Remover Usuário Atribuído",
+      "en": "Remove Assigned User",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover usuário atribuído remove assigned user",
+      "href": "acoes-highlevel-cat01.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Editar Conversação",
+      "en": "Edit Conversation",
+      "category": "Ação",
+      "tags": [
+        "Organização"
+      ],
+      "description": "",
+      "keywords": "editar conversação edit conversation",
+      "href": "acoes-highlevel-cat01.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Ativar/Desativar DND",
+      "en": "Enable/Disable DND",
+      "category": "Ação",
+      "tags": [
+        "Compliance"
+      ],
+      "description": "",
+      "keywords": "ativar/desativar dnd enable/disable dnd",
+      "href": "acoes-highlevel-cat01.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Adicionar às Notas",
+      "en": "Add to Notes",
+      "category": "Ação",
+      "tags": [
+        "Histórico"
+      ],
+      "description": "",
+      "keywords": "adicionar às notas add to notes",
+      "href": "acoes-highlevel-cat01.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Adicionar Tarefa",
+      "en": "Add Task",
+      "category": "Ação",
+      "tags": [
+        "Gestão"
+      ],
+      "description": "",
+      "keywords": "adicionar tarefa add task",
+      "href": "acoes-highlevel-cat01.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Copiar Contato",
+      "en": "Copy Contact",
+      "category": "Ação",
+      "tags": [
+        "Pago · $0,01"
+      ],
+      "description": "",
+      "keywords": "copiar contato copy contact",
+      "href": "acoes-highlevel-cat01.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Deletar Contato",
+      "en": "Delete Contact",
+      "category": "Ação",
+      "tags": [
+        "⚠ Destrutiva"
+      ],
+      "description": "",
+      "keywords": "deletar contato delete contact",
+      "href": "acoes-highlevel-cat01.html#a13"
+    },
+    {
+      "id": "a14",
+      "type": "Ação",
+      "name": "Modificar Pontuação de Engajamento",
+      "en": "Modify Contact Engagement Score",
+      "category": "Ação",
+      "tags": [
+        "Lead Scoring"
+      ],
+      "description": "",
+      "keywords": "modificar pontuação de engajamento modify contact engagement score",
+      "href": "acoes-highlevel-cat01.html#a14"
+    },
+    {
+      "id": "a15",
+      "type": "Ação",
+      "name": "Adicionar Seguidores",
+      "en": "Add Contact Followers",
+      "category": "Ação",
+      "tags": [
+        "Equipes"
+      ],
+      "description": "",
+      "keywords": "adicionar seguidores add contact followers",
+      "href": "acoes-highlevel-cat01.html#a15"
+    },
+    {
+      "id": "a16",
+      "type": "Ação",
+      "name": "Remover Seguidores",
+      "en": "Remove Contact Followers",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover seguidores remove contact followers",
+      "href": "acoes-highlevel-cat01.html#a16"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Enviar Email",
+      "en": "Send Email",
+      "category": "Ação",
+      "tags": [
+        "★ Principal"
+      ],
+      "description": "",
+      "keywords": "enviar email send email",
+      "href": "acoes-highlevel-cat02.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Enviar SMS",
+      "en": "Send SMS",
+      "category": "Ação",
+      "tags": [
+        "Rápido"
+      ],
+      "description": "",
+      "keywords": "enviar sms send sms",
+      "href": "acoes-highlevel-cat02.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Mensagem no Slack",
+      "en": "Outbound Webhook (Slack)",
+      "category": "Ação",
+      "tags": [
+        "Interno"
+      ],
+      "description": "",
+      "keywords": "mensagem no slack slack message",
+      "href": "acoes-highlevel-cat02.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Chamada Telefônica",
+      "en": "Call",
+      "category": "Ação",
+      "tags": [
+        "Automatizada"
+      ],
+      "description": "",
+      "keywords": "chamada telefônica call",
+      "href": "acoes-highlevel-cat02.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Correio de Voz",
+      "en": "Voicemail",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "correio de voz voicemail",
+      "href": "acoes-highlevel-cat02.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Facebook Messenger",
+      "en": "Facebook Messenger",
+      "category": "Ação",
+      "tags": [
+        "Janela 24h"
+      ],
+      "description": "",
+      "keywords": "facebook messenger facebook messenger",
+      "href": "acoes-highlevel-cat02.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Instagram DM",
+      "en": "Instagram DM",
+      "category": "Ação",
+      "tags": [
+        "Janela 24h",
+        "Alto ROI"
+      ],
+      "description": "",
+      "keywords": "instagram dm instagram dm",
+      "href": "acoes-highlevel-cat02.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Ação Manual para SMS",
+      "en": "Manual Action to SMS",
+      "category": "Ação",
+      "tags": [
+        "Híbrido"
+      ],
+      "description": "",
+      "keywords": "ação manual para sms manual action to sms",
+      "href": "acoes-highlevel-cat02.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Ação Manual para Chamada",
+      "en": "Manual Action to Call",
+      "category": "Ação",
+      "tags": [
+        "Híbrido"
+      ],
+      "description": "",
+      "keywords": "ação manual para chamada manual action to call",
+      "href": "acoes-highlevel-cat02.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Notificação Interna",
+      "en": "Internal Notification",
+      "category": "Ação",
+      "tags": [
+        "Equipe"
+      ],
+      "description": "",
+      "keywords": "notificação interna internal notification",
+      "href": "acoes-highlevel-cat02.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Pedido de Avaliação",
+      "en": "Review Request",
+      "category": "Ação",
+      "tags": [
+        "Reputação"
+      ],
+      "description": "",
+      "keywords": "pedido de avaliação review request",
+      "href": "acoes-highlevel-cat02.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "WhatsApp Oficial",
+      "en": "WhatsApp Official",
+      "category": "Ação",
+      "tags": [
+        "API oficial"
+      ],
+      "description": "",
+      "keywords": "whatsapp oficial whatsapp official",
+      "href": "acoes-highlevel-cat02.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Email do Conversas IA",
+      "en": "Conversation AI Email",
+      "category": "Ação",
+      "tags": [
+        "AI"
+      ],
+      "description": "",
+      "keywords": "email do conversas ia conversation ai email",
+      "href": "acoes-highlevel-cat02.html#a13"
+    },
+    {
+      "id": "a14",
+      "type": "Ação",
+      "name": "SMS do Conversas IA",
+      "en": "Conversation AI SMS",
+      "category": "Ação",
+      "tags": [
+        "AI"
+      ],
+      "description": "",
+      "keywords": "sms do conversas ia conversation ai sms",
+      "href": "acoes-highlevel-cat02.html#a14"
+    },
+    {
+      "id": "a15",
+      "type": "Ação",
+      "name": "Enviar Formulário por SMS",
+      "en": "Send Form via SMS",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "enviar formulário por sms send form via sms",
+      "href": "acoes-highlevel-cat02.html#a15"
+    },
+    {
+      "id": "a16",
+      "type": "Ação",
+      "name": "Enviar Survey por SMS",
+      "en": "Send Survey via SMS",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "enviar survey por sms send survey via sms",
+      "href": "acoes-highlevel-cat02.html#a16"
+    },
+    {
+      "id": "a17",
+      "type": "Ação",
+      "name": "Ligação com IA",
+      "en": "Voice AI Call",
+      "category": "Ação",
+      "tags": [
+        "AI · Beta"
+      ],
+      "description": "",
+      "keywords": "ligação com ia voice ai call",
+      "href": "acoes-highlevel-cat02.html#a17"
+    },
+    {
+      "id": "a18",
+      "type": "Ação",
+      "name": "Responder Comentário FB",
+      "en": "Reply to FB Comment",
+      "category": "Ação",
+      "tags": [
+        "Social"
+      ],
+      "description": "",
+      "keywords": "responder comentário fb reply to fb comment",
+      "href": "acoes-highlevel-cat02.html#a18"
+    },
+    {
+      "id": "a19",
+      "type": "Ação",
+      "name": "Responder Comentário IG",
+      "en": "Reply to IG Comment",
+      "category": "Ação",
+      "tags": [
+        "Social"
+      ],
+      "description": "",
+      "keywords": "responder comentário ig reply to ig comment",
+      "href": "acoes-highlevel-cat02.html#a19"
+    },
+    {
+      "id": "a20",
+      "type": "Ação",
+      "name": "Gerar Conteúdo com IA",
+      "en": "AI Content Generation",
+      "category": "Ação",
+      "tags": [
+        "AI"
+      ],
+      "description": "",
+      "keywords": "gerar conteúdo com ia ai content generation",
+      "href": "acoes-highlevel-cat02.html#a20"
+    },
+    {
+      "id": "a21",
+      "type": "Ação",
+      "name": "Mensagem via Número Específico",
+      "en": "Send From Specific Number",
+      "category": "Ação",
+      "tags": [
+        "Controle"
+      ],
+      "description": "",
+      "keywords": "mensagem via número específico send from specific number",
+      "href": "acoes-highlevel-cat02.html#a21"
+    },
+    {
+      "id": "a22",
+      "type": "Ação",
+      "name": "Mensagem com Número Pool",
+      "en": "Send From Number Pool",
+      "category": "Ação",
+      "tags": [
+        "Distribuição"
+      ],
+      "description": "",
+      "keywords": "mensagem com número pool send from number pool",
+      "href": "acoes-highlevel-cat02.html#a22"
+    },
+    {
+      "id": "a23",
+      "type": "Ação",
+      "name": "Confirmação GMB",
+      "en": "GMB Confirmation",
+      "category": "Ação",
+      "tags": [
+        "Google"
+      ],
+      "description": "",
+      "keywords": "confirmação gmb gmb confirmation",
+      "href": "acoes-highlevel-cat02.html#a23"
+    },
+    {
+      "id": "a24",
+      "type": "Ação",
+      "name": "SMS via Shortcode",
+      "en": "Shortcode SMS",
+      "category": "Ação",
+      "tags": [
+        "Enterprise"
+      ],
+      "description": "",
+      "keywords": "sms via shortcode shortcode sms",
+      "href": "acoes-highlevel-cat02.html#a24"
+    },
+    {
+      "id": "a25",
+      "type": "Ação",
+      "name": "Anexar Arquivo",
+      "en": "Attach File",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "anexar arquivo attach file",
+      "href": "acoes-highlevel-cat02.html#a25"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Webhook de Saída",
+      "en": "Outbound Webhook",
+      "category": "Ação",
+      "tags": [
+        "★ Principal"
+      ],
+      "description": "",
+      "keywords": "webhook de saída outbound webhook",
+      "href": "acoes-highlevel-cat03.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Google Sheets",
+      "en": "Google Sheets",
+      "category": "Ação",
+      "tags": [
+        "Integração nativa"
+      ],
+      "description": "",
+      "keywords": "google sheets google sheets",
+      "href": "acoes-highlevel-cat03.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Enviar Dados pra API Custom",
+      "en": "Custom API Call",
+      "category": "Ação",
+      "tags": [
+        "Dev"
+      ],
+      "description": "",
+      "keywords": "enviar dados pra api custom custom api call",
+      "href": "acoes-highlevel-cat03.html#a3"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "If/Else",
+      "en": "If/Else Condition",
+      "category": "Ação",
+      "tags": [
+        "★ Lógica"
+      ],
+      "description": "",
+      "keywords": "if/else if/else condition",
+      "href": "acoes-highlevel-cat04.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Wait (Esperar)",
+      "en": "Wait",
+      "category": "Ação",
+      "tags": [
+        "★ Temporização"
+      ],
+      "description": "",
+      "keywords": "wait (esperar) wait",
+      "href": "acoes-highlevel-cat04.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Wait Until Event",
+      "en": "Wait Until Event Date",
+      "category": "Ação",
+      "tags": [
+        "Evento"
+      ],
+      "description": "",
+      "keywords": "wait until event wait until event date",
+      "href": "acoes-highlevel-cat04.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Set Event Date",
+      "en": "Set Event Date",
+      "category": "Ação",
+      "tags": [
+        "Data custom"
+      ],
+      "description": "",
+      "keywords": "set event date set event date",
+      "href": "acoes-highlevel-cat04.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Goal Event",
+      "en": "Goal Event",
+      "category": "Ação",
+      "tags": [
+        "Conversão"
+      ],
+      "description": "",
+      "keywords": "goal event goal event",
+      "href": "acoes-highlevel-cat04.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Math Operation",
+      "en": "Math Operation",
+      "category": "Ação",
+      "tags": [
+        "Cálculo"
+      ],
+      "description": "",
+      "keywords": "math operation math operation",
+      "href": "acoes-highlevel-cat04.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Custom Value Update",
+      "en": "Update Custom Value",
+      "category": "Ação",
+      "tags": [
+        "Variável global"
+      ],
+      "description": "",
+      "keywords": "custom value update update custom value",
+      "href": "acoes-highlevel-cat04.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Create Calendar Event",
+      "en": "Create Calendar Event",
+      "category": "Ação",
+      "tags": [
+        "Calendário"
+      ],
+      "description": "",
+      "keywords": "create calendar event create calendar event",
+      "href": "acoes-highlevel-cat04.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Cancel All Events",
+      "en": "Cancel All Events",
+      "category": "Ação",
+      "tags": [
+        "Bulk"
+      ],
+      "description": "",
+      "keywords": "cancel all events cancel all events",
+      "href": "acoes-highlevel-cat04.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Call Workflow (Chamar outro fluxo)",
+      "en": "Call Another Workflow",
+      "category": "Ação",
+      "tags": [
+        "Modularização"
+      ],
+      "description": "",
+      "keywords": "call workflow (chamar outro fluxo) call another workflow",
+      "href": "acoes-highlevel-cat04.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Adicionar a Workflow",
+      "en": "Add to Workflow",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar a workflow add to workflow",
+      "href": "acoes-highlevel-cat04.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Remover de Workflow",
+      "en": "Remove from Workflow",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover de workflow remove from workflow",
+      "href": "acoes-highlevel-cat04.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Remove from Current Workflow",
+      "en": "Remove from Current Workflow",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remove from current workflow remove from current workflow",
+      "href": "acoes-highlevel-cat04.html#a13"
+    },
+    {
+      "id": "a14",
+      "type": "Ação",
+      "name": "Jump to Action",
+      "en": "Jump to Action",
+      "category": "Ação",
+      "tags": [
+        "Avançado"
+      ],
+      "description": "",
+      "keywords": "jump to action jump to action",
+      "href": "acoes-highlevel-cat04.html#a14"
+    },
+    {
+      "id": "a15",
+      "type": "Ação",
+      "name": "Stop Workflow",
+      "en": "Stop Workflow",
+      "category": "Ação",
+      "tags": [
+        "⚠ Global"
+      ],
+      "description": "",
+      "keywords": "stop workflow stop workflow",
+      "href": "acoes-highlevel-cat04.html#a15"
+    },
+    {
+      "id": "a16",
+      "type": "Ação",
+      "name": "Restart Workflow",
+      "en": "Restart Workflow",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "restart workflow restart workflow",
+      "href": "acoes-highlevel-cat04.html#a16"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Generate Text (Texto)",
+      "en": "AI Generate Text",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Experimental"
+      ],
+      "description": "",
+      "keywords": "generate text (texto) ai generate text",
+      "href": "acoes-highlevel-cat05.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Parse Image (Analisar Imagem)",
+      "en": "AI Parse Image",
+      "category": "Ação",
+      "tags": [
+        "Visão"
+      ],
+      "description": "",
+      "keywords": "parse image (analisar imagem) ai parse image",
+      "href": "acoes-highlevel-cat05.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Summarize Conversation",
+      "en": "Summarize Conversation",
+      "category": "Ação",
+      "tags": [
+        "Produtividade"
+      ],
+      "description": "",
+      "keywords": "summarize conversation summarize conversation",
+      "href": "acoes-highlevel-cat05.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Extract Info",
+      "en": "AI Extract Info",
+      "category": "Ação",
+      "tags": [
+        "Parsing"
+      ],
+      "description": "",
+      "keywords": "extract info ai extract info",
+      "href": "acoes-highlevel-cat05.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Classify",
+      "en": "AI Classify",
+      "category": "Ação",
+      "tags": [
+        "Categorização"
+      ],
+      "description": "",
+      "keywords": "classify ai classify",
+      "href": "acoes-highlevel-cat05.html#a5"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Atualizar Status do Agendamento",
+      "en": "Update Appointment Status",
+      "category": "Ação",
+      "tags": [
+        "★ Principal"
+      ],
+      "description": "",
+      "keywords": "atualizar status do agendamento update appointment status",
+      "href": "acoes-highlevel-cat06.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Reassign Appointment",
+      "en": "Reassign Appointment",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "reassign appointment reassign appointment",
+      "href": "acoes-highlevel-cat06.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Cancelar Agendamento",
+      "en": "Cancel Appointment",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "cancelar agendamento cancel appointment",
+      "href": "acoes-highlevel-cat06.html#a3"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Oportunidade",
+      "en": "Create Opportunity",
+      "category": "Ação",
+      "tags": [
+        "★ Principal"
+      ],
+      "description": "",
+      "keywords": "criar oportunidade create opportunity",
+      "href": "acoes-highlevel-cat07.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Atualizar Oportunidade",
+      "en": "Update Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "atualizar oportunidade update opportunity",
+      "href": "acoes-highlevel-cat07.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Mover Estágio no Pipeline",
+      "en": "Move Pipeline Stage",
+      "category": "Ação",
+      "tags": [
+        "Pipeline"
+      ],
+      "description": "",
+      "keywords": "mover estágio no pipeline move pipeline stage",
+      "href": "acoes-highlevel-cat07.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Mover Entre Pipelines",
+      "en": "Move Between Pipelines",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "mover entre pipelines move between pipelines",
+      "href": "acoes-highlevel-cat07.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Atualizar Status",
+      "en": "Update Opportunity Status",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "atualizar status update opportunity status",
+      "href": "acoes-highlevel-cat07.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Deletar Oportunidade",
+      "en": "Delete Opportunity",
+      "category": "Ação",
+      "tags": [
+        "⚠ Destrutiva"
+      ],
+      "description": "",
+      "keywords": "deletar oportunidade delete opportunity",
+      "href": "acoes-highlevel-cat07.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Atribuir Dono da Opp",
+      "en": "Assign Opportunity Owner",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "atribuir dono da opp assign opportunity owner",
+      "href": "acoes-highlevel-cat07.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Adicionar Tag à Opp",
+      "en": "Add Opportunity Tag",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar tag à opp add opportunity tag",
+      "href": "acoes-highlevel-cat07.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Remover Tag da Opp",
+      "en": "Remove Opportunity Tag",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover tag da opp remove opportunity tag",
+      "href": "acoes-highlevel-cat07.html#a9"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Invoice",
+      "en": "Create Invoice",
+      "category": "Ação",
+      "tags": [
+        "★ Principal"
+      ],
+      "description": "",
+      "keywords": "criar invoice create invoice",
+      "href": "acoes-highlevel-cat08.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Enviar Payment Link",
+      "en": "Send Payment Link",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "enviar payment link send payment link",
+      "href": "acoes-highlevel-cat08.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Atualizar Status de Pagamento",
+      "en": "Update Payment Status",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "atualizar status de pagamento update payment status",
+      "href": "acoes-highlevel-cat08.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Processar Reembolso",
+      "en": "Process Refund",
+      "category": "Ação",
+      "tags": [
+        "⚠ Financeiro"
+      ],
+      "description": "",
+      "keywords": "processar reembolso process refund",
+      "href": "acoes-highlevel-cat08.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Cancelar Subscription",
+      "en": "Cancel Subscription",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "cancelar subscription cancel subscription",
+      "href": "acoes-highlevel-cat08.html#a5"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Adicionar a Campanha",
+      "en": "Add to Campaign",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar a campanha add to campaign",
+      "href": "acoes-highlevel-cat09.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Remover de Campanha",
+      "en": "Remove from Campaign",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover de campanha remove from campaign",
+      "href": "acoes-highlevel-cat09.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Adicionar à Audiência Facebook",
+      "en": "Add to FB Audience",
+      "category": "Ação",
+      "tags": [
+        "Meta Ads"
+      ],
+      "description": "",
+      "keywords": "adicionar à audiência facebook add to fb audience",
+      "href": "acoes-highlevel-cat09.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Remover de Audiência FB",
+      "en": "Remove from FB Audience",
+      "category": "Ação",
+      "tags": [
+        "Meta Ads"
+      ],
+      "description": "",
+      "keywords": "remover de audiência fb remove from fb audience",
+      "href": "acoes-highlevel-cat09.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Adicionar ao Smart List",
+      "en": "Add to Smart List",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar ao smart list add to smart list",
+      "href": "acoes-highlevel-cat09.html#a5"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Adicionar ao Gerenciador de Afiliados",
+      "en": "Add to Affiliate Manager",
+      "category": "Ação",
+      "tags": [
+        "★ Onboarding"
+      ],
+      "description": "",
+      "keywords": "adicionar ao gerenciador de afiliados add to affiliate manager",
+      "href": "acoes-highlevel-cat10.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Adicionar Afiliado a Campanha",
+      "en": "Add Affiliate to Campaign",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar afiliado a campanha add affiliate to campaign",
+      "href": "acoes-highlevel-cat10.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Remover Afiliado de Campanha",
+      "en": "Remove Affiliate from Campaign",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover afiliado de campanha remove affiliate from campaign",
+      "href": "acoes-highlevel-cat10.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Aprovar Comissão",
+      "en": "Approve Commission",
+      "category": "Ação",
+      "tags": [
+        "Financeiro"
+      ],
+      "description": "",
+      "keywords": "aprovar comissão approve commission",
+      "href": "acoes-highlevel-cat10.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Pagar Comissão",
+      "en": "Pay Commission",
+      "category": "Ação",
+      "tags": [
+        "⚠ Financeiro"
+      ],
+      "description": "",
+      "keywords": "pagar comissão pay commission",
+      "href": "acoes-highlevel-cat10.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Atualizar Custom Field do Afiliado",
+      "en": "Update Affiliate Custom Field",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "atualizar custom field do afiliado update affiliate custom field",
+      "href": "acoes-highlevel-cat10.html#a6"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Conceder Acesso à Oferta",
+      "en": "Grant Offer Access",
+      "category": "Ação",
+      "tags": [
+        "★ Principal"
+      ],
+      "description": "",
+      "keywords": "conceder acesso à oferta grant offer access",
+      "href": "acoes-highlevel-cat11.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Remover Acesso à Oferta",
+      "en": "Remove Offer Access",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover acesso à oferta remove offer access",
+      "href": "acoes-highlevel-cat11.html#a2"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Tocar Mensagem (Say/Play)",
+      "en": "Say or Play Message",
+      "category": "Ação",
+      "tags": [
+        "IVR"
+      ],
+      "description": "",
+      "keywords": "tocar mensagem (say/play) say or play message",
+      "href": "acoes-highlevel-cat12.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Menu IVR",
+      "en": "IVR Menu",
+      "category": "Ação",
+      "tags": [
+        "★ Roteamento"
+      ],
+      "description": "",
+      "keywords": "menu ivr ivr menu",
+      "href": "acoes-highlevel-cat12.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Coletar Input",
+      "en": "Gather Input",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "coletar input gather input",
+      "href": "acoes-highlevel-cat12.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Transferir Ligação",
+      "en": "Transfer Call",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "transferir ligação transfer call",
+      "href": "acoes-highlevel-cat12.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Encerrar Chamada",
+      "en": "Hangup Call",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "encerrar chamada hangup call",
+      "href": "acoes-highlevel-cat12.html#a5"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Conceder Acesso a Grupo",
+      "en": "Grant Group Access",
+      "category": "Ação",
+      "tags": [
+        "★ Onboarding"
+      ],
+      "description": "",
+      "keywords": "conceder acesso a grupo grant group access",
+      "href": "acoes-highlevel-cat13.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Remover Acesso a Grupo",
+      "en": "Revoke Group Access",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover acesso a grupo revoke group access",
+      "href": "acoes-highlevel-cat13.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Conceder Acesso a Canal Privado",
+      "en": "Grant Private Channel Access",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "conceder acesso a canal privado grant private channel access",
+      "href": "acoes-highlevel-cat13.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Remover Acesso a Canal Privado",
+      "en": "Revoke Private Channel Access",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover acesso a canal privado revoke private channel access",
+      "href": "acoes-highlevel-cat13.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Atribuir Nível na Classificação",
+      "en": "Assign Leaderboard Level",
+      "category": "Ação",
+      "tags": [
+        "Gamificação"
+      ],
+      "description": "",
+      "keywords": "atribuir nível na classificação assign leaderboard level",
+      "href": "acoes-highlevel-cat13.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Publicar na Comunidade",
+      "en": "Post to Community",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "publicar na comunidade post to community",
+      "href": "acoes-highlevel-cat13.html#a6"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Emitir Certificado",
+      "en": "Issue Certificate",
+      "category": "Ação",
+      "tags": [
+        "★ Marco"
+      ],
+      "description": "",
+      "keywords": "emitir certificado issue certificate",
+      "href": "acoes-highlevel-cat14.html#a1"
+    }
+  ]
+}
