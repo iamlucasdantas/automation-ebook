@@ -2912,6 +2912,197 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a4" data-name="enviar conversao meta google capi conversion api ads pixel">
+  <div class="acao-head">
+    <div class="acao-num">04</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Enviar Conversão para Meta e Google</h2>
+      <div class="acao-en">Send Conversion Event (Meta CAPI · Google Ads)</div>
+      <div class="acao-tags"><span class="info-tag">Ads</span><span class="info-tag">Atribuição</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Manda um evento de conversão direto pra Meta Conversion API (CAPI) e Google Ads Enhanced Conversions com o valor da venda + email/telefone hasheados (LGPD compliant). Resolve o problema de atribuição quando o pixel do navegador é bloqueado por adblocker, iOS 17+ ou cookies third-party desativados.</p>
+      <p>HighLevel envia server-to-server: contorna bloqueio de browser, melhora otimização das campanhas e dá score CAPI alto (acima de 8 normalmente), o que destrava melhor performance no Advantage+ da Meta.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Pagamento confirmado</div>
+        <div class="use-case-desc">Invoice Paid → manda evento Purchase pro Meta + Google com valor real da venda.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Lead qualificado</div>
+        <div class="use-case-desc">Tag "SQL" adicionada → evento Lead pro Meta + Google pra otimização de campanhas top-of-funnel.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Trial iniciado</div>
+        <div class="use-case-desc">Conta criada → evento StartTrial pro Meta com previsão de LTV pra Advantage+ otimizar.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 04</div>
+        <div class="use-case-title">Upsell aceito</div>
+        <div class="use-case-desc">Manda evento AddPaymentInfo + Purchase em sequência pro funil completo de ROAS.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Provider (Meta CAPI / Google Ads / ambos), Event Name (Purchase/Lead/StartTrial/InitiateCheckout/AddToCart/CompleteRegistration), Value + Currency, Conversion ID, Pixel/Account ID, Hashed Customer Data (email + phone + nome), Click ID (fbclid/gclid), Event Source URL.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a4">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Atribuição/ Pagamento → Meta CAPI + Google Ads</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a4">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Invoice Paid</div>
+              <div class="ghl-node-title">Invoice Paid</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Reportar conversão · Meta + Google</span></div><div class="ghl-node-param"><span class="pk">Invoice Status</span><span class="pv">Paid</span></div><div class="ghl-node-param"><span class="pk">Min Amount</span><span class="pv">R$ 1,00</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📊</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Conversion (Meta)</div>
+              <div class="ghl-node-title">Send Conversion to Meta CAPI</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Purchase pro Meta CAPI</span></div><div class="ghl-node-param"><span class="pk">Pixel ID</span><span class="pv">1234567890123456</span></div><div class="ghl-node-param"><span class="pk">Event Name</span><span class="pv">Purchase</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv">{{invoice.amount}}</span></div><div class="ghl-node-param"><span class="pk">Currency</span><span class="pv">BRL</span></div><div class="ghl-node-param"><span class="pk">Customer Data</span><span class="pv">SHA-256 hash · email + phone + first + last</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📈</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Conversion (Google)</div>
+              <div class="ghl-node-title">Send Conversion to Google Ads</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Purchase pro Google Ads</span></div><div class="ghl-node-param"><span class="pk">Conversion Action</span><span class="pv">Purchase · Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Google Click ID (gclid)</span><span class="pv">{{contact.gclid}}</span></div><div class="ghl-node-param"><span class="pk">Conversion Value</span><span class="pv">{{invoice.amount}}</span></div><div class="ghl-node-param"><span class="pk">Currency</span><span class="pv">BRL</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">#</div>
+            <div>
+              <div class="ghl-node-type">Action · Add Tag</div>
+              <div class="ghl-node-title">Add Contact Tag</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Marcar conversão reportada</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv">Conversão Reportada · Meta+Google</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A4 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Conversão server-to-server: <span class='arrow'>→</span> <strong>Provider</strong> (Meta CAPI / Google Ads), <span class='arrow'>→</span> <strong>Event Name</strong> dropdown, <span class='arrow'>→</span> <strong>Value + Currency</strong>, <span class='arrow'>→</span> <strong>Customer Data hashing</strong> automático, <span class='arrow'>→</span> <strong>Click ID</strong> (fbclid/gclid) capturado do landing.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Send Conversion Event</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Purchase pro Meta CAPI" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Provider <span class="req">*</span></div><div class="hl-dropdown has-value">Meta Conversion API</div>
+  <div class="hl-conditional">
+    <div class="hl-conditional-note">Opções</div>
+    <div class="field-spec-val" style="margin-top:4px;">
+      <span class="opt-chip">Meta CAPI</span><span class="opt-chip">Google Ads</span><span class="opt-chip">Google Analytics 4</span><span class="opt-chip">TikTok Events API</span>
+    </div>
+  </div>
+</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Pixel / Account ID <span class="req">*</span></div><input class="hl-input" value="1234567890123456"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Access Token <span class="req">*</span></div><input class="hl-input" type="password" value="EAAxxxxxxxxxxxxxxxxxxxx (Meta long-lived token)"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Event Name <span class="req">*</span></div><div class="hl-dropdown has-value">Purchase</div>
+  <div class="hl-conditional">
+    <div class="hl-conditional-note">Eventos padrão</div>
+    <div class="field-spec-val" style="margin-top:4px;">
+      <span class="opt-chip">Purchase</span><span class="opt-chip">Lead</span><span class="opt-chip">CompleteRegistration</span><span class="opt-chip">InitiateCheckout</span><span class="opt-chip">AddPaymentInfo</span><span class="opt-chip">StartTrial</span><span class="opt-chip">Subscribe</span>
+    </div>
+  </div>
+</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Value</div><input class="hl-input" value="{{invoice.amount}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Currency</div><div class="hl-dropdown has-value">BRL</div></div>
+<div class="hl-section-head">Customer Data (hasheado automaticamente — SHA-256, LGPD)</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Email</div><input class="hl-input" value="{{contact.email}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Phone</div><input class="hl-input" value="{{contact.phone}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">First Name + Last Name</div><input class="hl-input" value="{{contact.first_name}} {{contact.last_name}}"></div>
+<div class="hl-section-head">Attribution Signals</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Click ID</div><input class="hl-input" value="{{contact.fbclid}} / {{contact.gclid}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Event Source URL</div><input class="hl-input" value="{{contact.last_page_url}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Test Mode</div>
+  <div class="hl-toggle-row"><span>Enviar como Test Event antes de produção</span><div class="hl-toggle"></div></div>
+</div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Server-to-server · contorna bloqueio de pixel + score CAPI alto</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -2930,7 +3121,7 @@
 
   <div class="footer-top">
     <h3>Categoria 03 completa.</h3>
-    <p>3 ações de Envio de Dados explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>4 ações de Envio de Dados (incl. Send Conversion Event pra Meta CAPI + Google Ads) explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3042,7 +3233,11 @@
     'a2-1': { kind: 'Trigger · Invoice', title: 'Invoice Paid', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Sync pagamentos pra planilha</div></div><div class="config-section"><div class="config-label">Invoice Status *</div><div class="config-field highlight dropdown">Paid</div></div><div class="config-section"><div class="config-label">Min Amount</div><div class="config-field">R$ 1,00</div></div>` },
     'a2-2': { kind: 'Action · Google Sheets', title: 'Google Sheets (Add Row)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Adicionar linha em Vendas 2026</div></div><div class="config-section"><div class="config-label">Spreadsheet *</div><div class="config-field highlight dropdown">Vendas 2026 (id: 1Ab...)</div></div><div class="config-section"><div class="config-label">Worksheet *</div><div class="config-field dropdown">Pagamentos</div></div><div class="config-section"><div class="config-label">Mapping</div><div class="config-field highlight">Data: {{invoice.paid_at}} · Cliente: {{contact.first_name}} · Valor: {{invoice.amount}} · Fonte: {{contact.source}}</div></div><div class="config-section"><div class="config-label">Auth</div><div class="config-field">OAuth conectado (lucas@magneticflows.com.br)</div></div>` },
     'a3-1': { kind: 'Trigger · Contact Created', title: 'Contact Created', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Sync com ERP via API</div></div><div class="config-section"><div class="config-label">Created via Source</div><div class="config-field dropdown">Form Submission</div></div>` },
-    'a3-2': { kind: 'Action · Webhook', title: 'Custom API Call (ERP)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar customer no ERP</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field highlight">https://erp.empresa.com.br/api/v2/customers</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">Headers *</div><div class="config-field">Authorization: Bearer {{custom_value.erp_token}} + Content-Type: application/json</div></div><div class="config-section"><div class="config-label">Body *</div><div class="config-field highlight">{&quot;name&quot;:&quot;{{contact.first_name}} {{contact.last_name}}&quot;,&quot;email&quot;:&quot;{{contact.email}}&quot;,&quot;phone&quot;:&quot;{{contact.phone}}&quot;,&quot;source&quot;:&quot;GHL&quot;}</div></div><div class="config-section"><div class="config-label">Response Mapping</div><div class="config-field">erp_customer_id → Custom Field · erp_id</div></div>` }
+    'a3-2': { kind: 'Action · Webhook', title: 'Custom API Call (ERP)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar customer no ERP</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field highlight">https://erp.empresa.com.br/api/v2/customers</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">Headers *</div><div class="config-field">Authorization: Bearer {{custom_value.erp_token}} + Content-Type: application/json</div></div><div class="config-section"><div class="config-label">Body *</div><div class="config-field highlight">{&quot;name&quot;:&quot;{{contact.first_name}} {{contact.last_name}}&quot;,&quot;email&quot;:&quot;{{contact.email}}&quot;,&quot;phone&quot;:&quot;{{contact.phone}}&quot;,&quot;source&quot;:&quot;GHL&quot;}</div></div><div class="config-section"><div class="config-label">Response Mapping</div><div class="config-field">erp_customer_id → Custom Field · erp_id</div></div>` },
+    'a4-1': { kind: 'Trigger · Invoice', title: 'Invoice Paid', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Reportar conversão · Meta + Google</div></div><div class="config-section"><div class="config-label">Invoice Status *</div><div class="config-field highlight dropdown">Paid</div></div><div class="config-section"><div class="config-label">Min Amount</div><div class="config-field">R$ 1,00</div></div><div class="config-section"><div class="config-label">Filter · Product</div><div class="config-field dropdown">Qualquer produto</div></div>` },
+    'a4-2': { kind: 'Action · Send Conversion (Meta)', title: 'Send Conversion to Meta CAPI', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Purchase pro Meta CAPI</div></div><div class="config-section"><div class="config-label">Provider *</div><div class="config-field highlight dropdown">Meta Conversion API</div></div><div class="config-section"><div class="config-label">Pixel ID *</div><div class="config-field highlight">1234567890123456</div></div><div class="config-section"><div class="config-label">Access Token *</div><div class="config-field">EAAxxxxxxxxxxxxxxxxxxxx (long-lived)</div></div><div class="config-section"><div class="config-label">Event Name *</div><div class="config-field highlight dropdown">Purchase</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{invoice.amount}}</div></div><div class="config-section"><div class="config-label">Currency</div><div class="config-field dropdown">BRL</div></div><div class="config-section"><div class="config-label">Customer Data *</div><div class="config-field">SHA-256 hash · email + phone + first_name + last_name</div></div><div class="config-section"><div class="config-label">Click ID</div><div class="config-field">{{contact.fbclid}}</div></div><div class="config-section"><div class="config-label">Event Source URL</div><div class="config-field">{{contact.last_page_url}}</div></div><div class="config-section"><div class="config-label">Test Mode</div><div class="config-field">⚪ OFF — produção</div></div>` },
+    'a4-3': { kind: 'Action · Send Conversion (Google)', title: 'Send Conversion to Google Ads', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Purchase pro Google Ads</div></div><div class="config-section"><div class="config-label">Provider *</div><div class="config-field highlight dropdown">Google Ads</div></div><div class="config-section"><div class="config-label">Conversion Action *</div><div class="config-field highlight dropdown">Purchase · Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Customer ID *</div><div class="config-field">123-456-7890</div></div><div class="config-section"><div class="config-label">Google Click ID (gclid) *</div><div class="config-field highlight">{{contact.gclid}}</div></div><div class="config-section"><div class="config-label">Conversion Value *</div><div class="config-field highlight">{{invoice.amount}}</div></div><div class="config-section"><div class="config-label">Currency</div><div class="config-field dropdown">BRL</div></div><div class="config-section"><div class="config-label">Customer Match</div><div class="config-field">Email + phone hashed (Enhanced Conversions)</div></div><div class="config-section"><div class="config-label">Order ID</div><div class="config-field">{{invoice.number}}</div></div>` },
+    'a4-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar conversão reportada</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Conversão Reportada · Meta+Google</span> <span class="opt-chip">CAPI Sent</span></div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

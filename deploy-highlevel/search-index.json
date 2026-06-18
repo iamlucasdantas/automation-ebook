@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 183,
+  "total": 185,
   "items": [
     {
       "id": "g1",
@@ -1633,6 +1633,20 @@
       "href": "acoes-highlevel-cat03.html#a3"
     },
     {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Enviar Conversão para Meta e Google",
+      "en": "Send Conversion Event (Meta CAPI · Google Ads)",
+      "category": "Ação",
+      "tags": [
+        "Ads",
+        "Atribuição"
+      ],
+      "description": "",
+      "keywords": "enviar conversao meta google capi conversion api ads pixel",
+      "href": "acoes-highlevel-cat03.html#a4"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "If/Else",
@@ -1831,6 +1845,19 @@
       "description": "",
       "keywords": "restart workflow restart workflow",
       "href": "acoes-highlevel-cat04.html#a16"
+    },
+    {
+      "id": "a17",
+      "type": "Ação",
+      "name": "Split (Teste A/B)",
+      "en": "Split",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "split teste ab a/b experimento random percentage",
+      "href": "acoes-highlevel-cat04.html#a17"
     },
     {
       "id": "a1",
