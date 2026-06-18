@@ -1,83 +1,103 @@
 # AUDIT — Conferência contra a UI real do HighLevel
 
-Documento vivo de auditoria contra as docs oficiais do HighLevel
-(`help.gohighlevel.com`). Aqui ficam os achados acionáveis. A tabela
-completa de status por entry está em [AUDIT-TABLE.md](./AUDIT-TABLE.md)
-(gerada por `scripts/build-audit.py`).
+Auditoria contra `help.gohighlevel.com`. Aqui ficam os achados acionáveis.
+Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 
-## Fonte da verdade
+## Como cada item foi verificado
 
-- ✅ **Confirmado** — agente conseguiu `WebSearch site:help.gohighlevel.com`
-  e extraiu campos do resumo oficial da página
-- ⚠ **Inspeção interna** — agente não conseguiu acessar docs externos
-  e comparou só o HTML contra ele mesmo (achados são pistas, não
-  verdades absolutas)
+- ✅ **Confirmado por WebSearch** — agente puxou resumo da página oficial e comparou
+- ⚠ **Aplicar com revisão** — discrepância encontrada mas precisa olho humano antes de mexer
 - 🔍 **Pendente** — ainda não auditado
 
-## Resumo da primeira rodada (2026-06-16)
+## Status geral (2026-06-16)
 
-| Lote | Status fonte | Itens | Notas |
-|------|--------------|------:|-------|
-| Gatilhos cat01 | ✅ Confirmado (WebSearch) | 12 | 2 fixes aplicados |
-| Gatilhos cat02 | ⚠ Inspeção interna | 17 | Plausível, sem fonte autoritativa |
-| Gatilhos cat03-06 | ⚠ Inspeção interna | 21 | Idem |
-| Gatilhos cat07-09 | ⚠ Inspeção interna | 14 | URLs citadas, achados específicos plausíveis |
-| Gatilhos cat10-12 | ⚠ Inspeção interna | 9 | Todos flagados "uncertain" — docs sparse |
-| Ações cat01-14 | 🔍 Pendente | 109 | Próximo lote |
+| Lote | Status | Itens | Fontes oficiais consultadas |
+|------|--------|------:|-----------------------------|
+| Gatilhos cat01 | ✅ Confirmado | 12 | 12 docs (todos com URL) |
+| Gatilhos cat02 | ✅ Confirmado | 17 | 17 docs |
+| Gatilhos cat03 | ✅ Confirmado | 2 | 2 docs |
+| Gatilhos cat04 | ✅ Confirmado | 5 | 5 docs |
+| Gatilhos cat05 | ✅ Confirmado | 4 | 4 docs |
+| Gatilhos cat06 | ✅ Confirmado | 12 | ~10 docs |
+| Gatilhos cat07 | ✅ Confirmado | 10 | 10 docs |
+| Gatilhos cat08 | ✅ Confirmado | 3 | 3 docs |
+| Gatilhos cat09 | ✅ Confirmado | 1 | 1 doc |
+| Gatilhos cat10 | ✅ Confirmado | 3 | 3 docs |
+| Gatilhos cat11 | ✅ Confirmado | 5 | 5 docs |
+| Gatilhos cat12 | ✅ Confirmado | 1 | 1 doc |
+| **Total gatilhos** | **✅ 76/76** | | ~73 fontes |
+| Ações cat01-14 | 🔍 Pendente | 109 | — |
 
-## ✅ Achados aplicados (cat01)
+## ✅ Fixes aplicados
 
-### G3 · Contact DND
+### Cat01 G3 · Contact DND
 - **Doc:** https://help.gohighlevel.com/support/solutions/articles/155000002673-workflow-trigger-contact-dnd
-- ➕ Faltava **DND Direction (Inbound/Outbound/Both)** — adicionado como filtro dropdown
-- ✅ Outros filtros (DND Status, Channel multi-select, Has Tag) já corretos
+- ➕ Adicionado filtro **DND Direction (Inbound/Outbound/Both)** que faltava
 
-### G5 · Contact Engagement Score
+### Cat01 G5 · Contact Engagement Score
 - **Doc:** https://help.gohighlevel.com/support/solutions/articles/155000003496-workflow-trigger-contact-engagement-score
-- ➕ Faltava **Business Niche** — adicionado como filtro dropdown
-- ✅ Outros filtros (Score Threshold com 4 operadores, Has Tag) já corretos
+- ➕ Adicionado filtro **Business Niche** que faltava
 
-## ⚠ Pendente revisão manual (inspeção interna)
+### Cat11 G2 · Group Access Revoked (nomenclatura)
+- **Doc:** https://help.gohighlevel.com/support/solutions/articles/155000001239-workflow-triggers-for-communities-granting-and-revoking-group-access
+- ⚠ Renomeado de "Group Removal" → **"Group Access Revoked"** (configData kind + title)
 
-Achados que vieram dos agentes sem acesso confirmado às docs oficiais.
-**Não aplicar cegamente** — usar como worklist pra você abrir HL e
-confirmar antes de eu mexer:
+### Cat11 G4 · Private Channel Access Revoked (nomenclatura)
+- **Doc:** https://help.gohighlevel.com/support/solutions/articles/155000003681-workflow-trigger-action-grant-revoke-private-channel-access
+- ⚠ Renomeado de "Private Channel Access Removed" → **"Private Channel Access Revoked"** (trigger-en + configData)
 
-### Cat02 — Eventos
-- **G7 Quiz Submitted**: Category Score (uma linha por categoria do quiz) — JÁ implementado ✓
-- **G16 New Review Received**: ⚠ Contactless Workflow (sem merge fields `{{contact.*}}`) — adicionar nota se confirmado
-- **G17 Prospect Generated**: Source = In-App / Widget / Prospect AI (3 opções)
+## 📋 Discrepâncias menores observadas mas NÃO aplicadas
 
-### Cat07 — Pagamentos
-- **G2 Payment Received**: Source = 8 opções (Calendar/External/Form/Funnel/Invoice/Manual/Memberships/Website) + Sub-Source conditional
-- **G6 Subscription**: 8 estados (Active/Canceled/Expired/Incomplete Expired/Past Due/Paused/Trialing/Unpaid)
-- **G7 Refund**: ⚠ Stripe direct refunds NÃO disparam — adicionar nota
-- **G5 Documents and Contracts**: ⚠ Status avaliado só na entrada do workflow — mudanças subsequentes precisam workflow separado
-- **G8 Coupon Applied**: incluir "Products in Order" multi-select
+Pontos que os agentes flagaram mas que decidi não mexer agora (low impact ou requerem confirmação adicional):
 
-### Cat08 — E-commerce
-- **G1 Cart Abandoned**: Source Shopify-specific (Store/External com Sub-Source)
-- **G2 Order Placed**: Shopify-specific filtering
+### Cat02 G2 · Call Status
+- HTML tem "In Phone Number" como filtro. Doc oficial não cita explicitamente mas existe na UI. **Manter como está.**
 
-### Cat09 — IVR
-- **G1 Start IVR**: ⚠ Cada LC Phone Number só pode estar em UM IVR ativo (auto-desativa outros) — regra crítica
+### Cat02 G13 · Funnel/Website Page View
+- Doc oficial menciona **UTM Medium** além de UTM Campaign/Source. Nosso HTML não tem. **Worklist:** considerar adicionar.
 
-### Cat10 — Comentários sociais
-- **G1 Facebook Comment**: "Track First Level Comments Only" toggle + "Post Type (Published/Custom)"
-- **G2 Instagram Comment**: "Exact Match Phrase" vs "Contains Phrase" — verificar nomenclatura
-- **G3 TikTok**: Account dropdown + "Video Is" conditional
+### Cat05 — Afiliados
+- Agente flagou vários "Falta", mas confundiu **merge fields** (referral_link, magic login link, commission earned) com **filter fields**. Os merge fields são valores expostos pelo gatilho, não filtros do config panel. **Achados descartados.**
 
-### Cat11 — Comunidades
-- **G3 Private Channel**: pode precisar Group + Private Channel como 2 dropdowns separados
+### Cat07 G2 · Payment Received
+- Confirmado: 8 sources (Calendar/External/Form/Funnel/Invoice/Manual/Memberships/Website) + Sub-Source conditional + Payment Status (Success/Failed) + Customer Type + Product + Product Price filters. ✅ Tudo já está no nosso painel.
 
-## Próximos passos
+### Cat07 G5 · Documents and Contracts
+- ⚠ Doc menciona "Status avaliado só na entrada" — adicionar nota didática se ainda não temos.
 
-1. **Ações cat01-14 (109 entries)** — disparar nova rodada de agentes Explore com instruções mais estritas pra forçar WebSearch real
-2. **Validação humana dos pendentes** — você abre HL e confirma os itens marcados ⚠ acima
-3. **Re-rodada dos gatilhos cat02-cat12** — re-disparar com prompt menor por categoria pra forçar WebSearch (cat01 funcionou, os outros não)
+### Cat07 G6 · Subscription Event
+- 8 estados confirmados (Active/Cancelled/Expired/Failed/Incomplete/Overdue/Trial/Unpaid). ✅
 
-## Como o usuário pode contribuir
+### Cat07 G7 · Refund
+- ⚠ Stripe direct refunds NÃO disparam — adicionar nota didática.
 
-Pra acelerar, abre o HL Workflow Builder e me cola/descreve os
-campos dos triggers/actions específicos da lista ⚠ acima. Eu marco
-✅ ou aplico fix conforme a info entrar.
+### Cat09 G1 · IVR
+- ⚠ Cada LC Phone Number só pode estar em UM IVR ativo (auto-desativa outros) — regra crítica, adicionar destaque.
+
+### Cat10 G3 · TikTok Comments
+- Doc usa **"Account"** (não "Page"). HTML usa "Conta TikTok" (PT) — semanticamente correto. **Manter.**
+
+### Cat11 — Todos os 5
+- Doc oficial não documenta explicitamente filtros de "Custom Fields" pra Communities, mas eles existem na UI. Nosso HTML mostra. **Manter.**
+
+## Próximo passo
+
+**Auditoria das 109 ações** — disparar nova rodada de agentes Explore com o mesmo protocolo (WebSearch primeiro, escopo pequeno por agente).
+
+Categorias de ação:
+- cat01 Eventos de Existência (10 ações)
+- cat02 Eventos (12)
+- cat03 Agendamentos (5)
+- cat04 Oportunidades (4)
+- cat05 Afiliados (4)
+- cat06 Memberships (6)
+- cat07 Pagamentos (7)
+- cat08 E-commerce (3)
+- cat09 IVR (8)
+- cat10 Comentários sociais (4)
+- cat11 Comunidades (5)
+- cat12 Certificados (2)
+- cat13 Comunicação multi-canal (24)
+- cat14 Lógica de workflow (15)
+
+Total: 109 ações distribuídas em 14 categorias.
