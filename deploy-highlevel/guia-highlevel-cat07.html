@@ -2397,6 +2397,7 @@
 <a href="#g8" class="side-link"><span class="side-num">08</span>Cupom Aplicado</a>
 <a href="#g9" class="side-link"><span class="side-num">09</span>Limite de Cupom</a>
 <a href="#g10" class="side-link"><span class="side-num">10</span>Cupom Expirado</a>
+<a href="#g11" class="side-link"><span class="side-num">11</span>Estimativa</a>
 </nav>
 
 
@@ -4628,6 +4629,113 @@
     </div>
   </div>
 
+</div>
+
+<div class="trigger-block" id="g11" data-name="estimativa proposta estimates proposal">
+  <div class="trigger-head">
+    <div class="trigger-num">11</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Proposta</div>
+      <h2 class="trigger-name">Estimativa</h2>
+      <div class="trigger-en">Estimates</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Novo 2025</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando uma estimativa/proposta muda de status — enviada, aceita, recusada ou expirada. Ideal para automatizar follow-up de propostas e funis de venda consultiva.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Follow-up imediato</div><div class="use-case-desc">Estimativa enviada → email automático com link de assinatura digital.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Win notification</div><div class="use-case-desc">Estimativa aceita → notificação interna + criar oportunidade como Won.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Oferta de recuperação</div><div class="use-case-desc">Estimativa recusada → sequência de win-back com desconto exclusivo.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Status da Estimativa</div>
+    <div class="filter-en">Estimate Status</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Sent / Accepted / Declined / Expired.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Cria fluxos separados por momento do ciclo de vendas — follow-up, celebração ou recuperação.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Valor da Estimativa</div>
+    <div class="filter-en">Estimate Amount</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtro por valor mínimo/máximo da proposta.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Tratamento diferenciado por ticket — propostas maiores recebem atenção prioritária.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G11 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Filtros de estimativa: <span class='arrow'>→</span> <strong>Estimate Status</strong> chips multiplos, <span class='arrow'>→</span> <strong>Min Amount</strong> valor numérico.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Estimates</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Proposta aceita — iniciar onboarding" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Estimate Status</div>
+        <div class="hl-multiselect"><span class="hl-multiselect-chip">Accepted</span></div>
+        <div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Sent</span><span class="opt-chip">Accepted</span><span class="opt-chip">Declined</span><span class="opt-chip">Expired</span></div></div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Min Amount</div>
+        <input class="hl-input" value="R$ 500,00" readonly>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando a estimativa muda de status — enviada, aceita, recusada ou expirada</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat06.html" class="cat-nav-link prev">
@@ -4643,7 +4751,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 07 completa.</h3>
-    <p>10 gatilhos de Pagamentos explicados com impacto prático e mockups visuais.</p>
+    <p>11 gatilhos de Pagamentos explicados com impacto prático e mockups visuais.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -4696,7 +4804,10 @@
     'g9-1': { kind: 'Trigger · Coupon Limit Reached', title: 'Coupon Limit Reached', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Limite cupom — desativar oferta</div></div><div class="config-section"><div class="config-label">Coupon Code *</div><div class="config-field highlight dropdown">BF2026</div></div>` },
     'g9-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar marketing de cupom esgotado</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Time Marketing</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">⚠ Cupom {{coupon.code}} atingiu o limite</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">Cupom esgotado. Considere criar outro ou subir o teto.</div></div>` },
     'g10-1': { kind: 'Trigger · Coupon Expired', title: 'Coupon Expired', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom expirado — pós-campanha</div></div><div class="config-section"><div class="config-label">Coupon Code *</div><div class="config-field highlight dropdown">BF2026</div></div>` },
-    'g10-2': { kind: 'Action · Send Email', title: 'Send Email (pós-campanha)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email última chance da campanha</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">campanhas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">⏰ Última chance Black Friday — extendemos 24h só pra você</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Última Chance Pós-Expiração</div></div>` }
+    'g10-2': { kind: 'Action · Send Email', title: 'Send Email (pós-campanha)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email última chance da campanha</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">campanhas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">⏰ Última chance Black Friday — extendemos 24h só pra você</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Última Chance Pós-Expiração</div></div>` },
+    'g11-1': { kind: 'Trigger · Estimates', title: 'Estimates', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Proposta aceita — iniciar onboarding</div></div><div class="config-section"><div class="config-label">Estimate Status</div><div class="config-field"><span class="opt-chip">Accepted</span></div></div><div class="config-section"><div class="config-label">Min Amount</div><div class="config-field">R$ 500,00</div></div>` },
+    'g11-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Win — notificar time comercial</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Time Comercial</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">🎉 Proposta aceita por {{contact.first_name}}</div></div>` },
+    'g11-3': { kind: 'Action · Create Opportunity', title: 'Create Opportunity (Won)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar opp como Won</div></div><div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Vendas Consultivas</div></div><div class="config-section"><div class="config-label">Stage *</div><div class="config-field highlight dropdown">Proposta Aceita</div></div><div class="config-section"><div class="config-label">Status</div><div class="config-field dropdown">Won</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field">{{estimate.amount}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

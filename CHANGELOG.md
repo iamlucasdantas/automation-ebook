@@ -10,6 +10,22 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-19 — Content
+**Add 4 new native triggers and 2 new native actions discovered in HighLevel 2025/2026**
+
+- **4 novos gatilhos nativos:**
+  - `Scheduler` (cat02 g19) — gatilho sem contato para workflows agendados (diário/semanal/mensal/cron)
+  - `Estimates` (cat07 g11) — dispara quando estimativa/proposta muda de status (enviada, aceita, recusada, expirada)
+  - `Abandoned Checkout — Ecommerce Stores` (cat08 g4) — checkout abandonado para lojas HL nativas (unificado: Store + Shopify via filter)
+  - `Product Review Submitted` (cat08 g5) — avaliação de produto enviada em lojas HL nativas
+- **2 novas ações nativas:**
+  - `Send Recurring Invoice` (acoes-cat08 a6) — invoice recorrente automático (diário/semanal/mensal/anual + auto-pay)
+  - `Send Estimate` (acoes-cat08 a7) — envio automático de estimativa/proposta via template
+- **cat08 renomeada** de "Shopify" para "E-commerce & Shopify" para refletir triggers de lojas HL nativas
+- **Contadores atualizados:** 76 → 80 gatilhos, 109 → 111 ações
+- **index.html** atualizado com novos números e data de atualização 19/06/2026
+- Apenas triggers e ações nativas do HighLevel foram incluídas (integrações de terceiros como ClickUp, HubSpot, Asana excluídas)
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

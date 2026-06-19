@@ -2421,6 +2421,7 @@
   <div class="side-section-label">Chamadas &amp; IA</div>
   <nav class="side-nav">
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Agendamento Programado</a>
   </nav>
 
   <!-- ============================================================
@@ -6747,6 +6748,149 @@
     </div>
   </div>
 
+</div>
+
+<div class="trigger-block" id="g19" data-name="agendamento programado scheduler schedule">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Agendamento</div>
+      <h2 class="trigger-name">Agendamento Programado</h2>
+      <div class="trigger-en">Scheduler</div>
+      <div class="trigger-tags"><span class="info-tag">Sem Contato</span><span class="info-tag">Novo 2025</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Gatilho sem contato que inicia um workflow em horário agendado — diário, semanal, mensal, por intervalo ou data específica. Não precisa de contato para disparar.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Relatório diário</div><div class="use-case-desc">Todo dia às 9h → webhook pra Google Sheets com resumo do dia anterior.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Limpeza semanal</div><div class="use-case-desc">Toda segunda-feira → remover tags expiradas de contatos inativos.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Upsell mensal</div><div class="use-case-desc">Dia 1 de cada mês → campanha de oferta pra clientes ativos.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Frequência</div>
+    <div class="filter-en">Frequency</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Hourly / Daily / Weekly / Monthly / Specific Date / Cron.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Define o ritmo de disparo — desde intervalos por hora até datas únicas específicas.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Data de Início</div>
+    <div class="filter-en">Start Date</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Data e hora de início do agendamento.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Permite agendar campanhas futuras com precisão.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Parar Em</div>
+    <div class="filter-en">Stop On</div>
+    <div class="filter-type">opcional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Data de encerramento do agendamento.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Limita a duração da automação sem precisar desativar manualmente.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Pular Fins de Semana</div>
+    <div class="filter-en">Skip Weekends</div>
+    <div class="filter-type">opcional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Toggle para pular sábado e domingo.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Garante que automações comerciais disparem apenas em dias úteis.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G19 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Gatilho sem contato: <span class='arrow'>→</span> <strong>Frequency</strong> define ritmo, <span class='arrow'>→</span> <strong>Skip Weekends</strong> toggle, <span class='arrow'>→</span> <strong>Stop On</strong> data opcional.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Scheduler</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Relatório semanal — performance" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Frequency</div>
+        <div class="hl-dropdown has-value">Weekly</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Day of Week</div>
+        <div class="hl-dropdown has-value">Segunda-feira</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Time</div>
+        <input class="hl-input" value="09:00" readonly>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Skip Weekends</div>
+        <div class="hl-dropdown has-value">ON</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Stop On (optional)</div>
+        <input class="hl-input" placeholder="data de encerramento (opcional)">
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara no horário agendado, sem precisar de um contato</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -6766,7 +6910,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>18 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>19 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6871,7 +7015,10 @@
     'g17-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Primeira impressão prospecto</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Soube que você passou pelo nosso site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Cold Outreach — Prospecto</div></div>` },
     'g18-1': { kind: 'Trigger · Transcript Generated', title: 'Transcript Generated', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Transcript Generated</div></div><div class="config-section"><div class="config-label">Call Type</div><div class="config-field dropdown">Normal Calls</div></div><div class="config-section"><div class="config-label">Call Direction</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Call Duration (s)</div><div class="config-field">120</div></div>` },
     'g18-2': { kind: 'Action · Workflow AI', title: 'AI · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI · Resumo da Call</div></div><div class="config-section"><div class="config-label">Prompt</div><div class="config-field">Resuma a conversa em 3 pontos: interesse, objeção e próximo passo.</div></div>` },
-    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` }
+    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` },
+    'g19-1': { kind: 'Trigger · Scheduler', title: 'Scheduler', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Relatório semanal — performance</div></div><div class="config-section"><div class="config-label">Frequency</div><div class="config-field dropdown">Weekly</div></div><div class="config-section"><div class="config-label">Day of Week</div><div class="config-field dropdown">Segunda-feira</div></div><div class="config-section"><div class="config-label">Time</div><div class="config-field">09:00</div></div><div class="config-section"><div class="config-label">Skip Weekends</div><div class="config-field">ON</div></div>` },
+    'g19-2': { kind: 'Action · Outbound Webhook', title: 'Outbound Webhook · Google Sheets', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Webhook relatório semanal</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field highlight">https://hooks.zapier.com/hooks/catch/abc123/</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">{"data":"{{trigger.scheduled_date}}","resumo":"semanal"}</div></div>` },
+    'g19-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar clientes p/ campanha upsell</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Campanha Upsell Mensal</span></div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========
