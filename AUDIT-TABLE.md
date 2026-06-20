@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 30 | 46 | 0 | **76** |
-| Ações | 32 | 74 | 3 | **109** |
+| Ações | 33 | 74 | 3 | **110** |
 
 
 ## Gatilhos · 12 categorias
@@ -132,7 +132,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Acesso a Grupo](guia-highlevel-cat11.html#g1) | Group Access Granted | 3 | 2/6 | 🟡 | [ ] | |
 | g2 | [Remoção de Grupo](guia-highlevel-cat11.html#g2) | Group Access Revoked | 3 | 2/6 | 🟡 | [ ] | |
 | g3 | [Acesso Concedido a Canal Privado](guia-highlevel-cat11.html#g3) | Private Channel Access Granted | 3 | 2/6 | 🟡 | [ ] | |
-| g4 | [Remoção de Acesso a Canal Privado](guia-highlevel-cat11.html#g4) | Private Channel Access Removed | 3 | 2/6 | 🟡 | [ ] | |
+| g4 | [Remoção de Acesso a Canal Privado](guia-highlevel-cat11.html#g4) | Private Channel Access Revoked | 3 | 2/6 | 🟡 | [ ] | |
 | g5 | [Mudança de Nível na Classificação](guia-highlevel-cat11.html#g5) | Community Group Member Leaderboard Level Changed | 4 | 2/6 | 🟡 | [ ] | |
 
 ### CAT12 · Conclusão
@@ -245,9 +245,10 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a4 | [Mover Entre Pipelines](acoes-highlevel-cat07.html#a4) | Move Between Pipelines | 3 | 2/6 | 🟡 | [ ] | |
 | a5 | [Atualizar Status](acoes-highlevel-cat07.html#a5) | Update Opportunity Status | 3 | 3/6 | 🟢 | [ ] | |
 | a6 | [Deletar Oportunidade](acoes-highlevel-cat07.html#a6) | Delete Opportunity | 3 | 2/6 | 🟡 | [ ] | |
-| a7 | [Atribuir Dono da Opp](acoes-highlevel-cat07.html#a7) | Assign Opportunity Owner | 2 | 2/6 | 🟡 | [ ] | |
+| a7 | [Adicionar Dono à Oportunidade](acoes-highlevel-cat07.html#a7) | Add Owner to Opportunity | 3 | 2/6 | 🟡 | [ ] | |
 | a8 | [Adicionar Tag à Opp](acoes-highlevel-cat07.html#a8) | Add Opportunity Tag | 3 | 3/6 | 🟢 | [ ] | |
 | a9 | [Remover Tag da Opp](acoes-highlevel-cat07.html#a9) | Remove Opportunity Tag | 2 | 2/6 | 🟡 | [ ] | |
+| a10 | [Adicionar Seguidores à Oportunidade](acoes-highlevel-cat07.html#a10) | Add Follower(s) to Opportunity | 4 | 3/6 | 🟢 | [ ] | |
 
 ### CAT08 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
