@@ -10,6 +10,16 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-20 — Content
+**Add 6 new native triggers and 6 new actions: Companies & Custom Objects**
+
+- **guia-highlevel-cat02.html**: Added trigger g19 — Form Partially Completed (Formulário Parcialmente Preenchido). Breadcrumb updated 02/12 → 02/14; stats 18→19 gatilhos, 8→9 mockups.
+- **guia-highlevel-cat07.html**: Added trigger g11 — Payment Failed (Pagamento Recusado). Breadcrumb updated 07/12 → 07/14; stats 10→11 gatilhos, 2→3 mockups.
+- **guia-highlevel-cat13.html** (NEW): Company triggers category — Company Created + Company Changed. 2 gatilhos, 4 mockup nodes, HL config panels.
+- **guia-highlevel-cat14.html** (NEW): Custom Object triggers — Custom Object Record Created + Custom Object Record Updated. 2 gatilhos, 4 mockup nodes, HL config panels.
+- **acoes-highlevel-cat15.html** (NEW): Companies & Objects actions — Find Company, Create and Associate Company, Create Company or Associated Contact, Update Company or Associated Contact, Add Associated Records to Workflow, Remove Associated Records from Workflow. 6 ações, 12 mockup nodes.
+- **index.html**: Updated hero stats (76→82 gatilhos, 109→116 ações, 185→198 painéis, 31→40 mockups), tab counts, added cat13/cat14 trigger cards and cat15 actions card, fixed cat07 actions card (9→10 ações), updated footer date to 20 de junho de 2026.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
