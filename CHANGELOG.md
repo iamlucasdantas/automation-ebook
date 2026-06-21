@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-21 — Content
+**Add native HighLevel new triggers and actions; new cat13 and cat15 pages**
+
+- **cat02 (Eventos):** Added trigger g19 "Google Lead Form Submitted" — fires when a Google Lead Form is submitted. Count: 18 → 19 triggers.
+- **cat08 (Ecommerce Stores):** Added trigger g4 "Avaliação de Produto" (Product Review Submitted). Renamed category from "Shopify" to "Ecommerce Stores" to reflect HighLevel's broader ecommerce support. Count: 3 → 4 triggers.
+- **cat10 (Redes Sociais):** Added trigger g4 "Click to WhatsApp Ads" — fires when a user clicks a WhatsApp Ads button. Renamed category to "Redes Sociais". Count: 3 → 4 triggers.
+- **cat12 (Certificados):** Updated navigation and breadcrumbs from "12/12" to "12/13"; next link now points to cat13.
+- **cat13 (Objetos Personalizados) — NEW PAGE:** Created `guia-highlevel-cat13.html` with 2 triggers: g1 "Registro Criado" (Custom Object Record Created) and g2 "Registro Atualizado" (Custom Object Record Updated). Includes full mockups, configData panels, and HL panel replicas.
+- **cat14 (Certificados — Ações):** Updated navigation and breadcrumbs from "14/14" to "14/15"; next link now points to cat15.
+- **cat15 (Objetos Personalizados — Ações) — NEW PAGE:** Created `acoes-highlevel-cat15.html` with 4 actions: a1 "Criar Registro Associado", a2 "Encontrar Registro", a3 "Encontrar Empresa", a4 "Adicionar ao Workflow". Includes full mockups and configData panels.
+- **index.html:** Updated hero stats (76→81 gatilhos, 109→113 ações, 185→212 painéis, 31→40 mockups), tab labels, section labels, cat02/cat08/cat10 card data, added cat13 and cat15 cards, and updated footer with last-update date 2026-06-21.
+- **Total counts now:** 81 gatilhos (13 categorias) · 113 ações (15 categorias)
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
