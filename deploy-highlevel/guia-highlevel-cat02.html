@@ -2421,6 +2421,7 @@
   <div class="side-section-label">Chamadas &amp; IA</div>
   <nav class="side-nav">
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Formulário Parcialmente Preenchido</a>
   </nav>
 
   <!-- ============================================================
@@ -6747,6 +6748,161 @@
     </div>
   </div>
 
+
+</div><div class="trigger-block" id="g19" data-name="formulário parcialmente preenchido form partially completed captura abandono">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Formulários &amp; Captura</div>
+      <h2 class="trigger-name">Formulário Parcialmente Preenchido</h2>
+      <div class="trigger-en">Form Partially Completed</div>
+      <div class="trigger-tags"><span class="info-tag new">Novo 2026</span><span class="info-tag">Abandono</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um contato preenche <em>parte</em> de um formulário mas não chega a submeter. Diferente do "Formulário Preenchido" (que exige envio completo), esse gatilho captura o abandono — o lead que começou a preencher mas saiu.</p>
+      <p>Com ele, você pode recuperar leads abandonados, enviar lembretes personalizados e entender onde as pessoas desistem no seu funil de captura.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Recuperação de abandono de formulário</div><div class="use-case-desc">Lead preencheu nome e email mas não enviou → SMS automático "Você esqueceu de completar seu cadastro — leva só 30 segundos!".</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Qualificação parcial de leads</div><div class="use-case-desc">Formulário de qualificação longo → abandono na metade → email de follow-up simplificado com formulário mais curto.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Retargeting comportamental</div><div class="use-case-desc">Lead abandonou formulário de checkout → tag "Abandono Checkout" → anúncio de retargeting + desconto de 10% por 24h.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Formulário Específico</div>
+    <div class="filter-en">Form</div>
+    <div class="filter-type">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por um formulário específico. Sem filtro, dispara em qualquer formulário parcialmente preenchido.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Essencial para não misturar recuperações de formulários diferentes.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Funil / Website</div>
+    <div class="filter-en">In Funnel/Website</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe a formulários dentro de um funil ou site específico.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Útil quando o mesmo formulário aparece em múltiplos funis.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g19">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Formulários/ 19 — Recuperação de Abandono</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g19">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Form Partially Completed</div>
+              <div class="ghl-node-title">Formulário Parcialmente Preenchido</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Abandono · Formulário Cadastro</span></div><div class="ghl-node-param"><span class="pk">Form</span><span class="pv highlight">Formulário de Cadastro Premium</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-sms">💬</div>
+            <div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Send SMS · Recuperação</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">SMS recuperação abandono</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{contact.first_name}}, você começou mas não finalizou seu cadastro. Leva só 30s!</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">🏷</div>
+            <div>
+              <div class="ghl-node-type">Action · Contacts</div>
+              <div class="ghl-node-title">Add Tag · Abandono Formulário</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Marcar abandono formulário</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Abandono Formulário</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G19 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Disponível apenas para formulários nativos do HighLevel (não funciona com forms externos/embed de terceiros).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Form Partially Completed</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div><input class="hl-input" value="Abandono · Formulário Cadastro" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Form</div><div class="hl-dropdown has-value">Formulário de Cadastro Premium</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">In Funnel/Website</div><div class="hl-dropdown">Qualquer</div></div>
+          </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Captura leads que iniciaram mas não enviaram o formulário</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -6766,7 +6922,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>18 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>19 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6871,6 +7027,9 @@
     'g17-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Primeira impressão prospecto</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Soube que você passou pelo nosso site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Cold Outreach — Prospecto</div></div>` },
     'g18-1': { kind: 'Trigger · Transcript Generated', title: 'Transcript Generated', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Transcript Generated</div></div><div class="config-section"><div class="config-label">Call Type</div><div class="config-field dropdown">Normal Calls</div></div><div class="config-section"><div class="config-label">Call Direction</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Call Duration (s)</div><div class="config-field">120</div></div>` },
     'g18-2': { kind: 'Action · Workflow AI', title: 'AI · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI · Resumo da Call</div></div><div class="config-section"><div class="config-label">Prompt</div><div class="config-field">Resuma a conversa em 3 pontos: interesse, objeção e próximo passo.</div></div>` },
+    'g19-1': { kind: 'Trigger · Form Partially Completed', title: 'Formulário Parcialmente Preenchido', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Abandono · Formulário Cadastro</div></div><div class="config-section"><div class="config-label">Form</div><div class="config-field dropdown">Formulário de Cadastro Premium</div></div><div class="config-section"><div class="config-label">In Funnel/Website</div><div class="config-field dropdown">Qualquer</div></div>` },
+    'g19-2': { kind: 'Action · Communication', title: 'Send SMS · Recuperação', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">SMS recuperação abandono</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field">{{contact.phone}}</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{contact.first_name}}, você começou mas não finalizou seu cadastro. Leva só 30s!</div></div>` },
+    'g19-3': { kind: 'Action · Contacts', title: 'Add Tag · Abandono Formulário', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar abandono formulário</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Abandono Formulário</span> <span class="opt-chip">Recuperar Lead</span></div></div>` },
     'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` }
   };
 

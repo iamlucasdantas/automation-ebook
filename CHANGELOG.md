@@ -10,6 +10,23 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-22 — Content
+**Add 3 new native HighLevel triggers & actions (2026 updates)**
+
+- **NEW TRIGGER** — `guia-highlevel-cat02.html`: Gatilho #19 "Formulário Parcialmente Preenchido" (Form Partially Completed)
+  added to Categoria 02 (Eventos). Fires when a contact partially fills a form but does not submit.
+  Includes sidebar link, trigger block, 3-step mockup and full config panel.
+- **NEW ACTION** — `acoes-highlevel-cat05.html`: Ação #06 "AI Agent" (Agente de IA)
+  added to Categoria 05 (Workflow AI). Autonomous multi-step AI action with Search Knowledge Base
+  and Update Custom Value tools. Includes sidebar link, action block, 3-step mockup and config panel.
+- **NEW ACTION** — `acoes-highlevel-cat04.html`: Ação #18 "Verificação de Email" (Email Verification)
+  added to Categoria 04 (Ferramentas Internas). Validates contact email returning Valid/Risky/Invalid branches.
+  Includes sidebar link, action block, 3-step mockup and config panel.
+- `index.html` updated: triggers 76→77, actions 109→111, panels 185→188,
+  category cards updated, last-update date "22 de junho de 2026" added.
+
+---
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
