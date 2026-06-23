@@ -2437,11 +2437,12 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Agendamentos · 3 ações</div>
+  <div class="side-section-label">Agendamentos · 4 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Atualizar Status do Agendamento</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Reassign Appointment</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Cancelar Agendamento</a>
+    <a href="#a4" class="side-link"><span class="side-num">04</span>Agendar Compromisso</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2460,10 +2461,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 06/14</span>
   <h1 class="hero-title">Ações de <em>Agendamentos</em>.</h1>
-  <p class="hero-desc">Ações que manipulam compromissos e calendários. Apenas 3 ações, mas críticas pra operações de agendamento — criar, atualizar status, cancelar.</p>
+  <p class="hero-desc">Ações que manipulam compromissos e calendários. 4 ações críticas pra operações de agendamento — criar, atualizar status, cancelar e agendar automaticamente.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">3</span>
+      <span class="hero-stat-num">4</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -2904,6 +2905,119 @@
     </div>
   </div>
 
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     AÇÃO 04 — AGENDAR COMPROMISSO (Book Appointment)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="acao-block" id="a4" data-name="agendar compromisso book appointment calendário automático">
+  <div class="acao-head">
+    <div class="acao-num">04</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Agendar Compromisso</h2>
+      <div class="acao-en">Book Appointment</div>
+      <div class="acao-tags"><span class="info-tag">Calendário</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Cria automaticamente um agendamento no calendário do HighLevel quando o workflow dispara — sem que o contato precise acessar a página de booking. Perfeito para follow-ups agendados, agendar demos após qualificação, ou criar compromissos com base em respostas de formulários.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso</div>
+        <div class="use-case-title">Demo automática pós-qualificação</div>
+        <div class="use-case-desc">Lead qualificado → AI Agent determina próximo slot disponível → Book Appointment agenda a demo automaticamente.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso</div>
+        <div class="use-case-title">Follow-up agendado</div>
+        <div class="use-case-desc">Contato não respondeu em 3 dias → workflow agenda ligação de follow-up no calendário do SDR.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso</div>
+        <div class="use-case-title">Onboarding estruturado</div>
+        <div class="use-case-desc">Pagamento recebido → agendar sessão de onboarding automaticamente + enviar confirmação por email.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Calendar (qual calendário), Assigned User (profissional), Date/Time (campo do contato ou data específica), Duration (duração do compromisso), Title (título do evento), Notes (observações).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a4">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Agendamentos/ Book Appointment · Demo Automática</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a4">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header ghl-trigger-node">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Tag Added</div>
+              <div class="ghl-node-title">Tag · Lead Qualificado</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">lead-qualificado</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-calendar">📅</div>
+            <div>
+              <div class="ghl-node-type">Action · Appointments</div>
+              <div class="ghl-node-title">Book Appointment</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Agendar demo 30 min</span></div><div class="ghl-node-param"><span class="pk">Calendar</span><span class="pv">Demo Comercial — Lucas</span></div><div class="ghl-node-param"><span class="pk">Assigned User</span><span class="pv dropdown">Round-robin SDR</span></div><div class="ghl-node-param"><span class="pk">Date/Time Source</span><span class="pv dropdown">Next Available Slot</span></div><div class="ghl-node-param"><span class="pk">Duration</span><span class="pv">30 min</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Send Email</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Email de confirmação da demo</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Demo confirmada, {{contact.first_name}}! 🚀</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Confirmação de Demo</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <span class="config-kind" id="a4-kind"></span>
+            <span class="config-title" id="a4-title"></span>
+            <button class="config-close" onclick="closePanel('a4')">✕</button>
+          </div>
+          <div class="config-body" id="a4-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div></main>
 </div>
 
@@ -2922,7 +3036,7 @@
 
   <div class="footer-top">
     <h3>Categoria 06 completa.</h3>
-    <p>3 ações de Agendamentos explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>4 ações de Agendamentos explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3036,7 +3150,10 @@
     'a2-2': { kind: 'Action · Reassign Appointment', title: 'Reassign Appointment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Transferir consultoria pro senior</div></div><div class="config-section"><div class="config-label">Appointment Scope *</div><div class="config-field highlight dropdown">Next upcoming appointment for this contact</div></div><div class="config-section"><div class="config-label">New Assigned User *</div><div class="config-field highlight dropdown">Carlos · Senior Closer</div></div><div class="config-section"><div class="config-label">Notify Previous Assignee</div><div class="config-field">🟢 ON — aviso interno</div></div><div class="config-section"><div class="config-label">Notify Contact</div><div class="config-field">🟢 ON — informa novo responsável</div></div>` },
     'a3-1': { kind: 'Trigger · Custom Field', title: 'No-Show Count = 3', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">3 no-shows — política de cancelamento</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Custom Field · no_show_count</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Equals</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">3</div></div>` },
     'a3-2': { kind: 'Action · Cancel Appointment', title: 'Cancel Appointment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Cancelar próximas consultas + tag de bloqueio</div></div><div class="config-section"><div class="config-label">Appointment Scope *</div><div class="config-field highlight dropdown">All upcoming appointments</div></div><div class="config-section"><div class="config-label">Cancellation Reason</div><div class="config-field highlight">Política · 3 no-shows acumulados</div></div><div class="config-section"><div class="config-label">Block Future Bookings</div><div class="config-field">🟢 ON — adiciona tag Bloqueio Agenda</div></div>` },
-    'a3-3': { kind: 'Action · Send Email', title: 'Send Email Política', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Comunicar política e bloqueio</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">cs@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, sobre nossas próximas consultas</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Política de No-show — Bloqueio</div></div><div class="config-section"><div class="config-label">Attachments</div><div class="config-field">politica-no-show.pdf (URL)</div></div>` }
+    'a3-3': { kind: 'Action · Send Email', title: 'Send Email Política', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Comunicar política e bloqueio</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">cs@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, sobre nossas próximas consultas</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Política de No-show — Bloqueio</div></div><div class="config-section"><div class="config-label">Attachments</div><div class="config-field">politica-no-show.pdf (URL)</div></div>` },
+    'a4-1': { kind: 'Trigger · Tag Added', title: 'Tag · Lead Qualificado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Tag · Lead Qualificado</div></div><div class="config-section"><div class="config-label">Tag</div><div class="config-field"><span class="opt-chip">lead-qualificado</span></div></div>` },
+    'a4-2': { kind: 'Action · Appointments', title: 'Book Appointment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Agendar demo 30 min</div></div><div class="config-section"><div class="config-label">Calendar *</div><div class="config-field">Demo Comercial — Lucas</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field dropdown">Round-robin SDR</div></div><div class="config-section"><div class="config-label">Date/Time Source</div><div class="config-field dropdown">Next Available Slot</div></div><div class="config-section"><div class="config-label">Duration</div><div class="config-field">30 min</div></div>` },
+    'a4-3': { kind: 'Action · Communication', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email de confirmação da demo</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Demo confirmada, {{contact.first_name}}! 🚀</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field">Confirmação de Demo</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

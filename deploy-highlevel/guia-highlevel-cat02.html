@@ -6,21 +6,21 @@
 <title>Gatilhos para Eventos — Guia HighLevel</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
 
-<meta name="description" content="Guia completo dos gatilhos de Eventos do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 02/12 do guia oficial em português." />
+<meta name="description" content="Guia completo dos gatilhos de Eventos do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 02/13 do guia oficial em português." />
 <meta name="author" content="Magnetic Funnels" />
 <meta name="keywords" content="HighLevel, Magnetic Funnels, automação, gatilhos, eventos, CRM, workflow, PT-BR" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Gatilhos para Eventos — Guia HighLevel" />
-<meta property="og:description" content="Guia completo dos gatilhos de Eventos do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 02/12 do guia oficial em português." />
+<meta property="og:description" content="Guia completo dos gatilhos de Eventos do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 02/13 do guia oficial em português." />
 <meta property="og:site_name" content="Magnetic Funnels" />
 <meta property="og:locale" content="pt_BR" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Gatilhos para Eventos — Guia HighLevel" />
-<meta name="twitter:description" content="Guia completo dos gatilhos de Eventos do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 02/12 do guia oficial em português." />
+<meta name="twitter:description" content="Guia completo dos gatilhos de Eventos do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 02/13 do guia oficial em português." />
 
 
 <!--
@@ -2361,7 +2361,7 @@
       <span>Voltar ao índice</span>
     </a>
     <div class="top-nav-divider"></div>
-    <div class="top-nav-breadcrumb">Categoria <strong>02/12</strong> · <strong>Eventos</strong></div>
+    <div class="top-nav-breadcrumb">Categoria <strong>02/13</strong> · <strong>Eventos</strong></div>
   </div>
 </div>
 
@@ -2423,6 +2423,11 @@
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
   </nav>
 
+  <div class="side-section-label">Automação</div>
+  <nav class="side-nav">
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Agendador</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        ============================================================ -->
@@ -2445,14 +2450,14 @@
 
 <!-- HERO -->
 <div class="hero-area">
-  <span class="hero-tag">Parte 1 · Gatilhos · Categoria 02/12</span>
+  <span class="hero-tag">Parte 1 · Gatilhos · Categoria 02/13</span>
   <h1 class="hero-title">Tudo que <em>acontece fora</em> do contato e pode disparar uma automação.</h1>
   <p class="hero-desc">
     A categoria "Eventos" é a mais poderosa do HighLevel — é onde entram webhooks de outras ferramentas, respostas de clientes no WhatsApp e Instagram, cliques em link, preenchimento de formulários, e muito mais. O nome é vago, mas na prática é aqui que a mágica acontece: aqui você conecta o HighLevel ao resto do seu ecossistema digital.
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">18</span>
+      <span class="hero-stat-num">19</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -6747,7 +6752,215 @@
     </div>
   </div>
 
-</div><!-- ═══════════════════════════════════════════════════════════════════════
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 19 — AGENDADOR (Workflow Scheduler)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g19" data-name="agendador scheduler agendamento horário tempo recorrente cron">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Automação</div>
+      <h2 class="trigger-name">Agendador</h2>
+      <div class="trigger-en">Workflow Scheduler</div>
+      <div class="trigger-tags">
+        <span class="info-tag">Sem contato</span>
+        <span class="info-tag">Recorrente</span>
+        <span class="info-tag new">Novo</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Único gatilho do HighLevel que <strong>não precisa de um contato</strong> para disparar. Inicia um workflow automaticamente com base num horário ou frequência que você define — sem que nenhum lead, cliente ou evento externo precise acontecer.</p>
+      <p>É ideal para tarefas recorrentes: relatórios diários, sincronização com planilhas, limpeza de dados, webhooks de rotina, posts programados. O workflow roda "no modo clock" — você agenda, ele executa.</p>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">★</div>
+    <div class="callout-content">
+      <strong>Dica de uso</strong>
+      Como esse gatilho não tem contato vinculado, as ações disponíveis são aquelas que não dependem de dados de contato — Outbound Webhook, Custom API Call, Google Sheets, Math, Custom Values. Use pra operações de backend e integrações programadas.
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Relatório diário</div>
+        <div class="use-case-desc">Todo dia às 8h → webhook puxa dados do HL → Google Sheets atualiza relatório → Slack notifica o time.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Sincronização semanal</div>
+        <div class="use-case-desc">Toda segunda às 9h → Custom API Call sincroniza contatos entre HL e ERP da empresa.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Limpeza de dados</div>
+        <div class="use-case-desc">Uma vez por mês → webhook dispara n8n que arquiva contatos inativos há 180 dias.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Tipo de Agendamento</div>
+          <div class="filter-en">Schedule Type</div>
+          <div class="filter-type required">obrigatório</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Define a frequência: Hourly (a cada hora), Daily (diário), Weekly (semanal), Monthly (mensal), Specific Date/Time (uma única vez), Cron (expressão personalizada).</div>
+          <div class="filter-impact"><strong>Impacto:</strong> Determina quando o workflow dispara. Cron é o modo mais flexível — ex.: <code>0 8 * * 1-5</code> roda às 8h em dias úteis.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Horário</div>
+          <div class="filter-en">Schedule Time</div>
+          <div class="filter-type">obrigatório</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Hora exata de disparo (para Daily/Weekly/Monthly/Specific). Para Hourly, define o intervalo em horas.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> Todos os horários seguem o fuso da subconta. Verifique o timezone nas configurações antes de configurar.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Dia da Semana</div>
+          <div class="filter-en">Day of Week</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Visível apenas quando Schedule Type = Weekly. Permite selecionar quais dias da semana o workflow deve rodar.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> Pode selecionar múltiplos dias — ex.: Segunda + Quarta + Sexta.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G19 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Painel lateral do Workflow Scheduler no HighLevel. Gatilho sem contato — nenhum campo de contato disponível.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Gatilho <strong>sem contato</strong> — selecione o tipo de agendamento e configure o horário.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <span class="hl-panel-title">Workflow Scheduler</span>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Workflow Trigger Name *</div>
+              <div class="hl-field-input highlight">Relatório diário — 8h BRT</div>
+            </div>
+            <div class="hl-field-group">
+              <div class="hl-field-label">Schedule Type *</div>
+              <div class="hl-field-input dropdown">Daily</div>
+            </div>
+            <div class="hl-field-group">
+              <div class="hl-field-label">Time *</div>
+              <div class="hl-field-input highlight">08:00</div>
+            </div>
+            <div class="hl-field-group">
+              <div class="hl-field-label">Timezone</div>
+              <div class="hl-field-input">America/Sao_Paulo (conta)</div>
+            </div>
+            <div class="hl-field-group">
+              <div class="hl-field-label">Status</div>
+              <div class="hl-field-input">🟢 Active</div>
+            </div>
+          </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Gatilho sem contato — dispara por horário independente de qualquer ação do lead</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g19">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Scheduler/ Relatório Diário às 8h</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g19">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="g19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header ghl-trigger-node">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Workflow Scheduler</div>
+              <div class="ghl-node-title">Relatório diário — 8h BRT</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Schedule Type</span><span class="pv highlight">Daily</span></div><div class="ghl-node-param"><span class="pk">Time</span><span class="pv highlight">08:00 America/Sao_Paulo</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-webhook">↗</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Data</div>
+              <div class="ghl-node-title">Outbound Webhook</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Buscar dados do relatório</span></div><div class="ghl-node-param"><span class="pk">URL</span><span class="pv">https://n8n.empresa.com/webhook/relatorio</span></div><div class="ghl-node-param"><span class="pk">Method</span><span class="pv dropdown">POST</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-sheet">📊</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Data</div>
+              <div class="ghl-node-title">Google Sheets</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Atualizar planilha KPIs</span></div><div class="ghl-node-param"><span class="pk">Spreadsheet</span><span class="pv">KPIs — Dashboard 2026</span></div><div class="ghl-node-param"><span class="pk">Operation</span><span class="pv dropdown">Append Row</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <span class="config-kind" id="g19-kind"></span>
+            <span class="config-title" id="g19-title"></span>
+            <button class="config-close" onclick="closePanel('g19')">✕</button>
+          </div>
+          <div class="config-body" id="g19-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
 <!-- NAV PREV/NEXT entre categorias -->
@@ -6766,7 +6979,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>18 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>19 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 12 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6804,7 +7017,7 @@
   </div>
 
   <div class="footer-legal">
-    Guia produzido pela Magnetic Funnels · Categoria 02 de 12 · Atualizado em 2026
+    Guia produzido pela Magnetic Funnels · Categoria 02 de 13 · Atualizado em 2026
   </div>
 </div>
 
@@ -6871,7 +7084,10 @@
     'g17-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Primeira impressão prospecto</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Soube que você passou pelo nosso site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Cold Outreach — Prospecto</div></div>` },
     'g18-1': { kind: 'Trigger · Transcript Generated', title: 'Transcript Generated', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Transcript Generated</div></div><div class="config-section"><div class="config-label">Call Type</div><div class="config-field dropdown">Normal Calls</div></div><div class="config-section"><div class="config-label">Call Direction</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Call Duration (s)</div><div class="config-field">120</div></div>` },
     'g18-2': { kind: 'Action · Workflow AI', title: 'AI · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI · Resumo da Call</div></div><div class="config-section"><div class="config-label">Prompt</div><div class="config-field">Resuma a conversa em 3 pontos: interesse, objeção e próximo passo.</div></div>` },
-    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` }
+    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` },
+    'g19-1': { kind: 'Trigger · Workflow Scheduler', title: 'Relatório diário — 8h BRT', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Relatório diário — 8h BRT</div></div><div class="config-section"><div class="config-label">Schedule Type *</div><div class="config-field dropdown">Daily</div></div><div class="config-section"><div class="config-label">Time *</div><div class="config-field highlight">08:00</div></div><div class="config-section"><div class="config-label">Timezone</div><div class="config-field">America/Sao_Paulo</div></div><div class="config-section"><div class="config-label">Status</div><div class="config-field">🟢 Active</div></div>` },
+    'g19-2': { kind: 'Action · Send Data', title: 'Outbound Webhook', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Buscar dados do relatório</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field">https://n8n.empresa.com/webhook/relatorio</div></div><div class="config-section"><div class="config-label">Method</div><div class="config-field dropdown">POST</div></div>` },
+    'g19-3': { kind: 'Action · Send Data', title: 'Google Sheets', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Atualizar planilha KPIs</div></div><div class="config-section"><div class="config-label">Spreadsheet</div><div class="config-field">KPIs — Dashboard 2026</div></div><div class="config-section"><div class="config-label">Operation</div><div class="config-field dropdown">Append Row</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

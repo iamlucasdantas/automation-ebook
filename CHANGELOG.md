@@ -10,6 +10,17 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-23 — Content
+**Add 4 new native triggers, 2 new native actions, and new category 13 (Empresas)**
+
+- **G19 · Agendador (Workflow Scheduler)** added to cat02 (Eventos): contactless time-based trigger with configurable schedule type, time, and day-of-week filters. Cat02: 18 → 19 gatilhos.
+- **G3 · Serviço Marcado (Service Booking)** added to cat03 (Compromissos): fires once per booking even with multiple services; requires Services v2 enabled in sub-account. Cat03: 2 → 3 gatilhos.
+- **A6 · AI Agent** added to cat05 (Workflow AI): autonomous multi-step AI agent with Instructions, Tools config, and Execution Logs. Premium action. Cat05: 5 → 6 ações.
+- **A4 · Agendar Compromisso (Book Appointment)** added to cat06 (Agendamentos): auto-books appointments on selected HighLevel calendar. Cat06: 3 → 4 ações.
+- **Nova categoria 13 · Empresas (B2B)** created (`guia-highlevel-cat13.html`): 2 triggers covering Company-Based Workflow automation — G1 (Empresa Criada / Company Created) and G2 (Empresa Alterada / Company Changed) with status filter example.
+- Fixed cat07 (Oportunidades) action count in index.html: displayed 9 but HTML already had 10 ações (Add Follower(s) to Opportunity was missing from the count).
+- **index.html updated**: hero stats 76→80 gatilhos, 109→112 ações, 185→192 painéis, 31→37 mockups; trigger tab 12→13 categorias; cat02/cat03/cat05/cat06/cat07 card counts corrected; cat13 card added; last-update date set to 23/06/2026.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
