@@ -1,6 +1,6 @@
 {
-  "generated_at": null,
-  "total": 185,
+  "generated_at": "2026-06-24T00:00:00Z",
+  "total": 192,
   "items": [
     {
       "id": "g1",
@@ -427,6 +427,36 @@
       "href": "guia-highlevel-cat02.html#g18"
     },
     {
+      "id": "g19",
+      "type": "Gatilho",
+      "name": "Form Google Lead Enviado",
+      "en": "Google Lead Form Submitted",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Tempo real",
+        "Google Ads",
+        "Lead Nativo"
+      ],
+      "description": "Dispara no momento em que um lead preenche e envia um formulário nativo de Lead do Google Ads. O lead é capturado diretamente dentro da plataforma do Google (YouTube, Google Search, Gmail) e chega ao HighLevel em tempo real via integração OAuth.",
+      "keywords": "google lead form enviado google ads formulário lead captura",
+      "href": "guia-highlevel-cat02.html#g19"
+    },
+    {
+      "id": "g20",
+      "type": "Gatilho",
+      "name": "Agendador de Workflow",
+      "en": "Workflow Scheduler",
+      "category": "Agendamento",
+      "tags": [
+        "Sem contato",
+        "Recorrente",
+        "Operacional"
+      ],
+      "description": "Inicia um workflow em horário programado, sem precisar de um contato para disparar. Pode rodar de hora em hora, todo dia, toda semana, todo mês ou em data/hora específica. Suporta expressões cron para agendamentos avançados.",
+      "keywords": "agendador scheduler workflow sem contato contactless recorrente programado horário",
+      "href": "guia-highlevel-cat02.html#g20"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -453,6 +483,21 @@
       "description": "Dispara sempre que um cliente agenda um compromisso de forma independente — usando seu link de agendamento (Calendly-style). Não dispara quando sua equipe agenda manualmente pelo sistema.",
       "keywords": "customer booked appointment agendamento marcou",
       "href": "guia-highlevel-cat03.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Agendamento de Serviço",
+      "en": "Service Booking",
+      "category": "Agendamentos",
+      "tags": [
+        "Tempo real",
+        "Multi-serviço",
+        "Services v2"
+      ],
+      "description": "Dispara quando um agendamento de serviço (Services v2) é criado ou atualizado. Se o cliente agendou múltiplos serviços, dispara uma vez só para o booking completo.",
+      "keywords": "service booking agendamento serviço serviços múltiplos services v2",
+      "href": "guia-highlevel-cat03.html#g3"
     },
     {
       "id": "g1",
@@ -929,6 +974,21 @@
       "description": "Dispara quando o pedido é marcado como concluído — geralmente quando o produto é entregue. Momento perfeito pra pedir feedback e avaliação.",
       "keywords": "pedido concluído order fulfilled",
       "href": "guia-highlevel-cat08.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Review de Produto Enviado",
+      "en": "Product Review Submitted",
+      "category": "E-commerce",
+      "tags": [
+        "Tempo real",
+        "E-commerce",
+        "Reputação"
+      ],
+      "description": "Dispara no instante em que um cliente envia uma avaliação de produto em uma loja HighLevel. Captura nota, título, comentário, produto e loja como variáveis.",
+      "keywords": "product review submitted review avaliação produto ecommerce loja nota rating",
+      "href": "guia-highlevel-cat08.html#g4"
     },
     {
       "id": "g1",
@@ -1860,6 +1920,34 @@
       "href": "acoes-highlevel-cat04.html#a17"
     },
     {
+      "id": "a18",
+      "type": "Ação",
+      "name": "Adicionar Registros Associados ao Workflow",
+      "en": "Add Associated Records to Workflow",
+      "category": "Ação",
+      "tags": [
+        "Objetos Customizados",
+        "Multi-registro"
+      ],
+      "description": "Enrola registros associados ao objeto disparador (Contatos, Empresas ou Objetos Customizados) em outro workflow via label de associação específico.",
+      "keywords": "adicionar registros associados workflow add associated records objetos customizados",
+      "href": "acoes-highlevel-cat04.html#a18"
+    },
+    {
+      "id": "a19",
+      "type": "Ação",
+      "name": "Remover Registros Associados do Workflow",
+      "en": "Remove Associated Records from Workflow",
+      "category": "Ação",
+      "tags": [
+        "Objetos Customizados",
+        "Multi-registro"
+      ],
+      "description": "Remove registros associados ao objeto disparador de um workflow ativo. Complemento de Add Associated Records to Workflow.",
+      "keywords": "remover registros associados workflow remove associated records objetos customizados",
+      "href": "acoes-highlevel-cat04.html#a19"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Generate Text (Texto)",
@@ -2182,6 +2270,21 @@
       "description": "",
       "keywords": "adicionar ao smart list add to smart list",
       "href": "acoes-highlevel-cat09.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Adicionar ao Google Ads",
+      "en": "Add to Google Ads",
+      "category": "Ação",
+      "tags": [
+        "Google Ads",
+        "Audiências",
+        "Marketing"
+      ],
+      "description": "Adiciona o contato a uma lista de Customer Match do Google Ads para criar audiências personalizadas e semelhantes sem exportar arquivos CSV.",
+      "keywords": "adicionar google ads customer match audiência remarketing rlsa",
+      "href": "acoes-highlevel-cat09.html#a6"
     },
     {
       "id": "a1",

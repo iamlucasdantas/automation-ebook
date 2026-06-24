@@ -2381,6 +2381,7 @@
   <nav class="side-nav">
     <a href="#g1" class="side-link"><span class="side-num">01</span>Status de Compromisso</a>
     <a href="#g2" class="side-link"><span class="side-num">02</span>Contato Marcou Agendamento</a>
+    <a href="#g3" class="side-link"><span class="side-num">03</span>Agendamento de Serviço</a>
   </nav>
 
   <!-- CTA-FIXO -->
@@ -3075,6 +3076,231 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 03 — AGENDAMENTO DE SERVIÇO (Service Booking)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g3" data-name="service booking agendamento serviço serviços múltiplos">
+  <div class="trigger-head">
+    <div class="trigger-num">03</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Agendamentos</div>
+      <h2 class="trigger-name">Agendamento de Serviço</h2>
+      <div class="trigger-en">Service Booking</div>
+      <div class="trigger-tags">
+        <span class="info-tag realtime">Tempo real</span>
+        <span class="info-tag">Multi-serviço</span>
+        <span class="info-tag">Services v2</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um agendamento de serviço (Services v2) é <strong>criado ou atualizado</strong>. Diferente do gatilho de Compromisso (Appointment Status), esse opera no nível do <strong>booking principal</strong> — não no nível individual de cada serviço.</p>
+      <p>Se o cliente agenda corte + barba + sobrancelha em uma única sessão, esse gatilho dispara <strong>uma vez só</strong> para o booking completo, evitando ações duplicadas. Ideal para clínicas, salões, estúdios e qualquer negócio que oferece pacotes de serviços.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Confirmação de pacote</div>
+        <div class="use-case-desc">Cliente agendou 3 serviços → WhatsApp único confirmando todos os itens do booking, horário e profissional.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Lembrete pré-visita</div>
+        <div class="use-case-desc">24h antes → SMS lembrando dos itens agendados, preparo necessário (ex.: chegar sem maquiagem para procedimento estético).</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Follow-up pós-serviço</div>
+        <div class="use-case-desc">Booking concluído → aguardar 2 dias → email pedindo avaliação e oferecendo desconto no próximo agendamento.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 04</div>
+        <div class="use-case-title">Alerta de cancelamento</div>
+        <div class="use-case-desc">Booking cancelado → notificação interna para o time + SMS para o cliente com link de reagendamento.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Status do Agendamento</div>
+          <div class="filter-en">Appointment Status</div>
+          <div class="filter-type required">principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Filtra por status do booking: Unconfirmed, Confirmed, Showed, No Show, Cancelled, Invalid.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> cada status gera um fluxo distinto — confirmação, reagendamento, cobrança ou encerramento.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HL CONFIG PANEL -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Requer Services v2 ativo na conta.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Gatilho nativo <strong>Service Booking</strong> — disponível em Automations → Workflows → Add Trigger</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Service Booking</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Service Booking" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Appointment Status</div>
+        <div class="hl-dropdown has-value">Confirmed</div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">Opções</div>
+          <div class="field-spec-val" style="margin-top:4px;">
+            <span class="opt-chip">Unconfirmed</span><span class="opt-chip">Confirmed</span><span class="opt-chip">Showed</span>
+            <span class="opt-chip">No Show</span><span class="opt-chip">Cancelled</span><span class="opt-chip">Invalid</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara uma vez por booking completo — não por serviço individual</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCKUP -->
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g3">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Serviços/ 03 — Novo Booking de Serviço · Confirmação + Lembrete</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g3">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g3-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Service Booking</div>
+              <div class="ghl-node-title">Service Booking</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Confirmed</span></div><div class="ghl-node-param"><span class="pk">Tipo</span><span class="pv">Booking completo (todos os serviços)</span></div></div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g3-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">💬</div>
+            <div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Send WhatsApp</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Tipo</span><span class="pv">Confirmação do booking</span></div>
+            <div class="ghl-node-param"><span class="pk">Variáveis</span><span class="pv highlight">{{appointment.start_date}} · {{contact.first_name}}</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g3-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-wait">⏱</div>
+            <div>
+              <div class="ghl-node-type">Action · Wait</div>
+              <div class="ghl-node-title">Wait — 24h antes do serviço</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Tipo</span><span class="pv">Wait Until Event Time</span></div>
+            <div class="ghl-node-param"><span class="pk">Offset</span><span class="pv highlight">-24 hours</span></div>
+          </div>
+        </div>
+
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g3-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-sms">📱</div>
+            <div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Send SMS</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Mensagem</span><span class="pv highlight">Lembrete D-1 com instruções</span></div>
+          </div>
+        </div>
+
+        <div class="config-panel">
+          <div class="config-header">
+            <div>
+              <div class="config-kind">—</div>
+              <div class="config-title">—</div>
+            </div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração · Requer Services v2 ativo</div>
+    </div>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-icon">★</div>
+    <div class="callout-content">
+      <strong>Service Booking vs Appointment Status</strong>
+      Se o cliente agendou 3 serviços, Appointment Status dispara 3 vezes (uma por serviço), enquanto Service Booking dispara apenas 1 vez para o booking completo. Use Service Booking quando quiser uma única confirmação por visita.
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
 <!-- NAV PREV/NEXT entre categorias -->
@@ -3093,7 +3319,7 @@
 
   <div class="footer-top">
     <h3>Categoria 03 completa.</h3>
-    <p>2 gatilhos de agendamento cobrindo todo o ciclo de vida de um compromisso — do booking ao no-show, passando por cancelamento e reagendamento.</p>
+    <p>3 gatilhos de agendamento cobrindo todo o ciclo de vida de um compromisso — do booking individual ao no-show, e agora incluindo agendamentos multi-serviço via Service Booking (Services v2).</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3144,7 +3370,11 @@
     'g2-1': { kind: 'Trigger · Customer Booked Appointment', title: 'Customer Booked Appointment', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Confirmação consulta marcada</div></div><div class="config-section"><div class="config-label">Calendar *</div><div class="config-field dropdown">Consultoria 1:1 — Lucas</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field dropdown">Qualquer usuário</div></div><div class="config-section"><div class="config-label">Has Tag</div><div class="config-field"></div></div>` },
     'g2-2': { kind: 'Action · Send WhatsApp', title: 'Send WhatsApp (confirmação)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Confirmação imediata WhatsApp</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field">{{contact.phone}}</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">WhatsApp — Confirmação Agendamento</div></div><div class="config-section"><div class="config-label">Variables</div><div class="config-field">{{appointment.start_time}} + {{appointment.location}}</div></div>` },
     'g2-3': { kind: 'Action · Wait', title: 'Wait — Until 24h Before Event', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aguardar 24h antes do evento</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait Until Event Time</div></div><div class="config-section"><div class="config-label">Reference Date *</div><div class="config-field highlight">{{appointment.start_time}}</div></div><div class="config-section"><div class="config-label">Offset *</div><div class="config-field">-24 hours</div></div><div class="config-section"><div class="config-label">Day & Time Restriction</div><div class="config-field">Any day · 08:00–22:00</div></div>` },
-    'g2-4': { kind: 'Action · Send Email', title: 'Send Email (lembrete 24h)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email lembrete D-1</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, nossa consultoria é amanhã 🎯</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Lembrete 24h Antes</div></div><div class="config-section"><div class="config-label">Attachments</div><div class="config-field">Checklist Pré-consultoria (URL)</div></div>` }
+    'g2-4': { kind: 'Action · Send Email', title: 'Send Email (lembrete 24h)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email lembrete D-1</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, nossa consultoria é amanhã 🎯</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Lembrete 24h Antes</div></div><div class="config-section"><div class="config-label">Attachments</div><div class="config-field">Checklist Pré-consultoria (URL)</div></div>` },
+    'g3-1': { kind: 'Trigger · Service Booking', title: 'Service Booking', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Booking confirmado — serviços</div></div><div class="config-section"><div class="config-label">Appointment Status</div><div class="config-field"><span class="opt-chip">Confirmed</span></div></div>` },
+    'g3-2': { kind: 'Action · Send WhatsApp', title: 'Send WhatsApp (confirmação)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">WhatsApp confirmação booking</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field">{{contact.phone}}</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">Olá {{contact.first_name}}, seu agendamento foi confirmado para {{appointment.start_date}}!</div></div>` },
+    'g3-3': { kind: 'Action · Wait', title: 'Wait — 24h antes', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aguardar até 24h antes do serviço</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait Until Event Time</div></div><div class="config-section"><div class="config-label">Offset</div><div class="config-field highlight">-24 hours</div></div>` },
+    'g3-4': { kind: 'Action · Send SMS', title: 'Send SMS (lembrete)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">SMS lembrete D-1</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field">{{contact.phone}}</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">Lembrete: seu atendimento é amanhã, {{appointment.start_time}}. Qualquer dúvida, responda aqui.</div></div>` },
   };
 
   // ========== INICIALIZAÇÃO ==========

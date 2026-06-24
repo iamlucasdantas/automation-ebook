@@ -2456,6 +2456,8 @@
     <a href="#a15" class="side-link"><span class="side-num">15</span>Stop Workflow</a>
     <a href="#a16" class="side-link"><span class="side-num">16</span>Restart Workflow</a>
     <a href="#a17" class="side-link"><span class="side-num">17</span>Split (Teste A/B)</a>
+    <a href="#a18" class="side-link"><span class="side-num">18</span>Adicionar Registros Associados ao Workflow</a>
+    <a href="#a19" class="side-link"><span class="side-num">19</span>Remover Registros Associados do Workflow</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -5121,6 +5123,336 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a18" data-name="adicionar registros associados ao workflow add associated records to workflow">
+  <div class="acao-head">
+    <div class="acao-num">18</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Lógica de Workflow</div>
+      <h2 class="acao-name">Adicionar Registros Associados ao Workflow</h2>
+      <div class="acao-en">Add Associated Records to Workflow</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Permite enrolar registros associados ao objeto que disparou o workflow (Contatos, Empresas ou Objetos Customizados) em outro workflow. Diferente de "Add to Workflow" (que só adiciona o contato atual), essa ação adiciona <strong>todos os registros associados</strong> por um label de associação específico.</p>
+      <p>Disponível em workflows baseados em qualquer tipo de objeto — Contato, Empresa ou Objeto Customizado — ampliando o alcance das automações em cascata.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+<div class="use-case">
+  <div class="use-case-label">Caso 01</div>
+  <div class="use-case-title">Registros relacionados</div>
+  <div class="use-case-desc">Oportunidade criada → adicionar todos os contatos associados a essa oportunidade num workflow de boas-vindas.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 02</div>
+  <div class="use-case-title">Multi-empresa</div>
+  <div class="use-case-desc">Empresa atualizada → enrolar todos os contatos da empresa num workflow de comunicado corporativo.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 03</div>
+  <div class="use-case-title">Objetos customizados</div>
+  <div class="use-case-desc">Projeto atualizado → adicionar todos os membros do projeto ao workflow de alerta de prazo.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 04</div>
+  <div class="use-case-title">Automação em cascata</div>
+  <div class="use-case-desc">Contrato assinado → adicionar objetos customizados relacionados ao workflow de onboarding completo.</div>
+</div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p><strong>Object:</strong> seleciona o tipo de registro associado (Contact, Company ou Custom Object). <strong>Association Label:</strong> define qual relação de associação usar — filtra apenas os registros com aquele label vinculado. <strong>Target Workflow:</strong> o workflow de destino onde os registros associados serão inseridos.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a18">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/CRM/ Add Associated Records · Oportunidade → Contatos</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a18">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a18-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Opportunity Created</div>
+              <div class="ghl-node-title">Nova Oportunidade Criada</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Oportunidade criada — enrolar contatos</span></div><div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv">Vendas Principal</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a18-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">🔗</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow</div>
+              <div class="ghl-node-title">Add Associated Records to Workflow</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Enrolar contatos da opp</span></div><div class="ghl-node-param"><span class="pk">Object</span><span class="pv highlight">Contact</span></div><div class="ghl-node-param"><span class="pk">Association</span><span class="pv">Contatos da Oportunidade</span></div><div class="ghl-node-param"><span class="pk">Target WF</span><span class="pv highlight">Boas-vindas · Novo Negócio</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a18-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Notification</div>
+              <div class="ghl-node-title">Internal Notification</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Avisar equipe de CS</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">Contatos associados enrolados com sucesso</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A18 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">💡 Diferente de "Add to Workflow": essa ação percorre todos os registros associados e os enrola individualmente. Útil para automações em cascata entre objetos relacionados.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Add Associated Records to Workflow</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Enrolar contatos da opp" readonly></div>
+
+<div class="hl-section-head">Registros a Adicionar</div>
+
+<div class="hl-filter-row">
+  <div class="hl-filter-label">Object <span class="req">*</span></div>
+  <div class="hl-dropdown has-value">Contact</div>
+</div>
+<div class="hl-filter-row">
+  <div class="hl-filter-label">Association Label <span class="req">*</span></div>
+  <div class="hl-dropdown has-value">Contatos da Oportunidade</div>
+</div>
+<div class="hl-filter-row">
+  <div class="hl-filter-label">Target Workflow <span class="req">*</span></div>
+  <div class="hl-dropdown has-value">Boas-vindas · Novo Negócio</div>
+</div>
+
+<div class="hl-field-help">Todos os registros vinculados pelo label selecionado serão inseridos no workflow de destino.</div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Enrola em massa todos os registros associados ao objeto disparador — automação em cascata</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a19" data-name="remover registros associados do workflow remove associated records from workflow">
+  <div class="acao-head">
+    <div class="acao-num">19</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Lógica de Workflow</div>
+      <h2 class="acao-name">Remover Registros Associados do Workflow</h2>
+      <div class="acao-en">Remove Associated Records from Workflow</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Remove registros associados ao objeto disparador de um workflow ativo. Disponível em todos os tipos de workflow — baseado em Contato, Empresa ou Objeto Customizado. <strong>Complemento direto da ação "Add Associated Records to Workflow"</strong>.</p>
+      <p>Útil para encerrar automações em cascata quando o contexto muda — por exemplo, quando uma oportunidade é perdida ou um projeto é cancelado.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+<div class="use-case">
+  <div class="use-case-label">Caso 01</div>
+  <div class="use-case-title">Oportunidade perdida</div>
+  <div class="use-case-desc">Opp movida para "Lost" → remover todos os contatos associados do workflow de nurture de proposta.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 02</div>
+  <div class="use-case-title">Projeto encerrado</div>
+  <div class="use-case-desc">Projeto customizado marcado como concluído → remover membros do workflow de atualizações semanais.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 03</div>
+  <div class="use-case-title">Empresa saiu do plano</div>
+  <div class="use-case-desc">Empresa faz downgrade → remover todos os contatos da empresa do workflow de features premium.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 04</div>
+  <div class="use-case-title">Limpeza pós-evento</div>
+  <div class="use-case-desc">Evento encerrado → remover participantes associados do workflow de lembretes e comunicados do evento.</div>
+</div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p><strong>Object:</strong> tipo de registro associado a remover (Contact, Company ou Custom Object). <strong>Association Label:</strong> define qual relação de associação usar para identificar os registros. <strong>Target Workflow:</strong> o workflow do qual os registros serão removidos.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a19">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/CRM/ Remove Associated Records · Opp Lost → Contatos</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a19">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Opportunity Status Changed</div>
+              <div class="ghl-node-title">Opportunity Lost</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Opp perdida — remover contatos</span></div><div class="ghl-node-param"><span class="pk">To Status</span><span class="pv highlight">Lost</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">🔗</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow</div>
+              <div class="ghl-node-title">Remove Associated Records from Workflow</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remover contatos da proposta</span></div><div class="ghl-node-param"><span class="pk">Object</span><span class="pv highlight">Contact</span></div><div class="ghl-node-param"><span class="pk">Association</span><span class="pv">Contatos da Oportunidade</span></div><div class="ghl-node-param"><span class="pk">Target WF</span><span class="pv highlight">Nurture · Proposta Ativa</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📧</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Email</div>
+              <div class="ghl-node-title">Send Email · Lost Follow-up</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Email de encerramento da proposta</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Oportunidade Encerrada</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A19 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">💡 Complemento direto de "Add Associated Records to Workflow" — use em par para controlar entrada e saída de registros associados em automações em cascata.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Remove Associated Records from Workflow</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Remover contatos da proposta" readonly></div>
+
+<div class="hl-section-head">Registros a Remover</div>
+
+<div class="hl-filter-row">
+  <div class="hl-filter-label">Object <span class="req">*</span></div>
+  <div class="hl-dropdown has-value">Contact</div>
+</div>
+<div class="hl-filter-row">
+  <div class="hl-filter-label">Association Label <span class="req">*</span></div>
+  <div class="hl-dropdown has-value">Contatos da Oportunidade</div>
+</div>
+<div class="hl-filter-row">
+  <div class="hl-filter-label">Target Workflow <span class="req">*</span></div>
+  <div class="hl-dropdown has-value">Nurture · Proposta Ativa</div>
+</div>
+
+<div class="hl-field-help">Todos os registros vinculados pelo label serão removidos do workflow de destino imediatamente.</div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Remove em massa registros associados de um workflow ativo — ideal para encerrar cascatas</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -5139,7 +5471,7 @@
 
   <div class="footer-top">
     <h3>Categoria 04 completa.</h3>
-    <p>17 ações de Ferramentas Internas explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>19 ações de Ferramentas Internas explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -5294,7 +5626,13 @@
     'a16-1': { kind: 'Trigger · Tag Added', title: 'Tag Added · Reativado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Recomeçar jornada do zero</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Reativado</span></div></div>` },
     'a16-2': { kind: 'Action · Restart Workflow', title: 'Restart Workflow', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Reiniciar este fluxo do passo 1</div></div><div class="config-section"><div class="config-label">Behavior</div><div class="config-field highlight">Contato volta pro início — histórico anterior preservado nos logs</div></div><div class="config-section"><div class="config-label">Allow Re-entry</div><div class="config-field">🟢 ON</div></div>` },
     'a17-1': { kind: 'Trigger · Tag Added', title: 'Tag Added (Follow-up Test)', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Teste A/B de follow-up</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Follow-up Test</span></div></div>` },
-    'a17-2': { kind: 'Action · Split', title: 'Split A/B · Follow-up', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">A/B: email vs WhatsApp</div></div><div class="config-section"><div class="config-label">Split Type *</div><div class="config-field dropdown">Random Percentage</div></div><div class="config-section"><div class="config-label">Path A</div><div class="config-field highlight">50% → Follow-up por Email</div></div><div class="config-section"><div class="config-label">Path B</div><div class="config-field highlight">50% → Follow-up por WhatsApp</div></div><div class="config-section"><div class="config-label">Winner Metric</div><div class="config-field">Reply rate em 7 dias</div></div>` }
+    'a17-2': { kind: 'Action · Split', title: 'Split A/B · Follow-up', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">A/B: email vs WhatsApp</div></div><div class="config-section"><div class="config-label">Split Type *</div><div class="config-field dropdown">Random Percentage</div></div><div class="config-section"><div class="config-label">Path A</div><div class="config-field highlight">50% → Follow-up por Email</div></div><div class="config-section"><div class="config-label">Path B</div><div class="config-field highlight">50% → Follow-up por WhatsApp</div></div><div class="config-section"><div class="config-label">Winner Metric</div><div class="config-field">Reply rate em 7 dias</div></div>` },
+    'a18-1': { kind: 'Trigger · Opportunity Created', title: 'Nova Oportunidade Criada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Oportunidade criada — enrolar contatos</div></div><div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Vendas Principal</div></div>` },
+    'a18-2': { kind: 'Action · Add Associated Records to Workflow', title: 'Add Associated Records to Workflow', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Enrolar contatos da opp</div></div><div class="config-section"><div class="config-label">Object *</div><div class="config-field highlight dropdown">Contact</div></div><div class="config-section"><div class="config-label">Association Label *</div><div class="config-field highlight dropdown">Contatos da Oportunidade</div></div><div class="config-section"><div class="config-label">Target Workflow *</div><div class="config-field highlight dropdown">Boas-vindas · Novo Negócio</div></div>` },
+    'a18-3': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar equipe de CS</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">Contatos associados enrolados com sucesso</div></div><div class="config-section"><div class="config-label">Notify User</div><div class="config-field dropdown">Equipe CS · Todos</div></div>` },
+    'a19-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Opportunity Lost', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Opp perdida — remover contatos</div></div><div class="config-section"><div class="config-label">To Status *</div><div class="config-field highlight dropdown">Lost</div></div>` },
+    'a19-2': { kind: 'Action · Remove Associated Records from Workflow', title: 'Remove Associated Records from Workflow', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remover contatos da proposta</div></div><div class="config-section"><div class="config-label">Object *</div><div class="config-field highlight dropdown">Contact</div></div><div class="config-section"><div class="config-label">Association Label *</div><div class="config-field highlight dropdown">Contatos da Oportunidade</div></div><div class="config-section"><div class="config-label">Target Workflow *</div><div class="config-field highlight dropdown">Nurture · Proposta Ativa</div></div>` },
+    'a19-3': { kind: 'Action · Send Email', title: 'Send Email · Lost Follow-up', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email de encerramento da proposta</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">vendas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Oportunidade Encerrada</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
