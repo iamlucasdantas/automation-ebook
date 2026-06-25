@@ -2423,6 +2423,12 @@
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
   </nav>
 
+  <div class="side-section-label">Agendamento &amp; SLA</div>
+  <nav class="side-nav">
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Agendador</a>
+    <a href="#g20" class="side-link"><span class="side-num">20</span>SLA de Conversa</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        ============================================================ -->
@@ -2452,7 +2458,7 @@
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">18</span>
+      <span class="hero-stat-num">20</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -6747,7 +6753,381 @@
     </div>
   </div>
 
-</div><!-- ═══════════════════════════════════════════════════════════════════════
+</div>
+
+<div class="trigger-block" id="g19" data-name="agendador scheduler programado time-based cron recorrente sem contato">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Automação Programada</div>
+      <h2 class="trigger-name">Agendador</h2>
+      <div class="trigger-en">Scheduler</div>
+      <div class="trigger-tags"><span class="info-tag schedule">Programado</span><span class="info-tag">Sem contato</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara workflows em um horário ou frequência predefinida — sem precisar de nenhum contato. É o único gatilho do HighLevel que opera de forma totalmente assíncrona: hourly, daily, weekly, monthly, em uma data específica ou via expressão cron.</p>
+      <p>Perfeito para jobs de operações recorrentes: limpeza diária de CRM, relatórios semanais, pings periódicos de webhook, sincronizações com planilhas e notificações internas de equipe. Ações que dependem de contato (como Send SMS) são puladas automaticamente.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Relatório semanal automático</div><div class="use-case-desc">Toda segunda às 8h → webhook busca dados de vendas → envia resumo por email pro time.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Limpeza diária de CRM</div><div class="use-case-desc">Todo dia às 23h → script busca contatos sem atividade há 90 dias → marca como "Inativo".</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Ping de health check</div><div class="use-case-desc">A cada hora → webhook verifica se API externa está respondendo → alerta se timeout.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Frequência</div>
+    <div class="filter-en">Schedule Frequency</div>
+    <div class="filter-type required">obrigatório</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Hourly, Daily, Weekly, Monthly, Specific Date/Time ou expressão Cron customizada.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Define quando o workflow será acionado — da hora certa até cadências complexas via cron.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Pular Fins de Semana</div>
+    <div class="filter-en">Skip Weekends</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Toggle que impede execuções em sábado e domingo. Ideal para jobs de negócio que só fazem sentido em dias úteis.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Relatórios de vendas, notificações de equipe — evita ruído nos fins de semana.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Data de Encerramento</div>
+    <div class="filter-en">Stop On</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Data e hora a partir da qual o scheduler para de disparar. Útil para campanhas com prazo de validade.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Automação de Black Friday, sequências de lançamento — sem precisar desativar manualmente.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g19">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Eventos/ 19 — Relatório Semanal Auto</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g19">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="g19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Scheduler</div>
+              <div class="ghl-node-title">Agendador · Weekly</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Frequency</span><span class="pv">Weekly · Segunda</span></div><div class="ghl-node-param"><span class="pk">Time</span><span class="pv">08:00</span></div><div class="ghl-node-param"><span class="pk">Skip Weekends</span><span class="pv">OFF</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-webhook">⚡</div>
+            <div>
+              <div class="ghl-node-type">Action · Data</div>
+              <div class="ghl-node-title">Outbound Webhook</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">URL</span><span class="pv highlight">https://api.crm.com/weekly-report</span></div><div class="ghl-node-param"><span class="pk">Method</span><span class="pv">POST</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">✉</div>
+            <div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Notificação Interna</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">To</span><span class="pv">gerente@empresa.com</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Relatório semanal — {{date}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Gatilho sem contato — executa em segundo plano, sem enrollment de leads. Ações de contato são puladas automaticamente.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Scheduler</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Relatório Semanal" readonly>
+      </div>
+      <div class="hl-section-head">Schedule</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Frequency <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Weekly</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Day of Week</div>
+        <div class="hl-dropdown has-value">Monday</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Time</div>
+        <input class="hl-input" value="08:00" readonly>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Skip Weekends</div>
+        <div class="hl-toggle off">OFF</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Stop On (opcional)</div>
+        <input class="hl-input" value="" placeholder="Data de encerramento" readonly>
+      </div>
+      <button class="hl-add-filter">⚡ Check Trigger Schedule</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara sem contato — ideal para jobs recorrentes de ops e relatórios</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="trigger-block" id="g20" data-name="sla conversa conversation sla vencimento atendimento prazo due soon overdue">
+  <div class="trigger-head">
+    <div class="trigger-num">20</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Suporte &amp; SLA</div>
+      <h2 class="trigger-name">SLA de Conversa</h2>
+      <div class="trigger-en">Conversation SLA</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">SLA</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando o SLA (Service Level Agreement) de uma conversa entra em algum dos três estados: <strong>Due Soon</strong> (prazo chegando), <strong>Overdue</strong> (prazo vencido) ou <strong>SLA Dismissed</strong> (SLA descartado manualmente). Permite automação proativa de atendimento — em vez de reagir depois, o sistema age enquanto ainda dá tempo.</p>
+      <p>Conta com um bloqueio anti-spam embutido via "Avoid Repeated Triggers" — quando ativado, o workflow só roda uma vez por conversa a cada 24 horas, mesmo que múltiplos eventos de SLA ocorram no período.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Alerta de vencimento iminente</div><div class="use-case-desc">SLA Due Soon → notificação interna ao responsável → prazo ainda pode ser cumprido.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Escalação automática</div><div class="use-case-desc">SLA Overdue → reatribuir conversa para supervisor + email de alerta ao gerente.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Registro de auditoria</div><div class="use-case-desc">SLA vencido → tag "SLA Vencido" no contato + nota automática documentando o ocorrido.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Evento de SLA</div>
+    <div class="filter-en">SLA Event</div>
+    <div class="filter-type required">obrigatório</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Due Soon (prazo chegando), Overdue (prazo vencido) ou SLA Dismissed (descartado manualmente).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Aciona workflows diferentes para cada estado — prevenção vs. remediação vs. auditoria.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Canal da Mensagem</div>
+    <div class="filter-en">Message Channel</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por canal: Email, SMS, WhatsApp, Chat, Facebook, Instagram, etc.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> SLAs diferentes por canal — ex.: WhatsApp tem prazo mais curto que email.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Evitar Disparos Repetidos</div>
+    <div class="filter-en">Avoid Repeated Triggers</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Quando ativado, o workflow roda no máximo uma vez por conversa a cada 24 horas.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Evita spam de notificações quando múltiplos eventos de SLA ocorrem no mesmo dia.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g20">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/SLA/ 20 — Escalação de Conversa Vencida</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g20">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="g20-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Conversation SLA</div>
+              <div class="ghl-node-title">SLA de Conversa</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">SLA Event</span><span class="pv">Overdue</span></div><div class="ghl-node-param"><span class="pk">Avoid Repeated</span><span class="pv">ON · 24h</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g20-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">👥</div>
+            <div>
+              <div class="ghl-node-type">Action · Contacts</div>
+              <div class="ghl-node-title">Assign to User</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Supervisor de Suporte</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g20-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">✉</div>
+            <div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Notificação Interna</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">To</span><span class="pv">gerente@empresa.com</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">SLA vencido — {{contact.first_name}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">SLA de conversa — "Avoid Repeated Triggers" é recomendado para evitar notificações duplicadas no mesmo dia.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Conversation SLA</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="SLA Vencido — Escalação" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">SLA Event <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Overdue</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Message Channel</div>
+        <div class="hl-multiselect">
+          <span class="hl-multiselect-chip">WhatsApp</span>
+          <span class="hl-multiselect-chip">Email</span>
+          <input class="hl-multiselect-input" placeholder="+ Canal">
+        </div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Avoid Repeated Triggers</div>
+        <div class="hl-toggle on">ON · 24h</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Automação proativa de SLA — atua antes (Due Soon) ou depois (Overdue) do vencimento</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
 <!-- NAV PREV/NEXT entre categorias -->
@@ -6766,7 +7146,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>18 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>20 gatilhos de eventos explicados com impacto prático e mockups visuais — incluindo Agendador e SLA de Conversa, novos em 2026. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6871,7 +7251,13 @@
     'g17-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Primeira impressão prospecto</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Soube que você passou pelo nosso site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Cold Outreach — Prospecto</div></div>` },
     'g18-1': { kind: 'Trigger · Transcript Generated', title: 'Transcript Generated', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Transcript Generated</div></div><div class="config-section"><div class="config-label">Call Type</div><div class="config-field dropdown">Normal Calls</div></div><div class="config-section"><div class="config-label">Call Direction</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Call Duration (s)</div><div class="config-field">120</div></div>` },
     'g18-2': { kind: 'Action · Workflow AI', title: 'AI · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI · Resumo da Call</div></div><div class="config-section"><div class="config-label">Prompt</div><div class="config-field">Resuma a conversa em 3 pontos: interesse, objeção e próximo passo.</div></div>` },
-    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` }
+    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` },
+    'g19-1': { kind: 'Trigger · Scheduler', title: 'Agendador · Weekly', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Relatório Semanal</div></div><div class="config-section"><div class="config-label">Frequency *</div><div class="config-field dropdown">Weekly · Monday</div></div><div class="config-section"><div class="config-label">Time</div><div class="config-field">08:00</div></div><div class="config-section"><div class="config-label">Skip Weekends</div><div class="config-field">OFF</div></div>` },
+    'g19-2': { kind: 'Action · Data', title: 'Outbound Webhook', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Buscar dados de vendas</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field highlight">https://api.crm.com/weekly-report</div></div><div class="config-section"><div class="config-label">Method</div><div class="config-field dropdown">POST</div></div>` },
+    'g19-3': { kind: 'Action · Communication', title: 'Notificação Interna', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email semanal pro time</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field">gerente@empresa.com</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Relatório semanal — {{date}}</div></div>` },
+    'g20-1': { kind: 'Trigger · Conversation SLA', title: 'SLA de Conversa', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">SLA Vencido — Escalação</div></div><div class="config-section"><div class="config-label">SLA Event *</div><div class="config-field dropdown">Overdue</div></div><div class="config-section"><div class="config-label">Avoid Repeated Triggers</div><div class="config-field">ON · 24h</div></div>` },
+    'g20-2': { kind: 'Action · Contacts', title: 'Assign to User', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Escalar para supervisor</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field highlight dropdown">Supervisor de Suporte</div></div>` },
+    'g20-3': { kind: 'Action · Communication', title: 'Notificação Interna', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email alerta gerente</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field">gerente@empresa.com</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">SLA vencido — {{contact.first_name}}</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 185,
+  "total": 189,
   "items": [
     {
       "id": "g1",
@@ -427,6 +427,36 @@
       "href": "guia-highlevel-cat02.html#g18"
     },
     {
+      "id": "g19",
+      "type": "Gatilho",
+      "name": "Agendador",
+      "en": "Scheduler",
+      "category": "Automação Programada",
+      "tags": [
+        "Programado",
+        "Sem contato",
+        "Novo"
+      ],
+      "description": "Dispara workflows em um horário ou frequência predefinida — sem precisar de nenhum contato. Hourly, Daily, Weekly, Monthly, data específica ou cron customizado. Ideal para jobs de ops recorrentes: relatórios, limpeza de CRM, pings de webhook.",
+      "keywords": "agendador scheduler programado cron recorrente time-based sem contato",
+      "href": "guia-highlevel-cat02.html#g19"
+    },
+    {
+      "id": "g20",
+      "type": "Gatilho",
+      "name": "SLA de Conversa",
+      "en": "Conversation SLA",
+      "category": "Suporte & SLA",
+      "tags": [
+        "Tempo real",
+        "SLA",
+        "Novo"
+      ],
+      "description": "Dispara quando o SLA de uma conversa atinge um dos três estados: Due Soon (prazo chegando), Overdue (prazo vencido) ou SLA Dismissed (descartado). Inclui bloqueio anti-spam de 24h por conversa.",
+      "keywords": "sla conversa conversation sla vencimento atendimento prazo due soon overdue",
+      "href": "guia-highlevel-cat02.html#g20"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -453,6 +483,21 @@
       "description": "Dispara sempre que um cliente agenda um compromisso de forma independente — usando seu link de agendamento (Calendly-style). Não dispara quando sua equipe agenda manualmente pelo sistema.",
       "keywords": "customer booked appointment agendamento marcou",
       "href": "guia-highlevel-cat03.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Reserva de Serviço",
+      "en": "Service Booking",
+      "category": "Serviços v2",
+      "tags": [
+        "Tempo real",
+        "Services v2",
+        "Novo"
+      ],
+      "description": "Dispara quando uma reserva de serviço é criada ou atualizada no módulo Services v2. Dispara uma vez por reserva, mesmo com múltiplos serviços agendados juntos. Requer Services v2 ativado na sub-account.",
+      "keywords": "reserva serviço service booking services v2 agendamento pacote multi-serviço",
+      "href": "guia-highlevel-cat03.html#g3"
     },
     {
       "id": "g1",
@@ -1924,6 +1969,21 @@
       "description": "",
       "keywords": "classify ai classify",
       "href": "acoes-highlevel-cat05.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Agente de IA",
+      "en": "AI Agent",
+      "category": "Ação",
+      "tags": [
+        "Multi-step",
+        "Premium",
+        "Novo"
+      ],
+      "description": "Executa tarefas multi-etapa de forma autônoma usando instruções em linguagem natural. O agente decide quais ferramentas usar: histórico de conversas, transcrições de chamadas, Base de Conhecimento e atualização de Custom Values.",
+      "keywords": "agente ia ai agent multi-step autônomo ferramentas premium workflow ai",
+      "href": "acoes-highlevel-cat05.html#a6"
     },
     {
       "id": "a1",
