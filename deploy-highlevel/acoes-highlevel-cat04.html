@@ -2456,6 +2456,7 @@
     <a href="#a15" class="side-link"><span class="side-num">15</span>Stop Workflow</a>
     <a href="#a16" class="side-link"><span class="side-num">16</span>Restart Workflow</a>
     <a href="#a17" class="side-link"><span class="side-num">17</span>Split (Teste A/B)</a>
+    <a href="#a18" class="side-link"><span class="side-num">18</span>Código Personalizado</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2474,7 +2475,7 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 04/14</span>
   <h1 class="hero-title">Ações de <em>Ferramentas Internas</em>.</h1>
-  <p class="hero-desc">As 17 ações de ferramentas internas controlam o fluxo da automação em si — IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B, chamadas pra outros workflows. São o "cérebro lógico" das automações complexas.</p>
+  <p class="hero-desc">As 18 ações de ferramentas internas controlam o fluxo da automação em si — IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B, Código Personalizado e chamadas pra outros workflows. São o "cérebro lógico" das automações complexas.</p>
   <div class="hero-stats">
     <div class="hero-stat">
       <span class="hero-stat-num">17</span>
@@ -5121,6 +5122,164 @@
     </div>
   </div>
 
+</div>
+
+<div class="acao-block" id="a18" data-name="codigo personalizado custom code javascript js executar">
+  <div class="acao-head">
+    <div class="acao-num">18</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Código Personalizado</h2>
+      <div class="acao-en">Custom Code (JavaScript)</div>
+      <div class="acao-tags">
+        <span class="info-tag">Avançado</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Executa código JavaScript personalizado dentro do workflow. Permite transformações de dados, lógica condicional avançada e integrações customizadas — diretamente no fluxo, sem precisar de Webhook externo.</p>
+      <p>O código recebe variáveis do workflow como input e pode retornar valores que ficam disponíveis como variáveis nas próximas ações.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Formatação de dados</div>
+        <div class="use-case-desc">Normaliza número de telefone para E.164, formata CPF, valida e-mail — tudo sem webhook externo.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Cálculos complexos</div>
+        <div class="use-case-desc">Calcula desconto baseado em tabela de preços, converte moeda, computa pontuação de lead scoring.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Processamento de JSON</div>
+        <div class="use-case-desc">Extrai campos específicos de um JSON recebido via webhook e os mapeia para campos do contato.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Editor de código JavaScript com acesso a variáveis do workflow via <code>inputData</code>. Retorna valores via <code>return { ... }</code> que ficam disponíveis como <code>{{customCode.variavel}}</code> nas ações seguintes. Timeout de 10 segundos por execução.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a18">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Ferramentas Internas/ Custom Code · Formatar Telefone E.164</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a18">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a18-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Form Submitted</div>
+              <div class="ghl-node-title">Formulário de Lead</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Form</span><span class="pv highlight">Formulário de Contato</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a18-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-condition">{}</div>
+            <div>
+              <div class="ghl-node-type">Action · Custom Code</div>
+              <div class="ghl-node-title">Formatar Telefone E.164</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Input</span><span class="pv">{{contact.phone}}</span></div>
+            <div class="ghl-node-param"><span class="pk">Output</span><span class="pv highlight">customCode.phoneE164</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a18-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">✎</div>
+            <div>
+              <div class="ghl-node-type">Action · Update Contact</div>
+              <div class="ghl-node-title">Salvar Telefone Formatado</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Phone</span><span class="pv highlight">{{customCode.phoneE164}}</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A18 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> Editor JavaScript, <span class='arrow'>→</span> <strong>inputData</strong> para acessar variáveis, <span class='arrow'>→</span> <code>return &#123;&#125;</code> para expor saídas.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Custom Code</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Formatar Telefone E.164" readonly></div>
+<div class="hl-section-head">Code Editor (JavaScript)</div>
+<div class="hl-filter-row"><div class="hl-filter-label" style="font-family:monospace;font-size:0.8rem;white-space:pre">const phone = inputData.contact_phone;
+const cleaned = phone.replace(/\D/g,'');
+const e164 = '+55' + cleaned.slice(-11);
+return { phoneE164: e164 };</div></div>
+<div class="hl-section-head">Output Variables</div>
+<div class="hl-filter-row"><div class="hl-filter-label">phoneE164</div><div class="hl-dropdown has-value">customCode.phoneE164</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Executa JavaScript no workflow — acessa variáveis via inputData, retorna com return {}</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -5139,7 +5298,7 @@
 
   <div class="footer-top">
     <h3>Categoria 04 completa.</h3>
-    <p>17 ações de Ferramentas Internas explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>18 ações de Ferramentas Internas explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -5294,7 +5453,10 @@
     'a16-1': { kind: 'Trigger · Tag Added', title: 'Tag Added · Reativado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Recomeçar jornada do zero</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Reativado</span></div></div>` },
     'a16-2': { kind: 'Action · Restart Workflow', title: 'Restart Workflow', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Reiniciar este fluxo do passo 1</div></div><div class="config-section"><div class="config-label">Behavior</div><div class="config-field highlight">Contato volta pro início — histórico anterior preservado nos logs</div></div><div class="config-section"><div class="config-label">Allow Re-entry</div><div class="config-field">🟢 ON</div></div>` },
     'a17-1': { kind: 'Trigger · Tag Added', title: 'Tag Added (Follow-up Test)', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Teste A/B de follow-up</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Follow-up Test</span></div></div>` },
-    'a17-2': { kind: 'Action · Split', title: 'Split A/B · Follow-up', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">A/B: email vs WhatsApp</div></div><div class="config-section"><div class="config-label">Split Type *</div><div class="config-field dropdown">Random Percentage</div></div><div class="config-section"><div class="config-label">Path A</div><div class="config-field highlight">50% → Follow-up por Email</div></div><div class="config-section"><div class="config-label">Path B</div><div class="config-field highlight">50% → Follow-up por WhatsApp</div></div><div class="config-section"><div class="config-label">Winner Metric</div><div class="config-field">Reply rate em 7 dias</div></div>` }
+    'a17-2': { kind: 'Action · Split', title: 'Split A/B · Follow-up', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">A/B: email vs WhatsApp</div></div><div class="config-section"><div class="config-label">Split Type *</div><div class="config-field dropdown">Random Percentage</div></div><div class="config-section"><div class="config-label">Path A</div><div class="config-field highlight">50% → Follow-up por Email</div></div><div class="config-section"><div class="config-label">Path B</div><div class="config-field highlight">50% → Follow-up por WhatsApp</div></div><div class="config-section"><div class="config-label">Winner Metric</div><div class="config-field">Reply rate em 7 dias</div></div>` },
+    'a18-1': { kind: 'Trigger · Form Submitted', title: 'Formulário de Lead', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Formulário de Contato recebido</div></div><div class="config-section"><div class="config-label">Form *</div><div class="config-field highlight dropdown">Formulário de Contato</div></div>` },
+    'a18-2': { kind: 'Action · Custom Code', title: 'Formatar Telefone E.164', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Formatar Telefone E.164</div></div><div class="config-section"><div class="config-label">Code</div><div class="config-field" style="font-family:monospace;font-size:0.8rem">const p = inputData.contact_phone;<br>const c = p.replace(/\\D/g,'');<br>return { phoneE164: '+55' + c.slice(-11) };</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">customCode.phoneE164</div></div>` },
+    'a18-3': { kind: 'Action · Update Contact', title: 'Salvar Telefone Formatado', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Salvar Telefone Formatado</div></div><div class="config-section"><div class="config-label">Phone</div><div class="config-field highlight">{{customCode.phoneE164}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

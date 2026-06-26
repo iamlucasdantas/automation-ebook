@@ -2403,6 +2403,11 @@
     <a href="#g12" class="side-link"><span class="side-num">12</span>Tarefa Completada</a>
   </nav>
 
+  <div class="side-section-label">Agendamento</div>
+  <nav class="side-nav">
+    <a href="#g13" class="side-link"><span class="side-num">13</span>Agendador de Workflow</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        Edite textos aqui se quiser mudar o discurso
@@ -2429,7 +2434,7 @@
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 01/12</span>
   <h1 class="hero-title">Tudo que um <em>contato</em> pode fazer para disparar uma automação.</h1>
   <p class="hero-desc">
-    Os gatilhos de contato são a porta de entrada mais comum no HighLevel — quase toda automação começa com algo acontecendo num lead ou cliente. Este guia cobre os 12 gatilhos dessa categoria com <strong>fidelidade total à interface real</strong>: cada campo mostra o tipo correto (Dropdown, Tag Picker, Multi-Select, Toggle), todas as opções dos dropdowns listadas, operadores reais, e a lógica condicional de filtros que aparecem só quando outros são selecionados.
+    Os gatilhos de contato são a porta de entrada mais comum no HighLevel — quase toda automação começa com algo acontecendo num lead ou cliente. Este guia cobre os 13 gatilhos dessa categoria com <strong>fidelidade total à interface real</strong>: cada campo mostra o tipo correto (Dropdown, Tag Picker, Multi-Select, Toggle), todas as opções dos dropdowns listadas, operadores reais, e a lógica condicional de filtros que aparecem só quando outros são selecionados.
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
@@ -5609,6 +5614,226 @@
     </div>
   </div>
 
+<div class="trigger-block" id="g13" data-name="agendador de workflow workflow scheduler recorrente schedule">
+  <div class="trigger-head">
+    <div class="trigger-num">13</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Agendamento</div>
+      <h2 class="trigger-name">Agendador de Workflow</h2>
+      <div class="trigger-en">Workflow Scheduler</div>
+      <div class="trigger-tags">
+        <span class="info-tag">Recorrente</span>
+        <span class="info-tag">Automatizado</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara a automação em uma agenda recorrente ou data específica — sem depender de nenhuma ação do contato. O próprio sistema aciona o workflow no horário configurado: a cada hora, diário, semanal, mensal ou em uma data exata.</p>
+      <p>Ex.: toda segunda-feira às 8h, envia o digest de leads frios pro time de vendas. Ou no dia 1 de cada mês, dispara lembrete de renovação para todos os clientes ativos.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Digest semanal de pipeline</div>
+        <div class="use-case-desc">Toda segunda às 8h → workflow percorre leads frios e envia resumo com oportunidades abertas pro SDR responsável.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Lembrete mensal de renovação</div>
+        <div class="use-case-desc">Dia 1 de cada mês → dispara sequência de emails e SMS para clientes com contrato próximo ao vencimento.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Re-engajamento periódico</div>
+        <div class="use-case-desc">A cada 7 dias → verifica leads sem resposta e inicia nova sequência de follow-up com abordagem diferente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Recorrência</div>
+          <div class="filter-en">Recurrence</div>
+          <div class="filter-type">obrigatório</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Define o intervalo: Hourly, Daily, Weekly, Monthly ou Specific Date (one-shot).</div>
+          <div class="filter-impact"><strong>Impacto:</strong> determina com que frequência o workflow será disparado. Weekly + dia da semana é o combo mais usado para relatórios.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Data de Início / Fim</div>
+          <div class="filter-en">Start Date / End Date</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Define quando o agendamento começa e (opcionalmente) quando termina de repetir.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> útil para campanhas sazonais ou ciclos de nurturing com prazo definido.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g13">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Contatos/ 13 — Agendador · Digest Semanal de Leads</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g13">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g13-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Workflow Scheduler</div>
+              <div class="ghl-node-title">Agendador de Workflow</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Recorrência</span><span class="pv highlight">Semanal · Segunda · 08:00</span></div><div class="ghl-node-param"><span class="pk">Start Date</span><span class="pv">07/07/2026</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g13-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-condition">?</div>
+            <div>
+              <div class="ghl-node-type">Action · If/Else</div>
+              <div class="ghl-node-title">Último contato > 7 dias?</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Campo</span><span class="pv">Last Activity Date</span></div>
+            <div class="ghl-node-param"><span class="pk">Operador</span><span class="pv highlight">Is More Than · 7 · days ago</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g13-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Email</div>
+              <div class="ghl-node-title">Email de Re-engajamento</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Re-engajamento Semanal</span></div>
+            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv">{{contact.email}}</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g13-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">#</div>
+            <div>
+              <div class="ghl-node-type">Action · Add Tag</div>
+              <div class="ghl-node-title">Marcar Re-engajamento</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">reengajamento-semanal</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G13 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Escolha <strong>Recurrence</strong> e o workflow dispara automaticamente no horário configurado — sem precisar de nenhuma ação do contato.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Workflow Scheduler</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+          <div class="hl-field-group">
+            <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+            <input class="hl-input" value="Digest Semanal · Leads Frios" readonly>
+          </div>
+
+          <div class="hl-section-head">Schedule</div>
+
+          <div class="hl-filter-row">
+            <div class="hl-filter-label">Recurrence <span class="req">*</span></div>
+            <div class="hl-dropdown has-value">Weekly</div>
+          </div>
+
+          <div class="hl-filter-row">
+            <div class="hl-filter-label">Day of Week</div>
+            <div class="hl-dropdown has-value">Monday</div>
+          </div>
+
+          <div class="hl-filter-row">
+            <div class="hl-filter-label">Time</div>
+            <input class="hl-input" value="08:00" readonly>
+          </div>
+
+          <div class="hl-filter-row">
+            <div class="hl-filter-label">Start Date <span class="req">*</span></div>
+            <input class="hl-input" value="07/07/2026" readonly>
+          </div>
+
+          <div class="hl-filter-row">
+            <div class="hl-filter-label">End Date</div>
+            <input class="hl-input" value="(opcional)" readonly>
+          </div>
+
+          <button class="hl-add-filter">+ Add Filters</button>
+        </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara automaticamente toda segunda às 8h — sem depender de ação do contato</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ COM TODOS OS CTAs
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -5628,7 +5853,7 @@
 
   <div class="footer-top">
     <h3>Categoria 01 completa.</h3>
-    <p>12 gatilhos de contato, todos os filtros explicados com impacto prático e mockups visuais reproduzindo a tela do HighLevel. Próximas 12 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>13 gatilhos de contato, todos os filtros explicados com impacto prático e mockups visuais reproduzindo a tela do HighLevel. Próximas 12 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <!-- CTA PRINCIPAL: HighLevel 30 dias grátis -->
@@ -5725,7 +5950,11 @@
     'g12-1': { kind: 'Trigger · Task Completed', title: 'Tarefa Completada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pós-fechamento</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field dropdown">Ana · SDR</div></div><div class="config-section"><div class="config-label">Task Custom Field — Resultado</div><div class="config-field dropdown">Is — Cliente Confirmou Compra</div></div>` },
     'g12-2': { kind: 'Action · If/Else', title: 'If/Else Condition', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Task de fechamento?</div></div><div class="config-section"><div class="config-label">Field</div><div class="config-field dropdown">Task · Title</div></div><div class="config-section"><div class="config-label">Operator</div><div class="config-field dropdown">Contains</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field">fechamento</div></div>` },
     'g12-3': { kind: 'Action · Webhook', title: 'Outbound Webhook (Slack)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Celebrar venda no Slack</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field">hooks.slack.com/services/T0.../B0.../...</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">{"text":"🎉 Venda fechada por {{user.name}}!"}</div></div>` },
-    'g12-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar cliente ativo</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cliente Ativo</span></div></div>` }
+    'g12-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar cliente ativo</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cliente Ativo</span></div></div>` },
+    'g13-1': { kind: 'Trigger · Workflow Scheduler', title: 'Agendador de Workflow', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Digest Semanal · Leads Frios</div></div><div class="config-section"><div class="config-label">Recurrence *</div><div class="config-field highlight dropdown">Weekly</div></div><div class="config-section"><div class="config-label">Day of Week</div><div class="config-field dropdown">Monday</div></div><div class="config-section"><div class="config-label">Time</div><div class="config-field">08:00</div></div><div class="config-section"><div class="config-label">Start Date *</div><div class="config-field">07/07/2026</div></div>` },
+    'g13-2': { kind: 'Action · If/Else', title: 'Último contato > 7 dias?', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Sem contato nos últimos 7 dias?</div></div><div class="config-section"><div class="config-label">Field</div><div class="config-field dropdown">Last Activity Date</div></div><div class="config-section"><div class="config-label">Operator</div><div class="config-field dropdown">Is More Than</div></div><div class="config-section"><div class="config-label">Value</div><div class="config-field highlight">7 dias atrás</div></div>` },
+    'g13-3': { kind: 'Action · Send Email', title: 'Email de Re-engajamento', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Re-engajamento Semanal</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">contato@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">{{contact.first_name}}, temos uma novidade pra você</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Re-engajamento Semanal</div></div>` },
+    'g13-4': { kind: 'Action · Add Tag', title: 'Marcar Re-engajamento', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tag: reengajamento-semanal</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">reengajamento-semanal</span></div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 185,
+  "total": 193,
   "items": [
     {
       "id": "g1",
@@ -2420,6 +2420,98 @@
       "description": "",
       "keywords": "emitir certificado issue certificate",
       "href": "acoes-highlevel-cat14.html#a1"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Agendador de Workflow",
+      "en": "Workflow Scheduler",
+      "category": "Agendamento",
+      "tags": [],
+      "description": "Dispara a automação em horário agendado — recorrente (hourly/daily/weekly/monthly) ou data específica.",
+      "keywords": "agendador de workflow workflow scheduler recorrente schedule diario semanal mensal",
+      "href": "guia-highlevel-cat01.html#g13"
+    },
+    {
+      "id": "g19",
+      "type": "Gatilho",
+      "name": "Anúncio Click-to-WhatsApp",
+      "en": "Click to WhatsApp Ads",
+      "category": "Anúncios",
+      "tags": [
+        "Tempo real"
+      ],
+      "description": "Dispara quando alguém clica em anúncio Click-to-WhatsApp (Facebook/Instagram) e inicia conversa.",
+      "keywords": "anuncio click whatsapp click-to-whatsapp ads facebook instagram cta lead anuncio",
+      "href": "guia-highlevel-cat02.html#g19"
+    },
+    {
+      "id": "a26",
+      "type": "Ação",
+      "name": "Responder Comentário TikTok",
+      "en": "Reply to TikTok Comment",
+      "category": "Comunicação",
+      "tags": [],
+      "description": "Responde automaticamente a comentários em posts do TikTok Business via workflow.",
+      "keywords": "responder comentario tiktok reply tiktok comment tiktok business engajamento",
+      "href": "acoes-highlevel-cat02.html#a26"
+    },
+    {
+      "id": "a27",
+      "type": "Ação",
+      "name": "IG Messenger Interativo",
+      "en": "Instagram Interactive Messenger",
+      "category": "Comunicação",
+      "tags": [],
+      "description": "Envia DM no Instagram com botões interativos ou quick replies para fluxos conversacionais.",
+      "keywords": "instagram messenger interativo interactive messenger ig dm botoes quick replies",
+      "href": "acoes-highlevel-cat02.html#a27"
+    },
+    {
+      "id": "a28",
+      "type": "Ação",
+      "name": "FB Messenger Interativo",
+      "en": "Facebook Interactive Messenger",
+      "category": "Comunicação",
+      "tags": [],
+      "description": "Envia mensagem no Facebook Messenger com botões interativos, quick replies ou listas.",
+      "keywords": "facebook messenger interativo interactive messenger fb dm botoes quick replies lista",
+      "href": "acoes-highlevel-cat02.html#a28"
+    },
+    {
+      "id": "a18",
+      "type": "Ação",
+      "name": "Código Personalizado",
+      "en": "Custom Code (JavaScript)",
+      "category": "Ferramentas Internas",
+      "tags": [],
+      "description": "Executa código JavaScript personalizado no workflow — transformações de dados, cálculos e integrações.",
+      "keywords": "codigo personalizado custom code javascript js executar transformar dados calcular",
+      "href": "acoes-highlevel-cat04.html#a18"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Agente de IA",
+      "en": "AI Agent",
+      "category": "Workflow AI",
+      "tags": [
+        "Beta"
+      ],
+      "description": "Executa agente de IA autônomo que raciocina, usa ferramentas e toma decisões dentro do workflow.",
+      "keywords": "agente de ia ai agent autonomo autonomous reasoning qualificacao atendimento",
+      "href": "acoes-highlevel-cat05.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Invocar Agente do Studio",
+      "en": "Invoke Agent Studio Agent",
+      "category": "Workflow AI",
+      "tags": [],
+      "description": "Chama agente criado no Agent Studio diretamente de qualquer workflow — reutilizável em múltiplos fluxos.",
+      "keywords": "invocar agente studio invoke agent studio reutilizavel agente centralizado",
+      "href": "acoes-highlevel-cat05.html#a7"
     }
   ]
 }

@@ -2464,6 +2464,9 @@
     <a href="#a23" class="side-link"><span class="side-num">23</span>Confirmação GMB</a>
     <a href="#a24" class="side-link"><span class="side-num">24</span>SMS via Shortcode</a>
     <a href="#a25" class="side-link"><span class="side-num">25</span>Anexar Arquivo</a>
+    <a href="#a26" class="side-link"><span class="side-num">26</span>Comentário TikTok</a>
+    <a href="#a27" class="side-link"><span class="side-num">27</span>IG Messenger Interativo</a>
+    <a href="#a28" class="side-link"><span class="side-num">28</span>FB Messenger Interativo</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -6121,6 +6124,413 @@ Dúvidas? Responde aqui.</textarea>
     </div>
   </div>
 
+</div>
+
+<div class="acao-block" id="a26" data-name="responder comentario tiktok reply tiktok comment">
+  <div class="acao-head">
+    <div class="acao-num">26</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Responder Comentário TikTok</h2>
+      <div class="acao-en">Reply to TikTok Comment</div>
+      <div class="acao-tags"></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Responde automaticamente a comentários em posts do TikTok Business. Funciona em conjunto com o gatilho "TikTok Comment" — captura o comentário e envia uma resposta automática diretamente no post.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Captura de lead via comentário</div>
+        <div class="use-case-desc">Comentou "preço" no post → resposta automática direcionando pro DM.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Engajamento com desconto</div>
+        <div class="use-case-desc">Comentou "quero" → responde publicamente + envia DM com link de compra.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Moderação e triagem</div>
+        <div class="use-case-desc">Palavra-chave detectada → resposta padrão + sinaliza para review da equipe.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Texto da resposta, podendo usar merge fields como <code>{{contact.first_name}}</code>. Requer conta TikTok Business conectada no HighLevel.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a26">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunicação/ TikTok Comment · Captura Lead</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a26">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a26-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · TikTok Comment</div>
+              <div class="ghl-node-title">TikTok Comment</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Keyword</span><span class="pv highlight">preço</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a26-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">T</div>
+            <div>
+              <div class="ghl-node-type">Action · Reply TikTok Comment</div>
+              <div class="ghl-node-title">Resposta no TikTok</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Resposta</span><span class="pv highlight">Oi! Chama no DM que te passo os valores 😊</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A26 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Reply Text</strong> com suporte a merge fields. Requer conta TikTok Business conectada.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Reply to TikTok Comment</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Responder comentário TikTok" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Reply Text <span class="req">*</span></div><input class="hl-input" value="Oi {{contact.first_name}}! Chama no DM pra ver os valores 😊" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Responde automaticamente a comentários no TikTok Business</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="acao-block" id="a27" data-name="instagram messenger interativo interactive messenger ig dm botoes">
+  <div class="acao-head">
+    <div class="acao-num">27</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">IG Messenger Interativo</h2>
+      <div class="acao-en">Instagram Interactive Messenger</div>
+      <div class="acao-tags"></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Envia mensagem no DM do Instagram com <strong>botões interativos ou quick replies</strong>. Permite criar fluxos conversacionais nativos — o usuário clica numa opção e o workflow continua baseado na escolha.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Menu de atendimento no IG DM</div>
+        <div class="use-case-desc">Lead manda DM → recebe menu com botões: Vendas / Suporte / Parceria → workflow roteia baseado na escolha.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Confirmação de agendamento</div>
+        <div class="use-case-desc">Lembrete de consulta enviado via IG DM com botões Confirmar / Cancelar / Reagendar.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Qualificação conversacional</div>
+        <div class="use-case-desc">Quick replies com perguntas de qualificação — coletam dados do lead sem sair do Instagram.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Texto da mensagem + até 3 botões (tipo: Reply Button) ou quick replies. Cada botão pode direcionar para um branch diferente no workflow. Requer conta Instagram Business conectada.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a27">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunicação/ IG Interactive · Menu de Atendimento</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a27">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a27-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Customer Replied (IG DM)</div>
+              <div class="ghl-node-title">Customer Reply · Instagram</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Canal</span><span class="pv highlight">Instagram DM</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a27-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">IG</div>
+            <div>
+              <div class="ghl-node-type">Action · IG Interactive Messenger</div>
+              <div class="ghl-node-title">Menu de Atendimento IG</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Mensagem</span><span class="pv">Olá! Como posso ajudar?</span></div>
+            <div class="ghl-node-param"><span class="pk">Botões</span><span class="pv highlight">Vendas · Suporte · Parceria</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A27 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Message</strong>, <span class='arrow'>→</span> <strong>Buttons</strong> (até 3). Cada botão gera um branch separado no workflow.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Instagram Interactive Messenger</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Menu de Atendimento IG" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Message <span class="req">*</span></div><input class="hl-input" value="Olá {{contact.first_name}}! Como posso te ajudar hoje?" readonly></div>
+<div class="hl-section-head">Buttons</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Button 1</div><input class="hl-input" value="Vendas" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Button 2</div><input class="hl-input" value="Suporte" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Button 3</div><input class="hl-input" value="Parceria" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Envia DM no Instagram com botões interativos — cada botão gera um branch</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="acao-block" id="a28" data-name="facebook messenger interativo interactive messenger fb dm botoes">
+  <div class="acao-head">
+    <div class="acao-num">28</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">FB Messenger Interativo</h2>
+      <div class="acao-en">Facebook Interactive Messenger</div>
+      <div class="acao-tags"></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Envia mensagem no Facebook Messenger com <strong>botões interativos, quick replies ou listas</strong>. Cria fluxos conversacionais nativos no Messenger — o contato interage sem sair do Facebook.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Menu de atendimento no Messenger</div>
+        <div class="use-case-desc">Lead abre chat na página do Facebook → menu interativo com opções de atendimento.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Retargeting conversacional</div>
+        <div class="use-case-desc">Reengaja leads inativos via Messenger com CTA de botão direto para oferta.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Coleta de informação simplificada</div>
+        <div class="use-case-desc">Quick replies facilitam coleta de dados — lead responde em 1 clique ao invés de digitar.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Texto da mensagem + botões (tipo: Reply Button) ou quick replies. Suporte a listas (List Messages) com múltiplos itens. Requer Página do Facebook conectada ao HighLevel.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a28">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunicação/ FB Interactive · Retargeting com Botão</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a28">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a28-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Customer Replied (FB)</div>
+              <div class="ghl-node-title">Customer Reply · Facebook</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Canal</span><span class="pv highlight">Facebook Messenger</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a28-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">FB</div>
+            <div>
+              <div class="ghl-node-type">Action · FB Interactive Messenger</div>
+              <div class="ghl-node-title">Menu de Atendimento FB</div>
+            </div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Mensagem</span><span class="pv">Olá! Como posso ajudar?</span></div>
+            <div class="ghl-node-param"><span class="pk">Botões</span><span class="pv highlight">Suporte · Vendas · Financeiro</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A28 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Message</strong>, <span class='arrow'>→</span> <strong>Buttons</strong> (até 3 reply buttons). Requer Página do Facebook conectada.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Facebook Interactive Messenger</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Menu de Atendimento FB" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Message <span class="req">*</span></div><input class="hl-input" value="Olá {{contact.first_name}}! Em que posso ajudar?" readonly></div>
+<div class="hl-section-head">Buttons</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Button 1</div><input class="hl-input" value="Suporte" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Button 2</div><input class="hl-input" value="Vendas" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Button 3</div><input class="hl-input" value="Financeiro" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Envia mensagem no Facebook Messenger com botões interativos</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -6139,7 +6549,7 @@ Dúvidas? Responde aqui.</textarea>
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>25 ações de Comunicação explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>28 ações de Comunicação explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6303,7 +6713,13 @@ Dúvidas? Responde aqui.</textarea>
     'a24-1': { kind: 'Trigger · Payment Failed', title: 'Payment Failed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pagamento falhou — aviso urgente</div></div><div class="config-section"><div class="config-label">Payment Provider</div><div class="config-field dropdown">Stripe</div></div>` },
     'a24-2': { kind: 'Action · Send SMS', title: 'SMS Shortcode', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">SMS urgente via shortcode</div></div><div class="config-section"><div class="config-label">From Number *</div><div class="config-field highlight dropdown">Shortcode 28-100 (alta entregabilidade)</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field">{{contact.phone}}</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">⚠ {{contact.first_name}}, seu pagamento falhou. Atualiza aqui: {{billing.update_url}}</div></div>` },
     'a25-1': { kind: 'Trigger · Invoice', title: 'Invoice Paid', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pagamento confirmado — enviar NF</div></div><div class="config-section"><div class="config-label">Invoice Status *</div><div class="config-field highlight dropdown">Paid</div></div>` },
-    'a25-2': { kind: 'Action · Send Email', title: 'Send Email + Attachment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email com nota fiscal anexa</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">contas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Recibo + NF do seu pagamento — R$ {{invoice.amount}}</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Recibo Pagamento</div></div><div class="config-section"><div class="config-label">Attachments *</div><div class="config-field highlight">nf-{{invoice.number}}.pdf + recibo-{{invoice.number}}.pdf (URLs)</div></div>` }
+    'a25-2': { kind: 'Action · Send Email', title: 'Send Email + Attachment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email com nota fiscal anexa</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">contas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Recibo + NF do seu pagamento — R$ {{invoice.amount}}</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Recibo Pagamento</div></div><div class="config-section"><div class="config-label">Attachments *</div><div class="config-field highlight">nf-{{invoice.number}}.pdf + recibo-{{invoice.number}}.pdf (URLs)</div></div>` },
+    'a26-1': { kind: 'Trigger · TikTok Comment', title: 'TikTok Comment', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Comentário TikTok — palavra-chave preço</div></div><div class="config-section"><div class="config-label">Keyword</div><div class="config-field highlight">preço</div></div>` },
+    'a26-2': { kind: 'Action · Reply TikTok Comment', title: 'Resposta no TikTok', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Responder comentário TikTok</div></div><div class="config-section"><div class="config-label">Reply Text *</div><div class="config-field highlight">Oi {{contact.first_name}}! Chama no DM que te passo os valores 😊</div></div>` },
+    'a27-1': { kind: 'Trigger · Customer Replied (IG DM)', title: 'Customer Reply · Instagram', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Reply IG DM → Menu Interativo</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field highlight dropdown">Instagram DM</div></div>` },
+    'a27-2': { kind: 'Action · IG Interactive Messenger', title: 'Menu de Atendimento IG', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Menu de Atendimento IG</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">Olá {{contact.first_name}}! Como posso te ajudar hoje?</div></div><div class="config-section"><div class="config-label">Button 1</div><div class="config-field highlight">Vendas</div></div><div class="config-section"><div class="config-label">Button 2</div><div class="config-field highlight">Suporte</div></div><div class="config-section"><div class="config-label">Button 3</div><div class="config-field highlight">Parceria</div></div>` },
+    'a28-1': { kind: 'Trigger · Customer Replied (FB)', title: 'Customer Reply · Facebook', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Reply FB Messenger → Menu Interativo</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field highlight dropdown">Facebook Messenger</div></div>` },
+    'a28-2': { kind: 'Action · FB Interactive Messenger', title: 'Menu de Atendimento FB', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Menu de Atendimento FB</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field">Olá {{contact.first_name}}! Em que posso ajudar?</div></div><div class="config-section"><div class="config-label">Button 1</div><div class="config-field highlight">Suporte</div></div><div class="config-section"><div class="config-label">Button 2</div><div class="config-field highlight">Vendas</div></div><div class="config-section"><div class="config-label">Button 3</div><div class="config-field highlight">Financeiro</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
