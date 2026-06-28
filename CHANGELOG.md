@@ -10,6 +10,18 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-28 — Content
+**Add 5 new native triggers, 1 new action, and 2 new category pages**
+
+- **guia-highlevel-cat02.html**: Added trigger g19 — Form Partially Completed (Formulário Parcialmente Preenchido). Category now has 19 triggers.
+- **guia-highlevel-cat07.html**: Added trigger g11 — Payment Failed (Pagamento Falhou). Category now has 11 triggers.
+- **acoes-highlevel-cat05.html**: Added action a6 — AI Agent (Agente IA). Category now has 6 actions.
+- **guia-highlevel-cat13.html** (NEW): Comunicação com IA — 2 triggers: Conversation AI Trigger and Custom Trigger.
+- **guia-highlevel-cat14.html** (NEW): Google Ads — 1 trigger: Google Lead Form Submitted.
+- **index.html**: Updated hero stats (76→81 triggers, 109→110 actions, 185→191 total), tab counts, category cards, added cat13 and cat14 cards, updated footer date to 28/06/2026.
+- **search-index.json**: Added 6 new entries (5 triggers + 1 action).
+- Total guide now covers 14 trigger categories, 14 action categories, 81 triggers, 110 actions.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
