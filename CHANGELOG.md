@@ -10,6 +10,31 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-06-29 — Content
+**Add new native triggers and actions: Company B2B, AI actions, Social Media, Payments, Events**
+
+New trigger files and updates:
+- **guia-highlevel-cat02.html** (+2 gatilhos): g19 Agendador (Scheduler) — cron-style contactless trigger; g20 Formulário Parcialmente Preenchido — abandoned form detection
+- **guia-highlevel-cat07.html** (+1 gatilho): g11 Pagamento Falhou — trigger for failed payment/billing attempts
+- **guia-highlevel-cat10.html** (+1 gatilho): g4 Click to WhatsApp Ads — Meta Click-to-WhatsApp social media trigger
+- **guia-highlevel-cat13.html** (novo): 2 gatilhos B2B — g1 Empresa Criada (Company Created) + g2 Empresa Alterada (Company Changed) para Company-Based Workflows
+
+New action files and updates:
+- **acoes-highlevel-cat05.html** (+3 ações): A6 AI Agent (agente autônomo multi-step com MCP), A7 AI Decision Maker (roteamento inteligente com IA), A8 Invocar Agente do Agent Studio
+- **acoes-highlevel-cat07.html** (bugfix): sidebar/hero corrigidos de "9 ações" para "10 ações" (A10 já existia mas o contador estava errado)
+- **acoes-highlevel-cat15.html** (novo): 3 ações B2B — A1 Criar Empresa, A2 Atualizar Empresa, A3 Encontrar Empresa
+
+Navigation:
+- **acoes-highlevel-cat14.html**: link "próximo" atualizado de index.html → acoes-highlevel-cat15.html
+
+Homepage (index.html):
+- Gatilhos: 76 → 82 (+6), Ações: 109 → 116 (+7), Painéis: 185 → 197 (+12), Mockups: 31 → 32 (+1)
+- Categorias: 26 → 28 (novas: guia-cat13 + acoes-cat15)
+- Cards das categorias atualizados com contagens corretas
+- Data de atualização: Junho 2026
+
+---
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

@@ -2437,13 +2437,16 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Workflow AI · 5 ações</div>
+  <div class="side-section-label">Workflow AI · 8 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Generate Text (Texto)</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Parse Image (Analisar Imagem)</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Summarize Conversation</a>
     <a href="#a4" class="side-link"><span class="side-num">04</span>Extract Info</a>
     <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
+    <a href="#a6" class="side-link"><span class="side-num">06</span>AI Agent</a>
+    <a href="#a7" class="side-link"><span class="side-num">07</span>AI Decision Maker</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>Invocar Agente do Agent Studio</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2462,10 +2465,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 05/14</span>
   <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 5 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação. Ainda experimental mas poderoso.</p>
+  <p class="hero-desc">As 8 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação, agentes autônomos e roteamento inteligente com IA. Poderoso e em constante evolução.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">5</span>
+      <span class="hero-stat-num">8</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3231,6 +3234,270 @@
     </div>
   </div>
 
+<!-- ═══════════════════════════════════════════════════════════════════════
+     AÇÃO A6 — AI AGENT (Agente de IA)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="acao-block" id="a6" data-name="ai agent agente ia autonomo instruções multi-step">
+  <div class="acao-head">
+    <div class="acao-num">06</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Workflow AI</div>
+      <h2 class="acao-name">AI Agent</h2>
+      <div class="acao-en">AI Agent</div>
+      <div class="acao-tags">
+        <span class="info-tag">IA Autônoma</span>
+        <span class="info-tag">Multi-step</span>
+        <span class="info-tag">MCP</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>A ação mais poderosa do HighLevel — um agente de IA autônomo que executa tarefas complexas em múltiplos passos usando instruções em linguagem natural. Diferente das outras ações de IA que geram texto, o AI Agent <em>age</em>: atualiza oportunidades, cria contatos, envia SMS, busca informações e mais — tudo decidindo sozinho como executar.</p>
+      <p>Suporta conexão com MCP (Model Context Protocol), o que significa que pode se conectar a sistemas externos, bases de conhecimento, Airtable, Notion e muito mais.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+      <strong>Ferramentas nativas pré-carregadas</strong>
+      O AI Agent já vem com: atualizar oportunidade, criar contato, enviar SMS, gerar link único, busca na base de conhecimento, atualizar custom values. Configure quais ferramentas o agente pode usar.
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Qualificação inteligente de lead</div>
+        <div class="use-case-desc">Lead responde formulário → AI Agent analisa respostas + histórico → decide se qualifica, atualiza score, move no pipeline e envia SMS personalizado.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Triagem de suporte</div>
+        <div class="use-case-desc">Nova mensagem de cliente → AI Agent classifica o problema + busca solução na base de conhecimento + responde ao cliente + cria task se necessário intervenção humana.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Pesquisa e enriquecimento</div>
+        <div class="use-case-desc">Novo lead capturado → AI Agent pesquisa empresa via MCP + preenche campos personalizados + cria nota com perfil completo + notifica vendedor.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Ação <strong>AI Agent</strong>. Configure as instruções em linguagem natural e selecione as ferramentas que o agente pode usar para executar a tarefa.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>AI Agent</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Action Name <span class="req">*</span></div>
+              <input class="hl-input" value="AI Agent — qualificação de lead" readonly>
+            </div>
+            <div class="hl-section-head">Instruções do Agente</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Instructions <span class="req">*</span></div>
+              <textarea class="hl-input" rows="4" style="height:auto;resize:none" readonly>Analise as respostas do formulário deste contato. Se o orçamento for acima de R$5.000 e a necessidade for imediata, atualize o score para "Hot Lead", mova para "Qualificados" no pipeline e envie SMS de confirmação. Caso contrário, adicione tag "nurturing".</textarea>
+            </div>
+            <div class="hl-section-head">Ferramentas Disponíveis</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Tools</div>
+              <div class="field-spec-val">
+                <span class="opt-chip selected">Update Opportunity</span>
+                <span class="opt-chip selected">Send SMS</span>
+                <span class="opt-chip selected">Add Tag</span>
+                <span class="opt-chip">Create Contact</span>
+                <span class="opt-chip">Update Custom Value</span>
+              </div>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Model</div>
+              <div class="hl-dropdown has-value">Claude Sonnet (padrão)</div>
+            </div>
+            <button class="hl-btn-save">Salvar Ação</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     AÇÃO A7 — AI DECISION MAKER (Decisor de IA)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="acao-block" id="a7" data-name="ai decision maker decisor ia roteamento inteligente branches">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Workflow AI</div>
+      <h2 class="acao-name">AI Decision Maker</h2>
+      <div class="acao-en">AI Decision Maker</div>
+      <div class="acao-tags">
+        <span class="info-tag">Roteamento IA</span>
+        <span class="info-tag">Branches</span>
+        <span class="info-tag">Premium</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Substitui lógica condicional complexa (If/Else aninhados) por uma instrução em linguagem natural. Você descreve o critério de decisão em português e o AI decide qual branch seguir — baseado em comportamento, dados do contato, contexto da conversa, tamanho da empresa, e mais.</p>
+      <p>É uma ação Premium (custo por execução). Vale a pena quando a lógica de roteamento seria muito complexa com If/Else tradicional.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Roteamento por perfil de cliente</div>
+        <div class="use-case-desc">"Se o cliente parece ser PME com orçamento limitado, vai pra trilha de self-service. Se parece enterprise com necessidade complexa, vai pra trilha enterprise com SDR."</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Classificação de intenção</div>
+        <div class="use-case-desc">"Com base na última mensagem do contato, classifique como: pronto para comprar, precisa de mais informações, ou sem interesse — e direcione para o fluxo correto."</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Ação <strong>AI Decision Maker</strong>. Escreva a instrução de decisão e configure os branches de saída. O AI avalia o contexto e roteia automaticamente.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>AI Decision Maker</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Action Name <span class="req">*</span></div>
+              <input class="hl-input" value="Decisão IA — qualificar perfil" readonly>
+            </div>
+            <div class="hl-section-head">Critério de Decisão</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Decision Instruction <span class="req">*</span></div>
+              <textarea class="hl-input" rows="3" style="height:auto;resize:none" readonly>Com base no cargo, empresa e orçamento do contato, classifique como "Enterprise", "PME" ou "Individual".</textarea>
+            </div>
+            <div class="hl-section-head">Branches de Saída</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Branch 1</div>
+              <input class="hl-input" value="Enterprise" readonly>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Branch 2</div>
+              <input class="hl-input" value="PME" readonly>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Branch 3</div>
+              <input class="hl-input" value="Individual" readonly>
+            </div>
+            <button class="hl-btn-save">Salvar Ação</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     AÇÃO A8 — INVOCAR AGENTE DO AGENT STUDIO (Invoke Agent Studio Agent)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="acao-block" id="a8" data-name="invocar agente agent studio invoke reutilizar IA">
+  <div class="acao-head">
+    <div class="acao-num">08</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Workflow AI</div>
+      <h2 class="acao-name">Invocar Agente do Agent Studio</h2>
+      <div class="acao-en">Invoke Agent Studio Agent</div>
+      <div class="acao-tags">
+        <span class="info-tag">Agent Studio</span>
+        <span class="info-tag">Reutilização</span>
+        <span class="info-tag">IA</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Permite chamar um agente de IA pré-configurado no Agent Studio do HighLevel de dentro de um workflow. O Agent Studio é o local onde você cria agentes reutilizáveis com instruções, ferramentas e base de conhecimento configuradas.</p>
+      <p>Em vez de reconfigurar a IA em cada workflow, você centraliza a configuração no Agent Studio e reutiliza nos workflows. O agente recebe o contexto do workflow, processa e retorna o resultado para as próximas ações.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Agente de qualificação centralizado</div>
+        <div class="use-case-desc">Crie 1 agente de qualificação no Agent Studio → use em 10 workflows diferentes sem reconfigurar. Mudou a lógica? Atualiza em um lugar, reflete em todos.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Especialista por área</div>
+        <div class="use-case-desc">Agente "Especialista em Objeções de Preço" no Agent Studio → invocado em qualquer workflow onde o lead menciona preço como objeção.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Ação <strong>Invoke Agent Studio Agent</strong>. Selecione o agente pré-configurado no Agent Studio e defina os inputs que ele receberá do workflow.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Invoke Agent Studio Agent</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Action Name <span class="req">*</span></div>
+              <input class="hl-input" value="Invocar Agente de Qualificação" readonly>
+            </div>
+            <div class="hl-section-head">Configuração</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Agent Studio Agent <span class="req">*</span></div>
+              <div class="hl-dropdown has-value">Agente Qualificador de Leads</div>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Input Context</div>
+              <textarea class="hl-input" rows="2" style="height:auto;resize:none" readonly>{{contact.first_name}} respondeu: {{trigger.form_responses}}</textarea>
+            </div>
+            <button class="hl-btn-save">Salvar Ação</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div></main>
 </div>
 
@@ -3249,7 +3516,7 @@
 
   <div class="footer-top">
     <h3>Categoria 05 completa.</h3>
-    <p>5 ações de Workflow AI explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>8 ações de Workflow AI explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">

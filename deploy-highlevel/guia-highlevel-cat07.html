@@ -2398,6 +2398,10 @@
 <a href="#g9" class="side-link"><span class="side-num">09</span>Limite de Cupom</a>
 <a href="#g10" class="side-link"><span class="side-num">10</span>Cupom Expirado</a>
 </nav>
+<div class="side-section-label">Falhas</div>
+<nav class="side-nav">
+<a href="#g11" class="side-link"><span class="side-num">11</span>Pagamento Falhou</a>
+</nav>
 
 
   <div class="side-cta-fixed">
@@ -2414,8 +2418,8 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 07/12</span>
   <h1 class="hero-title">Tudo que envolve <em>dinheiro</em> merece automação.</h1>
-  <p class="hero-desc">Da cobrança inicial até reembolsos, passando por assinaturas, cupons e contratos. A categoria Pagamentos tem 10 gatilhos que cobrem todo o ciclo financeiro — pra reduzir churn, acelerar recebimento e manter o fluxo de caixa saudável.</p>
-  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">10</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
+  <p class="hero-desc">Da cobrança inicial até reembolsos, passando por assinaturas, cupons e contratos. A categoria Pagamentos tem 11 gatilhos que cobrem todo o ciclo financeiro — pra reduzir churn, acelerar recebimento e manter o fluxo de caixa saudável.</p>
+  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">11</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
 <div class="hero-stat"><span class="hero-stat-num">40+</span><span class="hero-stat-label">Filtros explicados</span></div>
 <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-label">Mockups interativos</span></div>
 </div>
@@ -4663,6 +4667,122 @@
   </div>
 
   <div class="footer-legal">Guia produzido pela Magnetic Funnels · Categoria 07 de 12 · Atualizado em 2026</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 11 — PAGAMENTO FALHOU (Payment Failed)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g11" data-name="pagamento falhou payment failed cobrança negada">
+  <div class="trigger-head">
+    <div class="trigger-num">11</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Falhas</div>
+      <h2 class="trigger-name">Pagamento Falhou</h2>
+      <div class="trigger-en">Payment Failed</div>
+      <div class="trigger-tags">
+        <span class="info-tag realtime">Tempo real</span>
+        <span class="info-tag">Cobranças</span>
+        <span class="info-tag">Assinaturas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando uma tentativa de cobrança falha — seja numa assinatura recorrente, numa cobrança de fatura ou num parcelamento. É o gatilho essencial pra recuperação de receita perdida por falha de pagamento (churn involuntário).</p>
+      <p>Permite automatizar toda a régua de recuperação: notificar o cliente, oferecer nova tentativa, atualizar cartão, ou pausar acesso enquanto o pagamento não é resolvido.</p>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <div class="callout-icon">!</div>
+    <div class="callout-content">
+      <strong>Atenção ao timing</strong>
+      Pagamentos via boleto/Pix podem levar tempo para confirmar falha. Configure a automação com janela de 24-48h antes de cancelar acessos — evita cancelamentos indevidos.
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Recuperação de assinatura SaaS</div>
+        <div class="use-case-desc">Cobrança recorrente falhou → SMS imediato avisando o cliente → link para atualizar cartão → 48h depois, nova tentativa automática.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Pausa de acesso</div>
+        <div class="use-case-desc">Pagamento do curso/membership falhou → após 3 dias sem resolução → acesso ao produto é pausado automaticamente + email explicando.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Alerta interno para equipe financeira</div>
+        <div class="use-case-desc">Falha de pagamento acima de R$500 → notificação interna imediata para o time financeiro agir manualmente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Produto / Oferta</div>
+          <div class="filter-en">Product / Offer</div>
+          <div class="filter-type">opcional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Filtra por produto ou oferta específica — útil quando você tem múltiplos produtos e quer réguas de recuperação diferentes por produto.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Valor Mínimo</div>
+          <div class="filter-en">Minimum Amount</div>
+          <div class="filter-type">opcional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Define um valor mínimo de falha para acionar o gatilho — evita automações para cobranças de centavos.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Gatilho <strong>Payment Failed</strong>. Configure qual produto monitorar e o HL dispara a automação assim que a cobrança falhar.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Payment Failed</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+              <input class="hl-input" value="Cobrança falhou — iniciar recuperação" readonly>
+            </div>
+            <div class="hl-section-head">Filtros · Payment Failed</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Product / Offer</div>
+              <div class="hl-dropdown">Qualquer produto</div>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Minimum Amount</div>
+              <input class="hl-input" value="R$ 0,00" readonly>
+            </div>
+            <button class="hl-btn-save">Salvar Gatilho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 </main>

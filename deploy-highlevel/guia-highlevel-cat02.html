@@ -2423,6 +2423,12 @@
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
   </nav>
 
+  <div class="side-section-label">Agendamento & Parciais</div>
+  <nav class="side-nav">
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Agendador</a>
+    <a href="#g20" class="side-link"><span class="side-num">20</span>Formulário Parcial</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        ============================================================ -->
@@ -2452,7 +2458,7 @@
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">18</span>
+      <span class="hero-stat-num">20</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -6805,6 +6811,236 @@
 
   <div class="footer-legal">
     Guia produzido pela Magnetic Funnels · Categoria 02 de 12 · Atualizado em 2026
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 19 — AGENDADOR (Scheduler)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g19" data-name="agendador scheduler recorrente tempo cron job">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Agendamento & Parciais</div>
+      <h2 class="trigger-name">Agendador</h2>
+      <div class="trigger-en">Scheduler</div>
+      <div class="trigger-tags">
+        <span class="info-tag">Sem contato</span>
+        <span class="info-tag">Recorrente</span>
+        <span class="info-tag">Tempo real</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>É o único gatilho do HighLevel que não precisa de um contato para disparar. Funciona como um "cron job" nativo — você define o horário e a frequência, e o workflow roda automaticamente: todo dia às 8h, toda segunda, no primeiro dia do mês, ou numa data específica.</p>
+      <p>Ideal pra tarefas de manutenção, relatórios automáticos, sincronizações periódicas com sistemas externos e qualquer processo que precisa rodar em ritmo fixo independente de ação do lead.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-icon">💡</div>
+    <div class="callout-content">
+      <strong>Sem contato = sem personalização de merge fields</strong>
+      Como o Scheduler não tem contato associado, variáveis como <code>{{contact.first_name}}</code> não funcionam. Use-o para webhooks, atualizações de banco de dados, alertas de sistema ou ações que operam no nível da conta.
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Relatório diário de vendas</div>
+        <div class="use-case-desc">Todo dia às 8h → webhook pra Google Sheets → compila dados do dia anterior → envia resumo por email pra equipe.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Sincronização semanal</div>
+        <div class="use-case-desc">Toda segunda às 9h → webhook pra sistema externo → sincroniza contatos novos da semana com CRM legado.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Limpeza mensal de leads frios</div>
+        <div class="use-case-desc">Primeiro dia do mês → busca contatos sem atividade há 90 dias → adiciona tag "inativo" → remove de listas ativas.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configuração de frequência</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Frequência</div>
+          <div class="filter-en">Frequency</div>
+          <div class="filter-type">obrigatório</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Opções: Uma vez (data/hora específica), A cada hora, Diariamente, Semanalmente (escolha os dias), Mensalmente (escolha o dia do mês).</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Fuso Horário</div>
+          <div class="filter-en">Timezone</div>
+          <div class="filter-type">obrigatório</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Define o fuso horário base da execução. Use sempre o fuso do seu negócio ou do público principal.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Gatilho <strong>Scheduler</strong>. Não há contato associado — é uma execução programada. Configure frequência e horário, e o workflow roda automaticamente.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Scheduler</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+              <input class="hl-input" value="Relatório diário — 8h BRT" readonly>
+            </div>
+            <div class="hl-section-head">Configuração de Agendamento</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Frequency <span class="req">*</span></div>
+              <div class="hl-dropdown has-value">Daily</div>
+              <div class="hl-conditional">
+                <div class="hl-conditional-note">Opções disponíveis</div>
+                <div class="field-spec-val" style="margin-top:4px;">
+                  <span class="opt-chip">Once</span><span class="opt-chip selected">Daily</span><span class="opt-chip">Weekly</span><span class="opt-chip">Monthly</span><span class="opt-chip">Hourly</span>
+                </div>
+              </div>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Time <span class="req">*</span></div>
+              <input class="hl-input" value="08:00" readonly>
+            </div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Timezone <span class="req">*</span></div>
+              <div class="hl-dropdown has-value">America/Sao_Paulo</div>
+            </div>
+            <button class="hl-btn-save">Salvar Gatilho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 20 — FORMULÁRIO PARCIALMENTE PREENCHIDO (Form Partially Completed)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g20" data-name="formulário parcial parcialmente preenchido abandonado form abandoned">
+  <div class="trigger-head">
+    <div class="trigger-num">20</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Agendamento & Parciais</div>
+      <h2 class="trigger-name">Formulário Parcialmente Preenchido</h2>
+      <div class="trigger-en">Form Partially Completed</div>
+      <div class="trigger-tags">
+        <span class="info-tag realtime">Tempo real</span>
+        <span class="info-tag">Formulários</span>
+        <span class="info-tag">Recuperação</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um usuário começa a preencher um formulário HighLevel mas abandona antes de enviar. O HL captura os dados já preenchidos — nome, email, telefone — e os disponibiliza para automação mesmo sem o envio completo.</p>
+      <p>Pense nisso como "recuperação de carrinho abandonado" para formulários de captura. É especialmente poderoso em funis de alto valor onde cada lead perdido tem grande impacto.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Recuperação de lead perdido</div>
+        <div class="use-case-desc">Lead preencheu nome e email mas abandonou na 3ª pergunta → SMS 10 minutos depois → "Vi que você estava no nosso formulário. Posso ajudar?"</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Nutrição sequencial</div>
+        <div class="use-case-desc">Abandono detectado → adiciona contato à lista de "quase converteu" → sequência de email nos próximos 7 dias com diferentes ângulos de oferta.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Alerta para equipe comercial</div>
+        <div class="use-case-desc">Lead de alto valor abandona formulário de consultoria → notificação interna imediata para SDR ligar em até 1h.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Formulário</div>
+          <div class="filter-en">Form</div>
+          <div class="filter-type">obrigatório</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Seleciona qual formulário monitorar para abandono. Cada formulário pode ter sua própria automação de recuperação.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Campos Capturados</div>
+          <div class="filter-en">Captured Fields</div>
+          <div class="filter-type">automático</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">O HL captura automaticamente todos os campos preenchidos até o abandono. Disponíveis como custom values no workflow.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Gatilho <strong>Form Partially Completed</strong>. Selecione o formulário e o HL detecta abandono automaticamente — os dados já preenchidos ficam disponíveis no workflow.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Form Partially Completed</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+              <input class="hl-input" value="Formulário abandonado — recuperação" readonly>
+            </div>
+            <div class="hl-section-head">Configuração · Form Partially Completed</div>
+            <div class="hl-filter-row">
+              <div class="hl-filter-label">Form <span class="req">*</span></div>
+              <div class="hl-dropdown has-value">Formulário de Qualificação — Consultoria</div>
+            </div>
+            <button class="hl-btn-save">Salvar Gatilho</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
