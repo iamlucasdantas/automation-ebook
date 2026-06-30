@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Gatilhos para Certificados — Guia HighLevel</title>
+<title>Gatilhos para Agendador — Guia HighLevel</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
 
-<meta name="description" content="Guia completo dos gatilhos de Certificados do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 12/12 do guia oficial em português." />
+<meta name="description" content="Guia completo do gatilho Agendador de Workflow do HighLevel. Automações sem contato que rodam em horário definido — cron, diário, semanal e mais. Parte 13/13 do guia oficial em português." />
 <meta name="author" content="Magnetic Funnels" />
-<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, gatilhos, certificados, CRM, workflow, PT-BR" />
+<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, gatilhos, agendador, scheduler, cron, sem contato, workflow, PT-BR" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Gatilhos para Certificados — Guia HighLevel" />
-<meta property="og:description" content="Guia completo dos gatilhos de Certificados do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 12/12 do guia oficial em português." />
+<meta property="og:title" content="Gatilhos para Agendador — Guia HighLevel" />
+<meta property="og:description" content="Guia completo do gatilho Agendador de Workflow do HighLevel. Automações sem contato que rodam em horário definido — cron, diário, semanal e mais. Parte 13/13 do guia oficial em português." />
 <meta property="og:site_name" content="Magnetic Funnels" />
 <meta property="og:locale" content="pt_BR" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Gatilhos para Certificados — Guia HighLevel" />
-<meta name="twitter:description" content="Guia completo dos gatilhos de Certificados do HighLevel. Exemplos práticos, filtros explicados e mockups interativos. Parte 12/12 do guia oficial em português." />
+<meta name="twitter:title" content="Gatilhos para Agendador — Guia HighLevel" />
+<meta name="twitter:description" content="Guia completo do gatilho Agendador de Workflow do HighLevel. Automações sem contato que rodam em horário definido — cron, diário, semanal e mais. Parte 13/13 do guia oficial em português." />
 
 
 <!--
@@ -288,7 +288,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
-    
+
     line-height: 1.1;
     margin-bottom: 8px;
   }
@@ -356,7 +356,6 @@
     font-style: normal;
     font-weight: 700;
     color: var(--brand-accent);
-    /* Destaque adicional: sublinhado underline invisível visível só em acento */
     background: linear-gradient(180deg, transparent 68%, rgba(254, 185, 2, 0.25) 68%, rgba(254, 185, 2, 0.25) 88%, transparent 88%);
     padding: 0 4px;
   }
@@ -554,6 +553,12 @@
     border-color: var(--success);
   }
 
+  .info-tag.new {
+    background: var(--brand-accent);
+    color: var(--brand-ink);
+    border-color: var(--brand-accent);
+  }
+
   /* ───── SEÇÕES INTERNAS ───── */
   .tblock {
     margin-bottom: 40px;
@@ -705,7 +710,7 @@
     color: var(--muted);
     padding-left: 16px;
     border-left: 2px solid var(--brand-accent);
-    
+
   }
 
   .filter-impact strong {
@@ -801,7 +806,7 @@
     background-size: 16px 16px;
     background-color: var(--ghl-bg);
     padding: 48px 24px 72px;
-    min-height: 560px;
+    min-height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -908,6 +913,7 @@
   .ghl-node-icon.action-pipeline { background: var(--ghl-green); }
   .ghl-node-icon.action-tag { background: #ec4899; }
   .ghl-node-icon.action-wait { background: #64748b; }
+  .ghl-node-icon.action-webhook { background: var(--ghl-purple); }
 
   .ghl-node-type {
     font-family: 'JetBrains Mono', monospace;
@@ -1196,7 +1202,7 @@
     font-size: 12px;
     color: var(--ghl-text-dim);
     text-align: center;
-    
+
   }
 
   /* ───── CALLOUT ───── */
@@ -1245,123 +1251,6 @@
   }
 
   /* ═══════════════════════════════════════════════════════════════════════
-     🎯 CTAs CONTEXTUAIS — aparecem no meio do conteúdo
-     ═══════════════════════════════════════════════════════════════════════ */
-
-  .cta-contextual {
-    margin: 48px 0;
-    background: var(--brand-ink);
-    color: var(--brand-paper);
-    padding: 40px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 24px;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 2px;
-  }
-
-  .cta-contextual::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 100%;
-    background: var(--brand-accent);
-  }
-
-  .cta-contextual::after {
-    content: '';
-    position: absolute;
-    top: -40%;
-    right: -10%;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(255,74,28,0.15) 0%, transparent 65%);
-    pointer-events: none;
-  }
-
-  .cta-ctx-content { position: relative; z-index: 2; }
-
-  .cta-ctx-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--brand-secondary);
-    margin-bottom: 12px;
-  }
-
-  .cta-ctx-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.7rem;
-    font-weight: 600;
-    line-height: 1.15;
-    letter-spacing: -0.015em;
-    margin-bottom: 10px;
-    max-width: 520px;
-  }
-
-  .cta-ctx-title em {
-    font-style: normal;
-    font-weight: 600;
-    color: var(--brand-accent);
-  }
-
-  .cta-ctx-desc {
-    font-size: 0.98rem;
-    line-height: 1.5;
-    opacity: 0.85;
-    max-width: 560px;
-  }
-
-  .cta-ctx-btn {
-    background: var(--brand-accent);
-    color: var(--brand-paper);
-    padding: 16px 28px;
-    text-decoration: none;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: all 0.2s;
-    white-space: nowrap;
-    position: relative;
-    z-index: 2;
-  }
-
-  .cta-ctx-btn:hover {
-    background: var(--brand-paper);
-    color: var(--brand-ink);
-  }
-
-  /* Variação secundária (outline) */
-  .cta-contextual.secondary {
-    background: var(--brand-paper-warm);
-    color: var(--brand-ink);
-  }
-
-  .cta-contextual.secondary::after {
-    background: radial-gradient(circle, rgba(184,145,47,0.1) 0%, transparent 65%);
-  }
-
-  .cta-contextual.secondary .cta-ctx-tag { color: var(--brand-accent-deep); }
-
-  .cta-contextual.secondary .cta-ctx-btn {
-    background: transparent;
-    color: var(--brand-ink);
-    border: 1.5px solid var(--brand-ink);
-  }
-
-  .cta-contextual.secondary .cta-ctx-btn:hover {
-    background: var(--brand-ink);
-    color: var(--brand-paper);
-  }
-
-  /* ═══════════════════════════════════════════════════════════════════════
      RODAPÉ COM CTAs
      ═══════════════════════════════════════════════════════════════════════ */
 
@@ -1393,7 +1282,6 @@
     margin-bottom: 28px;
   }
 
-  /* CTA principal do rodapé = HighLevel */
   .footer-main-cta {
     background: var(--brand-accent);
     padding: 40px;
@@ -1477,7 +1365,6 @@
     color: var(--brand-ink);
   }
 
-  /* Grid de outros CTAs */
   .footer-links-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -1585,7 +1472,7 @@
   .trigger-block.hidden { display: none; }
 
   /* ═══════════════════════════════════════════════════════════════════════
-     TOP NAV BAR · Toggle entre HL ↔ MF + Voltar ao Índice
+     TOP NAV BAR
      ═══════════════════════════════════════════════════════════════════════ */
 
   .top-nav {
@@ -1646,40 +1533,6 @@
     font-weight: 600;
   }
 
-  /* Toggle HL ↔ MF */
-  .top-nav-toggle {
-    display: inline-flex;
-    background: rgba(255,255,255,0.08);
-    border-radius: 100px;
-    padding: 3px;
-    gap: 2px;
-    flex-shrink: 0;
-  }
-
-  .toggle-btn {
-    padding: 6px 14px;
-    font-size: 12px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.65);
-    background: transparent;
-    border: none;
-    border-radius: 100px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .toggle-btn:hover {
-    color: white;
-  }
-
-  .toggle-btn.active {
-    background: var(--brand-accent);
-    color: var(--brand-ink);
-  }
-
   /* Mobile menu button */
   .mobile-menu-btn {
     display: none;
@@ -1735,7 +1588,7 @@
   }
 
   /* ═══════════════════════════════════════════════════════════════════════
-     NAV PREV/NEXT (rodapé, antes do guide-footer)
+     NAV PREV/NEXT
      ═══════════════════════════════════════════════════════════════════════ */
 
   .cat-nav {
@@ -1790,82 +1643,7 @@
   }
 
   /* ═══════════════════════════════════════════════════════════════════════
-     MOBILE
-     ═══════════════════════════════════════════════════════════════════════ */
-
-  @media (max-width: 900px) {
-    .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
-
-    /* A sidebar vira um drawer */
-    aside {
-      position: fixed !important;
-      top: 0;
-      left: 0;
-      height: 100vh !important;
-      width: 85%;
-      max-width: 340px;
-      z-index: 800;
-      transform: translateX(-100%);
-      transition: transform 0.3s ease;
-      overflow-y: auto;
-      padding-top: 16px !important;
-      box-shadow: 0 0 40px rgba(0,0,0,0.3);
-    }
-
-    aside.open {
-      transform: translateX(0);
-    }
-
-    /* Overlay atrás do drawer */
-    .drawer-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
-      z-index: 700;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    .drawer-overlay.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    /* Esconde breadcrumb longo no mobile pra economizar espaço */
-    .top-nav-breadcrumb { display: none; }
-
-    /* Nav prev/next */
-    .cat-nav {
-      grid-template-columns: 1fr;
-      margin: 32px auto;
-    }
-
-    .cat-nav-link.next {
-      text-align: left;
-    }
-  }
-
-  @media (max-width: 500px) {
-    .top-nav { padding: 8px 12px; gap: 8px; }
-    .top-nav-home { font-size: 11px; }
-    .toggle-btn { padding: 5px 10px; font-size: 11px; }
-    .back-to-top {
-      bottom: 16px;
-      right: 16px;
-      width: 44px;
-      height: 44px;
-    }
-  }
-
-
-
-
-
-  /* ═══════════════════════════════════════════════════════════════════════
      🎯 NOVA UI v2 — Painel de configuração com fidelidade HighLevel
-     Mostra o painel lateral real do HighLevel com tipos de campo corretos:
-     dropdowns, tag pickers, multi-selects, toggles, conditional logic.
      ═══════════════════════════════════════════════════════════════════════ */
 
   .hl-panel-wrapper {
@@ -1905,7 +1683,6 @@
     font-weight: 600;
   }
 
-  /* The right-side slide-in panel that HighLevel really uses */
   .hl-panel {
     width: 420px;
     max-width: 100%;
@@ -1983,7 +1760,6 @@
     line-height: 1.4;
   }
 
-  /* HL Input — single line text field */
   .hl-input {
     background: var(--ghl-bg);
     border: 1px solid var(--ghl-border);
@@ -2000,7 +1776,6 @@
     font-style: italic;
   }
 
-  /* HL Dropdown — single-select with caret */
   .hl-dropdown {
     background: var(--ghl-bg);
     border: 1px solid var(--ghl-border);
@@ -2025,7 +1800,6 @@
   .hl-dropdown.has-value { color: var(--ghl-text); }
   .hl-dropdown.placeholder { color: var(--ghl-text-dim); font-style: italic; }
 
-  /* HL Multi-select — multiple chips inside */
   .hl-multiselect {
     background: var(--ghl-bg);
     border: 1px solid var(--ghl-border);
@@ -2070,40 +1844,6 @@
     font-family: inherit;
   }
 
-  /* HL Tag picker — yellow chips, HL accent */
-  .hl-tag-picker {
-    background: var(--ghl-bg);
-    border: 1px solid var(--ghl-border);
-    border-radius: 4px;
-    padding: 6px 8px;
-    min-height: 36px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    align-items: center;
-  }
-
-  .hl-tag-chip {
-    background: rgba(254, 185, 2, 0.18);
-    border: 1px solid rgba(254, 185, 2, 0.45);
-    color: var(--ghl-text);
-    padding: 3px 8px 3px 10px;
-    border-radius: 4px;
-    font-size: 11px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .hl-tag-chip::after {
-    content: '×';
-    color: var(--ghl-text-dim);
-    font-size: 14px;
-    line-height: 1;
-    cursor: pointer;
-  }
-
-  /* HL Toggle / switch */
   .hl-toggle-row {
     display: flex;
     align-items: center;
@@ -2141,23 +1881,6 @@
   .hl-toggle.on { background: var(--ghl-green); }
   .hl-toggle.on::after { left: 16px; }
 
-  /* HL Number input with operator */
-  .hl-number-row {
-    display: flex;
-    gap: 6px;
-  }
-
-  .hl-number-row .hl-dropdown { flex: 1; }
-  .hl-number-row .hl-input { width: 100px; }
-
-  /* HL Field row with operator dropdown beside it */
-  .hl-field-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
-  }
-
-  /* HL Section heading inside panel */
   .hl-section-head {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
@@ -2171,7 +1894,6 @@
 
   .hl-section-head:first-child { border-top: 0; margin-top: 0; }
 
-  /* HL Filter row (inside the Filters section) */
   .hl-filter-row {
     background: rgba(0,0,0,0.18);
     border: 1px solid var(--ghl-border);
@@ -2189,23 +1911,6 @@
     text-transform: uppercase;
   }
 
-  /* Conditional sub-field shown when parent selected */
-  .hl-conditional {
-    border-left: 2px solid var(--brand-accent);
-    padding-left: 10px;
-    margin-top: 8px;
-  }
-
-  .hl-conditional-note {
-    font-size: 10px;
-    color: var(--brand-accent);
-    font-family: 'JetBrains Mono', monospace;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 4px;
-  }
-
-  /* Add-Filter button */
   .hl-add-filter {
     background: transparent;
     border: 1px dashed var(--ghl-border);
@@ -2224,7 +1929,6 @@
     color: var(--ghl-text);
   }
 
-  /* Save trigger button at the bottom of the panel */
   .hl-panel-footer {
     padding: 12px 18px;
     border-top: 1px solid var(--ghl-border);
@@ -2257,63 +1961,6 @@
     font-family: inherit;
   }
 
-  /* ─── Field-spec legend (shows TYPE / OPERATORS / OPTIONS) ─── */
-  .field-spec {
-    background: rgba(11, 34, 63, 0.04);
-    border: 1px solid rgba(11, 34, 63, 0.1);
-    border-radius: 6px;
-    padding: 12px 14px;
-    margin-top: 12px;
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-
-  .field-spec-row {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 12px;
-    padding: 4px 0;
-  }
-
-  .field-spec-key {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    padding-top: 2px;
-  }
-
-  .field-spec-val {
-    color: var(--brand-ink);
-  }
-
-  .field-spec-val .opt-chip {
-    display: inline-block;
-    background: rgba(11, 34, 63, 0.08);
-    border: 1px solid rgba(11, 34, 63, 0.15);
-    padding: 1px 8px;
-    border-radius: 100px;
-    font-size: 0.78rem;
-    margin: 2px 3px 2px 0;
-    color: var(--brand-ink);
-    font-family: 'JetBrains Mono', monospace;
-  }
-
-  .field-spec-val .op-chip {
-    display: inline-block;
-    background: rgba(91, 155, 255, 0.12);
-    border: 1px solid rgba(91, 155, 255, 0.3);
-    padding: 1px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    margin: 2px 3px 2px 0;
-    color: var(--brand-secondary);
-    font-family: 'JetBrains Mono', monospace;
-    letter-spacing: 0.02em;
-  }
-
-  /* HL Panel intro caption */
   .hl-panel-caption {
     padding: 14px 20px;
     background: var(--ghl-surface);
@@ -2325,34 +1972,98 @@
 
   .hl-panel-caption strong { color: var(--ghl-yellow); font-weight: 500; }
 
-  /* When opt-chip / op-chip render INSIDE the dark HL panel, override colors */
-  .hl-panel .opt-chip,
-  .hl-conditional .opt-chip {
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: var(--ghl-text);
+  /* Preview runs block */
+  .hl-runs-preview {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-top: 6px;
   }
-  .hl-panel .op-chip,
-  .hl-conditional .op-chip {
-    background: rgba(91, 155, 255, 0.18);
-    border: 1px solid rgba(91, 155, 255, 0.4);
-    color: var(--ghl-text);
+
+  .hl-runs-preview .run-row {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    padding: 3px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex;
+    justify-content: space-between;
   }
+
+  .hl-runs-preview .run-row:last-child { border-bottom: 0; }
+  .hl-runs-preview .run-row .run-num { color: var(--ghl-yellow); margin-right: 8px; }
 
   @media (max-width: 768px) {
     .hl-panel { width: 100%; }
     .hl-panel-context { padding: 16px; gap: 16px; flex-direction: column-reverse; }
     .hl-canvas-hint { padding-top: 0; }
-    .field-spec-row { grid-template-columns: 1fr; gap: 2px; }
-    .field-spec-key { padding-top: 0; }
   }
 
+  @media (max-width: 900px) {
+    .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
 
+    aside {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      height: 100vh !important;
+      width: 85%;
+      max-width: 340px;
+      z-index: 800;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      padding-top: 16px !important;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    }
+
+    aside.open {
+      transform: translateX(0);
+    }
+
+    .drawer-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .drawer-overlay.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .top-nav-breadcrumb { display: none; }
+
+    .cat-nav {
+      grid-template-columns: 1fr;
+      margin: 32px auto;
+    }
+
+    .cat-nav-link.next {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .top-nav { padding: 8px 12px; gap: 8px; }
+    .top-nav-home { font-size: 11px; }
+    .back-to-top {
+      bottom: 16px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+    }
+  }
 </style>
 </head>
 <body>
 
-<!-- TOP NAV — toggle HL/MF + voltar ao índice -->
+<!-- TOP NAV — voltar ao índice -->
 <div class="top-nav">
   <div class="top-nav-left">
     <button class="mobile-menu-btn" onclick="toggleDrawer()" aria-label="Abrir menu">☰</button>
@@ -2361,7 +2072,7 @@
       <span>Voltar ao índice</span>
     </a>
     <div class="top-nav-divider"></div>
-    <div class="top-nav-breadcrumb">Categoria <strong>12/12</strong> · <strong>Certificados</strong></div>
+    <div class="top-nav-breadcrumb">Categoria <strong>13/13</strong> · <strong>Agendador</strong></div>
   </div>
 </div>
 
@@ -2370,12 +2081,12 @@
 
 <aside>
   <div class="side-brand">Gatilhos<br><span class="brand-thin">HighLevel.</span></div>
-  <div class="side-cat">Categoria 12 · Certificados</div>
+  <div class="side-cat">Categoria 13 · Agendador</div>
   <input type="text" class="side-search" id="search" placeholder="Buscar gatilho..." />
 
-  <div class="side-section-label">Conclusão</div>
+  <div class="side-section-label">Automação Programada · 1 gatilho</div>
 <nav class="side-nav">
-<a href="#g1" class="side-link"><span class="side-num">01</span>Certificado Enviado</a>
+<a href="#g1" class="side-link"><span class="side-num">01</span>Agendador de Workflow</a>
 </nav>
 
 
@@ -2391,13 +2102,14 @@
 <main>
 
 <div class="hero-area">
-  <span class="hero-tag">Parte 1 · Gatilhos · Categoria 12/12</span>
-  <h1 class="hero-title">O <em>momento final da jornada</em> do aluno.</h1>
-  <p class="hero-desc">A categoria mais enxuta do HighLevel — apenas 1 gatilho, mas crítico pra operações educacionais. Certificados disparam ações finais: parabenização formal, incentivo ao compartilhamento social, upsell do próximo curso.</p>
-  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">Gatilho coberto</span></div>
-<div class="hero-stat"><span class="hero-stat-num">2+</span><span class="hero-stat-label">Filtros explicados</span></div>
-<div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">Mockup interativo</span></div>
-</div>
+  <span class="hero-tag">Parte 1 · Gatilhos · Categoria 13/13</span>
+  <h1 class="hero-title">Automações que rodam <em>sem precisar de contato.</em></h1>
+  <p class="hero-desc">A categoria mais nova do HighLevel — o Agendador de Workflow permite criar jobs recorrentes que disparam por hora, dia, semana, mês, data específica ou expressão cron personalizada, sem depender de nenhum contato para iniciar.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">Gatilho coberto</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">4+</span><span class="hero-stat-label">Intervalos disponíveis</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">Mockup interativo</span></div>
+  </div>
 
   <div class="hero-cta">
     <div class="hero-cta-text">
@@ -2408,169 +2120,251 @@
     <a href="https://magneticflows.com/30-dias" target="_blank" class="hero-cta-btn">Começar trial →</a>
   </div>
 </div>
-<div class="trigger-block" id="g1" data-name="certificado enviado certificate issued">
+
+<div class="trigger-block" id="g1" data-name="agendador de workflow workflow scheduler agendado cron recorrente">
   <div class="trigger-head">
     <div class="trigger-num">01</div>
     <div class="trigger-titles">
-      <div class="trigger-cat">Conclusão</div>
-      <h2 class="trigger-name">Certificado Enviado</h2>
-      <div class="trigger-en">Certificate Issued</div>
-      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Conclusão de curso</span></div>
+      <div class="trigger-cat">Automação Programada</div>
+      <h2 class="trigger-name">Agendador de Workflow</h2>
+      <div class="trigger-en">Workflow Scheduler</div>
+      <div class="trigger-tags">
+        <span class="info-tag schedule">Agendado</span>
+        <span class="info-tag">Sem contato</span>
+        <span class="info-tag new">Novo</span>
+      </div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">O que esse gatilho faz</div>
     <div class="tblock-content">
-      <p>Dispara quando um certificado é emitido e enviado a um aluno. Normalmente acionado após "Produto Completado" (cat 06), mas pode ser emitido manualmente.</p>
-      <p>Momento emotivo do aluno — ele completou algo relevante. É o timing perfeito pra pedir review, indicação e oferecer próximo curso.</p>
+      <p>Dispara um workflow em uma frequência definida — por hora, diariamente, semanalmente, mensalmente, em data específica ou via expressão cron personalizada. <strong>Não requer contato</strong> para rodar: o workflow inicia sozinho no horário configurado.</p>
+      <p>É o único gatilho do HighLevel totalmente desvinculado de um contato. Perfeito pra jobs de sistema: envio de relatórios, sincronização de dados com planilhas, pings de webhook, reset de campos agendados e qualquer tarefa recorrente que não depende de uma ação de lead.</p>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">Quando usar na operação</div>
-    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Parabéns + link</div><div class="use-case-desc">Certificado emitido → email de congratulação com link pro PDF.</div></div>
-<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Pedido de indicação</div><div class="use-case-desc">"Gostou do curso? Indique amigos e ganhe 30% off no próximo".</div></div>
-<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Compartilhe LinkedIn</div><div class="use-case-desc">Instruções pra compartilhar conquista no LinkedIn com hashtags.</div></div>
-</div>
-  </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Filtros disponíveis</div>
-    <div class="filters-grid"><div class="filter-item">
-  <div class="filter-header">
-    <div class="filter-name">Modelo de Certificado</div>
-    <div class="filter-en">Template</div>
-    <div class="filter-type required">principal</div>
-  </div>
-  <div class="filter-body">
-    <div class="filter-desc">Modelo específico do certificado.</div>
-    <div class="filter-impact"><strong>Impacto:</strong> Cada curso tem modelo próprio. Crie um por produto pra granularidade máxima.</div>
-  </div>
-</div>
-<div class="filter-item">
-  <div class="filter-header">
-    <div class="filter-name">Campos Customizados</div>
-    <div class="filter-en">Custom Fields</div>
-    <div class="filter-type">condicional</div>
-  </div>
-  <div class="filter-body">
-    <div class="filter-desc">Refinamento.</div>
-    <div class="filter-impact"><strong>Impacto:</strong> Segmentação fina.</div>
-  </div>
-</div>
-</div>
-  </div>
-
-  <div class="tblock">
-  <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-  <div class="ghl-mockup" data-mockup="g1">
-    <div class="ghl-toolbar">
-      <div class="ghl-workflow-name">/Certificados/ 01 — Conclusão Marketing Digital · Celebração + Indicação</div>
-      <div class="ghl-toolbar-right">
-        <button class="ghl-btn play" data-play="g1">▶ Reproduzir montagem</button>
-        <button class="ghl-btn">Save</button>
-        <button class="ghl-btn primary">Publish</button>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Resumo diário de vendas</div>
+        <div class="use-case-desc">Todo dia às 08h → busca oportunidades do dia anterior → envia relatório por email ou Slack para o time.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Limpeza semanal de pipeline</div>
+        <div class="use-case-desc">Todo domingo à meia-noite → move oportunidades paradas há mais de 14 dias para "Sem contato" e notifica o responsável.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Ping de webhook recorrente</div>
+        <div class="use-case-desc">A cada hora → dispara webhook pra sincronizar dados com planilha Google ou sistema externo sem intervenção manual.</div>
       </div>
     </div>
-    <div class="ghl-canvas"><div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-<div class="ghl-node" data-node-id="g1-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-  <span class="click-hint">clique para ver ↗</span>
-  <div class="ghl-node-header">
-    <div class="ghl-node-icon trigger">T</div>
-    <div><div class="ghl-node-type">Trigger · Certificate Issued</div><div class="ghl-node-title">Certificate Issued</div></div>
   </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Certificate Issued</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-</div>
-<div class="ghl-connector"></div>
-<div class="ghl-node" data-node-id="g1-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-  <span class="click-hint">clique para ver ↗</span>
-  <div class="ghl-node-header">
-    <div class="ghl-node-icon action-email">@</div>
-    <div><div class="ghl-node-type">Action · Communication</div><div class="ghl-node-title">Send Email</div></div>
-  </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Parabéns Certificação</span></div>
-<div class="ghl-node-param"><span class="pk">Inclui</span><span class="pv">Link PDF + social share</span></div>
-</div>
-</div>
-<div class="ghl-connector"></div>
-<div class="ghl-node" data-node-id="g1-3">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-  <span class="click-hint">clique para ver ↗</span>
-  <div class="ghl-node-header">
-    <div class="ghl-node-icon action-tag">#</div>
-    <div><div class="ghl-node-type">Action · Contact</div><div class="ghl-node-title">Add Contact Tag</div></div>
-  </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Contact Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Tag · Categorizar</span></div></div>
-</div>
-<div class="ghl-connector"></div>
-<div class="ghl-node" data-node-id="g1-4">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-  <span class="click-hint">clique para ver ↗</span>
-  <div class="ghl-node-header">
-    <div class="ghl-node-icon action-wait">⏱</div>
-    <div><div class="ghl-node-type">Action · Wait</div><div class="ghl-node-title">Wait</div></div>
-  </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Wait</span></div><div class="ghl-node-param"><span class="pk">Wait Type</span><span class="pv highlight">Wait For Time Delay</span></div><div class="ghl-node-param"><span class="pk">Duration</span><span class="pv highlight">1 hour</span></div></div>
-</div>
-<div class="ghl-connector"></div>
-<div class="ghl-node" data-node-id="g1-5">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-  <span class="click-hint">clique para ver ↗</span>
-  <div class="ghl-node-header">
-    <div class="ghl-node-icon action-email">@</div>
-    <div><div class="ghl-node-type">Action · Communication</div><div class="ghl-node-title">Send Email (Indicação)</div></div>
-  </div>
-  <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email (Indicação)</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email (Indicação)</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
-</div>
-<div class="config-panel">
-  <div class="config-header">
-    <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-    <button class="config-close">×</button>
-  </div>
-  <div class="config-body"></div>
-</div>
-</div>
-    <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-  </div>
-</div>
 
+  <div class="tblock">
+    <div class="tblock-label">Opções de intervalo disponíveis</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Hourly</div>
+          <div class="filter-en">Por hora</div>
+          <div class="filter-type required">intervalo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Roda a cada X horas. Ideal para sincronizações frequentes ou monitoramentos de curto prazo.</div>
+          <div class="filter-impact"><strong>Configuração:</strong> Escolha o intervalo em horas (ex: a cada 1h, a cada 4h).</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Daily</div>
+          <div class="filter-en">Diário</div>
+          <div class="filter-type required">intervalo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Roda uma vez por dia no horário definido. O mais usado para relatórios e resumos matinais.</div>
+          <div class="filter-impact"><strong>Configuração:</strong> Horário de disparo + opção de pular fins de semana (Skip Weekends).</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Weekly</div>
+          <div class="filter-en">Semanal</div>
+          <div class="filter-type">intervalo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Roda em dia(s) específico(s) da semana. Ideal para limpezas de pipeline ou relatórios semanais.</div>
+          <div class="filter-impact"><strong>Configuração:</strong> Selecione os dias da semana + horário de disparo.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Monthly</div>
+          <div class="filter-en">Mensal</div>
+          <div class="filter-type">intervalo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Roda em dia específico do mês. Para fechamentos mensais, renovações e ciclos de faturamento.</div>
+          <div class="filter-impact"><strong>Configuração:</strong> Dia do mês (1–28) + horário de disparo.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Specific Date</div>
+          <div class="filter-en">Data Específica</div>
+          <div class="filter-type">intervalo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Roda uma única vez na data e hora definidas. Útil para campanhas pontuais ou ações programadas.</div>
+          <div class="filter-impact"><strong>Configuração:</strong> Data completa (dia/mês/ano) + horário exato.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Custom Cron</div>
+          <div class="filter-en">Expressão Cron</div>
+          <div class="filter-type">intervalo</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Controle total via expressão cron (ex: <code style="font-family:monospace;background:rgba(0,0,0,0.06);padding:1px 4px;">0 9 * * 1-5</code> = toda seg–sex às 09h). Para casos avançados que os outros intervalos não cobrem.</div>
+          <div class="filter-impact"><strong>Configuração:</strong> Campo de texto livre com a expressão cron no formato padrão Unix.</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g1">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Agendador/ Relatório Diário de Pipeline — Todo dia às 08h</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g1">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
 
-  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G1 ═════════════════════ -->
+        <div class="ghl-node" data-node-id="g1-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div><div class="ghl-node-type">Trigger · Workflow Scheduler</div><div class="ghl-node-title">Agendador de Workflow</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Interval</span><span class="pv highlight">Daily</span></div>
+            <div class="ghl-node-param"><span class="pk">Time</span><span class="pv highlight">08:00 AM</span></div>
+            <div class="ghl-node-param"><span class="pk">Skip Wknds</span><span class="pv">Off</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-webhook">W</div>
+            <div><div class="ghl-node-type">Action · Webhook</div><div class="ghl-node-title">Webhook</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">URL</span><span class="pv highlight">https://hook.make.com/...</span></div>
+            <div class="ghl-node-param"><span class="pk">Method</span><span class="pv">POST</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+
+        <div class="ghl-node" data-node-id="g1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">!</div>
+            <div><div class="ghl-node-type">Action · Communication</div><div class="ghl-node-title">Internal Notification</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Para</span><span class="pv highlight">lucas@magneticflows.com.br</span></div>
+            <div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Relatório diário enviado ✓</span></div>
+          </div>
+        </div>
+
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- HL CONFIG PANEL -->
   <div class="tblock">
     <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
     <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
-      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho Agendador. Configure o intervalo e o sistema pré-visualiza as próximas execuções.
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Único filtro: <span class='arrow'>→</span> <strong>Certificate</strong> dropdown lista templates de certificados.</div>
+        <div class="hl-canvas-hint">
+          <strong>Workflow Scheduler</strong> é o único gatilho sem contato. Escolha o intervalo <span class="arrow">→</span> defina o horário <span class="arrow">→</span> o sistema mostra preview das próximas 5 execuções antes de salvar.
+        </div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Trigger Configuration</span>
-              <span>Certificate Issued</span>
+              <span>Workflow Scheduler</span>
             </div>
           </div>
           <div class="hl-panel-body">
-      <div class="hl-field-group">
-        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
-        <input class="hl-input" value="Certificate Issued" readonly>
-      </div>
+            <div class="hl-field-group">
+              <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+              <input class="hl-input" value="Relatório Diário de Pipeline" readonly>
+            </div>
 
-      <div class="hl-section-head">Filters</div>
+            <div class="hl-section-head">Schedule Settings</div>
 
-      <div class="hl-filter-row">
-        <div class="hl-filter-label">Certificate <span class="req">*</span></div>
-        <div class="hl-dropdown has-value">Certificado · Curso HighLevel Pro</div>
-      </div>
+            <div class="hl-field-group">
+              <div class="hl-field-label">Interval <span class="req">*</span></div>
+              <div class="hl-dropdown has-value">Daily</div>
+            </div>
 
-      <button class="hl-add-filter">+ Add Filters</button>
-    </div>
+            <div class="hl-field-group">
+              <div class="hl-field-label">Time <span class="req">*</span></div>
+              <div class="hl-dropdown has-value">08:00 AM</div>
+            </div>
+
+            <div class="hl-field-group">
+              <div class="hl-field-label">Skip Weekends</div>
+              <div class="hl-toggle-row">
+                <span>Pular sábado e domingo</span>
+                <div class="hl-toggle"></div>
+              </div>
+            </div>
+
+            <div class="hl-field-group">
+              <div class="hl-field-label">Stop On (opcional)</div>
+              <div class="hl-dropdown placeholder">Selecionar data de encerramento...</div>
+            </div>
+
+            <div class="hl-section-head">Next 5 Runs (preview)</div>
+
+            <div class="hl-runs-preview">
+              <div class="run-row"><span><span class="run-num">#1</span>01 Jul 2026</span><span>08:00 AM</span></div>
+              <div class="run-row"><span><span class="run-num">#2</span>02 Jul 2026</span><span>08:00 AM</span></div>
+              <div class="run-row"><span><span class="run-num">#3</span>03 Jul 2026</span><span>08:00 AM</span></div>
+              <div class="run-row"><span><span class="run-num">#4</span>04 Jul 2026</span><span>08:00 AM</span></div>
+              <div class="run-row"><span><span class="run-num">#5</span>05 Jul 2026</span><span>08:00 AM</span></div>
+            </div>
+          </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
             <button class="hl-btn-save">Save Trigger</button>
@@ -2578,28 +2372,29 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Dispara quando um certificado é emitido para o aluno</strong>
+        <strong>Gatilho sem contato — roda no horário, independente de qualquer ação de lead</strong>
       </div>
     </div>
   </div>
 
 </div>
+
 <!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
-  <a href="guia-highlevel-cat11.html" class="cat-nav-link prev">
-    <span class="cat-nav-label">← Anterior · Categoria 11</span>
-    <span class="cat-nav-name">Comunidades</span>
+  <a href="guia-highlevel-cat12.html" class="cat-nav-link prev">
+    <span class="cat-nav-label">← Anterior · Categoria 12</span>
+    <span class="cat-nav-name">Certificados</span>
   </a>
-  <a href="guia-highlevel-cat13.html" class="cat-nav-link next">
-    <span class="cat-nav-label">Próxima · Categoria 13 →</span>
-    <span class="cat-nav-name">Agendador</span>
+  <a href="index.html" class="cat-nav-link next">
+    <span class="cat-nav-label">Fim · Voltar →</span>
+    <span class="cat-nav-name">Índice completo</span>
   </a>
 </nav>
 
 <div class="guide-footer">
   <div class="footer-top">
-    <h3>Categoria 12 completa.</h3>
-    <p>1 gatilhos de Certificados explicados com impacto prático e mockups visuais.</p>
+    <h3>Categoria 13 completa.</h3>
+    <p>O gatilho Agendador de Workflow explicado com configurações práticas e mockup interativo.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -2614,22 +2409,19 @@
   <div class="footer-links-grid">
     <a href="https://gokollab.com/highlevelbrasil" target="_blank" class="footer-link-card"><span class="footer-link-tag">Grátis</span><span class="footer-link-title">Comunidade Magnetic Flows</span><span class="footer-link-desc">Entre pra comunidade e aprenda com outros usuários.</span><span class="footer-link-arrow">Entrar →</span></a>
     <a href="https://chat.whatsapp.com/JGPLBTmaTLq7do2FqfjALQ" target="_blank" class="footer-link-card"><span class="footer-link-tag">WhatsApp</span><span class="footer-link-title">Grupo Oficial WhatsApp</span><span class="footer-link-desc">Dicas diárias direto no celular.</span><span class="footer-link-arrow">Entrar →</span></a>
-    
     <a href="https://br.magneticfunnels.io" target="_blank" class="footer-link-card"><span class="footer-link-tag">Assinatura</span><span class="footer-link-title">Magnetic Funnels Premium</span><span class="footer-link-desc">Suporte dedicado e mentorias mensais.</span><span class="footer-link-arrow">Assinar →</span></a>
   </div>
 
-  <div class="footer-legal">Guia produzido pela Magnetic Funnels · Categoria 12 de 12 · Atualizado em 2026</div>
+  <div class="footer-legal">Guia produzido pela Magnetic Funnels · Categoria 13 de 13 · Atualizado em 30/06/2026</div>
 </div>
 
 </main>
 </div>
 <script>
   const configData = {
-    'g1-1': { kind: 'Trigger · Certificate Sent', title: 'Certificate Sent', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Certificado enviado — celebrar + upsell</div></div><div class="config-section"><div class="config-label">Certificate Type *</div><div class="config-field highlight dropdown">Certificado de Conclusão</div></div><div class="config-section"><div class="config-label">Course/Product *</div><div class="config-field dropdown">Marketing Digital Avançado</div></div>` },
-    'g1-2': { kind: 'Action · Send Email', title: 'Send Email (parabéns + LinkedIn share)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email parabéns + sugestão de share LinkedIn</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">cursos@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">🏆 {{contact.first_name}}, seu certificado de {{course.name}} chegou!</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Certificado + Sugestão LinkedIn Share</div></div><div class="config-section"><div class="config-label">Attachments</div><div class="config-field">{{certificate.pdf_url}} + linkedin-share-link.txt</div></div>` },
-    'g1-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tag alumni certificado</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Alumni Certificado</span> <span class="opt-chip">Concluiu Curso Avançado</span></div></div>` },
-    'g1-4': { kind: 'Action · Wait', title: 'Wait (7 dias)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aguardar 7 dias antes do upsell</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait For Time Delay</div></div><div class="config-section"><div class="config-label">Duration *</div><div class="config-field highlight">7 days</div></div>` },
-    'g1-5': { kind: 'Action · Send Email', title: 'Send Email (upsell pro próximo nível)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Upsell próximo nível de curso</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">cursos@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Próximo nível: especialização avançada</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Upsell Especialização</div></div>` }
+    'g1-1': { kind: 'Trigger · Workflow Scheduler', title: 'Agendador de Workflow', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Relatório Diário de Pipeline</div></div><div class="config-section"><div class="config-label">Interval *</div><div class="config-field highlight dropdown">Daily</div></div><div class="config-section"><div class="config-label">Time *</div><div class="config-field highlight dropdown">08:00 AM</div></div><div class="config-section"><div class="config-label">Skip Weekends</div><div class="config-field">Off — roda todos os dias incluindo fins de semana</div></div><div class="config-section"><div class="config-label">Stop On</div><div class="config-field dropdown">Sem data de encerramento</div></div><div class="config-desc"><strong>Sem contato:</strong> esse gatilho não precisa de um lead pra disparar — o workflow inicia sozinho no horário definido.</div>` },
+    'g1-2': { kind: 'Action · Webhook', title: 'Webhook (busca dados do pipeline)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Buscar dados pipeline diário</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field highlight">https://hook.make.com/abc123xyz</div></div><div class="config-section"><div class="config-label">Headers</div><div class="config-field">Content-Type: application/json</div></div><div class="config-section"><div class="config-label">Body (JSON)</div><div class="config-field">{ "account": "magneticflows", "date": "{{now}}" }</div></div><div class="config-desc"><strong>Dica:</strong> aponte pra um cenário Make/n8n que consulta o GHL API, monta o relatório e envia por email ou Slack.</div>` },
+    'g1-3': { kind: 'Action · Communication', title: 'Internal Notification (confirmação)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Confirmar envio do relatório</div></div><div class="config-section"><div class="config-label">Type *</div><div class="config-field dropdown">Email</div></div><div class="config-section"><div class="config-label">To Email *</div><div class="config-field highlight">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">✓ Relatório diário enviado às {{now | time}}</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">O job de relatório diário de pipeline foi executado com sucesso.</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
@@ -2723,7 +2515,6 @@
 
   overlay.addEventListener('click', toggleDrawer);
 
-  // Fechar drawer ao clicar em link da sidebar (mobile)
   document.querySelectorAll('aside .side-link').forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 900) {
