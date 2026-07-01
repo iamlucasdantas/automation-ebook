@@ -68,3 +68,29 @@ sem ver a UI real, quebraria esse padrão. Meu recomendo:
    nav de todas as páginas com as novas categorias.
 
 Até lá, este arquivo é o backlog priorizado do que falta.
+
+## Addendum — mais candidatas (Pagamentos, Afiliados)
+
+Uma segunda leva de sub-agentes (varredura por categoria: Pagamentos,
+Afiliados, Comunidades, Cursos) trouxe mais candidatas depois do corte
+inicial acima. Mesmo aviso de confiança (snippet de busca, não
+verificado contra a UI real):
+
+| Nome (EN) | Categoria sugerida | Confiança | Nota |
+|---|---|:-:|---|
+| **Send Invoice** | CAT08 Pagamentos | 🟡 Média | Checar se não é o mesmo fluxo da nossa "Create Invoice" (a1) já catalogada |
+| **Send Recurring Invoice** | CAT08 Pagamentos | 🟡 Média | Cobrança recorrente automatizada |
+| **Stripe One Time Charge** | CAT08 Pagamentos | 🟡 Média | Cobrança avulsa direto via Stripe |
+| **Update Affiliate** (Active/Inactive) | CAT10 Afiliados | 🟡 Média | Ativar/desativar afiliado |
+| **Add Leads Under an Affiliate** | CAT10 Afiliados | 🟡 Média | Atribui leads a um afiliado específico |
+| **Add Manual Sales For An Affiliate** | CAT10 Afiliados | 🟡 Média | Lança venda manual pro afiliado |
+
+**Discrepância pra verificar:** essa varredura reportou "nenhuma ação
+nativa de Cancel/Pause Subscription existe — só pedido de feature em
+aberto", o que contradiz nossa "Cancelar Subscription" (CAT08 a5) já
+catalogada. Pode ser que a a5 esteja com nome/comportamento errado desde
+sempre (o `AUDIT.md` já marcava os itens de pagamento como parcialmente
+"sem doc dedicada") — **confirmar contra a UI real antes de mexer**.
+
+Certificados, IVR e Reviews foram reconfirmados como já corretos por essa
+segunda leva também — nada novo lá além do que já está listado acima.
