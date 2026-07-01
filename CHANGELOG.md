@@ -10,6 +10,30 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-01 — Automation
+**Fix stale counts from the cat07 A10 addition + scout for new native triggers/actions**
+
+- `deploy-highlevel/search-index.json` was still 185 entries (missing A10
+  "Add Follower(s) to Opportunity" and carrying the pre-rename "Assign
+  Opportunity Owner" label) — regenerated via `build-search-index.py`,
+  now 186 entries (76 gatilhos + 110 ações).
+- `deploy-highlevel/index.html` hero stats, tab counts, section labels and
+  the cat07 ações card were still showing 109 ações / 185 painéis —
+  updated to 110 / 186, plus a "última atualização" date in the footer.
+- `AUDIT.md` cat07 summary row updated (10 items, A7 rename now applied).
+- Researched `help.gohighlevel.com` + `ideas.gohighlevel.com` for native
+  triggers/actions shipped since the last audit that aren't in our
+  catalog yet. Found a real backlog — a new Companies (B2B) object,
+  Custom Objects triggers, a contactless Scheduler trigger, an
+  e-commerce Product Review trigger, and several new Workflow AI
+  actions (AI Agent, Invoke Agent Studio Agent, AI Data Extract, Mistral
+  AI actions) plus cross-object actions (Add/Remove Associated Records,
+  Find Company/Object Record) and a plain **Book Appointment** action gap.
+  Logged with sources and confidence levels in
+  [NEW-FEATURES-AUDIT.md](./NEW-FEATURES-AUDIT.md) — needs a human pass
+  against the live HL UI before building the fidelity-matched pages, same
+  as the existing `AUDIT.md` review gate.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

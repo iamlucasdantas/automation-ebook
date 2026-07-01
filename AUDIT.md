@@ -20,7 +20,7 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 | **Ações cat04** (Workflow logic) | ✅ | 17 | 17 |
 | **Ações cat05** (AI) | ✅ | 5 | 5 (2 renames recomendados) |
 | **Ações cat06** (Appointments) | ✅ | 3 | 2 (A2 sem doc) |
-| **Ações cat07** (Opportunities) | ✅ | 9 | 5 (2 renames + 2 sem doc) |
+| **Ações cat07** (Opportunities) | ✅ | 10 | 6 (1 rename + 4 sem doc) |
 | **Ações cat08** (Payments) | ✅ | 5 | 3 (2 sem doc dedicada) |
 | **Ações cat09** (Campaigns) | ✅ | 5 | 5 (campaigns deprecadas pra workflows) |
 | **Ações cat10** (Affiliates) | ✅ | 6 | 4 (A4/A5 sem doc) |
