@@ -10,6 +10,32 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-02 — Content
+**Sync homepage stats with actual guide content (76 gatilhos, 110 ações)**
+
+- `index.html` hero stats, tab counts, section labels and the cat07 ações
+  card still said 109 ações / 185 painéis — stale since the 2026-06-20
+  commit added Opportunities A10 (Add Follower(s) to Opportunity) without
+  touching the homepage. Corrected to 110 ações / 186 painéis.
+- `acoes-highlevel-cat07.html` sidebar label, hero description and footer
+  still said "9 ações" — corrected to 10.
+- `search-index.json` regenerated (186 entries, already matched the real
+  file content — only the homepage was out of sync).
+- Added a "Última atualização" line to the homepage footer.
+- Researched whether HighLevel shipped new native triggers/actions since
+  the last audit. WebSearch surfaced plausible candidates (Workflow
+  Scheduler trigger, AI Agent action, Estimate trigger, Custom Objects
+  category) with help.gohighlevel.com article URLs, but direct fetch of
+  those URLs is blocked (403) so none could be independently confirmed.
+  Notably, near-identical claims about a "Scheduler" trigger and "AI
+  Agent" action appear in Google Drive reports from four earlier runs of
+  this same audit routine (06/12, 06/13, 06/18, 06/19) — each with
+  different specifics and category placements — and none of them were
+  ever committed to this repo. Given that pattern, no new triggers/actions
+  were added this run; see the Drive report for details and a
+  recommendation to verify directly in a live HighLevel account before
+  adding anything.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
