@@ -10,6 +10,25 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-03 — Automation
+**Gap check for new native HL triggers/actions + homepage resync**
+([289caca](../../commit/289caca))
+
+- `search-index.json` was stale since the cat07 A10 commit — rebuilt,
+  now 76 gatilhos + 110 ações = 186 entries.
+- `index.html` hero stats, meta descriptions, tab counts, section
+  labels, and the cat07 card were still showing 109/185 — fixed to
+  110/186. Added a "last updated" line to the footer.
+- Ran a WebSearch pass against `help.gohighlevel.com` / changelog for
+  native triggers/actions shipped since the June audit. Found real
+  candidates not yet in the guide — AI Agent, AI Extract Data, Invoke
+  Agent Studio Agent, the whole Custom Objects trigger/action family,
+  Inbound Email trigger, Product Review Submitted, Proposals and
+  Estimates. **Not added yet** — this environment can't fetch full HL
+  doc pages, so panel-field fidelity can't be verified. Logged in
+  [AUDIT.md](./AUDIT.md#-gap-check-2026-07-03--triggersações-nativos-que-o-guia-ainda-não-cobre)
+  for human verification before writing mockups.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

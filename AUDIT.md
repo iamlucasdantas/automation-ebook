@@ -3,6 +3,99 @@
 Auditoria contra `help.gohighlevel.com`. Aqui ficam os achados acionáveis.
 Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 
+## 🆕 Gap check 2026-07-03 — triggers/ações nativos que o guia AINDA NÃO cobre
+
+Rodada de pesquisa (WebSearch, sem acesso de página completa a
+`help.gohighlevel.com` neste ambiente — só snippets) pra achar o que o HL
+lançou de nativo desde a última auditoria (jun/2026) e que os 76
+gatilhos + 110 ações atuais não cobrem. **Nada foi adicionado ao guia
+ainda** — os itens abaixo precisam de alguém abrindo o HL real (ou pelo
+menos a página completa do artigo) pra confirmar nome exato e campos do
+painel antes de virar mockup, porque o guia inteiro é vendido em cima de
+"fidelidade total à interface real" e eu não consigo validar isso sem
+acesso à página.
+
+### Confiança alta (nome + artigo oficial datado de 2026, claramente novo)
+
+**Ações**
+- **AI Agent** — ação autônoma multi-step: você descreve o objetivo em
+  linguagem natural, dá até 10 tools, ela planeja/decide/executa.
+  Premium, cobrada por execução. Diferente das AI actions que já
+  temos (Summarize/Intent Detection/Content Generation).
+  https://help.gohighlevel.com/support/solutions/articles/155000007600-workflow-action-ai-agent
+- **Invoke Agent Studio Agent** — chama um agente conversacional do
+  Agent Studio de dentro do workflow, usa a resposta dele nos passos
+  seguintes.
+  https://help.gohighlevel.com/support/solutions/articles/155000007402-workflow-action-invoke-agent-studio-agent
+- **AI Extract Data** — extrai variáveis tipadas (texto/email/telefone/
+  número/data) de texto não-estruturado via schema definido.
+  https://help.gohighlevel.com/support/solutions/articles/155000007992-workflow-action-ai-extract-data
+- **Custom Object actions** (família nova inteira) — Create/Update/
+  Clear Custom Object Record, Find Object Record/Find Company, e ações
+  cross-object (add/remove/find Contact/Company/Custom Object
+  relacionado por Association Label). Lançado como parte de "Custom
+  Objects are Live in Workflows", 27/mai/2026.
+  https://help.gohighlevel.com/support/solutions/articles/155000004389-using-custom-objects-in-workflow-actions-and-triggers
+  https://help.gohighlevel.com/support/solutions/articles/155000006701-custom-object-and-company-based-workflow-actions-triggers
+  https://help.gohighlevel.com/support/solutions/articles/155000006483-workflow-action-find-object-record-find-company
+
+**Gatilhos**
+- **Inbound Email** — dispara em qualquer email recebido, inclusive de
+  remetente que ainda não é contato no CRM (diferente de "Customer
+  Replied", que só pega resposta a algo que você mandou).
+  https://help.gohighlevel.com/support/solutions/articles/155000007650-workflow-trigger-inbound-email
+- **Custom Object Created / Updated / Deleted** — mesmo lançamento de
+  27/mai/2026 acima.
+- **Product Review Submitted** (E-commerce Stores) — dispara quando
+  cliente avalia produto na loja HL; carrega rating/título/comentário/
+  produto com filtros.
+  https://help.gohighlevel.com/support/solutions/articles/155000007386-workflow-trigger-product-review-submitted-for-e-commerce-stores-
+- **Proposals and Estimates** — ciclo de vida de documento (Sent/
+  Viewed/Signed/Completed) com filtros de Template/Recipient Type/Value.
+  https://help.gohighlevel.com/support/solutions/articles/155000001491-proposals-and-estimates-trigger-inside-workflows
+
+### Confiança média — pode já estar coberto de forma implícita, ou data incerta
+
+- **Workflow Scheduler Trigger** (cron/intervalo — hourly/daily/weekly/
+  monthly/one-off/advanced cron, sem contato associado). Artigo mostra
+  "last updated November 5, 2025" — pode já ser anterior à nossa
+  auditoria de jun/2026 e simplesmente não ter entrado na lista.
+  https://help.gohighlevel.com/support/solutions/articles/155000006653-workflow-trigger-scheduler
+- **Review Received** (Google/Facebook, contactless) e **New Affiliate
+  Sale(s)** — artigos reais existem, mas provavelmente já caem dentro
+  dos nossos buckets genéricos de "Campaign events"/"Affiliate events".
+- **Send Live Chat Message** / filtro Live Chat em Customer Replied —
+  real, mas talvez já coberto pela família genérica de "enviar
+  mensagem".
+
+### Checado e NÃO confirmado — não adicionar
+
+- **"Payment Failed" trigger** e **"Form Partially Completed" trigger**
+  só aparecem em blogs terceiros (rsla.io, softomatesolutions.com), não
+  em help.gohighlevel.com nem ideas.gohighlevel.com. Achamos inclusive
+  um *feature request* aberto ("Partial Survey Submission Workflow
+  Trigger") sugerindo que isso **ainda não existe** — contradiz o blog.
+- **"Membership access expiry" trigger** — não achamos como trigger
+  dedicado; provavelmente já coberto pelo filtro "Expired" do trigger
+  de Subscription que já temos.
+
+### Fora de escopo (não é nativo)
+
+Slack, Google Sheets, Asana, Basecamp, Airtable, Apify, Browse AI,
+Mistral AI, Fathom, Cal.com, Housecall Pro apareceram nos changelogs
+como integrações de Marketplace/Premium App — não contam como "nativo"
+pro critério deste guia.
+
+### Próximo passo
+
+Alguém confirma direto no HL (ou abre a página completa do artigo, já
+que este ambiente não tem acesso de fetch a `help.gohighlevel.com`) os
+campos reais do painel de cada item de confiança alta acima. Aí dá pra
+escrever os mockups no padrão gold-standard do guia (ver commit
+`2aa70e2` como referência de como um "ação nova" é adicionada). Sem
+isso, adicionar agora seria inventar campos — o oposto do que este
+guia se propõe a ser.
+
 ## Como cada item foi verificado
 
 - ✅ **Confirmado por WebSearch** — agente puxou resumo da página oficial e comparou
