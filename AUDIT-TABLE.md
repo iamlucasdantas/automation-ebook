@@ -234,8 +234,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | a1 | [Atualizar Status do Agendamento](acoes-highlevel-cat06.html#a1) | Update Appointment Status | 2 | 3/6 | 🟡 | [ ] | |
-| a2 | [Reassign Appointment](acoes-highlevel-cat06.html#a2) | Reassign Appointment | 3 | 2/6 | 🟡 | [ ] | |
-| a3 | [Cancelar Agendamento](acoes-highlevel-cat06.html#a3) | Cancel Appointment | 4 | 3/6 | 🟢 | [ ] | |
+| a2 | [Marcar Agendamento](acoes-highlevel-cat06.html#a2) | Book Appointment | 3 | 4/6 | 🟢 | [ ] | |
+| a3 | [Criar Nota no Agendamento](acoes-highlevel-cat06.html#a3) | Create Appointment Note | 3 | 1/6 | 🟡 | [ ] | |
 
 ### CAT07 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

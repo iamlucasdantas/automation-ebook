@@ -19,7 +19,7 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 | **Ações cat03** (Webhooks) | ✅ | 4 | 4 |
 | **Ações cat04** (Workflow logic) | ✅ | 17 | 17 |
 | **Ações cat05** (AI) | ✅ | 5 | 5 (2 renames recomendados) |
-| **Ações cat06** (Appointments) | ✅ | 3 | 2 (A2 sem doc) |
+| **Ações cat06** (Appointments) | ✅ | 3 | 3 (A2/A3 fake removidas, substituídas por Book Appointment + Create Appointment Note) |
 | **Ações cat07** (Opportunities) | ✅ | 9 | 5 (2 renames + 2 sem doc) |
 | **Ações cat08** (Payments) | ✅ | 5 | 3 (2 sem doc dedicada) |
 | **Ações cat09** (Campaigns) | ✅ | 5 | 5 (campaigns deprecadas pra workflows) |
@@ -79,7 +79,7 @@ oficial dedicado. Significa que ou (a) são features que rodam dentro de
 outras ações, (b) features novas/experimentais, ou (c) docs sparse:
 
 - **Cat04 A9 Cancel All Events** — sem doc dedicada
-- **Cat06 A2 Reassign Appointment** — sem doc dedicada
+- ~~Cat06 A2 Reassign Appointment~~ — **REMOVIDA** (usuário confirmou que não existe; substituída por Book Appointment). A antiga A3 Cancel Appointment também não existia (cancelar = Update Appointment Status → Cancelled) e virou Create Appointment Note
 - **Cat07 A3/A4 Move Pipeline/Between Pipelines** — provavelmente parte de Update Opportunity
 - **Cat07 A8/A9 Add/Remove Opportunity Tag** — sem doc dedicada
 - **Cat08 A1 Create Invoice** — só achou "Send Invoice" e "Send Recurring Invoice"
