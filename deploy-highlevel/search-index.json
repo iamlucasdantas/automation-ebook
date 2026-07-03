@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 185,
+  "total": 186,
   "items": [
     {
       "id": "g1",
@@ -1033,7 +1033,7 @@
       "id": "g4",
       "type": "Gatilho",
       "name": "Remoção de Acesso a Canal Privado",
-      "en": "Private Channel Access Removed",
+      "en": "Private Channel Access Revoked",
       "category": "Canais Privados",
       "tags": [
         "Tempo real",
@@ -2035,12 +2035,12 @@
     {
       "id": "a7",
       "type": "Ação",
-      "name": "Atribuir Dono da Opp",
-      "en": "Assign Opportunity Owner",
+      "name": "Adicionar Dono à Oportunidade",
+      "en": "Add Owner to Opportunity",
       "category": "Ação",
       "tags": [],
       "description": "",
-      "keywords": "atribuir dono da opp assign opportunity owner",
+      "keywords": "adicionar dono à oportunidade add owner to opportunity",
       "href": "acoes-highlevel-cat07.html#a7"
     },
     {
@@ -2064,6 +2064,17 @@
       "description": "",
       "keywords": "remover tag da opp remove opportunity tag",
       "href": "acoes-highlevel-cat07.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Adicionar Seguidores à Oportunidade",
+      "en": "Add Follower(s) to Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
+      "href": "acoes-highlevel-cat07.html#a10"
     },
     {
       "id": "a1",
