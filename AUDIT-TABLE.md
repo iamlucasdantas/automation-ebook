@@ -10,7 +10,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 30 | 46 | 0 | **76** |
+| Gatilhos | 31 | 46 | 0 | **77** |
 | Ações | 33 | 74 | 3 | **110** |
 
 
@@ -53,6 +53,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g16 | [Nova Avaliação Recebida](guia-highlevel-cat02.html#g16) | New Review Received | 3 | 3/6 | 🟢 | [ ] | |
 | g17 | [Novo Prospecto](guia-highlevel-cat02.html#g17) | Prospect Generated | 3 | 3/6 | 🟢 | [ ] | |
 | g18 | [Transcript Gerado](guia-highlevel-cat02.html#g18) | Transcript Generated | 4 | 2/6 | 🟡 | [ ] | |
+| g19 | [Agendador (Scheduler)](guia-highlevel-cat02.html#g19) | Scheduler | 6 | 3/6 | 🟢 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

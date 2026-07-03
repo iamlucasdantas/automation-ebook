@@ -2423,6 +2423,11 @@
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
   </nav>
 
+  <div class="side-section-label">Programado</div>
+  <nav class="side-nav">
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Agendador (Scheduler)</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        ============================================================ -->
@@ -6747,6 +6752,246 @@
     </div>
   </div>
 
+</div><div class="trigger-block" id="g19" data-name="agendador scheduler cron programado recorrente horário">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Programado</div>
+      <h2 class="trigger-name">Agendador (Scheduler)</h2>
+      <div class="trigger-en">Scheduler</div>
+      <div class="trigger-tags"><span class="info-tag">Contactless</span><span class="info-tag">Recorrente</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara o workflow num horário programado — de hora em hora, diário, semanal, mensal, numa data específica ou via expressão cron. É o único gatilho puramente de relógio do HighLevel: nenhum evento de contato precisa acontecer.</p>
+      <p>⚠ É um workflow <strong>contactless</strong> — não existe contato no contexto, então merge fields <code>{{contact.*}}</code> ficam indisponíveis. Combina com ações que não dependem de contato: Webhook de Saída, Google Sheets, Slack, Notificação Interna, Custom Values e criação de tarefas.</p>
+      <p>Todos os horários seguem o <strong>fuso horário da conta</strong>. Cron não pode rodar mais de 1x por hora.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Relatório diário no Slack</div><div class="use-case-desc">Todo dia 08:00 → webhook manda resumo de leads/vendas do dia anterior pro canal do time.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Sync semanal de planilha</div><div class="use-case-desc">Segunda 07:00 → Google Sheets recebe snapshot de métricas pra reunião de kickoff.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Ping de health-check</div><div class="use-case-desc">De hora em hora → webhook pinga sistema externo confirmando que a automação tá viva.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Frequência</div>
+    <div class="filter-en">Schedule Type</div>
+    <div class="filter-type">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Hourly, Daily, Weekly, Monthly, Specific Date/Time ou Custom (cron). Daily e Custom aceitam múltiplos horários.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Define a cadência inteira do workflow — do ping de hora em hora ao fechamento mensal.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Horário / Dia</div>
+    <div class="filter-en">Time · Day Selection</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Muda conforme a frequência: hora(s) do dia, dias da semana, dia do mês ou enésimo dia útil (ex.: 2ª sexta-feira).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Suporta padrões reais de negócio tipo "toda 2ª sexta do mês".</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Expressão Cron</div>
+    <div class="filter-en">Cron Expression</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Aparece quando Frequência = Custom. Formato padrão de 5 campos (minuto hora dia mês dia-da-semana) com listas, ranges e steps. Mínimo: 1x por hora.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Cadências complexas — "seg/qua/sex às 9h e 15h" em uma linha.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Pular Fins de Semana</div>
+    <div class="filter-en">Skip Weekends</div>
+    <div class="filter-type">avançado</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Toggle em Advanced Settings — execuções que caírem em sábado/domingo são puladas.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Relatório diário sem spam no fim de semana.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Parar Em</div>
+    <div class="filter-en">Stop On</div>
+    <div class="filter-type">avançado</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Data de término opcional — o agendamento desativa sozinho depois dela.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Campanhas com prazo definido não precisam de desligamento manual.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Conferir Agendamento</div>
+    <div class="filter-en">Check Trigger Schedule</div>
+    <div class="filter-type">preview</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Botão que mostra as próximas 5 execuções calculadas antes de publicar.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Valida o cron/cadência sem esperar o primeiro disparo real.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g19">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Programado/ 19 — Relatório Diário 08:00 → Slack</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g19">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Scheduler</div>
+              <div class="ghl-node-title">Scheduler</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Frequency</span><span class="pv highlight">Daily · 08:00</span></div><div class="ghl-node-param"><span class="pk">Skip Weekends</span><span class="pv">🟢 ON</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-webhook">⚡</div>
+            <div>
+              <div class="ghl-node-type">Action · Webhook</div>
+              <div class="ghl-node-title">Webhook · Relatório Slack</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Relatório diário pro Slack</span></div><div class="ghl-node-param"><span class="pk">URL</span><span class="pv">hooks.slack.com/services/T.../B...</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Notificar time comercial</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Aviso interno · relatório postado</span></div><div class="ghl-node-param"><span class="pk">Type</span><span class="pv">In-App + Email</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G19 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Workflow <strong>contactless</strong> — sem <code>{{contact.*}}</code>. <span class='arrow'>→</span> <strong>Schedule Type</strong> muda os campos abaixo dele (lógica condicional). <span class='arrow'>→</span> <strong>Check Trigger Schedule</strong> mostra as próximas 5 execuções antes de publicar.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Scheduler</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Relatório diário 08:00" readonly>
+      </div>
+
+      <div class="hl-section-head">Schedule</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Schedule Type <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Daily</div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">Opções do dropdown</div>
+          <div class="field-spec-val" style="margin-top:4px;">
+            <span class="opt-chip">Hourly</span>
+            <span class="opt-chip">Daily</span>
+            <span class="opt-chip">Weekly</span>
+            <span class="opt-chip">Monthly</span>
+            <span class="opt-chip">Specific Date/Time</span>
+            <span class="opt-chip">Custom (Cron)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Time(s) <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">08:00</div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">⚡ Daily e Custom aceitam múltiplos horários (+ Add Time). Fuso horário da conta.</div>
+        </div>
+      </div>
+
+      <div class="hl-section-head">Advanced Settings</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Skip Weekends</div>
+        <div class="hl-dropdown has-value">🟢 ON</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Stop On</div>
+        <div class="hl-dropdown placeholder">Data de término opcional</div>
+      </div>
+
+      <button class="hl-add-filter">🗓 Check Trigger Schedule — ver próximas 5 execuções</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Gatilho de relógio, contactless — cron limitado a 1x/hora. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000006653-workflow-trigger-scheduler" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-trigger-scheduler</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -6766,7 +7011,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>18 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>19 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6871,7 +7116,10 @@
     'g17-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Primeira impressão prospecto</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Soube que você passou pelo nosso site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Cold Outreach — Prospecto</div></div>` },
     'g18-1': { kind: 'Trigger · Transcript Generated', title: 'Transcript Generated', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Transcript Generated</div></div><div class="config-section"><div class="config-label">Call Type</div><div class="config-field dropdown">Normal Calls</div></div><div class="config-section"><div class="config-label">Call Direction</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Call Duration (s)</div><div class="config-field">120</div></div>` },
     'g18-2': { kind: 'Action · Workflow AI', title: 'AI · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI · Resumo da Call</div></div><div class="config-section"><div class="config-label">Prompt</div><div class="config-field">Resuma a conversa em 3 pontos: interesse, objeção e próximo passo.</div></div>` },
-    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` }
+    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` },
+    'g19-1': { kind: 'Trigger · Scheduler', title: 'Scheduler (Daily 08:00)', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Relatório diário 08:00</div></div><div class="config-section"><div class="config-label">Schedule Type *</div><div class="config-field highlight dropdown">Daily</div></div><div class="config-section"><div class="config-label">Time(s) *</div><div class="config-field dropdown">08:00 — fuso da conta</div></div><div class="config-section"><div class="config-label">Skip Weekends</div><div class="config-field">🟢 ON</div></div><div class="config-section"><div class="config-label">Stop On</div><div class="config-field">— (sem data de término)</div></div><div class="config-section"><div class="config-label">⚠ Contactless</div><div class="config-field">Sem contato no contexto — {{contact.*}} indisponível</div></div>` },
+    'g19-2': { kind: 'Action · Webhook', title: 'Webhook · Relatório Slack', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Relatório diário pro Slack</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field">hooks.slack.com/services/T.../B...</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">{"text": "📊 Relatório diário — {{custom_values.leads_ontem}} leads, {{custom_values.vendas_ontem}} vendas"}</div></div>` },
+    'g19-3': { kind: 'Action · Internal Notification', title: 'Notificar time comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso interno · relatório postado</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Comercial (5 usuários)</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Relatório diário postado no Slack #comercial às 08:00</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========
