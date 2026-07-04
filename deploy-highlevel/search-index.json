@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 185,
+  "total": 187,
   "items": [
     {
       "id": "g1",
@@ -425,6 +425,21 @@
       "description": "Dispara imediatamente após o HighLevel gerar o transcript (transcrição) de uma chamada. Funciona com Voice AI, IVR e chamadas normais via LC Phone.",
       "keywords": "transcript gerado transcript generated chamada ligação ia",
       "href": "guia-highlevel-cat02.html#g18"
+    },
+    {
+      "id": "g19",
+      "type": "Gatilho",
+      "name": "Agendador (Scheduler)",
+      "en": "Scheduler",
+      "category": "Programado",
+      "tags": [
+        "Contactless",
+        "Recorrente",
+        "Novo"
+      ],
+      "description": "Dispara o workflow num horário programado — de hora em hora, diário, semanal, mensal, numa data específica ou via expressão cron. É o único gatilho puramente de relógio do HighLevel: nenhum evento de contato precisa acontecer.",
+      "keywords": "agendador scheduler cron programado recorrente horário",
+      "href": "guia-highlevel-cat02.html#g19"
     },
     {
       "id": "g1",
@@ -1033,7 +1048,7 @@
       "id": "g4",
       "type": "Gatilho",
       "name": "Remoção de Acesso a Canal Privado",
-      "en": "Private Channel Access Removed",
+      "en": "Private Channel Access Revoked",
       "category": "Canais Privados",
       "tags": [
         "Tempo real",
@@ -1941,23 +1956,27 @@
     {
       "id": "a2",
       "type": "Ação",
-      "name": "Reassign Appointment",
-      "en": "Reassign Appointment",
+      "name": "Marcar Agendamento",
+      "en": "Book Appointment",
       "category": "Ação",
-      "tags": [],
+      "tags": [
+        "Novo"
+      ],
       "description": "",
-      "keywords": "reassign appointment reassign appointment",
+      "keywords": "marcar agendamento book appointment",
       "href": "acoes-highlevel-cat06.html#a2"
     },
     {
       "id": "a3",
       "type": "Ação",
-      "name": "Cancelar Agendamento",
-      "en": "Cancel Appointment",
+      "name": "Criar Nota no Agendamento",
+      "en": "Create Appointment Note",
       "category": "Ação",
-      "tags": [],
+      "tags": [
+        "Novo"
+      ],
       "description": "",
-      "keywords": "cancelar agendamento cancel appointment",
+      "keywords": "criar nota no agendamento create appointment note",
       "href": "acoes-highlevel-cat06.html#a3"
     },
     {
@@ -2035,12 +2054,12 @@
     {
       "id": "a7",
       "type": "Ação",
-      "name": "Atribuir Dono da Opp",
-      "en": "Assign Opportunity Owner",
+      "name": "Adicionar Dono à Oportunidade",
+      "en": "Add Owner to Opportunity",
       "category": "Ação",
       "tags": [],
       "description": "",
-      "keywords": "atribuir dono da opp assign opportunity owner",
+      "keywords": "adicionar dono à oportunidade add owner to opportunity",
       "href": "acoes-highlevel-cat07.html#a7"
     },
     {
@@ -2064,6 +2083,17 @@
       "description": "",
       "keywords": "remover tag da opp remove opportunity tag",
       "href": "acoes-highlevel-cat07.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Adicionar Seguidores à Oportunidade",
+      "en": "Add Follower(s) to Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
+      "href": "acoes-highlevel-cat07.html#a10"
     },
     {
       "id": "a1",
