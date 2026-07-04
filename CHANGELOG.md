@@ -10,6 +10,43 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-04 — Content
+**New-triggers/actions sweep against official HL docs — 7 native additions**
+
+- Routine check for native GHL triggers/actions shipped since the 2026-06-18
+  audit. Confirmed against help.gohighlevel.com articles (not training data)
+  before adding anything:
+  - **Call Details** (trigger, cat02/Comunicação) — richer successor to Call
+    Status; adds Custom Disposition filter. HL's own docs recommend migrating.
+  - **AI Agent** (action, cat05/Workflow AI) — autonomous multi-step agent
+    action; Premium.
+  - **Invoke Agent Studio Agent** (action, cat05/Workflow AI) — runs a
+    published Agent Studio agent from inside a workflow; Premium.
+  - **AI Decision Maker** (action, cat04/Ferramentas Internas) — plain-English
+    branching, alternative to nested If/Else; Premium.
+  - **Custom Code** (action, cat04/Ferramentas Internas) — runs real
+    JavaScript inside a workflow step, distinct from Custom API Call; Premium.
+  - **Log External Call** (action, cat02/Comunicação) — logs calls from
+    third-party dialers into the Conversations timeline.
+  - **Grant Community Group Leaderboard Points** (action, cat13/Comunidades)
+    — adds gamification points, distinct from the existing Assign Leaderboard
+    Level action which sets level directly.
+- Every addition got a full trigger-block/acao-block with filters, use
+  cases, an interactive mockup, and a gold-standard configData click panel
+  citing its official help.gohighlevel.com source.
+- Counts refreshed everywhere they're displayed: per-file hero stats/side-navs,
+  search-index.json (77→78 gatilhos, 110→116 ações, 187→194 total), and the
+  homepage (hero stats, tab counts, section labels, per-category cat-stats).
+- Regenerated `search-index.json`, which had drifted — it still listed two
+  cat06 actions (Reassign/Cancel Appointment) removed in the prior session.
+- Added a visible "last checked against official docs" date to the homepage
+  footer and hero.
+- Investigated and explicitly rejected as not-yet-confirmed-native: Payment
+  Failed / Form Partially Completed triggers (no dedicated official doc
+  found), and a growing set of premium first-party integrations (Google
+  Forms, Typeform, Vapi, Asana, etc.) — flagged for a future dedicated pass
+  rather than added speculatively.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

@@ -3,6 +3,34 @@
 Auditoria contra `help.gohighlevel.com`. Aqui ficam os achados acionáveis.
 Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 
+## 2026-07-04 — Varredura de novos gatilhos/ações nativos
+
+Rotina de verificação: comparar o guia (185 entries na última auditoria
+completa) contra o que a HighLevel lançou de novo desde 2026-06-18. Cada
+candidato foi checado contra artigo oficial do help.gohighlevel.com antes
+de entrar — nada foi adicionado só por aparecer num resumo de busca.
+
+**7 entries novas confirmadas e adicionadas** (ver CHANGELOG.md de
+2026-07-04 pros detalhes e fontes de cada uma): Call Details (gatilho),
+AI Agent, Invoke Agent Studio Agent, AI Decision Maker, Custom Code, Log
+External Call, Grant Community Group Leaderboard Points (ações).
+
+**Investigado e descartado** — não confirmado como nativo/dedicado o
+suficiente pra entrar:
+- "Payment Failed" e "Form Partially Completed" — apareceram em resumo de
+  busca por IA mas sem artigo oficial dedicado confirmando como gatilho
+  standalone; os gatilhos de Payment/Subscription já existentes com filtro
+  de status parecem ser o mecanismo real.
+- "Abandoned Checkout Trigger" — parece ser variação/rebrand do "Abandoned
+  Cart" já coberto, não um nó separado.
+- Integrações premium de primeira parte (Google Forms, Typeform, Google
+  Contacts, Vapi, Asana) — reais e nativas do Workflow Builder, mas a
+  lista tá crescendo rápido. Fica marcado como categoria "Integrações
+  Premium" pra uma auditoria dedicada futura, em vez de entrar aos poucos
+  sem critério.
+
+Total pós-adição: **194 entries** (78 gatilhos + 116 ações).
+
 ## Como cada item foi verificado
 
 - ✅ **Confirmado por WebSearch** — agente puxou resumo da página oficial e comparou

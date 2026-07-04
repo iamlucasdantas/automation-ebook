@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 187,
+  "total": 194,
   "items": [
     {
       "id": "g1",
@@ -440,6 +440,21 @@
       "description": "Dispara o workflow num horário programado — de hora em hora, diário, semanal, mensal, numa data específica ou via expressão cron. É o único gatilho puramente de relógio do HighLevel: nenhum evento de contato precisa acontecer.",
       "keywords": "agendador scheduler cron programado recorrente horário",
       "href": "guia-highlevel-cat02.html#g19"
+    },
+    {
+      "id": "g20",
+      "type": "Gatilho",
+      "name": "Detalhes da Ligação",
+      "en": "Call Details",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Telefonia",
+        "Novo"
+      ],
+      "description": "Versão mais nova e mais completa do gatilho de telefonia — dispara sempre que informações de uma chamada são atualizadas: status, direção, número/pool envolvido ou disposição customizada (as classificações de resultado que você mesmo cria, tipo \"Reagendou\", \"Não Interessado\", \"Fechou Venda\").",
+      "keywords": "detalhes ligação call details disposição customizada",
+      "href": "guia-highlevel-cat02.html#g20"
     },
     {
       "id": "g1",
@@ -1609,6 +1624,20 @@
       "href": "acoes-highlevel-cat02.html#a25"
     },
     {
+      "id": "a26",
+      "type": "Ação",
+      "name": "Registrar Ligação Externa",
+      "en": "Log External Call",
+      "category": "Ação",
+      "tags": [
+        "Telefonia",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "registrar ligação externa log external call",
+      "href": "acoes-highlevel-cat02.html#a26"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Webhook de Saída",
@@ -1875,6 +1904,36 @@
       "href": "acoes-highlevel-cat04.html#a17"
     },
     {
+      "id": "a18",
+      "type": "Ação",
+      "name": "AI Decision Maker",
+      "en": "AI Decision Maker",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai decision maker ai decision maker branches",
+      "href": "acoes-highlevel-cat04.html#a18"
+    },
+    {
+      "id": "a19",
+      "type": "Ação",
+      "name": "Custom Code",
+      "en": "Custom Code",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Técnico",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "custom code custom code javascript",
+      "href": "acoes-highlevel-cat04.html#a19"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Generate Text (Texto)",
@@ -1939,6 +1998,36 @@
       "description": "",
       "keywords": "classify ai classify",
       "href": "acoes-highlevel-cat05.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "AI Agent",
+      "en": "AI Agent",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai agent workflow ai agent autônomo",
+      "href": "acoes-highlevel-cat05.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Invoke Agent Studio Agent",
+      "en": "Invoke Agent Studio Agent",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "invoke agent studio agent",
+      "href": "acoes-highlevel-cat05.html#a7"
     },
     {
       "id": "a1",
@@ -2437,6 +2526,20 @@
       "description": "",
       "keywords": "publicar na comunidade post to community",
       "href": "acoes-highlevel-cat13.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Conceder Pontos de Leaderboard",
+      "en": "Grant Community Group Leaderboard Points",
+      "category": "Ação",
+      "tags": [
+        "Gamificação",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "conceder pontos de leaderboard grant community group leaderboard points gamificação",
+      "href": "acoes-highlevel-cat13.html#a7"
     },
     {
       "id": "a1",

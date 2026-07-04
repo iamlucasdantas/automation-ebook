@@ -2437,13 +2437,15 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Workflow AI · 5 ações</div>
+  <div class="side-section-label">Workflow AI · 7 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Generate Text (Texto)</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Parse Image (Analisar Imagem)</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Summarize Conversation</a>
     <a href="#a4" class="side-link"><span class="side-num">04</span>Extract Info</a>
     <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
+    <a href="#a6" class="side-link"><span class="side-num">06</span>AI Agent</a>
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Invoke Agent Studio Agent</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2462,10 +2464,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 05/14</span>
   <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 5 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação. Ainda experimental mas poderoso.</p>
+  <p class="hero-desc">As 7 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação e, agora, agentes autônomos multi-step. Ainda experimental mas poderoso.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">5</span>
+      <span class="hero-stat-num">7</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3231,6 +3233,265 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a6" data-name="ai agent workflow ai agent autônomo">
+  <div class="acao-head">
+    <div class="acao-num">06</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">AI Agent</h2>
+      <div class="acao-en">AI Agent</div>
+      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag">Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Automatiza tarefas de múltiplos passos com instruções em linguagem natural. Em vez de montar cada passo manualmente, você escreve instruções + escolhe quais ferramentas (tools) o agente pode usar, e ele decide sozinho o que fazer, qual ferramenta chamar e com quais dados — tudo dentro de um único step do workflow.</p>
+      <p>Ação Premium — cada execução pode envolver uma ou mais chamadas de modelo, e o custo depende do tamanho das instruções e de quantas tools o agente aciona.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case"><div class="use-case-label">Caso</div><div class="use-case-title">Qualificação flexível de lead</div><div class="use-case-desc">Agente analisa a conversa toda e decide sozinho entre tagear, notificar o time ou agendar follow-up — sem árvore de If/Else gigante.</div></div>
+      <div class="use-case"><div class="use-case-label">Caso</div><div class="use-case-title">Triagem multi-step</div><div class="use-case-desc">Recebe uma mensagem, decide se precisa buscar dados do contato, atualizar campo customizado e só depois responder — em uma única action.</div></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Instructions (o que fazer e como decidir), Model, Tools (quais ações o agente pode executar), Conversation Memory (resumo rolante das execuções anteriores pro mesmo contato).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a6">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ AI Agent · Triagem Autônoma de Lead</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a6">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a6-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Customer Replied</div>
+              <div class="ghl-node-title">Customer Replied</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Reply Channel</span><span class="pv highlight">WhatsApp</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a6-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">AI Agent</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Triagem autônoma</span></div><div class="ghl-node-param"><span class="pk">Tools</span><span class="pv">Add Tag, Assign to User, Internal Notification</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A6 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Instructions</strong> é o campo mais importante — define o que o agente decide e como. <span class='arrow'>→</span> <strong>Tools</strong> restringe o que ele pode executar.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>AI Agent</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Triagem autônoma de lead" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Instructions <span class="req">*</span></div><input class="hl-input" value="Leia a mensagem do lead. Se demonstrar urgência, notifique o time comercial. Se for dúvida simples, marque a tag Dúvida Respondida. Sempre atribua ao SDR round-robin."></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Model</div><div class="hl-dropdown has-value">GPT-4o</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Tools</div>
+<div class="hl-multiselect">
+<span class="hl-multiselect-chip">Add Tag</span>
+<span class="hl-multiselect-chip">Assign to User</span>
+<span class="hl-multiselect-chip">Internal Notification</span>
+<input class="hl-multiselect-input" placeholder="+ Tool"></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Conversation Memory</div><div class="hl-dropdown has-value">🟢 ON</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Planeja e executa multi-step de forma autônoma. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007600-workflow-action-ai-agent" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-ai-agent</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a7" data-name="invoke agent studio agent">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Invoke Agent Studio Agent</h2>
+      <div class="acao-en">Invoke Agent Studio Agent</div>
+      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag">Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Roda, a partir de dentro de um workflow, um agente já publicado no Agent Studio (o add-on de AI Employee). O agente executa em segundo plano (responde em até 60 segundos) e o resultado fica disponível pros passos seguintes do workflow — combina lógica de automação com raciocínio de agente e saída estruturada.</p>
+      <p>Pra usar esse fluxo, o agente no Agent Studio precisa ser construído com o trigger "Workflows" — é o modo pensado pra agentes chamados diretamente por uma ação de workflow.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case"><div class="use-case-label">Caso</div><div class="use-case-title">Análise de contexto reutilizável</div><div class="use-case-desc">Um mesmo agente já treinado no Agent Studio é invocado por vários workflows diferentes, sem duplicar prompt.</div></div>
+      <div class="use-case"><div class="use-case-label">Caso</div><div class="use-case-title">Geração de resposta estruturada</div><div class="use-case-desc">Agente devolve JSON que os próximos passos do workflow usam pra decidir a próxima ação.</div></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Agent (dropdown com os agentes publicados), Message/input variables (o que é enviado pro agente), Output Variable (onde a resposta fica disponível pros próximos passos).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a7">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Invoke Agent Studio · Classificação Reutilizável</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a7">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Form Submitted</div>
+              <div class="ghl-node-title">Form Submitted</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Form</span><span class="pv highlight">Diagnóstico de Maturidade Digital</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">Invoke Agent Studio Agent</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Agent</span><span class="pv highlight">Classificador de Maturidade Digital</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">agent.classificacao</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a7-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">👥</div>
+            <div>
+              <div class="ghl-node-type">Action · Contacts</div>
+              <div class="ghl-node-title">Update Contact Field</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Field</span><span class="pv highlight">Custom Field · maturidade_digital</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv">{{agent.classificacao}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A7 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Agent</strong> lista os agentes publicados no Agent Studio (precisam ter o trigger "Workflows"). <span class='arrow'>→</span> <strong>Output Variable</strong> fica disponível pros próximos steps.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Invoke Agent Studio Agent</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Classificar maturidade digital" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Agent <span class="req">*</span></div><div class="hl-dropdown has-value">Classificador de Maturidade Digital</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Message</div><input class="hl-input" value="{{form.respostas}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output Variable</div><input class="hl-input" value="agent.classificacao"></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Reusa um agente do Agent Studio de dentro do workflow. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007402-workflow-action-invoke-agent-studio-agent" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-invoke-agent-studio-agent</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3249,7 +3510,7 @@
 
   <div class="footer-top">
     <h3>Categoria 05 completa.</h3>
-    <p>5 ações de Workflow AI explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>7 ações de Workflow AI explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3372,7 +3633,12 @@
     'a4-3': { kind: 'Action · Update Contact', title: 'Update Contact Fields', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Preencher empresa + cargo + intenção</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · empresa</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{ai.extracao.empresa}}</div></div><div class="config-section"><div class="config-label">Additional Mapping</div><div class="config-field">cargo ← {{ai.extracao.cargo}} · intencao ← {{ai.extracao.intencao}} · urgencia ← {{ai.extracao.urgencia}}</div></div>` },
     'a5-1': { kind: 'Trigger · Customer Replied', title: 'Customer Reply', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Classificar resposta pra rotear</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field"><span class="opt-chip">SMS</span> <span class="opt-chip">WhatsApp</span> <span class="opt-chip">Email</span></div></div>` },
     'a5-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Classificar intenção da resposta</div></div><div class="config-section"><div class="config-label">Input Text *</div><div class="config-field highlight">{{trigger.reply_body}}</div></div><div class="config-section"><div class="config-label">Classes *</div><div class="config-field"><span class="opt-chip">Vendas</span> <span class="opt-chip">Suporte</span> <span class="opt-chip">Cobrança</span> <span class="opt-chip">Cancelamento</span></div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Classifique esta mensagem em UMA das classes. Retorne apenas o nome da classe.</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.categoria</div></div><div class="config-section"><div class="config-label">Confidence Threshold</div><div class="config-field">0.7 — abaixo disso vai pra triagem humana</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o-mini</div></div>` },
-    'a5-3': { kind: 'Action · Assign to User', title: 'Assign to Team (por classe)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Rotear pra time certo</div></div><div class="config-section"><div class="config-label">Assignment Logic</div><div class="config-field highlight">Vendas → SDR · Suporte → CS · Cobrança → Financeiro · Cancelamento → Retention</div></div><div class="config-section"><div class="config-label">Users *</div><div class="config-field"><span class="opt-chip">Time Vendas</span> <span class="opt-chip">Time CS</span> <span class="opt-chip">Time Financeiro</span> <span class="opt-chip">Time Retention</span></div></div><div class="config-section"><div class="config-label">Split Traffic</div><div class="config-field dropdown">Round-robin dentro do time</div></div>` }
+    'a5-3': { kind: 'Action · Assign to User', title: 'Assign to Team (por classe)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Rotear pra time certo</div></div><div class="config-section"><div class="config-label">Assignment Logic</div><div class="config-field highlight">Vendas → SDR · Suporte → CS · Cobrança → Financeiro · Cancelamento → Retention</div></div><div class="config-section"><div class="config-label">Users *</div><div class="config-field"><span class="opt-chip">Time Vendas</span> <span class="opt-chip">Time CS</span> <span class="opt-chip">Time Financeiro</span> <span class="opt-chip">Time Retention</span></div></div><div class="config-section"><div class="config-label">Split Traffic</div><div class="config-field dropdown">Round-robin dentro do time</div></div>` },
+    'a6-1': { kind: 'Trigger · Customer Replied', title: 'Customer Replied', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Triagem autônoma via AI Agent</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field"><span class="opt-chip">WhatsApp</span></div></div>` },
+    'a6-2': { kind: 'Action · Workflow AI', title: 'AI Agent', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Triagem autônoma de lead</div></div><div class="config-section"><div class="config-label">Instructions *</div><div class="config-field highlight">Leia a mensagem do lead. Se demonstrar urgência, notifique o time comercial. Se for dúvida simples, marque a tag Dúvida Respondida. Sempre atribua ao SDR round-robin.</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o</div></div><div class="config-section"><div class="config-label">Tools</div><div class="config-field"><span class="opt-chip">Add Tag</span> <span class="opt-chip">Assign to User</span> <span class="opt-chip">Internal Notification</span></div></div><div class="config-section"><div class="config-label">Conversation Memory</div><div class="config-field">🟢 ON</div></div>` },
+    'a7-1': { kind: 'Trigger · Form Submitted', title: 'Form Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Diagnóstico de Maturidade Digital</div></div><div class="config-section"><div class="config-label">Form *</div><div class="config-field highlight dropdown">Diagnóstico de Maturidade Digital</div></div>` },
+    'a7-2': { kind: 'Action · Workflow AI', title: 'Invoke Agent Studio Agent', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Classificar maturidade digital</div></div><div class="config-section"><div class="config-label">Agent *</div><div class="config-field highlight dropdown">Classificador de Maturidade Digital</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">{{form.respostas}}</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">agent.classificacao</div></div>` },
+    'a7-3': { kind: 'Action · Update Contact', title: 'Update Contact Field', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Salvar classificação do agente</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · maturidade_digital</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{agent.classificacao}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
