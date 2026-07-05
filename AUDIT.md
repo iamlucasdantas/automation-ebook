@@ -11,14 +11,19 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 
 ## Status geral
 
+_Atualizado em 2026-07-05 — checagem de novos gatilhos/ações nativos contra o changelog oficial do HighLevel. Achados: 1 novo gatilho (Google Forms) + 6 novas ações (4 Google Forms + AI Agent + Invoke Agent Studio Agent), todos confirmados nativos e já adicionados ao guia. Detalhes no [CHANGELOG.md](./CHANGELOG.md)._
+
 | Lote | Status | Itens | Confirmados |
 |------|--------|------:|-----------:|
-| **Gatilhos cat01-cat12** | ✅ | 76 | 76 |
+| **Gatilhos cat01-cat12** | ✅ | 77 | 77 |
+| **Gatilho cat02 novo** (Google Forms) | ✅ | 1 | 1 |
 | **Ações cat01** (Contact) | ✅ | 16 | 16 |
 | **Ações cat02** (Comunicação) | ✅ | 25 | 22 (3 c/ flag) |
 | **Ações cat03** (Webhooks) | ✅ | 4 | 4 |
+| **Ações cat03 novas** (Google Forms lookups) | ✅ | 4 | 4 |
 | **Ações cat04** (Workflow logic) | ✅ | 17 | 17 |
 | **Ações cat05** (AI) | ✅ | 5 | 5 (2 renames recomendados) |
+| **Ações cat05 novas** (AI Agent · Invoke Agent Studio Agent) | ✅ | 2 | 2 |
 | **Ações cat06** (Appointments) | ✅ | 3 | 3 (A2/A3 fake removidas, substituídas por Book Appointment + Create Appointment Note) |
 | **Ações cat07** (Opportunities) | ✅ | 9 | 5 (2 renames + 2 sem doc) |
 | **Ações cat08** (Payments) | ✅ | 5 | 3 (2 sem doc dedicada) |
@@ -28,7 +33,30 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 | **Ações cat12** (IVR) | ✅ | 5 | 4 (A4 rename) |
 | **Ações cat13** (Communities) | ✅ | 6 | 4 (A5/A6 sem doc) |
 | **Ações cat14** (Certificados) | ✅ | 1 | 1 |
-| **Total** | **✅** | **185** | **170/185 (92%)** |
+| **Total** | **✅** | **194** | **177/194 (91%)** |
+
+## ✅ Novidades adicionadas — checagem de 2026-07-05
+
+Rotina periódica: comparar o catálogo nativo atual do HighLevel (changelog +
+help.gohighlevel.com) contra o que já está no guia, e adicionar qualquer
+gatilho/ação nativa nova. Terceiros (Zapier/Make/Vapi/marketplace apps) ficam
+de fora — só entra o que aparece no seletor nativo "+ Add Trigger"/"+ Add Action"
+do Workflow Builder.
+
+- **Novo gatilho:** Google Forms — New or Updated Response (cat02 g20).
+  Requer conta Google conectada; polling ~5min, não é webhook em tempo real.
+- **Novas ações (4):** Google Forms — Find Form by ID / Find Form by Name /
+  Find Response by ID / Find Responses by Form Name (cat03 a5-a8). Ações de
+  lookup com branches Found/Not Found.
+- **Novas ações (2):** AI Agent (cat05 a6) — ação premium, autônoma,
+  multi-step, com Instructions + Tools + Output Format. Invoke Agent Studio
+  Agent (cat05 a7) — chama um agente já publicado no Agent Studio; requer
+  add-on AI Employee.
+- Todas confirmadas nativas via help.gohighlevel.com (não marketplace).
+  **Vapi** (voz por IA) apareceu numa busca relacionada mas foi **descartada**
+  por ser plataforma terceira — não é ação/gatilho nativo do builder.
+- `deploy-highlevel/search-index.json` regenerado (194 entries) e mockups
+  validados com Playwright.
 
 ## ✅ Fixes aplicados nesta auditoria
 

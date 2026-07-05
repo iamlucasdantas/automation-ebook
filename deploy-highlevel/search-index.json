@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 185,
+  "total": 194,
   "items": [
     {
       "id": "g1",
@@ -425,6 +425,36 @@
       "description": "Dispara imediatamente após o HighLevel gerar o transcript (transcrição) de uma chamada. Funciona com Voice AI, IVR e chamadas normais via LC Phone.",
       "keywords": "transcript gerado transcript generated chamada ligação ia",
       "href": "guia-highlevel-cat02.html#g18"
+    },
+    {
+      "id": "g19",
+      "type": "Gatilho",
+      "name": "Agendador (Scheduler)",
+      "en": "Scheduler",
+      "category": "Programado",
+      "tags": [
+        "Contactless",
+        "Recorrente",
+        "Novo"
+      ],
+      "description": "Dispara o workflow num horário programado — de hora em hora, diário, semanal, mensal, numa data específica ou via expressão cron. É o único gatilho puramente de relógio do HighLevel: nenhum evento de contato precisa acontecer.",
+      "keywords": "agendador scheduler cron programado recorrente horário",
+      "href": "guia-highlevel-cat02.html#g19"
+    },
+    {
+      "id": "g20",
+      "type": "Gatilho",
+      "name": "Google Forms — Nova ou Atualizada Resposta",
+      "en": "Google Forms — New or Updated Response",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Requer conexão Google",
+        "Polling ~5min",
+        "Novo"
+      ],
+      "description": "Dispara quando chega uma resposta nova (ou uma resposta editada, se você marcar essa opção) num Google Form que já está conectado à sua subconta. É a versão pra quem já tem formulários publicados no Google Forms — pesquisa de evento, cadastro de parceiro, briefing de cliente — e não quer recriar tudo dentro do form nativo do HighLevel só pra conseguir automatizar.",
+      "keywords": "google forms nova resposta atualizada resposta form externo",
+      "href": "guia-highlevel-cat02.html#g20"
     },
     {
       "id": "g1",
@@ -1033,7 +1063,7 @@
       "id": "g4",
       "type": "Gatilho",
       "name": "Remoção de Acesso a Canal Privado",
-      "en": "Private Channel Access Removed",
+      "en": "Private Channel Access Revoked",
       "category": "Canais Privados",
       "tags": [
         "Tempo real",
@@ -1647,6 +1677,66 @@
       "href": "acoes-highlevel-cat03.html#a4"
     },
     {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Encontrar Formulário por ID",
+      "en": "Google Forms — Find Form by ID",
+      "category": "Ação",
+      "tags": [
+        "Requer conexão Google",
+        "Found/Not Found",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "encontrar formulario por id google forms find form",
+      "href": "acoes-highlevel-cat03.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Encontrar Formulário por Nome",
+      "en": "Google Forms — Find Form by Name",
+      "category": "Ação",
+      "tags": [
+        "Requer conexão Google",
+        "Found/Not Found",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "encontrar formulario por nome google forms find form by name",
+      "href": "acoes-highlevel-cat03.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Encontrar Resposta por ID",
+      "en": "Google Forms — Find Response by ID",
+      "category": "Ação",
+      "tags": [
+        "Requer conexão Google",
+        "Found/Not Found",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "encontrar resposta por id google forms find response",
+      "href": "acoes-highlevel-cat03.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Encontrar Respostas por Nome do Formulário",
+      "en": "Google Forms — Find Responses by Form Name",
+      "category": "Ação",
+      "tags": [
+        "Requer conexão Google",
+        "Found/Not Found",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "encontrar respostas por nome do formulario google forms find responses",
+      "href": "acoes-highlevel-cat03.html#a8"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "If/Else",
@@ -1926,6 +2016,36 @@
       "href": "acoes-highlevel-cat05.html#a5"
     },
     {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Agente de IA",
+      "en": "AI Agent",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Multi-step",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai agent agente autonomo multi step ferramentas",
+      "href": "acoes-highlevel-cat05.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Chamar Agente do Agent Studio",
+      "en": "Invoke Agent Studio Agent",
+      "category": "Ação",
+      "tags": [
+        "Requer AI Employee add-on",
+        "Agent Studio",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "invoke agent studio agent chamar agente publicado ai employee",
+      "href": "acoes-highlevel-cat05.html#a7"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Atualizar Status do Agendamento",
@@ -1941,23 +2061,27 @@
     {
       "id": "a2",
       "type": "Ação",
-      "name": "Reassign Appointment",
-      "en": "Reassign Appointment",
+      "name": "Marcar Agendamento",
+      "en": "Book Appointment",
       "category": "Ação",
-      "tags": [],
+      "tags": [
+        "Novo"
+      ],
       "description": "",
-      "keywords": "reassign appointment reassign appointment",
+      "keywords": "marcar agendamento book appointment",
       "href": "acoes-highlevel-cat06.html#a2"
     },
     {
       "id": "a3",
       "type": "Ação",
-      "name": "Cancelar Agendamento",
-      "en": "Cancel Appointment",
+      "name": "Criar Nota no Agendamento",
+      "en": "Create Appointment Note",
       "category": "Ação",
-      "tags": [],
+      "tags": [
+        "Novo"
+      ],
       "description": "",
-      "keywords": "cancelar agendamento cancel appointment",
+      "keywords": "criar nota no agendamento create appointment note",
       "href": "acoes-highlevel-cat06.html#a3"
     },
     {
@@ -2035,12 +2159,12 @@
     {
       "id": "a7",
       "type": "Ação",
-      "name": "Atribuir Dono da Opp",
-      "en": "Assign Opportunity Owner",
+      "name": "Adicionar Dono à Oportunidade",
+      "en": "Add Owner to Opportunity",
       "category": "Ação",
       "tags": [],
       "description": "",
-      "keywords": "atribuir dono da opp assign opportunity owner",
+      "keywords": "adicionar dono à oportunidade add owner to opportunity",
       "href": "acoes-highlevel-cat07.html#a7"
     },
     {
@@ -2064,6 +2188,17 @@
       "description": "",
       "keywords": "remover tag da opp remove opportunity tag",
       "href": "acoes-highlevel-cat07.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Adicionar Seguidores à Oportunidade",
+      "en": "Add Follower(s) to Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
+      "href": "acoes-highlevel-cat07.html#a10"
     },
     {
       "id": "a1",

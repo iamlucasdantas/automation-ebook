@@ -2437,11 +2437,16 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Envio de Dados · 3 ações</div>
+  <div class="side-section-label">Envio de Dados · 8 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Webhook de Saída</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Google Sheets</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Enviar Dados pra API Custom</a>
+    <a href="#a4" class="side-link"><span class="side-num">04</span>Enviar Conversão para Meta e Google</a>
+    <a href="#a5" class="side-link"><span class="side-num">05</span>Encontrar Formulário por ID</a>
+    <a href="#a6" class="side-link"><span class="side-num">06</span>Encontrar Formulário por Nome</a>
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Encontrar Resposta por ID</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>Encontrar Respostas por Nome do Formulário</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2463,7 +2468,7 @@
   <p class="hero-desc">As ações de envio de dados são o inverso do Webhook de Entrada. Enquanto o webhook recebe, essas ações ENVIAM dados pra fora — pra Make, n8n, Zapier, planilhas ou qualquer API externa.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">3</span>
+      <span class="hero-stat-num">8</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3103,6 +3108,523 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a5" data-name="encontrar formulario por id google forms find form">
+  <div class="acao-head">
+    <div class="acao-num">05</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Encontrar Formulário por ID</h2>
+      <div class="acao-en">Google Forms — Find Form by ID</div>
+      <div class="acao-tags"><span class="info-tag">Requer conexão Google</span><span class="info-tag">Found/Not Found</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Busca um Google Form específico usando o ID do form (aquele trecho longo na URL do form, tipo <code>1FAIpQLS...</code>) e disponibiliza os dados do formulário — título, campos, link — pros passos seguintes do workflow. É uma ação de lookup: ela mesma não avança o contato pra frente, só busca informação pra usar depois.</p>
+      <p>A ação sempre segue por um dos dois branches: <strong>Found</strong> (achou o form, dados disponíveis) ou <strong>Not Found</strong> (ID inválido, form deletado ou fora da conta conectada). Sempre trate os dois branches — não assuma que o form vai existir.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Custom Value com ID fixo</div>
+        <div class="use-case-desc">Workflow guarda o ID do form de captação principal num Custom Value → essa ação resolve o ID pra puxar metadados sempre atualizados.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Validação antes de outra ação</div>
+        <div class="use-case-desc">Confirma que o form ainda existe antes de rodar "Find Responses by Form Name" em sequência, evitando erro em cascata.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Google Account (dropdown — conta conectada), Form ID (texto ou merge field — aceita <code>{{custom_values.form_id}}</code>), e os dois branches de saída Found/Not Found conectados a passos diferentes do workflow.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a5">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Envio de Dados/ Resolver form pelo ID salvo</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a5">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a5-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📋</div>
+            <div>
+              <div class="ghl-node-type">Action · Google Forms</div>
+              <div class="ghl-node-title">Find Form by ID</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Resolver form principal</span></div><div class="ghl-node-param"><span class="pk">Google Account</span><span class="pv">pesquisas@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">Form ID</span><span class="pv">{{custom_values.form_id_principal}}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a5-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">[Not Found] Avisar sobre form quebrado</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Branch</span><span class="pv highlight">Not Found</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">Form ID salvo no Custom Value não existe mais — revisar.</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A5 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><strong>Google Account</strong> define a conta. <span class='arrow'>→</span> <strong>Form ID</strong> aceita merge field. <span class='arrow'>→</span> a ação sempre sai por <strong>Found</strong> ou <strong>Not Found</strong> — conecte os dois.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Google Forms — Find Form by ID</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Resolver form principal" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Google Account <span class="req">*</span></div><div class="hl-dropdown has-value">pesquisas@empresa.com.br</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Form ID <span class="req">*</span></div><input class="hl-input" value="{{custom_values.form_id_principal}}"></div>
+<div class="hl-section-head">Saída</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Branches</div><div class="hl-dropdown has-value">Found → / Not Found →</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Lookup, não avança contato — sempre trate os dois branches. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007217-google-forms-actions-and-triggers-in-workflows" target="_blank" rel="noopener">help.gohighlevel.com/...google-forms-actions-and-triggers-in-workflows</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a6" data-name="encontrar formulario por nome google forms find form by name">
+  <div class="acao-head">
+    <div class="acao-num">06</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Encontrar Formulário por Nome</h2>
+      <div class="acao-en">Google Forms — Find Form by Name</div>
+      <div class="acao-tags"><span class="info-tag">Requer conexão Google</span><span class="info-tag">Found/Not Found</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Mesma ideia da Find Form by ID, mas você escolhe o form direto por um dropdown com o <strong>nome</strong> dele — sem precisar copiar/colar o ID gigante da URL. Mais prático pra montar workflow manualmente; a versão por ID é melhor quando o form muda dinamicamente via merge field.</p>
+      <p>Também sai por <strong>Found / Not Found</strong> — nesse caso Not Found normalmente só acontece se o form for deletado depois do workflow publicado.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Montagem manual e rápida</div>
+        <div class="use-case-desc">Você sabe qual form quer usar → seleciona pelo nome no dropdown em segundos, sem ir buscar o ID na URL do Google.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Template de workflow pra replicar</div>
+        <div class="use-case-desc">Ao duplicar o workflow pra outra subconta, o dropdown facilita reapontar pro form equivalente daquela conta.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Google Account (dropdown), Form Name (dropdown com os forms visíveis pela conta), branches Found/Not Found.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a6">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Envio de Dados/ Resolver form pelo nome</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a6">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a6-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📋</div>
+            <div>
+              <div class="ghl-node-type">Action · Google Forms</div>
+              <div class="ghl-node-title">Find Form by Name</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Resolver form de evento</span></div><div class="ghl-node-param"><span class="pk">Google Account</span><span class="pv">pesquisas@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">Form Name</span><span class="pv">Pesquisa de Satisfação — Evento Junho</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a6-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📊</div>
+            <div>
+              <div class="ghl-node-type">Action · Webhook</div>
+              <div class="ghl-node-title">Google Sheets · Log do form resolvido</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Planilha</span><span class="pv highlight">Controle de Forms</span></div><div class="ghl-node-param"><span class="pk">Aba</span><span class="pv">Resolvidos</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A6 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><strong>Google Account</strong> filtra a lista. <span class='arrow'>→</span> <strong>Form Name</strong> é dropdown, não texto livre. <span class='arrow'>→</span> saída por <strong>Found</strong> ou <strong>Not Found</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Google Forms — Find Form by Name</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Resolver form de evento" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Google Account <span class="req">*</span></div><div class="hl-dropdown has-value">pesquisas@empresa.com.br</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Form Name <span class="req">*</span></div><div class="hl-dropdown has-value">Pesquisa de Satisfação — Evento Junho</div></div>
+<div class="hl-section-head">Saída</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Branches</div><div class="hl-dropdown has-value">Found → / Not Found →</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Escolha por dropdown — sem copiar ID da URL. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007217-google-forms-actions-and-triggers-in-workflows" target="_blank" rel="noopener">help.gohighlevel.com/...google-forms-actions-and-triggers-in-workflows</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a7" data-name="encontrar resposta por id google forms find response">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Encontrar Resposta por ID</h2>
+      <div class="acao-en">Google Forms — Find Response by ID</div>
+      <div class="acao-tags"><span class="info-tag">Requer conexão Google</span><span class="info-tag">Found/Not Found</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Recupera <strong>uma resposta específica</strong> de um Google Form, dado o Form ID + o Response ID (ambos disponíveis nos dados que o gatilho "Google Forms — Nova ou Atualizada Resposta" entrega). Depois de encontrada, todos os campos da resposta ficam disponíveis pra mapear em campos do contato, condições de If/Else ou mensagens.</p>
+      <p>Útil quando o workflow recebeu só a referência da resposta (ex.: via webhook externo ou passo anterior) e precisa buscar o conteúdo completo depois.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Re-processar resposta específica</div>
+        <div class="use-case-desc">Um workflow de correção manual passa o Response ID salvo → essa ação busca os dados de novo pra reprocessar sem duplicar a resposta original.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Auditoria pontual</div>
+        <div class="use-case-desc">Suporte recebe reclamação sobre uma resposta específica → workflow busca pelo ID pra confirmar o que realmente foi enviado.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Google Account (dropdown), Form ID (texto/merge field), Response ID (texto/merge field), branches Found/Not Found, e mapeamento dos campos da resposta pra uso nos próximos passos.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a7">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Envio de Dados/ Reprocessar resposta específica</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a7">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📋</div>
+            <div>
+              <div class="ghl-node-type">Action · Google Forms</div>
+              <div class="ghl-node-title">Find Response by ID</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Buscar resposta reportada</span></div><div class="ghl-node-param"><span class="pk">Form ID</span><span class="pv">{{custom_values.form_id_principal}}</span></div><div class="ghl-node-param"><span class="pk">Response ID</span><span class="pv">{{custom_values.response_id_reportado}}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Enviar dados pro suporte</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Users</span><span class="pv highlight">Time de Suporte</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">Resposta encontrada: {{google_forms.response_summary}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A7 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><strong>Form ID</strong> + <strong>Response ID</strong> juntos identificam a resposta exata. <span class='arrow'>→</span> saída por <strong>Found</strong> ou <strong>Not Found</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Google Forms — Find Response by ID</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Buscar resposta reportada" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Google Account <span class="req">*</span></div><div class="hl-dropdown has-value">pesquisas@empresa.com.br</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Form ID <span class="req">*</span></div><input class="hl-input" value="{{custom_values.form_id_principal}}"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Response ID <span class="req">*</span></div><input class="hl-input" value="{{custom_values.response_id_reportado}}"></div>
+<div class="hl-section-head">Saída</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Branches</div><div class="hl-dropdown has-value">Found → / Not Found →</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Precisa de Form ID + Response ID — normalmente vêm do próprio gatilho Google Forms. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007217-google-forms-actions-and-triggers-in-workflows" target="_blank" rel="noopener">help.gohighlevel.com/...google-forms-actions-and-triggers-in-workflows</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a8" data-name="encontrar respostas por nome do formulario google forms find responses">
+  <div class="acao-head">
+    <div class="acao-num">08</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Encontrar Respostas por Nome do Formulário</h2>
+      <div class="acao-en">Google Forms — Find Responses by Form Name</div>
+      <div class="acao-tags"><span class="info-tag">Requer conexão Google</span><span class="info-tag">Found/Not Found</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Traz <strong>todas as respostas</strong> de um form escolhido pelo nome — diferente da Find Response by ID, que busca uma resposta única. Bom pra ações em lote: gerar um relatório, contar quantas respostas chegaram, ou disparar um passo pra cada resposta ainda não processada.</p>
+      <p>Como sempre, saída por Found (retornou a lista, mesmo que vazia dependendo da implementação) ou Not Found (form não existe).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Relatório semanal de respostas</div>
+        <div class="use-case-desc">Scheduler dispara toda segunda → busca todas as respostas da semana → manda resumo pro Google Sheets / Slack.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Backfill de formulário legado</div>
+        <div class="use-case-desc">Ao migrar um form antigo pro HighLevel, essa ação traz o histórico completo de respostas pra popular contatos retroativamente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Google Account (dropdown), Form Name (dropdown), branches Found/Not Found. Combine com Scheduler pra rodar em cadência (não é um gatilho por resposta individual — é uma busca em lote sob demanda).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a8">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Envio de Dados/ Relatório semanal de respostas</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a8">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a8-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📋</div>
+            <div>
+              <div class="ghl-node-type">Action · Google Forms</div>
+              <div class="ghl-node-title">Find Responses by Form Name</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Buscar respostas da semana</span></div><div class="ghl-node-param"><span class="pk">Google Account</span><span class="pv">pesquisas@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">Form Name</span><span class="pv">Pesquisa de Satisfação — Evento Junho</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a8-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📊</div>
+            <div>
+              <div class="ghl-node-type">Action · Webhook</div>
+              <div class="ghl-node-title">Google Sheets · Relatório semanal</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Planilha</span><span class="pv highlight">Relatórios de Pesquisa</span></div><div class="ghl-node-param"><span class="pk">Aba</span><span class="pv">Semana Atual</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A8 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Retorna a <strong>lista completa</strong> de respostas do form, não uma única. <span class='arrow'>→</span> bom pra relatórios em lote, não pra reagir por resposta individual.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Google Forms — Find Responses by Form Name</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Buscar respostas da semana" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Google Account <span class="req">*</span></div><div class="hl-dropdown has-value">pesquisas@empresa.com.br</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Form Name <span class="req">*</span></div><div class="hl-dropdown has-value">Pesquisa de Satisfação — Evento Junho</div></div>
+<div class="hl-section-head">Saída</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Branches</div><div class="hl-dropdown has-value">Found → / Not Found →</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Busca em lote, não por evento individual — combine com Scheduler pra cadência. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007217-google-forms-actions-and-triggers-in-workflows" target="_blank" rel="noopener">help.gohighlevel.com/...google-forms-actions-and-triggers-in-workflows</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3121,7 +3643,7 @@
 
   <div class="footer-top">
     <h3>Categoria 03 completa.</h3>
-    <p>4 ações de Envio de Dados (incl. Send Conversion Event pra Meta CAPI + Google Ads) explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>8 ações de Envio de Dados (incl. Send Conversion Event pra Meta CAPI + Google Ads e as 4 novas ações de Google Forms) explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3237,7 +3759,15 @@
     'a4-1': { kind: 'Trigger · Invoice', title: 'Invoice Paid', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Reportar conversão · Meta + Google</div></div><div class="config-section"><div class="config-label">Invoice Status *</div><div class="config-field highlight dropdown">Paid</div></div><div class="config-section"><div class="config-label">Min Amount</div><div class="config-field">R$ 1,00</div></div><div class="config-section"><div class="config-label">Filter · Product</div><div class="config-field dropdown">Qualquer produto</div></div>` },
     'a4-2': { kind: 'Action · Send Conversion (Meta)', title: 'Send Conversion to Meta CAPI', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Purchase pro Meta CAPI</div></div><div class="config-section"><div class="config-label">Provider *</div><div class="config-field highlight dropdown">Meta Conversion API</div></div><div class="config-section"><div class="config-label">Pixel ID *</div><div class="config-field highlight">1234567890123456</div></div><div class="config-section"><div class="config-label">Access Token *</div><div class="config-field">EAAxxxxxxxxxxxxxxxxxxxx (long-lived)</div></div><div class="config-section"><div class="config-label">Event Name *</div><div class="config-field highlight dropdown">Purchase</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{invoice.amount}}</div></div><div class="config-section"><div class="config-label">Currency</div><div class="config-field dropdown">BRL</div></div><div class="config-section"><div class="config-label">Customer Data *</div><div class="config-field">SHA-256 hash · email + phone + first_name + last_name</div></div><div class="config-section"><div class="config-label">Click ID</div><div class="config-field">{{contact.fbclid}}</div></div><div class="config-section"><div class="config-label">Event Source URL</div><div class="config-field">{{contact.last_page_url}}</div></div><div class="config-section"><div class="config-label">Test Mode</div><div class="config-field">⚪ OFF — produção</div></div>` },
     'a4-3': { kind: 'Action · Send Conversion (Google)', title: 'Send Conversion to Google Ads', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Purchase pro Google Ads</div></div><div class="config-section"><div class="config-label">Provider *</div><div class="config-field highlight dropdown">Google Ads</div></div><div class="config-section"><div class="config-label">Conversion Action *</div><div class="config-field highlight dropdown">Purchase · Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Customer ID *</div><div class="config-field">123-456-7890</div></div><div class="config-section"><div class="config-label">Google Click ID (gclid) *</div><div class="config-field highlight">{{contact.gclid}}</div></div><div class="config-section"><div class="config-label">Conversion Value *</div><div class="config-field highlight">{{invoice.amount}}</div></div><div class="config-section"><div class="config-label">Currency</div><div class="config-field dropdown">BRL</div></div><div class="config-section"><div class="config-label">Customer Match</div><div class="config-field">Email + phone hashed (Enhanced Conversions)</div></div><div class="config-section"><div class="config-label">Order ID</div><div class="config-field">{{invoice.number}}</div></div>` },
-    'a4-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar conversão reportada</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Conversão Reportada · Meta+Google</span> <span class="opt-chip">CAPI Sent</span></div></div>` }
+    'a4-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar conversão reportada</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Conversão Reportada · Meta+Google</span> <span class="opt-chip">CAPI Sent</span></div></div>` },
+    'a5-1': { kind: 'Action · Google Forms', title: 'Find Form by ID', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Resolver form principal</div></div><div class="config-section"><div class="config-label">Google Account *</div><div class="config-field dropdown">pesquisas@empresa.com.br</div></div><div class="config-section"><div class="config-label">Form ID *</div><div class="config-field highlight">{{custom_values.form_id_principal}}</div></div><div class="config-section"><div class="config-label">Saída</div><div class="config-field">Found → / Not Found →</div></div>` },
+    'a5-2': { kind: 'Action · Internal Notification', title: '[Not Found] Avisar sobre form quebrado', body: `<div class="config-section"><div class="config-label">Branch</div><div class="config-field highlight">Not Found</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Form ID salvo no Custom Value não existe mais — revisar.</div></div>` },
+    'a6-1': { kind: 'Action · Google Forms', title: 'Find Form by Name', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Resolver form de evento</div></div><div class="config-section"><div class="config-label">Google Account *</div><div class="config-field dropdown">pesquisas@empresa.com.br</div></div><div class="config-section"><div class="config-label">Form Name *</div><div class="config-field highlight dropdown">Pesquisa de Satisfação — Evento Junho</div></div><div class="config-section"><div class="config-label">Saída</div><div class="config-field">Found → / Not Found →</div></div>` },
+    'a6-2': { kind: 'Action · Webhook', title: 'Google Sheets · Log do form resolvido', body: `<div class="config-section"><div class="config-label">Planilha</div><div class="config-field highlight">Controle de Forms</div></div><div class="config-section"><div class="config-label">Aba</div><div class="config-field">Resolvidos</div></div>` },
+    'a7-1': { kind: 'Action · Google Forms', title: 'Find Response by ID', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Buscar resposta reportada</div></div><div class="config-section"><div class="config-label">Google Account *</div><div class="config-field dropdown">pesquisas@empresa.com.br</div></div><div class="config-section"><div class="config-label">Form ID *</div><div class="config-field highlight">{{custom_values.form_id_principal}}</div></div><div class="config-section"><div class="config-label">Response ID *</div><div class="config-field highlight">{{custom_values.response_id_reportado}}</div></div><div class="config-section"><div class="config-label">Saída</div><div class="config-field">Found → / Not Found →</div></div>` },
+    'a7-2': { kind: 'Action · Internal Notification', title: 'Enviar dados pro suporte', body: `<div class="config-section"><div class="config-label">Users</div><div class="config-field highlight">Time de Suporte</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Resposta encontrada: {{google_forms.response_summary}}</div></div>` },
+    'a8-1': { kind: 'Action · Google Forms', title: 'Find Responses by Form Name', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Buscar respostas da semana</div></div><div class="config-section"><div class="config-label">Google Account *</div><div class="config-field dropdown">pesquisas@empresa.com.br</div></div><div class="config-section"><div class="config-label">Form Name *</div><div class="config-field highlight dropdown">Pesquisa de Satisfação — Evento Junho</div></div><div class="config-section"><div class="config-label">Saída</div><div class="config-field">Found → / Not Found →</div></div>` },
+    'a8-2': { kind: 'Action · Webhook', title: 'Google Sheets · Relatório semanal', body: `<div class="config-section"><div class="config-label">Planilha</div><div class="config-field highlight">Relatórios de Pesquisa</div></div><div class="config-section"><div class="config-label">Aba</div><div class="config-field">Semana Atual</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

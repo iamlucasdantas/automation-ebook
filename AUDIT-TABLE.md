@@ -10,8 +10,10 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 46 | 0 | **77** |
-| Ações | 33 | 74 | 3 | **110** |
+| Gatilhos | 31 | 47 | 0 | **78** |
+| Ações | 33 | 80 | 3 | **116** |
+
+_Atualizado em 2026-07-05: +1 gatilho (Google Forms) e +6 ações (4 Google Forms + AI Agent + Invoke Agent Studio Agent) confirmados nativos via help.gohighlevel.com. Ver [CHANGELOG.md](./CHANGELOG.md)._
 
 
 ## Gatilhos · 12 categorias
@@ -141,6 +143,11 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | g1 | [Certificado Enviado](guia-highlevel-cat12.html#g1) | Certificate Issued | 3 | 2/6 | 🟡 | [ ] | |
 
+### CAT02 · Formulários (Google) — adicionado 2026-07-05
+| # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
+|---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
+| g20 | [Google Forms — Nova ou Atualizada Resposta](guia-highlevel-cat02.html#g20) | Google Forms — New or Updated Response | 3 | 3/6 | 🟢 | [ ] | Novo nativo; polling ~5min; confirmado via help.gohighlevel.com/.../155000007217 |
+
 ## Ações · 14 categorias
 
 ### CAT01 · Ação
@@ -199,6 +206,10 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a2 | [Google Sheets](acoes-highlevel-cat03.html#a2) | Google Sheets | 3 | 3/6 | 🟢 | [ ] | |
 | a3 | [Enviar Dados pra API Custom](acoes-highlevel-cat03.html#a3) | Custom API Call | 2 | 2/6 | 🟡 | [ ] | |
 | a4 | [Enviar Conversão para Meta e Google](acoes-highlevel-cat03.html#a4) | Send Conversion Event (Meta CAPI · Google Ads) | 4 | 4/6 | 🟢 | [ ] | |
+| a5 | [Encontrar Formulário por ID](acoes-highlevel-cat03.html#a5) | Google Forms — Find Form by ID | 2 | 2/6 | 🟢 | [ ] | Novo 2026-07-05; confirmado via help.gohighlevel.com/.../155000007217 |
+| a6 | [Encontrar Formulário por Nome](acoes-highlevel-cat03.html#a6) | Google Forms — Find Form by Name | 2 | 2/6 | 🟢 | [ ] | Novo 2026-07-05 |
+| a7 | [Encontrar Resposta por ID](acoes-highlevel-cat03.html#a7) | Google Forms — Find Response by ID | 2 | 2/6 | 🟢 | [ ] | Novo 2026-07-05 |
+| a8 | [Encontrar Respostas por Nome do Formulário](acoes-highlevel-cat03.html#a8) | Google Forms — Find Responses by Form Name | 2 | 2/6 | 🟢 | [ ] | Novo 2026-07-05 |
 
 ### CAT04 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -229,6 +240,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Summarize Conversation](acoes-highlevel-cat05.html#a3) | Summarize Conversation | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Extract Info](acoes-highlevel-cat05.html#a4) | AI Extract Info | 2 | 1/6 | 🟡 | [ ] | |
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Classify | 2 | 2/6 | 🟡 | [ ] | |
+| a6 | [Agente de IA (AI Agent)](acoes-highlevel-cat05.html#a6) | AI Agent | 3 | 3/6 | 🟢 | [ ] | Novo 2026-07-05; premium; confirmado via help.gohighlevel.com/.../155000007600 |
+| a7 | [Chamar Agente do Agent Studio](acoes-highlevel-cat05.html#a7) | Invoke Agent Studio Agent | 3 | 3/6 | 🟢 | [ ] | Novo 2026-07-05; requer AI Employee add-on; confirmado via help.gohighlevel.com/.../155000007402 |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

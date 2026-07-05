@@ -10,6 +10,21 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-05 — Content
+**Add new native HighLevel triggers/actions found since last audit (Google Forms, AI Agent, Agent Studio)**
+
+- Researched HighLevel's official changelog + help.gohighlevel.com for
+  native workflow triggers/actions added since the 2026-06-08 audit.
+  Third-party/marketplace items (e.g. Vapi) were checked and excluded —
+  only nodes native to the Workflow Builder's own "+ Add Trigger"/"+ Add
+  Action" pickers qualify.
+- **+1 trigger:** Google Forms — New or Updated Response (`guia-highlevel-cat02.html` g20, category Formulários & Captura). ~5min polling, requires a connected Google account.
+- **+4 actions:** Google Forms — Find Form by ID / Find Form by Name / Find Response by ID / Find Responses by Form Name (`acoes-highlevel-cat03.html` a5-a8, Envio de Dados). Each with Found/Not Found branches.
+- **+2 actions:** AI Agent and Invoke Agent Studio Agent (`acoes-highlevel-cat05.html` a6-a7, Workflow AI). AI Agent is a premium, autonomous multi-step action (Instructions + Tools + Output Format); Invoke Agent Studio Agent runs a Production-published Agent Studio agent (requires the AI Employee add-on).
+- Each new entry ships with full mockup, click-panel `configData`, and HL-fidelity config panel matching the existing house style, plus a doc-link citation to the official help.gohighlevel.com article.
+- Updated side-nav, hero stat counts, and footer copy on the 3 touched category pages; regenerated `deploy-highlevel/search-index.json` (194 entries, up from 187); refreshed `AUDIT.md`/`AUDIT-TABLE.md` and the homepage counters/last-updated date.
+- Totals: **78 triggers** (was 77), **116 actions** (was 110).
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
