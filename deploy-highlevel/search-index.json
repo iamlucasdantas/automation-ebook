@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 185,
+  "total": 192,
   "items": [
     {
       "id": "g1",
@@ -425,6 +425,21 @@
       "description": "Dispara imediatamente após o HighLevel gerar o transcript (transcrição) de uma chamada. Funciona com Voice AI, IVR e chamadas normais via LC Phone.",
       "keywords": "transcript gerado transcript generated chamada ligação ia",
       "href": "guia-highlevel-cat02.html#g18"
+    },
+    {
+      "id": "g19",
+      "type": "Gatilho",
+      "name": "Nova Resposta no Google Forms",
+      "en": "Google Forms – New Response",
+      "category": "Integrações Google",
+      "tags": [
+        "Quase tempo real",
+        "Integração nativa",
+        "Novo"
+      ],
+      "description": "Dispara quando um Google Form conectado à sua conta Google recebe uma nova resposta. Diferente do Formulário Preenchido (nativo dos funnels/websites do HighLevel), esse gatilho monitora formulários criados fora do HighLevel, direto no Google Forms — útil pra quem já tem formulários publicados e não quer recriar tudo dentro da plataforma.",
+      "keywords": "nova resposta google forms google forms new response integração",
+      "href": "guia-highlevel-cat02.html#g19"
     },
     {
       "id": "g1",
@@ -1033,7 +1048,7 @@
       "id": "g4",
       "type": "Gatilho",
       "name": "Remoção de Acesso a Canal Privado",
-      "en": "Private Channel Access Removed",
+      "en": "Private Channel Access Revoked",
       "category": "Canais Privados",
       "tags": [
         "Tempo real",
@@ -1647,6 +1662,20 @@
       "href": "acoes-highlevel-cat03.html#a4"
     },
     {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Google Forms — Buscar Resposta",
+      "en": "Google Forms – Find Response",
+      "category": "Ação",
+      "tags": [
+        "Integração nativa",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "google forms buscar resposta find response google forms",
+      "href": "acoes-highlevel-cat03.html#a5"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "If/Else",
@@ -1926,6 +1955,62 @@
       "href": "acoes-highlevel-cat05.html#a5"
     },
     {
+      "id": "a6",
+      "type": "Ação",
+      "name": "AI Agent",
+      "en": "AI Agent",
+      "category": "Ação",
+      "tags": [
+        "Premium · cobrado por token",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai agent agente autonomo multi step",
+      "href": "acoes-highlevel-cat05.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Invoke Agent Studio Agent",
+      "en": "Invoke Agent Studio Agent",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "invoke agent studio agent agent studio",
+      "href": "acoes-highlevel-cat05.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "AI Decision Maker",
+      "en": "AI Decision Maker",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai decision maker roteamento inteligente branch",
+      "href": "acoes-highlevel-cat05.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "AI Translate",
+      "en": "AI Translate",
+      "category": "Ação",
+      "tags": [
+        "Multi-idioma",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai translate traduzir idioma",
+      "href": "acoes-highlevel-cat05.html#a9"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Atualizar Status do Agendamento",
@@ -2035,12 +2120,12 @@
     {
       "id": "a7",
       "type": "Ação",
-      "name": "Atribuir Dono da Opp",
-      "en": "Assign Opportunity Owner",
+      "name": "Adicionar Dono à Oportunidade",
+      "en": "Add Owner to Opportunity",
       "category": "Ação",
       "tags": [],
       "description": "",
-      "keywords": "atribuir dono da opp assign opportunity owner",
+      "keywords": "adicionar dono à oportunidade add owner to opportunity",
       "href": "acoes-highlevel-cat07.html#a7"
     },
     {
@@ -2064,6 +2149,17 @@
       "description": "",
       "keywords": "remover tag da opp remove opportunity tag",
       "href": "acoes-highlevel-cat07.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Adicionar Seguidores à Oportunidade",
+      "en": "Add Follower(s) to Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
+      "href": "acoes-highlevel-cat07.html#a10"
     },
     {
       "id": "a1",

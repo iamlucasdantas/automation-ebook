@@ -2423,6 +2423,11 @@
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
   </nav>
 
+  <div class="side-section-label">Integrações Google</div>
+  <nav class="side-nav">
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Nova Resposta Google Forms</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        ============================================================ -->
@@ -6747,6 +6752,175 @@
     </div>
   </div>
 
+</div><div class="trigger-block" id="g19" data-name="nova resposta google forms google forms new response integração">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Integrações Google</div>
+      <h2 class="trigger-name">Nova Resposta no Google Forms</h2>
+      <div class="trigger-en">Google Forms – New Response</div>
+      <div class="trigger-tags"><span class="info-tag">Quase tempo real</span><span class="info-tag">Integração nativa</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um Google Form conectado à sua conta Google recebe uma nova resposta. Diferente do <a href="#g5">Formulário Preenchido</a> (nativo dos funnels/websites do HighLevel), esse gatilho monitora formulários criados fora do HighLevel, direto no Google Forms — útil pra quem já tem formulários publicados e não quer recriar tudo dentro da plataforma.</p>
+      <p>HighLevel verifica novas respostas periodicamente (não é um webhook instantâneo como o Inbound Webhook) — leva alguns minutos entre a resposta ser enviada e o workflow disparar.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Migrar captura sem refazer o form</div><div class="use-case-desc">Formulário Google já publicado em outro lugar → sem recriar no funil, cai direto no CRM.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Pesquisa de satisfação</div><div class="use-case-desc">Resposta no Google Forms → cria/atualiza contato com a nota + comentário.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Inscrição de evento (RSVP)</div><div class="use-case-desc">Confirmação de presença via Google Forms → dispara sequência de lembrete do evento.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Conta Google Conectada</div>
+    <div class="filter-en">Connected Google Account</div>
+    <div class="filter-type">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Qual conta Google (via OAuth) tem os formulários monitorados.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Precisa reconectar a conta se o token expirar — sem conta válida, o gatilho para de disparar.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Formulário</div>
+    <div class="filter-en">Form</div>
+    <div class="filter-type">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Qual formulário específico da conta conectada dispara este workflow.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Um workflow por formulário — precisa duplicar o workflow pra cada form diferente.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g19">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Integrações/ 19 — Google Forms → CRM</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g19">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Google Forms</div>
+              <div class="ghl-node-title">Nova Resposta</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Nova resposta — Formulário de Inscrição</span></div><div class="ghl-node-param"><span class="pk">Connected Account</span><span class="pv">contato@gokollab.com</span></div><div class="ghl-node-param"><span class="pk">Form</span><span class="pv">Inscrição — Webinar Automação</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">👤</div>
+            <div>
+              <div class="ghl-node-type">Action · Contacts</div>
+              <div class="ghl-node-title">Create/Find Contact</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Criar contato a partir da resposta</span></div><div class="ghl-node-param"><span class="pk">Email</span><span class="pv">{{trigger.response.email}}</span></div><div class="ghl-node-param"><span class="pk">Nome</span><span class="pv">{{trigger.response.nome_completo}}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">🏷</div>
+            <div>
+              <div class="ghl-node-type">Action · Contacts</div>
+              <div class="ghl-node-title">Add Contact Tag</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Taggear origem</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv">Lead · Google Forms</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G19 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Requer conectar uma conta Google via OAuth em Settings → Integrations antes de aparecer aqui.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Google Forms – New Response</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Nova resposta — Formulário de Inscrição" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Connected Account <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">contato@gokollab.com</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Form <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Inscrição — Webinar Automação</div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Monitora um Google Form específico numa conta conectada — checagem a cada poucos minutos, não instantânea</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -6766,7 +6940,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>18 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>19 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6871,7 +7045,10 @@
     'g17-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Primeira impressão prospecto</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Soube que você passou pelo nosso site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Cold Outreach — Prospecto</div></div>` },
     'g18-1': { kind: 'Trigger · Transcript Generated', title: 'Transcript Generated', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Transcript Generated</div></div><div class="config-section"><div class="config-label">Call Type</div><div class="config-field dropdown">Normal Calls</div></div><div class="config-section"><div class="config-label">Call Direction</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Call Duration (s)</div><div class="config-field">120</div></div>` },
     'g18-2': { kind: 'Action · Workflow AI', title: 'AI · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI · Resumo da Call</div></div><div class="config-section"><div class="config-label">Prompt</div><div class="config-field">Resuma a conversa em 3 pontos: interesse, objeção e próximo passo.</div></div>` },
-    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` }
+    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` },
+    'g19-1': { kind: 'Trigger · Google Forms', title: 'Nova Resposta', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Nova resposta — Formulário de Inscrição</div></div><div class="config-section"><div class="config-label">Connected Account *</div><div class="config-field dropdown">contato@gokollab.com</div></div><div class="config-section"><div class="config-label">Form *</div><div class="config-field dropdown">Inscrição — Webinar Automação</div></div>` },
+    'g19-2': { kind: 'Action · Contacts', title: 'Create/Find Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar contato a partir da resposta</div></div><div class="config-section"><div class="config-label">Email *</div><div class="config-field highlight">{{trigger.response.email}}</div></div><div class="config-section"><div class="config-label">Nome</div><div class="config-field highlight">{{trigger.response.nome_completo}}</div></div>` },
+    'g19-3': { kind: 'Action · Contacts', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Taggear origem</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Lead · Google Forms</span></div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

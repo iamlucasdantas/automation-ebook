@@ -10,6 +10,29 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-06 — Content
+**Add 6 new native items found via periodic trigger/action check + fix stale counts**
+
+- Researched HighLevel's current native Workflow Builder surface (WebSearch
+  against help.gohighlevel.com / ideas.gohighlevel.com — direct WebFetch was
+  blocked by this environment's network policy, so nothing here is verified
+  pixel-for-pixel against the live UI; each new entry carries an inline
+  "🔍 pendente de validação visual" note).
+- **New trigger**: cat02 G19 — Google Forms – New Response.
+- **New action**: cat03 A5 — Google Forms – Find Response.
+- **New actions**: cat05 A6-A9 — AI Agent, Invoke Agent Studio Agent, AI
+  Decision Maker, AI Translate.
+- Full mockup + HL config panel + configData for all 6 new entries; search
+  index and audit table regenerated; all 26 category pages pass the
+  Playwright DOM validator.
+- Flagged but **not** added (bigger scope than a single trigger/action —
+  see AUDIT.md "2026-07-06" section for why): Company-based workflows
+  (Company Created/Changed), Custom Objects (Object Created/Changed +
+  cross-object actions), Google Contacts integration.
+- Fixed pre-existing stale counts on `index.html` and `AUDIT.md` (cat07
+  actions was showing 9, real count was already 10 from an earlier commit).
+- New totals: **77 gatilhos, 115 ações, 192 painéis, 33 mockups**.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

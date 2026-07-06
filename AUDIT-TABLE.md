@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 30 | 46 | 0 | **76** |
-| Ações | 33 | 74 | 3 | **110** |
+| Gatilhos | 30 | 47 | 0 | **77** |
+| Ações | 33 | 78 | 4 | **115** |
 
 
 ## Gatilhos · 12 categorias
@@ -53,6 +53,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g16 | [Nova Avaliação Recebida](guia-highlevel-cat02.html#g16) | New Review Received | 3 | 3/6 | 🟢 | [ ] | |
 | g17 | [Novo Prospecto](guia-highlevel-cat02.html#g17) | Prospect Generated | 3 | 3/6 | 🟢 | [ ] | |
 | g18 | [Transcript Gerado](guia-highlevel-cat02.html#g18) | Transcript Generated | 4 | 2/6 | 🟡 | [ ] | |
+| g19 | [Nova Resposta no Google Forms](guia-highlevel-cat02.html#g19) | Google Forms – New Response | 3 | 2/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -198,6 +199,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a2 | [Google Sheets](acoes-highlevel-cat03.html#a2) | Google Sheets | 3 | 3/6 | 🟢 | [ ] | |
 | a3 | [Enviar Dados pra API Custom](acoes-highlevel-cat03.html#a3) | Custom API Call | 2 | 2/6 | 🟡 | [ ] | |
 | a4 | [Enviar Conversão para Meta e Google](acoes-highlevel-cat03.html#a4) | Send Conversion Event (Meta CAPI · Google Ads) | 4 | 4/6 | 🟢 | [ ] | |
+| a5 | [Google Forms — Buscar Resposta](acoes-highlevel-cat03.html#a5) | Google Forms – Find Response | 2 | 2/6 | 🟡 | [ ] | |
 
 ### CAT04 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -228,6 +230,10 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Summarize Conversation](acoes-highlevel-cat05.html#a3) | Summarize Conversation | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Extract Info](acoes-highlevel-cat05.html#a4) | AI Extract Info | 2 | 1/6 | 🟡 | [ ] | |
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Classify | 2 | 2/6 | 🟡 | [ ] | |
+| a6 | [AI Agent](acoes-highlevel-cat05.html#a6) | AI Agent | 2 | 2/6 | 🟡 | [ ] | |
+| a7 | [Invoke Agent Studio Agent](acoes-highlevel-cat05.html#a7) | Invoke Agent Studio Agent | 1 | 2/6 | 🟡 | [ ] | |
+| a8 | [AI Decision Maker](acoes-highlevel-cat05.html#a8) | AI Decision Maker | 1 | 2/6 | 🔴 | [ ] | |
+| a9 | [AI Translate](acoes-highlevel-cat05.html#a9) | AI Translate | 1 | 2/6 | 🟡 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

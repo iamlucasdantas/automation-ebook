@@ -3,6 +3,57 @@
 Auditoria contra `help.gohighlevel.com`. Aqui ficam os achados acionáveis.
 Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 
+## 🆕 2026-07-06 — Rodada de novidades (triggers/actions nativos)
+
+Rotina periódica de checagem por itens novos que a HighLevel lançou e que
+ainda não estavam no guia. Metodologia: WebSearch contra help.gohighlevel.com
+e ideas.gohighlevel.com (changelog oficial) — **WebFetch direto foi bloqueado
+pela política de rede do ambiente** (`403 policy denial` em help.gohighlevel.com,
+ideas.gohighlevel.com, marketplace.gohighlevel.com), então nada aqui foi
+verificado pixel-a-pixel contra a UI real, só via resumo de busca.
+
+**Adicionados nesta rodada** (com nota "🔍 pendente de validação visual" no
+próprio conteúdo, seguindo o padrão de confiança 🟡/🔴 já usado no guia):
+
+- **Gatilho cat02 G19** — Google Forms – New Response (integração nativa,
+  polling de poucos minutos, não é webhook instantâneo)
+- **Ação cat03 A5** — Google Forms – Find Response
+- **Ações cat05 A6-A9** — AI Agent, Invoke Agent Studio Agent, AI Decision
+  Maker, AI Translate (expansão da linha de Workflow AI, lançadas ~2026)
+
+**Pesquisado mas NÃO adicionado** (fora de escopo desta rodada — ver
+"Próximos passos" abaixo):
+
+- **Company-based workflows** (Company Created / Company Changed triggers) —
+  a HighLevel lançou um modelo de objeto B2B ("Companies") com seus próprios
+  gatilhos. Isso é uma superfície nova (workflows por Company, não só por
+  Contact), não só um trigger a mais dentro do cat04 existente — decidi não
+  encaixar à força numa categoria existente nem inventar uma nova categoria
+  completa com paineis HL sem conseguir verificar a UI real.
+- **Custom Objects** (Object Created / Object Changed triggers + Create/Update/
+  Find actions, Add/Remove Associated Records) — mesmo caso: feature nova de
+  modelo de dados (records customizados), não um trigger/action isolado.
+- **Google Contacts** (trigger + 6 actions) — integração nativa mencionada,
+  mas confiança mais baixa que Google Forms (rótulos exatos não confirmados
+  em fontes independentes).
+- ❌ **Descartados por não parecerem reais**: "Payment Failed" trigger e "Form
+  Partially Completed" trigger — aparecem só como pedidos em aberto no
+  ideas.gohighlevel.com, não como features lançadas.
+
+**Correções de drift encontradas nesta rodada** (números que já estavam
+errados antes desta pesquisa, sem relação com os itens novos):
+- Cat07 Ações mostrava 9 no index.html / AUDIT.md, mas o HTML real já tinha
+  10 (A10 Add Follower(s) to Opportunity foi adicionada em commit anterior
+  sem atualizar os contadores) — corrigido em index.html.
+- `index.html` mostrava 109 ações / 185 painéis / 31 mockups — todos stale
+  por 1 mesmo antes desta rodada (mesmo bug do cat07). Corrigido junto.
+
+**Próximos passos recomendados**: uma sessão dedicada — com acesso de
+WebFetch liberado ou com alguém abrindo o HL Workflow Builder ao vivo — pra
+(a) validar visualmente os 6 itens novos acima, e (b) decidir a estrutura
+certa (nova categoria? nova "Parte 3"?) pra documentar Company workflows e
+Custom Objects, que são maiores que um simples trigger/action a mais.
+
 ## Como cada item foi verificado
 
 - ✅ **Confirmado por WebSearch** — agente puxou resumo da página oficial e comparou
@@ -13,14 +64,14 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 
 | Lote | Status | Itens | Confirmados |
 |------|--------|------:|-----------:|
-| **Gatilhos cat01-cat12** | ✅ | 76 | 76 |
+| **Gatilhos cat01-cat12** | ✅ | 77 | 76 (G19 Google Forms pendente) |
 | **Ações cat01** (Contact) | ✅ | 16 | 16 |
 | **Ações cat02** (Comunicação) | ✅ | 25 | 22 (3 c/ flag) |
-| **Ações cat03** (Webhooks) | ✅ | 4 | 4 |
+| **Ações cat03** (Webhooks) | ✅ | 5 | 4 (A5 Google Forms pendente) |
 | **Ações cat04** (Workflow logic) | ✅ | 17 | 17 |
-| **Ações cat05** (AI) | ✅ | 5 | 5 (2 renames recomendados) |
+| **Ações cat05** (AI) | ✅ | 9 | 5 (2 renames recomendados + 4 novas pendentes: A6-A9) |
 | **Ações cat06** (Appointments) | ✅ | 3 | 2 (A2 sem doc) |
-| **Ações cat07** (Opportunities) | ✅ | 9 | 5 (2 renames + 2 sem doc) |
+| **Ações cat07** (Opportunities) | ✅ | 10 | 5 (2 renames + 2 sem doc) |
 | **Ações cat08** (Payments) | ✅ | 5 | 3 (2 sem doc dedicada) |
 | **Ações cat09** (Campaigns) | ✅ | 5 | 5 (campaigns deprecadas pra workflows) |
 | **Ações cat10** (Affiliates) | ✅ | 6 | 4 (A4/A5 sem doc) |
@@ -28,7 +79,7 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 | **Ações cat12** (IVR) | ✅ | 5 | 4 (A4 rename) |
 | **Ações cat13** (Communities) | ✅ | 6 | 4 (A5/A6 sem doc) |
 | **Ações cat14** (Certificados) | ✅ | 1 | 1 |
-| **Total** | **✅** | **185** | **170/185 (92%)** |
+| **Total** | **✅** | **192** | **170/192 (89%)** |
 
 ## ✅ Fixes aplicados nesta auditoria
 
