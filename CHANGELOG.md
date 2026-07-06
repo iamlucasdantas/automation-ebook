@@ -10,6 +10,13 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-06 — Automation
+**Weekly auto-refine**
+([pending](../../actions))
+
+- `scripts/auto-refine.py` detected drift and reapplied the mechanical refinements (label standardization, filter headers, Slack → Webhook, trigger-type, placeholder cleanup, configData regen).
+- Files touched (1): `search-index.json`
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
