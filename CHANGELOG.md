@@ -10,6 +10,40 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-07 — Content
+**Add 2 new native triggers + 2 new native actions found in HighLevel docs/changelog**
+
+- Researched help.gohighlevel.com and ideas.gohighlevel.com/changelog for
+  native Workflow Builder triggers/actions shipped since the last full
+  audit (2026-06-08). Excluded marketplace/third-party integrations and
+  two unconfirmed "AI changelog" claims (Payment Failed, Form Partially
+  Completed) that turned out to be open feature requests, not shipped
+  features.
+- **New trigger — Inbound Email** (`guia-highlevel-cat02.html#g19`,
+  category Eventos): fires on any inbound email, including cold senders
+  not yet in the CRM.
+- **New trigger — Client Portal File Uploaded**
+  (`guia-highlevel-cat07.html#g11`, category Pagamentos): fires when a
+  contact uploads a file via Client Portal Shared Documents.
+- **New action — AI Agent** (`acoes-highlevel-cat05.html#a6`, category
+  Workflow AI): autonomous multi-step action driven by natural-language
+  goal + selectable tools. Premium feature.
+- **New action — Invoke Agent Studio Agent**
+  (`acoes-highlevel-cat05.html#a7`, category Workflow AI): runs a
+  published Agent Studio agent from inside a workflow. Requires the AI
+  Employee add-on.
+- All 4 entries follow the existing HTML/mockup/config-panel pattern, but
+  field content was written from doc/changelog summaries rather than a
+  live UI capture (help.gohighlevel.com blocked direct fetch during this
+  run) — flagged 🔍 pending human verification, see AUDIT.md.
+- Totals: 76 → **78 gatilhos**, **112 ações** (also corrects a
+  pre-existing 109/110 undercount in `index.html`'s Oportunidades action
+  category, which listed 9 instead of the actual 10). `AUDIT-TABLE.md`
+  and `search-index.json` regenerated via `build-audit.py` /
+  `build-search-index.py`. `index.html` hero stats, tab counts, and
+  per-category stats updated to match; added a last-updated date to the
+  homepage.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

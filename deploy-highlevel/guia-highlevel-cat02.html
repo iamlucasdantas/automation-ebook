@@ -2423,6 +2423,11 @@
     <a href="#g18" class="side-link"><span class="side-num">18</span>Transcript Gerado</a>
   </nav>
 
+  <div class="side-section-label">Email</div>
+  <nav class="side-nav">
+    <a href="#g19" class="side-link"><span class="side-num">19</span>Email de Entrada</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        ============================================================ -->
@@ -2452,7 +2457,7 @@
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">18</span>
+      <span class="hero-stat-num">19</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -6747,6 +6752,235 @@
     </div>
   </div>
 
+</div><div class="trigger-block" id="g19" data-name="email de entrada inbound email caixa mailbox">
+  <div class="trigger-head">
+    <div class="trigger-num">19</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Email</div>
+      <h2 class="trigger-name">Email de Entrada</h2>
+      <div class="trigger-en">Inbound Email</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Captura</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara sempre que uma nova mensagem chega numa caixa de email conectada — inclusive emails "frios" de remetentes que ainda não estão no CRM, não só respostas de contatos existentes (isso é diferente do gatilho Customer Replied, que só reage quando o contato responde algo que você enviou).</p>
+      <p>Com esse gatilho dá pra rotear, atribuir, taggear, notificar ou responder automaticamente com base no remetente, destinatário, assunto, corpo, anexos ou workflow de origem do email.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Captura de lead frio</div><div class="use-case-desc">Email de remetente desconhecido → cria/atualiza contato + atribui SDR em round-robin.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Alerta de parceria</div><div class="use-case-desc">Assunto contém "parceria" ou "proposta" → notificação interna imediata pro time comercial.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Triagem de suporte com anexo</div><div class="use-case-desc">Email com anexo na caixa de suporte → cria tarefa pro time técnico revisar o arquivo.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 04</div><div class="use-case-title">Evitar re-disparo em thread</div><div class="use-case-desc">"Only New Conversation" ligado evita rodar o workflow de novo a cada reply na mesma thread.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Mailbox</div>
+    <div class="filter-en">Caixa de Entrada</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Qual caixa de email conectada disparou (ex.: vendas@, suporte@).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> permite fluxos separados por área sem misturar caixas.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Sender Email</div>
+    <div class="filter-en">Remetente</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por endereço do remetente (is / contains).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> isola domínios específicos — ex.: só reagir a emails @parceiro.com.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Subject Contains</div>
+    <div class="filter-en">Assunto Contém</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Texto que precisa aparecer no assunto do email.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> roteamento por palavra-chave sem precisar de regra de inbox.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Has Attachment</div>
+    <div class="filter-en">Tem Anexo</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Toggle — só dispara se o email tiver anexo.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> útil pra triagem de documentos, comprovantes e propostas.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Only New Conversations</div>
+    <div class="filter-en">Só Conversa Nova</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Toggle — ignora replies dentro de uma thread já iniciada.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> evita rodar o workflow toda vez que a thread recebe uma resposta.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">In Workflow</div>
+    <div class="filter-en">Fluxo Específico</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe o gatilho a emails vinculados a um workflow específico.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> isola fluxos de teste ou de campanhas específicas.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g19">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Email/ 19 — Email Frio → Qualificar Lead</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g19">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Inbound Email</div>
+              <div class="ghl-node-title">Inbound Email</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Mailbox</span><span class="pv highlight">vendas@empresa.com.br</span></div><div class="ghl-node-param"><span class="pk">Only New Conversation</span><span class="pv">ON</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">👤</div>
+            <div>
+              <div class="ghl-node-type">Action · Contact</div>
+              <div class="ghl-node-title">Find or Create Contact</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Search Field</span><span class="pv highlight">Email</span></div><div class="ghl-node-param"><span class="pk">Match Value</span><span class="pv">{{inboundEmail.sender}}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">👥</div>
+            <div>
+              <div class="ghl-node-type">Action · Contact</div>
+              <div class="ghl-node-title">Assign to User</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Users</span><span class="pv highlight">SDR round-robin</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G19 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Filtros essenciais: <span class='arrow'>→</span> <strong>Mailbox</strong> (dropdown, obrigatório), <span class='arrow'>→</span> <strong>Sender/Subject/Body</strong> (texto condicional), <span class='arrow'>→</span> <strong>Only New Conversations</strong> (toggle, evita re-disparo em thread).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Inbound Email</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Inbound Email" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Mailbox</div>
+        <div class="hl-dropdown has-value">vendas@empresa.com.br</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Sender Email</div>
+        <input class="hl-input" placeholder="ex: *@parceiro.com">
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Subject Contains</div>
+        <input class="hl-input" placeholder="ex: parceria">
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Has Attachment</div>
+        <div class="hl-dropdown placeholder">Qualquer</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Only New Conversations</div>
+        <div class="hl-dropdown has-value">ON</div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>🔍 Adicionado nesta auditoria via docs oficiais (help.gohighlevel.com) — pendente verificação visual na UI real</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -6766,7 +7000,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>18 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>19 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -6871,7 +7105,10 @@
     'g17-3': { kind: 'Action · Send Email', title: 'Send Email', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Primeira impressão prospecto</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Soube que você passou pelo nosso site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Cold Outreach — Prospecto</div></div>` },
     'g18-1': { kind: 'Trigger · Transcript Generated', title: 'Transcript Generated', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Transcript Generated</div></div><div class="config-section"><div class="config-label">Call Type</div><div class="config-field dropdown">Normal Calls</div></div><div class="config-section"><div class="config-label">Call Direction</div><div class="config-field dropdown">Inbound</div></div><div class="config-section"><div class="config-label">Call Duration (s)</div><div class="config-field">120</div></div>` },
     'g18-2': { kind: 'Action · Workflow AI', title: 'AI · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">AI · Resumo da Call</div></div><div class="config-section"><div class="config-label">Prompt</div><div class="config-field">Resuma a conversa em 3 pontos: interesse, objeção e próximo passo.</div></div>` },
-    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` }
+    'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` },
+    'g19-1': { kind: 'Trigger · Inbound Email', title: 'Inbound Email', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Inbound Email</div></div><div class="config-section"><div class="config-label">Mailbox</div><div class="config-field dropdown">vendas@empresa.com.br</div></div><div class="config-section"><div class="config-label">Subject Contains</div><div class="config-field"></div></div><div class="config-section"><div class="config-label">Only New Conversations</div><div class="config-field highlight">ON</div></div>` },
+    'g19-2': { kind: 'Action · Contact', title: 'Find or Create Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Match contato por email</div></div><div class="config-section"><div class="config-label">Search Field</div><div class="config-field dropdown">Email</div></div><div class="config-section"><div class="config-label">Match Value</div><div class="config-field highlight">{{inboundEmail.sender}}</div></div><div class="config-section"><div class="config-label">On No Match</div><div class="config-field dropdown">Create new</div></div>` },
+    'g19-3': { kind: 'Action · Contact', title: 'Assign to User', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Atribuir SDR round-robin</div></div><div class="config-section"><div class="config-label">Users *</div><div class="config-field"><span class="opt-chip">Ana</span> <span class="opt-chip">Bruno</span> <span class="opt-chip">Carlos</span></div></div><div class="config-section"><div class="config-label">Split Traffic</div><div class="config-field dropdown">Equally (round-robin)</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

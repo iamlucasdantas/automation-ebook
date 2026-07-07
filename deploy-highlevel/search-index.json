@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 185,
+  "total": 190,
   "items": [
     {
       "id": "g1",
@@ -425,6 +425,21 @@
       "description": "Dispara imediatamente após o HighLevel gerar o transcript (transcrição) de uma chamada. Funciona com Voice AI, IVR e chamadas normais via LC Phone.",
       "keywords": "transcript gerado transcript generated chamada ligação ia",
       "href": "guia-highlevel-cat02.html#g18"
+    },
+    {
+      "id": "g19",
+      "type": "Gatilho",
+      "name": "Email de Entrada",
+      "en": "Inbound Email",
+      "category": "Email",
+      "tags": [
+        "Tempo real",
+        "Captura",
+        "Novo"
+      ],
+      "description": "Dispara sempre que uma nova mensagem chega numa caixa de email conectada — inclusive emails \"frios\" de remetentes que ainda não estão no CRM, não só respostas de contatos existentes (isso é diferente do gatilho Customer Replied, que só reage quando o contato responde algo que você enviou).",
+      "keywords": "email de entrada inbound email caixa mailbox",
+      "href": "guia-highlevel-cat02.html#g19"
     },
     {
       "id": "g1",
@@ -889,6 +904,21 @@
       "href": "guia-highlevel-cat07.html#g10"
     },
     {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Upload no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Client Portal",
+      "tags": [
+        "Tempo real",
+        "Documentos",
+        "Novo"
+      ],
+      "description": "Dispara quando um contato sobe um arquivo pela área de Documentos Compartilhados do Client Portal — diferente do gatilho Documents & Contracts, que é sobre assinatura de contratos, esse é sobre upload livre de arquivo pelo cliente.",
+      "keywords": "upload no portal do cliente client portal file uploaded documento",
+      "href": "guia-highlevel-cat07.html#g11"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Carrinho Abandonado",
@@ -1033,7 +1063,7 @@
       "id": "g4",
       "type": "Gatilho",
       "name": "Remoção de Acesso a Canal Privado",
-      "en": "Private Channel Access Removed",
+      "en": "Private Channel Access Revoked",
       "category": "Canais Privados",
       "tags": [
         "Tempo real",
@@ -1926,6 +1956,34 @@
       "href": "acoes-highlevel-cat05.html#a5"
     },
     {
+      "id": "a6",
+      "type": "Ação",
+      "name": "AI Agent",
+      "en": "AI Agent",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai agent workflow ai agente autonomo",
+      "href": "acoes-highlevel-cat05.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Invoke Agent Studio Agent",
+      "en": "Invoke Agent Studio Agent",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "invoke agent studio agent",
+      "href": "acoes-highlevel-cat05.html#a7"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Atualizar Status do Agendamento",
@@ -2035,12 +2093,12 @@
     {
       "id": "a7",
       "type": "Ação",
-      "name": "Atribuir Dono da Opp",
-      "en": "Assign Opportunity Owner",
+      "name": "Adicionar Dono à Oportunidade",
+      "en": "Add Owner to Opportunity",
       "category": "Ação",
       "tags": [],
       "description": "",
-      "keywords": "atribuir dono da opp assign opportunity owner",
+      "keywords": "adicionar dono à oportunidade add owner to opportunity",
       "href": "acoes-highlevel-cat07.html#a7"
     },
     {
@@ -2064,6 +2122,17 @@
       "description": "",
       "keywords": "remover tag da opp remove opportunity tag",
       "href": "acoes-highlevel-cat07.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Adicionar Seguidores à Oportunidade",
+      "en": "Add Follower(s) to Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
+      "href": "acoes-highlevel-cat07.html#a10"
     },
     {
       "id": "a1",

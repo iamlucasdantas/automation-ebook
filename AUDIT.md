@@ -102,3 +102,61 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+## 2026-07-07 — Checagem de novos gatilhos/ações nativos
+
+Rotina automática de verificação: comparou a lista completa de 76 gatilhos
++ 109 ações documentados contra o changelog e os docs oficiais do
+HighLevel (help.gohighlevel.com, ideas.gohighlevel.com/changelog),
+procurando lançamentos nativos posteriores à última auditoria completa
+(2026-06-08). `help.gohighlevel.com` bloqueou fetch direto (403) — as
+confirmações abaixo vêm de resultados de busca que retornaram
+consistentemente as mesmas URLs oficiais em múltiplas queries
+independentes, não de fetch de página inteira.
+
+### ✅ Adicionados nesta rodada (nativos, com fonte)
+
+- **Gatilho · Inbound Email** (CAT02 g19) — dispara em qualquer email
+  recebido numa caixa conectada, incluindo remetentes cold ainda não
+  cadastrados. Fonte: `help.gohighlevel.com/.../155000007650-workflow-trigger-inbound-email`
+  + changelog "Inbound Email Trigger for Workflows".
+- **Gatilho · Client Portal File Uploaded** (CAT07 g11) — dispara quando
+  um contato sobe arquivo pela área de Documentos Compartilhados do
+  Client Portal. Fonte: changelog
+  "Workflow Trigger for file uploads via Client Portal".
+- **Ação · AI Agent** (CAT05 a6) — executa tarefas multi-etapa de forma
+  autônoma via instruções em linguagem natural + tools selecionadas.
+  Fonte: `help.gohighlevel.com/.../155000007600-workflow-action-ai-agent`
+  (last modified 2026-06-02) + changelog "AI Agent Action in Workflows".
+  Premium feature ($0.01/execução).
+- **Ação · Invoke Agent Studio Agent** (CAT05 a7) — roda um agente
+  publicado no Agent Studio de dentro do workflow. Fonte:
+  `help.gohighlevel.com/.../155000007402-workflow-action-invoke-agent-studio-agent`.
+  Requer add-on AI Employee.
+
+Essas 4 entradas foram escritas seguindo o mesmo padrão HTML/mockup/
+config-panel das demais, mas o conteúdo dos campos foi montado a partir
+de resumos de busca — **não de captura visual da UI real**. Estão
+marcadas com 🔍 no `hl-panel-caption` de cada uma e devem ser validadas
+contra o HighLevel real antes de considerar o "🟢 Alta fidelidade".
+
+### ❌ Descartados — não são nativos ou não foram confirmados
+
+- **"Payment Failed" trigger** — aparece com frequência em resumos de IA
+  como se já tivesse sido lançado, mas ao verificar a fonte é só uma
+  proposta aberta em `ideas.gohighlevel.com/invoicing/p/workflow-trigger-for-invoice-payment-failed`
+  (feature request, não changelog). Não adicionado.
+- **"Form Partially Completed" trigger** — nenhuma fonte oficial
+  encontrada, provável alucinação de resumo de busca. Não adicionado.
+- Integrações via marketplace (Cal.com, HubSpot, Linear, Monday.com,
+  Google Forms/Drive, Fathom, Vapi, Browse AI) — reais, mas não são
+  gatilhos/ações **nativos** do HighLevel, então ficam de fora por
+  instrução explícita do escopo desta auditoria.
+
+### Números atualizados
+
+76 → **78 gatilhos**, 109/110 (Resumo do AUDIT-TABLE.md já divergia — ver
+nota) → **112 ações**. `scripts/build-audit.py` e
+`scripts/build-search-index.py` foram rodados de novo depois das
+adições; os números no `index.html`, `AUDIT-TABLE.md` e `CHANGELOG.md`
+foram sincronizados com a saída desses scripts.
