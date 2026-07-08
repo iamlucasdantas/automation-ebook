@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 187,
+  "total": 196,
   "items": [
     {
       "id": "g1",
@@ -440,6 +440,21 @@
       "description": "Dispara o workflow num horário programado — de hora em hora, diário, semanal, mensal, numa data específica ou via expressão cron. É o único gatilho puramente de relógio do HighLevel: nenhum evento de contato precisa acontecer.",
       "keywords": "agendador scheduler cron programado recorrente horário",
       "href": "guia-highlevel-cat02.html#g19"
+    },
+    {
+      "id": "g20",
+      "type": "Gatilho",
+      "name": "Upload no Client Portal",
+      "en": "Client Portal File Uploaded",
+      "category": "Client Portal",
+      "tags": [
+        "Tempo real",
+        "Novo",
+        "Client Portal"
+      ],
+      "description": "Dispara automaticamente sempre que um contato envia um arquivo pela experiência de Shared Documents dentro do Client Portal — o portal do cliente que você libera pra quem já fechou negócio. Suporta múltiplos tipos de arquivo (PDF, imagem, planilha, etc.), então serve tanto pra contrato assinado quanto foto de documento ou formulário preenchido à mão e escaneado.",
+      "keywords": "client portal file uploaded upload documento arquivo shared documents cliente portal onboarding contrato kyc",
+      "href": "guia-highlevel-cat02.html#g20"
     },
     {
       "id": "g1",
@@ -1073,6 +1088,62 @@
       "href": "guia-highlevel-cat11.html#g5"
     },
     {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Solicitação de Entrada em Grupo Rejeitada",
+      "en": "Group Join Request Rejected",
+      "category": "Atividade em Grupo",
+      "tags": [
+        "Tempo real",
+        "Moderação"
+      ],
+      "description": "Dispara quando a solicitação de um usuário pra entrar em um grupo é rejeitada por um admin ou moderador. Cobre o lado \"não aprovado\" do fluxo de entrada, que antes ficava sem nenhum rastro na automação.",
+      "keywords": "solicitação de entrada em grupo rejeitada group join request rejected",
+      "href": "guia-highlevel-cat11.html#g6"
+    },
+    {
+      "id": "g7",
+      "type": "Gatilho",
+      "name": "Novo Post Criado no Grupo",
+      "en": "New Post Created in Group",
+      "category": "Atividade em Grupo",
+      "tags": [
+        "Tempo real",
+        "Engajamento"
+      ],
+      "description": "Dispara toda vez que um membro cria um novo post dentro de um grupo monitorado. Deixa de ser só espectador do relatório mensal de comunidade — permite reagir a conteúdo em tempo real.",
+      "keywords": "novo post criado no grupo new post created in group",
+      "href": "guia-highlevel-cat11.html#g7"
+    },
+    {
+      "id": "g8",
+      "type": "Gatilho",
+      "name": "Novo Comentário em Post do Grupo",
+      "en": "New Comment Added to Group Post",
+      "category": "Atividade em Grupo",
+      "tags": [
+        "Tempo real",
+        "Suporte"
+      ],
+      "description": "Dispara quando alguém comenta em um post dentro do grupo. Cobre a camada de conversa que acontece dentro dos posts, não só a publicação original.",
+      "keywords": "novo comentário em post do grupo new comment added to group post",
+      "href": "guia-highlevel-cat11.html#g8"
+    },
+    {
+      "id": "g9",
+      "type": "Gatilho",
+      "name": "Membro Inscrito em Evento do Grupo",
+      "en": "Member Registered for Group Event",
+      "category": "Atividade em Grupo",
+      "tags": [
+        "Tempo real",
+        "Eventos"
+      ],
+      "description": "Dispara quando um membro se inscreve em um evento criado dentro de um grupo da comunidade. Fecha o ciclo entre \"postei o evento\" e \"alguém realmente confirmou presença\".",
+      "keywords": "membro inscrito em evento do grupo member registered for group event",
+      "href": "guia-highlevel-cat11.html#g9"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Certificado Enviado",
@@ -1609,6 +1680,19 @@
       "href": "acoes-highlevel-cat02.html#a25"
     },
     {
+      "id": "a26",
+      "type": "Ação",
+      "name": "Enviar Mensagem RCS",
+      "en": "Send RCS Message",
+      "category": "Ação",
+      "tags": [
+        "Novo · Beta"
+      ],
+      "description": "",
+      "keywords": "enviar mensagem rcs send rcs message rich communication services",
+      "href": "acoes-highlevel-cat02.html#a26"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Webhook de Saída",
@@ -2041,14 +2125,14 @@
     {
       "id": "a6",
       "type": "Ação",
-      "name": "Deletar Oportunidade",
-      "en": "Delete Opportunity",
+      "name": "Remover Oportunidade",
+      "en": "Remove Opportunity",
       "category": "Ação",
       "tags": [
         "⚠ Destrutiva"
       ],
       "description": "",
-      "keywords": "deletar oportunidade delete opportunity",
+      "keywords": "remover oportunidade remove opportunity deletar oportunidade delete opportunity",
       "href": "acoes-highlevel-cat07.html#a6"
     },
     {
@@ -2094,6 +2178,41 @@
       "description": "",
       "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
       "href": "acoes-highlevel-cat07.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Encontrar Oportunidade",
+      "en": "Find Opportunity",
+      "category": "Ação",
+      "tags": [
+        "⑂ Ramificação condicional"
+      ],
+      "description": "",
+      "keywords": "encontrar oportunidade find opportunity",
+      "href": "acoes-highlevel-cat07.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Remover Dono da Oportunidade",
+      "en": "Remove Owner from Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover dono da oportunidade remove owner from opportunity",
+      "href": "acoes-highlevel-cat07.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Remover Seguidores da Oportunidade",
+      "en": "Remove Follower(s) from Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover seguidores da oportunidade remove followers from opportunity",
+      "href": "acoes-highlevel-cat07.html#a13"
     },
     {
       "id": "a1",

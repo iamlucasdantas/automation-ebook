@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 46 | 0 | **77** |
-| Ações | 33 | 74 | 3 | **110** |
+| Gatilhos | 32 | 50 | 0 | **82** |
+| Ações | 34 | 77 | 3 | **114** |
 
 
 ## Gatilhos · 12 categorias
@@ -54,6 +54,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g17 | [Novo Prospecto](guia-highlevel-cat02.html#g17) | Prospect Generated | 3 | 3/6 | 🟢 | [ ] | |
 | g18 | [Transcript Gerado](guia-highlevel-cat02.html#g18) | Transcript Generated | 4 | 2/6 | 🟡 | [ ] | |
 | g19 | [Agendador (Scheduler)](guia-highlevel-cat02.html#g19) | Scheduler | 6 | 3/6 | 🟢 | [ ] | |
+| g20 | [Upload no Client Portal](guia-highlevel-cat02.html#g20) | Client Portal File Uploaded | 3 | 3/6 | 🟢 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -135,6 +136,10 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g3 | [Acesso Concedido a Canal Privado](guia-highlevel-cat11.html#g3) | Private Channel Access Granted | 3 | 2/6 | 🟡 | [ ] | |
 | g4 | [Remoção de Acesso a Canal Privado](guia-highlevel-cat11.html#g4) | Private Channel Access Revoked | 3 | 2/6 | 🟡 | [ ] | |
 | g5 | [Mudança de Nível na Classificação](guia-highlevel-cat11.html#g5) | Community Group Member Leaderboard Level Changed | 4 | 2/6 | 🟡 | [ ] | |
+| g6 | [Solicitação de Entrada em Grupo Rejeitada](guia-highlevel-cat11.html#g6) | Group Join Request Rejected | 3 | 2/6 | 🟡 | [ ] | |
+| g7 | [Novo Post Criado no Grupo](guia-highlevel-cat11.html#g7) | New Post Created in Group | 5 | 2/6 | 🟡 | [ ] | |
+| g8 | [Novo Comentário em Post do Grupo](guia-highlevel-cat11.html#g8) | New Comment Added to Group Post | 5 | 2/6 | 🟡 | [ ] | |
+| g9 | [Membro Inscrito em Evento do Grupo](guia-highlevel-cat11.html#g9) | Member Registered for Group Event | 4 | 2/6 | 🟡 | [ ] | |
 
 ### CAT12 · Conclusão
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -191,6 +196,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a23 | [Confirmação GMB](acoes-highlevel-cat02.html#a23) | GMB Confirmation | 2 | 2/6 | 🔴 | [ ] | |
 | a24 | [SMS via Shortcode](acoes-highlevel-cat02.html#a24) | Shortcode SMS | 2 | 2/6 | 🟡 | [ ] | |
 | a25 | [Anexar Arquivo](acoes-highlevel-cat02.html#a25) | Attach File | 2 | 3/6 | 🟢 | [ ] | |
+| a26 | [Enviar Mensagem RCS](acoes-highlevel-cat02.html#a26) | Send RCS Message | 3 | 3/6 | 🟢 | [ ] | |
 
 ### CAT03 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -245,11 +251,14 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Mover Estágio no Pipeline](acoes-highlevel-cat07.html#a3) | Move Pipeline Stage | 3 | 2/6 | 🟡 | [ ] | |
 | a4 | [Mover Entre Pipelines](acoes-highlevel-cat07.html#a4) | Move Between Pipelines | 3 | 2/6 | 🟡 | [ ] | |
 | a5 | [Atualizar Status](acoes-highlevel-cat07.html#a5) | Update Opportunity Status | 3 | 3/6 | 🟢 | [ ] | |
-| a6 | [Deletar Oportunidade](acoes-highlevel-cat07.html#a6) | Delete Opportunity | 3 | 2/6 | 🟡 | [ ] | |
+| a6 | [Remover Oportunidade](acoes-highlevel-cat07.html#a6) | Remove Opportunity | 3 | 2/6 | 🟡 | [ ] | |
 | a7 | [Adicionar Dono à Oportunidade](acoes-highlevel-cat07.html#a7) | Add Owner to Opportunity | 3 | 2/6 | 🟡 | [ ] | |
 | a8 | [Adicionar Tag à Opp](acoes-highlevel-cat07.html#a8) | Add Opportunity Tag | 3 | 3/6 | 🟢 | [ ] | |
 | a9 | [Remover Tag da Opp](acoes-highlevel-cat07.html#a9) | Remove Opportunity Tag | 2 | 2/6 | 🟡 | [ ] | |
 | a10 | [Adicionar Seguidores à Oportunidade](acoes-highlevel-cat07.html#a10) | Add Follower(s) to Opportunity | 4 | 3/6 | 🟢 | [ ] | |
+| a11 | [Encontrar Oportunidade](acoes-highlevel-cat07.html#a11) | Find Opportunity | 3 | 2/6 | 🟡 | [ ] | |
+| a12 | [Remover Dono da Oportunidade](acoes-highlevel-cat07.html#a12) | Remove Owner from Opportunity | 3 | 1/6 | 🟡 | [ ] | |
+| a13 | [Remover Seguidores da Oportunidade](acoes-highlevel-cat07.html#a13) | Remove Follower(s) from Opportunity | 2 | 3/6 | 🟡 | [ ] | |
 
 ### CAT08 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
