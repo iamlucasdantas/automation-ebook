@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-08 — Content
+**Add 5 new native triggers + 4 new native actions from HighLevel**
+([d8e394c](../../commit/d8e394c))
+
+- New triggers: Client Portal File Uploaded (cat02 g20); Group Join
+  Request Rejected, New Post Created in Group, New Comment Added to
+  Group Post, Member Registered for Group Event (cat11 g6-g9).
+- New actions: Send RCS Message (cat02 a26, Private Beta); Find
+  Opportunity, Remove Owner from Opportunity, Remove Follower(s) from
+  Opportunity (cat07 a11-a13).
+- Renamed cat07 a6 "Delete Opportunity" → "Remove Opportunity" to match
+  HighLevel's official action name.
+- Sourced via WebSearch against `ideas.gohighlevel.com` and
+  `help.gohighlevel.com` (WebFetch was network-blocked in this
+  environment). One unconfirmed trigger claim (Payment Failed / Form
+  Partially Completed) was investigated and discarded — see AUDIT.md.
+- Homepage counts refreshed: 77→82 triggers, 110→114 actions,
+  187→196 panels/mockups, plus a "last updated" date in the footer.
+  AUDIT.md / AUDIT-TABLE.md regenerated.
+
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
