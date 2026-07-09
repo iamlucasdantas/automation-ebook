@@ -10,6 +10,33 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-09 — Automation
+**Recover unmerged 07-08 work + cross-validate against fresh research; flag process gap**
+
+- The daily periodic-check routine has been creating a new branch off
+  `main` every day since at least 2026-06-22, but none of those branches
+  were ever merged — `main` was stuck at the 2026-07-03 commit while ~6
+  days of Drive-logged "updates" existed only on disconnected branches.
+  Recovered the most recent one (`claude/friendly-meitner-ab4lcl`,
+  2026-07-08: 5 new triggers + 4 new actions) via cherry-pick instead of
+  re-doing that research from scratch.
+- Ran an independent WebSearch pass today and cross-validated 5 of the 9
+  recovered items against the official HighLevel changelog (4 Communities
+  triggers + RCS Message action) — consistent findings across two
+  independent days is a decent signal these aren't search hallucinations.
+- Found a large unaddressed surface — native "Premium Triggers & Actions"
+  integrations (Basecamp, Typeform, Vapi, Browse AI, Apify, Cal.com,
+  Notion, Airtable, ClickUp) that HighLevel itself builds into Workflow
+  Builder — logged in AUDIT.md for a dedicated future session rather than
+  rushed into today's pass.
+- Flagged a possible native "Slack Message" action that would contradict
+  the guide's current "Slack isn't native" stance — needs live-UI
+  verification before changing, not applied.
+- search-index.json rebuilt (196 entries), AUDIT-TABLE.md regenerated,
+  all 26 category pages re-validated in headless Chromium — 0 errors.
+- Homepage (`index.html`) stats confirmed at 82 gatilhos / 114 ações /
+  196 painéis, last-updated date set to 2026-07-09.
+
 ## 2026-07-08 — Content
 **Add 5 new native triggers + 4 new native actions from HighLevel**
 ([d8e394c](../../commit/d8e394c))

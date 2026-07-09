@@ -3,6 +3,56 @@
 Auditoria contra `help.gohighlevel.com`. Aqui ficam os achados acionáveis.
 Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 
+## 🆕 Rodada 2026-07-09 — Checagem de novidades nativas + achado de processo
+
+**Contexto importante descoberto nesta rodada:** a rotina periódica desta
+tarefa vem rodando diariamente pelo menos desde 2026-06-22, cada dia numa
+branch nova a partir da `main`, mas **nenhuma dessas branches foi mergeada**
+— a `main` está parada em `e8df13d` (2026-07-03). Isso significa que os
+achados dos últimos ~6 dias (incl. a rodada de 2026-07-08 documentada abaixo)
+nunca chegaram a ficar visíveis pra ninguém. Nesta rodada eu recuperei o
+trabalho da branch `claude/friendly-meitner-ab4lcl` (commits `d8e394c` +
+`87bba0d`, 2026-07-08 — os 5 gatilhos + 4 ações abaixo) via cherry-pick pra
+não perder esse trabalho de novo, e sigo publicando na branch desta sessão.
+**Recomendação pro humano:** decidir uma branch "canônica" (ex. sempre a
+mesma, ou sempre abrir PR contra `main` e mergear) pra que o trabalho diário
+pare de se perder.
+
+Rechecagem de WebSearch hoje (WebFetch continua bloqueado com 403 em
+`help.gohighlevel.com`, mesmo caveat de sempre) **corrobora de forma
+independente** 5 dos 9 itens abaixo adicionados ontem (mesmos 4 triggers de
+Comunidades batendo com o changelog "New Communities Triggers", e RCS Message
+batendo com o changelog de RCS private beta) — sinal razoável de que não são
+alucinação de busca. Os 4 itens restantes (Client Portal File Uploaded, Find
+Opportunity, Remove Owner from Opportunity, Remove Follower(s) from
+Opportunity) não foram re-encontrados na busca de hoje, mas também não foram
+contradidos — mantidos, cada um já linkado à fonte oficial abaixo.
+
+**Novidade grande NÃO adicionada hoje — precisa de sessão dedicada:**
+a busca de hoje encontrou uma família inteira de integrações nativas
+"Premium Triggers & Actions" que a própria HighLevel constrói e mantém
+dentro do Workflow Builder (mesma família da nossa já existente ação
+"Google Sheets"), cada uma com doc oficial dedicada: **Basecamp, Typeform,
+Vapi, Browse AI, Apify, Cal.com, Notion, Airtable, ClickUp** — cada uma com
+2-6 triggers/actions próprios. Isso é dezenas de entradas potenciais, uma
+superfície de produto nova o suficiente pra merecer avaliação humana antes
+de virar conteúdo "gold-standard" no guia (categoria nova? dentro de
+Envio de Dados?). Não inventei essa estrutura sem revisão. Fontes: ver seção
+"Integrações Premium — pendente" mais abaixo.
+
+**Também flagado, não aplicado:** o help.gohighlevel.com tem um artigo
+("workflow-action-slack-message") que sugere que **Slack Message pode ser
+uma ação nativa real**, contradizendo a premissa atual do guia (que trata
+Slack como não-nativo e usa "Outbound Webhook (Slack)" no lugar). O
+formato antigo do ID do artigo sugere que isso é anterior à nossa última
+auditoria, não uma novidade — mas não foi possível confirmar sem acesso
+à UI ao vivo. Precisa de verificação humana antes de qualquer mudança,
+porque reverter essa decisão afeta várias entradas já publicadas.
+
+Nenhum conteúdo novo de mockup foi escrito nesta rodada além do que já
+veio do cherry-pick de 2026-07-08 (documentado abaixo) — a contagem
+77→82 gatilhos / 110→114 ações / 187→196 painéis já reflete isso.
+
 ## 🆕 Rodada 2026-07-08 — Checagem de novidades nativas
 
 Verificação periódica (a mesma rotina de `db26cd1`, 2026-06-09) pra achar
