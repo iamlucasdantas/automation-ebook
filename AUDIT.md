@@ -91,11 +91,67 @@ outras ações, (b) features novas/experimentais, ou (c) docs sparse:
 Não significa que estão erradas — só que não foi possível auto-validar.
 Pra qualquer uma, abra o HL e me diga se a action existe como está.
 
+## 🆕 Rodada 2026-07-10 — Checagem de novidades nativas
+
+Rotina automática comparou os 187 (76 gatilhos + 110 ações — já incluindo
+o Scheduler e o Add Followers to Opportunity da rodada anterior) itens do
+guia contra `help.gohighlevel.com` em busca de gatilhos/ações nativos
+lançados recentemente e não cobertos ainda.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Email Recebido (Inbound Email)** · cat02 G20. Dispara em
+   qualquer email novo numa caixa conectada, incl. remetentes frios
+   (diferente de "Contato Respondeu" e "Eventos de Email").
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007650-workflow-trigger-inbound-email)
+2. **Ação — Código Customizado (Custom Code)** · cat03 A5. Roda JavaScript
+   dentro do workflow via `InputData`, com Test your Code obrigatório e
+   AI-Powered Code Generation. Ação Premium.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000002253-workflow-action-custom-code)
+3. **Ação — Agente de IA (AI Agent)** · cat05 A6. Ação autônoma multi-step:
+   recebe instruções em linguagem natural e decide sozinha quais
+   ferramentas usar. Ação Premium.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007600-workflow-action-ai-agent)
+4. **Gatilho — Usuário Respondeu (User Replied)** · cat02 G21. Adicionado
+   a pedido do usuário depois de confirmação adicional na fonte oficial.
+   Dispara quando um usuário/membro do time responde o contato — oposto
+   do "Contato Respondeu". Filtros: Reply Channel, Specific User,
+   Assigned User. Integra com Wait (User Replied) e Goal Event.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-user-replied)
+
+Totais atualizados: **79 gatilhos + 112 ações = 191 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `search-index.json` estava desatualizado (185 ao invés de 187) — não
+  tinha sido regenerado depois do Scheduler/Add Followers da rodada anterior.
+- `index.html`: tab-counts e section-labels ainda diziam 76/109 enquanto os
+  hero-stats já diziam 77/110.
+- `acoes-highlevel-cat03.html`: side-nav e hero-stats esqueceram a A4 (Send
+  Conversion Event), mostrando "3 ações" quando já eram 4.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+Achados com menos certeza sobre campos exatos — fica pra próxima rodada
+com confirmação humana antes de montar o mockup com fidelidade real:
+- **AI Decision Maker** (ação premium — roteamento por linguagem natural,
+  alternativa ao If/Else manual)
+- **Client Portal File Uploaded** (gatilho — contato sobe arquivo no
+  Client Portal)
+- **Communities: Rejected Join Request / New Post / New Comment** (3
+  gatilhos novos de Communities, além dos que já temos)
+- **AI Translate** (ação — traduz texto dentro do workflow)
+- **Update Conversation AI Bot and Status** (ação — troca o bot/status da
+  conversa a partir do workflow)
+
+### ⚠ Rename já sinalizado (não é novo, é nome desatualizado — mantido como está até confirmação)
+- Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
+  (mesma função, possível rename).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ acima (confirmar nome real do
+1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
+   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
    campo / da action)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito

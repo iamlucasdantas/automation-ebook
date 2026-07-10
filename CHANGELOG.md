@@ -10,6 +10,63 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-10 — Content
+**Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
+
+- `acoes-highlevel-cat04.html` A2 (Wait): the HL config panel only documented
+  3 of the 8 real `Wait Type` modes (Time Delay, Wait Until Event, Wait
+  Until Date). Rewrote it to cover all 8: Wait For (Time Delay), Wait
+  Until (Date/Time), Recurring Schedule, Wait for Appointment/Booking/
+  Invoice, Wait for Contact Reply (incl. User Replied + Live Chat
+  channels), Wait for Event, Wait for Opportunity, Wait for Review
+  Request — plus the general Resume On / Overall Timeout / Advance
+  Window settings that apply regardless of mode.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000002470-workflow-action-wait)
+- Found and removed ~90 lines of orphaned duplicate mockup markup that
+  had been left inside this same block from an earlier edit — unmatched
+  closing `</div>` tags meant the DOM balanced to -4 at one point (browsers
+  silently tolerate this, so `validate-mockups.js` never caught it, but it
+  was dead/duplicate content sitting in the page).
+
+## 2026-07-10 — Content
+**Add User Replied trigger (requested)**
+
+- Added **User Replied** trigger (`guia-highlevel-cat02.html` G21) — native
+  trigger that fires when a team member/user (not the customer) replies
+  to a contact, the opposite of Customer Replied. Filters: Reply Channel,
+  Specific User, Assigned User. Confirmed via HighLevel's official
+  changelog: [Workflow Trigger: User Replied](https://ideas.gohighlevel.com/changelog/workflow-trigger-user-replied).
+  This was flagged as a pending candidate in the previous entry below and
+  applied now on user request.
+- Totals now: **79 gatilhos, 112 ações, 191 entries** — `search-index.json`
+  and `AUDIT-TABLE.md` regenerated, all 26 pages pass validate-mockups.js.
+
+## 2026-07-10 — Content
+**Add 3 new native HighLevel workflow items + fix stale counts across the guide**
+
+- **Inbound Email** trigger added (`guia-highlevel-cat02.html` G20) — native
+  trigger for cold/warm inbound emails to a connected mailbox, distinct from
+  Customer Replied and Email Events. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007650-workflow-trigger-inbound-email)
+- **Custom Code** action added (`acoes-highlevel-cat03.html` A5) — native
+  JavaScript action (Input Data, Test your Code, AI-Powered Code
+  Generation), distinct from Custom API Call. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000002253-workflow-action-custom-code)
+- **AI Agent** action added (`acoes-highlevel-cat05.html` A6) — new
+  autonomous multi-step Workflow AI action (Premium). [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007600-workflow-action-ai-agent)
+- Fixed count drift found while auditing: `search-index.json` hadn't been
+  regenerated since the previous round's Scheduler + Add Followers
+  additions (was reporting 185 instead of 187); `index.html` tab-counts
+  and section-labels still said 76/109 while hero-stats said 77/110;
+  `acoes-highlevel-cat03.html`'s side-nav/hero-stats were missing A4 (Send
+  Conversion Event) entirely.
+- All totals now match the real HTML content: **78 gatilhos, 112 ações,
+  190 entries** — `search-index.json` and `AUDIT-TABLE.md` regenerated,
+  homepage last-updated date added to the footer.
+- See `AUDIT.md` for 6 additional candidate native items (AI Decision
+  Maker, User Replied, Client Portal File Uploaded, 3 new Communities
+  triggers, AI Translate, Update Conversation AI Bot and Status) found
+  but not yet applied — pending human confirmation of exact fields.
+
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
