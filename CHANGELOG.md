@@ -11,6 +11,19 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-07-10 — Content
+**Add User Replied trigger (requested)**
+
+- Added **User Replied** trigger (`guia-highlevel-cat02.html` G21) — native
+  trigger that fires when a team member/user (not the customer) replies
+  to a contact, the opposite of Customer Replied. Filters: Reply Channel,
+  Specific User, Assigned User. Confirmed via HighLevel's official
+  changelog: [Workflow Trigger: User Replied](https://ideas.gohighlevel.com/changelog/workflow-trigger-user-replied).
+  This was flagged as a pending candidate in the previous entry below and
+  applied now on user request.
+- Totals now: **79 gatilhos, 112 ações, 191 entries** — `search-index.json`
+  and `AUDIT-TABLE.md` regenerated, all 26 pages pass validate-mockups.js.
+
+## 2026-07-10 — Content
 **Add 3 new native HighLevel workflow items + fix stale counts across the guide**
 
 - **Inbound Email** trigger added (`guia-highlevel-cat02.html` G20) — native

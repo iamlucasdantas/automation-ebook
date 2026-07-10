@@ -2431,6 +2431,7 @@
   <div class="side-section-label">Comunicação (avançado)</div>
   <nav class="side-nav">
     <a href="#g20" class="side-link"><span class="side-num">20</span>Email Recebido</a>
+    <a href="#g21" class="side-link"><span class="side-num">21</span>Usuário Respondeu</a>
   </nav>
 
   <!-- ============================================================
@@ -2462,7 +2463,7 @@
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">20</span>
+      <span class="hero-stat-num">21</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -7228,6 +7229,199 @@
     </div>
   </div>
 
+</div><div class="trigger-block" id="g21" data-name="usuario respondeu user replied equipe time membro">
+  <div class="trigger-head">
+    <div class="trigger-num">21</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Comunicação</div>
+      <h2 class="trigger-name">Usuário Respondeu</h2>
+      <div class="trigger-en">User Replied</div>
+      <div class="trigger-tags"><span class="info-tag">Tempo real</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um <strong>usuário/membro do time</strong> responde o contato — o oposto do "Contato Respondeu" (que só dispara na resposta do cliente). Serve pra automatizar o que acontece assim que um humano do seu time entra na conversa: notificar o gestor, atualizar o estágio da oportunidade, criar tarefa de follow-up, ou parar sequências automáticas porque um atendimento humano já começou.</p>
+      <p>Também aparece integrado em outras partes do builder: a ação Wait agora aceita "User Replied" como condição de espera (segura o contato até um usuário responder), e dá pra usar como Goal Event pra encerrar sequências automáticas assim que o time engajar.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Vendedor respondeu lead novo</div><div class="use-case-desc">SDR responde o SMS do lead → oportunidade muda pra "Contatado" automaticamente e o gestor recebe notificação.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Suporte respondeu ticket por email</div><div class="use-case-desc">Agente responde o cliente → tag "Suporte Respondeu" + tarefa de follow-up em 48h pra conferir se resolveu.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Parar nutrição automática</div><div class="use-case-desc">Sequência de emails automática só para quando um humano do time efetivamente responde — usado como Goal Event.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Canal da Resposta</div>
+    <div class="filter-en">Reply Channel</div>
+    <div class="filter-type">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Só dispara se a resposta veio do canal selecionado (SMS, Email, WhatsApp, Instagram, Facebook).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Separa automações por canal — resposta de SMS não precisa acionar o mesmo fluxo de email.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Usuário Específico</div>
+    <div class="filter-en">Specific User</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe o disparo a um usuário específico que respondeu.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Automação só roda quando é o gestor ou um membro sênior que respondeu, por exemplo.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Usuário Atribuído</div>
+    <div class="filter-en">Assigned User</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Só dispara se quem respondeu é o usuário atribuído ao contato.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Confirma que foi o dono do lead que respondeu, não outro membro do time.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g21">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunicação/ 21 — Vendedor Respondeu → Atualizar Oportunidade</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g21">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g21-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · User Replied</div>
+              <div class="ghl-node-title">User Replied</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Vendedor respondeu lead</span></div><div class="ghl-node-param"><span class="pk">Reply Channel</span><span class="pv">SMS</span></div><div class="ghl-node-param"><span class="pk">Assigned User</span><span class="pv">🟢 ON — só quem é dono do lead</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g21-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">💰</div>
+            <div>
+              <div class="ghl-node-type">Action · Update Opportunity Status</div>
+              <div class="ghl-node-title">Update Opportunity Status</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Marcar lead como contatado</span></div><div class="ghl-node-param"><span class="pk">Stage</span><span class="pv highlight">Contatado</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g21-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Notificar gestor</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Aviso · SDR respondeu lead</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv">Gestor Comercial</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G21 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Oposto do <strong>Contato Respondeu</strong>: dispara na resposta do TIME, não do cliente. <span class='arrow'>→</span> Combina com Wait (User Replied) e Goal Event pra parar sequências automáticas.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>User Replied</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Vendedor respondeu lead" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Reply Channel</div>
+        <div class="hl-dropdown has-value">SMS</div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">Opções</div>
+          <div class="field-spec-val" style="margin-top:4px;">
+            <span class="opt-chip">SMS</span>
+            <span class="opt-chip">Email</span>
+            <span class="opt-chip">WhatsApp</span>
+            <span class="opt-chip">Instagram</span>
+            <span class="opt-chip">Facebook</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Specific User</div>
+        <div class="hl-dropdown placeholder">Qualquer usuário</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Assigned User</div>
+        <div class="hl-dropdown has-value">🟢 ON — só o dono do contato</div>
+      </div>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara na resposta de um usuário/time — oposto de Contato Respondeu. Doc oficial: <a href="https://ideas.gohighlevel.com/changelog/workflow-trigger-user-replied" target="_blank" rel="noopener">ideas.gohighlevel.com/changelog/workflow-trigger-user-replied</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -7247,7 +7441,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>20 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>21 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -7358,7 +7552,10 @@
     'g19-3': { kind: 'Action · Internal Notification', title: 'Notificar time comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso interno · relatório postado</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Comercial (5 usuários)</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Relatório diário postado no Slack #comercial às 08:00</div></div>` },
     'g20-1': { kind: 'Trigger · Inbound Email', title: 'Inbound Email', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Email frio → comercial</div></div><div class="config-section"><div class="config-label">Mailbox *</div><div class="config-field highlight dropdown">comercial@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject Contains</div><div class="config-field">orçamento</div></div>` },
     'g20-2': { kind: 'Action · Find or Create Contact', title: 'Find or Create Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Match por email do remetente</div></div><div class="config-section"><div class="config-label">Search Field</div><div class="config-field dropdown">Email</div></div><div class="config-section"><div class="config-label">Match Value</div><div class="config-field highlight">{{inboundEmail.from}}</div></div><div class="config-section"><div class="config-label">On No Match</div><div class="config-field dropdown">Create new</div></div>` },
-    'g20-3': { kind: 'Action · Internal Notification', title: 'Notificar comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Novo email de orçamento</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Novo email de orçamento recebido de {{inboundEmail.from}}</div></div>` }
+    'g20-3': { kind: 'Action · Internal Notification', title: 'Notificar comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Novo email de orçamento</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Novo email de orçamento recebido de {{inboundEmail.from}}</div></div>` },
+    'g21-1': { kind: 'Trigger · User Replied', title: 'User Replied', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Vendedor respondeu lead</div></div><div class="config-section"><div class="config-label">Reply Channel</div><div class="config-field dropdown">SMS</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field">🟢 ON — só o dono do contato</div></div>` },
+    'g21-2': { kind: 'Action · Update Opportunity', title: 'Update Opportunity Status', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar lead como contatado</div></div><div class="config-section"><div class="config-label">Stage *</div><div class="config-field highlight dropdown">Contatado</div></div>` },
+    'g21-3': { kind: 'Action · Internal Notification', title: 'Notificar gestor', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso · SDR respondeu lead</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Gestor Comercial</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

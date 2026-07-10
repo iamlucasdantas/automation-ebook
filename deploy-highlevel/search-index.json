@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 190,
+  "total": 191,
   "items": [
     {
       "id": "g1",
@@ -454,6 +454,20 @@
       "description": "Dispara toda vez que chega um email novo numa caixa conectada ao HighLevel — inclusive emails frios de remetentes desconhecidos que ainda não são contato no CRM. É diferente do \"Contato Respondeu\" (que só dispara quando alguém responde uma mensagem que você mandou primeiro) e do \"Eventos de Email\" (que cobre entrega/abertura/clique de campanhas de saída, não recebimento).",
       "keywords": "email recebido inbound email caixa de entrada frio",
       "href": "guia-highlevel-cat02.html#g20"
+    },
+    {
+      "id": "g21",
+      "type": "Gatilho",
+      "name": "Usuário Respondeu",
+      "en": "User Replied",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um usuário/membro do time responde o contato — o oposto do \"Contato Respondeu\" (que só dispara na resposta do cliente). Serve pra automatizar o que acontece assim que um humano do seu time entra na conversa: notificar o gestor, atualizar o estágio da oportunidade, criar tarefa de follow-up, ou parar sequências automáticas porque um atendimento humano já começou.",
+      "keywords": "usuario respondeu user replied equipe time membro",
+      "href": "guia-highlevel-cat02.html#g21"
     },
     {
       "id": "g1",

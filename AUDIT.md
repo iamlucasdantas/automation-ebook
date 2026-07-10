@@ -111,8 +111,14 @@ lançados recentemente e não cobertos ainda.
    recebe instruções em linguagem natural e decide sozinha quais
    ferramentas usar. Ação Premium.
    [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007600-workflow-action-ai-agent)
+4. **Gatilho — Usuário Respondeu (User Replied)** · cat02 G21. Adicionado
+   a pedido do usuário depois de confirmação adicional na fonte oficial.
+   Dispara quando um usuário/membro do time responde o contato — oposto
+   do "Contato Respondeu". Filtros: Reply Channel, Specific User,
+   Assigned User. Integra com Wait (User Replied) e Goal Event.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-user-replied)
 
-Totais atualizados: **78 gatilhos + 112 ações = 190 entries** (homepage,
+Totais atualizados: **79 gatilhos + 112 ações = 191 entries** (homepage,
 search-index.json e AUDIT-TABLE.md já regenerados).
 
 ### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
@@ -128,8 +134,6 @@ Achados com menos certeza sobre campos exatos — fica pra próxima rodada
 com confirmação humana antes de montar o mockup com fidelidade real:
 - **AI Decision Maker** (ação premium — roteamento por linguagem natural,
   alternativa ao If/Else manual)
-- **User Replied** (gatilho — quando um USUÁRIO HL responde o contato,
-  oposto de Customer Replied)
 - **Client Portal File Uploaded** (gatilho — contato sobe arquivo no
   Client Portal)
 - **Communities: Rejected Join Request / New Post / New Comment** (3
