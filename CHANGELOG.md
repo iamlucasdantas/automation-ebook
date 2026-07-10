@@ -10,6 +10,33 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-10 — Content
+**Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
+
+- **cat11 · Comunidades** — 4 new triggers added (g6–g9):
+  Registrado em Evento do Grupo, Solicitação de Entrada Rejeitada,
+  Nova Publicação no Grupo, Novo Comentário no Grupo.
+  Counter: 5 → 9 gatilhos. New sidebar section "Engajamento".
+- **cat05 · Workflow AI** — 1 new action added (a6):
+  Agente de IA (AI Agent) with full interactive mockup.
+  Counter: 5 → 6 ações.
+- **cat12 · Certificados (Gatilhos)** — breadcrumb/nav updated: 12/12 → 12/13.
+  Next nav now points to new cat13.
+- **cat14 · Certificados (Ações)** — breadcrumb/nav updated: 14/14 → 14/15.
+  Next nav now points to new cat15.
+- **NEW: guia-highlevel-cat13.html** — Google Integrações (Gatilhos):
+  3 new LC Premium triggers (g1–g3): Contato Google Criado,
+  Novo Grupo de Contatos Google, Resposta em Formulário Google.
+  Each with interactive mockup + static HL config panel.
+- **NEW: acoes-highlevel-cat15.html** — Google Integrações (Ações):
+  6 new LC Premium actions (a1–a6): Criar, Atualizar, Buscar,
+  Buscar ou Criar Contato Google, Criar Grupo Google,
+  Adicionar a Grupos Google. Interactive mockups for a4 and a6.
+- **index.html** — stats updated: 76→83 gatilhos, 109→116 ações,
+  185→199 painéis, 31→37 mockups. Tabs updated to 13 cat / 15 cat.
+  New cards for cat13 and cat15. "Última atualização: 10 de julho de 2026."
+- **search-index.json** — 14 new entries added. Total: 185 → 199.
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))
