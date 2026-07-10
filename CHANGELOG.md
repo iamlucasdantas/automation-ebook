@@ -11,6 +11,24 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-07-10 — Content
+**Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
+
+- `acoes-highlevel-cat04.html` A2 (Wait): the HL config panel only documented
+  3 of the 8 real `Wait Type` modes (Time Delay, Wait Until Event, Wait
+  Until Date). Rewrote it to cover all 8: Wait For (Time Delay), Wait
+  Until (Date/Time), Recurring Schedule, Wait for Appointment/Booking/
+  Invoice, Wait for Contact Reply (incl. User Replied + Live Chat
+  channels), Wait for Event, Wait for Opportunity, Wait for Review
+  Request — plus the general Resume On / Overall Timeout / Advance
+  Window settings that apply regardless of mode.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000002470-workflow-action-wait)
+- Found and removed ~90 lines of orphaned duplicate mockup markup that
+  had been left inside this same block from an earlier edit — unmatched
+  closing `</div>` tags meant the DOM balanced to -4 at one point (browsers
+  silently tolerate this, so `validate-mockups.js` never caught it, but it
+  was dead/duplicate content sitting in the page).
+
+## 2026-07-10 — Content
 **Add User Replied trigger (requested)**
 
 - Added **User Replied** trigger (`guia-highlevel-cat02.html` G21) — native
