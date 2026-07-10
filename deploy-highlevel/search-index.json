@@ -1,6 +1,6 @@
 {
-  "generated_at": null,
-  "total": 185,
+  "generated_at": "2026-07-10",
+  "total": 199,
   "items": [
     {
       "id": "g1",
@@ -2420,6 +2420,203 @@
       "description": "",
       "keywords": "emitir certificado issue certificate",
       "href": "acoes-highlevel-cat14.html#a1"
+    },
+    {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Registrado em Evento do Grupo",
+      "en": "Group Event Registered",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Eventos"
+      ],
+      "description": "Dispara quando um membro da comunidade se registra em um evento do grupo. Ideal para enviar confirmações e materiais de preparação.",
+      "keywords": "registrado evento grupo group event registered comunidade community",
+      "href": "guia-highlevel-cat11.html#g6"
+    },
+    {
+      "id": "g7",
+      "type": "Gatilho",
+      "name": "Solicitação de Entrada Rejeitada",
+      "en": "Membership Request Rejected",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Grupos"
+      ],
+      "description": "Dispara quando a solicitação de entrada de um usuário em um grupo da comunidade é rejeitada pelo administrador.",
+      "keywords": "solicitação rejeitada entrada grupo membership request rejected community",
+      "href": "guia-highlevel-cat11.html#g7"
+    },
+    {
+      "id": "g8",
+      "type": "Gatilho",
+      "name": "Nova Publicação no Grupo",
+      "en": "New Group Post",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Conteúdo"
+      ],
+      "description": "Dispara quando qualquer membro publica algo no grupo da comunidade. Permite moderar, notificar e engajar em cima do conteúdo gerado.",
+      "keywords": "nova publicação grupo post community new group post",
+      "href": "guia-highlevel-cat11.html#g8"
+    },
+    {
+      "id": "g9",
+      "type": "Gatilho",
+      "name": "Novo Comentário no Grupo",
+      "en": "New Group Comment",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Conteúdo"
+      ],
+      "description": "Dispara quando um membro comenta em uma publicação do grupo. Ótimo para reconhecer participação ativa e manter o engajamento.",
+      "keywords": "novo comentário grupo comment community new group comment",
+      "href": "guia-highlevel-cat11.html#g9"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Contato Google Criado",
+      "en": "Google Contact Created",
+      "category": "Contatos Google",
+      "tags": [
+        "LC Premium",
+        "Google"
+      ],
+      "description": "Dispara quando um novo contato é criado no Google Contacts vinculado à conta. Sincroniza dados entre o GHL e o ecossistema Google automaticamente.",
+      "keywords": "contato google criado google contact created lc premium google integration",
+      "href": "guia-highlevel-cat13.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Novo Grupo de Contatos Google",
+      "en": "New Google Contact Group",
+      "category": "Contatos Google",
+      "tags": [
+        "LC Premium",
+        "Google"
+      ],
+      "description": "Dispara quando um novo grupo de contatos é criado no Google Contacts. Permite sincronizar segmentações do Google com workflows de automação.",
+      "keywords": "novo grupo contatos google new google contact group lc premium",
+      "href": "guia-highlevel-cat13.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Resposta em Formulário Google",
+      "en": "Google Form Response",
+      "category": "Formulários Google",
+      "tags": [
+        "LC Premium",
+        "Google",
+        "Formulários"
+      ],
+      "description": "Dispara quando alguém responde um Google Form conectado à conta. Captura respostas diretamente no workflow para criar leads, atualizar contatos e mais.",
+      "keywords": "resposta formulário google form response lc premium google forms",
+      "href": "guia-highlevel-cat13.html#g3"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Agente de IA",
+      "en": "AI Agent",
+      "category": "Ação",
+      "tags": [
+        "IA",
+        "Avançado"
+      ],
+      "description": "Conecta o workflow a um AI Agent configurado na plataforma para executar conversas inteligentes, responder perguntas ou qualificar leads automaticamente.",
+      "keywords": "agente ia ai agent workflow ai inteligência artificial",
+      "href": "acoes-highlevel-cat05.html#a6"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Contato Google",
+      "en": "Create Google Contact",
+      "category": "Ação",
+      "tags": [
+        "LC Premium",
+        "Google"
+      ],
+      "description": "Cria um novo contato no Google Contacts a partir dos dados do contato no GHL. Mantém os dois sistemas sincronizados automaticamente.",
+      "keywords": "criar contato google create google contact lc premium google integration",
+      "href": "acoes-highlevel-cat15.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Atualizar Contato Google",
+      "en": "Update Google Contact",
+      "category": "Ação",
+      "tags": [
+        "LC Premium",
+        "Google"
+      ],
+      "description": "Atualiza os dados de um contato existente no Google Contacts com informações do CRM. Garante que o Google sempre reflita o estado atual do contato.",
+      "keywords": "atualizar contato google update google contact lc premium",
+      "href": "acoes-highlevel-cat15.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Buscar Contato Google",
+      "en": "Find Google Contact",
+      "category": "Ação",
+      "tags": [
+        "LC Premium",
+        "Google"
+      ],
+      "description": "Pesquisa um contato no Google Contacts por e-mail ou telefone e retorna os dados para uso nos próximos passos do workflow.",
+      "keywords": "buscar contato google find google contact lc premium search",
+      "href": "acoes-highlevel-cat15.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Buscar ou Criar Contato Google",
+      "en": "Find or Create Google Contact",
+      "category": "Ação",
+      "tags": [
+        "LC Premium",
+        "Google"
+      ],
+      "description": "Busca um contato no Google Contacts e, se não encontrar, cria um novo automaticamente. Evita duplicatas e mantém o Google atualizado sem lógica extra.",
+      "keywords": "buscar criar contato google find create google contact lc premium upsert",
+      "href": "acoes-highlevel-cat15.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Criar Grupo Google",
+      "en": "Create Google Contact Group",
+      "category": "Ação",
+      "tags": [
+        "LC Premium",
+        "Google"
+      ],
+      "description": "Cria um novo grupo de contatos no Google Contacts. Útil para segmentar clientes, leads ou qualquer categorização que precise existir no Google.",
+      "keywords": "criar grupo google create google contact group lc premium",
+      "href": "acoes-highlevel-cat15.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Adicionar a Grupos Google",
+      "en": "Add to Google Groups",
+      "category": "Ação",
+      "tags": [
+        "LC Premium",
+        "Google"
+      ],
+      "description": "Adiciona um contato do GHL a um ou mais grupos no Google Contacts. Permite manter segmentações do Google alinhadas com as listas e tags do CRM.",
+      "keywords": "adicionar grupos google add google groups lc premium segmentação",
+      "href": "acoes-highlevel-cat15.html#a6"
     }
   ]
 }
