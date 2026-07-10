@@ -10,6 +10,32 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-10 — Content
+**Add 3 new native HighLevel workflow items + fix stale counts across the guide**
+
+- **Inbound Email** trigger added (`guia-highlevel-cat02.html` G20) — native
+  trigger for cold/warm inbound emails to a connected mailbox, distinct from
+  Customer Replied and Email Events. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007650-workflow-trigger-inbound-email)
+- **Custom Code** action added (`acoes-highlevel-cat03.html` A5) — native
+  JavaScript action (Input Data, Test your Code, AI-Powered Code
+  Generation), distinct from Custom API Call. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000002253-workflow-action-custom-code)
+- **AI Agent** action added (`acoes-highlevel-cat05.html` A6) — new
+  autonomous multi-step Workflow AI action (Premium). [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007600-workflow-action-ai-agent)
+- Fixed count drift found while auditing: `search-index.json` hadn't been
+  regenerated since the previous round's Scheduler + Add Followers
+  additions (was reporting 185 instead of 187); `index.html` tab-counts
+  and section-labels still said 76/109 while hero-stats said 77/110;
+  `acoes-highlevel-cat03.html`'s side-nav/hero-stats were missing A4 (Send
+  Conversion Event) entirely.
+- All totals now match the real HTML content: **78 gatilhos, 112 ações,
+  190 entries** — `search-index.json` and `AUDIT-TABLE.md` regenerated,
+  homepage last-updated date added to the footer.
+- See `AUDIT.md` for 6 additional candidate native items (AI Decision
+  Maker, User Replied, Client Portal File Uploaded, 3 new Communities
+  triggers, AI Translate, Update Conversation AI Bot and Status) found
+  but not yet applied — pending human confirmation of exact fields.
+
+
 ## 2026-06-08 — Content
 **Replace generic 'Configurar conforme necessidade' fallback with realistic params**
 ([8fd206c](../../commit/8fd206c))

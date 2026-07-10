@@ -2428,6 +2428,11 @@
     <a href="#g19" class="side-link"><span class="side-num">19</span>Agendador (Scheduler)</a>
   </nav>
 
+  <div class="side-section-label">Comunicação (avançado)</div>
+  <nav class="side-nav">
+    <a href="#g20" class="side-link"><span class="side-num">20</span>Email Recebido</a>
+  </nav>
+
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
        ============================================================ -->
@@ -2457,7 +2462,7 @@
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">18</span>
+      <span class="hero-stat-num">20</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -6992,6 +6997,237 @@
     </div>
   </div>
 
+</div><div class="trigger-block" id="g20" data-name="email recebido inbound email caixa de entrada frio">
+  <div class="trigger-head">
+    <div class="trigger-num">20</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Comunicação</div>
+      <h2 class="trigger-name">Email Recebido</h2>
+      <div class="trigger-en">Inbound Email</div>
+      <div class="trigger-tags"><span class="info-tag">Tempo real</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara toda vez que chega um email novo numa caixa conectada ao HighLevel — inclusive <strong>emails frios de remetentes desconhecidos</strong> que ainda não são contato no CRM. É diferente do "Contato Respondeu" (que só dispara quando alguém responde uma mensagem que você mandou primeiro) e do "Eventos de Email" (que cobre entrega/abertura/clique de campanhas de saída, não recebimento).</p>
+      <p>Trata dois tipos de email: <strong>Cold</strong> (remetente novo, sem contato existente) e <strong>Warm</strong> (remetente já é contato conhecido). Dá pra controlar se o workflow roda pra toda resposta numa thread existente ou só pra conversas novas.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Captura de lead frio por email</div><div class="use-case-desc">Alguém manda email direto pra caixa comercial sem nunca ter preenchido formulário → cria contato + tag automaticamente.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Roteamento por assunto</div><div class="use-case-desc">Subject contém "orçamento" → notifica o time comercial; contém "suporte" → cria task pro CS.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Anexo recebido</div><div class="use-case-desc">Email com anexo (ex.: comprovante, contrato assinado por fora) → Attach File no contato + notificação interna.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Caixa / Destinatário</div>
+    <div class="filter-en">Email Sent To / Mailbox</div>
+    <div class="filter-type">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Qual caixa conectada recebeu o email — filtra antes de tudo.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Separa comercial@ de suporte@ de financeiro@ em workflows distintos.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Remetente</div>
+    <div class="filter-en">From</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra pelo endereço de quem enviou.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Isola remetentes específicos (ex.: parceiros, fornecedores).</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Assunto</div>
+    <div class="filter-en">Subject</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Contém/não contém texto no assunto.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Roteamento por palavra-chave sem precisar de IA.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Corpo do Email</div>
+    <div class="filter-en">Body (plain text)</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Contém/não contém texto no corpo em texto plano.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Detecta palavras-chave de urgência, produto, reclamação.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Tem Anexo</div>
+    <div class="filter-en">Has Attachments</div>
+    <div class="filter-type">avançado</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Toggle — só dispara se o email trouxer anexo.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Separa emails com documento/comprovante dos demais.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Respondido de Workflow</div>
+    <div class="filter-en">Replied to Workflow</div>
+    <div class="filter-type">avançado</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Verifica se o email é resposta a algo enviado por um workflow específico.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Fecha o loop de sequências de email automatizadas.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g20">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunicação/ 20 — Email Frio → Comercial</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g20">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g20-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Inbound Email</div>
+              <div class="ghl-node-title">Inbound Email</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Mailbox</span><span class="pv highlight">comercial@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">Subject Contains</span><span class="pv">orçamento</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g20-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">👤</div>
+            <div>
+              <div class="ghl-node-type">Action · Find or Create Contact</div>
+              <div class="ghl-node-title">Find or Create Contact</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Match por email do remetente</span></div><div class="ghl-node-param"><span class="pk">Match Value</span><span class="pv">{{inboundEmail.from}}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g20-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Notificar comercial</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Novo email de orçamento</span></div><div class="ghl-node-param"><span class="pk">Type</span><span class="pv">In-App + Email</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G20 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Cobre <strong>Cold Email</strong> (remetente novo) e <strong>Warm Email</strong> (contato existente). <span class='arrow'>→</span> <strong>+ Add Filters</strong> combina Mailbox, From, Subject, Body, Has Attachments, Replied to Workflow.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Inbound Email</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Email frio → comercial" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Email Sent To / Mailbox <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">comercial@magneticflows.com.br</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">From</div>
+        <div class="hl-dropdown placeholder">Qualquer remetente</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Subject</div>
+        <input class="hl-input" value="Contains: orçamento">
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Body (plain text)</div>
+        <div class="hl-dropdown placeholder">Sem filtro de corpo</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Has Attachments</div>
+        <div class="hl-dropdown has-value">Qualquer (ON ou OFF)</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Replied to Workflow</div>
+        <div class="hl-dropdown placeholder">Não aplicável — email novo</div>
+      </div>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Cobre email frio (remetente desconhecido) e warm (contato existente). Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007650-workflow-trigger-inbound-email" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-trigger-inbound-email</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -7011,7 +7247,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>19 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>20 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -7119,7 +7355,10 @@
     'g18-3': { kind: 'Action · Communication', title: 'Send Email · Resumo da Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Send Email · Resumo da Call</div></div><div class="config-section"><div class="config-label">To</div><div class="config-field dropdown">{{assigned_user.email}}</div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">Resumo da call com {{contact.first_name}}</div></div>` },
     'g19-1': { kind: 'Trigger · Scheduler', title: 'Scheduler (Daily 08:00)', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Relatório diário 08:00</div></div><div class="config-section"><div class="config-label">Schedule Type *</div><div class="config-field highlight dropdown">Daily</div></div><div class="config-section"><div class="config-label">Time(s) *</div><div class="config-field dropdown">08:00 — fuso da conta</div></div><div class="config-section"><div class="config-label">Skip Weekends</div><div class="config-field">🟢 ON</div></div><div class="config-section"><div class="config-label">Stop On</div><div class="config-field">— (sem data de término)</div></div><div class="config-section"><div class="config-label">⚠ Contactless</div><div class="config-field">Sem contato no contexto — {{contact.*}} indisponível</div></div>` },
     'g19-2': { kind: 'Action · Webhook', title: 'Webhook · Relatório Slack', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Relatório diário pro Slack</div></div><div class="config-section"><div class="config-label">Method *</div><div class="config-field dropdown">POST</div></div><div class="config-section"><div class="config-label">URL *</div><div class="config-field">hooks.slack.com/services/T.../B...</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">{"text": "📊 Relatório diário — {{custom_values.leads_ontem}} leads, {{custom_values.vendas_ontem}} vendas"}</div></div>` },
-    'g19-3': { kind: 'Action · Internal Notification', title: 'Notificar time comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso interno · relatório postado</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Comercial (5 usuários)</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Relatório diário postado no Slack #comercial às 08:00</div></div>` }
+    'g19-3': { kind: 'Action · Internal Notification', title: 'Notificar time comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso interno · relatório postado</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Comercial (5 usuários)</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Relatório diário postado no Slack #comercial às 08:00</div></div>` },
+    'g20-1': { kind: 'Trigger · Inbound Email', title: 'Inbound Email', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Email frio → comercial</div></div><div class="config-section"><div class="config-label">Mailbox *</div><div class="config-field highlight dropdown">comercial@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject Contains</div><div class="config-field">orçamento</div></div>` },
+    'g20-2': { kind: 'Action · Find or Create Contact', title: 'Find or Create Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Match por email do remetente</div></div><div class="config-section"><div class="config-label">Search Field</div><div class="config-field dropdown">Email</div></div><div class="config-section"><div class="config-label">Match Value</div><div class="config-field highlight">{{inboundEmail.from}}</div></div><div class="config-section"><div class="config-label">On No Match</div><div class="config-field dropdown">Create new</div></div>` },
+    'g20-3': { kind: 'Action · Internal Notification', title: 'Notificar comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Novo email de orçamento</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Novo email de orçamento recebido de {{inboundEmail.from}}</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

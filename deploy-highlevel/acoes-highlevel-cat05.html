@@ -2437,13 +2437,14 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Workflow AI · 5 ações</div>
+  <div class="side-section-label">Workflow AI · 6 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Generate Text (Texto)</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Parse Image (Analisar Imagem)</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Summarize Conversation</a>
     <a href="#a4" class="side-link"><span class="side-num">04</span>Extract Info</a>
     <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
+    <a href="#a6" class="side-link"><span class="side-num">06</span>Agente de IA</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2462,10 +2463,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 05/14</span>
   <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 5 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação. Ainda experimental mas poderoso.</p>
+  <p class="hero-desc">As 6 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação e um agente autônomo multi-step. Ainda experimental mas poderoso.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">5</span>
+      <span class="hero-stat-num">6</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3231,6 +3232,165 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a6" data-name="ai agent agente autonomo tools multi-step">
+  <div class="acao-head">
+    <div class="acao-num">06</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Agente de IA</h2>
+      <div class="acao-en">AI Agent</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span><span class="info-tag">Multi-step</span><span class="info-tag">Premium</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Diferente das outras ações de Workflow AI (que fazem UMA coisa — gerar texto, classificar, resumir), o AI Agent recebe instruções em linguagem natural e decide sozinho <strong>quais ferramentas usar, em que ordem e com quais valores</strong> pra cumprir a tarefa. É a ação mais autônoma do builder: em vez de você montar cada passo manualmente, você descreve o objetivo e o agente planeja a execução.</p>
+      <p>Pra cada ferramenta liberada, dá pra escolher se a IA decide os valores dos campos sozinha ou se você trava valores fixos. Com Conversation Memory ativado, o agente lembra execuções anteriores do mesmo contato nesse step, criando continuidade entre disparos.</p>
+      <p>⚠ Ação Premium — cobrada por execução (mesma taxa das outras ações premium) + uso de tokens do modelo, que varia com o tamanho das instruções, a complexidade da tarefa e quantas ferramentas o agente chama.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Triage completa de resposta</div>
+        <div class="use-case-desc">Cliente responde WhatsApp com dúvida → agente decide: responder direto, atualizar campo do CRM, ou criar tarefa pro humano — sem árvore de If/Else manual.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Qualificação + agendamento</div>
+        <div class="use-case-desc">Lead novo → agente conversa por texto, qualifica orçamento/prazo e, se qualificado, já aciona a ferramenta de criar evento no calendário.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Roteamento dinâmico de suporte</div>
+        <div class="use-case-desc">Mensagem de suporte → agente escolhe entre responder com a base de conhecimento, escalar pro time certo ou pedir mais informação — tudo em uma única ação.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Instructions (o que o agente deve fazer e como decidir), AI Model, Actions/Tools liberadas pro agente (com opção "IA decide" ou "valor fixo" por campo de cada ferramenta), Advanced Options → Conversation Memory (toggle) e Output/Response Format.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a6">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Agente · Triage de Resposta WhatsApp</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a6">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a6-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Customer Replied</div>
+              <div class="ghl-node-title">Customer Replied</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Resposta recebida · WhatsApp</span></div><div class="ghl-node-param"><span class="pk">Reply Channel</span><span class="pv">WhatsApp</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a6-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">AI Agent</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Agente · Triage de Resposta</span></div><div class="ghl-node-param"><span class="pk">Instructions</span><span class="pv highlight">Analise a resposta, responda dúvidas simples e atualize o CRM se detectar interesse</span></div><div class="ghl-node-param"><span class="pk">Tools</span><span class="pv">Send WhatsApp · Update Contact Field · Add Task</span></div><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a6-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">#</div>
+            <div>
+              <div class="ghl-node-type">Action · Add Tag</div>
+              <div class="ghl-node-title">Add Contact Tag</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Marcar processado pelo agente</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv">Triagem IA Concluída</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A6 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Instructions</strong> define o objetivo, <span class='arrow'>→</span> <strong>Tools</strong> libera o que o agente pode executar, <span class='arrow'>→</span> <strong>Advanced Options</strong> abre Conversation Memory + Output Format.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>AI Agent</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Agente · Triage de Resposta" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Instructions <span class="req">*</span></div><div class="hl-textarea highlight">Analise a resposta do cliente em {{trigger.reply_body}}. Se for dúvida simples (preço, prazo, horário), responda direto por WhatsApp. Se demonstrar interesse forte, atualize o campo "Estágio de Interesse" pra "Quente" e crie uma tarefa pro vendedor responsável.</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">AI Model <span class="req">*</span></div><div class="hl-dropdown has-value">GPT-4o</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Actions (Tools) <span class="req">*</span></div>
+<div class="hl-multiselect">
+<span class="hl-multiselect-chip">Send WhatsApp</span>
+<span class="hl-multiselect-chip">Update Contact Field</span>
+<span class="hl-multiselect-chip">Add Task</span>
+<input class="hl-multiselect-input" placeholder="+ Tool"></div>
+<div class="hl-conditional"><div class="hl-conditional-note">Por ferramenta: "IA decide os valores" (padrão) ou "Valor fixo" por campo.</div></div>
+</div>
+<div class="hl-section-head">Advanced Options</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Conversation Memory</div><div class="hl-dropdown has-value">🟢 ON</div>
+  <div class="hl-conditional"><div class="hl-conditional-note">Resumo contínuo das execuções anteriores deste step, por contato.</div></div>
+</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output / Response Format</div><div class="hl-dropdown has-value">Texto livre</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Ação Premium autônoma — planeja e executa múltiplos passos sozinha. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007600-workflow-action-ai-agent" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-ai-agent</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3249,7 +3409,7 @@
 
   <div class="footer-top">
     <h3>Categoria 05 completa.</h3>
-    <p>5 ações de Workflow AI explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>6 ações de Workflow AI explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3372,7 +3532,10 @@
     'a4-3': { kind: 'Action · Update Contact', title: 'Update Contact Fields', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Preencher empresa + cargo + intenção</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · empresa</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{ai.extracao.empresa}}</div></div><div class="config-section"><div class="config-label">Additional Mapping</div><div class="config-field">cargo ← {{ai.extracao.cargo}} · intencao ← {{ai.extracao.intencao}} · urgencia ← {{ai.extracao.urgencia}}</div></div>` },
     'a5-1': { kind: 'Trigger · Customer Replied', title: 'Customer Reply', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Classificar resposta pra rotear</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field"><span class="opt-chip">SMS</span> <span class="opt-chip">WhatsApp</span> <span class="opt-chip">Email</span></div></div>` },
     'a5-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Classificar intenção da resposta</div></div><div class="config-section"><div class="config-label">Input Text *</div><div class="config-field highlight">{{trigger.reply_body}}</div></div><div class="config-section"><div class="config-label">Classes *</div><div class="config-field"><span class="opt-chip">Vendas</span> <span class="opt-chip">Suporte</span> <span class="opt-chip">Cobrança</span> <span class="opt-chip">Cancelamento</span></div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Classifique esta mensagem em UMA das classes. Retorne apenas o nome da classe.</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.categoria</div></div><div class="config-section"><div class="config-label">Confidence Threshold</div><div class="config-field">0.7 — abaixo disso vai pra triagem humana</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o-mini</div></div>` },
-    'a5-3': { kind: 'Action · Assign to User', title: 'Assign to Team (por classe)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Rotear pra time certo</div></div><div class="config-section"><div class="config-label">Assignment Logic</div><div class="config-field highlight">Vendas → SDR · Suporte → CS · Cobrança → Financeiro · Cancelamento → Retention</div></div><div class="config-section"><div class="config-label">Users *</div><div class="config-field"><span class="opt-chip">Time Vendas</span> <span class="opt-chip">Time CS</span> <span class="opt-chip">Time Financeiro</span> <span class="opt-chip">Time Retention</span></div></div><div class="config-section"><div class="config-label">Split Traffic</div><div class="config-field dropdown">Round-robin dentro do time</div></div>` }
+    'a5-3': { kind: 'Action · Assign to User', title: 'Assign to Team (por classe)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Rotear pra time certo</div></div><div class="config-section"><div class="config-label">Assignment Logic</div><div class="config-field highlight">Vendas → SDR · Suporte → CS · Cobrança → Financeiro · Cancelamento → Retention</div></div><div class="config-section"><div class="config-label">Users *</div><div class="config-field"><span class="opt-chip">Time Vendas</span> <span class="opt-chip">Time CS</span> <span class="opt-chip">Time Financeiro</span> <span class="opt-chip">Time Retention</span></div></div><div class="config-section"><div class="config-label">Split Traffic</div><div class="config-field dropdown">Round-robin dentro do time</div></div>` },
+    'a6-1': { kind: 'Trigger · Customer Replied', title: 'Customer Replied', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Resposta recebida · WhatsApp</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field"><span class="opt-chip">WhatsApp</span></div></div>` },
+    'a6-2': { kind: 'Action · Workflow AI', title: 'AI Agent', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Agente · Triage de Resposta</div></div><div class="config-section"><div class="config-label">Instructions *</div><div class="config-field highlight">Analise {{trigger.reply_body}}. Responda dúvidas simples direto por WhatsApp; se demonstrar interesse forte, atualize Estágio de Interesse e crie tarefa pro vendedor.</div></div><div class="config-section"><div class="config-label">AI Model *</div><div class="config-field dropdown">GPT-4o</div></div><div class="config-section"><div class="config-label">Tools (Actions) *</div><div class="config-field"><span class="opt-chip">Send WhatsApp</span> <span class="opt-chip">Update Contact Field</span> <span class="opt-chip">Add Task</span></div></div><div class="config-section"><div class="config-label">Conversation Memory</div><div class="config-field">🟢 ON</div></div>` },
+    'a6-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar processado pelo agente</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Triagem IA Concluída</span></div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
