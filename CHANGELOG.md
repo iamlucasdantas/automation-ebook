@@ -11,6 +11,17 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-07-10 — Content
+**Explain every Wait action parameter individually (requested)**
+
+- `acoes-highlevel-cat04.html` A2 (Wait): "Configurações principais" was a
+  single summary paragraph. Replaced it with a `filters-grid` (the same
+  pattern triggers use) — one card per parameter (the 8 `Wait Type` modes
+  + Resume On + Overall Timeout + Advance Window), each with its own
+  description and a "Impacto" callout explaining the practical
+  consequence of that setting (e.g. what happens with no Timeout, or how
+  Advance Window keeps automations from firing at 2am).
+
+## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
 - `acoes-highlevel-cat04.html` A2 (Wait): the HL config panel only documented

@@ -2758,10 +2758,141 @@
   </div>
 
   <div class="tblock">
-    <div class="tblock-label">Configurações principais</div>
-    <div class="tblock-content">
-      <p><strong>Wait Type</strong> (dropdown principal, 8 opções — ver painel completo abaixo): Wait For (Time Delay), Wait Until (Date/Time), Recurring Schedule, Wait for Appointment/Booking/Invoice, Wait for Contact Reply (inclui User Replied e Live Chat), Wait for Event, Wait for Opportunity, Wait for Review Request. Cada modo abre campos próprios. Em qualquer modo: <strong>Resume On</strong> (dias permitidos), <strong>Overall Timeout</strong> (toggle + duração de fallback) e <strong>Advance Window</strong> (janela de dias/horário em que o Wait pode liberar o contato).</p>
-    </div>
+    <div class="tblock-label">Configurações principais · cada parâmetro explicado</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Tipo de Espera</div>
+    <div class="filter-en">Wait Type</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Dropdown principal — define QUAL das 8 lógicas de espera essa ação usa. É o campo que muda todos os outros abaixo (lógica condicional): escolher um modo troca completamente os campos que aparecem no painel.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> É a decisão mais importante da ação — errar o modo (ex.: usar Time Delay quando devia ser Wait for Event) faz o workflow avançar cedo demais ou nunca avançar.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">1 · Espera por Duração</div>
+    <div class="filter-en">Wait For (Time Delay)</div>
+    <div class="filter-type">modo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">O modo mais simples: espera um número + unidade fixos (segundos, minutos, horas, dias, semanas ou meses) antes de seguir, sem depender de nenhuma ação do contato.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Base de qualquer drip campaign — "espera 3 dias entre emails" é isso.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">2 · Espera até Data/Hora</div>
+    <div class="filter-en">Wait Until (Date/Time)</div>
+    <div class="filter-type">modo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Segura o contato até uma data e hora específicas — pode ser uma data fixa digitada ou puxada de um campo customizado do contato (ex.: data de vencimento, aniversário). Tem campo de Timezone próprio.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sincroniza a ação com um evento de calendário específico do negócio, não do sistema.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">3 · Agenda Recorrente</div>
+    <div class="filter-en">Recurring Schedule</div>
+    <div class="filter-type">modo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Repete num padrão fixo — diário, semanal (ex.: toda segunda), mensal (ex.: todo dia 15) ou anual (ex.: 1º de janeiro) — sem precisar de um gatilho Scheduler separado disparando o workflow de novo.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Cadências de nutrição/reengajamento de longo prazo dentro do MESMO workflow, sem múltiplos triggers.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">4 · Espera por Compromisso/Cobrança</div>
+    <div class="filter-en">Wait for Appointment / Booking / Invoice</div>
+    <div class="filter-type">modo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Referencia o próximo Appointment, Service Booking ou vencimento de Invoice do contato, com um Offset (ex.: "1 hora antes"). O horário-alvo é dinâmico — recalcula sozinho se o compromisso for remarcado.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Lembretes de consulta/cobrança sempre relativos ao evento real, mesmo com reagendamento.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">5 · Espera por Resposta</div>
+    <div class="filter-en">Wait for Contact Reply</div>
+    <div class="filter-type">modo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Segura até alguém responder — e agora dá pra escolher QUEM: <strong>Contact (Customer)</strong> (resposta do cliente) ou <strong>User (Team Member) · User Replied</strong> (resposta de um membro do time). Tem seletor de Channels (SMS, Email, WhatsApp, Live Chat) e um Timeout de fallback.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sem Timeout configurado, o contato fica preso pra sempre esperando resposta — sempre defina um fallback.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">6 · Espera por Evento</div>
+    <div class="filter-en">Wait for Event</div>
+    <div class="filter-type">modo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Segura até um evento arbitrário acontecer com o contato (ex.: Email Opened, Link Clicked). Tem Timeout + campo "On Timeout" que decide o que fazer se o evento nunca ocorrer (ex.: Continue workflow).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Mede engajamento real (abriu? clicou?) antes de decidir o próximo passo.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">7 · Espera por Oportunidade</div>
+    <div class="filter-en">Wait for Opportunity</div>
+    <div class="filter-type">modo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Segura o contato até a Opportunity dele num Pipeline específico satisfazer uma condição (ex.: Stage = "Proposta Enviada").</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sincroniza automações de nutrição com o estágio real do funil de vendas, não com tempo decorrido.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">8 · Espera por Solicitação de Review</div>
+    <div class="filter-en">Wait for Review Request</div>
+    <div class="filter-type">modo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Feito pra workflows de reputação — segura até a condição escolhida (Review Request Sent ou Review Submitted) acontecer.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Encadeia lembretes de review só depois que a solicitação anterior realmente saiu ou foi respondida.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Retomar Em</div>
+    <div class="filter-en">Resume On</div>
+    <div class="filter-type">avançado</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Configuração geral (funciona em qualquer Wait Type) — restringe em quais dias da semana o contato tem permissão de ser liberado, mesmo que a condição do Wait já tenha sido satisfeita antes.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Evita que automações de vendas "liberem" o contato num sábado de madrugada — ex.: marcar só Seg–Sex.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Timeout Geral</div>
+    <div class="filter-en">Overall Timeout</div>
+    <div class="filter-type">avançado</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Toggle + duração — libera o contato depois de X tempo mesmo que a condição do Wait Type escolhido NUNCA aconteça. É diferente do Timeout específico de "Wait for Event"/"Wait for Contact Reply": esse aqui é um limite de segurança geral por cima de qualquer modo.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sem isso, um Wait for Event ou Wait for Opportunity mal configurado pode prender o contato pra sempre no workflow.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Janela de Avanço</div>
+    <div class="filter-en">Advance Window</div>
+    <div class="filter-type">avançado</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Define uma janela de dias/horários (ex.: 09:00–18:00, Seg–Sex) em que o Wait tem permissão de liberar o contato. Se a condição for satisfeita fora da janela, o contato fica retido até a próxima janela válida.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Cliente respondeu sábado à noite? Com a janela em Seg–Sex 9h–18h, o próximo passo só dispara na segunda de manhã — evita mensagem automática de madrugada.</div>
+  </div>
+</div>
+</div>
   </div>
 
     <div class="tblock">
