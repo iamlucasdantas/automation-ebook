@@ -10,6 +10,31 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-11 — Content
+**Add native "User Replied" trigger (team-member reply) + search-index cat15 fix**
+
+- **cat02 · Eventos** — new trigger added (G20): **Resposta da Equipe (User Replied)**,
+  released by HighLevel on 2026-07-08. Fires when a team member (not the contact)
+  replies to a conversation — the mirror of G4 Contato Respondeu. New sidebar
+  section "Equipe". Full mockup + HL-fidelity config panel, sourced from
+  [ideas.gohighlevel.com/changelog/workflow-trigger-user-replied](https://ideas.gohighlevel.com/changelog/workflow-trigger-user-replied).
+  Counter: 84 → 85 gatilhos (cat02: 19 → 20).
+- **acoes-highlevel-cat04.html** — noted the same HL release's side effects on two
+  existing actions (no new counted entries): **Wait** (A2) now supports
+  "User Replied" as a Wait-for-Event condition, and **Goal Event** (A5) now
+  supports "User Replied" as a goal event.
+  ([ideas.gohighlevel.com/changelog/goal-action-now-with-support-for-user-replies](https://ideas.gohighlevel.com/changelog/goal-action-now-with-support-for-user-replies))
+- **index.html** — stats updated: 84→85 gatilhos, 202 painéis, 38 mockups.
+  Tab count 13 cat · 85. "Última atualização: 11 de julho de 2026."
+- **scripts/build-search-index.py** — fixed a bug where `acoes-highlevel-cat15.html`
+  (which uses `action-*` CSS classes instead of the usual `acao-*`) was silently
+  dropping its 6 entries from every search-index rebuild since cat15 was created.
+  The script now falls back to the `action-*` prefix per-file. `search-index.json`
+  now correctly has 202 entries (85 gatilhos + 117 ações), up from 196.
+- Checked HighLevel's other 2026 changelog items (Cal.com, Calendly, HubSpot,
+  Klaviyo, Vapi, Apify, Basecamp, Asana third-party marketplace integrations) —
+  intentionally **not** added since they aren't native HighLevel triggers/actions.
+
 ## 2026-07-10 — Content
 **Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
 

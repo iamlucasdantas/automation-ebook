@@ -30,13 +30,19 @@ def first_paragraph(s):
     return strip_tags(unescape(m.group(1))) if m else ''
 
 
-def parse_blocks(path, kind):
-    """kind is 'trigger' or 'acao' — picks the right class names."""
-    block_class = f'{kind}-block'
-    name_class = f'{kind}-name'
-    en_class = f'{kind}-en'
-    cat_class = f'{kind}-cat'
-    tags_class = f'{kind}-tags'
+def parse_blocks(path, kind, prefix=None):
+    """kind is 'trigger' or 'acao' — picks the right class names.
+
+    `prefix` overrides the CSS class prefix when a file uses different
+    naming than its kind default (e.g. acoes-highlevel-cat15.html uses
+    `action-*` classes instead of the usual `acao-*`).
+    """
+    class_prefix = prefix or kind
+    block_class = f'{class_prefix}-block'
+    name_class = f'{class_prefix}-name'
+    en_class = f'{class_prefix}-en'
+    cat_class = f'{class_prefix}-cat'
+    tags_class = f'{class_prefix}-tags'
 
     with open(path) as f:
         html = f.read()
@@ -86,7 +92,11 @@ def main():
     for path in sorted(glob.glob(os.path.join(ROOT, 'guia-highlevel-cat*.html'))):
         entries.extend(parse_blocks(path, 'trigger'))
     for path in sorted(glob.glob(os.path.join(ROOT, 'acoes-highlevel-cat*.html'))):
-        entries.extend(parse_blocks(path, 'acao'))
+        found = parse_blocks(path, 'acao')
+        if not found:
+            # Some files (e.g. cat15) use `action-*` classes instead of `acao-*`.
+            found = parse_blocks(path, 'acao', prefix='action')
+        entries.extend(found)
 
     payload = {
         'generated_at': None,  # left null so the file is bit-stable
