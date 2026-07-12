@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ações Jira — Guia HighLevel</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+
+<meta name="description" content="Guia completo das ações nativas de integração Jira do HighLevel. Criar, atualizar, comentar, observar e mover issues entre sprints — direto no Workflow Builder, com Cloud Site selector. Parte 17/17 do guia oficial em português." />
+<meta name="author" content="Magnetic Funnels" />
+<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, ações, Jira, Atlassian, Cloud Site, CRM, workflow, PT-BR" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ações Jira — Guia HighLevel" />
+<meta property="og:description" content="Guia completo das ações nativas de integração Jira do HighLevel. Criar, atualizar, comentar, observar e mover issues entre sprints — direto no Workflow Builder, com Cloud Site selector. Parte 17/17 do guia oficial em português." />
+<meta property="og:site_name" content="Magnetic Funnels" />
+<meta property="og:locale" content="pt_BR" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ações Jira — Guia HighLevel" />
+<meta name="twitter:description" content="Guia completo das ações nativas de integração Jira do HighLevel. Criar, atualizar, comentar, observar e mover issues entre sprints — direto no Workflow Builder, com Cloud Site selector. Parte 17/17 do guia oficial em português." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --brand-name: 'HighLevel';
+    --brand-accent: #FEB902;
+    --brand-accent-deep: #d69c00;
+    --brand-secondary: #188AF5;
+    --brand-ink: #0B223F;
+    --brand-ink-soft: #1a3254;
+    --brand-paper: #f7f9fc;
+    --brand-paper-warm: #eef2f8;
+    --brand-paper-dim: #dde4ef;
+    --muted: #4a5a70;
+    --soft: #7a8799;
+    --success: #10b981;
+    --ghl-bg: #0B223F;
+    --ghl-surface: #13304f;
+    --ghl-border: #2a4868;
+    --ghl-text: #f7f9fc;
+    --ghl-text-dim: #9bb0cc;
+    --ghl-accent: #188AF5;
+    --ghl-yellow: #FEB902;
+    --ghl-green: #10b981;
+    --ghl-purple: #a855f7;
+    --ghl-orange: #f59e0b;
+    --ghl-pink: #ec4899;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Poppins', -apple-system, sans-serif;
+    background: var(--brand-paper);
+    color: var(--brand-ink);
+    line-height: 1.55;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(255, 74, 28, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 85% 80%, rgba(184, 145, 47, 0.04) 0%, transparent 50%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  }
+
+  .app {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+  }
+
+  aside {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 32px 24px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1.5px solid var(--brand-ink);
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside::-webkit-scrollbar { width: 6px; }
+  aside::-webkit-scrollbar-thumb { background: rgba(245,241,232,0.15); }
+
+  .side-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    color: var(--brand-accent);
+  }
+
+  .side-brand .brand-thin {
+    font-weight: 300;
+    color: var(--brand-paper);
+  }
+
+  .side-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.5);
+    margin-bottom: 28px;
+  }
+
+  .side-search {
+    width: 100%;
+    background: rgba(245,241,232,0.06);
+    border: 1px solid rgba(245,241,232,0.15);
+    color: var(--brand-paper);
+    padding: 10px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    margin-bottom: 24px;
+    transition: border-color 0.2s;
+  }
+
+  .side-search:focus { outline: none; border-color: var(--brand-secondary); }
+  .side-search::placeholder { color: rgba(245,241,232,0.4); }
+
+  .side-section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.4);
+    margin-bottom: 10px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+  }
+
+  .side-section-label:first-of-type { padding-top: 0; border-top: none; }
+
+  .side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4px;
+  }
+
+  .side-link {
+    font-size: 13px;
+    padding: 8px 12px;
+    color: rgba(245,241,232,0.75);
+    text-decoration: none;
+    display: block;
+    border-left: 2px solid transparent;
+    line-height: 1.3;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+
+  .side-link:hover {
+    color: var(--brand-paper);
+    background: rgba(254, 185, 2, 0.08);
+    border-left-color: var(--brand-accent);
+  }
+
+  .side-link .side-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: rgba(245,241,232,0.4);
+    margin-right: 8px;
+  }
+
+  .side-link.active {
+    color: var(--brand-accent);
+    background: rgba(254, 185, 2, 0.1);
+    border-left-color: var(--brand-accent);
+  }
+
+  .side-cta-fixed {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+  }
+
+  .side-cta-card {
+    background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-accent-deep) 100%);
+    padding: 20px;
+    border-radius: 4px;
+    color: var(--brand-paper);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .side-cta-card::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  }
+
+  .side-cta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 8px;
+  }
+
+  .side-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .side-cta-desc {
+    font-size: 12px;
+    line-height: 1.45;
+    opacity: 0.92;
+    margin-bottom: 14px;
+  }
+
+  .side-cta-btn {
+    display: inline-block;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 9px 14px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border: 1px solid var(--brand-ink);
+  }
+
+  .side-cta-btn:hover { background: var(--brand-paper); color: var(--brand-ink); }
+
+  main { padding: 0; min-width: 0; }
+
+  .hero-area {
+    padding: 64px 72px 48px;
+    border-bottom: 1.5px solid var(--brand-ink);
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-paper);
+    background: var(--brand-ink);
+    padding: 6px 12px;
+    margin-bottom: 32px;
+  }
+
+  .hero-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--brand-accent);
+    background: linear-gradient(180deg, transparent 68%, rgba(254, 185, 2, 0.25) 68%, rgba(254, 185, 2, 0.25) 88%, transparent 88%);
+    padding: 0 4px;
+  }
+
+  .hero-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 720px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    padding-top: 28px;
+    border-top: 1px solid var(--brand-ink);
+  }
+
+  .hero-stat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .hero-stat-num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--brand-accent);
+    display: block;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+
+  .hero-stat-label { color: var(--muted); }
+
+  .hero-cta {
+    margin-top: 32px;
+    padding: 24px 28px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-left: 4px solid var(--brand-accent);
+  }
+
+  .hero-cta-text { flex: 1; min-width: 280px; }
+
+  .hero-cta-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .hero-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+
+  .hero-cta-title em { font-style: normal; font-weight: 600; color: var(--brand-accent); }
+  .hero-cta-sub { font-size: 0.95rem; opacity: 0.8; }
+
+  .hero-cta-btn {
+    background: var(--brand-accent);
+    color: var(--brand-paper);
+    padding: 14px 24px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .hero-cta-btn:hover { background: var(--brand-paper); color: var(--brand-ink); }
+
+  /* Action blocks (same visual as trigger-block) */
+  .action-block {
+    padding: 72px 72px;
+    border-bottom: 1.5px solid var(--brand-ink);
+    scroll-margin-top: 20px;
+  }
+
+  .action-block:nth-of-type(even) { background: var(--brand-paper-warm); }
+  .action-block.hidden { display: none; }
+
+  .action-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .action-num {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 0.8;
+    color: var(--brand-accent);
+    letter-spacing: -0.04em;
+    min-width: 90px;
+  }
+
+  .action-titles { flex: 1; }
+
+  .action-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .action-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+
+  .action-en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  .action-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .info-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid var(--brand-ink);
+    background: var(--brand-paper);
+  }
+
+  .info-tag.realtime { background: var(--success); color: var(--brand-paper); border-color: var(--success); }
+  .info-tag.schedule { background: var(--brand-secondary); color: var(--brand-paper); border-color: var(--brand-secondary); }
+
+  .tblock { margin-bottom: 40px; }
+
+  .tblock-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+
+  .tblock-label::before { content: ''; width: 20px; height: 1px; background: var(--brand-accent); }
+
+  .tblock-content {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--brand-ink);
+    max-width: 780px;
+  }
+
+  .tblock-content p + p { margin-top: 14px; }
+
+  .tblock-content strong {
+    font-weight: 600;
+    background: rgba(255, 74, 28, 0.12);
+    padding: 1px 4px;
+  }
+
+  .use-cases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .use-case {
+    background: var(--brand-paper);
+    border: 1px solid var(--brand-ink);
+    padding: 20px;
+  }
+
+  .action-block:nth-of-type(even) .use-case { background: var(--brand-paper-dim); }
+
+  .use-case-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand-accent);
+    margin-bottom: 8px;
+  }
+
+  .use-case-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .use-case-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.5; }
+
+  .fields-grid {
+    display: grid;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .field-item {
+    border: 1px solid var(--brand-ink);
+    background: var(--brand-paper);
+    overflow: hidden;
+  }
+
+  .action-block:nth-of-type(even) .field-item { background: var(--brand-paper); }
+
+  .field-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px dashed rgba(11,11,12,0.15);
+    flex-wrap: wrap;
+  }
+
+  .field-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .field-en { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); }
+
+  .field-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    margin-left: auto;
+  }
+
+  .field-type.required { background: var(--brand-accent); }
+
+  .field-body { padding: 16px 20px 18px; }
+
+  .field-desc { font-size: 0.95rem; line-height: 1.55; color: var(--brand-ink); margin-bottom: 10px; }
+
+  .field-impact {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--muted);
+    padding-left: 16px;
+    border-left: 2px solid var(--brand-accent);
+  }
+
+  .field-impact strong { font-style: normal; color: var(--brand-ink); font-weight: 600; }
+
+  /* Mockup */
+  .ghl-mockup {
+    background: var(--ghl-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin-top: 8px;
+  }
+
+  .ghl-toolbar {
+    background: var(--ghl-surface);
+    border-bottom: 1px solid var(--ghl-border);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .ghl-workflow-name {
+    font-size: 14px;
+    color: var(--ghl-text);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ghl-workflow-name::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--ghl-green);
+    border-radius: 50%;
+  }
+
+  .ghl-toolbar-right { display: flex; gap: 10px; align-items: center; }
+
+  .ghl-btn {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 6px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+
+  .ghl-btn:hover:not(:disabled) { border-color: var(--ghl-accent); color: var(--ghl-text); }
+  .ghl-btn:disabled { cursor: not-allowed; opacity: 0.7; }
+  .ghl-btn.primary { background: var(--ghl-accent); border-color: var(--ghl-accent); color: white; }
+  .ghl-btn.primary:hover { background: #4a8ae8; }
+  .ghl-btn.play { background: var(--brand-accent); border-color: var(--brand-accent); color: white; font-weight: 500; }
+
+  .ghl-canvas {
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
+    background-size: 16px 16px;
+    background-color: var(--ghl-bg);
+    padding: 48px 24px 72px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .ghl-node {
+    width: 320px;
+    background: var(--ghl-surface);
+    border: 1.5px solid var(--ghl-border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+
+  .ghl-node:has(.ghl-node-icon.trigger) {
+    border-left: 3px solid var(--ghl-purple);
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.06) 0%, var(--ghl-surface) 60%);
+  }
+
+  .ghl-node-controls {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: opacity 0.18s;
+    z-index: 2;
+  }
+
+  .ghl-node:hover .ghl-node-controls,
+  .ghl-node.active .ghl-node-controls { opacity: 1; }
+
+  .ghl-node-control {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1;
+  }
+
+  .ghl-node-control:hover { background: var(--ghl-accent); color: white; border-color: var(--ghl-accent); }
+  .ghl-node.visible { opacity: 1; transform: translateY(0) scale(1); }
+  .ghl-node.active { border-color: var(--ghl-accent); box-shadow: 0 0 0 3px rgba(91, 155, 255, 0.2); }
+  .ghl-node:hover { border-color: var(--ghl-accent); transform: translateY(-1px); }
+  .ghl-node.active:hover { transform: translateY(0); }
+
+  .ghl-node-header {
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--ghl-border);
+  }
+
+  .ghl-node-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .ghl-node-icon.trigger { background: var(--ghl-purple); }
+  .ghl-node-icon.action-email { background: var(--ghl-accent); }
+  .ghl-node-icon.action-notify { background: var(--ghl-orange); }
+  .ghl-node-icon.action-pipeline { background: var(--ghl-green); }
+  .ghl-node-icon.action-tag { background: #ec4899; }
+  .ghl-node-icon.action-wait { background: #64748b; }
+  .ghl-node-icon.action-crm { background: var(--ghl-green); }
+  .ghl-node-icon.action-google { background: #4285F4; }
+  .ghl-node-icon.action-jira { background: #0052CC; }
+
+  .ghl-node-type {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ghl-text-dim);
+    margin-bottom: 2px;
+  }
+
+  .ghl-node-title { font-size: 13px; font-weight: 500; color: var(--ghl-text); line-height: 1.3; }
+  .ghl-node-body { padding: 10px 14px 12px; }
+
+  .ghl-node-param {
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    line-height: 1.5;
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+
+  .ghl-node-param:last-child { margin-bottom: 0; }
+  .ghl-node-param .pk { color: #7c8494; min-width: 58px; font-family: 'JetBrains Mono', monospace; font-size: 10px; }
+  .ghl-node-param .pv { color: var(--ghl-text); }
+  .ghl-node-param .pv.highlight { background: rgba(91, 155, 255, 0.15); color: #85b0ff; padding: 0 5px; border-radius: 3px; }
+
+  .ghl-connector {
+    width: 2px;
+    height: 48px;
+    background: var(--ghl-border);
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .ghl-connector.visible { opacity: 1; }
+
+  .ghl-connector::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--ghl-bg);
+    border: 1.5px dashed var(--ghl-text-dim);
+    color: var(--ghl-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .ghl-connector:hover::before {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-accent);
+    border-style: solid;
+    background: var(--ghl-surface);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .ghl-connector::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 7px solid var(--ghl-border);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+
+  .click-hint {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--ghl-text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .ghl-node.active .click-hint { color: var(--ghl-accent); opacity: 1; }
+
+  .config-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 380px;
+    height: 100%;
+    background: var(--ghl-surface);
+    border-left: 1px solid var(--ghl-border);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    overflow-y: auto;
+  }
+
+  .config-panel.open { transform: translateX(0); }
+
+  .config-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--ghl-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    background: var(--ghl-surface);
+    z-index: 2;
+  }
+
+  .config-kind { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ghl-accent); margin-bottom: 6px; }
+  .config-title { font-family: 'Poppins', sans-serif; font-size: 1.3rem; font-weight: 600; color: var(--ghl-text); line-height: 1.15; letter-spacing: -0.01em; }
+
+  .config-close {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .config-close:hover { color: var(--ghl-text); border-color: var(--ghl-accent); }
+  .config-body { padding: 20px; }
+  .config-section { margin-bottom: 24px; }
+  .config-section:last-child { margin-bottom: 0; }
+  .config-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ghl-text-dim); margin-bottom: 8px; }
+
+  .config-field {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--ghl-text);
+    border-radius: 4px;
+  }
+
+  .config-field.dropdown { display: flex; justify-content: space-between; align-items: center; }
+  .config-field.dropdown::after { content: '▾'; color: var(--ghl-text-dim); margin-left: 8px; }
+  .config-field.highlight { border-color: var(--ghl-accent); background: rgba(91, 155, 255, 0.08); }
+
+  /* HL-fidelity static config panel (mirrors cat07/a7 + cat13) */
+  .hl-panel-wrapper {
+    background: var(--ghl-bg);
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .hl-panel-context {
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
+    background-size: 16px 16px;
+    background-color: var(--ghl-bg);
+    padding: 32px;
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .hl-canvas-hint {
+    flex: 1;
+    min-width: 220px;
+    color: var(--ghl-text-dim);
+    font-size: 13px;
+    line-height: 1.6;
+    padding-top: 8px;
+  }
+
+  .hl-canvas-hint strong { color: var(--ghl-text); font-weight: 500; }
+  .hl-canvas-hint .arrow {
+    display: inline-block;
+    color: var(--brand-accent);
+    margin: 0 4px;
+    font-weight: 600;
+  }
+
+  .hl-panel {
+    width: 420px;
+    max-width: 100%;
+    background: var(--ghl-surface);
+    border: 1px solid var(--ghl-border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+  }
+
+  .hl-panel-head {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--ghl-border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0,0,0,0.15);
+  }
+
+  .hl-panel-back {
+    color: var(--ghl-text-dim);
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .hl-panel-title {
+    flex: 1;
+    font-size: 14px;
+    color: var(--ghl-text);
+    font-weight: 500;
+  }
+
+  .hl-panel-title .en {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ghl-text-dim);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    display: block;
+  }
+
+  .hl-panel-body {
+    padding: 18px;
+    max-height: 720px;
+    overflow-y: auto;
+  }
+
+  .hl-field-group { margin-bottom: 16px; }
+  .hl-field-group:last-child { margin-bottom: 0; }
+
+  .hl-field-label {
+    font-size: 12px;
+    color: var(--ghl-text);
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hl-field-label .req {
+    color: #ef4444;
+    font-weight: 600;
+  }
+
+  .hl-input {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text);
+    padding: 9px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 100%;
+    font-family: inherit;
+  }
+
+  .hl-dropdown {
+    background: var(--ghl-bg);
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text);
+    padding: 9px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .hl-dropdown::after {
+    content: '▾';
+    color: var(--ghl-text-dim);
+    font-size: 11px;
+  }
+
+  .hl-dropdown.has-value { color: var(--ghl-text); }
+
+  .hl-section-head {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ghl-text-dim);
+    padding: 8px 0;
+    margin: 16px 0 8px;
+    border-top: 1px solid var(--ghl-border);
+  }
+
+  .hl-section-head:first-child { border-top: 0; margin-top: 0; }
+
+  .hl-filter-row {
+    background: rgba(0,0,0,0.18);
+    border: 1px solid var(--ghl-border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+
+  .hl-filter-row .hl-filter-label {
+    font-size: 11px;
+    color: var(--ghl-text-dim);
+    margin-bottom: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .hl-add-filter {
+    background: transparent;
+    border: 1px dashed var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 8px;
+  }
+
+  .hl-add-filter:hover {
+    border-color: var(--ghl-accent);
+    color: var(--ghl-text);
+  }
+
+  .hl-panel-footer {
+    padding: 12px 18px;
+    border-top: 1px solid var(--ghl-border);
+    background: rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .hl-btn-save {
+    background: var(--ghl-green);
+    border: 0;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .hl-btn-cancel {
+    background: transparent;
+    border: 1px solid var(--ghl-border);
+    color: var(--ghl-text-dim);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .hl-panel-caption {
+    padding: 14px 20px;
+    background: var(--ghl-surface);
+    border-top: 1px solid var(--ghl-border);
+    font-size: 12px;
+    color: var(--ghl-text-dim);
+    text-align: center;
+  }
+
+  .hl-panel-caption strong { color: var(--ghl-yellow); font-weight: 500; }
+
+  .anim-indicator {
+    position: absolute;
+    top: 68px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--ghl-border);
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ghl-text);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 5;
+  }
+
+  .anim-indicator.visible { opacity: 1; }
+
+  .anim-indicator .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--brand-accent);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0.3; } }
+
+  .mockup-caption {
+    padding: 14px 20px;
+    background: var(--ghl-surface);
+    border-top: 1px solid var(--ghl-border);
+    font-size: 12px;
+    color: var(--ghl-text-dim);
+    text-align: center;
+  }
+
+  .guide-footer {
+    padding: 80px 72px;
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+  }
+
+  .footer-top { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+
+  .footer-top h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--brand-accent);
+    letter-spacing: -0.015em;
+  }
+
+  .footer-top p { font-size: 1rem; color: rgba(245,241,232,0.75); line-height: 1.6; margin-bottom: 28px; }
+
+  .footer-main-cta {
+    background: var(--brand-accent);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-main-cta::after {
+    content: '';
+    position: absolute;
+    top: -60%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(11,11,12,0.15) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .footer-main-cta-text { flex: 1; min-width: 300px; position: relative; z-index: 2; }
+  .footer-main-cta-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-ink); opacity: 0.75; margin-bottom: 12px; }
+
+  .footer-main-cta-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--brand-ink);
+    margin-bottom: 8px;
+  }
+
+  .footer-main-cta-title em { font-style: normal; font-weight: 700; }
+  .footer-main-cta-sub { font-size: 1rem; color: var(--brand-ink); opacity: 0.85; }
+
+  .footer-main-cta-btn {
+    background: var(--brand-ink);
+    color: var(--brand-paper);
+    padding: 18px 32px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s;
+    white-space: nowrap;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-main-cta-btn:hover { background: var(--brand-paper); color: var(--brand-ink); }
+
+  .footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .footer-link-card {
+    background: rgba(245,241,232,0.04);
+    border: 1px solid rgba(245,241,232,0.15);
+    padding: 24px;
+    text-decoration: none;
+    color: var(--brand-paper);
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-link-card:hover { background: rgba(254, 185, 2, 0.08); border-color: var(--brand-accent); transform: translateY(-2px); }
+  .footer-link-tag { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brand-accent); }
+  .footer-link-title { font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.2; }
+  .footer-link-desc { font-size: 0.88rem; color: rgba(245,241,232,0.65); line-height: 1.45; margin-top: 4px; }
+  .footer-link-arrow { margin-top: auto; padding-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brand-accent); }
+
+  .footer-legal {
+    padding-top: 56px;
+    margin-top: 56px;
+    border-top: 1px solid rgba(245,241,232,0.1);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.4);
+  }
+
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    background: var(--brand-ink);
+    color: white;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .top-nav-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+
+  .top-nav-home {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.8;
+    transition: opacity 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .top-nav-home:hover { opacity: 1; }
+  .top-nav-home .arrow { font-size: 16px; }
+  .top-nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.15); }
+
+  .top-nav-breadcrumb {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .top-nav-breadcrumb strong { color: white; font-weight: 600; }
+
+  .mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 400;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--brand-accent);
+    color: var(--brand-ink);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: inherit;
+  }
+
+  .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .back-to-top:hover { background: var(--brand-accent-deep); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+
+  .cat-nav {
+    max-width: 960px;
+    margin: 48px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .cat-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 20px 24px;
+    background: white;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+  }
+
+  .cat-nav-link:hover { border-color: var(--brand-accent); transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.05); }
+  .cat-nav-link.next { text-align: right; }
+  .cat-nav-link.disabled { opacity: 0.35; pointer-events: none; }
+  .cat-nav-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+  .cat-nav-name { font-size: 18px; font-weight: 700; color: var(--brand-ink); letter-spacing: -0.01em; }
+
+  @media (max-width: 900px) {
+    .app { grid-template-columns: 1fr; }
+    .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+    aside {
+      position: fixed !important;
+      top: 0; left: 0;
+      height: 100vh !important;
+      width: 85%;
+      max-width: 340px;
+      z-index: 800;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+      padding-top: 16px !important;
+      box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    }
+    aside.open { transform: translateX(0); }
+    .drawer-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .drawer-overlay.visible { opacity: 1; pointer-events: auto; }
+    .top-nav-breadcrumb { display: none; }
+    .hero-area, .action-block, .guide-footer { padding-left: 24px; padding-right: 24px; }
+    .action-head { flex-direction: column; gap: 8px; }
+    .action-num { font-size: 3rem; min-width: auto; }
+    .hero-stats { gap: 32px; }
+    .config-panel { width: 100%; }
+    .ghl-node { width: 100%; max-width: 320px; }
+    .cat-nav { grid-template-columns: 1fr; margin: 32px auto; }
+    .cat-nav-link.next { text-align: left; }
+    .hl-panel { width: 100%; }
+    .hl-panel-context { padding: 16px; gap: 16px; flex-direction: column-reverse; }
+  }
+
+  @media (max-width: 500px) {
+    .top-nav { padding: 8px 12px; gap: 8px; }
+    .top-nav-home { font-size: 11px; }
+    .back-to-top { bottom: 16px; right: 16px; width: 44px; height: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<div class="top-nav">
+  <div class="top-nav-left">
+    <button class="mobile-menu-btn" onclick="toggleDrawer()" aria-label="Abrir menu">☰</button>
+    <a href="index.html" class="top-nav-home">
+      <span class="arrow">←</span>
+      <span>Voltar ao índice</span>
+    </a>
+    <div class="top-nav-divider"></div>
+    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>17/17</strong> · <strong>Jira</strong></div>
+  </div>
+</div>
+
+<div class="app">
+
+<aside>
+  <div class="side-brand">Ações<br><span class="brand-thin">HighLevel.</span></div>
+  <div class="side-cat">Parte 2 · Ações · Categoria 17</div>
+  <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
+
+  <div class="side-section-label">Gerenciamento de Issues</div>
+  <nav class="side-nav">
+    <a href="#a1" class="side-link"><span class="side-num">01</span>Criar Issue</a>
+    <a href="#a2" class="side-link"><span class="side-num">02</span>Atualizar Issue</a>
+    <a href="#a3" class="side-link"><span class="side-num">03</span>Vincular Issues</a>
+    <a href="#a4" class="side-link"><span class="side-num">04</span>Comentar no Issue</a>
+  </nav>
+
+  <div class="side-section-label">Observadores</div>
+  <nav class="side-nav">
+    <a href="#a5" class="side-link"><span class="side-num">05</span>Observar Issue</a>
+    <a href="#a6" class="side-link"><span class="side-num">06</span>Deixar de Observar Issue</a>
+  </nav>
+
+  <div class="side-section-label">Execução & Anexos</div>
+  <nav class="side-nav">
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Anexar Arquivo</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>Registrar Trabalho</a>
+    <a href="#a9" class="side-link"><span class="side-num">09</span>Mover para Sprint</a>
+  </nav>
+
+  <div class="side-section-label">Consulta</div>
+  <nav class="side-nav">
+    <a href="#a10" class="side-link"><span class="side-num">10</span>Buscar Issue</a>
+    <a href="#a11" class="side-link"><span class="side-num">11</span>Obter Issue</a>
+  </nav>
+
+  <div class="side-cta-fixed">
+    <div class="side-cta-card">
+      <div class="side-cta-tag">Afiliado oficial · Oferta exclusiva</div>
+      <div class="side-cta-title">Crie sua ferramenta.</div>
+      <div class="side-cta-desc">Crie suas automações enquanto aprende. 30 dias sem pagar nada pra quem leu esse guia.</div>
+      <a href="https://magneticflows.com/30-dias" target="_blank" class="side-cta-btn">Começar trial →</a>
+    </div>
+  </div>
+</aside>
+
+<main>
+<div class="hero-area">
+  <span class="hero-tag">Parte 2 · Ações · Categoria 17/17</span>
+  <h1 class="hero-title">Ações de <em>Jira</em>.</h1>
+  <p class="hero-desc">A última categoria de ações do guia — 11 ações nativas LC Premium pra criar, atualizar, comentar, anexar arquivos, registrar trabalho e mover issues entre sprints direto do Workflow Builder. Antes de usar, conecte em <strong>Configurações → Integrações → Jira → Connect</strong> e autorize o OAuth com sua conta Atlassian; toda ação Jira passa a exibir um seletor de <strong>Cloud Site</strong>, já que uma conta pode dar acesso a vários sites Jira Cloud.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="hero-stat-num">11</span><span class="hero-stat-label">Ações cobertas</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">30+</span><span class="hero-stat-label">Campos explicados</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">3</span><span class="hero-stat-label">Mockups interativos</span></div>
+  </div>
+  <div class="hero-cta">
+    <div class="hero-cta-text">
+      <div class="hero-cta-tag">⚡ Pra quem quer vender SaaS</div>
+      <div class="hero-cta-title">Quer ter sua <em>própria ferramenta</em> e vender pra sua audiência?</div>
+      <div class="hero-cta-sub">Trial 30 dias + treinamento + sessões ao vivo + suporte em PT-BR.</div>
+    </div>
+    <a href="https://magneticflows.com/30-dias" target="_blank" class="hero-cta-btn">Começar trial →</a>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A1 — CRIAR ISSUE (com mockup) ═══ -->
+<div class="action-block" id="a1" data-name="criar issue create issue jira">
+  <div class="action-head">
+    <div class="action-num">01</div>
+    <div class="action-titles">
+      <div class="action-cat">Gerenciamento de Issues</div>
+      <h2 class="action-name">Criar Issue</h2>
+      <div class="action-en">Create Issue</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Create</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Cria um novo issue em um projeto Jira do Cloud Site conectado — Bug, Task, Story ou Epic — preenchendo Summary, Description e Assignee com dados do workflow. É a ação mais usada da categoria, geralmente disparada a partir de um formulário, tag ou mudança de estágio na pipeline.</p>
+      <p>Como qualquer ação Jira, exige selecionar o <strong>Cloud Site</strong> e o Projeto de destino antes de configurar os campos do issue em si.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Bug reportado pelo cliente</div>
+        <div class="use-case-desc">Formulário "Reportar Problema" enviado → cria issue tipo Bug no projeto de Suporte, com descrição do cliente.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Kickoff de projeto</div>
+        <div class="use-case-desc">Oportunidade "Ganho" (deal de R$8k) → cria Epic "Onboarding" no projeto de implementação.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Task interna automática</div>
+        <div class="use-case-desc">Tag "Revisar Contrato" adicionada → cria Task no board interno do time jurídico.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a1">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Jira/ 01 — Reportar Bug → Criar Issue + Confirmação</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a1">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a1-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div><div class="ghl-node-type">Trigger · Form Submitted</div><div class="ghl-node-title">Form Submitted</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Form</span><span class="pv highlight">Reportar Problema</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a1-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-jira">J</div>
+            <div><div class="ghl-node-type">Action · Jira</div><div class="ghl-node-title">Create Issue</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Cloud Site</span><span class="pv">magneticfunnels.atlassian.net</span></div>
+            <div class="ghl-node-param"><span class="pk">Project</span><span class="pv">Suporte HighLevel Setup</span></div>
+            <div class="ghl-node-param"><span class="pk">Summary</span><span class="pv highlight">{{form.titulo}}</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a1-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div><div class="ghl-node-type">Action · Communication</div><div class="ghl-node-title">Send Email</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Template</span><span class="pv highlight">Chamado Recebido</span></div>
+            <div class="ghl-node-param"><span class="pk">To</span><span class="pv">{{contact.email}}</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a1-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">#</div>
+            <div><div class="ghl-node-type">Action · Contact</div><div class="ghl-node-title">Add Contact Tag</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Ticket Jira Criado</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A1 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cloud Site e Project sempre aparecem primeiro — sem eles, os campos de issue nem carregam.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Connected Account <span class='arrow'>→</span> <strong>Cloud Site</strong> <span class='arrow'>→</span> Project <span class='arrow'>→</span> Issue Type <span class='arrow'>→</span> Summary/Description/Assignee.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Create Issue</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Action Name <span class="req">*</span></div>
+              <input class="hl-input" value="Criar issue a partir do formulário de suporte" readonly>
+            </div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Connected Account <span class="req">*</span></div><div class="hl-dropdown has-value">lucas@magneticflows.com.br · Atlassian</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Cloud Site <span class="req">*</span></div><div class="hl-dropdown has-value">magneticfunnels.atlassian.net</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Project <span class="req">*</span></div><div class="hl-dropdown has-value">Suporte HighLevel Setup</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Issue Type <span class="req">*</span></div><div class="hl-dropdown has-value">Bug</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Summary <span class="req">*</span></div><div class="hl-dropdown has-value">{{form.titulo}}</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Description</div><div class="hl-dropdown has-value">{{form.descricao}}</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Assignee</div><div class="hl-dropdown has-value">Equipe Dev</div></div>
+          </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Cria o issue no Cloud Site/Projeto selecionados assim que a ação roda no workflow</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A2 — ATUALIZAR ISSUE ═══ -->
+<div class="action-block" id="a2" data-name="atualizar issue update issue jira">
+  <div class="action-head">
+    <div class="action-num">02</div>
+    <div class="action-titles">
+      <div class="action-cat">Gerenciamento de Issues</div>
+      <h2 class="action-name">Atualizar Issue</h2>
+      <div class="action-en">Update Issue</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Update</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Atualiza campos de um issue já existente — Status, Priority, Assignee, Summary ou Description — identificado pela chave do issue (ex: SUP-142). Campos não preenchidos na ação mantêm o valor atual no Jira.</p>
+      <p>Normalmente combinada com "Buscar Issue" quando você só tem uma referência indireta (email do cliente, número de pedido) e precisa localizar a chave antes de atualizar.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Cliente respondeu</div>
+        <div class="use-case-desc">Contato responde SMS sobre chamado aberto → atualiza Status do issue pra "Aguardando Dev".</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Reprioridade automática</div>
+        <div class="use-case-desc">Cliente é tag "Conta Enterprise" → atualiza Priority do issue vinculado pra "High".</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Cloud Site</div>
+          <div class="field-en">Cloud Site</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Site Jira Cloud onde o issue vive.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Obrigatório em toda ação Jira — sem ele, a ação nem carrega os projetos disponíveis.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Issue</div>
+          <div class="field-en">Issue Key</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Chave do issue a atualizar — ex: {{trigger.issue.key}} ou um valor fixo como "SUP-142".</div>
+          <div class="field-impact"><strong>Impacto:</strong> Se a chave não existir no Cloud Site selecionado, a ação falha.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Campos a Atualizar</div>
+          <div class="field-en">Fields to Update</div>
+          <div class="field-type">variáveis</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Status, Priority, Assignee, Summary ou Description — só os campos preenchidos são alterados.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Deixe em branco o que não quer sobrescrever.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A3 — VINCULAR ISSUES ═══ -->
+<div class="action-block" id="a3" data-name="vincular issues link issues jira">
+  <div class="action-head">
+    <div class="action-num">03</div>
+    <div class="action-titles">
+      <div class="action-cat">Gerenciamento de Issues</div>
+      <h2 class="action-name">Vincular Issues</h2>
+      <div class="action-en">Link Issues</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Link</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Cria um vínculo entre dois issues no Jira — "relates to", "blocks", "is blocked by" ou "duplicates" — sem precisar abrir o Jira manualmente. Útil quando um workflow HighLevel identifica que dois chamados são relacionados (mesmo cliente, mesma causa raiz).</p>
+      <p>Requer que os dois issues já existam — normalmente um vem do trigger e o outro de uma "Buscar Issue" anterior no mesmo workflow.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Chamados duplicados</div>
+        <div class="use-case-desc">Novo issue detecta mesma palavra-chave de um issue aberto → vincula como "duplicates".</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Dependência de projeto</div>
+        <div class="use-case-desc">Task de implementação → vincula como "blocks" ao Epic do projeto principal do cliente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Cloud Site</div>
+          <div class="field-en">Cloud Site</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Site Jira Cloud onde os dois issues vivem.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Ambos os issues precisam estar no mesmo Cloud Site.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Issue de Origem / Issue de Destino</div>
+          <div class="field-en">Source Issue / Target Issue</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Chaves dos dois issues a vincular — ex: {{trigger.issue.key}} e {{jira.foundIssue.key}}.</div>
+          <div class="field-impact"><strong>Impacto:</strong> A ordem importa em vínculos direcionais como "blocks"/"is blocked by".</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Tipo de Vínculo</div>
+          <div class="field-en">Link Type</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Dropdown com os tipos de vínculo padrão do Jira: relates to, blocks, is blocked by, duplicates.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Define como o relacionamento aparece na tela do issue no Jira.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A4 — COMENTAR NO ISSUE (com mockup) ═══ -->
+<div class="action-block" id="a4" data-name="comentar no issue add comment jira">
+  <div class="action-head">
+    <div class="action-num">04</div>
+    <div class="action-titles">
+      <div class="action-cat">Gerenciamento de Issues</div>
+      <h2 class="action-name">Comentar no Issue</h2>
+      <div class="action-en">Add Comment</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Comment</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Adiciona um comentário a um issue já existente no Jira — útil pra registrar automaticamente o histórico de interação do cliente direto no ticket, sem o time técnico precisar copiar e colar mensagens manualmente.</p>
+      <p>Precisa de um issue em contexto: ou veio do trigger (ex: Issue Updated), ou de uma "Buscar Issue" logo antes no workflow.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Cliente responde por SMS</div>
+        <div class="use-case-desc">SMS recebido sobre chamado aberto → localiza o issue → registra a mensagem como comentário.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Contexto automático</div>
+        <div class="use-case-desc">Issue criado a partir de formulário → comenta automaticamente com os dados extras do lead (plano, urgência).</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Alerta de SLA</div>
+        <div class="use-case-desc">Issue aberto há mais de 48h sem resposta → comenta "⚠ SLA em risco" pra chamar atenção do time.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a4">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Jira/ 04 — SMS do Cliente → Buscar Issue → Comentar</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a4">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div><div class="ghl-node-type">Trigger · Inbound Message</div><div class="ghl-node-title">Inbound SMS Received</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Contains</span><span class="pv highlight">"status do chamado"</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-jira">J</div>
+            <div><div class="ghl-node-type">Action · Jira</div><div class="ghl-node-title">Find Issue</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">JQL</span><span class="pv highlight">key = {{contact.jira_issue_key}}</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-jira">J</div>
+            <div><div class="ghl-node-type">Action · Jira</div><div class="ghl-node-title">Add Comment</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Issue</span><span class="pv">{{jira.foundIssue.key}}</span></div>
+            <div class="ghl-node-param"><span class="pk">Comment</span><span class="pv highlight">{{sms.body}}</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A4 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Painel enxuto: só precisa do Cloud Site, do issue de destino e do texto do comentário.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Cloud Site <span class='arrow'>→</span> Issue (chave ou variável) <span class='arrow'>→</span> Comment. Sem formatação rica — texto simples ou variáveis do workflow.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Add Comment</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Action Name <span class="req">*</span></div>
+              <input class="hl-input" value="Registrar resposta do cliente no chamado" readonly>
+            </div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Connected Account <span class="req">*</span></div><div class="hl-dropdown has-value">lucas@magneticflows.com.br · Atlassian</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Cloud Site <span class="req">*</span></div><div class="hl-dropdown has-value">magneticfunnels.atlassian.net</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Issue <span class="req">*</span></div><div class="hl-dropdown has-value">{{jira.foundIssue.key}}</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Comment <span class="req">*</span></div><div class="hl-dropdown has-value">{{sms.body}}</div></div>
+          </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Adiciona o comentário ao issue selecionado no Cloud Site conectado</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A5 — OBSERVAR ISSUE ═══ -->
+<div class="action-block" id="a5" data-name="observar issue watch issue jira">
+  <div class="action-head">
+    <div class="action-num">05</div>
+    <div class="action-titles">
+      <div class="action-cat">Observadores</div>
+      <h2 class="action-name">Observar Issue</h2>
+      <div class="action-en">Watch Issue</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Watch</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Adiciona um usuário como observador (watcher) de um issue no Jira. Watchers recebem notificações do Jira sobre qualquer mudança no issue — status, comentários, anexos — sem precisar estar atribuídos como responsáveis.</p>
+      <p>Útil pra manter gerentes de conta ou responsáveis de CS de olho em chamados críticos sem sobrecarregar a fila do time técnico.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Conta Enterprise</div>
+        <div class="use-case-desc">Issue criado por cliente Enterprise → adiciona o Account Manager como observador automaticamente.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Escalonamento</div>
+        <div class="use-case-desc">Priority muda pra "Highest" → adiciona o gerente de projeto como watcher do issue.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Cloud Site</div>
+          <div class="field-en">Cloud Site</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Site Jira Cloud onde o issue vive.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Obrigatório pra localizar o issue certo.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Issue</div>
+          <div class="field-en">Issue Key</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Chave do issue a monitorar.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Sem a chave certa, a ação não encontra onde adicionar o observador.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Usuário Observador</div>
+          <div class="field-en">Watcher</div>
+          <div class="field-type">opcional</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Usuário Jira a adicionar como watcher. Se em branco, assume o usuário da conta conectada.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Precisa ser um usuário com acesso ao Cloud Site/Projeto do issue.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A6 — DEIXAR DE OBSERVAR ISSUE ═══ -->
+<div class="action-block" id="a6" data-name="deixar de observar issue unwatch issue jira">
+  <div class="action-head">
+    <div class="action-num">06</div>
+    <div class="action-titles">
+      <div class="action-cat">Observadores</div>
+      <h2 class="action-name">Deixar de Observar Issue</h2>
+      <div class="action-en">Unwatch Issue</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Unwatch</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Remove um usuário da lista de observadores (watchers) de um issue — o inverso de "Observar Issue". Útil pra parar de notificar alguém depois que o motivo do acompanhamento deixou de existir (ex: issue foi resolvido, cliente trocou de Account Manager).</p>
+      <p>Como as demais ações da categoria, precisa do Cloud Site e da chave do issue pra funcionar.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Issue resolvido</div>
+        <div class="use-case-desc">Status muda pra "Done" → remove watchers temporários que só acompanhavam durante a resolução.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Troca de responsável</div>
+        <div class="use-case-desc">Account Manager antigo sai da conta → remove ele dos observadores dos issues abertos do cliente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Cloud Site</div>
+          <div class="field-en">Cloud Site</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Site Jira Cloud onde o issue vive.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Obrigatório pra localizar o issue certo.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Issue</div>
+          <div class="field-en">Issue Key</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Chave do issue de onde remover o observador.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Precisa ser um issue que já tenha esse usuário como watcher.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Usuário Observador</div>
+          <div class="field-en">Watcher</div>
+          <div class="field-type">opcional</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Usuário Jira a remover da lista de watchers. Se em branco, assume o usuário da conta conectada.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Não afeta o Assignee do issue — só a lista de notificações.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A7 — ANEXAR ARQUIVO ═══ -->
+<div class="action-block" id="a7" data-name="anexar arquivo attach file jira">
+  <div class="action-head">
+    <div class="action-num">07</div>
+    <div class="action-titles">
+      <div class="action-cat">Execução & Anexos</div>
+      <h2 class="action-name">Anexar Arquivo</h2>
+      <div class="action-en">Attach File</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Attachment</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Anexa um arquivo a um issue existente no Jira — print de erro enviado pelo cliente, PDF de contrato, gravação de chamada. O arquivo pode vir de uma URL pública ou de um upload feito em um formulário HighLevel.</p>
+      <p>Elimina o passo manual de baixar o anexo do CRM e subir de novo no Jira.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Print de erro do cliente</div>
+        <div class="use-case-desc">Formulário de bug report com upload de imagem → anexa a imagem direto no issue criado.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Documentação de projeto</div>
+        <div class="use-case-desc">Contrato assinado (PDF) → anexa ao Epic de implementação do cliente no Jira.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Cloud Site</div>
+          <div class="field-en">Cloud Site</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Site Jira Cloud onde o issue vive.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Obrigatório pra localizar o issue certo.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Issue</div>
+          <div class="field-en">Issue Key</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Chave do issue que vai receber o anexo.</div>
+          <div class="field-impact"><strong>Impacto:</strong> O arquivo aparece na aba de anexos do issue no Jira.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Arquivo / URL</div>
+          <div class="field-en">File / URL</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">URL pública do arquivo ou variável de upload — ex: {{form.upload_url}}.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Arquivos grandes podem levar alguns segundos a mais pra processar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A8 — REGISTRAR TRABALHO ═══ -->
+<div class="action-block" id="a8" data-name="registrar trabalho log work jira worklog">
+  <div class="action-head">
+    <div class="action-num">08</div>
+    <div class="action-titles">
+      <div class="action-cat">Execução & Anexos</div>
+      <h2 class="action-name">Registrar Trabalho</h2>
+      <div class="action-en">Log Work</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Worklog</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Lança um registro de tempo trabalhado (worklog) em um issue — útil pra times que faturam por hora ou que precisam reportar horas de suporte técnico gastas por chamado, sem depender do time abrir o Jira manualmente pra apontar.</p>
+      <p>O worklog fica visível na aba "Work Log" do issue, junto com quem registrou e a data.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Faturamento por hora</div>
+        <div class="use-case-desc">Chamada de suporte técnico encerrada → registra o tempo gasto direto no issue pra faturamento.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Relatório de SLA</div>
+        <div class="use-case-desc">Task de implementação concluída → registra as horas investidas pra fechar o relatório mensal do cliente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Cloud Site</div>
+          <div class="field-en">Cloud Site</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Site Jira Cloud onde o issue vive.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Obrigatório pra localizar o issue certo.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Issue</div>
+          <div class="field-en">Issue Key</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Chave do issue onde registrar o trabalho.</div>
+          <div class="field-impact"><strong>Impacto:</strong> O worklog fica atrelado a esse issue específico.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Tempo Gasto</div>
+          <div class="field-en">Time Spent</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Duração no formato do Jira — ex: "2h 30m", "1d".</div>
+          <div class="field-impact"><strong>Impacto:</strong> Formato inválido faz a ação falhar.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Data do Trabalho / Comentário</div>
+          <div class="field-en">Work Date / Worklog Comment</div>
+          <div class="field-type">opcional</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Quando o trabalho foi feito e uma nota descrevendo o que foi feito.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Se em branco, usa a data/hora de execução da ação.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A9 — MOVER PARA SPRINT (com mockup) ═══ -->
+<div class="action-block" id="a9" data-name="mover para sprint move to sprint jira">
+  <div class="action-head">
+    <div class="action-num">09</div>
+    <div class="action-titles">
+      <div class="action-cat">Execução & Anexos</div>
+      <h2 class="action-name">Mover para Sprint</h2>
+      <div class="action-en">Move to Sprint</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Sprint</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Move um issue pra um sprint específico de um board Jira (Scrum). Depois de escolher o Cloud Site e o Projeto, a ação lista os sprints ativos/futuros do board pra você selecionar o destino.</p>
+      <p>Útil pra automatizar o planejamento — por exemplo, puxar automaticamente pro sprint corrente qualquer issue crítico assim que ele é criado ou encontrado.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Kickoff de projeto vendido</div>
+        <div class="use-case-desc">Oportunidade "Ganho" → localiza o issue de backlog do cliente → move pro sprint atual do time de implementação.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Bug crítico entra no sprint</div>
+        <div class="use-case-desc">Issue tipo Bug com Priority "Highest" → move automaticamente pro sprint em andamento, furando a fila do backlog.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 03</div>
+        <div class="use-case-title">Replanejamento</div>
+        <div class="use-case-desc">Sprint anterior fechou com pendências → move os issues não concluídos pro próximo sprint automaticamente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a9">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Jira/ 09 — Oportunidade Ganha → Buscar Issue → Sprint Atual</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a9">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a9-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div><div class="ghl-node-type">Trigger · Opportunity Status Changed</div><div class="ghl-node-title">Opportunity Status Changed</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Won</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a9-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-jira">J</div>
+            <div><div class="ghl-node-type">Action · Jira</div><div class="ghl-node-title">Find Issue</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">JQL</span><span class="pv highlight">project = DEV AND labels = kickoff</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a9-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-jira">J</div>
+            <div><div class="ghl-node-type">Action · Jira</div><div class="ghl-node-title">Move to Sprint</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Issue</span><span class="pv">{{jira.foundIssue.key}}</span></div>
+            <div class="ghl-node-param"><span class="pk">Sprint</span><span class="pv highlight">Sprint 14 (13–27 Jul)</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A9 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      O dropdown de Sprint só carrega depois que Cloud Site + Project estão selecionados — ele lista os sprints ativos e futuros do board Scrum do projeto.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Cloud Site <span class='arrow'>→</span> Project <span class='arrow'>→</span> Issue <span class='arrow'>→</span> <strong>Sprint</strong> (dropdown com sprints ativos/futuros do board).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Move to Sprint</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+            <div class="hl-field-group">
+              <div class="hl-field-label">Action Name <span class="req">*</span></div>
+              <input class="hl-input" value="Mover issue de kickoff pro sprint atual" readonly>
+            </div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Connected Account <span class="req">*</span></div><div class="hl-dropdown has-value">lucas@magneticflows.com.br · Atlassian</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Cloud Site <span class="req">*</span></div><div class="hl-dropdown has-value">magneticfunnels.atlassian.net</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Project <span class="req">*</span></div><div class="hl-dropdown has-value">Projetos Dev</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Issue <span class="req">*</span></div><div class="hl-dropdown has-value">{{jira.foundIssue.key}}</div></div>
+            <div class="hl-filter-row"><div class="hl-filter-label">Sprint <span class="req">*</span></div><div class="hl-dropdown has-value">Sprint 14 (13–27 Jul)</div></div>
+          </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Move o issue pro sprint selecionado do board Scrum do Projeto/Cloud Site escolhidos</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A10 — BUSCAR ISSUE ═══ -->
+<div class="action-block" id="a10" data-name="buscar issue find issue jira jql">
+  <div class="action-head">
+    <div class="action-num">10</div>
+    <div class="action-titles">
+      <div class="action-cat">Consulta</div>
+      <h2 class="action-name">Buscar Issue</h2>
+      <div class="action-en">Find Issue</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Lookup</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Localiza um issue no Jira por chave direta (ex: SUP-142) ou por um critério de busca no estilo JQL (ex: "project = DEV AND status = 'To Do'"). O resultado fica disponível como variável pras ações seguintes do workflow — normalmente usada antes de "Atualizar Issue", "Comentar no Issue" ou "Mover para Sprint".</p>
+      <p>Se nada for encontrado, o workflow pode ser configurado para seguir um caminho alternativo (ex: criar um issue novo em vez de atualizar).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Localizar chamado do cliente</div>
+        <div class="use-case-desc">Cliente responde por SMS → busca o issue vinculado ao número de telefone via campo customizado.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Verificação antes de criar</div>
+        <div class="use-case-desc">Antes de criar issue novo → busca por summary parecido, evitando duplicar chamados.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Cloud Site</div>
+          <div class="field-en">Cloud Site</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Site Jira Cloud onde buscar.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Obrigatório — a busca não cruza sites diferentes.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Projeto</div>
+          <div class="field-en">Project</div>
+          <div class="field-type">opcional</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Restringe a busca a um projeto específico dentro do Cloud Site.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Reduz falso-positivo quando vários projetos têm summaries parecidos.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Critério de Busca</div>
+          <div class="field-en">Search Query / JQL</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Chave direta do issue ou uma query no estilo JQL — ex: key = {{contact.jira_issue_key}}.</div>
+          <div class="field-impact"><strong>Resultado:</strong> Os dados do primeiro issue encontrado ficam disponíveis como variáveis nas ações seguintes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A11 — OBTER ISSUE ═══ -->
+<div class="action-block" id="a11" data-name="obter issue get issue jira">
+  <div class="action-head">
+    <div class="action-num">11</div>
+    <div class="action-titles">
+      <div class="action-cat">Consulta</div>
+      <h2 class="action-name">Obter Issue</h2>
+      <div class="action-en">Get Issue</div>
+      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Lookup</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Busca os dados completos de um issue já identificado pela sua chave (ex: SUP-142) — Status, Assignee, Priority, Sprint atual, comentários recentes — e disponibiliza tudo como variáveis pro resto do workflow. Diferente de "Buscar Issue", que localiza pela query/JQL, aqui você já sabe exatamente qual issue quer.</p>
+      <p>Usada com frequência logo após um trigger de "Issue Updated" pra puxar o estado completo mais atual do issue antes de decidir o próximo passo do workflow.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Snapshot completo pro cliente</div>
+        <div class="use-case-desc">Cliente pergunta status → obtém issue pela chave salva no CRM → monta resposta com Status e Assignee atuais.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Decisão condicional</div>
+        <div class="use-case-desc">Obtém issue → if/else no workflow decide o próximo passo com base no Status ou Priority retornados.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Cloud Site</div>
+          <div class="field-en">Cloud Site</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Site Jira Cloud onde o issue vive.</div>
+          <div class="field-impact"><strong>Impacto:</strong> Obrigatório pra localizar o issue certo.</div>
+        </div>
+      </div>
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Issue Key</div>
+          <div class="field-en">Issue Key</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Chave exata do issue a consultar — ex: {{contact.jira_issue_key}}.</div>
+          <div class="field-impact"><strong>Resultado:</strong> Retorna Status, Assignee, Priority, Sprint e demais campos como variáveis disponíveis no workflow.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV PREV/NEXT -->
+<nav class="cat-nav">
+  <a href="acoes-highlevel-cat16.html" class="cat-nav-link prev">
+    <span class="cat-nav-label">← Anterior · Categoria 16</span>
+    <span class="cat-nav-name">Todoist</span>
+  </a>
+  <a href="index.html" class="cat-nav-link next">
+    <span class="cat-nav-label">Fim · Voltar ao Índice →</span>
+    <span class="cat-nav-name">Ver todas as categorias</span>
+  </a>
+</nav>
+
+<div class="guide-footer">
+  <div class="footer-top">
+    <h3>Categoria 17 completa.</h3>
+    <p>11 ações de integração nativa com Jira explicadas com exemplos práticos e mockups visuais. Adicionadas em julho/2026 — crie, atualize, comente e mova issues entre sprints sem sair do HighLevel.</p>
+  </div>
+
+  <div class="footer-main-cta">
+    <div class="footer-main-cta-text">
+      <div class="footer-main-cta-tag">⚡ Crie sua ferramenta SaaS</div>
+      <div class="footer-main-cta-title">Tenha seu próprio <em>HighLevel</em> e venda.</div>
+      <div class="footer-main-cta-sub">Trial 30 dias + treinamento + sessões ao vivo + suporte em PT-BR.</div>
+    </div>
+    <a href="https://magneticflows.com/30-dias" target="_blank" class="footer-main-cta-btn">Começar trial →</a>
+  </div>
+
+  <div class="footer-links-grid">
+    <a href="https://gokollab.com/highlevelbrasil" target="_blank" class="footer-link-card"><span class="footer-link-tag">Grátis</span><span class="footer-link-title">Comunidade Magnetic Flows</span><span class="footer-link-desc">Entre pra comunidade e aprenda com outros usuários.</span><span class="footer-link-arrow">Entrar →</span></a>
+    <a href="https://chat.whatsapp.com/JGPLBTmaTLq7do2FqfjALQ" target="_blank" class="footer-link-card"><span class="footer-link-tag">WhatsApp</span><span class="footer-link-title">Grupo Oficial WhatsApp</span><span class="footer-link-desc">Dicas diárias direto no celular.</span><span class="footer-link-arrow">Entrar →</span></a>
+    <a href="https://br.magneticfunnels.io" target="_blank" class="footer-link-card"><span class="footer-link-tag">Assinatura</span><span class="footer-link-title">Magnetic Funnels Premium</span><span class="footer-link-desc">Suporte dedicado e mentorias mensais.</span><span class="footer-link-arrow">Assinar →</span></a>
+  </div>
+
+  <div class="footer-legal">Guia oficial Magnetic Funnels · Parte 2 · Categoria 17 de 17 · Atualizado em julho de 2026</div>
+</div>
+
+</main>
+</div>
+<script>
+  const configData = {
+    'a1-1': { kind: 'Trigger · Form Submitted', title: 'Form Submitted', body: `<div class="config-section"><div class="config-label">Trigger Name *</div><div class="config-field highlight">Reportar Problema</div></div><div class="config-section"><div class="config-label">Form *</div><div class="config-field highlight dropdown">Reportar Problema</div></div>` },
+    'a1-2': { kind: 'Action · Jira', title: 'Create Issue', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar issue a partir do formulário de suporte</div></div><div class="config-section"><div class="config-label">Cloud Site *</div><div class="config-field dropdown">magneticfunnels.atlassian.net</div></div><div class="config-section"><div class="config-label">Project *</div><div class="config-field highlight dropdown">Suporte HighLevel Setup</div></div><div class="config-section"><div class="config-label">Issue Type *</div><div class="config-field dropdown">Bug</div></div><div class="config-section"><div class="config-label">Summary *</div><div class="config-field highlight">{{form.titulo}}</div></div><div class="config-section"><div class="config-label">Description</div><div class="config-field">{{form.descricao}}</div></div>` },
+    'a1-3': { kind: 'Action · Communication', title: 'Send Email (Chamado Recebido)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Confirmar recebimento do chamado</div></div><div class="config-section"><div class="config-label">To *</div><div class="config-field highlight">{{contact.email}}</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Chamado Recebido</div></div>` },
+    'a1-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tag Ticket Jira Criado</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Ticket Jira Criado</span></div></div>` },
+    'a4-1': { kind: 'Trigger · Inbound Message', title: 'Inbound SMS Received', body: `<div class="config-section"><div class="config-label">Trigger Name *</div><div class="config-field highlight">Resposta sobre status do chamado</div></div><div class="config-section"><div class="config-label">Message Contains *</div><div class="config-field highlight">status do chamado</div></div>` },
+    'a4-2': { kind: 'Action · Jira', title: 'Find Issue', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Localizar issue vinculado ao contato</div></div><div class="config-section"><div class="config-label">Cloud Site *</div><div class="config-field dropdown">magneticfunnels.atlassian.net</div></div><div class="config-section"><div class="config-label">Search Query / JQL *</div><div class="config-field highlight">key = {{contact.jira_issue_key}}</div></div>` },
+    'a4-3': { kind: 'Action · Jira', title: 'Add Comment', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Registrar resposta do cliente no chamado</div></div><div class="config-section"><div class="config-label">Cloud Site *</div><div class="config-field dropdown">magneticfunnels.atlassian.net</div></div><div class="config-section"><div class="config-label">Issue *</div><div class="config-field">{{jira.foundIssue.key}}</div></div><div class="config-section"><div class="config-label">Comment *</div><div class="config-field highlight">{{sms.body}}</div></div>` },
+    'a9-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Opportunity Status Changed', body: `<div class="config-section"><div class="config-label">Trigger Name *</div><div class="config-field highlight">Oportunidade Ganha → Kickoff Dev</div></div><div class="config-section"><div class="config-label">Status *</div><div class="config-field highlight dropdown">Won</div></div>` },
+    'a9-2': { kind: 'Action · Jira', title: 'Find Issue', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Localizar issue de kickoff no backlog</div></div><div class="config-section"><div class="config-label">Cloud Site *</div><div class="config-field dropdown">magneticfunnels.atlassian.net</div></div><div class="config-section"><div class="config-label">Project</div><div class="config-field dropdown">Projetos Dev</div></div><div class="config-section"><div class="config-label">Search Query / JQL *</div><div class="config-field highlight">project = DEV AND labels = kickoff</div></div>` },
+    'a9-3': { kind: 'Action · Jira', title: 'Move to Sprint', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Mover issue de kickoff pro sprint atual</div></div><div class="config-section"><div class="config-label">Cloud Site *</div><div class="config-field dropdown">magneticfunnels.atlassian.net</div></div><div class="config-section"><div class="config-label">Project *</div><div class="config-field dropdown">Projetos Dev</div></div><div class="config-section"><div class="config-label">Issue *</div><div class="config-field">{{jira.foundIssue.key}}</div></div><div class="config-section"><div class="config-label">Sprint *</div><div class="config-field highlight dropdown">Sprint 14 (13–27 Jul)</div></div>` }
+  };
+
+  document.querySelectorAll('.ghl-mockup').forEach(m => {
+    try { initMockup(m); }
+    catch (e) { console.error('mockup init failed:', m.dataset.mockup, e); }
+  });
+
+  function initMockup(m) {
+    const nodes = m.querySelectorAll('.ghl-node');
+    const connectors = m.querySelectorAll('.ghl-connector');
+    const panel = m.querySelector('.config-panel');
+    const pk = panel.querySelector('.config-kind');
+    const pt = panel.querySelector('.config-title');
+    const pb = panel.querySelector('.config-body');
+    const cb = panel.querySelector('.config-close');
+    const pl = m.querySelector('.ghl-btn.play');
+    const ai = m.querySelector('.anim-indicator');
+    const at = m.querySelector('.anim-text');
+    nodes.forEach(n => n.addEventListener('click', () => {
+      const d = configData[n.dataset.nodeId];
+      if (!d) return;
+      nodes.forEach(x => x.classList.remove('active'));
+      n.classList.add('active');
+      pk.textContent = d.kind; pt.textContent = d.title; pb.innerHTML = d.body;
+      panel.classList.add('open');
+    }));
+    cb.addEventListener('click', () => { panel.classList.remove('open'); nodes.forEach(x => x.classList.remove('active')); });
+    setTimeout(() => { nodes.forEach(n => n.classList.add('visible')); connectors.forEach(c => c.classList.add('visible')); }, 100);
+    pl.addEventListener('click', async () => {
+      pl.disabled = true; const ot = pl.textContent; pl.textContent = '● Reproduzindo...';
+      panel.classList.remove('open'); nodes.forEach(n => n.classList.remove('active'));
+      nodes.forEach(n => n.classList.remove('visible')); connectors.forEach(c => c.classList.remove('visible'));
+      await sleep(400); ai.classList.add('visible');
+      const na = Array.from(nodes); const ca = Array.from(connectors);
+      for (let i = 0; i < na.length; i++) {
+        at.textContent = i === 0 ? 'Adicionando gatilho...' : `Adicionando ação ${i}...`;
+        await sleep(500); na[i].classList.add('visible', 'active'); await sleep(400); na[i].classList.remove('active');
+        if (i < ca.length) { at.textContent = 'Conectando...'; await sleep(300); ca[i].classList.add('visible'); }
+      }
+      at.textContent = 'Fluxo completo ✓'; await sleep(1000); ai.classList.remove('visible');
+      pl.disabled = false; pl.textContent = ot;
+    });
+  }
+  function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+  const s = document.getElementById('search');
+  const bl = document.querySelectorAll('.action-block[id^="a"]');
+  const ln = document.querySelectorAll('.side-link');
+  s.addEventListener('input', e => {
+    const q = e.target.value.toLowerCase().trim();
+    bl.forEach(b => {
+      const nm = (b.dataset.name || '').toLowerCase();
+      const ne = b.querySelector('.action-name')?.textContent.toLowerCase() || '';
+      const en = b.querySelector('.action-en')?.textContent.toLowerCase() || '';
+      b.classList.toggle('hidden', !(!q || nm.includes(q) || ne.includes(q) || en.includes(q)));
+    });
+    ln.forEach(l => { l.style.display = (!q || l.textContent.toLowerCase().includes(q)) ? '' : 'none'; });
+  });
+
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      ln.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    }
+  }), { rootMargin: '-30% 0px -60% 0px' });
+  bl.forEach(b => obs.observe(b));
+
+  const btnTop = document.createElement('button');
+  btnTop.className = 'back-to-top';
+  btnTop.innerHTML = '↑';
+  btnTop.setAttribute('aria-label', 'Voltar ao topo');
+  btnTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+  document.body.appendChild(btnTop);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) btnTop.classList.add('visible');
+    else btnTop.classList.remove('visible');
+  });
+
+  const overlay = document.createElement('div');
+  overlay.className = 'drawer-overlay';
+  document.body.appendChild(overlay);
+
+  window.toggleDrawer = function() {
+    const aside = document.querySelector('aside');
+    if (!aside) return;
+    aside.classList.toggle('open');
+    overlay.classList.toggle('visible');
+  };
+
+  overlay.addEventListener('click', toggleDrawer);
+
+  document.querySelectorAll('aside .side-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900) {
+        document.querySelector('aside').classList.remove('open');
+        overlay.classList.remove('visible');
+      }
+    });
+  });
+</script>
+  <script src="search.js" defer></script>
+</body>
+</html>
