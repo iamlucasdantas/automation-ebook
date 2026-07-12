@@ -381,23 +381,23 @@
   .hero-cta-btn:hover { background: var(--brand-paper); color: var(--brand-ink); }
 
   /* Action blocks (same visual as trigger-block) */
-  .action-block {
+  .acao-block {
     padding: 72px 72px;
     border-bottom: 1.5px solid var(--brand-ink);
     scroll-margin-top: 20px;
   }
 
-  .action-block:nth-of-type(even) { background: var(--brand-paper-warm); }
-  .action-block.hidden { display: none; }
+  .acao-block:nth-of-type(even) { background: var(--brand-paper-warm); }
+  .acao-block.hidden { display: none; }
 
-  .action-head {
+  .acao-head {
     display: flex;
     align-items: flex-start;
     gap: 24px;
     margin-bottom: 40px;
   }
 
-  .action-num {
+  .acao-num {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 4rem;
@@ -407,9 +407,9 @@
     min-width: 90px;
   }
 
-  .action-titles { flex: 1; }
+  .acao-titles { flex: 1; }
 
-  .action-cat {
+  .acao-cat {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
     letter-spacing: 0.2em;
@@ -418,7 +418,7 @@
     margin-bottom: 8px;
   }
 
-  .action-name {
+  .acao-name {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(1.8rem, 3.5vw, 2.75rem);
     font-weight: 600;
@@ -427,14 +427,14 @@
     margin-bottom: 6px;
   }
 
-  .action-en {
+  .acao-en {
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
     color: var(--muted);
     letter-spacing: 0.05em;
   }
 
-  .action-tags {
+  .acao-tags {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
@@ -498,7 +498,7 @@
     padding: 20px;
   }
 
-  .action-block:nth-of-type(even) .use-case { background: var(--brand-paper-dim); }
+  .acao-block:nth-of-type(even) .use-case { background: var(--brand-paper-dim); }
 
   .use-case-label {
     font-family: 'JetBrains Mono', monospace;
@@ -531,7 +531,7 @@
     overflow: hidden;
   }
 
-  .action-block:nth-of-type(even) .field-item { background: var(--brand-paper); }
+  .acao-block:nth-of-type(even) .field-item { background: var(--brand-paper); }
 
   .field-header {
     display: flex;
@@ -1423,9 +1423,9 @@
     }
     .drawer-overlay.visible { opacity: 1; pointer-events: auto; }
     .top-nav-breadcrumb { display: none; }
-    .hero-area, .action-block, .guide-footer { padding-left: 24px; padding-right: 24px; }
-    .action-head { flex-direction: column; gap: 8px; }
-    .action-num { font-size: 3rem; min-width: auto; }
+    .hero-area, .acao-block, .guide-footer { padding-left: 24px; padding-right: 24px; }
+    .acao-head { flex-direction: column; gap: 8px; }
+    .acao-num { font-size: 3rem; min-width: auto; }
     .hero-stats { gap: 32px; }
     .config-panel { width: 100%; }
     .ghl-node { width: 100%; max-width: 320px; }
@@ -1522,14 +1522,14 @@
 </div>
 
 <!-- ═══ AÇÃO A1 — CRIAR ISSUE (com mockup) ═══ -->
-<div class="action-block" id="a1" data-name="criar issue create issue jira">
-  <div class="action-head">
-    <div class="action-num">01</div>
-    <div class="action-titles">
-      <div class="action-cat">Gerenciamento de Issues</div>
-      <h2 class="action-name">Criar Issue</h2>
-      <div class="action-en">Create Issue</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Create</span></div>
+<div class="acao-block" id="a1" data-name="criar issue create issue jira">
+  <div class="acao-head">
+    <div class="acao-num">01</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Gerenciamento de Issues</div>
+      <h2 class="acao-name">Criar Issue</h2>
+      <div class="acao-en">Create Issue</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Create</span></div>
     </div>
   </div>
 
@@ -1681,14 +1681,14 @@
 </div>
 
 <!-- ═══ AÇÃO A2 — ATUALIZAR ISSUE ═══ -->
-<div class="action-block" id="a2" data-name="atualizar issue update issue jira">
-  <div class="action-head">
-    <div class="action-num">02</div>
-    <div class="action-titles">
-      <div class="action-cat">Gerenciamento de Issues</div>
-      <h2 class="action-name">Atualizar Issue</h2>
-      <div class="action-en">Update Issue</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Update</span></div>
+<div class="acao-block" id="a2" data-name="atualizar issue update issue jira">
+  <div class="acao-head">
+    <div class="acao-num">02</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Gerenciamento de Issues</div>
+      <h2 class="acao-name">Atualizar Issue</h2>
+      <div class="acao-en">Update Issue</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Update</span></div>
     </div>
   </div>
 
@@ -1757,14 +1757,14 @@
 </div>
 
 <!-- ═══ AÇÃO A3 — VINCULAR ISSUES ═══ -->
-<div class="action-block" id="a3" data-name="vincular issues link issues jira">
-  <div class="action-head">
-    <div class="action-num">03</div>
-    <div class="action-titles">
-      <div class="action-cat">Gerenciamento de Issues</div>
-      <h2 class="action-name">Vincular Issues</h2>
-      <div class="action-en">Link Issues</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Link</span></div>
+<div class="acao-block" id="a3" data-name="vincular issues link issues jira">
+  <div class="acao-head">
+    <div class="acao-num">03</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Gerenciamento de Issues</div>
+      <h2 class="acao-name">Vincular Issues</h2>
+      <div class="acao-en">Link Issues</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Link</span></div>
     </div>
   </div>
 
@@ -1833,14 +1833,14 @@
 </div>
 
 <!-- ═══ AÇÃO A4 — COMENTAR NO ISSUE (com mockup) ═══ -->
-<div class="action-block" id="a4" data-name="comentar no issue add comment jira">
-  <div class="action-head">
-    <div class="action-num">04</div>
-    <div class="action-titles">
-      <div class="action-cat">Gerenciamento de Issues</div>
-      <h2 class="action-name">Comentar no Issue</h2>
-      <div class="action-en">Add Comment</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Comment</span></div>
+<div class="acao-block" id="a4" data-name="comentar no issue add comment jira">
+  <div class="acao-head">
+    <div class="acao-num">04</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Gerenciamento de Issues</div>
+      <h2 class="acao-name">Comentar no Issue</h2>
+      <div class="acao-en">Add Comment</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Comment</span></div>
     </div>
   </div>
 
@@ -1975,14 +1975,14 @@
 </div>
 
 <!-- ═══ AÇÃO A5 — OBSERVAR ISSUE ═══ -->
-<div class="action-block" id="a5" data-name="observar issue watch issue jira">
-  <div class="action-head">
-    <div class="action-num">05</div>
-    <div class="action-titles">
-      <div class="action-cat">Observadores</div>
-      <h2 class="action-name">Observar Issue</h2>
-      <div class="action-en">Watch Issue</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Watch</span></div>
+<div class="acao-block" id="a5" data-name="observar issue watch issue jira">
+  <div class="acao-head">
+    <div class="acao-num">05</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Observadores</div>
+      <h2 class="acao-name">Observar Issue</h2>
+      <div class="acao-en">Watch Issue</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Watch</span></div>
     </div>
   </div>
 
@@ -2051,14 +2051,14 @@
 </div>
 
 <!-- ═══ AÇÃO A6 — DEIXAR DE OBSERVAR ISSUE ═══ -->
-<div class="action-block" id="a6" data-name="deixar de observar issue unwatch issue jira">
-  <div class="action-head">
-    <div class="action-num">06</div>
-    <div class="action-titles">
-      <div class="action-cat">Observadores</div>
-      <h2 class="action-name">Deixar de Observar Issue</h2>
-      <div class="action-en">Unwatch Issue</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Unwatch</span></div>
+<div class="acao-block" id="a6" data-name="deixar de observar issue unwatch issue jira">
+  <div class="acao-head">
+    <div class="acao-num">06</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Observadores</div>
+      <h2 class="acao-name">Deixar de Observar Issue</h2>
+      <div class="acao-en">Unwatch Issue</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Unwatch</span></div>
     </div>
   </div>
 
@@ -2127,14 +2127,14 @@
 </div>
 
 <!-- ═══ AÇÃO A7 — ANEXAR ARQUIVO ═══ -->
-<div class="action-block" id="a7" data-name="anexar arquivo attach file jira">
-  <div class="action-head">
-    <div class="action-num">07</div>
-    <div class="action-titles">
-      <div class="action-cat">Execução & Anexos</div>
-      <h2 class="action-name">Anexar Arquivo</h2>
-      <div class="action-en">Attach File</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Attachment</span></div>
+<div class="acao-block" id="a7" data-name="anexar arquivo attach file jira">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Execução & Anexos</div>
+      <h2 class="acao-name">Anexar Arquivo</h2>
+      <div class="acao-en">Attach File</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Attachment</span></div>
     </div>
   </div>
 
@@ -2203,14 +2203,14 @@
 </div>
 
 <!-- ═══ AÇÃO A8 — REGISTRAR TRABALHO ═══ -->
-<div class="action-block" id="a8" data-name="registrar trabalho log work jira worklog">
-  <div class="action-head">
-    <div class="action-num">08</div>
-    <div class="action-titles">
-      <div class="action-cat">Execução & Anexos</div>
-      <h2 class="action-name">Registrar Trabalho</h2>
-      <div class="action-en">Log Work</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Worklog</span></div>
+<div class="acao-block" id="a8" data-name="registrar trabalho log work jira worklog">
+  <div class="acao-head">
+    <div class="acao-num">08</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Execução & Anexos</div>
+      <h2 class="acao-name">Registrar Trabalho</h2>
+      <div class="acao-en">Log Work</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Worklog</span></div>
     </div>
   </div>
 
@@ -2290,14 +2290,14 @@
 </div>
 
 <!-- ═══ AÇÃO A9 — MOVER PARA SPRINT (com mockup) ═══ -->
-<div class="action-block" id="a9" data-name="mover para sprint move to sprint jira">
-  <div class="action-head">
-    <div class="action-num">09</div>
-    <div class="action-titles">
-      <div class="action-cat">Execução & Anexos</div>
-      <h2 class="action-name">Mover para Sprint</h2>
-      <div class="action-en">Move to Sprint</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Sprint</span></div>
+<div class="acao-block" id="a9" data-name="mover para sprint move to sprint jira">
+  <div class="acao-head">
+    <div class="acao-num">09</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Execução & Anexos</div>
+      <h2 class="acao-name">Mover para Sprint</h2>
+      <div class="acao-en">Move to Sprint</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Sprint</span></div>
     </div>
   </div>
 
@@ -2433,14 +2433,14 @@
 </div>
 
 <!-- ═══ AÇÃO A10 — BUSCAR ISSUE ═══ -->
-<div class="action-block" id="a10" data-name="buscar issue find issue jira jql">
-  <div class="action-head">
-    <div class="action-num">10</div>
-    <div class="action-titles">
-      <div class="action-cat">Consulta</div>
-      <h2 class="action-name">Buscar Issue</h2>
-      <div class="action-en">Find Issue</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Lookup</span></div>
+<div class="acao-block" id="a10" data-name="buscar issue find issue jira jql">
+  <div class="acao-head">
+    <div class="acao-num">10</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Consulta</div>
+      <h2 class="acao-name">Buscar Issue</h2>
+      <div class="acao-en">Find Issue</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Lookup</span></div>
     </div>
   </div>
 
@@ -2509,14 +2509,14 @@
 </div>
 
 <!-- ═══ AÇÃO A11 — OBTER ISSUE ═══ -->
-<div class="action-block" id="a11" data-name="obter issue get issue jira">
-  <div class="action-head">
-    <div class="action-num">11</div>
-    <div class="action-titles">
-      <div class="action-cat">Consulta</div>
-      <h2 class="action-name">Obter Issue</h2>
-      <div class="action-en">Get Issue</div>
-      <div class="action-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Lookup</span></div>
+<div class="acao-block" id="a11" data-name="obter issue get issue jira">
+  <div class="acao-head">
+    <div class="acao-num">11</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Consulta</div>
+      <h2 class="acao-name">Obter Issue</h2>
+      <div class="acao-en">Get Issue</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Jira</span><span class="info-tag">Lookup</span></div>
     </div>
   </div>
 
@@ -2669,14 +2669,14 @@
   function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
   const s = document.getElementById('search');
-  const bl = document.querySelectorAll('.action-block[id^="a"]');
+  const bl = document.querySelectorAll('.acao-block[id^="a"]');
   const ln = document.querySelectorAll('.side-link');
   s.addEventListener('input', e => {
     const q = e.target.value.toLowerCase().trim();
     bl.forEach(b => {
       const nm = (b.dataset.name || '').toLowerCase();
-      const ne = b.querySelector('.action-name')?.textContent.toLowerCase() || '';
-      const en = b.querySelector('.action-en')?.textContent.toLowerCase() || '';
+      const ne = b.querySelector('.acao-name')?.textContent.toLowerCase() || '';
+      const en = b.querySelector('.acao-en')?.textContent.toLowerCase() || '';
       b.classList.toggle('hidden', !(!q || nm.includes(q) || ne.includes(q) || en.includes(q)));
     });
     ln.forEach(l => { l.style.display = (!q || l.textContent.toLowerCase().includes(q)) ? '' : 'none'; });

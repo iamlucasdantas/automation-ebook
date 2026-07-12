@@ -87,9 +87,48 @@ outras ações, (b) features novas/experimentais, ou (c) docs sparse:
 - **Cat09 A1/A2 Campaign actions** — Campaigns foram deprecados em favor de Workflows
 - **Cat10 A4/A5 Approve/Pay Commission** — sem doc dedicada
 - **Cat13 A5/A6 Leaderboard Level/Post to Community** — gamification docs sparse
+- **Cat16 (Todoist) A4/A5/A7/A8/A9/A10/A12** (Comentar na Tarefa, Comentar
+  no Projeto, Mover Tarefa para Seção, Buscar Tarefa, Buscar Projeto,
+  Buscar Usuário, Convidar Usuário) — o changelog oficial da HL confirma
+  o total de 12 actions e os grupos ("task lifecycle", "task and project
+  comments", "project creation and section moves", "discovery", "collaborator
+  management"), mas não lista os nomes individuais de cada action dentro
+  de cada grupo. Nomes/campos são reconstrução razoável, não confirmação 1:1.
+- **Cat17 (Jira) A6/A10/A11** (Deixar de Observar Issue / Unwatch,
+  Buscar Issue / Find Issue, Obter Issue / Get Issue) — o changelog oficial
+  confirma 2 triggers + 11 actions e 8 verbos ("create, update, link,
+  comment, watch, attach files, log work, move to sprint"), mas não bate
+  exatamente com 11 nomes individuais. Estas 3 foram adicionadas pra fechar
+  a contagem confirmada — nomes/campos são reconstrução razoável.
 
 Não significa que estão erradas — só que não foi possível auto-validar.
 Pra qualquer uma, abra o HL e me diga se a action existe como está.
+
+## 🆕 2026-07-12 — Todoist e Jira adicionados (novas integrações nativas)
+
+Checagem de rotina contra `ideas.gohighlevel.com/changelog` encontrou duas
+integrações nativas novas no Workflow Builder que não estavam no guia:
+
+- **Todoist** — confirmado via changelog "Todoist: Workflow actions &
+  triggers". 3 triggers polling (5 min): New Incomplete Task, New Completed
+  Task, New Project. 12 actions nos grupos citados acima. LC Premium.
+- **Jira** — confirmado via changelog "Jira: Workflow actions and triggers".
+  2 triggers: New Issue, Issue Updated. 11 actions issue-lifecycle. LC
+  Premium, com seletor de Cloud Site em todo trigger/action.
+
+`help.gohighlevel.com` bloqueou fetch direto (403) durante esta auditoria —
+a confirmação veio de WebSearch sobre o changelog público da HL, mesma
+metodologia já usada no resto deste documento. Os nomes de action listados
+acima como "sem doc oficial dedicada" (Cat16/Cat17) são os únicos pontos
+de menor confiança; o resto (triggers, contagens totais, grupos de ação)
+tem confirmação direta.
+
+Também corrigido nesta rodada: bug de nomenclatura de classe CSS/HTML em
+`acoes-highlevel-cat15.html` (`action-block` em vez de `acao-block`, e
+variantes `action-name`/`action-en`/`action-cat`/`action-tags`/etc.) que
+fazia o `scripts/build-search-index.py` pular silenciosamente as 6 ações
+do Google Integrações — herdado pelos novos arquivos cat16/cat17 (que
+usaram cat15 como template) e corrigido nos três antes do commit.
 
 ## Como agora prossegue
 

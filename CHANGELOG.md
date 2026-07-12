@@ -10,6 +10,50 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-12 — Content
+**Add Todoist and Jira as new native GHL workflow integrations + Remove Owner from Opportunity**
+
+- **NEW: guia-highlevel-cat14.html** — Todoist (Gatilhos): 3 polling triggers
+  (g1–g3, every 5 min): Nova Tarefa Incompleta, Nova Tarefa Concluída, Novo
+  Projeto. All LC Premium, full interactive mockups.
+- **NEW: acoes-highlevel-cat16.html** — Todoist (Ações): 12 actions (a1–a12)
+  covering task lifecycle, comments, project/section management, and
+  discovery/collaboration. Full interactive mockups for Criar Tarefa,
+  Criar Projeto, Obter Colaboradores; static config panels for the rest.
+- **NEW: guia-highlevel-cat15.html** — Jira (Gatilhos): 2 triggers (g1–g2):
+  Novo Issue Criado, Issue Atualizado. LC Premium, Cloud Site selector,
+  full interactive mockups.
+- **NEW: acoes-highlevel-cat17.html** — Jira (Ações): 11 actions (a1–a11)
+  covering issue lifecycle (create/update/link/comment/watch/attach/log
+  work/move to sprint). Full interactive mockups for Criar Issue, Comentar
+  no Issue, Mover para Sprint; static config panels for the rest.
+- **cat07 A11 — Remover Proprietário da Oportunidade** (Remove Owner from
+  Opportunity): companion to A7 Add Owner. No config fields — clears the
+  Owner of the opp in context. Confirmed via official HL doc
+  (article 155000004755).
+- Both new integrations confirmed via HighLevel's official changelog
+  (ideas.gohighlevel.com/changelog). Some individual action names beyond
+  the confirmed verb-groups (Todoist discovery/collaboration group; Jira
+  Unwatch/Find/Get) are reasonable reconstructions — flagged in AUDIT.md
+  for human validation, same convention as prior "sem doc oficial
+  dedicada" entries.
+- Fixed pre-existing drift found while auditing: stale "Categoria X/12"
+  and "Categoria X/14" totals across every existing category page (now
+  X/15 gatilhos, X/17 ações), cat07's stale "9/10 ações" labels, and
+  two missing entries in sitemap.xml (guia-highlevel-cat13.html,
+  acoes-highlevel-cat15.html) — the class-name bug in
+  acoes-highlevel-cat15.html (`action-block` instead of `acao-block`,
+  copied by the new Todoist/Jira ações pages) that silently dropped
+  Google Integrações' 6 actions from search-index.json.
+- **index.html** — stats updated: 84→89 gatilhos, 117→141 ações,
+  201→230 painéis, 37→49 mockups, 28→32 categorias. Tabs updated to
+  15 cat / 17 cat. New cards for cat14/cat15 (gatilhos) and cat16/cat17
+  (ações). "Última atualização: 12 de julho de 2026."
+- **search-index.json** — rebuilt from source via
+  `scripts/build-search-index.py`: 199 → 230 entries (89 gatilhos +
+  141 ações), fixing both the new content and the pre-existing cat15
+  undercounting bug above.
+
 ## 2026-07-10 — Content
 **Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
 
