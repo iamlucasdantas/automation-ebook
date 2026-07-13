@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-10",
-  "total": 199,
+  "generated_at": null,
+  "total": 230,
   "items": [
     {
       "id": "g1",
@@ -425,6 +425,21 @@
       "description": "Dispara imediatamente após o HighLevel gerar o transcript (transcrição) de uma chamada. Funciona com Voice AI, IVR e chamadas normais via LC Phone.",
       "keywords": "transcript gerado transcript generated chamada ligação ia",
       "href": "guia-highlevel-cat02.html#g18"
+    },
+    {
+      "id": "g19",
+      "type": "Gatilho",
+      "name": "Agendador (Scheduler)",
+      "en": "Scheduler",
+      "category": "Programado",
+      "tags": [
+        "Contactless",
+        "Recorrente",
+        "Novo"
+      ],
+      "description": "Dispara o workflow num horário programado — de hora em hora, diário, semanal, mensal, numa data específica ou via expressão cron. É o único gatilho puramente de relógio do HighLevel: nenhum evento de contato precisa acontecer.",
+      "keywords": "agendador scheduler cron programado recorrente horário",
+      "href": "guia-highlevel-cat02.html#g19"
     },
     {
       "id": "g1",
@@ -1033,7 +1048,7 @@
       "id": "g4",
       "type": "Gatilho",
       "name": "Remoção de Acesso a Canal Privado",
-      "en": "Private Channel Access Removed",
+      "en": "Private Channel Access Revoked",
       "category": "Canais Privados",
       "tags": [
         "Tempo real",
@@ -1058,6 +1073,66 @@
       "href": "guia-highlevel-cat11.html#g5"
     },
     {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Registrado em Evento do Grupo",
+      "en": "Community Group Event Registration",
+      "category": "Eventos de Grupo",
+      "tags": [
+        "Tempo real",
+        "Eventos",
+        "Novo"
+      ],
+      "description": "Dispara quando um membro confirma presença em um evento do grupo da comunidade. Permite automação imediata no momento em que o interesse é confirmado.",
+      "keywords": "registrado em evento do grupo community group event registration",
+      "href": "guia-highlevel-cat11.html#g6"
+    },
+    {
+      "id": "g7",
+      "type": "Gatilho",
+      "name": "Solicitação de Entrada Rejeitada",
+      "en": "Community Group Join Request Rejected",
+      "category": "Eventos de Grupo",
+      "tags": [
+        "Tempo real",
+        "Moderação",
+        "Novo"
+      ],
+      "description": "Dispara quando um pedido de entrada em um grupo da comunidade é rejeitado. Permite comunicar o motivo, oferecer alternativas ou redirecionar o contato.",
+      "keywords": "solicitação de entrada rejeitada community group join request rejected",
+      "href": "guia-highlevel-cat11.html#g7"
+    },
+    {
+      "id": "g8",
+      "type": "Gatilho",
+      "name": "Nova Publicação no Grupo",
+      "en": "Community Group New Post",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Conteúdo",
+        "Novo"
+      ],
+      "description": "Dispara quando uma nova publicação é criada em um grupo da comunidade. Útil pra notificar membros, moderar conteúdo automaticamente ou registrar o engajamento.",
+      "keywords": "nova publicação no grupo community group new post",
+      "href": "guia-highlevel-cat11.html#g8"
+    },
+    {
+      "id": "g9",
+      "type": "Gatilho",
+      "name": "Novo Comentário no Grupo",
+      "en": "Community Group New Comment",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Conteúdo",
+        "Novo"
+      ],
+      "description": "Dispara quando um novo comentário é adicionado a uma publicação do grupo. Permite reagir a interações específicas dentro da comunidade.",
+      "keywords": "novo comentário no grupo community group new comment",
+      "href": "guia-highlevel-cat11.html#g9"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Certificado Enviado",
@@ -1070,6 +1145,126 @@
       "description": "Dispara quando um certificado é emitido e enviado a um aluno. Normalmente acionado após \"Produto Completado\" (cat 06), mas pode ser emitido manualmente.",
       "keywords": "certificado enviado certificate issued",
       "href": "guia-highlevel-cat12.html#g1"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Contato Google Criado",
+      "en": "Google Contact Created",
+      "category": "Contatos Google",
+      "tags": [
+        "Tempo real",
+        "LC Premium",
+        "Google Contacts"
+      ],
+      "description": "Dispara quando um novo contato é criado na sua conta do Google Contacts conectada ao HighLevel (via integração LC Premium). O contato pode ter sido criado manualmente no Google Contacts, sincronizado de outro app ou importado.",
+      "keywords": "contato google criado google contact created",
+      "href": "guia-highlevel-cat13.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Novo Grupo de Contatos Google",
+      "en": "New Google Contact Group",
+      "category": "Contatos Google",
+      "tags": [
+        "Tempo real",
+        "LC Premium",
+        "Google Contacts"
+      ],
+      "description": "Dispara quando um contato é adicionado a um grupo específico do Google Contacts (ex: \"Clientes VIP\", \"Fornecedores\", \"Leads Qualificados\"). Grupos do Google Contacts funcionam como listas de segmentação.",
+      "keywords": "novo grupo contatos google new google contact group",
+      "href": "guia-highlevel-cat13.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Resposta de Formulário Google",
+      "en": "Google Form Response",
+      "category": "Formulários Google",
+      "tags": [
+        "Tempo real",
+        "LC Premium",
+        "Google Forms"
+      ],
+      "description": "Dispara toda vez que alguém envia uma resposta em um Google Form conectado à subconta HighLevel. O gatilho captura os dados da resposta (nome, email, campos personalizados) e os injeta no workflow como variáveis.",
+      "keywords": "resposta formulário google google form response",
+      "href": "guia-highlevel-cat13.html#g3"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Nova Tarefa Incompleta",
+      "en": "New Incomplete Task",
+      "category": "Tarefas",
+      "tags": [
+        "Polling · a cada 5 min",
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Verifica periodicamente — a cada 5 minutos — o projeto Todoist conectado à sua subconta HighLevel em busca de tarefas que ainda não foram concluídas. Toda tarefa incompleta encontrada (recém-criada ou que continua em aberto desde a última checagem) dispara uma execução do workflow.",
+      "keywords": "nova tarefa incompleta new incomplete task",
+      "href": "guia-highlevel-cat14.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Nova Tarefa Concluída",
+      "en": "New Completed Task",
+      "category": "Tarefas",
+      "tags": [
+        "Polling · a cada 5 min",
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Verifica a cada 5 minutos o projeto Todoist conectado em busca de tarefas que foram marcadas como concluídas desde a última checagem. Cada tarefa concluída encontrada dispara uma execução do workflow, com os dados da tarefa (nome, projeto, data de conclusão) disponíveis como variáveis.",
+      "keywords": "nova tarefa concluída new completed task",
+      "href": "guia-highlevel-cat14.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Novo Projeto",
+      "en": "New Project",
+      "category": "Projetos",
+      "tags": [
+        "Polling · a cada 5 min",
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Verifica a cada 5 minutos a conta Todoist conectada em busca de projetos recém-criados. Diferente dos dois gatilhos anteriores, esse não é escopado a um único projeto — ele monitora a conta inteira, já que o objetivo é justamente detectar a criação de novos projetos.",
+      "keywords": "novo projeto new project",
+      "href": "guia-highlevel-cat14.html#g3"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Novo Issue Criado",
+      "en": "New Issue",
+      "category": "Issues",
+      "tags": [
+        "Tempo real",
+        "LC Premium",
+        "Jira"
+      ],
+      "description": "Dispara assim que um novo issue é criado em um projeto do Jira Cloud conectado à subconta HighLevel via OAuth. Vale pra qualquer tipo de issue — Bug, Task, Story, Epic — dependendo do que você filtrar no Cloud Site e no Projeto selecionados.",
+      "keywords": "novo issue criado new issue jira",
+      "href": "guia-highlevel-cat15.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Issue Atualizado",
+      "en": "Issue Updated",
+      "category": "Issues",
+      "tags": [
+        "Tempo real",
+        "LC Premium",
+        "Jira"
+      ],
+      "description": "Dispara quando um issue existente é atualizado no Jira Cloud conectado — mudança de status (ex: \"Em Andamento\" → \"Done\"), troca de responsável, alteração de prioridade ou qualquer outro campo monitorado.",
+      "keywords": "issue atualizado issue updated jira",
+      "href": "guia-highlevel-cat15.html#g2"
     },
     {
       "id": "a1",
@@ -1926,6 +2121,21 @@
       "href": "acoes-highlevel-cat05.html#a5"
     },
     {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Agente de IA",
+      "en": "AI Agent",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "agente de ia ai agent",
+      "href": "acoes-highlevel-cat05.html#a6"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Atualizar Status do Agendamento",
@@ -1941,23 +2151,27 @@
     {
       "id": "a2",
       "type": "Ação",
-      "name": "Reassign Appointment",
-      "en": "Reassign Appointment",
+      "name": "Marcar Agendamento",
+      "en": "Book Appointment",
       "category": "Ação",
-      "tags": [],
+      "tags": [
+        "Novo"
+      ],
       "description": "",
-      "keywords": "reassign appointment reassign appointment",
+      "keywords": "marcar agendamento book appointment",
       "href": "acoes-highlevel-cat06.html#a2"
     },
     {
       "id": "a3",
       "type": "Ação",
-      "name": "Cancelar Agendamento",
-      "en": "Cancel Appointment",
+      "name": "Criar Nota no Agendamento",
+      "en": "Create Appointment Note",
       "category": "Ação",
-      "tags": [],
+      "tags": [
+        "Novo"
+      ],
       "description": "",
-      "keywords": "cancelar agendamento cancel appointment",
+      "keywords": "criar nota no agendamento create appointment note",
       "href": "acoes-highlevel-cat06.html#a3"
     },
     {
@@ -2035,12 +2249,12 @@
     {
       "id": "a7",
       "type": "Ação",
-      "name": "Atribuir Dono da Opp",
-      "en": "Assign Opportunity Owner",
+      "name": "Adicionar Dono à Oportunidade",
+      "en": "Add Owner to Opportunity",
       "category": "Ação",
       "tags": [],
       "description": "",
-      "keywords": "atribuir dono da opp assign opportunity owner",
+      "keywords": "adicionar dono à oportunidade add owner to opportunity",
       "href": "acoes-highlevel-cat07.html#a7"
     },
     {
@@ -2064,6 +2278,28 @@
       "description": "",
       "keywords": "remover tag da opp remove opportunity tag",
       "href": "acoes-highlevel-cat07.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Adicionar Seguidores à Oportunidade",
+      "en": "Add Follower(s) to Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
+      "href": "acoes-highlevel-cat07.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Remover Proprietário da Oportunidade",
+      "en": "Remove Owner from Opportunity",
+      "category": "Ação",
+      "tags": [],
+      "description": "",
+      "keywords": "remover proprietário da oportunidade remove owner from opportunity",
+      "href": "acoes-highlevel-cat07.html#a11"
     },
     {
       "id": "a1",
@@ -2422,130 +2658,18 @@
       "href": "acoes-highlevel-cat14.html#a1"
     },
     {
-      "id": "g6",
-      "type": "Gatilho",
-      "name": "Registrado em Evento do Grupo",
-      "en": "Group Event Registered",
-      "category": "Engajamento",
-      "tags": [
-        "Tempo real",
-        "Eventos"
-      ],
-      "description": "Dispara quando um membro da comunidade se registra em um evento do grupo. Ideal para enviar confirmações e materiais de preparação.",
-      "keywords": "registrado evento grupo group event registered comunidade community",
-      "href": "guia-highlevel-cat11.html#g6"
-    },
-    {
-      "id": "g7",
-      "type": "Gatilho",
-      "name": "Solicitação de Entrada Rejeitada",
-      "en": "Membership Request Rejected",
-      "category": "Engajamento",
-      "tags": [
-        "Tempo real",
-        "Grupos"
-      ],
-      "description": "Dispara quando a solicitação de entrada de um usuário em um grupo da comunidade é rejeitada pelo administrador.",
-      "keywords": "solicitação rejeitada entrada grupo membership request rejected community",
-      "href": "guia-highlevel-cat11.html#g7"
-    },
-    {
-      "id": "g8",
-      "type": "Gatilho",
-      "name": "Nova Publicação no Grupo",
-      "en": "New Group Post",
-      "category": "Engajamento",
-      "tags": [
-        "Tempo real",
-        "Conteúdo"
-      ],
-      "description": "Dispara quando qualquer membro publica algo no grupo da comunidade. Permite moderar, notificar e engajar em cima do conteúdo gerado.",
-      "keywords": "nova publicação grupo post community new group post",
-      "href": "guia-highlevel-cat11.html#g8"
-    },
-    {
-      "id": "g9",
-      "type": "Gatilho",
-      "name": "Novo Comentário no Grupo",
-      "en": "New Group Comment",
-      "category": "Engajamento",
-      "tags": [
-        "Tempo real",
-        "Conteúdo"
-      ],
-      "description": "Dispara quando um membro comenta em uma publicação do grupo. Ótimo para reconhecer participação ativa e manter o engajamento.",
-      "keywords": "novo comentário grupo comment community new group comment",
-      "href": "guia-highlevel-cat11.html#g9"
-    },
-    {
-      "id": "g1",
-      "type": "Gatilho",
-      "name": "Contato Google Criado",
-      "en": "Google Contact Created",
-      "category": "Contatos Google",
-      "tags": [
-        "LC Premium",
-        "Google"
-      ],
-      "description": "Dispara quando um novo contato é criado no Google Contacts vinculado à conta. Sincroniza dados entre o GHL e o ecossistema Google automaticamente.",
-      "keywords": "contato google criado google contact created lc premium google integration",
-      "href": "guia-highlevel-cat13.html#g1"
-    },
-    {
-      "id": "g2",
-      "type": "Gatilho",
-      "name": "Novo Grupo de Contatos Google",
-      "en": "New Google Contact Group",
-      "category": "Contatos Google",
-      "tags": [
-        "LC Premium",
-        "Google"
-      ],
-      "description": "Dispara quando um novo grupo de contatos é criado no Google Contacts. Permite sincronizar segmentações do Google com workflows de automação.",
-      "keywords": "novo grupo contatos google new google contact group lc premium",
-      "href": "guia-highlevel-cat13.html#g2"
-    },
-    {
-      "id": "g3",
-      "type": "Gatilho",
-      "name": "Resposta em Formulário Google",
-      "en": "Google Form Response",
-      "category": "Formulários Google",
-      "tags": [
-        "LC Premium",
-        "Google",
-        "Formulários"
-      ],
-      "description": "Dispara quando alguém responde um Google Form conectado à conta. Captura respostas diretamente no workflow para criar leads, atualizar contatos e mais.",
-      "keywords": "resposta formulário google form response lc premium google forms",
-      "href": "guia-highlevel-cat13.html#g3"
-    },
-    {
-      "id": "a6",
-      "type": "Ação",
-      "name": "Agente de IA",
-      "en": "AI Agent",
-      "category": "Ação",
-      "tags": [
-        "IA",
-        "Avançado"
-      ],
-      "description": "Conecta o workflow a um AI Agent configurado na plataforma para executar conversas inteligentes, responder perguntas ou qualificar leads automaticamente.",
-      "keywords": "agente ia ai agent workflow ai inteligência artificial",
-      "href": "acoes-highlevel-cat05.html#a6"
-    },
-    {
       "id": "a1",
       "type": "Ação",
       "name": "Criar Contato Google",
       "en": "Create Google Contact",
-      "category": "Ação",
+      "category": "Contatos Google",
       "tags": [
         "LC Premium",
-        "Google"
+        "Google Contacts",
+        "Sync"
       ],
-      "description": "Cria um novo contato no Google Contacts a partir dos dados do contato no GHL. Mantém os dois sistemas sincronizados automaticamente.",
-      "keywords": "criar contato google create google contact lc premium google integration",
+      "description": "Cria um novo contato na conta Google Contacts conectada ao HighLevel, usando os dados do contato atual no CRM (nome, email, telefone, campos customizados). A criação é em tempo real, assim que a ação é executada no workflow.",
+      "keywords": "criar contato google create google contact",
       "href": "acoes-highlevel-cat15.html#a1"
     },
     {
@@ -2553,13 +2677,13 @@
       "type": "Ação",
       "name": "Atualizar Contato Google",
       "en": "Update Google Contact",
-      "category": "Ação",
+      "category": "Contatos Google",
       "tags": [
         "LC Premium",
-        "Google"
+        "Google Contacts"
       ],
-      "description": "Atualiza os dados de um contato existente no Google Contacts com informações do CRM. Garante que o Google sempre reflita o estado atual do contato.",
-      "keywords": "atualizar contato google update google contact lc premium",
+      "description": "Atualiza um contato existente no Google Contacts com novos dados. O contato é identificado pelo email. Campos não preenchidos na ação mantêm o valor que já estava no Google Contacts.",
+      "keywords": "atualizar contato google update google contact",
       "href": "acoes-highlevel-cat15.html#a2"
     },
     {
@@ -2567,13 +2691,14 @@
       "type": "Ação",
       "name": "Buscar Contato Google",
       "en": "Find Google Contact",
-      "category": "Ação",
+      "category": "Contatos Google",
       "tags": [
         "LC Premium",
-        "Google"
+        "Google Contacts",
+        "Lookup"
       ],
-      "description": "Pesquisa um contato no Google Contacts por e-mail ou telefone e retorna os dados para uso nos próximos passos do workflow.",
-      "keywords": "buscar contato google find google contact lc premium search",
+      "description": "Busca um contato no Google Contacts pelo email. Retorna os dados encontrados como variáveis disponíveis nas ações seguintes do workflow. Se não encontrar, o workflow pode ser configurado para seguir um caminho alternativo.",
+      "keywords": "buscar contato google find google contact",
       "href": "acoes-highlevel-cat15.html#a3"
     },
     {
@@ -2581,13 +2706,14 @@
       "type": "Ação",
       "name": "Buscar ou Criar Contato Google",
       "en": "Find or Create Google Contact",
-      "category": "Ação",
+      "category": "Contatos Google",
       "tags": [
         "LC Premium",
-        "Google"
+        "Google Contacts",
+        "Upsert"
       ],
-      "description": "Busca um contato no Google Contacts e, se não encontrar, cria um novo automaticamente. Evita duplicatas e mantém o Google atualizado sem lógica extra.",
-      "keywords": "buscar criar contato google find create google contact lc premium upsert",
+      "description": "Combina as ações \"Buscar\" e \"Criar\" em uma só. Primeiro busca o contato pelo email no Google Contacts — se existir, retorna os dados; se não existir, cria automaticamente. Também chamado de \"upsert\".",
+      "keywords": "buscar ou criar contato google find or create google contact",
       "href": "acoes-highlevel-cat15.html#a4"
     },
     {
@@ -2595,13 +2721,13 @@
       "type": "Ação",
       "name": "Criar Grupo Google",
       "en": "Create Google Contact Group",
-      "category": "Ação",
+      "category": "Grupos Google",
       "tags": [
         "LC Premium",
-        "Google"
+        "Google Contacts"
       ],
-      "description": "Cria um novo grupo de contatos no Google Contacts. Útil para segmentar clientes, leads ou qualquer categorização que precise existir no Google.",
-      "keywords": "criar grupo google create google contact group lc premium",
+      "description": "Cria um novo Grupo de Contatos no Google Contacts (ex: \"Clientes Premium\", \"Newsletter Julho 2026\"). Grupos funcionam como labels/listas de segmentação dentro do Google Contacts.",
+      "keywords": "criar grupo google create google contact group",
       "href": "acoes-highlevel-cat15.html#a5"
     },
     {
@@ -2609,14 +2735,354 @@
       "type": "Ação",
       "name": "Adicionar a Grupos Google",
       "en": "Add to Google Groups",
-      "category": "Ação",
+      "category": "Grupos Google",
       "tags": [
         "LC Premium",
-        "Google"
+        "Google Contacts",
+        "Segmentação"
       ],
-      "description": "Adiciona um contato do GHL a um ou mais grupos no Google Contacts. Permite manter segmentações do Google alinhadas com as listas e tags do CRM.",
-      "keywords": "adicionar grupos google add google groups lc premium segmentação",
+      "description": "Adiciona o contato atual do workflow a um ou mais Grupos do Google Contacts. O contato precisa existir no Google — por isso é sempre combinada com \"Find or Create Google Contact\" antes.",
+      "keywords": "adicionar grupos google add to google groups",
       "href": "acoes-highlevel-cat15.html#a6"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Tarefa",
+      "en": "Create Task",
+      "category": "Tarefas",
+      "tags": [
+        "LC Premium",
+        "Todoist",
+        "Criação"
+      ],
+      "description": "Cria uma nova tarefa em um projeto Todoist conectado à sua subconta HighLevel, usando dados do contato ou da oportunidade em contexto no workflow. Você define conteúdo (nome da tarefa), descrição, projeto de destino, data de vencimento, prioridade (P1 a P4) e labels.",
+      "keywords": "criar tarefa create task",
+      "href": "acoes-highlevel-cat16.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Atualizar Tarefa",
+      "en": "Update Task",
+      "category": "Tarefas",
+      "tags": [
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Atualiza campos de uma tarefa já existente no Todoist — conteúdo, descrição, data de vencimento, prioridade ou labels. A tarefa é identificada pelo Task ID, normalmente obtido de uma ação anterior no workflow (ex: \"Criar Tarefa\" ou \"Buscar Tarefa\").",
+      "keywords": "atualizar tarefa update task",
+      "href": "acoes-highlevel-cat16.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Concluir Tarefa",
+      "en": "Complete Task",
+      "category": "Tarefas",
+      "tags": [
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Marca uma tarefa existente como concluída no Todoist, sem precisar abrir o app. Usa o Task ID pra localizar a tarefa exata a ser fechada.",
+      "keywords": "concluir tarefa complete task",
+      "href": "acoes-highlevel-cat16.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Comentar na Tarefa",
+      "en": "Add Task Comment",
+      "category": "Tarefas",
+      "tags": [
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Adiciona um comentário a uma tarefa existente no Todoist — útil pra registrar contexto adicional sem precisar editar o conteúdo da tarefa em si.",
+      "keywords": "comentar na tarefa add task comment",
+      "href": "acoes-highlevel-cat16.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Comentar no Projeto",
+      "en": "Add Project Comment",
+      "category": "Projetos",
+      "tags": [
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Adiciona um comentário no nível do projeto (não em uma tarefa específica) — aparece na aba de comentários do projeto no Todoist, visível pra todos os colaboradores.",
+      "keywords": "comentar no projeto add project comment",
+      "href": "acoes-highlevel-cat16.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Criar Projeto",
+      "en": "Create Project",
+      "category": "Projetos",
+      "tags": [
+        "LC Premium",
+        "Todoist",
+        "Criação"
+      ],
+      "description": "Cria um novo projeto no Todoist automaticamente — por exemplo, um projeto dedicado por cliente novo. Você define o nome, a cor de identificação e, opcionalmente, um projeto pai (pra organizar como subprojeto de uma estrutura maior, como \"Clientes Ativos\").",
+      "keywords": "criar projeto create project",
+      "href": "acoes-highlevel-cat16.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Mover Tarefa para Seção",
+      "en": "Move Task to Section",
+      "category": "Tarefas · Organização",
+      "tags": [
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Move uma tarefa existente para uma seção específica dentro do mesmo projeto Todoist — útil pra projetos organizados em fases, tipo um kanban (ex: \"A Fazer\", \"Em Andamento\", \"Revisão\", \"Concluído\").",
+      "keywords": "mover tarefa para seção move task to section",
+      "href": "acoes-highlevel-cat16.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Buscar Tarefa",
+      "en": "Find Task",
+      "category": "Tarefas · Organização",
+      "tags": [
+        "LC Premium",
+        "Todoist",
+        "Lookup"
+      ],
+      "description": "Busca uma tarefa no Todoist com base em critérios de filtro (projeto, conteúdo, label, prazo). Retorna os dados encontrados — incluindo o Task ID — como variáveis pras ações seguintes do workflow.",
+      "keywords": "buscar tarefa find task",
+      "href": "acoes-highlevel-cat16.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Buscar Projeto",
+      "en": "Find Project",
+      "category": "Projetos · Busca",
+      "tags": [
+        "LC Premium",
+        "Todoist",
+        "Lookup"
+      ],
+      "description": "Busca um projeto no Todoist pelo nome (ou parte dele). Retorna o Project ID e os dados do projeto como variáveis, úteis pra encadear com outras ações Todoist que exigem um Project ID — como \"Criar Tarefa\" ou \"Comentar no Projeto\".",
+      "keywords": "buscar projeto find project",
+      "href": "acoes-highlevel-cat16.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Buscar Usuário",
+      "en": "Find User",
+      "category": "Usuários & Colaboradores",
+      "tags": [
+        "LC Premium",
+        "Todoist",
+        "Lookup"
+      ],
+      "description": "Busca um colaborador (usuário) do Todoist pelo email. Retorna o ID do usuário, útil pra atribuir tarefas ou confirmar acesso antes de convidar alguém novamente pra um projeto.",
+      "keywords": "buscar usuário find user",
+      "href": "acoes-highlevel-cat16.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Obter Colaboradores",
+      "en": "Get Collaborators",
+      "category": "Usuários & Colaboradores",
+      "tags": [
+        "LC Premium",
+        "Todoist",
+        "Lookup"
+      ],
+      "description": "Lista todos os colaboradores com acesso a um projeto Todoist específico. Retorna nomes, emails e IDs como uma lista de variáveis — útil pra rodar lógica condicional ou notificar todo mundo envolvido no projeto de uma vez.",
+      "keywords": "obter colaboradores get collaborators",
+      "href": "acoes-highlevel-cat16.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Convidar Usuário",
+      "en": "Invite User",
+      "category": "Usuários & Colaboradores",
+      "tags": [
+        "LC Premium",
+        "Todoist"
+      ],
+      "description": "Convida um novo colaborador pra um projeto Todoist específico, usando o email dele. O convidado recebe um email do Todoist pra aceitar o acesso ao projeto.",
+      "keywords": "convidar usuário invite user",
+      "href": "acoes-highlevel-cat16.html#a12"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Issue",
+      "en": "Create Issue",
+      "category": "Gerenciamento de Issues",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Create"
+      ],
+      "description": "Cria um novo issue em um projeto Jira do Cloud Site conectado — Bug, Task, Story ou Epic — preenchendo Summary, Description e Assignee com dados do workflow. É a ação mais usada da categoria, geralmente disparada a partir de um formulário, tag ou mudança de estágio na pipeline.",
+      "keywords": "criar issue create issue jira",
+      "href": "acoes-highlevel-cat17.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Atualizar Issue",
+      "en": "Update Issue",
+      "category": "Gerenciamento de Issues",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Update"
+      ],
+      "description": "Atualiza campos de um issue já existente — Status, Priority, Assignee, Summary ou Description — identificado pela chave do issue (ex: SUP-142). Campos não preenchidos na ação mantêm o valor atual no Jira.",
+      "keywords": "atualizar issue update issue jira",
+      "href": "acoes-highlevel-cat17.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Vincular Issues",
+      "en": "Link Issues",
+      "category": "Gerenciamento de Issues",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Link"
+      ],
+      "description": "Cria um vínculo entre dois issues no Jira — \"relates to\", \"blocks\", \"is blocked by\" ou \"duplicates\" — sem precisar abrir o Jira manualmente. Útil quando um workflow HighLevel identifica que dois chamados são relacionados (mesmo cliente, mesma causa raiz).",
+      "keywords": "vincular issues link issues jira",
+      "href": "acoes-highlevel-cat17.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Comentar no Issue",
+      "en": "Add Comment",
+      "category": "Gerenciamento de Issues",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Comment"
+      ],
+      "description": "Adiciona um comentário a um issue já existente no Jira — útil pra registrar automaticamente o histórico de interação do cliente direto no ticket, sem o time técnico precisar copiar e colar mensagens manualmente.",
+      "keywords": "comentar no issue add comment jira",
+      "href": "acoes-highlevel-cat17.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Observar Issue",
+      "en": "Watch Issue",
+      "category": "Observadores",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Watch"
+      ],
+      "description": "Adiciona um usuário como observador (watcher) de um issue no Jira. Watchers recebem notificações do Jira sobre qualquer mudança no issue — status, comentários, anexos — sem precisar estar atribuídos como responsáveis.",
+      "keywords": "observar issue watch issue jira",
+      "href": "acoes-highlevel-cat17.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Deixar de Observar Issue",
+      "en": "Unwatch Issue",
+      "category": "Observadores",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Unwatch"
+      ],
+      "description": "Remove um usuário da lista de observadores (watchers) de um issue — o inverso de \"Observar Issue\". Útil pra parar de notificar alguém depois que o motivo do acompanhamento deixou de existir (ex: issue foi resolvido, cliente trocou de Account Manager).",
+      "keywords": "deixar de observar issue unwatch issue jira",
+      "href": "acoes-highlevel-cat17.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Anexar Arquivo",
+      "en": "Attach File",
+      "category": "Execução & Anexos",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Attachment"
+      ],
+      "description": "Anexa um arquivo a um issue existente no Jira — print de erro enviado pelo cliente, PDF de contrato, gravação de chamada. O arquivo pode vir de uma URL pública ou de um upload feito em um formulário HighLevel.",
+      "keywords": "anexar arquivo attach file jira",
+      "href": "acoes-highlevel-cat17.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Registrar Trabalho",
+      "en": "Log Work",
+      "category": "Execução & Anexos",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Worklog"
+      ],
+      "description": "Lança um registro de tempo trabalhado (worklog) em um issue — útil pra times que faturam por hora ou que precisam reportar horas de suporte técnico gastas por chamado, sem depender do time abrir o Jira manualmente pra apontar.",
+      "keywords": "registrar trabalho log work jira worklog",
+      "href": "acoes-highlevel-cat17.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Mover para Sprint",
+      "en": "Move to Sprint",
+      "category": "Execução & Anexos",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Sprint"
+      ],
+      "description": "Move um issue pra um sprint específico de um board Jira (Scrum). Depois de escolher o Cloud Site e o Projeto, a ação lista os sprints ativos/futuros do board pra você selecionar o destino.",
+      "keywords": "mover para sprint move to sprint jira",
+      "href": "acoes-highlevel-cat17.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Buscar Issue",
+      "en": "Find Issue",
+      "category": "Consulta",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Lookup"
+      ],
+      "description": "Localiza um issue no Jira por chave direta (ex: SUP-142) ou por um critério de busca no estilo JQL (ex: \"project = DEV AND status = 'To Do'\"). O resultado fica disponível como variável pras ações seguintes do workflow — normalmente usada antes de \"Atualizar Issue\", \"Comentar no Issue\" ou \"Mover para Sprint\".",
+      "keywords": "buscar issue find issue jira jql",
+      "href": "acoes-highlevel-cat17.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Obter Issue",
+      "en": "Get Issue",
+      "category": "Consulta",
+      "tags": [
+        "LC Premium",
+        "Jira",
+        "Lookup"
+      ],
+      "description": "Busca os dados completos de um issue já identificado pela sua chave (ex: SUP-142) — Status, Assignee, Priority, Sprint atual, comentários recentes — e disponibiliza tudo como variáveis pro resto do workflow. Diferente de \"Buscar Issue\", que localiza pela query/JQL, aqui você já sabe exatamente qual issue quer.",
+      "keywords": "obter issue get issue jira",
+      "href": "acoes-highlevel-cat17.html#a11"
     }
   ]
 }

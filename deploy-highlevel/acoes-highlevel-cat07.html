@@ -2425,7 +2425,7 @@
       <span>Voltar ao índice</span>
     </a>
     <div class="top-nav-divider"></div>
-    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>07/14</strong> · <strong>Oportunidades</strong></div>
+    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>07/17</strong> · <strong>Oportunidades</strong></div>
   </div>
 </div>
 
@@ -2437,7 +2437,7 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Oportunidades · 9 ações</div>
+  <div class="side-section-label">Oportunidades · 11 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Criar Oportunidade</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Atualizar Oportunidade</a>
@@ -2465,9 +2465,9 @@
 
 <main>
 <div class="hero-area">
-  <span class="hero-tag">Parte 2 · Ações · Categoria 07/14</span>
+  <span class="hero-tag">Parte 2 · Ações · Categoria 07/17</span>
   <h1 class="hero-title">Ações de <em>Oportunidades</em>.</h1>
-  <p class="hero-desc">As 9 ações de Oportunidades gerenciam todo o pipeline de vendas — criar, atualizar, mover de estágio, marcar como ganho/perdido, atribuir vendedores.</p>
+  <p class="hero-desc">As 11 ações de Oportunidades gerenciam todo o pipeline de vendas — criar, atualizar, mover de estágio, marcar como ganho/perdido, atribuir vendedores.</p>
   <div class="hero-stats">
     <div class="hero-stat">
       <span class="hero-stat-num">9</span>
@@ -3842,6 +3842,143 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a11" data-name="remover proprietário da oportunidade remove owner from opportunity">
+  <div class="acao-head">
+    <div class="acao-num">11</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Remover Proprietário da Oportunidade</h2>
+      <div class="acao-en">Remove Owner from Opportunity</div>
+      <div class="acao-tags"></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Limpa o dono atual da oportunidade em contexto, deixando-a sem proprietário até que outra etapa reatribua. Depende de ter uma opp em contexto — veio do trigger ou de um Find Opportunity antes. Sem opp em contexto, a ação não faz nada.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Redistribuir leads em massa</div>
+  <div class="use-case-desc">Remove o dono de todas as opps de um vendedor antes de rodar round-robin de reatribuição.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Resetar após perda</div>
+  <div class="use-case-desc">Opp marcada como Lost → remove dono pra opp voltar "limpa" pro pool caso reabra depois.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Saída de vendedor do time</div>
+  <div class="use-case-desc">Remove o dono de todas as opps do vendedor que saiu, antes de reatribuir manualmente.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Nenhum campo de configuração além do Action Name — a action apenas limpa o Owner da opp em contexto. Não sincroniza automaticamente com o Assigned User do contato; pra isso, use uma action separada.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a11">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Oportunidades/ Reset de Dono · Opp Perdida</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a11">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a11-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Opportunity Status Changed</div>
+              <div class="ghl-node-title">Opportunity Status Changed</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Opp perdida → limpar dono</span></div><div class="ghl-node-param"><span class="pk">Moved To Status</span><span class="pv highlight dropdown">Lost</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a11-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">👤</div>
+            <div>
+              <div class="ghl-node-type">Action · Opportunity</div>
+              <div class="ghl-node-title">Remove Owner from Opportunity</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Remover dono (opp perdida)</span></div><div class="ghl-node-param"><span class="pk">Campos</span><span class="pv">Nenhum — apenas limpa o Owner atual</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A11 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Action sem campos — apenas <strong>Action Name</strong>. Limpa o Owner da opp em contexto (do trigger ou de um Find Opportunity anterior).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Remove Owner from Opportunity</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Action Name <span class="req">*</span></div>
+        <input class="hl-input" value="Remover dono (opp perdida)" readonly>
+      </div>
+      <div class="hl-section-head">Sem campos adicionais</div>
+      <div class="hl-field-help">Esta action não tem parâmetros — o Owner da opp em contexto é simplesmente limpo, ficando sem proprietário até nova atribuição.</div>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Precisa de opp em contexto — sem ela, a action não faz nada. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000004755-workflow-action-remove-owner-from-opportunity" target="_blank" rel="noopener">help.gohighlevel.com/...remove-owner-from-opportunity</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3860,7 +3997,7 @@
 
   <div class="footer-top">
     <h3>Categoria 07 completa.</h3>
-    <p>9 ações de Oportunidades explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>11 ações de Oportunidades explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3894,7 +4031,7 @@
   </div>
 
   <div class="footer-legal">
-    Guia oficial Magnetic Funnels · Parte 2 · Categoria 07 de 14 · Atualizado em 2026
+    Guia oficial Magnetic Funnels · Parte 2 · Categoria 07 de 17 · Atualizado em 2026
   </div>
 </div>
 
@@ -3986,7 +4123,9 @@
     'a9-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Opportunity Won', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Fechou — limpar tags de prospecção</div></div><div class="config-section"><div class="config-label">To Status *</div><div class="config-field highlight dropdown">Won</div></div>` },
     'a9-2': { kind: 'Action · Remove Opportunity Tag', title: 'Remove Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Limpar tags de fase anterior</div></div><div class="config-section"><div class="config-label">Opportunity *</div><div class="config-field highlight dropdown">Trigger Opportunity</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Em Negociação</span> <span class="opt-chip">Aguardando Proposta</span> <span class="opt-chip">Follow-up Pendente</span></div></div>` },
     'a10-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Opp moveu pra Closing', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Stakeholders pra opp grande em Closing</div></div><div class="config-section"><div class="config-label">In Pipeline *</div><div class="config-field dropdown">Vendas Enterprise</div></div><div class="config-section"><div class="config-label">Moved To Status *</div><div class="config-field highlight dropdown">Closing</div></div><div class="config-section"><div class="config-label">Opportunity Value</div><div class="config-field highlight">Greater than R$ 50.000</div></div>` },
-    'a10-2': { kind: 'Action · Add Follower(s) to Opportunity', title: 'Add Followers (gestão + analytics)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Notificar gerente e diretor</div></div><div class="config-section"><div class="config-label">Followers *</div><div class="config-field"><span class="opt-chip">Marina · Gerente Regional</span> <span class="opt-chip">Diego · Analytics</span> <span class="opt-chip">Renata · Diretora Produto</span></div></div><div class="config-section"><div class="config-label">Observação</div><div class="config-field">Sistema bloqueia duplicata — adicionar quem já segue é no-op</div></div>` }
+    'a10-2': { kind: 'Action · Add Follower(s) to Opportunity', title: 'Add Followers (gestão + analytics)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Notificar gerente e diretor</div></div><div class="config-section"><div class="config-label">Followers *</div><div class="config-field"><span class="opt-chip">Marina · Gerente Regional</span> <span class="opt-chip">Diego · Analytics</span> <span class="opt-chip">Renata · Diretora Produto</span></div></div><div class="config-section"><div class="config-label">Observação</div><div class="config-field">Sistema bloqueia duplicata — adicionar quem já segue é no-op</div></div>` },
+    'a11-1': { kind: 'Trigger · Opportunity Status Changed', title: 'Opp movida pra Lost', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Opp perdida → limpar dono</div></div><div class="config-section"><div class="config-label">Moved To Status *</div><div class="config-field highlight dropdown">Lost</div></div>` },
+    'a11-2': { kind: 'Action · Remove Owner from Opportunity', title: 'Remove Owner (opp perdida)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Remover dono (opp perdida)</div></div><div class="config-section"><div class="config-label">Campos</div><div class="config-field">Nenhum — action limpa o Owner atual da opp em contexto</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
