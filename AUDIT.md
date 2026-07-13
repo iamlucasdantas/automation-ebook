@@ -102,3 +102,84 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+## 🔎 2026-07-13 — Varredura por novos gatilhos/ações nativos (pendente de verificação)
+
+Rodada de pesquisa (4 agentes em paralelo, WebSearch apenas — **todo fetch
+direto às páginas retornou 403**, inclusive help.gohighlevel.com,
+ideas.gohighlevel.com e até web.archive.org como fallback. Os achados
+abaixo vêm de snippets indexados pelo Google, não do corpo real da
+página. Títulos de artigo são confiáveis; a descrição é paráfrase).
+
+Nenhum item abaixo foi adicionado ao guia ainda — build de mockup fiel à
+UI real exige confirmar campo-a-campo, e este projeto já levou correções
+por causa de action "inventada" (ver histórico do Cat06). Precisa de
+alguém abrir o HL real e confirmar antes de eu montar o painel.
+
+### Candidatos com confiança média/alta (prováveis novos nativos)
+
+- **Gatilho "Conversation AI Trigger"** — distinto das ações Conversation AI
+  Email/SMS que já temos. Dispara a partir de um evento configurado dentro
+  da Conversation AI.
+- **Gatilho "Custom Trigger"** — gatilho de evento customizado/genérico,
+  pra casos que não se encaixam nos triggers padrão.
+- **Gatilho "Company Created"** — help.gohighlevel.com/.../155000006609-workflow-trigger-company-created.
+  Parte da leva de "Company-based workflows".
+- **Gatilho "Company Changed"** (par do Company Created, confiança menor —
+  não achei artigo dedicado, só menção agregada).
+- **Gatilho "Object Changed" / Custom Object Updated** — help.gohighlevel.com
+  article 155000006701 (Custom Object and Company-based Workflow Actions
+  & Triggers). Confirma via 2 agentes independentes.
+- **Gatilho "Custom Object Created"** — confiança média, sem artigo com
+  título exato confirmado.
+- ⚠ **"Custom Object Deleted"** — 1 fonte mencionou, buscas de acompanhamento
+  não confirmaram. Provável alucinação de resumo de busca — **não usar**
+  sem confirmação humana.
+- **Ação "Text Formatter"** — Trim / Replace Text / Find / Length / Split.
+- **Ação "Custom Code"** (+ variante com IA) — execução de JavaScript
+  (`inputData.<key>` → retorna JSON).
+- **Ação "Drip"** — envio em lote com rate-limit configurável (tamanho de
+  lote + intervalo), distinto do "Wait" que já temos.
+- **Ação "Array Functions" (Premium)** — Find / Filter / Find by Index /
+  Line Items / Math sobre arrays.
+- **Ações de Objetos Customizados** (todas com artigo dedicado, confiança
+  alta segundo os agentes — mas nenhuma verificada por fetch direto):
+  - Create an Associated Record for Contact (155000004586)
+  - Update an Associated Record for Contact (155000004588)
+  - Clear Fields of Associated Record for Contact (155000004589)
+  - Find Object Record & Find Company (155000006483)
+  - Add Associated Records to Workflow (155000006486)
+  - Remove Associated Records from Workflow (155000006485)
+  - Não existe "Delete Custom Object Record" nativa — só limpar campos.
+- **Ação "Grant Community Group Leaderboard Points"** — distinta da nossa
+  já existente "Assign Leaderboard Level" (cat13 A?). Uma parece setar o
+  nível diretamente, a outra concede pontos que acumulam pro nível. Achado
+  via help.gohighlevel.com article 155000004080 (Gamification/Leaderboard
+  triggers and actions for Community groups).
+
+### Descartado — não é nativo ou não está em produção (NÃO adicionar)
+
+- **Jira, Todoist, HubSpot, Mistral AI, Asana, Monday.com, Basecamp** —
+  são apps do App Marketplace instalados via OAuth. Aparecem no painel
+  "All Actions" do builder "como se fossem nativos" depois de instalados,
+  mas não são — mesmo motivo pelo qual excluímos Slack (ver
+  scripts/auto-refine.py). Fora de escopo pra este guia.
+- **RCS Messaging in Workflows** — private beta, GA só previsto pro fim do
+  Q3 2026. Não documentar até virar GA.
+- **Advanced Builder** (canvas visual redesenhado) — mudança de UI do
+  builder, não é um trigger/action novo.
+- Upgrades da action "Workflow AI" existente (structured output, variável
+  em runtime, test-mode) — é evolução de uma action que já documentamos,
+  não uma nova.
+- 4 "novos" triggers de Comunidades relatados por um agente batem com os
+  que JÁ adicionamos em 2026-07-10 (cat11 G6-G9) — falso positivo, os
+  agentes não sabiam que já tínhamos coberto.
+
+### Próximo passo
+
+Alguém confirma no HL real (ou builder sandbox) os itens da primeira
+lista — nome exato do campo, categoria certa, se realmente é "nativo"
+(não precisa instalar nenhum app externo). Confirmado isso, dá pra criar
+categorias novas (provavelmente "Objetos Customizados/Empresas" nos
+gatilhos e ações, e um item novo em "Lógica/Workflow" pra Text
+Formatter/Custom Code/Drip/Array Functions) com mockup completo.

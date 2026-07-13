@@ -10,6 +10,34 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-13 — Audit
+**Fix stale homepage stats + research pass for new native triggers/actions**
+
+- **index.html** — hero stats, meta tags, tab labels and section labels
+  said 84 gatilhos / 117 ações / 201 painéis, but the per-category cards
+  (and search-index.json) summed to 83 / 116 / 199. Fixed the mismatch
+  everywhere it appeared. "Última atualização: 13 de julho de 2026."
+- **Research**: ran a 4-agent WebSearch sweep against help.gohighlevel.com,
+  ideas.gohighlevel.com and third-party HL guides (direct WebFetch was
+  403'd on every domain, including web.archive.org, so nothing was fetched
+  first-party — findings are snippet-derived and unverified). Turned up
+  several candidate native features not yet in the guide: Conversation AI
+  Trigger, Custom Trigger, Company Created/Changed, Custom Object
+  Created/Updated, Text Formatter, Custom Code, Drip, Array Functions
+  (Premium), and 6 custom-object-record actions (Create/Update/Clear
+  Associated Record, Find Object Record & Find Company, Add/Remove
+  Associated Records to Workflow), plus a possible separate "Grant
+  Community Group Leaderboard Points" action alongside our existing
+  "Assign Leaderboard Level."
+- Explicitly ruled OUT as non-native or not-GA: Jira/Todoist/HubSpot/
+  Mistral AI/Asana/Monday.com/Basecamp (App Marketplace integrations,
+  same reason Slack was excluded), RCS Messaging (private beta), and the
+  Advanced Builder canvas redesign (UI change, not a trigger/action).
+- Logged all of it in [AUDIT.md](./AUDIT.md#-2026-07-13--varredura-por-novos-gatilhosações-nativos-pendente-de-verificação)
+  for human verification before building full mockups — no new entries
+  were added to the guide this pass, so the 83/116/199 counts are
+  unchanged.
+
 ## 2026-07-10 — Content
 **Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
 
