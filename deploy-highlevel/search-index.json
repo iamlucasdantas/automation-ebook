@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 191,
+  "total": 204,
   "items": [
     {
       "id": "g1",
@@ -1101,6 +1101,66 @@
       "href": "guia-highlevel-cat11.html#g5"
     },
     {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Registrado em Evento do Grupo",
+      "en": "Community Group Event Registration",
+      "category": "Eventos de Grupo",
+      "tags": [
+        "Tempo real",
+        "Eventos",
+        "Novo"
+      ],
+      "description": "Dispara quando um membro confirma presença em um evento do grupo da comunidade. Permite automação imediata no momento em que o interesse é confirmado.",
+      "keywords": "registrado em evento do grupo community group event registration",
+      "href": "guia-highlevel-cat11.html#g6"
+    },
+    {
+      "id": "g7",
+      "type": "Gatilho",
+      "name": "Solicitação de Entrada Rejeitada",
+      "en": "Community Group Join Request Rejected",
+      "category": "Eventos de Grupo",
+      "tags": [
+        "Tempo real",
+        "Moderação",
+        "Novo"
+      ],
+      "description": "Dispara quando um pedido de entrada em um grupo da comunidade é rejeitado. Permite comunicar o motivo, oferecer alternativas ou redirecionar o contato.",
+      "keywords": "solicitação de entrada rejeitada community group join request rejected",
+      "href": "guia-highlevel-cat11.html#g7"
+    },
+    {
+      "id": "g8",
+      "type": "Gatilho",
+      "name": "Nova Publicação no Grupo",
+      "en": "Community Group New Post",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Conteúdo",
+        "Novo"
+      ],
+      "description": "Dispara quando uma nova publicação é criada em um grupo da comunidade. Útil pra notificar membros, moderar conteúdo automaticamente ou registrar o engajamento.",
+      "keywords": "nova publicação no grupo community group new post",
+      "href": "guia-highlevel-cat11.html#g8"
+    },
+    {
+      "id": "g9",
+      "type": "Gatilho",
+      "name": "Novo Comentário no Grupo",
+      "en": "Community Group New Comment",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Conteúdo",
+        "Novo"
+      ],
+      "description": "Dispara quando um novo comentário é adicionado a uma publicação do grupo. Permite reagir a interações específicas dentro da comunidade.",
+      "keywords": "novo comentário no grupo community group new comment",
+      "href": "guia-highlevel-cat11.html#g9"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Certificado Enviado",
@@ -1113,6 +1173,51 @@
       "description": "Dispara quando um certificado é emitido e enviado a um aluno. Normalmente acionado após \"Produto Completado\" (cat 06), mas pode ser emitido manualmente.",
       "keywords": "certificado enviado certificate issued",
       "href": "guia-highlevel-cat12.html#g1"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Contato Google Criado",
+      "en": "Google Contact Created",
+      "category": "Contatos Google",
+      "tags": [
+        "Tempo real",
+        "LC Premium",
+        "Google Contacts"
+      ],
+      "description": "Dispara quando um novo contato é criado na sua conta do Google Contacts conectada ao HighLevel (via integração LC Premium). O contato pode ter sido criado manualmente no Google Contacts, sincronizado de outro app ou importado.",
+      "keywords": "contato google criado google contact created",
+      "href": "guia-highlevel-cat13.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Novo Grupo de Contatos Google",
+      "en": "New Google Contact Group",
+      "category": "Contatos Google",
+      "tags": [
+        "Tempo real",
+        "LC Premium",
+        "Google Contacts"
+      ],
+      "description": "Dispara quando um contato é adicionado a um grupo específico do Google Contacts (ex: \"Clientes VIP\", \"Fornecedores\", \"Leads Qualificados\"). Grupos do Google Contacts funcionam como listas de segmentação.",
+      "keywords": "novo grupo contatos google new google contact group",
+      "href": "guia-highlevel-cat13.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Resposta de Formulário Google",
+      "en": "Google Form Response",
+      "category": "Formulários Google",
+      "tags": [
+        "Tempo real",
+        "LC Premium",
+        "Google Forms"
+      ],
+      "description": "Dispara toda vez que alguém envia uma resposta em um Google Form conectado à subconta HighLevel. O gatilho captura os dados da resposta (nome, email, campos personalizados) e os injeta no workflow como variáveis.",
+      "keywords": "resposta formulário google google form response",
+      "href": "guia-highlevel-cat13.html#g3"
     },
     {
       "id": "a1",
@@ -2508,6 +2613,94 @@
       "description": "",
       "keywords": "emitir certificado issue certificate",
       "href": "acoes-highlevel-cat14.html#a1"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Contato Google",
+      "en": "Create Google Contact",
+      "category": "Contatos Google",
+      "tags": [
+        "LC Premium",
+        "Google Contacts",
+        "Sync"
+      ],
+      "description": "Cria um novo contato na conta Google Contacts conectada ao HighLevel, usando os dados do contato atual no CRM (nome, email, telefone, campos customizados). A criação é em tempo real, assim que a ação é executada no workflow.",
+      "keywords": "criar contato google create google contact",
+      "href": "acoes-highlevel-cat15.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Atualizar Contato Google",
+      "en": "Update Google Contact",
+      "category": "Contatos Google",
+      "tags": [
+        "LC Premium",
+        "Google Contacts"
+      ],
+      "description": "Atualiza um contato existente no Google Contacts com novos dados. O contato é identificado pelo email. Campos não preenchidos na ação mantêm o valor que já estava no Google Contacts.",
+      "keywords": "atualizar contato google update google contact",
+      "href": "acoes-highlevel-cat15.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Buscar Contato Google",
+      "en": "Find Google Contact",
+      "category": "Contatos Google",
+      "tags": [
+        "LC Premium",
+        "Google Contacts",
+        "Lookup"
+      ],
+      "description": "Busca um contato no Google Contacts pelo email. Retorna os dados encontrados como variáveis disponíveis nas ações seguintes do workflow. Se não encontrar, o workflow pode ser configurado para seguir um caminho alternativo.",
+      "keywords": "buscar contato google find google contact",
+      "href": "acoes-highlevel-cat15.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Buscar ou Criar Contato Google",
+      "en": "Find or Create Google Contact",
+      "category": "Contatos Google",
+      "tags": [
+        "LC Premium",
+        "Google Contacts",
+        "Upsert"
+      ],
+      "description": "Combina as ações \"Buscar\" e \"Criar\" em uma só. Primeiro busca o contato pelo email no Google Contacts — se existir, retorna os dados; se não existir, cria automaticamente. Também chamado de \"upsert\".",
+      "keywords": "buscar ou criar contato google find or create google contact",
+      "href": "acoes-highlevel-cat15.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Criar Grupo Google",
+      "en": "Create Google Contact Group",
+      "category": "Grupos Google",
+      "tags": [
+        "LC Premium",
+        "Google Contacts"
+      ],
+      "description": "Cria um novo Grupo de Contatos no Google Contacts (ex: \"Clientes Premium\", \"Newsletter Julho 2026\"). Grupos funcionam como labels/listas de segmentação dentro do Google Contacts.",
+      "keywords": "criar grupo google create google contact group",
+      "href": "acoes-highlevel-cat15.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Adicionar a Grupos Google",
+      "en": "Add to Google Groups",
+      "category": "Grupos Google",
+      "tags": [
+        "LC Premium",
+        "Google Contacts",
+        "Segmentação"
+      ],
+      "description": "Adiciona o contato atual do workflow a um ou mais Grupos do Google Contacts. O contato precisa existir no Google — por isso é sempre combinada com \"Find or Create Google Contact\" antes.",
+      "keywords": "adicionar grupos google add to google groups",
+      "href": "acoes-highlevel-cat15.html#a6"
     }
   ]
 }

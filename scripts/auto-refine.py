@@ -58,6 +58,8 @@ HAND_CRAFTED = {
     os.path.join(ROOT, 'acoes-highlevel-cat12.html'),
     os.path.join(ROOT, 'acoes-highlevel-cat13.html'),
     os.path.join(ROOT, 'acoes-highlevel-cat14.html'),
+    os.path.join(ROOT, 'guia-highlevel-cat13.html'),
+    os.path.join(ROOT, 'acoes-highlevel-cat15.html'),
     # cat03 hand-rewritten (incl. the new Send Conversion to Meta+Google entry)
     # is implicit; both acoes-cat03 and acoes-cat04 were rewritten above.
 }
@@ -191,7 +193,7 @@ def regenerate_config_data(s):
         tl = re.search(r'<div class="ghl-node-title">([^<]+)</div>', chunk)
         body_m = re.search(
             r'<div class="ghl-node-body">(.*?)</div>\s*</div>\s*'
-            r'(?:<div class="ghl-connector"|<div class="config-panel"|</div>|<div class="ghl-node")',
+            r'(?:<div class="ghl-connector"|<div class="config-panel"|<div class="ghl-node")',
             chunk, re.DOTALL,
         )
         if not body_m:

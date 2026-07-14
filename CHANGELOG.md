@@ -10,6 +10,92 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-14 — Automation
+**Reconcile two diverged branches from 2026-07-10 + fix count drift + weekly native-item check**
+
+- Two sessions on 2026-07-10 branched from the same commit and each added
+  different native items without merging into each other: one branch (merged
+  as `main`) added **Inbound Email** (G20), **User Replied** (G21), **Custom
+  Code** (cat03 A5), and an **AI Agent** action (cat05 A6); a second branch
+  (merged into `claude/loving-faraday-UK9eK` via PR #3) added 4 **Communities**
+  triggers (cat11 g6–g9), a whole new **Google Integrações** category pair
+  (`guia-highlevel-cat13.html` + `acoes-highlevel-cat15.html`), and its own
+  independent **AI Agent** action (also cat05 A6).
+- Rebased the Google/Communities branch onto `main` to combine both. Where
+  both sides had independently authored the same **AI Agent** action, kept
+  main's version (it cites the official doc: [workflow-action-ai-agent](https://help.gohighlevel.com/support/solutions/articles/155000007600-workflow-action-ai-agent))
+  and dropped the duplicate rather than shipping two conflicting a6 blocks.
+- Found `acoes-highlevel-cat15.html` used an `action-*` class-naming
+  convention (`action-block`, `action-name`, …) instead of the `acao-*`
+  convention every other action page uses — `scripts/build-search-index.py`
+  only recognizes `acao-*`, so those 6 actions were silently missing from
+  search. Renamed the classes in that one file to match the convention
+  (its own internal CSS/JS updated together, so nothing broke).
+- Found a real bug in `scripts/auto-refine.py`'s `regenerate_config_data`:
+  its node-body regex could swallow a node's own closing `</div>` when
+  matching against the following sibling, truncating the *last* visible
+  parameter out of the click-panel — for a node with only one parameter,
+  this silently dropped the whole entry (empty click-panel). It only ever
+  bit `guia-highlevel-cat13.html` and `acoes-highlevel-cat15.html` in
+  practice, since every other page is already in the `HAND_CRAFTED`
+  skip-list and never runs through this regenerator. Fixed the regex
+  (verified safe across all 603 nodes in the site — every affected node's
+  old output was an exact prefix of the fixed output, i.e. purely
+  additive, never reordered/removed), restored the two files' lost
+  parameters, and added both new files to `HAND_CRAFTED` now that they're
+  hand-tuned to the same fidelity bar as the rest of the guide (matching
+  how every other category was promoted into that list once finished).
+- Re-ran the periodic check against `help.gohighlevel.com` /
+  `ideas.gohighlevel.com/changelog` for native triggers/actions released
+  since 2026-07-10. Everything surfaced by the search (Call Transcript
+  Generated, Community Leaderboard, Subscription/Refund, Google Forms
+  response trigger) was already documented in the guide from earlier
+  rounds. Two items reported by third-party recap blogs — "Payment Failed"
+  and "Form Partially Completed" as standalone triggers — do not exist per
+  official HighLevel docs (Payment Failed is a status filter on the
+  existing Payment/Subscription trigger; Form Partially Completed is still
+  an open feature request on the ideas board) and were **not** added.
+  Todoist/Jira/Basecamp/Apify/Fathom-style app integrations that also
+  surfaced in the search were excluded as non-native, per this guide's
+  existing rule (see the Slack exclusion in `scripts/auto-refine.py`).
+- Flags for a future session (not fixed now, out of scope for a count/drift
+  pass): open PR #4 on this repo adds Todoist and Jira as new category
+  pages — both are third-party marketplace integrations, not native HL
+  triggers/actions, so it shouldn't be merged as-is. Also, cat15's actions
+  (Google Integrações) are missing the dedicated "Painel de configuração —
+  fidelidade HighLevel" block that every other action has; they only have
+  the inline mockup click-panel.
+- Totals now: **86 gatilhos, 118 ações, 204 entries** (198 painéis HL, 197
+  mockups interativos) across 13 gatilho categories + 15 ação categories.
+  `search-index.json` regenerated (204 entries), `AUDIT-TABLE.md`
+  regenerated, all 28 pages pass `validate-mockups.js`, `index.html`
+  updated with the corrected counts and "Última atualização: 14 de julho
+  de 2026".
+
+## 2026-07-10 — Content
+**Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
+
+- **cat11 · Comunidades** — 4 new triggers added (g6–g9):
+  Registrado em Evento do Grupo, Solicitação de Entrada Rejeitada,
+  Nova Publicação no Grupo, Novo Comentário no Grupo.
+  Counter: 5 → 9 gatilhos. New sidebar section "Engajamento".
+- **NEW: guia-highlevel-cat13.html** — Google Integrações (Gatilhos):
+  3 new LC Premium triggers (g1–g3): Contato Google Criado,
+  Novo Grupo de Contatos Google, Resposta em Formulário Google.
+  Each with interactive mockup + static HL config panel.
+- **NEW: acoes-highlevel-cat15.html** — Google Integrações (Ações):
+  6 new LC Premium actions (a1–a6): Criar, Atualizar, Buscar,
+  Buscar ou Criar Contato Google, Criar Grupo Google,
+  Adicionar a Grupos Google. Interactive mockups for a4 and a6.
+- **cat12 · Certificados (Gatilhos)** — breadcrumb/nav updated: 12/12 → 12/13.
+  Next nav now points to new cat13.
+- **cat14 · Certificados (Ações)** — breadcrumb/nav updated: 14/14 → 14/15.
+  Next nav now points to new cat15.
+- This branch (merged via PR #3 into `claude/loving-faraday-UK9eK`) also
+  added its own AI Agent action (cat05 a6), authored independently of the
+  same-day `main` branch below. The two were reconciled on 2026-07-14 (see
+  entry above) — main's version of that action is the one that shipped.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

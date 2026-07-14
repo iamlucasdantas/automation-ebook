@@ -13,12 +13,13 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 
 | Lote | Status | Itens | Confirmados |
 |------|--------|------:|-----------:|
-| **Gatilhos cat01-cat12** | ✅ | 76 | 76 |
+| **Gatilhos cat01-cat12** | ✅ | 83 | 76 auditados nesta rodada + 7 novos (Inbound Email, User Replied, Comunidades g6-g9) pendentes de auditoria formal |
+| **Gatilhos cat13** (Google Integrações) | 🔍 | 3 | Pendente — LC Premium, não auditado formalmente |
 | **Ações cat01** (Contact) | ✅ | 16 | 16 |
 | **Ações cat02** (Comunicação) | ✅ | 25 | 22 (3 c/ flag) |
-| **Ações cat03** (Webhooks) | ✅ | 4 | 4 |
+| **Ações cat03** (Webhooks) | ✅ | 5 | 4 (Custom Code novo, pendente de auditoria) |
 | **Ações cat04** (Workflow logic) | ✅ | 17 | 17 |
-| **Ações cat05** (AI) | ✅ | 5 | 5 (2 renames recomendados) |
+| **Ações cat05** (AI) | ✅ | 6 | 5 (2 renames recomendados) + AI Agent novo, pendente |
 | **Ações cat06** (Appointments) | ✅ | 3 | 3 (A2/A3 fake removidas, substituídas por Book Appointment + Create Appointment Note) |
 | **Ações cat07** (Opportunities) | ✅ | 9 | 5 (2 renames + 2 sem doc) |
 | **Ações cat08** (Payments) | ✅ | 5 | 3 (2 sem doc dedicada) |
@@ -28,7 +29,8 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 | **Ações cat12** (IVR) | ✅ | 5 | 4 (A4 rename) |
 | **Ações cat13** (Communities) | ✅ | 6 | 4 (A5/A6 sem doc) |
 | **Ações cat14** (Certificados) | ✅ | 1 | 1 |
-| **Total** | **✅** | **185** | **170/185 (92%)** |
+| **Ações cat15** (Google Integrações) | 🔍 | 6 | Pendente — LC Premium; falta o painel de fidelidade HL dedicado (só tem o mockup inline) |
+| **Total** | ⚠ | **204** | **~180/204 auditados formalmente — itens novos de 2026-07-10 (Inbound Email, User Replied, Custom Code, AI Agent, Comunidades g6-g9, Google Integrações) ainda não passaram pela auditoria formal desta tabela** |
 
 ## ✅ Fixes aplicados nesta auditoria
 
@@ -145,6 +147,54 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 ### ⚠ Rename já sinalizado (não é novo, é nome desatualizado — mantido como está até confirmação)
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
+
+## 🆕 Rodada 2026-07-14 — Reconciliação de branches + checagem de novidades
+
+Este repositório teve duas sessões em 2026-07-10 que partiram do mesmo
+commit e nunca se mergearam entre si: uma virou `main` (Inbound Email,
+User Replied, Custom Code, AI Agent), a outra virou
+`claude/loving-faraday-UK9eK` via PR #3 (Comunidades g6-g9, Google
+Integrações cat13/cat15, um AI Agent independente). Rebasei a segunda
+sobre a primeira nesta rodada — ver `CHANGELOG.md` de 2026-07-14 pros
+detalhes de como cada conflito foi resolvido.
+
+### Checagem de novidades nativas desde 2026-07-10
+Rodei WebSearch contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` atrás de gatilhos/ações nativos lançados
+nos últimos 4 dias. Tudo que apareceu (Call Transcript Generated,
+Community Leaderboard, Subscription/Refund, Google Forms response) já
+estava no guia de rodadas anteriores — nada novo pra adicionar desta vez.
+Dois itens de blogs de recap de terceiros ("Payment Failed" e "Form
+Partially Completed" como triggers dedicados) **não existem** conforme a
+doc oficial — descartados como não confiáveis, mesmo critério já usado na
+rodada de 2026-07-05.
+
+### 🚩 Achados que precisam de atenção humana (não mexidos nesta rodada)
+- **PR #4 aberto neste repo** ("Add Todoist and Jira integrations") adiciona
+  categorias novas pra Todoist e Jira — ambas integrações de terceiros
+  (marketplace), não gatilhos/ações nativos do HighLevel. Contradiz a
+  regra já estabelecida no guia (mesma lógica da exclusão do Slack em
+  `scripts/auto-refine.py`). Recomendo fechar o PR ou reescrevê-lo excluindo
+  esse conteúdo antes de mergear.
+- **`acoes-highlevel-cat15.html`** (Google Integrações) não tem o bloco
+  "⚡ Painel de configuração — fidelidade HighLevel" que toda outra ação do
+  guia tem — só o mockup inline. É por isso que o hero-stat "Painéis
+  HighLevel" (198) é menor que o total de entries (204): 6 itens ainda
+  sem esse painel dedicado.
+- Os itens novos de 2026-07-10 (Inbound Email, User Replied, Custom Code,
+  AI Agent, Comunidades g6-g9, Google Integrações cat13/cat15) ainda não
+  passaram pela auditoria formal linha-a-linha desta tabela — só foram
+  confirmados via WebSearch no momento em que foram adicionados.
+- Achado (e corrigido) um bug real em `scripts/auto-refine.py`: o regex de
+  regeneração do `configData` cortava o último parâmetro visível de um nó
+  antes de extrair os campos, derrubando o item inteiro do painel quando só
+  havia 1 parâmetro. Só afetava `guia-highlevel-cat13.html` e
+  `acoes-highlevel-cat15.html` na prática (todas as outras páginas já
+  estavam na lista `HAND_CRAFTED`, protegidas dessa regeneração). Corrigido,
+  validado contra os 603 nós do site (mudança é estritamente aditiva em
+  todos os casos, nenhum reordenado/removido), e as duas páginas novas foram
+  promovidas pra `HAND_CRAFTED` — mesmo padrão usado quando qualquer outra
+  categoria terminou de ser lapidada à mão.
 
 ## Como agora prossegue
 
