@@ -91,6 +91,70 @@ outras ações, (b) features novas/experimentais, ou (c) docs sparse:
 Não significa que estão erradas — só que não foi possível auto-validar.
 Pra qualquer uma, abra o HL e me diga se a action existe como está.
 
+## 🆕 Auditoria de novidades — 2026-07-16
+
+Rodada automática (rotina agendada) comparando o guia contra o changelog oficial
+do HighLevel (`ideas.gohighlevel.com/changelog`) e `help.gohighlevel.com`, à
+procura de gatilhos/ações nativos lançados depois da última auditoria
+(2026-07-10). **Nenhuma edição de conteúdo foi aplicada nesta rodada** — o
+achado é grande demais (gap estrutural, não um delta pequeno) e a maioria dos
+detalhes de campo só está disponível como resumo de busca (fetch direto em
+`help.gohighlevel.com` e `ideas.gohighlevel.com` retorna 403 — proteção
+anti-bot —, então não foi possível puxar a lista de campos completa de cada
+action/trigger com confiança suficiente pra montar mockups com fidelidade).
+
+### Gap encontrado: 10 integrações nativas de workflow ausentes do guia
+
+Nenhuma delas existe hoje em `deploy-highlevel/` (nem como categoria de
+gatilho nem de ação). Todas são integrações nativas dentro do Workflow
+Builder (conectam via OAuth, aparecem no seletor de trigger/action — mesmo
+padrão do que já tratamos como "nativo" pras categorias Shopify e Google
+Integrações), então **se qualifica** pra entrar no guia sob a mesma régua já
+usada aqui.
+
+| Integração | Gatilhos (aprox.) | Ações (aprox.) | Fonte |
+|---|---:|---:|---|
+| **Todoist** | 3 (New incomplete task, New completed task, New project — polling 5min) | 12 (create/update/complete task, comments, project/section, find task/project/user, collaborators) | [changelog](https://ideas.gohighlevel.com/changelog/todoist-workflow-actions-triggers) |
+| **Jira** | 2 (issue created, issue updated) | 11 (create/update/link/comment/watch/attach/log work/move to sprint — com seletor de Cloud Site) | [changelog](https://ideas.gohighlevel.com/changelog/jira-workflow-actions-and-triggers) |
+| **Asana** | 7 (Task Created/Updated, Project Created, Comment on Task, New User, Task Moved to Section, New Attachment — +2 "coming soon": Tag Added, New Subtask) | 13 (create/update/find task, sections, comments/story, subtask, project, find all/by project) | [help doc](https://help.gohighlevel.com/support/solutions/articles/155000006489-asana-actions-and-triggers-in-workflows) |
+| **Apify** | actor/task run completo (contagem exata não confirmada) | run actor, scrape site, buscar dados estruturados (contagem exata não confirmada) | [help doc](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-highlevel-workflows) |
+| **Basecamp** | 2 (New To-do, New Message Posted — instant/webhook) | ~5-8 (Create/Update To-do, Create Project, Create Message, Create Document, Find *, Add Comment, Complete To-do — contagem a confirmar) | [help doc](https://help.gohighlevel.com/support/solutions/articles/155000006399-basecamp-actions-triggers-in-workflows) |
+| **Manus** (AI agent tasks) | task created / task stopped | create/update/continue/fetch/delete task (contagem exata não confirmada) | [help doc](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows) |
+| **QuickBooks Online** | invoice sent / paid / overdue (contagem exata não confirmada) | sync de contato, criação de invoice (contagem exata não confirmada) | mencionado em blogs/n8n; artigo dedicado do help center não localizado ainda |
+| **Calendly** | 5 (booking, cancelamento por invitee, cancelamento por host, no-show, routing-form submission) | 9 (criar reunião avulsa, booking do lado do invitee, find/cancel event, marcar no-show, create/find/update contact, user lookup) | [help doc](https://help.gohighlevel.com/support/solutions/articles/155000008110-calendly-workflow-actions-triggers) |
+| **HubSpot** | novo contato (real-time) | create/find contact, mapeamento de campos (contagem exata não confirmada) | [help doc](https://help.gohighlevel.com/support/solutions/articles/155000007955-hubspot-workflow-actions-trigger) |
+| **Cal.com** | não detalhado nesta rodada | não detalhado nesta rodada | [help doc](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers) |
+
+**Total estimado**: ~25-30 novos gatilhos + ~90-110 novas ações nativas — um
+aumento de praticamente 50% sobre o conteúdo atual do guia (84 gatilhos / 117
+ações hoje).
+
+### Por que não apliquei direto
+
+1. **Escala**: isso é ~10x o tamanho de qualquer sessão de conteúdo anterior
+   (a maior até agora foi Google Integrações em 10/07, com 3 gatilhos + 6
+   ações). Tentar fazer as 10 integrações numa rodada só, sem checkpoint
+   humano, é como escrever ~200 entradas de guia de uma vez.
+2. **Confiança nos campos**: sem conseguir puxar a página oficial completa
+   (403 em fetch direto), só tenho resumo de busca — o suficiente pra saber
+   *que* a integração e as ações existem, mas não o suficiente pra montar o
+   painel de configuração com a mesma fidelidade que o resto do guia promete
+   (nome exato de cada campo, tipo de campo, opções de dropdown).
+3. Segue a régua que a própria auditoria já usa: mudanças que afetam como o
+   usuário busca/usa a ação (aqui, criar categoria inteira nova) esperam
+   validação antes de aplicar em massa.
+
+### Como prossegue
+
+Recomendo tratar cada integração acima como uma sessão de conteúdo dedicada
+(igual foi feito pra Google Integrações), na ordem de confiança dos dados
+disponíveis: **Calendly → Asana → Todoist/Jira → Basecamp → HubSpot → Apify
+→ Manus → QuickBooks Online → Cal.com**. Pra cada uma: abrir o artigo oficial
+do help center dentro do HL (login necessário, fetch automatizado bloqueado),
+copiar a lista real de campos, e então criar as páginas
+`guia-highlevel-catNN.html` / `acoes-highlevel-catNN.html` seguindo o
+template do cat13/cat15.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

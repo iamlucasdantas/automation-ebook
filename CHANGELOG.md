@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-16 — Audit
+**Scheduled check found 10 new native HighLevel integrations missing from the guide**
+
+- Compared the guide against HighLevel's official changelog
+  (`ideas.gohighlevel.com/changelog`) and help center for triggers/actions
+  released since the 2026-07-10 audit.
+- Found **10 native workflow integrations with zero coverage** in the guide:
+  Todoist, Jira, Asana, Apify, Basecamp, Manus, QuickBooks Online, Calendly,
+  HubSpot, Cal.com — an estimated ~25-30 new triggers and ~90-110 new
+  actions (~50% growth over the current 84 gatilhos / 117 ações).
+- No content was added this run — see `AUDIT.md § Auditoria de novidades —
+  2026-07-16` for the full breakdown, source links, and why this needs
+  dedicated per-integration sessions (field-level docs are behind anti-bot
+  protection on both `help.gohighlevel.com` and `ideas.gohighlevel.com`, so
+  only search-summary-level detail is available — not enough to build
+  fidelity-matched mockups for ~130 items safely in one pass).
+- `index.html` stats **unchanged** (no guide content added yet — updating
+  the "última atualização" date without a real content change would
+  misrepresent the guide).
+- Full findings also saved to a Google Drive doc for reference.
+
 ## 2026-07-10 — Content
 **Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
 
