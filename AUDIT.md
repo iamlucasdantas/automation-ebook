@@ -102,3 +102,63 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+## 🔍 Checagem de novidades — 2026-07-17
+
+Rotina periódica de checagem contra o catálogo nativo do HighLevel
+Workflow Builder. `WebFetch` direto em `help.gohighlevel.com` e
+`ideas.gohighlevel.com` continua bloqueado (HTTP 403) neste ambiente —
+mesma limitação já registrada em rodadas anteriores. Achados vêm de
+`WebSearch` cruzado contra múltiplas queries independentes.
+
+**Nenhum item novo foi adicionado ao guia nesta rodada.** Motivo: os
+dois candidatos com fonte mais forte (abaixo) já tinham sido levantados
+por uma sessão anterior (ver Google Drive, relatório de 2026-07-11) mas
+nunca chegaram a ser mesclados na branch usada por esta sessão — e a
+prática mais recente deste projeto (ver achados de 2026-07-13 no
+histórico do Drive) foi propositalmente conservadora com candidatos que
+não têm confirmação por captura direta da UI, depois do episódio de
+ações inventadas no cat06. Mantive essa régua.
+
+### Candidatos com fonte oficial razoável (pendente confirmação humana na UI real)
+- **Gatilho "User Replied"** (cat02 Eventos) — dispara quando um
+  USUÁRIO HighLevel (não o contato) responde numa conversa. Contraparte
+  de "Customer Replied" (g4). Fonte:
+  https://ideas.gohighlevel.com/changelog/workflow-trigger-user-replied
+- **Ação "Find Opportunity"** (cat07 Oportunidades) — busca a
+  oportunidade mais antiga/recente vinculada ao contato. Fonte:
+  https://help.gohighlevel.com/support/solutions/articles/155000004751-workflow-action-find-opportunity
+- **Ação "Remove Owner from Opportunity"** (cat07 Oportunidades) —
+  limpa o Owner de uma oportunidade em contexto. Fonte:
+  https://help.gohighlevel.com/support/solutions/articles/155000004755-workflow-action-remove-owner-from-opportunity
+
+### Descartado (não é nativo ou não confirmado)
+- Jira, Todoist, HubSpot, Asana, Basecamp, Apify, Manus, Calendly,
+  Cal.com, QuickBooks Online — integrações via App Marketplace/OAuth,
+  não nativas do builder (mesmo critério já usado pra excluir Slack).
+- "Payment Failed" e "Form Partially Completed" como gatilhos dedicados —
+  não existem como nós nativos; só aparecem em blogs de terceiros. O
+  oficial trata falha de pagamento como filtro de status dentro do
+  trigger "Payment Received" já existente.
+- "Review Received" / "Reviews Received" — já coberto pelo gatilho
+  existente `g16` (Nova Avaliação Recebida) em cat02.
+
+### ⚠️ Achado operacional (mais importante que qualquer item de conteúdo hoje)
+
+O histórico de relatórios no Google Drive mostra rodadas quase diárias
+desde 2026-07-05 (05, 08, 09, 10, 11, 12, 13, 16/07) descrevendo
+pesquisa e, em vários casos, commits reais de novos gatilhos/ações. Mas
+tanto a branch padrão do repositório (`claude/loving-faraday-UK9eK`)
+quanto este `CHANGELOG.md`/`AUDIT.md` estão parados no commit de
+**2026-07-10** (`693a60a`). Ou seja: nenhuma dessas rodadas depois de
+10/07 foi mesclada — cada dia a rotina parte do mesmo ponto desatualizado,
+redescobre (ou não) as mesmas novidades, e o trabalho fica órfão numa
+branch `claude/friendly-meitner-*` nova. Um exemplo concreto do custo
+disso: a rodada de 12/07 chegou a adicionar Jira e Todoist como
+"nativos"; a rodada de 13/07, pesquisando do zero por não ter visto o
+commit anterior, corrigiu esse engano e os excluiu — mas como nada
+tinha sido mesclado, o guia publicado nunca chegou a ficar errado (sorte,
+não processo). Recomendação: decidir um fluxo pra essas branches diárias
+não ficarem órfãs (sempre abrir PR e mesclar, ou consolidar numa branch
+de trabalho fixa) antes de continuar rodando checagens automáticas todo
+dia — do jeito atual, o trabalho não se acumula.

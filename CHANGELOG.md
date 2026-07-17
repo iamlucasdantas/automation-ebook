@@ -10,6 +10,24 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-17 — Audit
+**Checagem periódica de novidades nativas — nada aplicado, achado operacional grave**
+
+- Rotina de checagem contra o catálogo nativo do HighLevel Workflow
+  Builder. Nenhum item novo confirmado o suficiente pra aplicar sem
+  revisão humana nesta rodada (ver [AUDIT.md](./AUDIT.md) §2026-07-17
+  pros 3 candidatos com fonte oficial e a lista de descartados).
+- **Achado principal:** a branch padrão do repositório e este
+  CHANGELOG estão parados no commit de 10/07 (`693a60a`) — nenhuma das
+  rodadas diárias registradas no Google Drive entre 07-11 e 07-16 foi
+  mesclada. Trabalho fica órfão em branches `claude/friendly-meitner-*`
+  que nunca chegam a lugar nenhum; uma rodada (12/07) chegou a
+  classificar Jira/Todoist como nativos por engano, corrigido só no dia
+  seguinte por pura coincidência de ter pesquisado de novo. `index.html`
+  não foi alterado — os contadores (84 gatilhos / 117 ações) e a data
+  "Última atualização" continuam refletindo o conteúdo real desta
+  branch, sem inflar números que não mudaram.
+
 ## 2026-07-10 — Content
 **Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
 
