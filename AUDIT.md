@@ -91,6 +91,62 @@ outras ações, (b) features novas/experimentais, ou (c) docs sparse:
 Não significa que estão erradas — só que não foi possível auto-validar.
 Pra qualquer uma, abra o HL e me diga se a action existe como está.
 
+## 🔍 Pendente — descobertas da varredura de 2026-07-18 (precisam de sessão dedicada)
+
+Rodada de checagem por WebSearch encontrou features novas que **não foram
+adicionadas** neste guia ainda — o escopo de construir mockup interativo +
+painel gold-standard pra cada uma é grande o suficiente pra merecer sessão
+própria, não um item a mais numa rodada de manutenção. Registrando aqui pra
+não perder o achado:
+
+1. **Company-Based Workflows (categoria inteira nova)** — o HighLevel lançou
+   um tipo de workflow "Company-based" (paralelo ao contact-based que o guia
+   cobre hoje), com seus próprios triggers (`Company Created` confirmado por
+   doc oficial) e ações que escrevem em campos de Company. É uma família nova
+   de conteúdo, não um item isolado — precisa de levantamento completo antes
+   de criar categoria 14 de gatilhos.
+   Doc: https://help.gohighlevel.com/support/solutions/articles/155000006609-workflow-trigger-company-created
+   Overview: https://help.gohighlevel.com/support/solutions/articles/155000006688-company-based-workflows-company-triggers-actions
+2. **Service Booking (Services v2)** — trigger dedicado à v2 do sistema de
+   agendamento de serviços, distinto do `Customer Booked Appointment` (cat03)
+   já coberto. Confirmar se convive com o antigo ou substitui, antes de
+   documentar.
+   Doc: https://help.gohighlevel.com/support/solutions/articles/155000006140-workflow-trigger-service-booking-services-v2-
+3. **Conversation AI Trigger** e **Custom Trigger** — apareceram como itens
+   na listagem oficial de triggers, mas sem confirmação detalhada do que
+   disparam exatamente. Precisa de doc-diving antes de escrever conteúdo.
+4. **"Documents & Contracts" como categoria de ação** (não só de gatilho) —
+   a doc oficial lista "Documents & Contracts" entre as categorias de
+   Workflow Actions. O guia só tem essa como gatilho (cat07 g5). Verificar
+   se existe uma ação nativa correspondente (ex.: enviar documento pra
+   assinatura via workflow) que falta no guia.
+5. **Possível rename**: "Pipeline State Changed" (nosso nome atual, cat04 g4)
+   pode ser "Pipeline Stage Changed" na doc oficial — não é uma feature nova,
+   é só uma discrepância de nome a confirmar contra a UI real antes de mexer.
+
+Itens que a mesma varredura mencionou mas com evidência fraca — não vale
+adicionar sem confirmação melhor: "Payment Failed" trigger (parece ser só
+uma feature request no ideas board, não algo já lançado), "Form/Survey
+Partially Submitted" trigger, e alegações de triggers nativos de
+Shopify v2/Calendly/WhatsApp direto/Todoist (fonte única, blog de baixa
+qualidade, sem doc oficial correspondente).
+
+Também vale notar: HighLevel expandiu bastante os módulos de marketplace
+(HubSpot, Jira, Basecamp, Vapi, etc.) que injetam triggers/ações no mesmo
+Workflow Builder — mas esses dependem de conectar um app de terceiros, então
+ficam **fora do escopo** deste guia (mesma lógica que já fez o guia trocar
+"Slack Message" por "Outbound Webhook (Slack)" — só documentamos o que é
+nativo do HighLevel puro, sem integração externa).
+
+## Adicionado nesta rodada (2026-07-18)
+
+- **Cat02 G20 — Email Recebido (Inbound)**: gatilho novo confirmado por doc
+  oficial (cold/warm/customer-reply, filtros de mailbox/remetente/assunto).
+  https://help.gohighlevel.com/support/solutions/articles/155000007650-workflow-trigger-inbound-email
+- **Cat07 G11 — Upload no Client Portal**: gatilho novo confirmado pelo
+  changelog oficial (Shared Documents do Client Portal).
+  https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

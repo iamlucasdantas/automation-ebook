@@ -2361,7 +2361,7 @@
       <span>Voltar ao índice</span>
     </a>
     <div class="top-nav-divider"></div>
-    <div class="top-nav-breadcrumb">Categoria <strong>07/12</strong> · <strong>Pagamentos</strong></div>
+    <div class="top-nav-breadcrumb">Categoria <strong>07/13</strong> · <strong>Pagamentos</strong></div>
   </div>
 </div>
 
@@ -2387,6 +2387,7 @@
 <nav class="side-nav">
 <a href="#g5" class="side-link"><span class="side-num">05</span>Documentos e Contratos</a>
 <a href="#g6" class="side-link"><span class="side-num">06</span>Assinatura (Subscription)</a>
+<a href="#g11" class="side-link"><span class="side-num">11</span>Upload no Client Portal</a>
 </nav>
 <div class="side-section-label">Devolução</div>
 <nav class="side-nav">
@@ -2412,12 +2413,12 @@
 <main>
 
 <div class="hero-area">
-  <span class="hero-tag">Parte 1 · Gatilhos · Categoria 07/12</span>
+  <span class="hero-tag">Parte 1 · Gatilhos · Categoria 07/13</span>
   <h1 class="hero-title">Tudo que envolve <em>dinheiro</em> merece automação.</h1>
   <p class="hero-desc">Da cobrança inicial até reembolsos, passando por assinaturas, cupons e contratos. A categoria Pagamentos tem 10 gatilhos que cobrem todo o ciclo financeiro — pra reduzir churn, acelerar recebimento e manter o fluxo de caixa saudável.</p>
-  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">10</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
+  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">11</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
 <div class="hero-stat"><span class="hero-stat-num">40+</span><span class="hero-stat-label">Filtros explicados</span></div>
-<div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-label">Mockups interativos</span></div>
+<div class="hero-stat"><span class="hero-stat-num">11</span><span class="hero-stat-label">Mockups interativos</span></div>
 </div>
 
   <div class="hero-cta">
@@ -4628,6 +4629,176 @@
     </div>
   </div>
 
+</div><div class="trigger-block" id="g11" data-name="upload client portal arquivo enviado documento cliente portal shared documents">
+  <div class="trigger-head">
+    <div class="trigger-num">11</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Contratos e Assinaturas</div>
+      <h2 class="trigger-name">Upload no Client Portal</h2>
+      <div class="trigger-en">Client Portal File Uploaded</div>
+      <div class="trigger-tags"><span class="info-tag">Tempo real</span><span class="info-tag">Reativo</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara sempre que um contato envia um arquivo pela área <strong>Shared Documents</strong> do Client Portal — o portal do cliente onde ele acompanha contratos, faturas e troca documentos com sua empresa.</p>
+      <p>É diferente do gatilho <strong>Documentos e Contratos</strong>, que cobre eventos de assinatura eletrônica (envio, visualização, assinatura de um documento). Esse aqui é sobre o cliente <strong>subindo um arquivo</strong> — RG, comprovante, contrato assinado à mão escaneado, qualquer anexo.</p>
+      <p>Suporta múltiplos tipos de arquivo. Assim que o upload termina, o gatilho dispara automaticamente — sem precisar de polling ou verificação manual.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Documento fiscal pro financeiro</div><div class="use-case-desc">Cliente sobe nota fiscal ou comprovante → cria tarefa pro time financeiro revisar e notifica o responsável.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Onboarding com checklist de documentos</div><div class="use-case-desc">Cliente sobe RG/comprovante de endereço → tag "documentos-completos" adicionada e o próximo passo do onboarding libera.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Contrato assinado manualmente</div><div class="use-case-desc">Cliente sobe o PDF do contrato assinado à mão → oportunidade avança de estágio automaticamente no pipeline.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Nome do Arquivo</div>
+    <div class="filter-en">File Name</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por padrão no nome do arquivo enviado (contém, começa com, termina com).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Roteia arquivos tipo "contrato_" pra um fluxo e "nota_fiscal_" pra outro.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Tipo de Arquivo</div>
+    <div class="filter-en">File Type</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">PDF, imagem (JPG/PNG), documento (DOC/DOCX) ou qualquer tipo suportado pelo Client Portal.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Separa upload de imagem (foto de documento) de PDF (contrato já digital).</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g11">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Contratos e Assinaturas/ 11 — Upload Client Portal → Tarefa Financeiro</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g11">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g11-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Client Portal File Uploaded</div>
+              <div class="ghl-node-title">Upload no Client Portal</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">File Name</span><span class="pv highlight">contém "nota_fiscal"</span></div><div class="ghl-node-param"><span class="pk">File Type</span><span class="pv">PDF</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g11-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">✓</div>
+            <div>
+              <div class="ghl-node-type">Action · Add Task</div>
+              <div class="ghl-node-title">Revisar documento fiscal</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Tarefa · revisar nota fiscal enviada</span></div><div class="ghl-node-param"><span class="pk">Assigned To</span><span class="pv">Time Financeiro</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g11-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Notificar financeiro</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Aviso · novo documento no Client Portal</span></div><div class="ghl-node-param"><span class="pk">Type</span><span class="pv">In-App + Email</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração · Ou reproduza a montagem passo a passo</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G11 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Diferente de <strong>Documentos e Contratos</strong> (e-signature) — esse gatilho é só sobre <strong>upload de arquivo</strong> pelo cliente. <span class='arrow'>→</span> <strong>+ Add Filters</strong> restringe por nome/tipo de arquivo.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Client Portal File Uploaded</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Client Portal File Uploaded" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">File Name</div>
+        <input class="hl-input" placeholder="ex: contém &quot;nota_fiscal&quot;">
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">File Type</div>
+        <div class="hl-dropdown has-value">PDF</div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara no upload via Client Portal → Shared Documents. Fonte: HighLevel Changelog — <a href="https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal" target="_blank" rel="noopener">workflow-trigger-for-file-uploads-via-client-portal</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat06.html" class="cat-nav-link prev">
@@ -4662,7 +4833,7 @@
     <a href="https://br.magneticfunnels.io" target="_blank" class="footer-link-card"><span class="footer-link-tag">Assinatura</span><span class="footer-link-title">Magnetic Funnels Premium</span><span class="footer-link-desc">Suporte dedicado e mentorias mensais.</span><span class="footer-link-arrow">Assinar →</span></a>
   </div>
 
-  <div class="footer-legal">Guia produzido pela Magnetic Funnels · Categoria 07 de 12 · Atualizado em 2026</div>
+  <div class="footer-legal">Guia produzido pela Magnetic Funnels · Categoria 07 de 13 · Atualizado em 2026</div>
 </div>
 
 </main>
@@ -4696,7 +4867,10 @@
     'g9-1': { kind: 'Trigger · Coupon Limit Reached', title: 'Coupon Limit Reached', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Limite cupom — desativar oferta</div></div><div class="config-section"><div class="config-label">Coupon Code *</div><div class="config-field highlight dropdown">BF2026</div></div>` },
     'g9-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar marketing de cupom esgotado</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Time Marketing</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">⚠ Cupom {{coupon.code}} atingiu o limite</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">Cupom esgotado. Considere criar outro ou subir o teto.</div></div>` },
     'g10-1': { kind: 'Trigger · Coupon Expired', title: 'Coupon Expired', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cupom expirado — pós-campanha</div></div><div class="config-section"><div class="config-label">Coupon Code *</div><div class="config-field highlight dropdown">BF2026</div></div>` },
-    'g10-2': { kind: 'Action · Send Email', title: 'Send Email (pós-campanha)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email última chance da campanha</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">campanhas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">⏰ Última chance Black Friday — extendemos 24h só pra você</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Última Chance Pós-Expiração</div></div>` }
+    'g10-2': { kind: 'Action · Send Email', title: 'Send Email (pós-campanha)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Email última chance da campanha</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">campanhas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">⏰ Última chance Black Friday — extendemos 24h só pra você</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Última Chance Pós-Expiração</div></div>` },
+    'g11-1': { kind: 'Trigger · Client Portal File Uploaded', title: 'Upload no Client Portal', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Client Portal File Uploaded</div></div><div class="config-section"><div class="config-label">File Name</div><div class="config-field">contém "nota_fiscal"</div></div><div class="config-section"><div class="config-label">File Type</div><div class="config-field dropdown">PDF</div></div>` },
+    'g11-2': { kind: 'Action · Add Task', title: 'Revisar documento fiscal', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tarefa · revisar nota fiscal enviada</div></div><div class="config-section"><div class="config-label">Assigned To</div><div class="config-field dropdown">Time Financeiro</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">+1 dia útil</div></div>` },
+    'g11-3': { kind: 'Action · Internal Notification', title: 'Notificar financeiro', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso · novo documento no Client Portal</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Financeiro</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

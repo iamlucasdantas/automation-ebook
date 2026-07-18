@@ -10,6 +10,65 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-18 — Content
+**Add 2 new native GHL triggers (Inbound Email, Client Portal Upload) + fix widespread count/SEO drift**
+
+- **cat02 · Comunicação — G20 Email Recebido (Inbound)**: new trigger, confirmed
+  against official doc (cold/warm/customer-reply email types, mailbox/sender/
+  subject/attachment filters, "new conversation only" advanced setting).
+  Counter: 19 → 20 gatilhos.
+  Ref: help.gohighlevel.com/.../workflow-trigger-inbound-email
+- **cat07 · Contratos e Assinaturas — G11 Upload no Client Portal**: new trigger,
+  confirmed against official changelog (fires on file upload via Client Portal
+  Shared Documents). Counter: 10 → 11 gatilhos.
+  Ref: ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal
+- **Bug fix — search index silently dropped 6 actions**: `acoes-highlevel-cat15.html`
+  (Google Integrações) was hand-built with English class names (`action-block`
+  etc.) instead of the `acao-block` convention every other action page uses,
+  so `build-search-index.py`'s regex never matched it. Fixed the indexer to
+  accept both class prefixes. Site search now actually finds all 6 Google
+  actions it was silently missing.
+- **Bug fix — auto-refine.py wasn't protecting the 2 newest hand-crafted pages**:
+  `guia-highlevel-cat13.html` and `acoes-highlevel-cat15.html` were missing
+  from `HAND_CRAFTED`, so a mechanical refine pass would gut their rich,
+  hand-written `configData` panels down to one-field skeletons. Added both
+  to the protected set (caught and reverted before commit — see git history
+  for the near-miss).
+- **Category-count drift across ~27 files**: breadcrumbs/footers on
+  guia-cat01–11 still said "X/12" and "de 12" (stale since cat13 was added
+  on 2026-07-10 — should've been "/13"); acoes-cat01–04/06–13 still said
+  "X/14" and "de 14" (stale since cat15 was added — should've been "/15").
+  All fixed to the real current totals (13 trigger categories, 15 action
+  categories).
+- **Stale per-page trigger/action/mockup counts**: several category pages'
+  own hero-stat blocks and prose sentences had drifted from their real
+  content (e.g. acoes-cat07 said "9 ações" in three places when Add Follower
+  to Opportunity had already bumped it to 10; acoes-cat03/cat05 similarly
+  off by one; guia-cat06 hero text said "10 gatilhos" for a 12-trigger page;
+  guia-cat08 said "1 Mockup interativo" on a page that has always had 3).
+  Recomputed every page's real trigger/action-block count and real
+  interactive-mockup (`ghl-mockup`) count and corrected all mismatches.
+- **SEO — acoes-cat01 through cat14 had identical, wrong meta tags**: every
+  one of those 14 pages shared the exact same `<title>`, meta description,
+  and keywords — copy-pasted from a *gatilhos* (triggers) template, saying
+  "Contatos" and "Parte 01/12" regardless of which actions category the page
+  actually covered. Gave each page a real, distinct title/description/
+  keywords matching its own category.
+- **index.html**: stats updated — 84→86 gatilhos, 117 ações (unchanged),
+  201→203 painéis. "Mockups interativos" corrected 37→196 (the real count of
+  pages with a full interactive canvas, not a stale figure left over from
+  before the 2026-07-10 batch). "Última atualização" → 18 de julho de 2026.
+  cat02/cat07 category cards updated to the new per-category counts.
+- **AUDIT.md**: logged 5 pending discoveries from this round's research that
+  need a dedicated session before being added — an entire new "Company-Based
+  Workflows" trigger/action family, a Service Booking (Services v2) trigger,
+  Conversation AI Trigger, Custom Trigger, and a possible Documents & Contracts
+  action. Explicitly out of scope: third-party marketplace-app triggers/actions
+  (HubSpot, Jira, Basecamp, Vapi) — this guide only documents native HighLevel,
+  same rule that already excludes Slack.
+
+Worklist grows to 86 triggers + 117 actions = 203 entries.
+
 ## 2026-07-10 — Content
 **Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
 

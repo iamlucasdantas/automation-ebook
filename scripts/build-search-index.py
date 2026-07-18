@@ -30,54 +30,68 @@ def first_paragraph(s):
     return strip_tags(unescape(m.group(1))) if m else ''
 
 
+# A couple of category pages (e.g. acoes-highlevel-cat15.html) were hand-built
+# with English class names (action-*) instead of the acao-* convention every
+# other action page uses. Accept both so the indexer doesn't silently drop them.
+PREFIX_ALIASES = {
+    'trigger': ['trigger'],
+    'acao': ['acao', 'action'],
+}
+
+
 def parse_blocks(path, kind):
     """kind is 'trigger' or 'acao' — picks the right class names."""
-    block_class = f'{kind}-block'
-    name_class = f'{kind}-name'
-    en_class = f'{kind}-en'
-    cat_class = f'{kind}-cat'
-    tags_class = f'{kind}-tags'
-
     with open(path) as f:
         html = f.read()
 
     fname = os.path.basename(path)
-    pattern = re.compile(
-        rf'<div class="{block_class}" id="([^"]+)" data-name="([^"]*)">(.*?)'
-        rf'(?=<div class="{block_class}"|<!-- ═|<!-- GATILHO|<!-- AÇÃO|<nav class="cat-nav"|<div class="guide-footer)',
-        re.DOTALL,
-    )
     out = []
-    for m in pattern.finditer(html):
-        anchor, data_name, body = m.group(1), m.group(2), m.group(3)
-        if not anchor[0] in ('g', 'a'):
-            continue
-        name_m = re.search(rf'<h2 class="{name_class}">([^<]+)</h2>', body)
-        en_m = re.search(rf'<div class="{en_class}">([^<]+)</div>', body)
-        cat_m = re.search(rf'<div class="{cat_class}">([^<]+)</div>', body)
-        tags_m = re.search(rf'<div class="{tags_class}">(.*?)</div>', body, re.DOTALL)
-        # Description = first paragraph of "O que esse gatilho/ação faz" block
-        desc_m = re.search(
-            r'<div class="tblock-label">[^<]*(?:O que esse|O que essa)[^<]*</div>\s*<div class="tblock-content">(.*?)</div>',
-            body, re.DOTALL,
+    seen_anchors = set()
+    for prefix in PREFIX_ALIASES[kind]:
+        block_class = f'{prefix}-block'
+        name_class = f'{prefix}-name'
+        en_class = f'{prefix}-en'
+        cat_class = f'{prefix}-cat'
+        tags_class = f'{prefix}-tags'
+
+        pattern = re.compile(
+            rf'<div class="{block_class}" id="([^"]+)" data-name="([^"]*)">(.*?)'
+            rf'(?=<div class="{block_class}"|<!-- ═|<!-- GATILHO|<!-- AÇÃO|<nav class="cat-nav"|<div class="guide-footer)',
+            re.DOTALL,
         )
+        for m in pattern.finditer(html):
+            if m.group(1) in seen_anchors:
+                continue
+            seen_anchors.add(m.group(1))
+            anchor, data_name, body = m.group(1), m.group(2), m.group(3)
+            if not anchor[0] in ('g', 'a'):
+                continue
+            name_m = re.search(rf'<h2 class="{name_class}">([^<]+)</h2>', body)
+            en_m = re.search(rf'<div class="{en_class}">([^<]+)</div>', body)
+            cat_m = re.search(rf'<div class="{cat_class}">([^<]+)</div>', body)
+            tags_m = re.search(rf'<div class="{tags_class}">(.*?)</div>', body, re.DOTALL)
+            # Description = first paragraph of "O que esse gatilho/ação faz" block
+            desc_m = re.search(
+                r'<div class="tblock-label">[^<]*(?:O que esse|O que essa)[^<]*</div>\s*<div class="tblock-content">(.*?)</div>',
+                body, re.DOTALL,
+            )
 
-        tags = []
-        if tags_m:
-            for t in re.finditer(r'<span class="info-tag[^"]*">([^<]+)</span>', tags_m.group(1)):
-                tags.append(strip_tags(t.group(1)))
+            tags = []
+            if tags_m:
+                for t in re.finditer(r'<span class="info-tag[^"]*">([^<]+)</span>', tags_m.group(1)):
+                    tags.append(strip_tags(t.group(1)))
 
-        out.append({
-            'id': anchor,
-            'type': CATEGORY_LABEL['guia' if kind == 'trigger' else 'acoes'],
-            'name': strip_tags(name_m.group(1)) if name_m else anchor,
-            'en': strip_tags(en_m.group(1)) if en_m else '',
-            'category': strip_tags(cat_m.group(1)) if cat_m else '',
-            'tags': tags,
-            'description': first_paragraph(desc_m.group(1)) if desc_m else '',
-            'keywords': data_name,
-            'href': f'{fname}#{anchor}',
-        })
+            out.append({
+                'id': anchor,
+                'type': CATEGORY_LABEL['guia' if kind == 'trigger' else 'acoes'],
+                'name': strip_tags(name_m.group(1)) if name_m else anchor,
+                'en': strip_tags(en_m.group(1)) if en_m else '',
+                'category': strip_tags(cat_m.group(1)) if cat_m else '',
+                'tags': tags,
+                'description': first_paragraph(desc_m.group(1)) if desc_m else '',
+                'keywords': data_name,
+                'href': f'{fname}#{anchor}',
+            })
     return out
 
 
