@@ -10,6 +10,40 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-19 — Hotfix + Audit
+**Native trigger/action check: nothing new shipped since 2026-07-10; fixed a search-index bug in cat15**
+
+- **Researched** whether HighLevel shipped any new native workflow triggers/actions
+  between 2026-07-10 and 2026-07-19. Found no credible evidence of anything new
+  in that window (official changelog/help domains are proxy-blocked in this
+  environment, so this leaned on WebSearch snippets — worth a manual recheck
+  with normal browser access).
+- **Fixed acoes-highlevel-cat15.html (Google Integrações · Ações)** — its 6 action
+  blocks used `action-*` CSS/JS classes instead of the site-wide `acao-*`
+  convention, which silently excluded all 6 from `search-index.json`. Renamed
+  the structural classes (`block`, `name`, `en`, `cat`, `tags`, `head`, `num`,
+  `titles`) to `acao-*`; the unrelated `ghl-node-icon action-*` icon-type
+  classes were left untouched. `search-index.json` now correctly reports
+  84 gatilhos + 117 ações = 201 entries, matching what index.html already
+  claimed but the live search couldn't actually find.
+- **Added `acoes-highlevel-cat15.html` and `guia-highlevel-cat13.html`
+  (both Google Integrações, hand-rewritten to gold-standard fidelity) to
+  `HAND_CRAFTED` in `scripts/auto-refine.py`** — the mechanical `configData`
+  regeneration pass was collapsing their multi-step mockup detail panels
+  (e.g. dropping g1-3/g2-3/g3-x sub-steps, shrinking the rest) down to
+  bare single-field panels. Now skipped like every other hand-authored
+  category.
+- **index.html** — "Última atualização" bumped to July 19, 2026. Stat counts
+  unchanged (84 gatilhos / 117 ações / 201 painéis / 37 mockups) — they were
+  already correct, only the search index was out of sync.
+- **Known gaps flagged for a future backfill pass** (not added this run —
+  need first-party doc access to verify field lists at the fidelity bar
+  this guide holds): HighLevel has native workflow triggers/actions for
+  **Monday.com**, **Basecamp**, **Cal.com**, **Calendly**, **Company-Based
+  Workflows**, and a **Client Portal File Uploaded** trigger that aren't
+  in this guide at all. These predate 2026-07-10 (so out of scope for
+  "what's new"), but they're real coverage gaps worth a dedicated pass.
+
 ## 2026-07-10 — Content
 **Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
 

@@ -102,3 +102,36 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+## 🆕 Integrações nativas ainda ausentes do guia (achado em 2026-07-19)
+
+Checagem periódica por triggers/actions novos não achou nada lançado
+entre 2026-07-10 e 2026-07-19, mas o WebSearch encontrou várias
+integrações nativas de workflow que já existem no help center da
+HighLevel e simplesmente nunca entraram neste guia (gaps antigos, não
+lançamentos recentes). Ainda não confirmados com acesso de primeira
+mão aos docs (help.gohighlevel.com e ideas.gohighlevel.com estavam
+bloqueados pelo proxy desta sessão) — só via snippets de busca:
+
+- **Monday.com** — triggers (Any Column Value Changed, Any Item Moved to
+  Group, New Board, New Item in Board) + actions (Create/Update Board,
+  Group, Column, Item, Subitem, Archive, Delete, Get/Find Items)
+- **Basecamp** — triggers (New To-do, New Message Posted) + actions
+  (Create Project, Create/Update To-do, Create Message, Create Document)
+- **Cal.com** — triggers (Booking Created/Rescheduled/Cancelled, Meeting
+  Ended, Out of Office) + actions (Create/Cancel/Reschedule/Find Booking)
+- **Calendly** — doc existe (`155000008110-calendly-workflow-actions-triggers`),
+  lista de triggers/actions ainda não levantada
+- **Company-Based Workflows** — novo tipo de objeto (não é 3rd-party):
+  triggers Company Created / Company Changed, actions Update/Create
+  Company ou Associated Contact, Find Company, Find Object Record
+- **Client Portal File Uploaded** — trigger nativo pelo upload de
+  documento via Client Portal
+- **Jira** e **Todoist** — entradas de changelog existem mas datas não
+  confirmadas
+
+Antes de escrever conteúdo pra essas: confirmar cada uma com acesso real
+ao help center (não só busca), levantar o field-list completo de cada
+trigger/action, e decidir a categoria/numeração (provavelmente novas
+categorias cat16+ pros gatilhos e ações, já que nenhuma se encaixa nas
+existentes).
