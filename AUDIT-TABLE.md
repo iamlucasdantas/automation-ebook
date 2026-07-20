@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 46 | 0 | **77** |
-| Ações | 33 | 74 | 3 | **110** |
+| Ações | 34 | 74 | 3 | **111** |
 
 
 ## Gatilhos · 12 categorias
@@ -229,6 +229,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Summarize Conversation](acoes-highlevel-cat05.html#a3) | Summarize Conversation | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Extract Info](acoes-highlevel-cat05.html#a4) | AI Extract Info | 2 | 1/6 | 🟡 | [ ] | |
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Classify | 2 | 2/6 | 🟡 | [ ] | |
+| a6 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a6) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

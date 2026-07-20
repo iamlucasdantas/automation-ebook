@@ -2445,6 +2445,7 @@
     <a href="#a4" class="side-link"><span class="side-num">04</span>Extract Info</a>
     <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
     <a href="#a6" class="side-link"><span class="side-num">06</span>AI Agent (Agente de IA)</a>
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Atualizar Bot de IA e Status</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2463,7 +2464,7 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 05/15</span>
   <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 6 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação e agentes autônomos com ferramentas nativas.</p>
+  <p class="hero-desc">As 7 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação e agentes autônomos com ferramentas nativas.</p>
   <div class="hero-stats">
     <div class="hero-stat">
       <span class="hero-stat-num">6</span>
@@ -3375,6 +3376,158 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a7" data-name="atualizar bot de ia e status update conversation ai bot and status agente">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Atualizar Bot de IA e Status</h2>
+      <div class="acao-en">Update Conversation AI Bot and Status</div>
+      <div class="acao-tags"><span class="info-tag">Conversation AI</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Atribui um bot de Conversation AI específico ao contato e liga/desliga o status dele (Active/Inactive) — por contato, não global. É a peça-chave do handoff humano: atendente assumiu a conversa? Desliga o bot pra ele não atropelar.</p>
+      <p>Com o <strong>Sleep Timer</strong>, o bot desligado reativa sozinho depois da duração definida — o atendente resolve, e o bot volta a cobrir madrugada e fim de semana sem ninguém precisar lembrar de religar.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Handoff pra humano</div>
+  <div class="use-case-desc">Cliente pediu "falar com atendente" → bot Inactive + sleep timer 4h.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Trocar de bot por etapa</div>
+  <div class="use-case-desc">Lead virou cliente → sai do bot de vendas, entra o bot de suporte/onboarding.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Ativar bot só pra quem optou</div>
+  <div class="use-case-desc">Tag "Atendimento IA" adicionada → bot Active só pra esse segmento.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Conversation AI Bot (dropdown com os bots da conta), Bot Status (Active/Inactive) e Sleep Timer — duração pro bot reativar automático depois de desligado.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a7">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/IA/ Handoff · Cliente Pediu Humano</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a7">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Customer Replied</div>
+              <div class="ghl-node-title">Pediu atendente humano</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Reply Channel</span><span class="pv">WhatsApp</span></div><div class="ghl-node-param"><span class="pk">Contains Phrase</span><span class="pv highlight">falar com atendente</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-ai">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Conversation AI</div>
+              <div class="ghl-node-title">Update AI Bot &amp; Status</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Bot</span><span class="pv">Bot Vendas — Magnetic</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Inactive</span></div><div class="ghl-node-param"><span class="pk">Sleep Timer</span><span class="pv">4 horas</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a7-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Chamar atendente</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Type</span><span class="pv">In-App + Push</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{contact.name}} pediu humano — bot dormindo 4h</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A7 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Status é <strong>por contato</strong> — não desliga o bot da conta inteira. <span class='arrow'>→</span> <strong>Sleep Timer</strong> aparece quando Status = Inactive: o bot reativa sozinho após a duração.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Update Conversation AI Bot and Status</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Desligar bot — handoff humano" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Conversation AI Bot <span class="req">*</span></div><div class="hl-dropdown has-value">Bot Vendas — Magnetic</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Lista os bots de Conversation AI configurados na conta</div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Bot Status <span class="req">*</span></div><div class="hl-dropdown has-value">Inactive</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Active</span><span class="opt-chip">Inactive</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Sleep Timer</div><div class="hl-dropdown has-value">4 horas</div>
+<div class="hl-conditional"><div class="hl-conditional-note">⚡ Condicional — aparece quando Status = Inactive. Bot reativa automático após a duração.</div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Controle por contato do bot de Conversation AI. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000003821-workflow-action-update-conversation-ai-bot-and-status" target="_blank" rel="noopener">help.gohighlevel.com/...update-conversation-ai-bot-and-status</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3518,7 +3671,10 @@
     'a5-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Classificar intenção da resposta</div></div><div class="config-section"><div class="config-label">Input Text *</div><div class="config-field highlight">{{trigger.reply_body}}</div></div><div class="config-section"><div class="config-label">Classes *</div><div class="config-field"><span class="opt-chip">Vendas</span> <span class="opt-chip">Suporte</span> <span class="opt-chip">Cobrança</span> <span class="opt-chip">Cancelamento</span></div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Classifique esta mensagem em UMA das classes. Retorne apenas o nome da classe.</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.categoria</div></div><div class="config-section"><div class="config-label">Confidence Threshold</div><div class="config-field">0.7 — abaixo disso vai pra triagem humana</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o-mini</div></div>` },
     'a5-3': { kind: 'Action · Assign to User', title: 'Assign to Team (por classe)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Rotear pra time certo</div></div><div class="config-section"><div class="config-label">Assignment Logic</div><div class="config-field highlight">Vendas → SDR · Suporte → CS · Cobrança → Financeiro · Cancelamento → Retention</div></div><div class="config-section"><div class="config-label">Users *</div><div class="config-field"><span class="opt-chip">Time Vendas</span> <span class="opt-chip">Time CS</span> <span class="opt-chip">Time Financeiro</span> <span class="opt-chip">Time Retention</span></div></div><div class="config-section"><div class="config-label">Split Traffic</div><div class="config-field dropdown">Round-robin dentro do time</div></div>` },
     'a6-1': { kind: 'Trigger · Form Submitted', title: 'Form · Formulário de Qualificação', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Formulário de Qualificação de Lead</div></div><div class="config-section"><div class="config-label">Form *</div><div class="config-field dropdown">Formulário de Qualificação</div></div>` },
-    'a6-2': { kind: 'Action · Workflow AI', title: 'AI Agent (Qualificação)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Agente de Qualificação de Leads</div></div><div class="config-section"><div class="config-label">Instructions *</div><div class="config-field highlight">Você é um agente de qualificação. Analise os dados de {{contact.first_name}}. Se orçamento acima de R$5.000, crie oportunidade "Quente". Envie SMS de boas-vindas. Adicione tag "Lead Qualificado".</div></div><div class="config-section"><div class="config-label">Tools</div><div class="config-field"><span class="opt-chip">Create Opportunity</span> <span class="opt-chip">Send SMS</span> <span class="opt-chip">Add Contact Tag</span> <span class="opt-chip">Update Contact</span></div></div><div class="config-section"><div class="config-label">Knowledge Base</div><div class="config-field dropdown">Base de Qualificação Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o</div></div><div class="config-section"><div class="config-label">Output Format</div><div class="config-field dropdown">JSON</div></div><div class="config-section"><div class="config-label">Save Output to</div><div class="config-field highlight">{{contact.agente_resultado}}</div></div>` }
+    'a6-2': { kind: 'Action · Workflow AI', title: 'AI Agent (Qualificação)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Agente de Qualificação de Leads</div></div><div class="config-section"><div class="config-label">Instructions *</div><div class="config-field highlight">Você é um agente de qualificação. Analise os dados de {{contact.first_name}}. Se orçamento acima de R$5.000, crie oportunidade "Quente". Envie SMS de boas-vindas. Adicione tag "Lead Qualificado".</div></div><div class="config-section"><div class="config-label">Tools</div><div class="config-field"><span class="opt-chip">Create Opportunity</span> <span class="opt-chip">Send SMS</span> <span class="opt-chip">Add Contact Tag</span> <span class="opt-chip">Update Contact</span></div></div><div class="config-section"><div class="config-label">Knowledge Base</div><div class="config-field dropdown">Base de Qualificação Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o</div></div><div class="config-section"><div class="config-label">Output Format</div><div class="config-field dropdown">JSON</div></div><div class="config-section"><div class="config-label">Save Output to</div><div class="config-field highlight">{{contact.agente_resultado}}</div></div>` },
+    'a7-1': { kind: 'Trigger · Customer Replied', title: 'Pediu atendente humano', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Handoff — cliente pediu humano</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field dropdown">WhatsApp</div></div><div class="config-section"><div class="config-label">Contains Phrase</div><div class="config-field highlight">falar com atendente</div></div>` },
+    'a7-2': { kind: 'Action · Update Conversation AI Bot and Status', title: 'Update AI Bot & Status', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Desligar bot — handoff humano</div></div><div class="config-section"><div class="config-label">Conversation AI Bot *</div><div class="config-field highlight dropdown">Bot Vendas — Magnetic</div></div><div class="config-section"><div class="config-label">Bot Status *</div><div class="config-field highlight dropdown">Inactive</div></div><div class="config-section"><div class="config-label">Sleep Timer</div><div class="config-field">4 horas — reativa automático depois</div></div><div class="config-section"><div class="config-label">Escopo</div><div class="config-field">Por contato — bot continua ativo pros outros</div></div>` },
+    'a7-3': { kind: 'Action · Internal Notification', title: 'Chamar atendente', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time — assumir conversa</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Push</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Atendimento</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">{{contact.name}} pediu humano — bot dormindo por 4h</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
