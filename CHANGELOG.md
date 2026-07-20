@@ -10,6 +10,13 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-20 — Automation
+**Weekly auto-refine**
+([pending](../../actions))
+
+- `scripts/auto-refine.py` detected drift and reapplied the mechanical refinements (label standardization, filter headers, Slack → Webhook, trigger-type, placeholder cleanup, configData regen).
+- Files touched (3): `acoes-highlevel-cat15.html`, `guia-highlevel-cat13.html`, `search-index.json`
+
 ## 2026-07-10 — Content
 **Add 14 new native GHL triggers/actions: Communities, Google Integrations, AI Agent**
 
