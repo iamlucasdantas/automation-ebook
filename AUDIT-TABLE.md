@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 46 | 0 | **77** |
-| Ações | 34 | 74 | 3 | **111** |
+| Gatilhos | 31 | 50 | 3 | **84** |
+| Ações | 35 | 75 | 8 | **118** |
 
 
 ## Gatilhos · 12 categorias
@@ -135,11 +135,22 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g3 | [Acesso Concedido a Canal Privado](guia-highlevel-cat11.html#g3) | Private Channel Access Granted | 3 | 2/6 | 🟡 | [ ] | |
 | g4 | [Remoção de Acesso a Canal Privado](guia-highlevel-cat11.html#g4) | Private Channel Access Revoked | 3 | 2/6 | 🟡 | [ ] | |
 | g5 | [Mudança de Nível na Classificação](guia-highlevel-cat11.html#g5) | Community Group Member Leaderboard Level Changed | 4 | 2/6 | 🟡 | [ ] | |
+| g6 | [Registrado em Evento do Grupo](guia-highlevel-cat11.html#g6) | Community Group Event Registration | 3 | 2/6 | 🟡 | [ ] | |
+| g7 | [Solicitação de Entrada Rejeitada](guia-highlevel-cat11.html#g7) | Community Group Join Request Rejected | 0 | 2/6 | 🔴 | [ ] | |
+| g8 | [Nova Publicação no Grupo](guia-highlevel-cat11.html#g8) | Community Group New Post | 0 | 2/6 | 🔴 | [ ] | |
+| g9 | [Novo Comentário no Grupo](guia-highlevel-cat11.html#g9) | Community Group New Comment | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT12 · Conclusão
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | g1 | [Certificado Enviado](guia-highlevel-cat12.html#g1) | Certificate Issued | 3 | 2/6 | 🟡 | [ ] | |
+
+### CAT13 · Contatos Google
+| # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
+|---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
+| g1 | [Contato Google Criado](guia-highlevel-cat13.html#g1) | Google Contact Created | 2 | 2/6 | 🟡 | [ ] | |
+| g2 | [Novo Grupo de Contatos Google](guia-highlevel-cat13.html#g2) | New Google Contact Group | 3 | 2/6 | 🟡 | [ ] | |
+| g3 | [Resposta de Formulário Google](guia-highlevel-cat13.html#g3) | Google Form Response | 3 | 2/6 | 🟡 | [ ] | |
 
 ## Ações · 14 categorias
 
@@ -229,7 +240,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Summarize Conversation](acoes-highlevel-cat05.html#a3) | Summarize Conversation | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Extract Info](acoes-highlevel-cat05.html#a4) | AI Extract Info | 2 | 1/6 | 🟡 | [ ] | |
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Classify | 2 | 2/6 | 🟡 | [ ] | |
-| a6 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a6) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
+| a6 | [Agente de IA](acoes-highlevel-cat05.html#a6) | AI Agent | 2 | 3/6 | 🟢 | [ ] | |
+| a7 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a7) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -309,3 +321,13 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | a1 | [Emitir Certificado](acoes-highlevel-cat14.html#a1) | Issue Certificate | 4 | 3/6 | 🟢 | [ ] | |
+
+### CAT15 · Contatos Google
+| # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
+|---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
+| a1 | [Criar Contato Google](acoes-highlevel-cat15.html#a1) | Create Google Contact | 0 | — | 🔴 | [ ] | |
+| a2 | [Atualizar Contato Google](acoes-highlevel-cat15.html#a2) | Update Google Contact | 0 | — | 🔴 | [ ] | |
+| a3 | [Buscar Contato Google](acoes-highlevel-cat15.html#a3) | Find Google Contact | 0 | — | 🔴 | [ ] | |
+| a4 | [Buscar ou Criar Contato Google](acoes-highlevel-cat15.html#a4) | Find or Create Google Contact | 2 | — | 🟡 | [ ] | |
+| a5 | [Criar Grupo Google](acoes-highlevel-cat15.html#a5) | Create Google Contact Group | 0 | — | 🔴 | [ ] | |
+| a6 | [Adicionar a Grupos Google](acoes-highlevel-cat15.html#a6) | Add to Google Groups | 2 | — | 🔴 | [ ] | |
