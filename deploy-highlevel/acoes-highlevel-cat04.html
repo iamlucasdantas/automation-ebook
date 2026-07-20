@@ -2725,7 +2725,8 @@
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Pausa o fluxo por tempo fixo (ex.: 3 dias) ou até evento específico acontecer (ex.: até o cliente responder). Crítico pra sequências.</p>
+      <p>Pausa o contato nesse ponto do workflow até uma condição ser satisfeita. O dropdown <strong>Wait Type</strong> tem 8 modos reais no HighLevel — não é só "duração fixa ou evento": dá pra esperar um tempo fixo, uma data/hora específica, uma agenda recorrente, o próximo compromisso/cobrança do contato, uma resposta (de cliente OU de usuário do time), um evento arbitrário, uma condição de Opportunity, ou o ciclo de uma solicitação de review.</p>
+      <p>Independente do modo escolhido, três ajustes gerais valem pra qualquer Wait: <strong>Resume On</strong> (só retomar em dias específicos, ex.: só dias úteis), <strong>Overall Timeout</strong> (destrava o contato depois de X tempo mesmo se a condição nunca acontecer) e <strong>Advance Window</strong> (janela de dias/horários em que o Wait tem permissão de liberar o contato — ex.: só entre 9h–18h de seg a sex, mesmo que a condição seja satisfeita fora desse horário).</p>
     </div>
   </div>
 
@@ -2735,17 +2736,22 @@
       <div class="use-case">
   <div class="use-case-label">Caso</div>
   <div class="use-case-title">Drip campaign</div>
-  <div class="use-case-desc">Aguardar 3 dias entre emails da sequência.</div>
+  <div class="use-case-desc">Wait For (Time Delay) de 3 dias entre emails da sequência.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Até responder</div>
-  <div class="use-case-desc">Aguarda até cliente responder, depois continua.</div>
+  <div class="use-case-title">Até o time responder</div>
+  <div class="use-case-desc">Wait for Contact Reply configurado pro canal "User Replied" — segura até um vendedor responder, com timeout de fallback.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Até data específica</div>
-  <div class="use-case-desc">Aguarda até data de evento (aniversário, vencimento).</div>
+  <div class="use-case-title">1h antes do compromisso</div>
+  <div class="use-case-desc">Wait for Appointment/Booking — libera o contato 1h antes do horário agendado, pra disparar lembrete.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Cadência recorrente</div>
+  <div class="use-case-desc">Recurring Schedule — toda segunda de manhã, sem precisar de um Scheduler trigger separado.</div>
 </div>
 
     </div>
@@ -2754,7 +2760,7 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Tipo (Duração fixa / Até evento / Até data). Duração (min/h/dias/semanas). Condições de saída.</p>
+      <p><strong>Wait Type</strong> (dropdown principal, 8 opções — ver painel completo abaixo): Wait For (Time Delay), Wait Until (Date/Time), Recurring Schedule, Wait for Appointment/Booking/Invoice, Wait for Contact Reply (inclui User Replied e Live Chat), Wait for Event, Wait for Opportunity, Wait for Review Request. Cada modo abre campos próprios. Em qualquer modo: <strong>Resume On</strong> (dias permitidos), <strong>Overall Timeout</strong> (toggle + duração de fallback) e <strong>Advance Window</strong> (janela de dias/horário em que o Wait pode liberar o contato).</p>
     </div>
   </div>
 
@@ -2834,17 +2840,16 @@
       <div class="mockup-caption">Clique em cada bloco pra ver TODOS os parâmetros reais do HighLevel</div>
     </div>
   </div>
-          <div class="ghl-node-body"></div>
-        
-  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A2 ═════════════════════ -->
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A2 (todos os 8 Wait Types) ═════════════════════ -->
   <div class="tblock">
-    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel · TODOS os parâmetros</div>
     <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
-      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+      O dropdown <strong>Wait Type</strong> tem 8 modos reais no HighLevel. Abaixo, os campos de CADA modo — não só o exemplo ativo no mockup acima — pra você ver o painel completo antes de escolher.
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Três modos: <span class='arrow'>→</span> <strong>Wait For (duration)</strong>, <span class='arrow'>→</span> <strong>Wait Until (date/time)</strong>, <span class='arrow'>→</span> <strong>Wait Until Event</strong> com timeout fallback.</div>
+        <div class="hl-canvas-hint"><strong>Wait Type</strong> muda os campos abaixo (lógica condicional). <span class='arrow'>→</span> Independente do modo, <strong>Resume On</strong>, <strong>Overall Timeout</strong> e <strong>Advance Window</strong> ficam disponíveis em Advanced Settings.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
@@ -2854,16 +2859,57 @@
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Aguardar 1h antes de re-engajar" readonly></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Aguardar antes de re-engajar" readonly></div>
 <div class="hl-filter-row"><div class="hl-filter-label">Wait Type <span class="req">*</span></div>
-<div class="hl-dropdown has-value">Wait For (Duration)</div>
-<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Wait For (Duration)</span><span class="opt-chip">Wait Until (Date/Time)</span><span class="opt-chip">Wait Until Event</span></div></div></div>
-<div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
-<div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Wait For configuration</div>
-<div class="hl-field-row"><input class="hl-input" value="1" style="width: 80px;"><div class="hl-dropdown has-value">Hour(s)</div></div>
+<div class="hl-dropdown has-value">Wait For (Time Delay)</div>
+<div class="hl-conditional"><div class="hl-conditional-note">8 opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Wait For (Time Delay)</span><span class="opt-chip">Wait Until (Date/Time)</span><span class="opt-chip">Recurring Schedule</span><span class="opt-chip">Wait for Appointment/Booking/Invoice</span><span class="opt-chip">Wait for Contact Reply</span><span class="opt-chip">Wait for Event</span><span class="opt-chip">Wait for Opportunity</span><span class="opt-chip">Wait for Review Request</span></div></div></div>
+
+<div class="hl-section-head">1 · Wait For (Time Delay)</div>
+<div class="hl-filter-row"><div class="hl-field-row"><input class="hl-input" value="1" style="width: 80px;"><div class="hl-dropdown has-value">Hour(s)</div></div>
 <div class="field-spec-val" style="margin-top: 8px;"><span class="opt-chip">Seconds</span><span class="opt-chip">Minutes</span><span class="opt-chip">Hours</span><span class="opt-chip">Days</span><span class="opt-chip">Weeks</span><span class="opt-chip">Months</span></div></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Workflow Business Hours</div>
-<div class="hl-toggle-row"><span>Wait only during business hours</span><div class="hl-toggle"></div></div></div>
+
+<div class="hl-section-head">2 · Wait Until (Date/Time)</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Date</div><input class="hl-input" value="{{customValue.data_evento}} ou data fixa"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Time</div><input class="hl-input" value="09:00 AM"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Timezone</div><div class="hl-dropdown has-value">America/Sao_Paulo</div></div>
+
+<div class="hl-section-head">3 · Recurring Schedule</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Recurrence</div><div class="hl-dropdown has-value">Weekly — toda Segunda</div>
+<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Daily</span><span class="opt-chip">Weekly</span><span class="opt-chip">Monthly (dia X)</span><span class="opt-chip">Yearly (data fixa)</span></div></div></div>
+
+<div class="hl-section-head">4 · Wait for Appointment / Booking / Invoice</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Reference</div><div class="hl-dropdown has-value">Próximo Compromisso Agendado</div>
+<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Appointment</span><span class="opt-chip">Service Booking</span><span class="opt-chip">Invoice Due Date</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Offset</div><input class="hl-input" value="1 hour before"></div>
+
+<div class="hl-section-head">5 · Wait for Contact Reply</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Reply From</div><div class="hl-dropdown has-value">Contact (Customer)</div>
+<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Contact (Customer)</span><span class="opt-chip">User (Team Member) · User Replied</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Channels</div>
+<div class="hl-multiselect"><span class="hl-multiselect-chip">SMS</span><span class="hl-multiselect-chip">Email</span><span class="hl-multiselect-chip">WhatsApp</span><span class="hl-multiselect-chip">Live Chat</span></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Timeout</div><input class="hl-input" value="2 days — se não responder, segue o fluxo"></div>
+
+<div class="hl-section-head">6 · Wait for Event</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Event</div><div class="hl-dropdown has-value">Email Opened</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Timeout</div><input class="hl-input" value="2 days"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">On Timeout</div><div class="hl-dropdown has-value">Continue workflow</div></div>
+
+<div class="hl-section-head">7 · Wait for Opportunity</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Pipeline</div><div class="hl-dropdown has-value">Vendas Principal</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Condition</div><input class="hl-input" value="Stage = Proposta Enviada"></div>
+
+<div class="hl-section-head">8 · Wait for Review Request</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Condition</div><div class="hl-dropdown has-value">Review Request Sent</div>
+<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Review Request Sent</span><span class="opt-chip">Review Submitted</span></div></div></div>
+
+<div class="hl-section-head">Advanced Settings (qualquer modo)</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Resume On</div>
+<div class="hl-multiselect"><span class="hl-multiselect-chip">Seg</span><span class="hl-multiselect-chip">Ter</span><span class="hl-multiselect-chip">Qua</span><span class="hl-multiselect-chip">Qui</span><span class="hl-multiselect-chip">Sex</span></div>
+<div class="hl-conditional-note">Sáb/Dom excluídos — retomadas caem só em dia útil.</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Overall Timeout</div><div class="hl-toggle-row"><span>Libera o contato mesmo sem a condição bater</span><div class="hl-toggle on"></div></div>
+<input class="hl-input" value="30 days" style="margin-top:6px;"></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Advance Window</div><input class="hl-input" value="09:00–18:00, Seg–Sex">
+<div class="hl-conditional-note">Só libera o contato dentro dessa janela, mesmo que a condição do Wait seja satisfeita fora dela.</div></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -2872,63 +2918,10 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Pausa o workflow por X tempo ou até evento</strong>
+        <strong>8 modos de espera + Resume On/Overall Timeout/Advance Window válidos em qualquer modo. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000002470-workflow-action-wait" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-wait</a></strong>
       </div>
     </div>
   </div>
-</div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a2-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
-            <div>
-              <div class="ghl-node-type">Action · Communication</div>
-              <div class="ghl-node-title">Send Email 1</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 1</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a2-3">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-wait">⏱</div>
-            <div>
-              <div class="ghl-node-type">Action · Wait</div>
-              <div class="ghl-node-title">Wait</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Wait</span></div><div class="ghl-node-param"><span class="pk">Wait Type</span><span class="pv highlight">Wait For Time Delay</span></div><div class="ghl-node-param"><span class="pk">Duration</span><span class="pv highlight">1 hour</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a2-4">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">@</div>
-            <div>
-              <div class="ghl-node-type">Action · Communication</div>
-              <div class="ghl-node-title">Send Email 2</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">From Email</span><span class="pv">lucas@magneticflows.com.br</span></div><div class="ghl-node-param"><span class="pk">From Name</span><span class="pv">Magnetic Funnels</span></div><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Send Email 2</span></div><div class="ghl-node-param"><span class="pk">Template</span><span class="pv">Template padrão da subconta</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
 
   </div><div class="acao-block" id="a3" data-name="wait until event wait until event date">
   <div class="acao-head">

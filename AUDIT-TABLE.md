@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 50 | 3 | **84** |
-| Ações | 35 | 75 | 8 | **118** |
+| Gatilhos | 31 | 52 | 3 | **86** |
+| Ações | 35 | 76 | 8 | **119** |
 
 
 ## Gatilhos · 12 categorias
@@ -54,6 +54,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g17 | [Novo Prospecto](guia-highlevel-cat02.html#g17) | Prospect Generated | 3 | 3/6 | 🟢 | [ ] | |
 | g18 | [Transcript Gerado](guia-highlevel-cat02.html#g18) | Transcript Generated | 4 | 2/6 | 🟡 | [ ] | |
 | g19 | [Agendador (Scheduler)](guia-highlevel-cat02.html#g19) | Scheduler | 6 | 3/6 | 🟢 | [ ] | |
+| g20 | [Email Recebido](guia-highlevel-cat02.html#g20) | Inbound Email | 3 | 2/6 | 🟡 | [ ] | |
+| g21 | [Usuário Respondeu](guia-highlevel-cat02.html#g21) | User Replied | 3 | 3/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -210,12 +212,13 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a2 | [Google Sheets](acoes-highlevel-cat03.html#a2) | Google Sheets | 3 | 3/6 | 🟢 | [ ] | |
 | a3 | [Enviar Dados pra API Custom](acoes-highlevel-cat03.html#a3) | Custom API Call | 2 | 2/6 | 🟡 | [ ] | |
 | a4 | [Enviar Conversão para Meta e Google](acoes-highlevel-cat03.html#a4) | Send Conversion Event (Meta CAPI · Google Ads) | 4 | 4/6 | 🟢 | [ ] | |
+| a5 | [Código Customizado](acoes-highlevel-cat03.html#a5) | Custom Code | 2 | 2/6 | 🟡 | [ ] | |
 
 ### CAT04 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | a1 | [If/Else](acoes-highlevel-cat04.html#a1) | If/Else Condition | 2 | 3/6 | 🟢 | [ ] | |
-| a2 | [Wait (Esperar)](acoes-highlevel-cat04.html#a2) | Wait | 2 | 4/6 | 🟡 | [ ] | |
+| a2 | [Wait (Esperar)](acoes-highlevel-cat04.html#a2) | Wait | 2 | 5/6 | 🟡 | [ ] | |
 | a3 | [Wait Until Event](acoes-highlevel-cat04.html#a3) | Wait Until Event Date | 2 | 3/6 | 🟡 | [ ] | |
 | a4 | [Set Event Date](acoes-highlevel-cat04.html#a4) | Set Event Date | 2 | 2/6 | 🟡 | [ ] | |
 | a5 | [Goal Event](acoes-highlevel-cat04.html#a5) | Goal Event | 3 | 4/6 | 🟢 | [ ] | |
