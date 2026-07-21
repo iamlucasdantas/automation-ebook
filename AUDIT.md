@@ -132,29 +132,100 @@ search-index.json e AUDIT-TABLE.md já regenerados).
 ### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
 Achados com menos certeza sobre campos exatos — fica pra próxima rodada
 com confirmação humana antes de montar o mockup com fidelidade real:
-- **AI Decision Maker** (ação premium — roteamento por linguagem natural,
-  alternativa ao If/Else manual)
+- ~~**AI Decision Maker**~~ — ✅ aplicado na rodada 2026-07-21 (ver abaixo)
 - **Client Portal File Uploaded** (gatilho — contato sobe arquivo no
-  Client Portal)
-- **Communities: Rejected Join Request / New Post / New Comment** (3
-  gatilhos novos de Communities, além dos que já temos)
-- **AI Translate** (ação — traduz texto dentro do workflow)
-- **Update Conversation AI Bot and Status** (ação — troca o bot/status da
-  conversa a partir do workflow)
+  Client Portal). Ainda em aberto: confirmamos que o gatilho existe
+  ([changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal))
+  mas nenhuma fonte encontrada detalha o painel de filtros real (Portal
+  específico? filtro de tipo/extensão de arquivo? categoria de
+  documento?) — precisa checar a UI ao vivo antes de montar o mockup.
+- ~~**Communities: Rejected Join Request / New Post / New Comment**~~ —
+  ❌ **entrada desatualizada, não era mais válida.** Checagem da rodada
+  2026-07-21 confirmou que esses 3 gatilhos (+ um 4º, Registrado em
+  Evento do Grupo) já tinham sido implementados em cat11 (g6–g9) no
+  commit de 2026-07-10 "Add 14 new native GHL triggers/actions" — antes
+  mesmo desta lista de candidatos ter sido escrita no mesmo dia. Ficaram
+  aqui por engano por 11 dias. Os 86 gatilhos publicados já incluem
+  esses 4.
+- ~~**AI Translate**~~ — ✅ aplicado na rodada 2026-07-21 (ver abaixo)
+- ~~**Update Conversation AI Bot and Status**~~ — ✅ aplicado em 2026-07-20
+  (cat05 A7)
 
 ### ⚠ Rename já sinalizado (não é novo, é nome desatualizado — mantido como está até confirmação)
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-07-21 — Nova checagem de novidades nativas
+
+Rotina automática (via WebSearch — WebFetch direto em help.gohighlevel.com
+e ideas.gohighlevel.com está bloqueado pela política de rede deste
+ambiente, então os achados vêm de resumos de busca, não da página crua)
+revisou os candidatos em aberto da rodada anterior e procurou por
+gatilhos/ações nativos lançados entre 2026-06-15 e 2026-07-21.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Ação — AI Decision Maker** · cat05 A8 (Premium). Campos confirmados:
+   Action Name, Instructions (critério em linguagem natural), lista de
+   Branches definidas pelo usuário, Default Branch automática/travada
+   como fallback. NÃO confirmado e portanto não incluído no painel:
+   seletor de modelo, limite de branches, botão de teste — se algum
+   desses existir na UI real, é um gap conhecido.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+2. **Ação — AI Translate** · cat05 A9. Campos confirmados: Source
+   Language (From), Target Language (To), Input Text (aceita merge
+   fields/custom values). Output Variable foi adicionado por convenção
+   (todas as outras 5 ações de Workflow AI desta categoria têm esse
+   campo) mas NÃO foi confirmado especificamente para esta ação — flag
+   deixado na legenda do painel. Também não confirmado: se é ação
+   Premium, e a lista completa de idiomas do dropdown (mockup mostra só
+   um valor selecionado de exemplo, sem inventar a lista inteira).
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+
+Totais atualizados: **86 gatilhos + 122 ações = 208 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados, validate-mockups.js
+passando nas 28 páginas).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- Todas as 28 páginas de categoria carregavam o total de categorias
+  desatualizado no breadcrumb/hero-tag (ex.: "06/12" em vez de "06/13",
+  "07/14" em vez de "07/15") — sobrou de quando cat13 (gatilhos) e cat15
+  (ações) foram criadas e nenhuma das outras páginas teve seu total
+  atualizado. `index.html` também tinha os tab-counts/section-labels
+  presos em 84/117 enquanto os hero-stats já diziam 86/120.
+- `guia-highlevel-cat06.html` (Cursos) subcontava os próprios gatilhos
+  no hero (dizia 10, real 12). `acoes-highlevel-cat05.html` (Workflow AI)
+  e `acoes-highlevel-cat07.html` (Oportunidades) subcontavam as próprias
+  ações no side-nav/hero-stat/hero-desc (diziam 5–6 e 9; real 7 e 11,
+  antes das adições de hoje) — sobrou das duas últimas ações adicionadas
+  em cada categoria (A7 e A11) sem atualizar todos os contadores internos
+  da própria página.
+
+### 🔍 Candidatos encontrados, ainda NÃO aplicados
+- **Client Portal File Uploaded** (ver acima — nome confirmado, campos
+  não confirmados)
+- **Invoke Agent Studio Agent** (ação — chama um agente do Agent Studio
+  em produção a partir do workflow, passa dados em tempo real e roteia
+  a resposta pro próximo passo. Distinta do nosso "AI Agent" atual.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007402-workflow-action-invoke-agent-studio-agent),
+  lançada em 26/fev/2026). Sem detalhe de campos — precisa da UI ao vivo.
+- **OpenRouter Generate Response** (ação — node nativo de app que dá
+  acesso a 300+ modelos de LLM via OpenRouter num único node de
+  workflow. Campos parcialmente confirmados: System Prompt (opcional),
+  Prompt (obrigatório, aceita variáveis), Model Selection (dropdown),
+  botão de teste. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response),
+  lançada em 6/fev/2026). Não aplicado ainda porque a lista completa de
+  modelos do dropdown não foi confirmada e o agente de pesquisa não
+  conseguiu acessar a página crua pra confirmar mais detalhes do painel.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+1. **Você abre HL** e valida os itens 🔍 acima (Client Portal File
+   Uploaded, Invoke Agent Studio Agent, OpenRouter Generate Response) —
+   confirmar o painel de campos real antes de montar o mockup
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
-está em ~92% de fidelidade verificada contra docs oficiais.
+está em ~92%+ de fidelidade verificada contra docs oficiais.

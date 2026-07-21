@@ -11,6 +11,46 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-07-21 — Content
+**Add AI Decision Maker + AI Translate (cat05 A8/A9) + fix widespread breadcrumb/count drift across all 28 category pages**
+
+- **Ação — AI Decision Maker** (`acoes-highlevel-cat05.html` A8, Premium).
+  Routes the contact into one of several user-defined branches using a
+  natural-language **Instructions** field instead of typed conditions —
+  an AI-driven alternative to the manual If/Else. Always includes an
+  automatic, locked **Default Branch** as fallback for when the AI can't
+  match any defined branch. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+- **Ação — AI Translate** (`acoes-highlevel-cat05.html` A9). Translates
+  text inside the workflow via **Source Language (From)** / **Target
+  Language (To)** dropdowns and an **Input Text** field (static text or
+  merge fields), so the translated output can feed the next action. The
+  Output Variable field mirrors the convention already used by every
+  other Workflow AI action in this category — it wasn't independently
+  confirmed against the live HL panel, noted as such in the panel caption.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+- Researched via WebSearch against help.gohighlevel.com / ideas.gohighlevel.com
+  changelogs (direct WebFetch to those domains is blocked by this
+  environment's egress policy, so findings are search-snippet-sourced).
+  See `AUDIT.md` "Rodada 2026-07-21" for the full candidate list, what
+  was applied vs. left pending, and the correction to a stale AUDIT.md
+  entry (the Communities triggers it listed as "not yet applied" were
+  already shipped back in the 2026-07-10 round).
+- **Drift fix (much larger than expected):** every one of the 28
+  category pages (`guia-highlevel-cat01–13`, `acoes-highlevel-cat01–15`)
+  carried a stale category-total in its `hero-tag`/breadcrumb ("Categoria
+  06/12" instead of "06/13", "07/14" instead of "07/15", etc.) — left
+  over from whenever cat13 (Google Integrações · gatilhos) and cat15
+  (Google Integrações · ações) were added and every *other* page's
+  breadcrumb total went unbumped. Also found and fixed: `guia-highlevel-cat06.html`
+  under-counted its own triggers (said 10, real 12) and
+  `acoes-highlevel-cat05.html`/`acoes-highlevel-cat07.html` under-counted
+  their own actions in the side-nav/hero-stat/hero-desc (said 5/6 and 9,
+  real 7 and 11 respectively — before today's A8/A9 additions).
+- Totals now: **86 gatilhos, 122 ações, 208 entries** across 28
+  categories. `search-index.json` and `AUDIT-TABLE.md` regenerated,
+  `validate-mockups.js` passing on all 28 pages, homepage last-updated
+  date refreshed.
+
+## 2026-07-21 — Content
 **Add Remove Followers from Opportunity (cat07 A11) + fix stale homepage tab/section counts**
 
 - Added **Remove Followers from Opportunity** action (`acoes-highlevel-cat07.html`

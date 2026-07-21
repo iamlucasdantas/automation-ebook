@@ -2425,7 +2425,7 @@
       <span>Voltar ao índice</span>
     </a>
     <div class="top-nav-divider"></div>
-    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>05/14</strong> · <strong>Workflow AI</strong></div>
+    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>05/15</strong> · <strong>Workflow AI</strong></div>
   </div>
 </div>
 
@@ -2437,7 +2437,7 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Workflow AI · 5 ações</div>
+  <div class="side-section-label">Workflow AI · 9 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Generate Text (Texto)</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Parse Image (Analisar Imagem)</a>
@@ -2446,6 +2446,8 @@
     <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
     <a href="#a6" class="side-link"><span class="side-num">06</span>AI Agent (Agente de IA)</a>
     <a href="#a7" class="side-link"><span class="side-num">07</span>Atualizar Bot de IA e Status</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>AI Decision Maker</a>
+    <a href="#a9" class="side-link"><span class="side-num">09</span>AI Translate</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2464,10 +2466,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 05/15</span>
   <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 7 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação e agentes autônomos com ferramentas nativas.</p>
+  <p class="hero-desc">As 9 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação e agentes autônomos com ferramentas nativas.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">6</span>
+      <span class="hero-stat-num">9</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3528,6 +3530,314 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a8" data-name="ai decision maker decisor de ia roteamento inteligencia artificial">
+  <div class="acao-head">
+    <div class="acao-num">08</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Decisor de IA</h2>
+      <div class="acao-en">AI Decision Maker</div>
+      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag">Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Roteia o contato pra uma de várias branches usando uma <strong>instrução em linguagem natural</strong> — em vez de você montar manualmente as condições do If/Else, você descreve o critério ("engajamento alto e empresa grande = Enterprise") e a IA decide qual branch seguir.</p>
+      <p>Você define os nomes das branches possíveis; a IA escolhe uma delas em cada execução. Existe sempre uma <strong>Default Branch</strong> automática e travada — roda quando a IA não consegue enquadrar o contato em nenhuma das branches definidas.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Qualificação sem árvore de If/Else</div>
+  <div class="use-case-desc">Critério muda com frequência ou é difícil de expressar em condições fixas → descreve em texto e deixa a IA decidir.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Triagem de suporte por urgência</div>
+  <div class="use-case-desc">Mensagem do cliente → branches "Crítico", "Pode esperar", "Dúvida simples" sem regex de palavras-chave.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Roteamento por perfil de empresa</div>
+  <div class="use-case-desc">Dados combinados de porte + setor + engajamento → branch "Enterprise" / "Mid-Market" / "SMB" numa única ação, sem empilhar vários If/Else.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Action Name, Instructions (o critério de decisão em linguagem natural), lista de Branches definidas por você (cada uma só com um nome — a IA decide qual usar) e a Default Branch, criada automaticamente como fallback.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a8">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Decision Maker · Triagem de Lead</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a8">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a8-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Tag Added</div>
+              <div class="ghl-node-title">Novo Lead</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Novo Lead</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a8-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-ai">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">AI Decision Maker</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Branches</span><span class="pv highlight">Qualificado · Não Qualificado · Precisa Revisão</span></div><div class="ghl-node-param"><span class="pk">Escolhida</span><span class="pv highlight">Qualificado</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a8-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">$</div>
+            <div>
+              <div class="ghl-node-type">Action · Create Opportunity</div>
+              <div class="ghl-node-title">Branch Qualificado</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Pipeline</span><span class="pv">Vendas</span></div><div class="ghl-node-param"><span class="pk">Stage</span><span class="pv highlight">Qualificado</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A8 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Ação Premium. <span class='arrow'>→</span> Você escreve <strong>Instructions</strong> em linguagem natural, não condições tipadas. <span class='arrow'>→</span> <strong>Default Branch</strong> é automática e travada — sempre existe como fallback.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>AI Decision Maker</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Triagem de lead por perfil" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Instructions <span class="req">*</span></div>
+<textarea class="hl-input" rows="4" style="resize:vertical;">Analise o engajamento e o porte da empresa de {{contact.company_name}}. Empresas grandes e altamente engajadas são Qualificado. Empresas pequenas ou pouco engajadas são Não Qualificado. Se faltar informação suficiente, escolha Precisa Revisão.</textarea></div>
+<div class="hl-section-head">Branch 1</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Nome da Branch</div><input class="hl-input" value="Qualificado" readonly></div>
+<div class="hl-section-head">Branch 2</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Nome da Branch</div><input class="hl-input" value="Não Qualificado" readonly></div>
+<div class="hl-section-head">Branch 3</div>
+<div class="hl-filter-row"><div class="hl-filter-label">Nome da Branch</div><input class="hl-input" value="Precisa Revisão" readonly></div>
+<button class="hl-add-filter">+ Add Branch</button>
+<div class="hl-section-head" style="color: var(--brand-accent);">⚡ Default Branch (fallback)</div>
+<div class="hl-field-help" style="color: var(--brand-accent);">Criada automaticamente · não aparece na lista de branches acima · roda quando a IA não escolhe nenhuma delas.</div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Roteamento por linguagem natural, alternativa ao If/Else manual. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-ai-decision-maker</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a9" data-name="ai translate traduzir traducao com ia idioma">
+  <div class="acao-head">
+    <div class="acao-num">09</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Traduzir com IA</h2>
+      <div class="acao-en">AI Translate</div>
+      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Traduz um texto de um idioma pra outro dentro do próprio workflow — o resultado fica disponível como variável pra alimentar a próxima ação (Send Email, Send SMS, notificação interna, etc.).</p>
+      <p>Você define o idioma de origem (From) e destino (To) e o texto de entrada, que pode ser um valor fixo ou vir de merge fields/custom values do contato ou de passos anteriores do workflow.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Atendimento multilíngue</div>
+  <div class="use-case-desc">Cliente escreve em inglês → traduz pro português antes de notificar o time de suporte local.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Prospecção internacional</div>
+  <div class="use-case-desc">Mesmo template de email de vendas traduzido automaticamente pro idioma do lead antes de enviar.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Padronizar respostas pro time</div>
+  <div class="use-case-desc">Resposta do cliente em outro idioma → traduz pro idioma do time antes de rotear pra um atendente.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Action Name, Source Language (From), Target Language (To) e Input Text (texto fixo ou merge field/custom value). O resultado fica salvo numa Output Variable pra usar nos próximos passos.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a9">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Workflow AI/ Translate · Resposta em Inglês</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a9">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a9-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Customer Replied</div>
+              <div class="ghl-node-title">Resposta em inglês</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Reply Channel</span><span class="pv">Email</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a9-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-ai">🤖</div>
+            <div>
+              <div class="ghl-node-type">Action · Workflow AI</div>
+              <div class="ghl-node-title">AI Translate</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">From → To</span><span class="pv highlight">Inglês (EUA) → Português (Brasil)</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.traducao</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a9-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Avisar suporte (traduzido)</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{ai.traducao}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A9 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Traduz texto dentro do workflow. <span class='arrow'>→</span> <strong>Input Text</strong> aceita merge fields/custom values, não só texto fixo.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>AI Translate</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Traduzir resposta do cliente" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Source Language (From) <span class="req">*</span></div><div class="hl-dropdown has-value">Inglês (EUA)</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Target Language (To) <span class="req">*</span></div><div class="hl-dropdown has-value">Português (Brasil)</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Input Text <span class="req">*</span></div>
+<textarea class="hl-input" rows="3" style="resize:vertical;">{{trigger.reply_body}}</textarea></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output Variable</div><div class="hl-dropdown has-value">ai.traducao</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Source/Target Language e Input Text confirmados na doc oficial; Output Variable segue o padrão das demais ações de Workflow AI desta categoria. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-ai-translate</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3546,7 +3856,7 @@
 
   <div class="footer-top">
     <h3>Categoria 05 completa.</h3>
-    <p>6 ações de Workflow AI explicadas com impacto prático. Inclui o novo AI Agent, adicionado em julho/2026.</p>
+    <p>9 ações de Workflow AI explicadas com impacto prático. Inclui o AI Agent, Update Conversation AI Bot and Status, AI Decision Maker e AI Translate, adicionados em julho/2026.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3674,7 +3984,13 @@
     'a6-2': { kind: 'Action · Workflow AI', title: 'AI Agent (Qualificação)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Agente de Qualificação de Leads</div></div><div class="config-section"><div class="config-label">Instructions *</div><div class="config-field highlight">Você é um agente de qualificação. Analise os dados de {{contact.first_name}}. Se orçamento acima de R$5.000, crie oportunidade "Quente". Envie SMS de boas-vindas. Adicione tag "Lead Qualificado".</div></div><div class="config-section"><div class="config-label">Tools</div><div class="config-field"><span class="opt-chip">Create Opportunity</span> <span class="opt-chip">Send SMS</span> <span class="opt-chip">Add Contact Tag</span> <span class="opt-chip">Update Contact</span></div></div><div class="config-section"><div class="config-label">Knowledge Base</div><div class="config-field dropdown">Base de Qualificação Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o</div></div><div class="config-section"><div class="config-label">Output Format</div><div class="config-field dropdown">JSON</div></div><div class="config-section"><div class="config-label">Save Output to</div><div class="config-field highlight">{{contact.agente_resultado}}</div></div>` },
     'a7-1': { kind: 'Trigger · Customer Replied', title: 'Pediu atendente humano', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Handoff — cliente pediu humano</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field dropdown">WhatsApp</div></div><div class="config-section"><div class="config-label">Contains Phrase</div><div class="config-field highlight">falar com atendente</div></div>` },
     'a7-2': { kind: 'Action · Update Conversation AI Bot and Status', title: 'Update AI Bot & Status', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Desligar bot — handoff humano</div></div><div class="config-section"><div class="config-label">Conversation AI Bot *</div><div class="config-field highlight dropdown">Bot Vendas — Magnetic</div></div><div class="config-section"><div class="config-label">Bot Status *</div><div class="config-field highlight dropdown">Inactive</div></div><div class="config-section"><div class="config-label">Sleep Timer</div><div class="config-field">4 horas — reativa automático depois</div></div><div class="config-section"><div class="config-label">Escopo</div><div class="config-field">Por contato — bot continua ativo pros outros</div></div>` },
-    'a7-3': { kind: 'Action · Internal Notification', title: 'Chamar atendente', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time — assumir conversa</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Push</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Atendimento</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">{{contact.name}} pediu humano — bot dormindo por 4h</div></div>` }
+    'a7-3': { kind: 'Action · Internal Notification', title: 'Chamar atendente', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time — assumir conversa</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Push</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Atendimento</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">{{contact.name}} pediu humano — bot dormindo por 4h</div></div>` },
+    'a8-1': { kind: 'Trigger · Tag Added', title: 'Tag · Novo Lead', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Novo lead — triar com IA</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Novo Lead</span></div></div>` },
+    'a8-2': { kind: 'Action · Workflow AI', title: 'AI Decision Maker', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Triagem de lead por perfil</div></div><div class="config-section"><div class="config-label">Instructions *</div><div class="config-field highlight">Analise o engajamento e o porte da empresa de {{contact.company_name}}. Empresas grandes e engajadas são Qualificado; pequenas ou pouco engajadas são Não Qualificado; sem dados suficientes, Precisa Revisão.</div></div><div class="config-section"><div class="config-label">Branches</div><div class="config-field"><span class="opt-chip">Qualificado</span> <span class="opt-chip">Não Qualificado</span> <span class="opt-chip">Precisa Revisão</span></div></div><div class="config-section"><div class="config-label">Default Branch</div><div class="config-field">⚡ Automática — roda se a IA não conseguir decidir</div></div>` },
+    'a8-3': { kind: 'Action · Create Opportunity', title: 'Branch Qualificado', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar oportunidade — lead qualificado</div></div><div class="config-section"><div class="config-label">Pipeline *</div><div class="config-field dropdown">Vendas</div></div><div class="config-section"><div class="config-label">Stage *</div><div class="config-field highlight dropdown">Qualificado</div></div><div class="config-section"><div class="config-label">Branch</div><div class="config-field">Qualificado</div></div>` },
+    'a9-1': { kind: 'Trigger · Customer Replied', title: 'Resposta em inglês', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Resposta em outro idioma — traduzir</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field"><span class="opt-chip">Email</span></div></div>` },
+    'a9-2': { kind: 'Action · Workflow AI', title: 'AI Translate', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Traduzir resposta do cliente</div></div><div class="config-section"><div class="config-label">Source Language (From) *</div><div class="config-field highlight dropdown">Inglês (EUA)</div></div><div class="config-section"><div class="config-label">Target Language (To) *</div><div class="config-field highlight dropdown">Português (Brasil)</div></div><div class="config-section"><div class="config-label">Input Text *</div><div class="config-field highlight">{{trigger.reply_body}}</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.traducao</div></div>` },
+    'a9-3': { kind: 'Action · Internal Notification', title: 'Avisar suporte (traduzido)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time — mensagem traduzida</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span></div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field highlight">{{ai.traducao}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
