@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 35 | 76 | 8 | **119** |
+| Ações | 36 | 76 | 8 | **120** |
 
 
 ## Gatilhos · 12 categorias
@@ -266,6 +266,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a8 | [Adicionar Tag à Opp](acoes-highlevel-cat07.html#a8) | Add Opportunity Tag | 3 | 3/6 | 🟢 | [ ] | |
 | a9 | [Remover Tag da Opp](acoes-highlevel-cat07.html#a9) | Remove Opportunity Tag | 2 | 2/6 | 🟡 | [ ] | |
 | a10 | [Adicionar Seguidores à Oportunidade](acoes-highlevel-cat07.html#a10) | Add Follower(s) to Opportunity | 4 | 3/6 | 🟢 | [ ] | |
+| a11 | [Remover Seguidores da Oportunidade](acoes-highlevel-cat07.html#a11) | Remove Followers from Opportunity | 3 | 4/6 | 🟢 | [ ] | |
 
 ### CAT08 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

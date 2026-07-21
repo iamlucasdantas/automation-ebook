@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 205,
+  "total": 206,
   "items": [
     {
       "id": "g1",
@@ -2271,6 +2271,19 @@
       "description": "",
       "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
       "href": "acoes-highlevel-cat07.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Remover Seguidores da Oportunidade",
+      "en": "Remove Followers from Opportunity",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "remover seguidores da oportunidade remove followers from opportunity",
+      "href": "acoes-highlevel-cat07.html#a11"
     },
     {
       "id": "a1",
