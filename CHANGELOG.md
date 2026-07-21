@@ -10,6 +10,38 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-21 — Content
+**Add Remove Followers from Opportunity (cat07 A11) + fix stale homepage tab/section counts**
+
+- Added **Remove Followers from Opportunity** action (`acoes-highlevel-cat07.html`
+  A11) — companion to A10 (Add Followers): removes specific users, or all
+  at once via a Remove All Followers toggle (specific-users picker shown
+  disabled while the toggle is ON, matching the real HL panel behavior).
+  Requires an opportunity in context. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004757-workflow-action-remove-followers-from-opportunity)
+- Fixed count drift found this round: the homepage tab buttons and Parte
+  1/2 section labels still said "84 gatilhos" / "117 ações" while the
+  hero-stats and per-category cards already correctly totaled 86/120 —
+  the two most recent additions (this one and Update Conversation AI Bot
+  and Status below) had updated the hero-stats but not the tab-count/
+  section-label spans. Both now read 86 gatilhos / 120 ações consistently.
+- Totals now: **86 gatilhos, 120 ações, 206 entries** across 28 categories
+  (13 gatilho + 15 ação). `AUDIT-TABLE.md` regenerated, `search-index.json`
+  confirmed in sync, homepage last-updated date refreshed.
+
+## 2026-07-20 — Content
+**Add Update Conversation AI Bot and Status (cat05 A6)**
+
+- Added **Update Conversation AI Bot and Status** action
+  (`acoes-highlevel-cat05.html` A6) — per-contact control of the
+  Conversation AI bot: Bot dropdown (lists the account's bots), Status
+  dropdown (Active/Inactive), and a conditional Sleep Timer that
+  auto-reactivates the bot after a set duration when set Inactive.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003821-workflow-action-update-conversation-ai-bot-and-status)
+- This closes out the "Update Conversation AI Bot and Status" candidate
+  flagged as pending in the 2026-07-10 audit round (see `AUDIT.md`).
+- Sidebar, hero description, index card, hero totals, meta descriptions
+  and `AUDIT-TABLE.md` updated.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
