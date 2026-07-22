@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 209,
   "items": [
     {
       "id": "g1",
@@ -790,6 +790,20 @@
       "description": "Dispara sempre que um aluno faz login na plataforma. É o gatilho mais frequente da categoria — use com filtros pra evitar rodar em todo acesso.",
       "keywords": "login de usuário user login",
       "href": "guia-highlevel-cat06.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Upload de Arquivo no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um contato sobe um ou mais arquivos (até 10 de uma vez) na área de Documentos Compartilhados do Client Portal — diferente de anexo em mensagem de chat, é o upload feito dentro do portal do cliente.",
+      "keywords": "upload de arquivo no portal do cliente client portal file uploaded",
+      "href": "guia-highlevel-cat06.html#g13"
     },
     {
       "id": "g1",
@@ -2065,14 +2079,14 @@
     {
       "id": "a4",
       "type": "Ação",
-      "name": "Extract Info",
-      "en": "AI Extract Info",
+      "name": "Extract Data",
+      "en": "AI Extract Data",
       "category": "Ação",
       "tags": [
         "Parsing"
       ],
       "description": "",
-      "keywords": "extract info ai extract info",
+      "keywords": "extract data ai extract data extract info ai extract info",
       "href": "acoes-highlevel-cat05.html#a4"
     },
     {
@@ -2116,6 +2130,36 @@
       "description": "",
       "keywords": "atualizar bot de ia e status update conversation ai bot and status agente",
       "href": "acoes-highlevel-cat05.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Decisor de IA",
+      "en": "AI Decision Maker",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "decisor de ia ai decision maker",
+      "href": "acoes-highlevel-cat05.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Traduzir com IA",
+      "en": "AI Translate",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "traduzir com ia ai translate",
+      "href": "acoes-highlevel-cat05.html#a9"
     },
     {
       "id": "a1",

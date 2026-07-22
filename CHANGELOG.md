@@ -10,6 +10,44 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-22 — Content
+**Add AI Decision Maker + AI Translate, Client Portal File Uploaded trigger, rename AI Extract Data + fix stale counts**
+
+- **AI Decision Maker** action added (`acoes-highlevel-cat05.html` A8) —
+  AI-powered branching: prompt + named Options, the AI picks one and the
+  workflow follows that branch, replacing manual If/Else trees. Premium,
+  $0.01/execution after 100 free/month (Agency Wallet).
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+- **AI Translate** action added (`acoes-highlevel-cat05.html` A9) —
+  translates text inside the workflow, output reusable in later steps.
+  Premium, per-execution billing like the other Workflow AI actions.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+- **Client Portal File Uploaded** trigger added (`guia-highlevel-cat06.html`
+  G13, new "Portal do Cliente" sidebar section) — fires when a contact
+  uploads one or more files (up to 10 at once) via the Client Portal's
+  Shared Documents area. No dedicated filter fields confirmed beyond the
+  upload itself.
+  [Official changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+- **Rename**: `acoes-highlevel-cat05.html` A4 "Extract Info"/"AI Extract
+  Info" → **"Extract Data"/"AI Extract Data"** — same function, HighLevel
+  renamed the action.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007992-workflow-action-ai-extract-data)
+- Fixed drift found while auditing: `index.html` tab-counts and
+  section-labels still said 84/117 while hero-stats already said 86/120;
+  8 trigger pages (`guia-highlevel-cat01–04, 07–10`) still said "Categoria
+  NN/12" and "de 12" in their breadcrumbs, stale since cat13 (Google
+  Integrações) was added; `guia-highlevel-cat06.html`'s own hero-stats
+  said "10 gatilhos"/"2 mockups" against 12 real entries; the homepage's
+  "Mockups interativos" stat had been stuck at 42 despite the guide
+  having grown to 200+ interactive mockups (now 202, matching
+  `validate-mockups.js`'s own count).
+- Totals now: **87 gatilhos, 122 ações, 209 entries** — `search-index.json`
+  and `AUDIT-TABLE.md` regenerated, all 28 pages pass `validate-mockups.js`.
+- See `AUDIT.md` for the full audit round, including items checked and
+  ruled out as not new (enhancements to existing triggers, or third-party
+  service integrations like Browse AI/Mistral AI/Todoist/Jira, out of
+  scope under the native-only rule for now).
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

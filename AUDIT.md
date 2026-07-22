@@ -146,6 +146,62 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-07-22 — Checagem de novidades nativas
+
+Rotina automática comparou os 206 itens do guia (86 gatilhos + 120 ações,
+já incluindo Remove Followers from Opportunity da rodada anterior) contra
+`help.gohighlevel.com` e `ideas.gohighlevel.com/changelog`, com foco
+específico nos 3 candidatos que ficaram pendentes na rodada de 2026-07-10.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada, todos "CONFIRMED SHIPPING")
+1. **Ação — Decisor de IA (AI Decision Maker)** · cat05 A8. Branching por
+   IA: você escreve um prompt + define Options nomeadas, a IA escolhe uma
+   e o workflow segue pela branch correspondente — substitui árvore
+   manual de If/Else. Premium, US$0,01/execução após 100 grátis/mês
+   (Agency Wallet). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+2. **Ação — Traduzir com IA (AI Translate)** · cat05 A9. Traduz um bloco
+   de texto de um idioma pro outro dentro do workflow; saída vira
+   variável reaproveitável em passos seguintes. Premium, cobrada por
+   execução como as outras ações de Workflow AI.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+3. **Gatilho — Upload de Arquivo no Portal do Cliente (Client Portal File
+   Uploaded)** · cat06 G13 (nova seção "Portal do Cliente"). Dispara
+   quando o contato sobe um ou mais arquivos (até 10 de uma vez) na área
+   de Documentos Compartilhados do Client Portal. Nenhum filtro dedicado
+   confirmado além do próprio disparo — auditar direto no Workflow
+   Builder antes de depender de filtro por tipo/pasta.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+
+### ✏️ Rename aplicado (mesma função, nome oficial mudou)
+- **Cat05 A4**: "Extract Info" / "AI Extract Info" → **"Extract Data" /
+  "AI Extract Data"**. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007992-workflow-action-ai-extract-data)
+
+Totais atualizados: **87 gatilhos + 122 ações = 209 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados, `validate-mockups.js`
+passa nas 28 páginas).
+
+### 🔍 Nada mais encontrado além do já sinalizado
+Pesquisa ampla em `help.gohighlevel.com` e no changelog não achou nenhum
+outro gatilho/ação nativo faltando na lista além dos 3 itens acima. Alguns
+achados foram descartados por não serem novidade (já cobertos, ou
+enhancement de trigger existente, não trigger novo):
+- Community Group Member Leaderboard Level Changed / Grant Leaderboard
+  Points — doc de fev/2025, já coberto em Comunidades.
+- Opportunity Changed — ganhou operadores novos (Has Changed/Has Changed
+  To) em 2026, mas é o mesmo trigger, não um novo.
+- New Affiliate Sale — ganhou filtros novos (Affiliate, Campaign, Payout
+  Method, Tax Forms) em mar/2026, trigger em si não é novo.
+- Browse AI e Mistral AI (triggers/ações) e integrações Todoist/Jira
+  (anunciadas 10/07/2026) — são integrações de serviço terceiro dentro do
+  Workflow Builder, mesma categoria cinzenta dos itens Google já
+  adicionados. Fora do escopo "nativo HighLevel" por enquanto — decisão
+  humana se algum dia entrarem.
+
+⚠ Renames ainda pendentes de confirmação humana da rodada anterior
+(não mexidos nesta rodada por falta de reconfirmação): "Summarize
+Conversation" → possível "AI Summarize"; "AI Classify" → possível "AI
+Intent Detection" (ambos cat05).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
