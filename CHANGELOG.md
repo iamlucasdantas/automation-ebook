@@ -10,6 +10,29 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-23 — Automation
+**Native triggers/actions audit — no new items, fixed stale homepage counts**
+
+- Checked `help.gohighlevel.com` and `ideas.gohighlevel.com/changelog` for
+  native workflow triggers/actions shipped since the last audit round
+  (which added "Remove Followers from Opportunity" on 2026-07-21). No new
+  native items found — everything surfaced was either already documented
+  (Payment Failed, No-Show, Opportunity Changed operators, New Review
+  Received, New Affiliate Sales, Leaderboard Level Changed, Offer/Product
+  Access Granted/Removed), a third-party integration out of scope for this
+  guide (Todoist, Basecamp, ClickUp, Jira, Linear, Cal.com, Klaviyo,
+  Hubspot, Housecall Pro), or still an unshipped feature request rather
+  than a shipped trigger (Survey Partial Completion — listed only on the
+  `ideas.gohighlevel.com/automations` request board, not the changelog).
+- Fixed drift: `index.html` tab-counts and section-labels still said
+  **84 gatilhos / 117 ações** while hero-stats and `search-index.json`
+  already said **86 / 120** (the previous round's commit updated
+  hero-stats but missed these two spots). Also refreshed "Última
+  atualização" to 23 de julho de 2026.
+- `search-index.json` (206 entries) and `AUDIT-TABLE.md` verified in sync
+  with the HTML — no regeneration needed.
+- See `AUDIT.md` — Rodada 2026-07-23 for the full writeup.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

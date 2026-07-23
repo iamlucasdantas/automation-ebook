@@ -146,6 +146,38 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-07-23 — Checagem de novidades nativas
+
+Rotina automática comparou os 206 (86 gatilhos + 120 ações) itens do guia
+contra `help.gohighlevel.com` e `ideas.gohighlevel.com/changelog` em busca
+de gatilhos/ações nativos lançados desde a última rodada (que tinha
+adicionado "Remove Followers from Opportunity" em 21/07).
+
+### ✅ Nenhum item novo nativo encontrado
+Tudo que apareceu na busca já estava coberto ou não é nativo:
+- **Payment Failed**, **No-Show** (via Appointment Status), **Opportunity
+  Changed** com operadores Has Changed/Has Changed To, **New Review
+  Received**, **New Affiliate Sales**, **Community Group Member Leaderboard
+  Level Changed**, **Offer/Product Access Granted/Removed** — todos já
+  documentados no guia.
+- **Todoist** (3 triggers + 12 actions), além de Basecamp, ClickUp, Jira,
+  Linear, Cal.com, Klaviyo, Hubspot, Housecall Pro — todas integrações
+  third-party recém-listadas no changelog do HL. Confirmado que nenhuma
+  foi adicionada ao guia (grep limpo) — regra "só nativo" mantida.
+- **Survey Partial Completion** — aparece só em
+  `ideas.gohighlevel.com/automations` (quadro de *feature requests*), não
+  no changelog oficial. Ainda não é uma trigger nativa shipada — não
+  adicionada. Reavaliar em rodada futura se aparecer no changelog.
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: tab-counts e section-labels ainda diziam **84/117**
+  enquanto hero-stats e `search-index.json` já diziam **86/120** desde o
+  commit do A11 (Remove Followers from Opportunity, 21/07) — corrigido.
+- `index.html`: "Última atualização" ainda dizia 10 de julho — atualizado
+  pra 23 de julho de 2026.
+- `search-index.json` e `AUDIT-TABLE.md` conferidos contra o HTML real —
+  já estavam em sync (206 entries), nenhuma regeneração necessária.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
