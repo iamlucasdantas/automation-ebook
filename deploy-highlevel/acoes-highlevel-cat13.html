@@ -2445,6 +2445,7 @@
     <a href="#a4" class="side-link"><span class="side-num">04</span>Remover Acesso a Canal Privado</a>
     <a href="#a5" class="side-link"><span class="side-num">05</span>Atribuir Nível na Classificação</a>
     <a href="#a6" class="side-link"><span class="side-num">06</span>Publicar na Comunidade</a>
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Conceder Pontos de Classificação</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -3286,6 +3287,150 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a7" data-name="conceder pontos de classificação grant community group leaderboard points gamificação">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Conceder Pontos de Classificação</h2>
+      <div class="acao-en">Grant Community Group Leaderboard Points</div>
+      <div class="acao-tags"><span class="info-tag">Gamificação</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Concede uma quantidade específica de pontos no leaderboard de um <strong>grupo da comunidade</strong> pro membro associado ao contato do workflow. É diferente da ação <strong>Atribuir Nível na Classificação</strong> (que define o nível diretamente) — aqui você soma pontos, e o nível do membro no leaderboard sobe sozinho como efeito colateral, assim que ele cruza o threshold configurado pro próximo nível.</p>
+      <p>Serve pra automatizar exatamente o tipo de reconhecimento incremental que dá trabalho fazer na mão: cada comentário, cada módulo concluído, cada indicação vira pontos automaticamente, sem alguém entrando manualmente no grupo pra pontuar cada membro.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Engajamento recompensado</div>
+  <div class="use-case-desc">Comentário em post do grupo → +10 pontos automáticos no leaderboard.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Conclusão de módulo</div>
+  <div class="use-case-desc">Aluno termina um módulo do curso → +50 pontos no grupo VIP de Alunos.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Indicação convertida</div>
+  <div class="use-case-desc">Amigo indicado vira cliente pagante → +100 pontos pro indicador, empurrando ele pro próximo nível do leaderboard.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Community, Group (o grupo específico onde os pontos são concedidos) e Points to Grant (quantidade de pontos a somar).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a7">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunidades/ Grant Points · Módulo Concluído</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a7">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Custom Field</div>
+              <div class="ghl-node-title">Módulo Concluído</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Concluiu módulo — pontuar</span></div><div class="ghl-node-param"><span class="pk">Field</span><span class="pv">Custom Field · modulo_status</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv">Concluído</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">⭐</div>
+            <div>
+              <div class="ghl-node-type">Action · Comunidades</div>
+              <div class="ghl-node-title">Grant Leaderboard Points</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Group</span><span class="pv highlight">Grupo VIP · Alunos Avançado</span></div><div class="ghl-node-param"><span class="pk">Points to Grant</span><span class="pv highlight">+50</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <div class="callout-icon">!</div>
+    <div class="callout-content">
+      <strong>Falha silenciosa se o membro não estiver no grupo</strong>
+      Os pontos só são concedidos se o contato já for <strong>membro do grupo</strong> selecionado. Se ele ainda não entrou no grupo, a ação falha e nenhum ponto é somado — não existe fallback automático de "conceder acesso + pontuar" numa única ação. Garanta que um <strong>Grant Group Access</strong> já tenha rodado antes (ou use um If/Else checando a associação) pra não perder pontuação silenciosamente.
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A7 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Diferente de <strong>Assign Leaderboard Level</strong>: aqui você soma pontos, o nível muda sozinho ao cruzar o threshold. <span class='arrow'>→</span> Exige que o contato já seja membro do grupo selecionado.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Grant Community Group Leaderboard Points</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Pontuar conclusão de módulo" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Community <span class="req">*</span></div><div class="hl-dropdown has-value">Magnetic Flows Community</div></div>
+<div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
+<div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Grupos da community selecionada</div>
+<div class="hl-filter-label">Group <span class="req">*</span></div><div class="hl-dropdown has-value">Grupo VIP · Alunos Avançado</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Points to Grant <span class="req">*</span></div><input class="hl-input" value="50" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Concede pontos; nível muda automaticamente ao cruzar threshold. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups" target="_blank" rel="noopener">help.gohighlevel.com/...gamification-leaderboard-triggers-and-actions-for-community-groups</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3304,7 +3449,7 @@
 
   <div class="footer-top">
     <h3>Categoria 13 completa.</h3>
-    <p>6 ações de Comunidades explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>7 ações de Comunidades explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3422,7 +3567,9 @@
     'a5-1': { kind: 'Trigger · Custom Value', title: 'Pontos > 1000', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Subir de nível na comunidade</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Community · Total Points</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Greater than or equal</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">1000</div></div>` },
     'a5-2': { kind: 'Action · Assign Leaderboard Level', title: 'Assign Level (Prata)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Promover pra nível Prata</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Level *</div><div class="config-field highlight dropdown">Prata (Silver)</div></div><div class="config-section"><div class="config-label">Award Badge</div><div class="config-field">🟢 ON — badge visível no perfil</div></div><div class="config-section"><div class="config-label">Public Announcement</div><div class="config-field">🟢 ON — post automático em #conquistas</div></div><div class="config-section"><div class="config-label">Bonus Perks</div><div class="config-field">Acesso ao canal #prata-exclusivo</div></div>` },
     'a6-1': { kind: 'Trigger · Tag Added', title: 'Tag · Concluiu Certificação', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Celebrar conquista publicamente</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Certificado Concluído</span></div></div>` },
-    'a6-2': { kind: 'Action · Post to Community', title: 'Post to Community', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Anunciar nova certificação em #conquistas</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field highlight dropdown">#conquistas</div></div><div class="config-section"><div class="config-label">Post Author</div><div class="config-field dropdown">Workflow Bot (oficial)</div></div><div class="config-section"><div class="config-label">Content *</div><div class="config-field highlight">🎓 {{contact.first_name}} acabou de concluir o {{custom_value.curso_concluido}}! Manda os parabéns 👏</div></div><div class="config-section"><div class="config-label">Mention Member</div><div class="config-field">🟢 ON — @{{contact.community_handle}}</div></div><div class="config-section"><div class="config-label">Allow Comments</div><div class="config-field">🟢 ON</div></div>` }
+    'a6-2': { kind: 'Action · Post to Community', title: 'Post to Community', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Anunciar nova certificação em #conquistas</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field highlight dropdown">#conquistas</div></div><div class="config-section"><div class="config-label">Post Author</div><div class="config-field dropdown">Workflow Bot (oficial)</div></div><div class="config-section"><div class="config-label">Content *</div><div class="config-field highlight">🎓 {{contact.first_name}} acabou de concluir o {{custom_value.curso_concluido}}! Manda os parabéns 👏</div></div><div class="config-section"><div class="config-label">Mention Member</div><div class="config-field">🟢 ON — @{{contact.community_handle}}</div></div><div class="config-section"><div class="config-label">Allow Comments</div><div class="config-field">🟢 ON</div></div>` },
+    'a7-1': { kind: 'Trigger · Custom Field', title: 'Módulo Concluído', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Concluiu módulo — pontuar</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Custom Field · modulo_status</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Equals</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">Concluído</div></div>` },
+    'a7-2': { kind: 'Action · Grant Community Group Leaderboard Points', title: 'Grant Leaderboard Points', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Pontuar conclusão de módulo</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Group *</div><div class="config-field highlight dropdown">Grupo VIP · Alunos Avançado</div></div><div class="config-section"><div class="config-label">Points to Grant *</div><div class="config-field highlight">50</div></div><div class="config-section"><div class="config-label">⚠ Pré-requisito</div><div class="config-field">Falha se o contato não for membro do grupo</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

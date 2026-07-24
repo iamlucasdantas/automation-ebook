@@ -146,13 +146,71 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-07-24 — Checagem de novidades nativas
+
+Rotina automática comparou os 210 itens do guia contra `help.gohighlevel.com`
+e `ideas.gohighlevel.com` em busca de gatilhos/ações nativos lançados
+recentemente e não cobertos ainda — incluindo os 6 candidatos pendentes
+listados na rodada 2026-07-10 acima.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Arquivo Enviado no Portal do Cliente (Client Portal File
+   Uploaded)** · cat02 G22. Dispara quando um contato sobe um arquivo via
+   Shared Documents do Client Portal.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+2. **Ação — AI Decision Maker** · cat05 A8. Roteamento por IA com
+   instruções em linguagem natural, alternativa ao If/Else manual. Ação
+   Premium, cobra por execução.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+3. **Ação — AI Translate** · cat05 A9. Traduz texto (valor estático ou
+   merge-field) de um idioma de origem pra uso em ação seguinte.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+4. **Ação — Conceder Pontos de Classificação (Grant Community Group
+   Leaderboard Points)** · cat13 A7. Concede pontos de gamificação a um
+   membro já existente do grupo; o nível de leaderboard muda sozinho ao
+   cruzar um threshold. Diferente da A5 "Assign Leaderboard Level" (que
+   seta o nível direto). Falha se o contato não for membro do grupo.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+
+### 🚫 Achado mas corretamente excluído (não é nativo)
+- **Integração Todoist** (New incomplete task / New completed task / New
+  project — 3 polling triggers) — apareceu no changelog oficial da mesma
+  janela de tempo, mas é integração de app terceiro, não gatilho/ação
+  nativo do HL. Mesma regra do Slack → Outbound Webhook: não entra no guia
+  como item nativo.
+
+### 🔍 Candidatos da rodada anterior — resolvidos
+Dos 6 candidatos pendentes na rodada 2026-07-10: 4 já tinham sido
+adicionados por sessões paralelas antes desta rodada rodar (Communities:
+Rejected Join Request / New Post / New Comment, e Update Conversation AI
+Bot and Status — ver CHANGELOG 2026-07-20/21). Os 2 restantes (AI Decision
+Maker, AI Translate) mais o Client Portal File Uploaded e o Grant
+Leaderboard Points (achado novo nesta rodada) foram aplicados acima.
+
+### 🐛 Bug encontrado e corrigido (não era novidade do HL, era bug nosso)
+- `scripts/auto-refine.py`: o set `HAND_CRAFTED` esqueceu
+  `guia-highlevel-cat13.html` e `acoes-highlevel-cat15.html` (ambos criados
+  em 2026-07-10 com configData escrito à mão em alta fidelidade) — rodar
+  `auto-refine.py` reduzia silenciosamente o click-panel dessas 2 páginas
+  pra stubs genéricos espelhando só os parâmetros visíveis (mais pobres),
+  deixando `data-node-id`s órfãos sem entrada correspondente em
+  `configData`. Restaurado o conteúdo original + arquivos adicionados ao
+  `HAND_CRAFTED`. `auto-refine.py --check` limpo depois do fix.
+- `index.html`: `tab-count` e `section-label` de ambas as partes ainda
+  diziam 84/117 enquanto os hero-stats já diziam 86/120 (drift de uma
+  rodada anterior que não propagou pra esses dois pontos). Corrigido junto
+  com os totais desta rodada.
+
+Totais atualizados: **87 gatilhos + 123 ações = 210 entries**, 46 mockups
+interativos (homepage, search-index.json e AUDIT-TABLE.md regenerados,
+`auto-refine.py --check` limpo, validate-mockups.js: ALL 28 PAGES OK).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+1. **Você abre HL** e valida os itens ⚠ ainda pendentes das rodadas
+   anteriores (renames de ações, filtros documentados vs reais)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

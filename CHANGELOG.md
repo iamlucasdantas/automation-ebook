@@ -10,6 +10,47 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-24 — Content
+**Add 4 new native HighLevel workflow items + fix a HAND_CRAFTED gap that was silently gutting two pages' click panels**
+
+- **Client Portal File Uploaded** trigger added (`guia-highlevel-cat02.html`
+  G22) — fires when a contact uploads a file via the Client Portal's Shared
+  Documents experience. [Changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+- **AI Decision Maker** action added (`acoes-highlevel-cat05.html` A8) —
+  Premium AI routing action: takes plain-English instructions and routes the
+  contact down the most appropriate workflow branch instead of a manual
+  If/Else tree. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+- **AI Translate** action added (`acoes-highlevel-cat05.html` A9) —
+  translates input text (static value or merge-field) from a source language
+  for use in a later action. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+- **Grant Community Group Leaderboard Points** action added
+  (`acoes-highlevel-cat13.html` A7) — grants gamification points to an
+  existing group member; their leaderboard level updates automatically once
+  they cross a threshold. Distinct from the existing A5 "Assign Leaderboard
+  Level" (which sets a level directly). Fails silently if the contact isn't
+  already a member of the group — called out in a warning callout.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+- Researched and explicitly excluded a HighLevel "Todoist" integration
+  trigger set (New incomplete/completed task, New project) found in the same
+  changelog sweep — third-party app integration, not native, consistent with
+  this guide's Slack-to-Outbound-Webhook rule.
+- **Bug found and fixed**: `scripts/auto-refine.py`'s `HAND_CRAFTED` set was
+  missing `guia-highlevel-cat13.html` and `acoes-highlevel-cat15.html` (both
+  added 2026-07-10, gold-standard configData written by hand) — any
+  `auto-refine.py` run silently collapsed their rich click-panel configData
+  down to bare auto-generated stubs mirroring the sparse visible node params,
+  orphaning several `data-node-id`s from their config entries. Restored the
+  original rich configData in both files and added them to `HAND_CRAFTED`.
+- Fixed stale drift in `index.html` predating this round: `tab-count` and
+  `section-label` for both parts still said 84 gatilhos / 117 ações while
+  hero-stats already said 86/120 (last fixed by an earlier round that forgot
+  to propagate to these two spots); footer "Última atualização" was stuck at
+  10 de julho.
+- All totals now: **87 gatilhos, 123 ações, 210 painéis, 46 mockups** —
+  `search-index.json` and `AUDIT-TABLE.md` regenerated, `auto-refine.py
+  --check` clean, all 28 pages pass `validate-mockups.js`, homepage
+  last-updated set to 24 de julho de 2026.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
