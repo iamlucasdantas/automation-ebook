@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 36 | 76 | 8 | **120** |
+| Gatilhos | 31 | 50 | 7 | **88** |
+| Ações | 36 | 76 | 10 | **122** |
 
 
 ## Gatilhos · 12 categorias
@@ -56,6 +56,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g19 | [Agendador (Scheduler)](guia-highlevel-cat02.html#g19) | Scheduler | 6 | 3/6 | 🟢 | [ ] | |
 | g20 | [Email Recebido](guia-highlevel-cat02.html#g20) | Inbound Email | 3 | 2/6 | 🟡 | [ ] | |
 | g21 | [Usuário Respondeu](guia-highlevel-cat02.html#g21) | User Replied | 3 | 3/6 | 🟡 | [ ] | |
+| g22 | [SLA de Conversa](guia-highlevel-cat02.html#g22) | Conversation SLA | 0 | 3/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -109,6 +110,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g8 | [Cupom Aplicado](guia-highlevel-cat07.html#g8) | Coupon Code Applied | 2 | 4/6 | 🟡 | [ ] | |
 | g9 | [Limite de Cupom Atingido](guia-highlevel-cat07.html#g9) | Coupon Redemption Limit Reached | 2 | 1/6 | 🟡 | [ ] | |
 | g10 | [Cupom Expirado](guia-highlevel-cat07.html#g10) | Coupon Code Expired | 2 | 2/6 | 🟡 | [ ] | |
+| g11 | [Arquivo Enviado no Portal do Cliente](guia-highlevel-cat07.html#g11) | Client Portal File Uploaded | 0 | 1/6 | 🔴 | [ ] | |
 
 ### CAT08 · Pré-compra
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -150,9 +152,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ### CAT13 · Contatos Google
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
-| g1 | [Contato Google Criado](guia-highlevel-cat13.html#g1) | Google Contact Created | 2 | 2/6 | 🟡 | [ ] | |
-| g2 | [Novo Grupo de Contatos Google](guia-highlevel-cat13.html#g2) | New Google Contact Group | 3 | 2/6 | 🟡 | [ ] | |
-| g3 | [Resposta de Formulário Google](guia-highlevel-cat13.html#g3) | Google Form Response | 3 | 2/6 | 🟡 | [ ] | |
+| g1 | [Contato Google Criado](guia-highlevel-cat13.html#g1) | Google Contact Created | 1 | 2/6 | 🔴 | [ ] | |
+| g2 | [Novo Grupo de Contatos Google](guia-highlevel-cat13.html#g2) | New Google Contact Group | 1 | 2/6 | 🔴 | [ ] | |
+| g3 | [Resposta de Formulário Google](guia-highlevel-cat13.html#g3) | Google Form Response | 1 | 2/6 | 🔴 | [ ] | |
 
 ## Ações · 14 categorias
 
@@ -175,6 +177,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a14 | [Modificar Pontuação de Engajamento](acoes-highlevel-cat01.html#a14) | Modify Contact Engagement Score | 2 | 3/6 | 🟡 | [ ] | |
 | a15 | [Adicionar Seguidores](acoes-highlevel-cat01.html#a15) | Add Contact Followers | 3 | 2/6 | 🟡 | [ ] | |
 | a16 | [Remover Seguidores](acoes-highlevel-cat01.html#a16) | Remove Contact Followers | 3 | 2/6 | 🟡 | [ ] | |
+| a17 | [Associar Registros](acoes-highlevel-cat01.html#a17) | Associate Records | 0 | 3/6 | 🟡 | [ ] | |
 
 ### CAT02 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -320,6 +323,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a4 | [Remover Acesso a Canal Privado](acoes-highlevel-cat13.html#a4) | Revoke Private Channel Access | 4 | 2/6 | 🟡 | [ ] | |
 | a5 | [Atribuir Nível na Classificação](acoes-highlevel-cat13.html#a5) | Assign Leaderboard Level | 4 | 2/6 | 🟡 | [ ] | |
 | a6 | [Publicar na Comunidade](acoes-highlevel-cat13.html#a6) | Post to Community | 3 | 2/6 | 🟡 | [ ] | |
+| a7 | [Conceder Pontos na Classificação](acoes-highlevel-cat13.html#a7) | Grant Community Group Leaderboard Points | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT14 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -332,6 +336,6 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a1 | [Criar Contato Google](acoes-highlevel-cat15.html#a1) | Create Google Contact | 0 | — | 🔴 | [ ] | |
 | a2 | [Atualizar Contato Google](acoes-highlevel-cat15.html#a2) | Update Google Contact | 0 | — | 🔴 | [ ] | |
 | a3 | [Buscar Contato Google](acoes-highlevel-cat15.html#a3) | Find Google Contact | 0 | — | 🔴 | [ ] | |
-| a4 | [Buscar ou Criar Contato Google](acoes-highlevel-cat15.html#a4) | Find or Create Google Contact | 2 | — | 🟡 | [ ] | |
+| a4 | [Buscar ou Criar Contato Google](acoes-highlevel-cat15.html#a4) | Find or Create Google Contact | 0 | — | 🔴 | [ ] | |
 | a5 | [Criar Grupo Google](acoes-highlevel-cat15.html#a5) | Create Google Contact Group | 0 | — | 🔴 | [ ] | |
-| a6 | [Adicionar a Grupos Google](acoes-highlevel-cat15.html#a6) | Add to Google Groups | 2 | — | 🔴 | [ ] | |
+| a6 | [Adicionar a Grupos Google](acoes-highlevel-cat15.html#a6) | Add to Google Groups | 0 | — | 🔴 | [ ] | |

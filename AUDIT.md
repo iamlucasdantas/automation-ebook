@@ -158,3 +158,52 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+## 🆕 Rodada 2026-07-25 — Checagem de novidades nativas
+
+Rotina automática comparou os 210 itens do guia (88 gatilhos + 122 ações,
+já incluindo Update Conversation AI Bot and Status e Remove Followers
+from Opportunity das rodadas de 2026-07-20/21) contra
+`help.gohighlevel.com` e `ideas.gohighlevel.com/changelog` em busca de
+gatilhos/ações nativos lançados recentemente e não cobertos ainda.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · cat02 G22.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+2. **Gatilho — Arquivo Enviado no Portal do Cliente (Client Portal File
+   Uploaded)** · cat07 G11. Era candidato pendente desde a rodada
+   2026-07-10, confirmado e aplicado agora.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+3. **Ação — Associar Registros (Associate Records)** · acoes cat01 A17.
+   Feature em **Labs** (Settings → Labs), sinalizada como tal no guia.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/automatically-associate-crm-records-with-workflows)
+4. **Ação — Conceder Pontos na Classificação (Grant Community Group
+   Leaderboard Points)** · acoes cat13 A7.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+
+Totais atualizados: **88 gatilhos + 122 ações = 210 entries** (homepage,
+`search-index.json` e `AUDIT-TABLE.md` já regenerados, `validate-mockups.js`
+passou nas 28 páginas).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: `tab-count`/`section-label` ainda diziam 84/117 enquanto
+  os hero-stats já diziam 86/120 — corrigido pra 88/122.
+- Denominador `Categoria XX/12` e `Categoria XX/14` desatualizado em 23
+  páginas (não refletia as categorias 13/14/15 adicionadas depois) —
+  corrigido pra `/13` (gatilhos) e `/15` (ações) em todas.
+- `auto-refine.py` corrigiu drift pré-existente não relacionado em
+  `acoes-highlevel-cat15.html` e `guia-highlevel-cat13.html`.
+
+### 🔍 Candidatos investigados nesta rodada, NÃO novos (já cobertos ou fora de escopo)
+- **Community Group Member Leaderboard Level Changed** — já era o gatilho
+  cat11 G5, sem mudança necessária.
+- **Opportunity Owner/Follower em condições If/Else** — é um enhancement
+  de filtro numa ação já existente (If/Else), não um trigger/action novo;
+  fora do escopo desta auditoria (que só rastreia itens nativos novos).
+- **AI Builder (targeted-edit / bulk-edit)** — é uma feature do editor do
+  workflow builder em si, não um trigger/action que aparece na lista de
+  nós; não se aplica ao formato do guia.
+
+### 🟡 Candidatos ainda pendentes (seguem das rodadas anteriores)
+- **AI Decision Maker**, **AI Translate** — sem confirmação humana de
+  campos exatos ainda.

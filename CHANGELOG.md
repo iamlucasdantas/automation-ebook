@@ -10,6 +10,65 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-25 — Content
+**Rodada de checagem de novidades nativas + 4 novos itens confirmados**
+
+Auditoria automática comparou os 210 itens do guia contra `help.gohighlevel.com`
+e `ideas.gohighlevel.com/changelog` em busca de gatilhos/ações nativos lançados
+desde a última rodada (2026-07-21) e ainda não cobertos.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · cat02 G22. Dispara
+   quando o SLA de uma conversa fica "Due Soon", "Overdue" ou é dispensado
+   manualmente ("SLA Dismissed"). Filtros: Message Channel, Tags, Owner,
+   Custom Fields, Avoid Repeated Triggers (evita disparo repetido na mesma
+   conversa dentro de 24h). [Changelog oficial](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+2. **Gatilho — Arquivo Enviado no Portal do Cliente (Client Portal File
+   Uploaded)** · cat07 G11. Dispara quando o contato sobe um arquivo pela
+   área de Shared Documents do Client Portal — diferente do gatilho
+   "Documentos e Contratos" (que acompanha status de assinatura). Sem
+   filtros dedicados. Esse item já tinha sido flagado como candidato
+   pendente em rodadas anteriores; confirmado e aplicado agora.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+3. **Ação — Associar Registros (Associate Records)** · cat01 A17 (ações).
+   Associa registros do CRM automaticamente com base em filtros de campo
+   — funciona em Contact, Company e Custom Object. Ainda em **Labs**
+   (Settings → Labs → Associate Records - Workflow Action), sinalizado
+   como tal na entrada. [Changelog oficial](https://ideas.gohighlevel.com/changelog/automatically-associate-crm-records-with-workflows)
+4. **Ação — Conceder Pontos na Classificação (Grant Community Group
+   Leaderboard Points)** · cat13 A7 (ações). Concede pontos a um membro
+   dentro de um grupo — diferente da ação "Atribuir Nível na Classificação"
+   (que seta o nível direto): aqui os pontos somam e o nível é recalculado.
+   Falha se o contato não for membro do grupo. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+
+Totais atualizados: **88 gatilhos + 122 ações = 210 entries** (homepage,
+`search-index.json` e `AUDIT-TABLE.md` já regenerados, `validate-mockups.js`
+passou nas 28 páginas).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: hero-stats já diziam 86/120, mas `tab-count` e
+  `section-label` ainda diziam 84/117 (drift desde a rodada de
+  2026-07-20/21 — os commits que adicionaram cat05 A7 e cat07 A11 não
+  atualizaram esses dois lugares). Corrigido pra 88/122 junto com os
+  4 itens novos desta rodada.
+- Denominador `Categoria XX/12` (gatilhos) e `Categoria XX/14` (ações)
+  estava desatualizado em todas as páginas anteriores à adição das
+  categorias 13 (Comunidades, gatilhos) e 14/15 (Certificados/Google,
+  ações) — corrigido pra `/13` e `/15` em todas as 23 páginas afetadas.
+- `auto-refine.py` encontrou e corrigiu drift pré-existente e não
+  relacionado em `acoes-highlevel-cat15.html` e `guia-highlevel-cat13.html`
+  (node-type das triggers Google não especificado + configData
+  desatualizado).
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **AI Decision Maker** (ação premium — roteamento por linguagem natural)
+  — segue pendente de rodadas anteriores.
+- **AI Translate** — segue pendente.
+- **Communities: New Post / New Comment** — já cobertos (cat11 G8/G9),
+  confirmado que não são mais candidatos.
+- **Community Group Join Request Rejected** — já coberto (cat11 G7).
+
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

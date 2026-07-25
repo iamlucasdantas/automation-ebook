@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 210,
   "items": [
     {
       "id": "g1",
@@ -470,6 +470,20 @@
       "href": "guia-highlevel-cat02.html#g21"
     },
     {
+      "id": "g22",
+      "type": "Gatilho",
+      "name": "SLA de Conversa",
+      "en": "Conversation SLA",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara automaticamente quando o SLA de uma conversa muda de estado — em vez de depender de um gestor ficando de olho no painel de SLA, você define o que acontece sozinho. Três eventos possíveis: Due Soon (a conversa entrou na janela de aviso antes de estourar o prazo), Overdue (o prazo máximo de resposta já passou) e SLA Dismissed (um usuário dispensou manualmente o SLA daquela conversa — ex.: quando a última mensagem foi um \"obrigado\" que não precisa resposta).",
+      "keywords": "sla conversa conversation sla vencendo atrasado dismissed",
+      "href": "guia-highlevel-cat02.html#g22"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -930,6 +944,20 @@
       "description": "Dispara quando um cupom atinge data de expiração e se torna inativo. Avaliação é feita pelo sistema quando o momento chega.",
       "keywords": "cupom expirado coupon code expired",
       "href": "guia-highlevel-cat07.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Contratos e Assinaturas",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara automaticamente toda vez que um contato sobe um arquivo pela área de Shared Documents do Client Portal — o espaço onde o cliente troca documentos com você fora do email/WhatsApp. Diferente do gatilho \"Documentos e Contratos\" (que acompanha status de envio/assinatura de um documento que você mandou pro cliente assinar), este dispara quando é o cliente quem sobe um arquivo qualquer — comprovante, RG, contrato assinado por fora, print, etc.",
+      "keywords": "portal do cliente arquivo enviado client portal file uploaded documentos",
+      "href": "guia-highlevel-cat07.html#g11"
     },
     {
       "id": "g1",
@@ -1422,6 +1450,21 @@
       "description": "",
       "keywords": "remover seguidores remove contact followers",
       "href": "acoes-highlevel-cat01.html#a16"
+    },
+    {
+      "id": "a17",
+      "type": "Ação",
+      "name": "Associar Registros",
+      "en": "Associate Records",
+      "category": "Ação",
+      "tags": [
+        "Labs",
+        "Beta",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "associar registros associate records custom object company",
+      "href": "acoes-highlevel-cat01.html#a17"
     },
     {
       "id": "a1",
@@ -2627,6 +2670,20 @@
       "description": "",
       "keywords": "publicar na comunidade post to community",
       "href": "acoes-highlevel-cat13.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Conceder Pontos na Classificação",
+      "en": "Grant Community Group Leaderboard Points",
+      "category": "Ação",
+      "tags": [
+        "Gamificação",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "conceder pontos classificação grant community group leaderboard points gamificação",
+      "href": "acoes-highlevel-cat13.html#a7"
     },
     {
       "id": "a1",
