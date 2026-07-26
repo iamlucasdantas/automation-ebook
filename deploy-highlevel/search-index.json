@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 208,
   "items": [
     {
       "id": "g1",
@@ -468,6 +468,34 @@
       "description": "Dispara quando um usuário/membro do time responde o contato — o oposto do \"Contato Respondeu\" (que só dispara na resposta do cliente). Serve pra automatizar o que acontece assim que um humano do seu time entra na conversa: notificar o gestor, atualizar o estágio da oportunidade, criar tarefa de follow-up, ou parar sequências automáticas porque um atendimento humano já começou.",
       "keywords": "usuario respondeu user replied equipe time membro",
       "href": "guia-highlevel-cat02.html#g21"
+    },
+    {
+      "id": "g22",
+      "type": "Gatilho",
+      "name": "SLA da Conversa",
+      "en": "Conversation SLA",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando uma conversa atinge um marco do SLA de resposta configurado em Configurações → SLA. Três eventos possíveis: Prestes a Vencer (Due Soon — o prazo tá perto), Vencido (Overdue — o prazo estourou) e Dispensado (Dismissed — um usuário marcou manualmente que essa conversa não precisa de resposta). Antes desse gatilho, quem acompanhava o cumprimento de SLA era o gestor olhando o painel; agora dá pra reagir automaticamente dentro do workflow.",
+      "keywords": "sla conversa vencido vencendo dispensado conversation sla due soon overdue dismissed",
+      "href": "guia-highlevel-cat02.html#g22"
+    },
+    {
+      "id": "g23",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um contato envia um ou mais arquivos pela área de Documentos Compartilhados do Client Portal — o cliente entra no portal, clica em \"Share File\", sobe até 10 arquivos de uma vez e submete. Assim que o upload termina, o workflow dispara automaticamente, um por contato/envio.",
+      "keywords": "portal do cliente arquivo enviado client portal file uploaded documento upload",
+      "href": "guia-highlevel-cat02.html#g23"
     },
     {
       "id": "g1",

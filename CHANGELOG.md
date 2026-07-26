@@ -10,6 +10,28 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-26 — Content
+**Add Conversation SLA + Client Portal File Uploaded triggers (scheduled scan)**
+
+- **SLA da Conversa** trigger added (`guia-highlevel-cat02.html` G22) — native
+  trigger that fires on Conversation SLA milestones (Due Soon / Overdue /
+  Dismissed), with filters for message channel, tags, owner and custom
+  fields, plus the "Avoid Repeated Triggers" 24h dedup option. Confirmed via
+  HighLevel's official changelog: [Conversations: SLA Workflow Trigger & Permissions](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+  and [support article](https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas).
+- **Arquivo Enviado no Portal do Cliente** trigger added (`guia-highlevel-cat02.html`
+  G23) — native trigger that fires when a contact uploads one or more files
+  through the Client Portal's Shared Documents area (up to 10 files per
+  submission). Confirmed via HighLevel's official changelog:
+  [Workflow Trigger for file uploads via Client Portal](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal).
+- Checked but **not added** — Community Group Member Leaderboard Level Changed
+  trigger and Assign Leaderboard Level action were already documented
+  (`guia-highlevel-cat11.html` G5, `acoes-highlevel-cat13.html` A5).
+- Totals now: **88 gatilhos, 120 ações, 208 entries** — `index.html`,
+  `search-index.json` and `AUDIT-TABLE.md` regenerated; cat02 footer/nav
+  counts refreshed (also fixed pre-existing stale 84/117 display drift on
+  the homepage tab badges).
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

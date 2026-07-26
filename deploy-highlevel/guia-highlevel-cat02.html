@@ -7422,6 +7422,410 @@
     </div>
   </div>
 
+</div><div class="trigger-block" id="g22" data-name="sla conversa vencido vencendo dispensado conversation sla due soon overdue dismissed">
+  <div class="trigger-head">
+    <div class="trigger-num">22</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Comunicação</div>
+      <h2 class="trigger-name">SLA da Conversa</h2>
+      <div class="trigger-en">Conversation SLA</div>
+      <div class="trigger-tags"><span class="info-tag">Tempo real</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando uma conversa atinge um marco do <strong>SLA de resposta</strong> configurado em Configurações → SLA. Três eventos possíveis: <strong>Prestes a Vencer</strong> (Due Soon — o prazo tá perto), <strong>Vencido</strong> (Overdue — o prazo estourou) e <strong>Dispensado</strong> (Dismissed — um usuário marcou manualmente que essa conversa não precisa de resposta). Antes desse gatilho, quem acompanhava o cumprimento de SLA era o gestor olhando o painel; agora dá pra reagir automaticamente dentro do workflow.</p>
+      <p>Tem uma opção de "Avoid Repeated Triggers" ligada ao SLA: quando ativada, o mesmo workflow só roda uma vez por conversa a cada 24h, mesmo que várias mensagens do mesmo contato gerem novos eventos de SLA — evita disparar a mesma escalada dez vezes seguidas.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Escalar conversa vencida</div><div class="use-case-desc">SLA de 15 min estoura sem resposta → reatribui pro gestor e dispara notificação urgente interna.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Alertar antes de vencer</div><div class="use-case-desc">Evento "Prestes a Vencer" com 5 min de antecedência → lembrete pro atendente responsável, evita o vencimento.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Registrar dispensas manuais</div><div class="use-case-desc">Atendente dispensa o SLA (conversa não precisa resposta) → tag "SLA Dispensado" pra auditoria de qualidade depois.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Evento do SLA</div>
+    <div class="filter-en">SLA Event</div>
+    <div class="filter-type">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Qual marco dispara o workflow: Prestes a Vencer, Vencido ou Dispensado.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Separa a lógica de "avisar antes" (Due Soon) da lógica de "escalar depois" (Overdue) em workflows diferentes.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Canal da Mensagem</div>
+    <div class="filter-en">Message Channel</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe o disparo aos canais selecionados (SMS, Email, WhatsApp, Instagram, Facebook, Live Chat).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> SLA de WhatsApp costuma ser mais curto que o de email — dá pra ter workflows de escalada separados por canal.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Tags</div>
+    <div class="filter-en">Tags</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Só dispara se o contato tem (ou não tem) as tags selecionadas.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Escala SLA vencido de forma diferente pra "Cliente VIP" vs lead frio.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Usuário Responsável</div>
+    <div class="filter-en">Owner</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra pelo usuário atribuído à conversa no momento do evento de SLA.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Notifica só o gestor direto daquele atendente, não o time inteiro.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Campos Personalizados</div>
+    <div class="filter-en">Custom Fields</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Condição extra usando qualquer custom field do contato ou da oportunidade.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Ex.: só escala SLA vencido se "Plano" = Enterprise.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g22">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunicação/ 22 — SLA Vencido → Escalar pro Gestor</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g22">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g22-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Conversation SLA</div>
+              <div class="ghl-node-title">Conversation SLA</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">SLA vencido — escalar</span></div><div class="ghl-node-param"><span class="pk">SLA Event</span><span class="pv">Overdue</span></div><div class="ghl-node-param"><span class="pk">Message Channel</span><span class="pv">SMS, WhatsApp</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g22-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-contact">👤</div>
+            <div>
+              <div class="ghl-node-type">Action · Assign to User</div>
+              <div class="ghl-node-title">Reatribuir para gestor</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Reatribuir · SLA vencido</span></div><div class="ghl-node-param"><span class="pk">Assigned To</span><span class="pv highlight">Gestor Comercial</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g22-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Alertar gestor</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Alerta · SLA vencido</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv">Gestor Comercial</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G22 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Depende do SLA estar configurado em <strong>Configurações → SLA</strong> primeiro. <span class='arrow'>→</span> Combina com "Avoid Repeated Triggers" pra não escalar a mesma conversa 10x no mesmo dia.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Conversation SLA</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="SLA vencido — escalar" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">SLA Event <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Overdue</div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">Opções</div>
+          <div class="field-spec-val" style="margin-top:4px;">
+            <span class="opt-chip">Due Soon</span>
+            <span class="opt-chip">Overdue</span>
+            <span class="opt-chip">Dismissed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Message Channel</div>
+        <div class="hl-multiselect">
+          <span class="hl-multiselect-chip">SMS</span>
+          <span class="hl-multiselect-chip">WhatsApp</span>
+          <input class="hl-multiselect-input" placeholder="+ Adicionar canal">
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Tags</div>
+        <div class="hl-dropdown placeholder">Qualquer tag</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Owner</div>
+        <div class="hl-dropdown placeholder">Qualquer usuário</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Custom Fields</div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">⚡ Condição extra opcional sobre qualquer custom field</div>
+        </div>
+      </div>
+
+      <div class="hl-toggle-row">
+        <div class="hl-filter-label">Avoid Repeated Triggers (24h)</div>
+        <div class="hl-toggle on"></div>
+      </div>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara em eventos de SLA da conversa (Due Soon / Overdue / Dismissed). Doc oficial: <a href="https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions" target="_blank" rel="noopener">ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="trigger-block" id="g23" data-name="portal do cliente arquivo enviado client portal file uploaded documento upload">
+  <div class="trigger-head">
+    <div class="trigger-num">23</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Portal do Cliente</div>
+      <h2 class="trigger-name">Arquivo Enviado no Portal do Cliente</h2>
+      <div class="trigger-en">Client Portal File Uploaded</div>
+      <div class="trigger-tags"><span class="info-tag">Tempo real</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um contato envia um ou mais arquivos pela área de <strong>Documentos Compartilhados</strong> do Client Portal — o cliente entra no portal, clica em "Share File", sobe até 10 arquivos de uma vez e submete. Assim que o upload termina, o workflow dispara automaticamente, um por contato/envio.</p>
+      <p>Antes desse gatilho, a única forma de saber que um cliente subiu documento era o admin ver a notificação in-app manualmente. Agora dá pra automatizar a próxima etapa: avisar o responsável, criar tarefa de revisão, ou avançar a etapa de onboarding sem ninguém precisar checar o portal toda hora.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+<div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Onboarding com documentos</div><div class="use-case-desc">Cliente sobe o contrato assinado no portal → tarefa "Revisar documento" pro time jurídico + oportunidade avança de etapa.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Aprovação de projeto</div><div class="use-case-desc">Cliente envia arquivo de aprovação de arte final → notificação interna pro designer responsável dar sequência à produção.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Confirmar recebimento pro cliente</div><div class="use-case-desc">Arquivo enviado → SMS automático confirmando "recebemos seu documento, retorno em até 24h".</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações disponíveis</div>
+    <div class="filters-grid">
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Portal do Cliente</div>
+    <div class="filter-en">Client Portal</div>
+    <div class="filter-type">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Qual portal (se a conta tem mais de um configurado) deve disparar o workflow.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Necessário quando a agência gerencia portais separados por marca/sub-conta.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Tags</div>
+    <div class="filter-en">Tags</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe o disparo a contatos com as tags selecionadas.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Só roda o fluxo de "revisão jurídica" pra contatos marcados como "Contrato Pendente".</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g23">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunicação/ 23 — Documento Enviado → Revisão Jurídica</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g23">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g23-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Client Portal File Uploaded</div>
+              <div class="ghl-node-title">Client Portal File Uploaded</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Documento enviado no portal</span></div><div class="ghl-node-param"><span class="pk">Client Portal</span><span class="pv">Portal Magnetic Flows</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g23-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">✓</div>
+            <div>
+              <div class="ghl-node-type">Action · Create Task</div>
+              <div class="ghl-node-title">Revisar documento</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Tarefa: revisar documento enviado</span></div><div class="ghl-node-param"><span class="pk">Title</span><span class="pv highlight">Revisar arquivo de {{contact.first_name}}</span></div><div class="ghl-node-param"><span class="pk">Assigned To</span><span class="pv">Time Jurídico</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g23-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">✉</div>
+            <div>
+              <div class="ghl-node-type">Action · Send SMS</div>
+              <div class="ghl-node-title">Confirmar recebimento</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">SMS · confirmação de envio</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv highlight">Recebemos seu documento, {{contact.first_name}}! Retorno em até 24h.</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G23 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Fonte: área de <strong>Documentos Compartilhados</strong> do Client Portal (não confundir com upload de arquivo em custom field). <span class='arrow'>→</span> Suporta múltiplos tipos de arquivo, até 10 por envio.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Client Portal File Uploaded</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Documento enviado no portal" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Client Portal</div>
+        <div class="hl-dropdown has-value">Portal Magnetic Flows</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Has Tag</div>
+        <div class="hl-tag-picker">
+          <span class="hl-tag-chip">Contrato Pendente</span>
+          <input class="hl-multiselect-input" placeholder="+ Selecione ou crie tag">
+        </div>
+      </div>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando um contato sobe arquivo(s) pelo Client Portal. Doc oficial: <a href="https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal" target="_blank" rel="noopener">ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -7441,7 +7845,7 @@
 
   <div class="footer-top">
     <h3>Categoria 02 completa.</h3>
-    <p>21 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>23 gatilhos de eventos explicados com impacto prático e mockups visuais. Próximas 11 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -7555,7 +7959,13 @@
     'g20-3': { kind: 'Action · Internal Notification', title: 'Notificar comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Novo email de orçamento</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Novo email de orçamento recebido de {{inboundEmail.from}}</div></div>` },
     'g21-1': { kind: 'Trigger · User Replied', title: 'User Replied', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Vendedor respondeu lead</div></div><div class="config-section"><div class="config-label">Reply Channel</div><div class="config-field dropdown">SMS</div></div><div class="config-section"><div class="config-label">Assigned User</div><div class="config-field">🟢 ON — só o dono do contato</div></div>` },
     'g21-2': { kind: 'Action · Update Opportunity', title: 'Update Opportunity Status', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar lead como contatado</div></div><div class="config-section"><div class="config-label">Stage *</div><div class="config-field highlight dropdown">Contatado</div></div>` },
-    'g21-3': { kind: 'Action · Internal Notification', title: 'Notificar gestor', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso · SDR respondeu lead</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Gestor Comercial</div></div>` }
+    'g21-3': { kind: 'Action · Internal Notification', title: 'Notificar gestor', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso · SDR respondeu lead</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Gestor Comercial</div></div>` },
+    'g22-1': { kind: 'Trigger · Conversation SLA', title: 'Conversation SLA', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">SLA vencido — escalar</div></div><div class="config-section"><div class="config-label">SLA Event *</div><div class="config-field highlight dropdown">Overdue</div></div><div class="config-section"><div class="config-label">Message Channel</div><div class="config-field">SMS, WhatsApp</div></div><div class="config-section"><div class="config-label">Avoid Repeated Triggers (24h)</div><div class="config-field">🟢 ON</div></div>` },
+    'g22-2': { kind: 'Action · Assign to User', title: 'Reatribuir para gestor', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Reatribuir · SLA vencido</div></div><div class="config-section"><div class="config-label">Assigned To *</div><div class="config-field highlight dropdown">Gestor Comercial</div></div>` },
+    'g22-3': { kind: 'Action · Internal Notification', title: 'Alertar gestor', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Alerta · SLA vencido</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Gestor Comercial</div></div>` },
+    'g23-1': { kind: 'Trigger · Client Portal File Uploaded', title: 'Client Portal File Uploaded', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Documento enviado no portal</div></div><div class="config-section"><div class="config-label">Client Portal</div><div class="config-field dropdown">Portal Magnetic Flows</div></div><div class="config-section"><div class="config-label">Has Tag</div><div class="config-field">Contrato Pendente</div></div>` },
+    'g23-2': { kind: 'Action · Create Task', title: 'Revisar documento', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tarefa: revisar documento enviado</div></div><div class="config-section"><div class="config-label">Title *</div><div class="config-field highlight">Revisar arquivo de {{contact.first_name}}</div></div><div class="config-section"><div class="config-label">Assigned To</div><div class="config-field dropdown">Time Jurídico</div></div>` },
+    'g23-3': { kind: 'Action · Send SMS', title: 'Confirmar recebimento', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">SMS · confirmação de envio</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">Recebemos seu documento, {{contact.first_name}}! Retorno em até 24h.</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========
