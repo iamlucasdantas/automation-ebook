@@ -146,6 +146,60 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-07-27 — Checagem de novidades nativas (execução agendada)
+
+Rotina automática agendada comparou o guia (206 entries na época) contra
+`ideas.gohighlevel.com/changelog` e `help.gohighlevel.com` em busca de
+gatilhos/ações nativos lançados desde a rodada anterior. **Limitação desta
+rodada:** `WebFetch` retornou 403 em todo domínio `gohighlevel.com` (e em
+espelhos de terceiros) — a pesquisa usou só resumos de `WebSearch`, sem
+acesso ao artigo oficial completo. Onde isso deixou o nível de detalhe dos
+campos fraco, está sinalizado abaixo.
+
+### ✅ Candidatos anteriores confirmados como JÁ COBERTOS (não são novidade)
+Itens que apareceram em buscas de "novidades HighLevel 2026" mas que, ao
+conferir contra o guia, já existiam sob outro nome/nó:
+- **Website Visit** → já é o gatilho "Funnel/Website Page View" (cat02 G13).
+- **Invoice** (trigger) → já existe (cat07 gatilho "Invoice").
+- **Review Received** → já é "New Review Received" (cat02 G16).
+- **Community Group Member Leaderboard Level Changed** → já é "Leaderboard
+  Level Changed" (cat11 G5) + ação "Assign Leaderboard Level" (cat13 A5).
+- **New Affiliate Sales** → já existe (cat05 gatilho G3 "Nova Venda de
+  Afiliado"). *Nota: a checagem anterior usou regex com `\|` escapado
+  incorretamente e não encontrou esse item já existente — corrigido nesta
+  rodada, sem duplicar.*
+- **Client Portal File Uploaded** e **Update Conversation AI Bot and
+  Status**, listados como pendentes na rodada 2026-07-10, já foram
+  aplicados em commits posteriores (exceto Client Portal, aplicado agora
+  nesta rodada — ver abaixo).
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada, fidelidade parcial)
+1. **Gatilho — Upload de Arquivo no Portal do Cliente (Client Portal File
+   Uploaded)** · cat06 G13. Confirmado via [HighLevel Changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+   — dispara quando o contato sobe um arquivo pelo Client Portal (Shared
+   Documents). ⚠ Lista de filtros exata **não confirmada** (WebFetch
+   bloqueado no artigo oficial) — mockup foi montado sem filtros nativos
+   assumidos. Revisar contra o painel real do HL antes de considerar
+   100% fiel.
+2. **Ação — Conceder Pontos na Classificação (Grant Community Group
+   Leaderboard Points)** · cat13 A7. Confirmado via o mesmo [artigo oficial](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+   já citado nesta categoria pra Leaderboard Level Changed. Campos: Group
+   (dropdown) + Points (número) — falha se o contato não for membro do
+   grupo selecionado.
+
+Totais atualizados: **87 gatilhos + 121 ações = 208 entries** —
+`search-index.json` e `AUDIT-TABLE.md` regenerados, drift de contagem na
+homepage (tab-counts/section-labels ainda em 84/117 enquanto hero-stats já
+diziam 86/120) corrigido junto.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (fonte fraca ou não-oficial)
+- **Form Partially Completed** (gatilho) — mencionado só em blogs
+  agregadores de SEO (não-oficiais); não encontrado em
+  `ideas.gohighlevel.com/changelog` nem em `help.gohighlevel.com` via
+  busca direta. Não aplicado até aparecer em fonte oficial.
+- **AI Decision Maker** e **AI Translate** — seguem pendentes da rodada
+  2026-07-10, sem novidade encontrada nesta rodada.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

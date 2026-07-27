@@ -10,6 +10,44 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-27 — Content
+**Scheduled native-triggers/actions check: add Client Portal File Uploaded + Grant Community Group Leaderboard Points, fix homepage count drift**
+
+- Researched HighLevel's official changelog (`ideas.gohighlevel.com`) and
+  help docs for native workflow triggers/actions launched since the last
+  round (2026-07-10/2026-07-21). Confirmed several recently-announced items
+  (Website Visit, Invoice, Review Received, Leaderboard Level Changed, New
+  Affiliate Sales) were **already covered** by existing entries under
+  different node names (`Funnel/Website Page View`, `Invoice`, `New Review
+  Received`, `Leaderboard Level Changed`, `New Affiliate Sales`) — no
+  duplicates added.
+- **Gatilho — Upload de Arquivo no Portal do Cliente (Client Portal File
+  Uploaded)** · `guia-highlevel-cat06.html` G13. Fires when a contact
+  uploads a file via the Client Portal's Shared Documents feature.
+  [HighLevel Changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+  — exact filter fields not independently confirmed against the official
+  help article (network access to help.gohighlevel.com was blocked this
+  session), flagged in `AUDIT.md` for a future fidelity pass.
+- **Ação — Conceder Pontos na Classificação (Grant Community Group
+  Leaderboard Points)** · `acoes-highlevel-cat13.html` A7. Companion to
+  the existing "Atribuir Nível na Classificação" (A5) — adds points
+  instead of setting the level directly; level recalculates automatically.
+  Fails if the contact isn't a member of the selected group. Sourced from
+  the same official article already cited for this category's Leaderboard
+  Level Changed trigger.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+- **Hotfix — homepage count drift**: `index.html`'s tab-counts and
+  section-labels still read 84 gatilhos / 117 ações while the hero-stats
+  and per-category cards already summed to the real 86/120 (pre-existing
+  drift from an earlier round that only updated part of the page). Fixed
+  alongside the new totals.
+- Totals now: **87 gatilhos + 121 ações = 208 entries** — `search-index.json`
+  and `AUDIT-TABLE.md` regenerated via the existing scripts, homepage
+  last-updated date bumped to 2026-07-27.
+- Candidates found but **not applied** (unconfirmed against an official
+  source, or field-level detail too thin to build a faithful mockup): see
+  `AUDIT.md` round 2026-07-27.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
