@@ -146,15 +146,82 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-07-28 — Checagem de novidades nativas
+
+Rotina automática comparou os 206 (86 gatilhos + 120 ações) itens do guia
+contra `help.gohighlevel.com` e `ideas.gohighlevel.com/changelog` em busca
+de gatilhos/ações nativos lançados desde a rodada de 10/07. **Só native
+HighLevel** foi considerado — o changelog do período também trouxe HubSpot,
+Cal.com, Todoist, Jira e Apify como novos triggers/actions, mas esses são
+integrações de terceiros (Marketplace apps), fora do escopo deste guia.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · cat02 G22. Dispara
+   quando o SLA de uma conversa fica Due Soon, vira Overdue, ou é
+   dispensado manualmente (SLA Dismissed). Filtros: Message Channel, Tags,
+   Owner, Custom Field, Avoid Repeated Triggers (1x/24h por conversa).
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions) · [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas)
+2. **Gatilho — Arquivo Enviado no Portal (Client Portal File Uploaded)** ·
+   cat07 G11 (nova seção "Portal do Cliente"). Dispara quando um contato
+   sobe um documento na área Shared Documents do Client Portal. Sem
+   filtros de tipo de arquivo no painel. Candidato já apontado na rodada
+   anterior, agora confirmado e aplicado.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+3. **Ação — Traduzir (AI Translate)** · cat05 A8. Traduz texto (mensagem,
+   campo customizado, saída de outra ação de IA) de um idioma pra outro
+   dentro do workflow; resultado fica disponível via Save Output to.
+   Ação Premium. Candidato apontado na rodada anterior, agora confirmado.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+4. **Ação — Agente de Decisão (AI Decision Maker)** · cat05 A9. Roteia o
+   contato entre paths do workflow via instruções em linguagem natural,
+   alternativa ao If/Else manual. Ação Premium. Candidato apontado na
+   rodada anterior, agora confirmado.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+
+Totais atualizados: **88 gatilhos + 122 ações = 210 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados).
+
+### 🟢 Candidatos da rodada anterior já resolvidos (não precisam mais de ação)
+- **Update Conversation AI Bot and Status** — já estava aplicado como cat05
+  A7 desde uma rodada anterior; confirmado presente, nenhuma ação necessária.
+- **Communities: Rejected Join Request / New Post / New Comment** — já
+  aplicados como cat11 G7–G9 numa rodada anterior; confirmado presentes.
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: tab-counts (`13 cat · 84` / `15 cat · 117`) e section-labels
+  (`84 gatilhos` / `117 ações`) ainda diziam os números antigos enquanto os
+  hero-stats já diziam 86/120 desde a rodada de 10/07. Corrigido pros
+  números atuais (88/122).
+- `acoes-highlevel-cat05.html`: side-section-label da sidebar dizia
+  "Workflow AI · 5 ações" enquanto a categoria já tinha 7 ações (AI Agent e
+  Update Conversation AI Bot/Status de rodadas anteriores não tinham
+  atualizado o rótulo). Corrigido pra 9 (já incluindo A8/A9 novas).
+- **`scripts/auto-refine.py` tem um bug ativo** na etapa de regeneração do
+  configData: rodar `python3 scripts/auto-refine.py` (sem `--check`) hoje
+  reescreve `acoes-highlevel-cat15.html` e `guia-highlevel-cat13.html`
+  (páginas de Google Integrações) e **apaga entries inteiras de
+  configData** (ex.: `a4-1`, `a6-1..a6-4` em cat15) além de esvaziar os
+  campos das que sobram pra 1 campo genérico — parece que o parser de nodes
+  visíveis não cobre corretamente essas duas páginas (só alguns triggers
+  delas têm mockup interativo — a4/a6 em cat15, alguns triggers em cat13 —
+  e o restante é estático). **Não apliquei** essa mutação (revertida via
+  `git checkout`). Precisa de correção no script antes de rodar
+  `auto-refine.py` de novo sem `--check` nessas duas páginas — considerar
+  adicioná-las a `HAND_CRAFTED` até o parser ser corrigido.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
-2. Me diz quais aplicar
-3. Eu mexo no HTML + commito
+1. **Corrigir o bug do `auto-refine.py`** listado acima antes de rodar o
+   script de novo fora do modo `--check` (ou adicionar cat13/cat15 a
+   `HAND_CRAFTED` como paliativo).
+2. **Você abre HL** e valida os ~15 itens ⚠ das rodadas anteriores (renomes
+   de ações existentes — Summarize Conversation → AI Summarize, AI Classify
+   → AI Intent Detection, AI Extract Info → AI Extract Data — ainda não
+   aplicados porque afetam como o usuário busca a ação no builder).
+3. Me diz quais aplicar
+4. Eu mexo no HTML + commito
 
-Ou: você marca o estado atual como "good enough" e segue. O conteúdo
-está em ~92% de fidelidade verificada contra docs oficiais.
+Ou: você marca o estado atual como "good enough" e segue. O conteúdo está
+em ~92% de fidelidade verificada contra docs oficiais.

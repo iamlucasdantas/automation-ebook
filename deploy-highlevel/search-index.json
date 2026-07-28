@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 210,
   "items": [
     {
       "id": "g1",
@@ -470,6 +470,20 @@
       "href": "guia-highlevel-cat02.html#g21"
     },
     {
+      "id": "g22",
+      "type": "Gatilho",
+      "name": "SLA de Conversa",
+      "en": "Conversation SLA",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando o SLA de uma conversa muda de estado: fica perto de vencer (Due Soon), vence (Overdue), ou é dispensado manualmente (SLA Dismissed) por um usuário. Substitui o monitoramento manual de prazo de resposta — em vez de um gestor ficar checando o painel de conversas, o workflow reage sozinho assim que o cronômetro aperta.",
+      "keywords": "sla de conversa conversation sla overdue due soon dismissed vencido",
+      "href": "guia-highlevel-cat02.html#g22"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -930,6 +944,20 @@
       "description": "Dispara quando um cupom atinge data de expiração e se torna inativo. Avaliação é feita pelo sistema quando o momento chega.",
       "keywords": "cupom expirado coupon code expired",
       "href": "guia-highlevel-cat07.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado no Portal",
+      "en": "Client Portal File Uploaded",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara automaticamente sempre que um contato sobe um documento na área de Shared Documents do Client Portal — o portal onde o cliente acompanha faturas, contratos e conteúdo da sua conta. Suporta múltiplos formatos de arquivo, e libera você de ficar checando manualmente se o cliente já mandou o que foi pedido.",
+      "keywords": "arquivo enviado no portal client portal file uploaded documento upload",
+      "href": "guia-highlevel-cat07.html#g11"
     },
     {
       "id": "g1",
@@ -2116,6 +2144,34 @@
       "description": "",
       "keywords": "atualizar bot de ia e status update conversation ai bot and status agente",
       "href": "acoes-highlevel-cat05.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Traduzir (IA)",
+      "en": "AI Translate",
+      "category": "Ação",
+      "tags": [
+        "Workflow AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai translate traduzir traducao idioma",
+      "href": "acoes-highlevel-cat05.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Agente de Decisão (IA)",
+      "en": "AI Decision Maker",
+      "category": "Ação",
+      "tags": [
+        "Workflow AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai decision maker roteamento decisao caminho if else",
+      "href": "acoes-highlevel-cat05.html#a9"
     },
     {
       "id": "a1",

@@ -10,6 +10,50 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-28 — Content
+**Add 4 new native HighLevel workflow items found in the routine changelog check**
+
+- **Conversation SLA** trigger added (`guia-highlevel-cat02.html` G22) —
+  fires on SLA Due Soon / Overdue / Dismissed for a conversation, with
+  Message Channel, Tags, Owner, Custom Field filters and an Avoid Repeated
+  Triggers toggle (1x/24h per conversation). [Official changelog](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+- **Client Portal File Uploaded** trigger added (`guia-highlevel-cat07.html`
+  G11, new "Portal do Cliente" side-nav section) — fires when a contact
+  uploads a document via the Client Portal Shared Documents area. Flagged
+  as a candidate in the previous round, now confirmed and applied. [Official changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+- **AI Translate** action added (`acoes-highlevel-cat05.html` A8) —
+  translates text between languages inside the workflow, output available
+  via Save Output to. Premium action. Flagged as a candidate previously,
+  now confirmed. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+- **AI Decision Maker** action added (`acoes-highlevel-cat05.html` A9) —
+  routes contacts across workflow paths from plain-English instructions,
+  an alternative to manual If/Else trees. Premium action. Flagged as a
+  candidate previously, now confirmed. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+- Confirmed HubSpot, Cal.com, Todoist, Jira and Apify triggers/actions
+  from the same changelog window are third-party Marketplace integrations,
+  not native HighLevel — excluded per scope (native-only guide).
+- Confirmed two previously-flagged candidates were already applied in an
+  earlier round and need no further action: Update Conversation AI Bot and
+  Status (cat05 A7) and the 3 Communities triggers (cat11 G7–G9).
+- Fixed count drift found while auditing: `index.html` tab-counts and
+  section-labels still said 84/117 while hero-stats already said 86/120;
+  `acoes-highlevel-cat05.html`'s sidebar section label said "5 ações" while
+  the category already had 7.
+- All totals now match the real HTML content: **88 gatilhos, 122 ações,
+  210 entries** — `search-index.json` and `AUDIT-TABLE.md` regenerated,
+  homepage stats and last-updated date refreshed.
+- Found (and did **not** apply) an active bug in `scripts/auto-refine.py`'s
+  configData-regeneration step: running it without `--check` corrupts
+  `acoes-highlevel-cat15.html` and `guia-highlevel-cat13.html` (Google
+  Integrações pages), deleting whole configData entries. Reverted via
+  `git checkout` and documented in `AUDIT.md` for a human to fix the parser
+  or add both files to `HAND_CRAFTED`.
+- See `AUDIT.md` for the still-pending action renames (Summarize
+  Conversation → AI Summarize, AI Classify → AI Intent Detection, AI
+  Extract Info → AI Extract Data) awaiting human confirmation before
+  applying, since renames affect how users search for the action in the
+  builder.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
