@@ -10,6 +10,83 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-29 — Content
+**Check for new native GHL triggers/actions + fix count drift across 4 files**
+
+Routine check against `help.gohighlevel.com` and `ideas.gohighlevel.com` for
+native workflow items released since the 2026-07-10 round.
+
+- **Ação — Conceder Pontos na Classificação (Grant Community Group Leaderboard
+  Points)** · cat13 A7. Soma pontos ao leaderboard de um grupo da comunidade —
+  diferente da A5 (Assign Leaderboard Level), que seta o nível direto. Não
+  concede pontos se o contato não for membro do grupo. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+- **Ação — Mistral AI (Create Chat Completion / Create Embeddings / Analyze
+  Image)** · cat05 A8. Native Beta integration — connects Mistral language,
+  embedding and vision models to workflows using the user's own Mistral API
+  key. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007779-mistral-ai-workflow-actions)
+- **Gatilho — Form Submitted**: documented the `Domain` / `External Form`
+  filters used when the connected form lives on an AI Studio site (the "AI
+  Studio Form Submitted" changelog item is the same native trigger, not a
+  separate one — added as a filter note on `guia-highlevel-cat02.html` G5
+  instead of a duplicate entry).
+- **Rename** — our "AI Extract Info" → official doc now says **"AI Extract
+  Data"** (same action, confirmed rename, flagged since the 2026-07-10
+  audit). Tagged Premium per official doc (per-execution charge).
+- **Count drift fixed** (found while auditing, not new HL features):
+  - `index.html` tab-counts / section-labels still said 84 gatilhos / 117
+    ações while hero-stats already said 86 / 120 (drift from the
+    2026-07-20/21 commits that updated hero-stats but not these).
+  - `acoes-highlevel-cat05.html` had three different action counts on one
+    page (side-nav said 5, hero-desc said 7, hero-stat-num said 6) — the
+    Update Conversation AI Bot and Status action (07-20) never got the
+    counter bumped everywhere.
+  - `acoes-highlevel-cat07.html` side-nav/hero said 9 ações while the page
+    actually has 11 blocks — the Remove Followers action (07-21) had the
+    same partial-update bug.
+  - `CHANGELOG.md` was missing entries for both of those commits — backfilled
+    below.
+- Totals now: **86 gatilhos, 122 ações, 208 entries** — `search-index.json`
+  and `AUDIT-TABLE.md` regenerated, `validate-mockups.js` run against all 28
+  pages.
+- **Found, not applied** (need a human to confirm exact fields before adding
+  full mockups): **Browse AI** (1 trigger "New Completed Task" + 4 actions:
+  Run Task, Bulk Run Tasks, Get Task, Get Bulk Run — all premium, own API
+  key), **OpenRouter** actions/triggers, **Manus** actions/triggers. See
+  `AUDIT.md` for links.
+
+## 2026-07-21 — Content
+**Add Remove Followers from Opportunity as cat07 A11**
+
+*(Backfilled — this shipped in commit `2140ed4` without a changelog entry.)*
+
+Companion to A10 (Add Followers): removes specific users — or all at once
+via the Remove All Followers toggle — from the opportunity's follower list.
+The specific-users picker is shown disabled while the toggle is ON, matching
+the real panel behavior. Requires an opportunity in context; skipped
+otherwise. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004757-workflow-action-remove-followers-from-opportunity)
+
+Sidebar, configData, index (120 ações / 206 painéis / cat07 card 11), meta
+descriptions, search-index.json (206 entries) and AUDIT-TABLE updated at the
+time. (The page's own hero/side-nav counters were left stale at 9 — fixed in
+the 2026-07-29 round above.)
+
+## 2026-07-20 — Content
+**Add Update Conversation AI Bot and Status as cat05 A6/A7**
+
+*(Backfilled — this shipped in commit `86099b3` without a changelog entry.)*
+
+The per-contact Conversation AI bot control action was missing from the
+ebook. Added to cat05 (AI actions) as an A6 (renumbered to A7 after a rebase
+folded in a parallel session's AI Agent addition), "Atualizar Bot de IA e
+Status" / "Update Conversation AI Bot and Status", verified against the
+official doc. Covers the Conversation AI Bot dropdown, Bot Status
+(Active/Inactive, per contact not global) and the conditional Sleep Timer.
+[Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003821-workflow-action-update-conversation-ai-bot-and-status)
+
+Sidebar, hero description, index card, hero totals, meta descriptions and
+AUDIT-TABLE were updated at the time. (The page's own hero/side-nav counters
+were left stale at 5/6 — fixed in the 2026-07-29 round above.)
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
