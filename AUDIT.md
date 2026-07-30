@@ -136,15 +136,48 @@ com confirmação humana antes de montar o mockup com fidelidade real:
   alternativa ao If/Else manual)
 - **Client Portal File Uploaded** (gatilho — contato sobe arquivo no
   Client Portal)
-- **Communities: Rejected Join Request / New Post / New Comment** (3
-  gatilhos novos de Communities, além dos que já temos)
 - **AI Translate** (ação — traduz texto dentro do workflow)
-- **Update Conversation AI Bot and Status** (ação — troca o bot/status da
-  conversa a partir do workflow)
 
-### ⚠ Rename já sinalizado (não é novo, é nome desatualizado — mantido como está até confirmação)
-- Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
-  (mesma função, possível rename).
+~~Communities: Rejected Join Request / New Post / New Comment~~ — **aplicado**
+em 2026-07-10 (cat11 g6-g9). ~~Update Conversation AI Bot and Status~~ —
+**aplicado** em 2026-07-20 (cat05 A7, ver CHANGELOG).
+
+### ⚠ Rename já sinalizado — **aplicado em 2026-07-29**
+- Nosso "AI Extract Info" → doc oficial é **"AI Extract Data"** (mesma
+  função). Renomeado em `acoes-highlevel-cat05.html` A4, tag Premium
+  adicionada (doc confirma custo por execução).
+
+## 🆕 Rodada 2026-07-29 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com` em busca de itens nativos lançados desde a rodada
+de 2026-07-10.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Ação — Conceder Pontos na Classificação (Grant Community Group
+   Leaderboard Points)** · cat13 A7. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+2. **Ação — Mistral AI** (Create Chat Completion / Create Embeddings /
+   Analyze Image) · cat05 A8. Beta, requer API key própria da Mistral.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007779-mistral-ai-workflow-actions)
+3. **Gatilho — AI Studio — Formulário Enviado (AI Studio Form Submitted)**
+   · `guia-highlevel-cat02.html` G22 (novo, a pedido). Inicialmente tratado
+   como nota de filtro no G5 (Form Submitted) — depois desmembrado em
+   entrada própria com sidebar, mockup e painel de config dedicados,
+   já que é assim que o item aparece no changelog oficial da HighLevel.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007599-connect-forms-and-calendars-in-ai-studio)
+
+Totais atualizados: **87 gatilhos + 122 ações = 209 entries**.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+Achados nesta rodada — integrações nativas reais, mas com múltiplos
+sub-itens cada, o que pede confirmação humana de campos antes de montar
+os mockups com fidelidade real:
+- **Browse AI** — 1 gatilho ("New Completed Task", instantâneo, filtra por
+  Robot) + 4 ações (Run Task, Bulk Run Tasks, Get Task, Get Bulk Run).
+  Premium, requer API key própria da Browse AI. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+- **OpenRouter** — ações/gatilhos (não detalhado ainda, achado só pelo
+  changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
+- **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
 ## Como agora prossegue
 

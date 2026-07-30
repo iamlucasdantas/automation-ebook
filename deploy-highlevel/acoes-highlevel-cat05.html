@@ -2437,7 +2437,7 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Workflow AI · 5 ações</div>
+  <div class="side-section-label">Workflow AI · 8 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Generate Text (Texto)</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Parse Image (Analisar Imagem)</a>
@@ -2446,6 +2446,7 @@
     <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
     <a href="#a6" class="side-link"><span class="side-num">06</span>AI Agent (Agente de IA)</a>
     <a href="#a7" class="side-link"><span class="side-num">07</span>Atualizar Bot de IA e Status</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>Mistral AI</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2464,10 +2465,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 05/15</span>
   <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 7 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação e agentes autônomos com ferramentas nativas.</p>
+  <p class="hero-desc">As 8 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação, agentes autônomos e modelos Mistral com sua própria API key.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">6</span>
+      <span class="hero-stat-num">8</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -2926,14 +2927,14 @@
     </div>
   </div>
 
-</div><div class="acao-block" id="a4" data-name="extract info ai extract info">
+</div><div class="acao-block" id="a4" data-name="extract info ai extract data ai extract info">
   <div class="acao-head">
     <div class="acao-num">04</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
       <h2 class="acao-name">Extract Info</h2>
-      <div class="acao-en">AI Extract Info</div>
-      <div class="acao-tags"><span class="info-tag">Parsing</span></div>
+      <div class="acao-en">AI Extract Data</div>
+      <div class="acao-tags"><span class="info-tag">Parsing</span><span class="info-tag">Premium</span></div>
     </div>
   </div>
 
@@ -3007,10 +3008,10 @@
             <div class="ghl-node-icon action-email">🤖</div>
             <div>
               <div class="ghl-node-type">Action · Workflow AI</div>
-              <div class="ghl-node-title">AI Extract Info</div>
+              <div class="ghl-node-title">AI Extract Data</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">AI Extract Info</span></div><div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv highlight">Prompt customizado com merge fields</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.resultado</span></div><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o-mini</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">AI Extract Data</span></div><div class="ghl-node-param"><span class="pk">Prompt</span><span class="pv highlight">Prompt customizado com merge fields</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv">ai.resultado</span></div><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">GPT-4o-mini</span></div></div>
         </div>
         <div class="ghl-connector"></div>
         <div class="ghl-node" data-node-id="a4-3">
@@ -3053,7 +3054,7 @@
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Extract Info from Text</span>
+              <span>Extract Data from Text</span>
             </div>
           </div>
           <div class="hl-panel-body">
@@ -3073,7 +3074,7 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Extrai campos estruturados de texto livre</strong>
+        <strong>Extrai campos estruturados de texto livre. Ação premium (custo por execução). Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007992-workflow-action-ai-extract-data" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-ai-extract-data</a></strong>
       </div>
     </div>
   </div>
@@ -3528,6 +3529,161 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a8" data-name="mistral ai chat completion embeddings analyze image">
+  <div class="acao-head">
+    <div class="acao-num">08</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Mistral AI</h2>
+      <div class="acao-en">Mistral AI: Create Chat Completion / Create Embeddings / Analyze Image</div>
+      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag">Beta</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Conecta modelos da Mistral (Large, Medium, Small, Ministral, Magistral) direto no workflow, usando a sua própria API key da Mistral — não a conta de IA do HighLevel. Três modos dentro da mesma integração: <strong>Create Chat Completion</strong> (gera texto — resposta, resumo, reescrita, classificação), <strong>Create Embeddings</strong> (vetores pra busca semântica) e <strong>Analyze Image</strong> (visão computacional sobre imagem anexada).</p>
+      <p>A saída fica disponível como variável de workflow pra qualquer etapa seguinte — Send SMS, Send Email, Internal Notification, Update Contact Field ou lógica condicional. Ação em <strong>Beta</strong>: modelos, campos e comportamento ainda podem mudar.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Responder no idioma do contato</div>
+  <div class="use-case-desc">Create Chat Completion gera a resposta já no idioma detectado da mensagem recebida.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Extrair dados de recibo</div>
+  <div class="use-case-desc">Contato anexa foto da nota fiscal → Analyze Image extrai valor, data e fornecedor.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Busca semântica na base de conhecimento</div>
+  <div class="use-case-desc">Create Embeddings vetoriza a pergunta do contato pra achar o artigo mais relevante.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Connect Mistral (cola a API key gerada em console.mistral.ai), Action Type (Create Chat Completion / Create Embeddings / Analyze Image), System Prompt, Prompt, Model e Output Variable.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a8">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/IA/ Mistral · Resposta no Idioma do Contato</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a8">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a8-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Customer Replied</div>
+              <div class="ghl-node-title">Cliente Respondeu</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Reply Channel</span><span class="pv highlight">SMS</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a8-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-ai">🧠</div>
+            <div>
+              <div class="ghl-node-type">Action · Mistral AI</div>
+              <div class="ghl-node-title">Create Chat Completion</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">Mistral Small</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv highlight">ai.resposta</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a8-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">💬</div>
+            <div>
+              <div class="ghl-node-type">Action · Send SMS</div>
+              <div class="ghl-node-title">Enviar Resposta</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Message</span><span class="pv highlight">{{ai.resposta}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A8 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Requer <strong>Connect Mistral</strong> com sua própria API key (console.mistral.ai). <span class='arrow'>→</span> <strong>Action Type</strong> muda os campos abaixo (Chat Completion / Embeddings / Analyze Image).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Mistral AI</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Responder no idioma do contato" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Connect Mistral <span class="req">*</span></div><div class="hl-dropdown has-value">🟢 Conectado — API key salva</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Gerada em console.mistral.ai → API Keys → Create new key</div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Action Type <span class="req">*</span></div><div class="hl-dropdown has-value">Create Chat Completion</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Create Chat Completion</span><span class="opt-chip">Create Embeddings</span><span class="opt-chip">Analyze Image</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">System Prompt</div><textarea class="hl-input" rows="2" style="resize: vertical;">Responda sempre no mesmo idioma da última mensagem do contato. Seja breve e cordial.</textarea></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Prompt <span class="req">*</span></div><textarea class="hl-input highlight" rows="2" style="resize: vertical;">{{contact.last_message}}</textarea></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Model <span class="req">*</span></div><div class="hl-dropdown has-value">Mistral Small</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Famílias disponíveis</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Large</span><span class="opt-chip">Medium</span><span class="opt-chip">Small</span><span class="opt-chip">Ministral</span><span class="opt-chip">Magistral</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output Variable</div><div class="hl-input highlight">ai.resposta</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Beta — requer API key própria da Mistral. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007779-mistral-ai-workflow-actions" target="_blank" rel="noopener">help.gohighlevel.com/...mistral-ai-workflow-actions</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3546,7 +3702,7 @@
 
   <div class="footer-top">
     <h3>Categoria 05 completa.</h3>
-    <p>6 ações de Workflow AI explicadas com impacto prático. Inclui o novo AI Agent, adicionado em julho/2026.</p>
+    <p>8 ações de Workflow AI explicadas com impacto prático. Inclui o AI Agent, o controle de bot de Conversation AI e as ações Mistral AI (Beta).</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3665,7 +3821,7 @@
 
 {{ai.resumo}}</div></div><div class="config-section"><div class="config-label">Added By</div><div class="config-field dropdown">Workflow Bot (IA)</div></div>` },
     'a4-1': { kind: 'Trigger · Customer Replied', title: 'Email Recebido', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Email entrante — extrair dados estruturados</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field"><span class="opt-chip">Email</span></div></div>` },
-    'a4-2': { kind: 'Action · Workflow AI', title: 'AI Extract Info', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Extrair empresa, cargo, intenção</div></div><div class="config-section"><div class="config-label">Input Text *</div><div class="config-field highlight">{{trigger.email_body}}</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Extraia em JSON: empresa, cargo, intencao (orcamento/demonstracao/duvida/outro), urgencia (alta/media/baixa).</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.extracao</div></div><div class="config-section"><div class="config-label">Schema Validation</div><div class="config-field">🟢 ON · valida JSON antes de seguir</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o-mini</div></div>` },
+    'a4-2': { kind: 'Action · Workflow AI', title: 'AI Extract Data', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Extrair empresa, cargo, intenção</div></div><div class="config-section"><div class="config-label">Input Text *</div><div class="config-field highlight">{{trigger.email_body}}</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Extraia em JSON: empresa, cargo, intencao (orcamento/demonstracao/duvida/outro), urgencia (alta/media/baixa).</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.extracao</div></div><div class="config-section"><div class="config-label">Schema Validation</div><div class="config-field">🟢 ON · valida JSON antes de seguir</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o-mini</div></div>` },
     'a4-3': { kind: 'Action · Update Contact', title: 'Update Contact Fields', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Preencher empresa + cargo + intenção</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · empresa</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{ai.extracao.empresa}}</div></div><div class="config-section"><div class="config-label">Additional Mapping</div><div class="config-field">cargo ← {{ai.extracao.cargo}} · intencao ← {{ai.extracao.intencao}} · urgencia ← {{ai.extracao.urgencia}}</div></div>` },
     'a5-1': { kind: 'Trigger · Customer Replied', title: 'Customer Reply', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Classificar resposta pra rotear</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field"><span class="opt-chip">SMS</span> <span class="opt-chip">WhatsApp</span> <span class="opt-chip">Email</span></div></div>` },
     'a5-2': { kind: 'Action · Workflow AI', title: 'AI Classify', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Classificar intenção da resposta</div></div><div class="config-section"><div class="config-label">Input Text *</div><div class="config-field highlight">{{trigger.reply_body}}</div></div><div class="config-section"><div class="config-label">Classes *</div><div class="config-field"><span class="opt-chip">Vendas</span> <span class="opt-chip">Suporte</span> <span class="opt-chip">Cobrança</span> <span class="opt-chip">Cancelamento</span></div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">Classifique esta mensagem em UMA das classes. Retorne apenas o nome da classe.</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.categoria</div></div><div class="config-section"><div class="config-label">Confidence Threshold</div><div class="config-field">0.7 — abaixo disso vai pra triagem humana</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o-mini</div></div>` },
@@ -3674,7 +3830,10 @@
     'a6-2': { kind: 'Action · Workflow AI', title: 'AI Agent (Qualificação)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Agente de Qualificação de Leads</div></div><div class="config-section"><div class="config-label">Instructions *</div><div class="config-field highlight">Você é um agente de qualificação. Analise os dados de {{contact.first_name}}. Se orçamento acima de R$5.000, crie oportunidade "Quente". Envie SMS de boas-vindas. Adicione tag "Lead Qualificado".</div></div><div class="config-section"><div class="config-label">Tools</div><div class="config-field"><span class="opt-chip">Create Opportunity</span> <span class="opt-chip">Send SMS</span> <span class="opt-chip">Add Contact Tag</span> <span class="opt-chip">Update Contact</span></div></div><div class="config-section"><div class="config-label">Knowledge Base</div><div class="config-field dropdown">Base de Qualificação Magnetic Funnels</div></div><div class="config-section"><div class="config-label">Model</div><div class="config-field dropdown">GPT-4o</div></div><div class="config-section"><div class="config-label">Output Format</div><div class="config-field dropdown">JSON</div></div><div class="config-section"><div class="config-label">Save Output to</div><div class="config-field highlight">{{contact.agente_resultado}}</div></div>` },
     'a7-1': { kind: 'Trigger · Customer Replied', title: 'Pediu atendente humano', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Handoff — cliente pediu humano</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field dropdown">WhatsApp</div></div><div class="config-section"><div class="config-label">Contains Phrase</div><div class="config-field highlight">falar com atendente</div></div>` },
     'a7-2': { kind: 'Action · Update Conversation AI Bot and Status', title: 'Update AI Bot & Status', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Desligar bot — handoff humano</div></div><div class="config-section"><div class="config-label">Conversation AI Bot *</div><div class="config-field highlight dropdown">Bot Vendas — Magnetic</div></div><div class="config-section"><div class="config-label">Bot Status *</div><div class="config-field highlight dropdown">Inactive</div></div><div class="config-section"><div class="config-label">Sleep Timer</div><div class="config-field">4 horas — reativa automático depois</div></div><div class="config-section"><div class="config-label">Escopo</div><div class="config-field">Por contato — bot continua ativo pros outros</div></div>` },
-    'a7-3': { kind: 'Action · Internal Notification', title: 'Chamar atendente', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time — assumir conversa</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Push</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Atendimento</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">{{contact.name}} pediu humano — bot dormindo por 4h</div></div>` }
+    'a7-3': { kind: 'Action · Internal Notification', title: 'Chamar atendente', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time — assumir conversa</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Push</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Atendimento</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">{{contact.name}} pediu humano — bot dormindo por 4h</div></div>` },
+    'a8-1': { kind: 'Trigger · Customer Replied', title: 'Cliente Respondeu', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cliente respondeu — gerar resposta com Mistral</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field highlight dropdown">SMS</div></div>` },
+    'a8-2': { kind: 'Action · Mistral AI', title: 'Create Chat Completion', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Responder no idioma do contato</div></div><div class="config-section"><div class="config-label">Connect Mistral *</div><div class="config-field">🟢 Conectado — API key própria</div></div><div class="config-section"><div class="config-label">Action Type *</div><div class="config-field highlight dropdown">Create Chat Completion</div></div><div class="config-section"><div class="config-label">System Prompt</div><div class="config-field">Responda sempre no mesmo idioma da última mensagem do contato</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">{{contact.last_message}}</div></div><div class="config-section"><div class="config-label">Model *</div><div class="config-field dropdown">Mistral Small</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.resposta</div></div>` },
+    'a8-3': { kind: 'Action · Send SMS', title: 'Enviar Resposta', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Enviar resposta gerada</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{ai.resposta}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
