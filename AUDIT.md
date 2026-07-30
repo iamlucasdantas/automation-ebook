@@ -159,11 +159,14 @@ de 2026-07-10.
 2. **Ação — Mistral AI** (Create Chat Completion / Create Embeddings /
    Analyze Image) · cat05 A8. Beta, requer API key própria da Mistral.
    [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007779-mistral-ai-workflow-actions)
-3. **Gatilho — Form Submitted**: nota de filtros Domain/External Form
-   adicionada pra cobrir o caso de formulários AI Studio (não é gatilho
-   novo — é o mesmo Form Submitted, com 2 filtros a mais nesse contexto).
+3. **Gatilho — AI Studio — Formulário Enviado (AI Studio Form Submitted)**
+   · `guia-highlevel-cat02.html` G22 (novo, a pedido). Inicialmente tratado
+   como nota de filtro no G5 (Form Submitted) — depois desmembrado em
+   entrada própria com sidebar, mockup e painel de config dedicados,
+   já que é assim que o item aparece no changelog oficial da HighLevel.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007599-connect-forms-and-calendars-in-ai-studio)
 
-Totais atualizados: **86 gatilhos + 122 ações = 208 entries**.
+Totais atualizados: **87 gatilhos + 122 ações = 209 entries**.
 
 ### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
 Achados nesta rodada — integrações nativas reais, mas com múltiplos

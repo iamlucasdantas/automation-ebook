@@ -11,6 +11,23 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-07-29 — Content
+**Add AI Studio Form Submitted as its own trigger (requested)**
+
+The earlier round today treated "AI Studio Form Submitted" as a filter
+note on the existing Form Submitted trigger (G5) instead of a separate
+entry. On request, added it as a full standalone trigger instead:
+
+- **Gatilho — AI Studio — Formulário Enviado (AI Studio Form Submitted)**
+  · `guia-highlevel-cat02.html` G22, new "AI Studio" sidebar section.
+  Same underlying Form Submitted engine, applied to forms embedded in an
+  AI Studio site, with its own `Domain` / `External Form` filters (both
+  required — a site can have more than one AI Studio domain/form). The
+  filter note added earlier on G5 stays as a cross-reference. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007599-connect-forms-and-calendars-in-ai-studio)
+- Sidebar, hero-stats, footer, `index.html` (Eventos card + aggregate
+  totals), `search-index.json` and `AUDIT-TABLE.md` updated.
+- Totals now: **87 gatilhos, 122 ações, 209 entries**.
+
+## 2026-07-29 — Content
 **Check for new native GHL triggers/actions + fix count drift across 4 files**
 
 Routine check against `help.gohighlevel.com` and `ideas.gohighlevel.com` for

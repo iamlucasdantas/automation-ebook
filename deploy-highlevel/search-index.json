@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 208,
+  "total": 209,
   "items": [
     {
       "id": "g1",
@@ -468,6 +468,20 @@
       "description": "Dispara quando um usuário/membro do time responde o contato — o oposto do \"Contato Respondeu\" (que só dispara na resposta do cliente). Serve pra automatizar o que acontece assim que um humano do seu time entra na conversa: notificar o gestor, atualizar o estágio da oportunidade, criar tarefa de follow-up, ou parar sequências automáticas porque um atendimento humano já começou.",
       "keywords": "usuario respondeu user replied equipe time membro",
       "href": "guia-highlevel-cat02.html#g21"
+    },
+    {
+      "id": "g22",
+      "type": "Gatilho",
+      "name": "AI Studio — Formulário Enviado",
+      "en": "AI Studio Form Submitted",
+      "category": "AI Studio",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um visitante preenche um formulário conectado dentro de um site gerado pelo AI Studio (o site builder com IA do HighLevel). É o mesmo motor do gatilho \"Formulário Preenchido\" (Form Submitted) — só que aplicado a forms embutidos numa página AI Studio, com dois filtros específicos desse contexto: Domain (qual domínio do site AI Studio) e External Form (qual formulário embutido na página).",
+      "keywords": "ai studio formulário enviado form submitted site ia domain external form",
+      "href": "guia-highlevel-cat02.html#g22"
     },
     {
       "id": "g1",
