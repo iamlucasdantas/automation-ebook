@@ -10,6 +10,58 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-30 — Content
+**Routine check for new native GHL triggers/actions: 4 added, count drift fixed**
+
+Scheduled audit against `help.gohighlevel.com` and `ideas.gohighlevel.com/changelog`
+for native workflow triggers/actions launched since the last check
+(2026-07-10/07-21) and not yet covered. Only items with a dedicated official
+doc or changelog entry were added — no renames applied without human
+confirmation (see `AUDIT.md`).
+
+### ✅ Added
+1. **Gatilho — Formulário AI Studio Preenchido (AI Studio Form Submitted)** ·
+   `guia-highlevel-cat02.html` G22. Brand-new trigger (released 2026-07-28/29):
+   fires when a visitor submits a form connected on an AI Studio-built site —
+   previously required an External Tracking workaround.
+   [Official changelog](https://ideas.gohighlevel.com/changelog/ai-studio-form-submitted-workflow-trigger)
+2. **Ação — Tomador de Decisão por IA (AI Decision Maker)** ·
+   `acoes-highlevel-cat05.html` A8. Premium action that routes contacts across
+   workflow branches using plain-English instructions instead of manual
+   If/Else trees. Confirmed as a leftover candidate from the 2026-07-10 round.
+   [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+3. **Ação — Traduzir com IA (AI Translate)** · `acoes-highlevel-cat05.html` A9.
+   Translates static text or a custom variable into a target language, output
+   saved to a variable for use in later actions. Also a leftover candidate
+   from 2026-07-10.
+   [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+4. **Gatilho — Upload de Arquivo no Portal do Cliente (Client Portal File
+   Uploaded)** · `guia-highlevel-cat06.html` G13, new "Portal do Cliente"
+   sub-category. Fires when a contact uploads a file via Client Portal Shared
+   Documents. Also a leftover candidate from 2026-07-10.
+   [Official changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+
+### 🐛 Drift fixed (pre-existing, found while auditing — not new HL features)
+- `index.html`: tab-counts and section-labels still said 84 gatilhos/117 ações
+  while hero-stats and meta description already said 86/120 — all now read
+  88/122 (post-addition). Category cards for Eventos, Cursos, and Workflow AI
+  bumped to match their real content.
+- `acoes-highlevel-cat05.html`: hero-desc said "7 ações" but hero-stat-num and
+  side-nav label said "6"/"5" — both were stale; side-nav breadcrumb said
+  "05/14" while hero-tag said "05/15" (there are 15 action categories).
+- `guia-highlevel-cat06.html`: hero-stat said "10 gatilhos cobertos" against
+  12 real entries (footer already correctly said 12). Breadcrumb/footer-legal
+  said "06/12" and "06 de 12" against 13 real trigger categories (cat13
+  Google was added after this text was last touched).
+- `guia-highlevel-cat02.html`: same "0X/12" stale total (13 real categories)
+  in breadcrumb and footer-legal.
+- `AUDIT-TABLE.md` and `search-index.json` regenerated from source — now
+  report 88 gatilhos + 122 ações = 210 entries, matching the HTML.
+
+Totals now: **88 gatilhos + 122 ações = 210 entries**. Remaining rename
+candidate from prior rounds (AI Extract Info → AI Extract Data) still
+pending human confirmation — see `AUDIT.md`.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

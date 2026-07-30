@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 36 | 76 | 8 | **120** |
+| Gatilhos | 31 | 54 | 3 | **88** |
+| Ações | 36 | 78 | 8 | **122** |
 
 
 ## Gatilhos · 12 categorias
@@ -56,6 +56,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g19 | [Agendador (Scheduler)](guia-highlevel-cat02.html#g19) | Scheduler | 6 | 3/6 | 🟢 | [ ] | |
 | g20 | [Email Recebido](guia-highlevel-cat02.html#g20) | Inbound Email | 3 | 2/6 | 🟡 | [ ] | |
 | g21 | [Usuário Respondeu](guia-highlevel-cat02.html#g21) | User Replied | 3 | 3/6 | 🟡 | [ ] | |
+| g22 | [Formulário AI Studio Preenchido](guia-highlevel-cat02.html#g22) | AI Studio Form Submitted | 3 | 2/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -95,6 +96,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g10 | [Produto Iniciado](guia-highlevel-cat06.html#g10) | Product Started | 2 | 2/6 | 🟡 | [ ] | |
 | g11 | [Produto Completado](guia-highlevel-cat06.html#g11) | Product Completed | 2 | 3/6 | 🟢 | [ ] | |
 | g12 | [Login de Usuário](guia-highlevel-cat06.html#g12) | User Login | 2 | 2/6 | 🟡 | [ ] | |
+| g13 | [Upload de Arquivo no Portal do Cliente](guia-highlevel-cat06.html#g13) | Client Portal File Uploaded | 3 | 2/6 | 🟡 | [ ] | |
 
 ### CAT07 · Recebimento
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -245,6 +247,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Classify | 2 | 2/6 | 🟡 | [ ] | |
 | a6 | [Agente de IA](acoes-highlevel-cat05.html#a6) | AI Agent | 2 | 3/6 | 🟢 | [ ] | |
 | a7 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a7) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
+| a8 | [Tomador de Decisão por IA](acoes-highlevel-cat05.html#a8) | AI Decision Maker | 2 | 2/6 | 🟡 | [ ] | |
+| a9 | [Traduzir com IA](acoes-highlevel-cat05.html#a9) | AI Translate | 2 | 2/6 | 🟡 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

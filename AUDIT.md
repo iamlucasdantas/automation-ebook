@@ -146,14 +146,60 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-07-30 — Checagem automática de novidades nativas
+
+Rotina automática (scheduled task) comparou o guia contra
+`help.gohighlevel.com` e `ideas.gohighlevel.com/changelog` em busca de
+gatilhos/ações nativos lançados desde a última checagem. Sem humano
+disponível nesta execução — só aplicados itens com doc/changelog oficial
+confirmado; nenhum rename foi aplicado sem confirmação humana.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Formulário AI Studio Preenchido (AI Studio Form Submitted)**
+   · cat02 G22. Novidade genuína — lançado 2026-07-28/29, disparo dedicado
+   pra submissões de formulário em sites publicados pelo AI Studio (antes
+   dependia de gambiarra com External Tracking). [Changelog oficial](https://ideas.gohighlevel.com/changelog/ai-studio-form-submitted-workflow-trigger)
+2. **Ação — Tomador de Decisão por IA (AI Decision Maker)** · cat05 A8.
+   Era candidato 🔍 pendente da rodada 2026-07-10, agora confirmado com doc
+   dedicada. Ação Premium de roteamento por linguagem natural. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+3. **Ação — Traduzir com IA (AI Translate)** · cat05 A9. Também era
+   candidato 🔍 pendente, confirmado com doc dedicada. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+4. **Gatilho — Upload de Arquivo no Portal do Cliente (Client Portal File
+   Uploaded)** · cat06 G13 (nova sub-categoria "Portal do Cliente"). Também
+   era candidato 🔍 pendente, confirmado com changelog oficial. [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+
+Os outros 3 candidatos 🔍 da rodada 2026-07-10 (Communities: Rejected Join
+Request / New Post / New Comment, Update Conversation AI Bot and Status)
+já tinham sido aplicados em commits anteriores (`693a60a`, `86099b3`) —
+conferido nesta rodada e confirmado presentes no `AUDIT-TABLE.md`.
+
+Totais atualizados: **88 gatilhos + 112 → 122 ações = 210 entries**
+(homepage, search-index.json e AUDIT-TABLE.md regenerados).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html` tab-counts/section-labels (84/117) atrás dos hero-stats/meta
+  (86/120) — nenhum refletia o total real antes desta rodada.
+- `acoes-highlevel-cat05.html`: hero-stat-num (6) e side-nav label (5)
+  atrás do hero-desc (7, correto); breadcrumb "05/14" atrás do hero-tag
+  "05/15" (15 categorias de ações reais).
+- `guia-highlevel-cat06.html`: hero-stat-num dizia 10 gatilhos contra 12
+  reais (footer já estava certo); breadcrumb/footer-legal diziam "06/12"
+  contra as 13 categorias de gatilhos reais (cat13 Google Integrações
+  existe há rodadas mas essas strings nunca foram atualizadas).
+- `guia-highlevel-cat02.html`: mesmo drift de "0X/12" no breadcrumb e
+  footer-legal.
+
+### 🔍 Candidato ainda pendente (sem novidade encontrada nesta rodada)
+Nenhum candidato novo além dos 4 já listados acima. O único item aberto
+que segue precisando de confirmação humana é o rename abaixo.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
-2. Me diz quais aplicar
+1. **Você abre HL** e valida o rename pendente: "AI Extract Info" → "AI
+   Extract Data" (cat05 A4) — mesma função, só nome desatualizado.
+2. Me diz se aplica
 3. Eu mexo no HTML + commito
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo

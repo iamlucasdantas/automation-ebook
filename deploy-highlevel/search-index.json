@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 210,
   "items": [
     {
       "id": "g1",
@@ -470,6 +470,20 @@
       "href": "guia-highlevel-cat02.html#g21"
     },
     {
+      "id": "g22",
+      "type": "Gatilho",
+      "name": "Formulário AI Studio Preenchido",
+      "en": "AI Studio Form Submitted",
+      "category": "Formulários & Captura",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara o workflow quando um visitante preenche um formulário conectado dentro de um site publicado pelo AI Studio (o construtor de sites com IA do HighLevel). É um jeito nativo de puxar as submissões do AI Studio pra dentro das automações — antes disso, quem usava AI Studio dependia de gambiarra com External Tracking pra conectar o formulário a um workflow.",
+      "keywords": "ai studio form submitted formulario ai studio preenchido novo canal",
+      "href": "guia-highlevel-cat02.html#g22"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -790,6 +804,20 @@
       "description": "Dispara sempre que um aluno faz login na plataforma. É o gatilho mais frequente da categoria — use com filtros pra evitar rodar em todo acesso.",
       "keywords": "login de usuário user login",
       "href": "guia-highlevel-cat06.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Upload de Arquivo no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara automaticamente sempre que um contato sobe um arquivo através da experiência de Shared Documents do Client Portal — o portal seguro onde clientes trocam documentos com a sua conta. Aceita múltiplos tipos de arquivo, e assim que o upload termina o workflow já dispara.",
+      "keywords": "upload de arquivo no portal do cliente client portal file uploaded documento",
+      "href": "guia-highlevel-cat06.html#g13"
     },
     {
       "id": "g1",
@@ -2116,6 +2144,35 @@
       "description": "",
       "keywords": "atualizar bot de ia e status update conversation ai bot and status agente",
       "href": "acoes-highlevel-cat05.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Tomador de Decisão por IA",
+      "en": "AI Decision Maker",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai decision maker tomador de decisao por ia roteamento",
+      "href": "acoes-highlevel-cat05.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Traduzir com IA",
+      "en": "AI Translate",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai translate traduzir com ia traducao idioma",
+      "href": "acoes-highlevel-cat05.html#a9"
     },
     {
       "id": "a1",
