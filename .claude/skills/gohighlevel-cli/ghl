@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# GHL CLI wrapper — ativa o venv local e carrega o .env antes de executar.
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+if [ ! -d "$SCRIPT_DIR/.venv" ]; then
+  echo "Erro: .venv não encontrado. Rode ./install.sh primeiro." >&2
+  exit 1
+fi
+
+# shellcheck disable=SC1091
+source "$SCRIPT_DIR/.venv/bin/activate"
+
+# O .env também é lido pelo Python (ghl_client.load_env), mas exportar aqui
+# mantém o comportamento previsível quando o CLI é chamado por outro processo.
+if [ -f "$SCRIPT_DIR/.env" ]; then
+  set -a
+  # shellcheck disable=SC1091
+  source "$SCRIPT_DIR/.env"
+  set +a
+fi
+
+if [ ! -x "$SCRIPT_DIR/.venv/bin/cli-anything-gohighlevel" ]; then
+  echo "Erro: pacote não instalado no venv. Rode ./install.sh novamente." >&2
+  exit 1
+fi
+
+exec "$SCRIPT_DIR/.venv/bin/cli-anything-gohighlevel" "$@"
