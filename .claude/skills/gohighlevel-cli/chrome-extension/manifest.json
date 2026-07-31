@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "GHL Token Grabber",
+  "version": "1.1",
+  "description": "Captura o refresh token e a API key do Firebase no GoHighLevel para uso no CLI",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://app.gohighlevel.com/*",
+    "https://*.gohighlevel.com/*",
+    "https://*.leadconnectorhq.com/*",
+    "https://*.msgsndr.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon48.png"
+    }
+  },
+  "icons": {
+    "48": "icon48.png"
+  }
+}

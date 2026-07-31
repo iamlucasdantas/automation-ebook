@@ -1,0 +1,18 @@
+[
+  { "name": "CF_UTM_SOURCE", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_UTM_MEDIUM", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_UTM_CAMPAIGN", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_UTM_CONTENT", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_UTM_TERM", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_GCLID", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_FBCLID", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_ORIGEM", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_DRIVE_LINK", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_CLICKUP_LINK", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_NOTION_LINK", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_NPS_ULTIMO", "dataType": "NUMERICAL", "model": "contact" },
+  { "name": "CF_DATA_RENOVACAO", "dataType": "DATE", "model": "contact" },
+  { "name": "CF_CONSULTOR", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_INTERESSE", "dataType": "TEXT", "model": "contact" },
+  { "name": "CF_VALOR_PROPOSTA", "dataType": "MONETORY", "model": "contact" }
+]
