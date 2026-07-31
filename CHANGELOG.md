@@ -10,6 +10,30 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-07-31 — Content
+**Add OpenRouter (Generate Response) as cat05 A9 + routine native-item check**
+
+- **Ação — OpenRouter (Generate Response)** added (`acoes-highlevel-cat05.html`
+  A9) — native action that routes the workflow through 300+ AI models
+  (Claude, GPT, Gemini, Perplexity...) via a single OpenRouter connection,
+  separate from HighLevel's native AI account and from Mistral AI's own
+  API key. Fields: System Prompt (optional), Prompt (required, accepts
+  workflow variables), Model Selection (required), Output Variable —
+  confirmed against the official doc via two independent searches.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+- Routine check against `help.gohighlevel.com` / `ideas.gohighlevel.com`
+  for native workflow items released since the 2026-07-29 round. Direct
+  `WebFetch` to `help.gohighlevel.com` returned 403 all round (proxy/bot
+  block), so verification relied on `WebSearch` summaries only — enough
+  to confirm OpenRouter's 3 fields with confidence, not enough to safely
+  build fidelity mockups for the two multi-action candidates still
+  pending (Browse AI: 1 trigger + 4 actions; Manus: 2 triggers + up to 5
+  actions). See `AUDIT.md` for what's confirmed vs. still missing on
+  those two.
+- Totals now: **87 gatilhos, 123 ações, 210 entries**. `search-index.json`
+  and `AUDIT-TABLE.md` regenerated; `validate-mockups.js` passes all 28
+  pages; homepage last-updated date bumped to 2026-07-31.
+
 ## 2026-07-29 — Content
 **Add AI Studio Form Submitted as its own trigger (requested)**
 

@@ -2437,7 +2437,7 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Workflow AI · 8 ações</div>
+  <div class="side-section-label">Workflow AI · 9 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Generate Text (Texto)</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Parse Image (Analisar Imagem)</a>
@@ -2447,6 +2447,7 @@
     <a href="#a6" class="side-link"><span class="side-num">06</span>AI Agent (Agente de IA)</a>
     <a href="#a7" class="side-link"><span class="side-num">07</span>Atualizar Bot de IA e Status</a>
     <a href="#a8" class="side-link"><span class="side-num">08</span>Mistral AI</a>
+    <a href="#a9" class="side-link"><span class="side-num">09</span>OpenRouter</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2465,10 +2466,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 05/15</span>
   <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 8 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação, agentes autônomos e modelos Mistral com sua própria API key.</p>
+  <p class="hero-desc">As 9 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação, agentes autônomos, modelos Mistral com sua própria API key e o roteador multi-modelo OpenRouter.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">8</span>
+      <span class="hero-stat-num">9</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3684,6 +3685,159 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a9" data-name="openrouter generate response ai models perplexity claude openai gemini">
+  <div class="acao-head">
+    <div class="acao-num">09</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">OpenRouter</h2>
+      <div class="acao-en">OpenRouter: Generate Response</div>
+      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Conecta o workflow a mais de 300 modelos de IA através de uma única integração OpenRouter — Claude, GPT, Gemini, Perplexity e outros —, sem precisar de uma conexão nativa separada pra cada provedor. Você escreve um <strong>Prompt</strong> (e opcionalmente um <strong>System Prompt</strong> pra definir o papel/tom da IA), escolhe o <strong>Model</strong> e a ação devolve a resposta gerada.</p>
+      <p>A resposta fica disponível como variável de workflow pra qualquer etapa seguinte — Send SMS, Send Email, Internal Notification, Update Contact Field ou lógica condicional. Diferente do Mistral AI (que exige API key própria da Mistral), a conexão é feita direto com o app OpenRouter dentro do HighLevel.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Testar modelos diferentes sem trocar de ação</div>
+  <div class="use-case-desc">Troca só o campo Model (Claude, GPT, Gemini, Perplexity...) pra comparar qualidade/custo sem remontar o workflow.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Resposta automática personalizada</div>
+  <div class="use-case-desc">Gera a resposta com o modelo de sua escolha usando o histórico da conversa como Prompt.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Resumir ou reescrever conteúdo</div>
+  <div class="use-case-desc">System Prompt define a tarefa (resumir, reescrever, traduzir) e o resultado vira variável pra uso posterior.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Connect OpenRouter (API key da sua conta OpenRouter), System Prompt (opcional), Prompt (obrigatório, aceita variáveis de workflow), Model Selection (obrigatório, entre os 300+ modelos disponíveis) e Output Variable.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a9">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/IA/ OpenRouter · Resposta Personalizada</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a9">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a9-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Customer Replied</div>
+              <div class="ghl-node-title">Cliente Respondeu</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Reply Channel</span><span class="pv highlight">WhatsApp</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a9-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-ai">🧠</div>
+            <div>
+              <div class="ghl-node-type">Action · OpenRouter</div>
+              <div class="ghl-node-title">Generate Response</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Model</span><span class="pv">Claude</span></div><div class="ghl-node-param"><span class="pk">Output Variable</span><span class="pv highlight">ai.resposta_or</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a9-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">💬</div>
+            <div>
+              <div class="ghl-node-type">Action · Send SMS</div>
+              <div class="ghl-node-title">Enviar Resposta</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Message</span><span class="pv highlight">{{ai.resposta_or}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A9 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Requer <strong>Connect OpenRouter</strong> com sua API key (openrouter.ai → Keys). <span class='arrow'>→</span> <strong>Model</strong> lista os 300+ modelos disponíveis na sua conta.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>OpenRouter</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Responder com IA (multi-modelo)" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Connect OpenRouter <span class="req">*</span></div><div class="hl-dropdown has-value">🟢 Conectado — API key salva</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Gerada em openrouter.ai → Keys → Create Key</div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">System Prompt</div><textarea class="hl-input" rows="2" style="resize: vertical;">Você é um atendente cordial. Responda de forma breve e clara.</textarea></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Prompt <span class="req">*</span></div><textarea class="hl-input highlight" rows="2" style="resize: vertical;">{{contact.last_message}}</textarea></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Model <span class="req">*</span></div><div class="hl-dropdown has-value">Claude</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Alguns dos 300+ modelos disponíveis</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Claude</span><span class="opt-chip">GPT</span><span class="opt-chip">Gemini</span><span class="opt-chip">Perplexity</span><span class="opt-chip">+300 modelos</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output Variable</div><div class="hl-input highlight">ai.resposta_or</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Requer conexão própria com sua conta OpenRouter. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-openrouter-generate-response</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3702,7 +3856,7 @@
 
   <div class="footer-top">
     <h3>Categoria 05 completa.</h3>
-    <p>8 ações de Workflow AI explicadas com impacto prático. Inclui o AI Agent, o controle de bot de Conversation AI e as ações Mistral AI (Beta).</p>
+    <p>9 ações de Workflow AI explicadas com impacto prático. Inclui o AI Agent, o controle de bot de Conversation AI, as ações Mistral AI (Beta) e o roteador multi-modelo OpenRouter.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3833,7 +3987,10 @@
     'a7-3': { kind: 'Action · Internal Notification', title: 'Chamar atendente', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time — assumir conversa</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-App</span> <span class="opt-chip">Push</span></div></div><div class="config-section"><div class="config-label">Users</div><div class="config-field dropdown">Time Atendimento</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">{{contact.name}} pediu humano — bot dormindo por 4h</div></div>` },
     'a8-1': { kind: 'Trigger · Customer Replied', title: 'Cliente Respondeu', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cliente respondeu — gerar resposta com Mistral</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field highlight dropdown">SMS</div></div>` },
     'a8-2': { kind: 'Action · Mistral AI', title: 'Create Chat Completion', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Responder no idioma do contato</div></div><div class="config-section"><div class="config-label">Connect Mistral *</div><div class="config-field">🟢 Conectado — API key própria</div></div><div class="config-section"><div class="config-label">Action Type *</div><div class="config-field highlight dropdown">Create Chat Completion</div></div><div class="config-section"><div class="config-label">System Prompt</div><div class="config-field">Responda sempre no mesmo idioma da última mensagem do contato</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">{{contact.last_message}}</div></div><div class="config-section"><div class="config-label">Model *</div><div class="config-field dropdown">Mistral Small</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.resposta</div></div>` },
-    'a8-3': { kind: 'Action · Send SMS', title: 'Enviar Resposta', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Enviar resposta gerada</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{ai.resposta}}</div></div>` }
+    'a8-3': { kind: 'Action · Send SMS', title: 'Enviar Resposta', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Enviar resposta gerada</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{ai.resposta}}</div></div>` },
+    'a9-1': { kind: 'Trigger · Customer Replied', title: 'Cliente Respondeu', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cliente respondeu — gerar resposta com OpenRouter</div></div><div class="config-section"><div class="config-label">Reply Channel *</div><div class="config-field highlight dropdown">WhatsApp</div></div>` },
+    'a9-2': { kind: 'Action · OpenRouter', title: 'Generate Response', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Responder com IA (multi-modelo)</div></div><div class="config-section"><div class="config-label">Connect OpenRouter *</div><div class="config-field">🟢 Conectado — API key própria</div></div><div class="config-section"><div class="config-label">System Prompt</div><div class="config-field">Você é um atendente cordial. Responda de forma breve e clara.</div></div><div class="config-section"><div class="config-label">Prompt *</div><div class="config-field highlight">{{contact.last_message}}</div></div><div class="config-section"><div class="config-label">Model *</div><div class="config-field dropdown">Claude</div></div><div class="config-section"><div class="config-label">Output Variable</div><div class="config-field highlight">ai.resposta_or</div></div>` },
+    'a9-3': { kind: 'Action · Send SMS', title: 'Enviar Resposta', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Enviar resposta gerada</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{ai.resposta_or}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

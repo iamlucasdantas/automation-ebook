@@ -179,6 +179,50 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-07-31 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com` em busca de itens nativos lançados desde a rodada
+de 2026-07-29. **Nota**: o `WebFetch` direto pra `help.gohighlevel.com`
+retornou 403 (bloqueio de proxy/bot) durante toda essa rodada — inclusive
+pra artigos já usados como fonte em rounds anteriores (ex.: o doc do
+Mistral AI) — então a checagem foi feita via `WebSearch` (resumos +
+snippets), não leitura direta do artigo.
+
+### ✅ Adicionado nesta rodada (fonte confirmada por múltiplas buscas independentes)
+1. **Ação — OpenRouter (Generate Response)** · cat05 A9. Ação nativa que
+   conecta o workflow a 300+ modelos de IA (Claude, GPT, Gemini,
+   Perplexity...) via uma única integração OpenRouter — separada da
+   conexão de IA nativa do HighLevel e da API key própria da Mistral.
+   Campos confirmados por duas buscas independentes: **System Prompt**
+   (opcional), **Prompt** (obrigatório, aceita variáveis de workflow) e
+   **Model Selection** (obrigatório). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+
+Totais atualizados: **87 gatilhos + 123 ações = 210 entries** (homepage,
+search-index.json e AUDIT-TABLE.md regenerados, validate-mockups.js
+passou nas 28 páginas).
+
+### 🔍 Candidatos re-checados, ainda NÃO aplicados (campos incompletos pra fidelidade)
+Sem acesso de leitura direto ao artigo oficial nesta rodada, só foi
+possível reforçar/expandir o que o WebSearch já sabia sobre os 3
+candidatos do round anterior — não o suficiente pra montar mockup com
+fidelidade real:
+- **Browse AI** — 1 gatilho (New Completed Task, filtra por Robot) + 4
+  ações (Run Task, Bulk Run Tasks, Get Task, Get Bulk Run). Confirmado
+  nesta rodada: Run Task usa **Robot ID** + **Input Parameters** (aceita
+  variável de workflow); campos de Bulk Run Tasks/Get Task/Get Bulk Run
+  ainda não confirmados. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+- **Manus** — agora com mais clareza: **2 gatilhos** (New Task Created,
+  Task Stopped — nota: só disparam se a task foi criada via ação de
+  workflow, não direto no app Manus) + até 5 ações (create/update/
+  continue/fetch/delete task). Confirmado: Create Task usa **Prompt**
+  (entrada) e devolve **Task ID** (saída, pra encadear steps). Campos das
+  outras 4 ações ainda não confirmados. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
+
+Nenhum dos dois foi aplicado — ainda falta confirmação de campo pra pelo
+menos 3-4 dos sub-itens de cada um. Próxima rodada com `WebFetch`
+funcionando deve fechar isso.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

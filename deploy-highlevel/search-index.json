@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 209,
+  "total": 210,
   "items": [
     {
       "id": "g1",
@@ -2146,6 +2146,20 @@
       "description": "",
       "keywords": "mistral ai chat completion embeddings analyze image",
       "href": "acoes-highlevel-cat05.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "OpenRouter",
+      "en": "OpenRouter: Generate Response",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "openrouter generate response ai models perplexity claude openai gemini",
+      "href": "acoes-highlevel-cat05.html#a9"
     },
     {
       "id": "a1",

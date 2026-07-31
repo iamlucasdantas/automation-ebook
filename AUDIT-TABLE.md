@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 37 | 77 | 8 | **122** |
+| Ações | 38 | 77 | 8 | **123** |
 
 
 ## Gatilhos · 12 categorias
@@ -247,6 +247,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a6 | [Agente de IA](acoes-highlevel-cat05.html#a6) | AI Agent | 2 | 3/6 | 🟢 | [ ] | |
 | a7 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a7) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
 | a8 | [Mistral AI](acoes-highlevel-cat05.html#a8) | Mistral AI: Create Chat Completion / Create Embeddings / Analyze Image | 2 | 3/6 | 🟢 | [ ] | |
+| a9 | [OpenRouter](acoes-highlevel-cat05.html#a9) | OpenRouter: Generate Response | 2 | 3/6 | 🟢 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
