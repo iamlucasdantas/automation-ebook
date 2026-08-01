@@ -10,6 +10,43 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-01 — Content
+**Add 2 new native Opportunity actions + rename Delete→Remove Opportunity + fix stale count/breadcrumb drift**
+
+Automated round: checked `ideas.gohighlevel.com/changelog` and `help.gohighlevel.com` for
+native workflow triggers/actions shipped since the last round (2026-07-21). Third-party
+app integrations (HubSpot, Linear, Todoist, Jira workflow actions/triggers) were found
+but excluded — out of scope, this guide only covers native HighLevel functionality.
+
+- **Find Opportunity** action added (`acoes-highlevel-cat07.html` A12) — locates the
+  earliest/latest opportunity matching AND-combined filters and puts it in context for
+  subsequent opportunity actions. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004751-workflow-action-find-opportunity)
+- **Remove Owner from Opportunity** action added (`acoes-highlevel-cat07.html` A13) —
+  clears the assigned owner from the opportunity in context, opposite of A7 (Add Owner).
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004755-workflow-action-remove-owner-from-opportunity)
+- **A6 renamed**: "Deletar Oportunidade" (Delete Opportunity) → "Remover Oportunidade"
+  (Remove Opportunity) — matches HighLevel's current official name and field set
+  (Opportunities to Remove: All Opportunities for Contact in Pipeline / Triggering-Found
+  Opportunity). This rename had been flagged as an unapplied finding since the audit
+  round in AUDIT.md; now confirmed via dedicated official article and applied.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003365-workflow-action-remove-opportunity)
+- cat07 Oportunidades: 11 → 13 ações.
+- **Drift fixed** (pre-existing, found while auditing, unrelated to the additions above):
+  - `index.html` tab-counts and section-labels said 84 gatilhos / 117 ações while the
+    real page content (confirmed via `scripts/build-audit.py`) was already at 86 / 120
+    before this round's additions — now 86 / 122, hero-stats/meta description/painéis
+    total all in sync.
+  - All 15 `acoes-highlevel-cat*.html` pages: breadcrumb and footer said "de 14" /
+    "XX/14" categories when cat14/cat15 already existed (15 action categories total) —
+    fixed across all 15 pages, footer "Atualizado em" set to agosto de 2026.
+- `search-index.json` and `AUDIT-TABLE.md` regenerated: **86 gatilhos + 122 ações = 208
+  entries**.
+- See `AUDIT.md` for candidates found but **not** applied this round (need more field
+  detail or represent a larger scope change): Client Portal File Uploaded trigger,
+  Custom Object record actions (Create/Update/Clear associated fields, Find
+  Object Record, Find Company — these need a new Object-based Workflows section this
+  guide doesn't cover yet).
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

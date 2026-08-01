@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 36 | 76 | 8 | **120** |
+| Ações | 38 | 76 | 8 | **122** |
 
 
 ## Gatilhos · 12 categorias
@@ -261,12 +261,14 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Mover Estágio no Pipeline](acoes-highlevel-cat07.html#a3) | Move Pipeline Stage | 3 | 2/6 | 🟡 | [ ] | |
 | a4 | [Mover Entre Pipelines](acoes-highlevel-cat07.html#a4) | Move Between Pipelines | 3 | 2/6 | 🟡 | [ ] | |
 | a5 | [Atualizar Status](acoes-highlevel-cat07.html#a5) | Update Opportunity Status | 3 | 3/6 | 🟢 | [ ] | |
-| a6 | [Deletar Oportunidade](acoes-highlevel-cat07.html#a6) | Delete Opportunity | 3 | 2/6 | 🟡 | [ ] | |
+| a6 | [Remover Oportunidade](acoes-highlevel-cat07.html#a6) | Remove Opportunity | 3 | 3/6 | 🟢 | [ ] | |
 | a7 | [Adicionar Dono à Oportunidade](acoes-highlevel-cat07.html#a7) | Add Owner to Opportunity | 3 | 2/6 | 🟡 | [ ] | |
 | a8 | [Adicionar Tag à Opp](acoes-highlevel-cat07.html#a8) | Add Opportunity Tag | 3 | 3/6 | 🟢 | [ ] | |
 | a9 | [Remover Tag da Opp](acoes-highlevel-cat07.html#a9) | Remove Opportunity Tag | 2 | 2/6 | 🟡 | [ ] | |
 | a10 | [Adicionar Seguidores à Oportunidade](acoes-highlevel-cat07.html#a10) | Add Follower(s) to Opportunity | 4 | 3/6 | 🟢 | [ ] | |
 | a11 | [Remover Seguidores da Oportunidade](acoes-highlevel-cat07.html#a11) | Remove Followers from Opportunity | 3 | 4/6 | 🟢 | [ ] | |
+| a12 | [Buscar Oportunidade](acoes-highlevel-cat07.html#a12) | Find Opportunity | 3 | 3/6 | 🟢 | [ ] | |
+| a13 | [Remover Dono da Oportunidade](acoes-highlevel-cat07.html#a13) | Remove Owner from Opportunity | 3 | 1/6 | 🟡 | [ ] | |
 
 ### CAT08 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

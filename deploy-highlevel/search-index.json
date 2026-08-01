@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 208,
   "items": [
     {
       "id": "g1",
@@ -2218,14 +2218,14 @@
     {
       "id": "a6",
       "type": "Ação",
-      "name": "Deletar Oportunidade",
-      "en": "Delete Opportunity",
+      "name": "Remover Oportunidade",
+      "en": "Remove Opportunity",
       "category": "Ação",
       "tags": [
         "⚠ Destrutiva"
       ],
       "description": "",
-      "keywords": "deletar oportunidade delete opportunity",
+      "keywords": "remover oportunidade delete opportunity remove opportunity",
       "href": "acoes-highlevel-cat07.html#a6"
     },
     {
@@ -2284,6 +2284,32 @@
       "description": "",
       "keywords": "remover seguidores da oportunidade remove followers from opportunity",
       "href": "acoes-highlevel-cat07.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Buscar Oportunidade",
+      "en": "Find Opportunity",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "buscar oportunidade find opportunity",
+      "href": "acoes-highlevel-cat07.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Remover Dono da Oportunidade",
+      "en": "Remove Owner from Opportunity",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "remover dono da oportunidade remove owner from opportunity",
+      "href": "acoes-highlevel-cat07.html#a13"
     },
     {
       "id": "a1",

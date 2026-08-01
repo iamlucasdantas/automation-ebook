@@ -146,15 +146,70 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-08-01 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `ideas.gohighlevel.com/changelog` e
+`help.gohighlevel.com` em busca de gatilhos/ações nativos lançados desde a
+rodada anterior (2026-07-21, commit "Add Remove Followers from Opportunity").
+`help.gohighlevel.com` bloqueia fetch direto (403 anti-bot) — pesquisa feita
+via WebSearch com snippets/resumos das páginas oficiais, não fetch completo.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Ação — Buscar Oportunidade (Find Opportunity)** · cat07 A12. Localiza a
+   opp mais antiga/recente do contato batendo com filtros AND; vira o
+   contexto pras próximas ações de opp. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004751-workflow-action-find-opportunity)
+2. **Ação — Remover Dono da Oportunidade (Remove Owner from Opportunity)** ·
+   cat07 A13. Par oposto do Add Owner (A7) — limpa o dono da opp em
+   contexto, sem campos extras de config. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004755-workflow-action-remove-owner-from-opportunity)
+3. **Rename aplicado**: A6 "Deletar Oportunidade" → "Remover Oportunidade"
+   (Remove Opportunity) — era um rename sinalizado e não aplicado desde a
+   primeira auditoria (ver "Ações cat07" acima). Confirmado via artigo
+   oficial dedicado e aplicado, junto com o field real (Opportunities to
+   Remove: All Opportunities for Contact in Pipeline / Triggering-Found
+   Opportunity). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000003365-workflow-action-remove-opportunity)
+
+Totais atualizados: **86 gatilhos + 122 ações = 208 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados). cat07 Oportunidades:
+11 → 13 ações.
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: tab-counts e section-labels diziam 84 gatilhos / 117 ações
+  enquanto o conteúdo real das páginas (via `scripts/build-audit.py`) já
+  estava em 86 / 120 antes mesmo das adições desta rodada — corrigido pra
+  86 / 122, com hero-stats/meta description/painéis todos sincronizados.
+- Todas as 15 páginas `acoes-highlevel-cat*.html`: breadcrumb e footer
+  diziam "de 14" / "XX/14" categorias (contagem desatualizada de quando só
+  existiam 14 categorias de ação) enquanto já existem 15 desde a criação da
+  cat15 Google Integrações — corrigido nas 15 páginas.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (fora de escopo ou sem detalhe suficiente)
+- **Client Portal File Uploaded** (gatilho — nativo, contato sobe arquivo
+  no Client Portal). Já era candidato pendente da rodada 2026-07-10.
+  WebSearch não trouxe detalhe de filtros/campos suficiente pra montar um
+  painel com fidelidade real — mantido pendente até achar o artigo oficial
+  completo ou confirmação manual na UI.
+- **Ações de Custom Object Records** (Create/Update/Clear campos de objeto
+  customizado associado, Find Object Record, Find Company) — nativas, mas
+  pertencem a workflows do tipo "Object-based" (não "Contact-based"), um
+  paradigma que este guia ainda não cobre. Adicionar exigiria decidir se
+  vale abrir uma seção/categoria nova — decisão de escopo, não só de
+  conteúdo. Ficou pendente.
+- Terceirizadas excluídas por não serem nativas (fora do escopo do guia,
+  que documenta só HighLevel nativo): integrações de workflow HubSpot,
+  Linear, Todoist, Jira.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os candidatos
+   🔍 pendentes acima (Client Portal File Uploaded, Custom Object actions,
+   + os 6 candidatos da rodada 2026-07-10 ainda não resolvidos: AI Decision
+   Maker, 3 gatilhos de Communities, AI Translate, Update Conversation AI
+   Bot — confirmar nome real do campo / da action, ou se vale abrir uma
+   seção nova pra Custom Objects)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
-está em ~92% de fidelidade verificada contra docs oficiais.
+está em ~92%+ de fidelidade verificada contra docs oficiais.
