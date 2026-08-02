@@ -91,6 +91,51 @@ outras ações, (b) features novas/experimentais, ou (c) docs sparse:
 Não significa que estão erradas — só que não foi possível auto-validar.
 Pra qualquer uma, abra o HL e me diga se a action existe como está.
 
+## 🆕 Rodada 2026-08-02 — Checagem de novidades nativas
+
+Rotina automática comparou os 206 (86 gatilhos + 120 ações) itens do guia
+contra `help.gohighlevel.com` e `ideas.gohighlevel.com/changelog` em busca
+de gatilhos/ações nativos lançados desde a rodada de 2026-07-10 (a última
+adição de conteúdo real havia sido em 2026-07-21, Remove Followers from
+Opportunity) e ainda não cobertos.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · cat02 G22. Dispara
+   nos eventos do cronômetro de SLA das Conversas (Due Soon / Overdue /
+   SLA Dismissed), com filtros de canal, tags, owner, custom fields e
+   toggle "Avoid Repeated Triggers" (1x/24h por conversa).
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+2. **Gatilho — Orçamento (Estimates)** · cat07 G11. Dispara nos eventos de
+   um Estimate (Sent/Accepted/Declined) — distinto do gatilho genérico
+   "Documentos e Contratos" (g5), que cobre o fluxo de e-signature.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000003704-workflow-trigger-estimates)
+3. **Ação — Enviar Orçamento (Send Estimate)** · cat08 A6. Companion da
+   Estimates trigger — envia um Estimate existente por email/SMS com link
+   de aceite/recusa.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000003705-workflow-action-send-estimate)
+4. **Gatilho — Upload no Portal do Cliente (Client Portal File Uploaded)**
+   · cat07 G12. Candidato sinalizado na rodada 2026-07-10 e agora
+   confirmado/aplicado — dispara quando o contato sobe um arquivo pela
+   experiência "Shared Documents" do Client Portal. Sem filtro dedicado
+   documentado (fidelidade 🔴 no AUDIT-TABLE — cobertura oficial esparsa).
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+5. **Ação — Conceder Pontos na Classificação (Grant Community Group
+   Leaderboard Points)** · cat13 A7. Companion da "Assign Leaderboard
+   Level" já existente — concede pontos a um membro do grupo (requer
+   membership prévio; falha silenciosa se não for membro), o nível sobe
+   sozinho conforme os pontos acumulam.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/community-leaderboard-workflow-trigger-action)
+
+Totais atualizados: **89 gatilhos + 122 ações = 211 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados via
+`scripts/build-search-index.py` e `scripts/build-audit.py`).
+
+### 🔍 Candidato pesquisado, NÃO aplicado (baixa confiança)
+- **Form Partially Completed** — mencionado em blogs terceiros como novo
+  gatilho de 2026, mas não foi possível confirmar em
+  `help.gohighlevel.com` nem no changelog oficial. Fica pendente até
+  achar fonte primária.
+
 ## 🆕 Rodada 2026-07-10 — Checagem de novidades nativas
 
 Rotina automática comparou os 187 (76 gatilhos + 110 ações — já incluindo

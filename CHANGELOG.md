@@ -10,6 +10,61 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-02 — Content
+**Scheduled audit: 5 new native GHL triggers/actions + stale count drift fix**
+
+- **Conversation SLA** trigger added (`guia-highlevel-cat02.html` G22) —
+  fires on the Conversations SLA timer events (Due Soon/Overdue/SLA
+  Dismissed), with channel/tags/owner/custom-field filters and an
+  "Avoid Repeated Triggers" toggle. [Official changelog](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+- **Estimates** trigger added (`guia-highlevel-cat07.html` G11) — fires on
+  Estimate Sent/Accepted/Declined, distinct from the generic "Documents &
+  Contracts" e-signature trigger. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003704-workflow-trigger-estimates)
+- **Send Estimate** action added (`acoes-highlevel-cat08.html` A6) —
+  companion to the Estimates trigger. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003705-workflow-action-send-estimate)
+- **Client Portal File Uploaded** trigger added (`guia-highlevel-cat07.html`
+  G12) — candidate flagged in the 2026-07-10 round, now confirmed and
+  applied. No documented dedicated filters. [Official changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+- **Grant Community Group Leaderboard Points** action added
+  (`acoes-highlevel-cat13.html` A7) — companion to the existing "Assign
+  Leaderboard Level"; grants points to an existing group member, level
+  auto-updates. [Official changelog](https://ideas.gohighlevel.com/changelog/community-leaderboard-workflow-trigger-action)
+- Researched but **not applied**: "Form Partially Completed" trigger —
+  only found in third-party blogs, no primary source confirmed yet.
+- Fixed count drift found while auditing: `index.html` tab-counts and
+  section-labels still said 84/117 while hero-stats already said 86/120;
+  `guia-highlevel-cat02.html` hero "Mockups interativos" stat said 8
+  instead of the real 21 (pre-existing, unrelated to this round's
+  addition). CHANGELOG hadn't been updated since 2026-07-10 despite two
+  real content commits landing on 2026-07-20/21 (Update Conversation AI
+  Bot and Status as cat05 A7, Remove Followers from Opportunity as cat07
+  A11) — both already correctly reflected in the guide's counts, just
+  never logged here.
+- Totals now: **89 gatilhos, 122 ações, 211 entries** —
+  `search-index.json` and `AUDIT-TABLE.md` regenerated via
+  `scripts/build-search-index.py` / `scripts/build-audit.py`, all pages
+  pass `validate-mockups.js`. `index.html` footer date updated.
+
+## 2026-07-21 — Content
+**Add Remove Followers from Opportunity as cat07 A11**
+
+Companion to A10 (Add Followers): removes specific users — or all at once
+via the Remove All Followers toggle — from the opportunity's follower
+list. Requires an opportunity in context; skipped otherwise. Totals:
+120 ações / 206 painéis.
+[Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004757-workflow-action-remove-followers-from-opportunity)
+
+## 2026-07-20 — Content
+**Add Update Conversation AI Bot and Status as cat05 A7 + reconcile parallel sessions**
+
+The per-contact Conversation AI bot control action was missing from the
+ebook. Added to cat05 (AI actions) as A7 "Atualizar Bot de IA e Status"
+(Conversation AI Bot dropdown, Bot Status Active/Inactive, conditional
+Sleep Timer). Landed alongside a parallel session's work (AI Agent as
+cat05 A6, Google Integrações cat13/cat15 pages) — merged and reconciled,
+with `acoes-highlevel-cat15.html` class names normalized (`action-*` →
+`acao-*`) so the Google actions show up in search/audit.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

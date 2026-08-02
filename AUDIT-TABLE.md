@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 36 | 76 | 8 | **120** |
+| Gatilhos | 31 | 54 | 4 | **89** |
+| Ações | 36 | 78 | 8 | **122** |
 
 
 ## Gatilhos · 12 categorias
@@ -56,6 +56,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g19 | [Agendador (Scheduler)](guia-highlevel-cat02.html#g19) | Scheduler | 6 | 3/6 | 🟢 | [ ] | |
 | g20 | [Email Recebido](guia-highlevel-cat02.html#g20) | Inbound Email | 3 | 2/6 | 🟡 | [ ] | |
 | g21 | [Usuário Respondeu](guia-highlevel-cat02.html#g21) | User Replied | 3 | 3/6 | 🟡 | [ ] | |
+| g22 | [SLA de Conversa](guia-highlevel-cat02.html#g22) | Conversation SLA | 3 | 3/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -109,6 +110,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g8 | [Cupom Aplicado](guia-highlevel-cat07.html#g8) | Coupon Code Applied | 2 | 4/6 | 🟡 | [ ] | |
 | g9 | [Limite de Cupom Atingido](guia-highlevel-cat07.html#g9) | Coupon Redemption Limit Reached | 2 | 1/6 | 🟡 | [ ] | |
 | g10 | [Cupom Expirado](guia-highlevel-cat07.html#g10) | Coupon Code Expired | 2 | 2/6 | 🟡 | [ ] | |
+| g11 | [Orçamento (Estimate)](guia-highlevel-cat07.html#g11) | Estimates | 2 | 3/6 | 🟡 | [ ] | |
+| g12 | [Upload no Portal do Cliente](guia-highlevel-cat07.html#g12) | Client Portal File Uploaded | 2 | 1/6 | 🔴 | [ ] | |
 
 ### CAT08 · Pré-compra
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -276,6 +279,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Atualizar Status de Pagamento](acoes-highlevel-cat08.html#a3) | Update Payment Status | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Processar Reembolso](acoes-highlevel-cat08.html#a4) | Process Refund | 4 | 2/6 | 🟡 | [ ] | |
 | a5 | [Cancelar Subscription](acoes-highlevel-cat08.html#a5) | Cancel Subscription | 3 | 3/6 | 🟢 | [ ] | |
+| a6 | [Enviar Orçamento](acoes-highlevel-cat08.html#a6) | Send Estimate | 2 | 3/6 | 🟡 | [ ] | |
 
 ### CAT09 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -320,6 +324,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a4 | [Remover Acesso a Canal Privado](acoes-highlevel-cat13.html#a4) | Revoke Private Channel Access | 4 | 2/6 | 🟡 | [ ] | |
 | a5 | [Atribuir Nível na Classificação](acoes-highlevel-cat13.html#a5) | Assign Leaderboard Level | 4 | 2/6 | 🟡 | [ ] | |
 | a6 | [Publicar na Comunidade](acoes-highlevel-cat13.html#a6) | Post to Community | 3 | 2/6 | 🟡 | [ ] | |
+| a7 | [Conceder Pontos na Classificação](acoes-highlevel-cat13.html#a7) | Grant Community Group Leaderboard Points | 3 | 2/6 | 🟡 | [ ] | |
 
 ### CAT14 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
