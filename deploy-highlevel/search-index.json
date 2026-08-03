@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 210,
+  "total": 213,
   "items": [
     {
       "id": "g1",
@@ -1767,6 +1767,45 @@
       "description": "",
       "keywords": "mensagens interativas do whatsapp whatsapp interactive messages",
       "href": "acoes-highlevel-cat02.html#a26"
+    },
+    {
+      "id": "a27",
+      "type": "Ação",
+      "name": "WhatsApp: Verificar Janela de Atendimento",
+      "en": "WhatsApp Customer Service Window Check",
+      "category": "Ação",
+      "tags": [
+        "🆕 Novo"
+      ],
+      "description": "",
+      "keywords": "whatsapp verificar janela de atendimento whatsapp customer service window check",
+      "href": "acoes-highlevel-cat02.html#a27"
+    },
+    {
+      "id": "a28",
+      "type": "Ação",
+      "name": "WhatsApp: Enviar Flow",
+      "en": "WhatsApp: Send Flows",
+      "category": "Ação",
+      "tags": [
+        "🆕 Novo"
+      ],
+      "description": "",
+      "keywords": "whatsapp enviar flow whatsapp send flows",
+      "href": "acoes-highlevel-cat02.html#a28"
+    },
+    {
+      "id": "a29",
+      "type": "Ação",
+      "name": "WhatsApp: Mídia",
+      "en": "WhatsApp Media",
+      "category": "Ação",
+      "tags": [
+        "🆕 Novo"
+      ],
+      "description": "",
+      "keywords": "whatsapp mídia whatsapp media",
+      "href": "acoes-highlevel-cat02.html#a29"
     },
     {
       "id": "a1",
