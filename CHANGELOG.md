@@ -10,6 +10,13 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-03 — Automation
+**Weekly auto-refine**
+([pending](../../actions))
+
+- `scripts/auto-refine.py` detected drift and reapplied the mechanical refinements (label standardization, filter headers, Slack → Webhook, trigger-type, placeholder cleanup, configData regen).
+- Files touched (2): `acoes-highlevel-cat15.html`, `guia-highlevel-cat13.html`
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
