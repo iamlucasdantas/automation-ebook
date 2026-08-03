@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 37 | 77 | 8 | **122** |
+| Ações | 38 | 77 | 8 | **123** |
 
 
 ## Gatilhos · 12 categorias
@@ -205,6 +205,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a23 | [Confirmação GMB](acoes-highlevel-cat02.html#a23) | GMB Confirmation | 2 | 2/6 | 🔴 | [ ] | |
 | a24 | [SMS via Shortcode](acoes-highlevel-cat02.html#a24) | Shortcode SMS | 2 | 2/6 | 🟡 | [ ] | |
 | a25 | [Anexar Arquivo](acoes-highlevel-cat02.html#a25) | Attach File | 2 | 3/6 | 🟢 | [ ] | |
+| a26 | [Mensagens Interativas do WhatsApp](acoes-highlevel-cat02.html#a26) | WhatsApp Interactive Messages | 2 | 3/6 | 🟢 | [ ] | |
 
 ### CAT03 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
