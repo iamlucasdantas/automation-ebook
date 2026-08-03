@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 208,
   "items": [
     {
       "id": "g1",
@@ -1742,6 +1742,19 @@
       "href": "acoes-highlevel-cat02.html#a25"
     },
     {
+      "id": "a26",
+      "type": "Ação",
+      "name": "Mensagens Interativas do WhatsApp",
+      "en": "WhatsApp Interactive Messages",
+      "category": "Ação",
+      "tags": [
+        "🆕 Novo"
+      ],
+      "description": "",
+      "keywords": "mensagens interativas do whatsapp whatsapp interactive messages",
+      "href": "acoes-highlevel-cat02.html#a26"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Webhook de Saída",
@@ -2627,6 +2640,19 @@
       "description": "",
       "keywords": "publicar na comunidade post to community",
       "href": "acoes-highlevel-cat13.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Conceder Pontos de Leaderboard",
+      "en": "Grant Community Group Leaderboard Points",
+      "category": "Ação",
+      "tags": [
+        "🆕 Novo · Gamificação"
+      ],
+      "description": "",
+      "keywords": "conceder pontos de leaderboard grant community group leaderboard points",
+      "href": "acoes-highlevel-cat13.html#a7"
     },
     {
       "id": "a1",

@@ -26,9 +26,15 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 | **Ações cat10** (Affiliates) | ✅ | 6 | 4 (A4/A5 sem doc) |
 | **Ações cat11** (Memberships) | ✅ | 2 | 2 |
 | **Ações cat12** (IVR) | ✅ | 5 | 4 (A4 rename) |
-| **Ações cat13** (Communities) | ✅ | 6 | 4 (A5/A6 sem doc) |
+| **Ações cat13** (Communities) | ✅ | 7 | 5 (A5/A6 sem doc; A7 nova em 2026-08-03) |
 | **Ações cat14** (Certificados) | ✅ | 1 | 1 |
 | **Total** | **✅** | **185** | **170/185 (92%)** |
+
+_Nota: esta tabela é o snapshot da auditoria original (cat01-cat14) e não foi
+recalculada por inteiro a cada rodada. Pra contagem viva e completa por
+entry — incluindo cat13/cat14 gatilhos e cat15 (Google Integrações) — veja
+[AUDIT-TABLE.md](./AUDIT-TABLE.md), que é auto-gerado por
+`scripts/build-audit.py` a cada rodada e sempre reflete o HTML real._
 
 ## ✅ Fixes aplicados nesta auditoria
 
@@ -129,30 +135,70 @@ search-index.json e AUDIT-TABLE.md já regenerados).
 - `acoes-highlevel-cat03.html`: side-nav e hero-stats esqueceram a A4 (Send
   Conversion Event), mostrando "3 ações" quando já eram 4.
 
+### ⚠ Rename já sinalizado (não é novo, é nome desatualizado — mantido como está até confirmação)
+- Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
+  (mesma função, possível rename).
+
+## 🆕 Rodada 2026-08-03 — Checagem de novidades nativas
+
+Rotina automática comparou os 206 (86 gatilhos + 120 ações) itens do guia
+contra o changelog e os docs oficiais da HighLevel em busca de gatilhos/ações
+nativos lançados desde a última rodada (2026-07-10).
+
+### ✅ Confirmado que os candidatos da rodada anterior já estavam aplicados
+Checando de novo, os 2 itens abaixo — listados como "pendentes" na rodada
+2026-07-10 — já tinham sido adicionados ao guia num commit posterior que não
+atualizou esta seção do AUDIT.md:
+- **Communities: Rejected Join Request / New Post / New Comment** — já em
+  `guia-highlevel-cat11.html` (G7, G8, G9).
+- **Update Conversation AI Bot and Status** — já em
+  `acoes-highlevel-cat05.html` (A7).
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+1. **Ação — Conceder Pontos de Leaderboard (Grant Community Group
+   Leaderboard Points)** · `acoes-highlevel-cat13.html` A7. Concede pontos
+   de gamificação a um membro dentro de um grupo; o nível no leaderboard é
+   recalculado automaticamente a partir dos pontos — diferente da ação
+   "Atribuir Nível na Classificação" (A5), que seta o nível diretamente.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/community-leaderboard-workflow-trigger-action) ·
+   [Doc de gamificação](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+
+### ✅ Candidatos pesquisados que já estavam cobertos (nenhuma ação necessária)
+- **New Affiliate Sales** (trigger) — já em `guia-highlevel-cat05.html` G3.
+- **Review Received** (trigger) — já em `guia-highlevel-cat02.html` G16
+  ("New Review Received").
+- **Payment Failed** — não é um trigger separado; é um valor de filtro
+  (Status) dentro do trigger já existente "Payment Received"
+  (`guia-highlevel-cat07.html` G2), confirmado contra o uso real do HL.
+
+Totais atualizados: **86 gatilhos + 121 ações = 207 entries** (`index.html`,
+`search-index.json` e `AUDIT-TABLE.md` regenerados).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: tab-counts e section-labels ainda diziam 84/117 enquanto os
+  hero-stats e a meta description já diziam 86/120.
+- `index.html`: contador "Mockups interativos" estava parado em 42 há várias
+  rodadas de crescimento de conteúdo; recontado programaticamente
+  (elementos `.ghl-mockup` por arquivo) e corrigido pra 200.
+- Esta seção do AUDIT.md estava desatualizada — 2 itens listados como
+  "pendentes" já tinham sido aplicados num round anterior sem atualizar o
+  arquivo (ver acima).
+
 ### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
-Achados com menos certeza sobre campos exatos — fica pra próxima rodada
-com confirmação humana antes de montar o mockup com fidelidade real:
+Sem confirmação suficiente sobre os campos exatos pra montar o mockup com
+fidelidade real — ainda pendentes de validação humana:
 - **AI Decision Maker** (ação premium — roteamento por linguagem natural,
   alternativa ao If/Else manual)
 - **Client Portal File Uploaded** (gatilho — contato sobe arquivo no
   Client Portal)
-- **Communities: Rejected Join Request / New Post / New Comment** (3
-  gatilhos novos de Communities, além dos que já temos)
 - **AI Translate** (ação — traduz texto dentro do workflow)
-- **Update Conversation AI Bot and Status** (ação — troca o bot/status da
-  conversa a partir do workflow)
-
-### ⚠ Rename já sinalizado (não é novo, é nome desatualizado — mantido como está até confirmação)
-- Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
-  (mesma função, possível rename).
 
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os 3
+   candidatos 🔍 acima (confirmar nome real do campo / da action)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

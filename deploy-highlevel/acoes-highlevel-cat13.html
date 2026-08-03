@@ -2437,7 +2437,7 @@
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Comunidades · 6 ações</div>
+  <div class="side-section-label">Comunidades · 7 ações</div>
   <nav class="side-nav">
     <a href="#a1" class="side-link"><span class="side-num">01</span>Conceder Acesso a Grupo</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Remover Acesso a Grupo</a>
@@ -2445,6 +2445,7 @@
     <a href="#a4" class="side-link"><span class="side-num">04</span>Remover Acesso a Canal Privado</a>
     <a href="#a5" class="side-link"><span class="side-num">05</span>Atribuir Nível na Classificação</a>
     <a href="#a6" class="side-link"><span class="side-num">06</span>Publicar na Comunidade</a>
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Conceder Pontos de Leaderboard</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2463,10 +2464,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 13/14</span>
   <h1 class="hero-title">Ações de <em>Comunidades</em>.</h1>
-  <p class="hero-desc">6 ações pra gerenciar comunidades e grupos — dar/remover acesso a grupos, canais privados, atribuir níveis na classificação.</p>
+  <p class="hero-desc">7 ações pra gerenciar comunidades e grupos — dar/remover acesso a grupos, canais privados, atribuir níveis e conceder pontos na classificação.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">6</span>
+      <span class="hero-stat-num">7</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3286,6 +3287,140 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a7" data-name="conceder pontos de leaderboard grant community group leaderboard points">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Conceder Pontos de Leaderboard</h2>
+      <div class="acao-en">Grant Community Group Leaderboard Points</div>
+      <div class="acao-tags"><span class="info-tag">🆕 Novo · Gamificação</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Concede uma quantidade específica de pontos de gamificação a um membro dentro de um grupo da comunidade. O nível do membro no leaderboard é recalculado automaticamente conforme os pontos concedidos — diferente de "Atribuir Nível na Classificação" (ação 05), que define o nível diretamente. Só funciona se o contato já for membro do grupo selecionado; caso contrário, a ação falha silenciosamente para aquele contato.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Desafio concluído</div>
+  <div class="use-case-desc">Completou um desafio da comunidade → +50 pontos.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Engajamento</div>
+  <div class="use-case-desc">Postou no grupo ou comentou → pequena recompensa em pontos.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Compra/conversão</div>
+  <div class="use-case-desc">Pagamento recebido → pontos de bônus como incentivo de fidelidade.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Group, Points.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a7">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunidades/ Gamificação · Desafio Semanal</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a7">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a7-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Tag Added</div>
+              <div class="ghl-node-title">Tag · Desafio Concluído</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Tag · Desafio Concluído</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Tag = Desafio Semanal Concluído</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a7-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">🏆</div>
+            <div>
+              <div class="ghl-node-type">Action · Comunidades</div>
+              <div class="ghl-node-title">Grant Leaderboard Points</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Grupo</span><span class="pv highlight">Magnetic Flows Community</span></div><div class="ghl-node-param"><span class="pk">Pontos</span><span class="pv">50</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A7 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Group</strong>, <span class='arrow'>→</span> <strong>Points</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Grant Community Group Leaderboard Points</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Premiar conclusão do desafio semanal" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Group</div><div class="hl-dropdown has-value">Magnetic Flows Community</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Points</div><div class="hl-input has-value">50</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Concede pontos de leaderboard — nível é recalculado automaticamente</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3304,7 +3439,7 @@
 
   <div class="footer-top">
     <h3>Categoria 13 completa.</h3>
-    <p>6 ações de Comunidades explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>7 ações de Comunidades explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3422,7 +3557,9 @@
     'a5-1': { kind: 'Trigger · Custom Value', title: 'Pontos > 1000', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Subir de nível na comunidade</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Community · Total Points</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Greater than or equal</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">1000</div></div>` },
     'a5-2': { kind: 'Action · Assign Leaderboard Level', title: 'Assign Level (Prata)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Promover pra nível Prata</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Level *</div><div class="config-field highlight dropdown">Prata (Silver)</div></div><div class="config-section"><div class="config-label">Award Badge</div><div class="config-field">🟢 ON — badge visível no perfil</div></div><div class="config-section"><div class="config-label">Public Announcement</div><div class="config-field">🟢 ON — post automático em #conquistas</div></div><div class="config-section"><div class="config-label">Bonus Perks</div><div class="config-field">Acesso ao canal #prata-exclusivo</div></div>` },
     'a6-1': { kind: 'Trigger · Tag Added', title: 'Tag · Concluiu Certificação', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Celebrar conquista publicamente</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Certificado Concluído</span></div></div>` },
-    'a6-2': { kind: 'Action · Post to Community', title: 'Post to Community', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Anunciar nova certificação em #conquistas</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field highlight dropdown">#conquistas</div></div><div class="config-section"><div class="config-label">Post Author</div><div class="config-field dropdown">Workflow Bot (oficial)</div></div><div class="config-section"><div class="config-label">Content *</div><div class="config-field highlight">🎓 {{contact.first_name}} acabou de concluir o {{custom_value.curso_concluido}}! Manda os parabéns 👏</div></div><div class="config-section"><div class="config-label">Mention Member</div><div class="config-field">🟢 ON — @{{contact.community_handle}}</div></div><div class="config-section"><div class="config-label">Allow Comments</div><div class="config-field">🟢 ON</div></div>` }
+    'a6-2': { kind: 'Action · Post to Community', title: 'Post to Community', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Anunciar nova certificação em #conquistas</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field highlight dropdown">#conquistas</div></div><div class="config-section"><div class="config-label">Post Author</div><div class="config-field dropdown">Workflow Bot (oficial)</div></div><div class="config-section"><div class="config-label">Content *</div><div class="config-field highlight">🎓 {{contact.first_name}} acabou de concluir o {{custom_value.curso_concluido}}! Manda os parabéns 👏</div></div><div class="config-section"><div class="config-label">Mention Member</div><div class="config-field">🟢 ON — @{{contact.community_handle}}</div></div><div class="config-section"><div class="config-label">Allow Comments</div><div class="config-field">🟢 ON</div></div>` },
+    'a7-1': { kind: 'Trigger · Tag Added', title: 'Tag · Desafio Concluído', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Desafio semanal concluído — premiar</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Desafio Semanal Concluído</span></div></div>` },
+    'a7-2': { kind: 'Action · Grant Community Group Leaderboard Points', title: 'Grant Leaderboard Points', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Premiar conclusão do desafio semanal</div></div><div class="config-section"><div class="config-label">Group *</div><div class="config-field highlight dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Points *</div><div class="config-field highlight">50</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
