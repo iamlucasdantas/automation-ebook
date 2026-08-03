@@ -10,6 +10,14 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-03 — Deploy
+**Update trial CTA link across the whole guide (requested)**
+
+- Replaced `https://magneticflows.com/30-dias` with the correct affiliate
+  link `https://www.gohighlevel.com/highlevel-bootcamp?fp_ref=dantasghl`
+  in all 117 occurrences across every page (sidebar CTA, footer CTA, hero
+  CTA) — 28 category pages + `index.html`.
+
 ## 2026-08-03 — Content
 **Add tutorial video to Contact Created trigger (requested)**
 
