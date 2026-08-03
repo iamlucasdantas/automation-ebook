@@ -11,6 +11,25 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-08-03 — Content
+**Add WhatsApp Interactive Messages action (requested) + tutorial video**
+
+- **Ação — Mensagens Interativas do WhatsApp (WhatsApp Interactive Messages)**
+  · `acoes-highlevel-cat02.html` A26. Nova ação nativa que envia mensagens
+  interativas via API oficial do WhatsApp (Meta) — diferente da já
+  existente "WhatsApp Oficial" (A12), que só manda templates estáticos.
+  Suporta 4 tipos: Interactive Reply Buttons (até 3 botões), List Message,
+  Location Message e Contact Message.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006082-interactive-whatsapp-messages)
+- Vídeo tutorial incorporado logo abaixo da descrição da ação (a pedido do
+  usuário). O vídeo tinha sido colocado por engano na ação "WhatsApp
+  Oficial" (A12) numa iteração anterior no mesmo dia — corrigido e movido
+  pra ação certa.
+- Totais reais agora: **86 gatilhos + 122 ações = 208 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados); `index.html`
+  atualizado (cat02: 25→26 ações; hero-stats, tab-count e section-label
+  batendo com 122 ações / 208 painéis / 201 mockups interativos).
+
+## 2026-08-03 — Content
 **Checagem de novidades nativas + add Grant Community Group Leaderboard Points + fix stale index.html counts**
 
 - **Ação — Conceder Pontos de Leaderboard (Grant Community Group Leaderboard Points)**
