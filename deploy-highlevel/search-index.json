@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 209,
+  "total": 210,
   "items": [
     {
       "id": "g1",
@@ -1754,6 +1754,19 @@
       "description": "",
       "keywords": "anexar arquivo attach file",
       "href": "acoes-highlevel-cat02.html#a25"
+    },
+    {
+      "id": "a26",
+      "type": "Ação",
+      "name": "Mensagens Interativas do WhatsApp",
+      "en": "WhatsApp Interactive Messages",
+      "category": "Ação",
+      "tags": [
+        "🆕 Novo"
+      ],
+      "description": "",
+      "keywords": "mensagens interativas do whatsapp whatsapp interactive messages",
+      "href": "acoes-highlevel-cat02.html#a26"
     },
     {
       "id": "a1",

@@ -10,6 +10,26 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-03 — Content
+**Add WhatsApp Interactive Messages action (requested) + tutorial video**
+
+- **Ação — Mensagens Interativas do WhatsApp (WhatsApp Interactive Messages)**
+  · `acoes-highlevel-cat02.html` A26. Nova ação nativa que envia mensagens
+  interativas via API oficial do WhatsApp (Meta) — diferente da já
+  existente "WhatsApp Oficial" (A12), que só manda templates estáticos.
+  Suporta 4 tipos: Interactive Reply Buttons (até 3 botões), List Message,
+  Location Message e Contact Message.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006082-interactive-whatsapp-messages)
+- Vídeo tutorial incorporado logo abaixo da descrição da ação (a pedido do
+  usuário).
+- 🐛 Fix de drift: "Mockups interativos" no `index.html` estava parado em
+  42 há várias rodadas de crescimento de conteúdo; recontado
+  programaticamente (`.ghl-mockup` por arquivo) e corrigido pra **203**.
+- Totais reais agora: **87 gatilhos + 123 ações = 210 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados); `index.html`
+  atualizado (cat02: 25→26 ações; hero-stats, tab-count e section-label
+  batendo com o conteúdo real).
+
 ## 2026-07-29 — Content
 **Add AI Studio Form Submitted as its own trigger (requested)**
 
