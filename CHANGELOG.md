@@ -11,6 +11,13 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-08-03 — Content
+**Add tutorial video to Contact Created trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Criação de Contato (Contact Created)** · `guia-highlevel-cat01.html` G1,
+  a pedido do usuário.
+
+## 2026-08-03 — Content
 **Add WhatsApp Interactive Messages action (requested) + tutorial video**
 
 - **Ação — Mensagens Interativas do WhatsApp (WhatsApp Interactive Messages)**
