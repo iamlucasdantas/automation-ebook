@@ -10,6 +10,13 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-03 — Content
+**Add tutorial video to Contact Changed trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Alterações no Contato (Contact Changed)** · `guia-highlevel-cat01.html`
+  G2, a pedido do usuário.
+
 ## 2026-08-03 — Deploy
 **Update trial CTA link across the whole guide (requested)**
 
