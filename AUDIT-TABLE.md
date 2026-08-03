@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 38 | 77 | 8 | **123** |
+| Ações | 38 | 80 | 8 | **126** |
 
 
 ## Gatilhos · 12 categorias
@@ -206,6 +206,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a24 | [SMS via Shortcode](acoes-highlevel-cat02.html#a24) | Shortcode SMS | 2 | 2/6 | 🟡 | [ ] | |
 | a25 | [Anexar Arquivo](acoes-highlevel-cat02.html#a25) | Attach File | 2 | 3/6 | 🟢 | [ ] | |
 | a26 | [Mensagens Interativas do WhatsApp](acoes-highlevel-cat02.html#a26) | WhatsApp Interactive Messages | 2 | 3/6 | 🟢 | [ ] | |
+| a27 | [WhatsApp: Verificar Janela de Atendimento](acoes-highlevel-cat02.html#a27) | WhatsApp Customer Service Window Check | 3 | 2/6 | 🟡 | [ ] | |
+| a28 | [WhatsApp: Enviar Flow](acoes-highlevel-cat02.html#a28) | WhatsApp: Send Flows | 2 | 2/6 | 🟡 | [ ] | |
+| a29 | [WhatsApp: Mídia](acoes-highlevel-cat02.html#a29) | WhatsApp Media | 2 | 2/6 | 🟡 | [ ] | |
 
 ### CAT03 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

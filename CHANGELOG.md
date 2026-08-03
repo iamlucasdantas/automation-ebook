@@ -11,6 +11,29 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-08-03 — Content
+**Add 3 native WhatsApp actions found missing (requested)**
+
+User cross-checked the real HighLevel action list (screenshot of the
+"Communication" category) against the guide and flagged 3 native WhatsApp
+actions we didn't have yet:
+
+- **Ação — WhatsApp: Verificar Janela de Atendimento (WhatsApp Customer
+  Service Window Check)** · `acoes-highlevel-cat02.html` A27. Checks if the
+  24h customer-service window is open for a number; branches the workflow
+  into Open (free-form messages, no extra cost) / Closed (only approved
+  templates). [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003533-workflow-action-whatsapp-customer-service-window-check)
+- **Ação — WhatsApp: Enviar Flow (WhatsApp: Send Flows)** · A28. Sends a
+  Meta WhatsApp Flow (in-app guided form/booking) — only works inside the
+  Open branch of A27, not supported on COEX integrations. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003720-whatsapp-flows-in-app-appointment-booking)
+- **Ação — WhatsApp: Mídia (WhatsApp Media)** · A29. Sends image/video/
+  audio/document with optional caption (not for audio); only within the
+  24h window; documented Meta size/type limits per media type. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005235-how-to-send-whatsapp-media-images-videos-audio-document-via-workflow)
+- Totais reais agora: **87 gatilhos + 126 ações = 213 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados); `index.html`
+  atualizado (cat02: 26→29 ações; hero-stats, tab-count, section-label e
+  "Mockups interativos" — 203→206 — recontados).
+
+## 2026-08-03 — Content
 **Add tutorial video to Contact Changed trigger (requested)**
 
 - Vídeo tutorial incorporado logo abaixo da descrição do gatilho
