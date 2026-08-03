@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 36 | 76 | 8 | **120** |
+| Ações | 36 | 77 | 8 | **121** |
 
 
 ## Gatilhos · 12 categorias
@@ -320,6 +320,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a4 | [Remover Acesso a Canal Privado](acoes-highlevel-cat13.html#a4) | Revoke Private Channel Access | 4 | 2/6 | 🟡 | [ ] | |
 | a5 | [Atribuir Nível na Classificação](acoes-highlevel-cat13.html#a5) | Assign Leaderboard Level | 4 | 2/6 | 🟡 | [ ] | |
 | a6 | [Publicar na Comunidade](acoes-highlevel-cat13.html#a6) | Post to Community | 3 | 2/6 | 🟡 | [ ] | |
+| a7 | [Conceder Pontos de Leaderboard](acoes-highlevel-cat13.html#a7) | Grant Community Group Leaderboard Points | 3 | 2/6 | 🟡 | [ ] | |
 
 ### CAT14 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

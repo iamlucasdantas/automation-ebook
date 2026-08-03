@@ -10,6 +10,39 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-03 — Content
+**Checagem de novidades nativas + add Grant Community Group Leaderboard Points + fix stale index.html counts**
+
+- **Ação — Conceder Pontos de Leaderboard (Grant Community Group Leaderboard Points)**
+  · `acoes-highlevel-cat13.html` A7. Nova ação nativa que concede uma
+  quantidade específica de pontos de gamificação a um membro dentro de um
+  grupo, distinta da já existente "Atribuir Nível na Classificação"
+  (que seta o nível diretamente): aqui o nível é recalculado automaticamente
+  a partir dos pontos concedidos. Confirmada via changelog oficial e doc de
+  gamificação da HighLevel.
+  [Changelog oficial](https://ideas.gohighlevel.com/changelog/community-leaderboard-workflow-trigger-action) ·
+  [Doc de gamificação](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+- Rotina automática checou o changelog/docs oficiais da HighLevel por
+  gatilhos e ações nativos lançados desde a última rodada (2026-07-10):
+  **New Affiliate Sales**, **Review Received**, **Payment Failed** (filtro
+  do trigger Payment Received) e o próprio **Leaderboard Level Changed**
+  já estavam cobertos no guia — só a ação de pontos faltava.
+- Candidatos que continuam pendentes de validação humana (sem confirmação
+  suficiente sobre os campos exatos pra montar mockup com fidelidade real):
+  **AI Decision Maker**, **Client Portal File Uploaded**, **AI Translate**.
+- Totais reais agora: **86 gatilhos + 121 ações = 207 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados via
+  `build-search-index.py` / `build-audit.py`).
+- 🐛 Fix de drift em `index.html`: os badges de contagem das abas
+  (`tab-count`) e os `section-label` de cada parte ainda diziam
+  "84 gatilhos" / "117 ações" enquanto os hero-stats e a meta description
+  já diziam 86/120 corretamente — corrigido pra bater com o conteúdo real
+  em todos os lugares. O contador de "Mockups interativos" também estava
+  parado em 42 há várias rodadas; recontado programaticamente
+  (`.ghl-mockup` por arquivo) e corrigido pra **200**, refletindo o
+  crescimento real do conteúdo.
+- `Última atualização` no rodapé do índice: 03 de agosto de 2026.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
