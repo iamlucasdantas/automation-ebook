@@ -11,6 +11,13 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-08-03 — Content
+**Add tutorial video to Contact DND trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Contato Ativou DND (Contact DND)** · `guia-highlevel-cat01.html` G3,
+  a pedido do usuário.
+
+## 2026-08-03 — Content
 **Add 3 native WhatsApp actions found missing (requested)**
 
 User cross-checked the real HighLevel action list (screenshot of the
