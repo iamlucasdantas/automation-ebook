@@ -146,6 +146,80 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-08-04 — Checagem de novidades nativas
+
+Rotina automática comparou os 206 (86 gatilhos + 120 ações) itens do guia
+contra `help.gohighlevel.com` / `ideas.gohighlevel.com/changelog` em busca
+de gatilhos/ações nativos lançados recentemente e não cobertos ainda.
+Achou drift de contagem deixado por rodadas anteriores (commits que
+adicionaram itens sem atualizar os contadores visíveis) e 2 gatilhos
+nativos novos.
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: tab-counts e section-labels diziam 84 gatilhos / 117 ações
+  enquanto o conteúdo real já tinha 86/120 (deixado pelos commits que
+  adicionaram Remove Followers from Opportunity e Update Conversation AI
+  Bot and Status sem atualizar a homepage).
+- `acoes-highlevel-cat05.html`: side-nav e footer diziam 5-6 ações restando
+  desatualizados depois do AI Agent + Update Conversation AI Bot serem
+  adicionados (real: 7).
+- `acoes-highlevel-cat07.html`: side-nav, hero-desc e footer diziam 9 ações
+  depois do Remove Followers from Opportunity ser adicionado (real: 11).
+- `guia-highlevel-cat06.html`: hero-desc dizia 10 gatilhos (real: 12).
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · cat02 G22. Dispara
+   nos eventos de ciclo de vida do SLA de resposta de uma conversa: Due
+   Soon, Overdue ou SLA Dismissed. Filtros: Message Channel, Tags, Owner,
+   Custom Fields, Avoid Repeated Triggers. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas)
+   · [Changelog](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+2. **Gatilho — Arquivo Enviado no Portal do Cliente (Client Portal File
+   Uploaded)** · cat07 G11. Dispara quando um contato sobe arquivo(s)
+   pela seção Shared Documents do Client Portal (só documentos, vídeo
+   não é suportado). Esse item já tinha sido flagado como candidato 🔍
+   na rodada 2026-07-10 e ficou pendente de confirmação — confirmado
+   agora via doc oficial + changelog. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+   · [Changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+
+Totais atualizados: **88 gatilhos + 120 ações = 208 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados).
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **AI Decision Maker**, **Communities: Rejected Join Request / New Post /
+  New Comment**, **AI Translate**, **Update Conversation AI Bot and
+  Status** — já aplicados em rodadas anteriores (07-20), removidos desta
+  lista.
+- **"Grant Community Group Leaderboard Points"** — um resultado de busca
+  descreveu a ação de Leaderboard de Comunidades com esse nome em vez do
+  nosso "Assign Leaderboard Level". Pode ser a mesma ação descrita de
+  forma solta, ou uma ação distinta baseada em pontos. Precisa checar
+  https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups
+  direto no HL antes de mexer.
+- **Ação de resposta a comentário do TikTok** ("Reply In Comments",
+  artigo 155000003302) — não confirmado se é uma terceira ação distinta
+  de Reply to FB/IG Comment ou só documentação estendendo a mesma família
+  pro TikTok.
+- **"Payment Failed" trigger** e **"Form Partially Completed" trigger** —
+  aparecem só como *feature requests* abertos em ideas.gohighlevel.com,
+  não como changelog/doc de algo já lançado. NÃO adicionar até confirmar
+  que foi shippado.
+- **Integração nativa Calendly** (~5 gatilhos + 9 ações: booking
+  criado/cancelado/no-show, routing form submetido; criar/cancelar
+  reunião, marcar no-show, gerenciar contato Calendly) — é uma integração
+  de app de agendamento como Klaviyo/Cal.com/HubSpot, mais profunda que um
+  conector Zapier típico, mas tratada como 3rd-party e não adicionada por
+  ora. Fica pra decisão humana se conta como "nativa o suficiente" pro guia.
+
+### ⚠ Nota sobre acesso à fonte
+Nesta rodada, o acesso direto a `help.gohighlevel.com` e
+`ideas.gohighlevel.com` via fetch direto ficou bloqueado pela política de
+rede do ambiente (403 em toda tentativa, incluindo curl e WebFetch). Os
+dois itens confirmados acima vieram de WebSearch cruzando múltiplas
+buscas que retornaram tanto o link do changelog oficial quanto o artigo
+de doc oficial dedicado — tratado como confiável por essa dupla
+confirmação — mas idealmente merece um double-check com acesso direto ao
+site na próxima rodada.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

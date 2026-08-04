@@ -10,6 +10,43 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-04 — Content
+**Add 2 new native HighLevel triggers + fix stale counts left by unlogged commits**
+
+- **Conversation SLA** trigger added (`guia-highlevel-cat02.html` G22) —
+  fires on conversation SLA lifecycle events (Due Soon / Overdue / SLA
+  Dismissed), with filters for Message Channel, Tags, Owner, Custom
+  Fields, and Avoid Repeated Triggers. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas) · [Changelog](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+- **Client Portal File Uploaded** trigger added (`guia-highlevel-cat07.html`
+  G11) — fires when a contact uploads a file via the Client Portal's
+  Shared Documents section (documents only, no video). This was flagged
+  as a pending candidate back in the 2026-07-10 round and is now
+  confirmed and applied. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal) · [Changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+- Fixed count drift left over from two commits (`2140ed4` Remove
+  Followers from Opportunity, `86099b3` Update Conversation AI Bot and
+  Status) that added content without updating the surrounding copy:
+  `index.html` tab-counts/section-labels still said 84/117 while the
+  real content was 86/120; `acoes-highlevel-cat05.html` side-nav/footer
+  said 5-6 ações (real 7); `acoes-highlevel-cat07.html` side-nav/hero/
+  footer said 9 ações (real 11); `guia-highlevel-cat06.html` hero-desc
+  said 10 gatilhos (real 12). Also caught and fixed a stale "42 Mockups
+  interativos" homepage stat that hadn't tracked actual mockup count in
+  a long time (true count, verified by counting `.ghl-mockup` blocks
+  across every page: 201).
+- Totals now: **88 gatilhos, 120 ações, 208 entries** —
+  `search-index.json` and `AUDIT-TABLE.md` regenerated, homepage
+  "Última atualização" set to 04 de agosto de 2026, all 28 pages pass
+  `validate-mockups.js`.
+- See `AUDIT.md` for this round's full research notes, including several
+  candidates researched but **not** applied (Payment Failed trigger,
+  Form Partially Completed trigger — both still open feature requests,
+  not shipped; a possible TikTok comment-reply action and a possible
+  Leaderboard Points action rename — both need direct HL UI
+  confirmation before adding) and a note that direct fetch access to
+  help.gohighlevel.com / ideas.gohighlevel.com was blocked by this
+  environment's network policy, so findings relied on WebSearch
+  cross-referencing rather than direct doc fetches.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

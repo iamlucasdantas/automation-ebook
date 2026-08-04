@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 208,
   "items": [
     {
       "id": "g1",
@@ -470,6 +470,20 @@
       "href": "guia-highlevel-cat02.html#g21"
     },
     {
+      "id": "g22",
+      "type": "Gatilho",
+      "name": "SLA de Conversa",
+      "en": "Conversation SLA",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara nos eventos de ciclo de vida do SLA de resposta configurado pra uma conversa: Due Soon (perto de vencer o prazo), Overdue (o prazo estourou) ou SLA Dismissed (alguém do time dispensou manualmente o alerta). Transforma o SLA de \"métrica que o gestor vigia no dashboard\" em algo que a própria automação reage — notifica, escala, reatribui — sem depender de alguém olhando o painel a cada minuto.",
+      "keywords": "sla conversa conversation sla due soon overdue dismissed atendimento",
+      "href": "guia-highlevel-cat02.html#g22"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -930,6 +944,20 @@
       "description": "Dispara quando um cupom atinge data de expiração e se torna inativo. Avaliação é feita pelo sistema quando o momento chega.",
       "keywords": "cupom expirado coupon code expired",
       "href": "guia-highlevel-cat07.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Contratos e Assinaturas",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara automaticamente quando um contato sobe um ou mais arquivos pela seção Shared Documents do Client Portal — o portal onde o cliente acompanha faturas, contratos e trocas de arquivo com sua agência. Antes desse gatilho, era preciso alguém abrir o Client Portal manualmente pra saber que um documento novo chegou.",
+      "keywords": "portal do cliente arquivo enviado client portal file uploaded documento upload",
+      "href": "guia-highlevel-cat07.html#g11"
     },
     {
       "id": "g1",

@@ -10,7 +10,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 52 | 3 | **86** |
+| Gatilhos | 31 | 53 | 4 | **88** |
 | Ações | 36 | 76 | 8 | **120** |
 
 
@@ -56,6 +56,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g19 | [Agendador (Scheduler)](guia-highlevel-cat02.html#g19) | Scheduler | 6 | 3/6 | 🟢 | [ ] | |
 | g20 | [Email Recebido](guia-highlevel-cat02.html#g20) | Inbound Email | 3 | 2/6 | 🟡 | [ ] | |
 | g21 | [Usuário Respondeu](guia-highlevel-cat02.html#g21) | User Replied | 3 | 3/6 | 🟡 | [ ] | |
+| g22 | [SLA de Conversa](guia-highlevel-cat02.html#g22) | Conversation SLA | 4 | 3/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -109,6 +110,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g8 | [Cupom Aplicado](guia-highlevel-cat07.html#g8) | Coupon Code Applied | 2 | 4/6 | 🟡 | [ ] | |
 | g9 | [Limite de Cupom Atingido](guia-highlevel-cat07.html#g9) | Coupon Redemption Limit Reached | 2 | 1/6 | 🟡 | [ ] | |
 | g10 | [Cupom Expirado](guia-highlevel-cat07.html#g10) | Coupon Code Expired | 2 | 2/6 | 🟡 | [ ] | |
+| g11 | [Arquivo Enviado no Portal do Cliente](guia-highlevel-cat07.html#g11) | Client Portal File Uploaded | 2 | 2/6 | 🔴 | [ ] | |
 
 ### CAT08 · Pré-compra
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
