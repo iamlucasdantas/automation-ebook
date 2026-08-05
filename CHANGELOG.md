@@ -10,6 +10,37 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-05 — Content
+**Scheduled native-items check: add Client Portal File Uploaded, AI Decision Maker, AI Translate**
+
+- **Gatilho — Upload de Arquivo no Portal (Client Portal File Uploaded)**
+  · `guia-highlevel-cat06.html` G13. Fires when a contact uploads a file
+  via the Client Portal Shared Documents experience. No native filters;
+  video formats (.mp4/.mov/.avi/.mkv/.wmv) unsupported. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+- **Ação — AI Decision Maker** · `acoes-highlevel-cat05.html` A8. Premium
+  action that routes contacts through workflow branches from a
+  plain-English instruction instead of manual If/Else trees. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+- **Ação — AI Translate** · `acoes-highlevel-cat05.html` A9. Translates
+  text (static value or custom variable) into a target language; result
+  is exposed as a custom variable for downstream actions. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+- These 3 were the remaining unapplied candidates flagged in the
+  2026-07-10 audit round (the other 2 — Communities triggers and Update
+  Conversation AI Bot and Status — had already been applied in follow-up
+  commits since then).
+- Checked several other "new HighLevel trigger" leads found via search
+  (Review Received, Payment Failed, Community Leaderboard Level Changed,
+  Form Partially Completed) — all either already covered by existing
+  entries or lacking an official HL doc, so none were added. Details in
+  `AUDIT.md` under "Rodada 2026-08-05".
+- Fixed stale count drift found while auditing: `index.html` tab-counts
+  and section-labels still said 84/117 while hero-stats already said
+  86/120; `guia-highlevel-cat06.html` hero-stat said 10 gatilhos against
+  12 real blocks; `acoes-highlevel-cat05.html` side-nav/hero-stat said
+  5/6 ações against 7 real blocks.
+- Totals now: **87 gatilhos, 122 ações, 209 entries** — `search-index.json`,
+  `AUDIT-TABLE.md` and homepage regenerated. `validate-mockups.js`
+  green on all 28 pages.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

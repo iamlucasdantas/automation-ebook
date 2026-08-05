@@ -158,3 +158,73 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+## 🆕 Rodada 2026-08-05 — Checagem automática de novidades nativas
+
+Rotina agendada comparou os 209 itens do guia (87 gatilhos + 122 ações,
+já contando as adições abaixo) contra `help.gohighlevel.com` e o
+changelog oficial via WebSearch (WebFetch direto pro domínio da HL
+retornou 403 no ambiente — WebSearch foi usado como alternativa, mesmo
+método já usado nas rodadas anteriores para os itens ✅).
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+Dos 5 candidatos pendentes da rodada 2026-07-10, 2 já tinham sido
+aplicados em commits avulsos (Communities: Rejected Join Request/New
+Post/New Comment em `693a60a`; Update Conversation AI Bot and Status em
+`86099b3`). Os 3 restantes foram confirmados e aplicados agora:
+
+1. **Gatilho — Upload de Arquivo no Portal (Client Portal File Uploaded)**
+   · cat06 G13. Dispara quando o contato sobe um arquivo pela experiência
+   de Documentos Compartilhados do Client Portal. Sem filtros nativos.
+   Vídeo (.mp4/.mov/.avi/.mkv/.wmv) não é suportado no upload.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal) ·
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+2. **Ação — AI Decision Maker** · cat05 A8. Ação Premium: roteia o
+   contato entre caminhos do workflow a partir de uma instrução em
+   linguagem natural, alternativa ao If/Else manual com múltiplas
+   condições. Cobrança por execução.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+3. **Ação — AI Translate** · cat05 A9. Traduz texto (Static Value ou
+   Custom Variable) de um idioma pra outro; resultado fica disponível
+   como variável customizada pras próximas ações do workflow.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+
+Totais atualizados: **87 gatilhos + 122 ações = 209 entries** — homepage,
+`search-index.json` e `AUDIT-TABLE.md` regenerados.
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: tab-counts e section-labels ainda diziam 84/117 enquanto
+  os hero-stats já diziam 86/120 (drift de commits anteriores que só
+  atualizaram um dos dois lugares).
+- `guia-highlevel-cat06.html`: hero-desc/hero-stat diziam "10 gatilhos"
+  quando já existiam 12 blocos reais (g1-g12) na página.
+- `acoes-highlevel-cat05.html`: side-section-label dizia "5 ações" e o
+  hero-stat dizia "6" quando já existiam 7 blocos reais (a1-a7).
+
+### 🔎 Verificado e já coberto (não é novidade)
+Itens que apareceram em buscas por "novos gatilhos/ações HighLevel 2026"
+mas já existem no guia — confirmado antes de considerar adicionar:
+- **Review Received** → já é o nosso "Nova Avaliação Recebida" (cat02 G16).
+- **Community Group Member Leaderboard Level Changed** → já é "Mudança de
+  Nível na Classificação" (cat11 G5) + ação "Atribuir Nível na
+  Classificação" (cat13 A5).
+- **Payment Failed** → não existe como gatilho nativo dedicado; é uma
+  opção de filtro (Event Type) dentro do gatilho **Subscription**, que já
+  cobrimos. Não foi adicionado como item novo pra evitar duplicidade.
+- **Form Partially Completed** → não encontrada nenhuma doc oficial da HL
+  confirmando esse gatilho; provavelmente confusão com "Opt-In" do Order
+  Form Submission (que já cobrimos). Não aplicado — sem fonte oficial.
+
+### ⚠ Ainda pendente (sem mudança nesta rodada)
+- Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
+  (mesma função, possível rename) — segue precisando de confirmação
+  humana antes de renomear, como já sinalizado na rodada anterior.
+- Os ~15 itens ⚠ de discrepância cat02/cat05/cat07/cat12 do primeiro
+  round de auditoria seguem sem validação humana contra a UI real.
+
+### Nota de acesso
+`WebFetch` para `help.gohighlevel.com` e outros domínios retornou 403 em
+todas as tentativas nesta rodada (incl. um teste de controle contra
+`en.wikipedia.org`, também 403) — parece ser uma limitação do proxy do
+ambiente, não do domínio da HL especificamente. `WebSearch` funcionou
+normalmente e foi a única fonte usada pra confirmar os itens acima.
