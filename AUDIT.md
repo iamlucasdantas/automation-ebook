@@ -146,6 +146,41 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-08-06 — Checagem periódica de novidades nativas
+
+Rotina automática (scheduled task) comparou os 206 itens do guia (86
+gatilhos + 120 ações) contra o changelog/docs oficiais em busca de
+gatilhos/ações nativos novos.
+
+**Limitação desta rodada:** `help.gohighlevel.com` e `ideas.gohighlevel.com`
+retornaram 403 pra fetch direto a partir deste ambiente — só foi possível
+usar snippets indexados de busca, sem abrir as páginas originais. Sem
+confirmar a página oficial diretamente, não dá pra garantir data exata
+de lançamento nem os campos reais do painel — então **nada foi aplicado
+ao guia nesta rodada**. Ficam como candidatos pra próxima rodada com
+acesso direto ou confirmação humana:
+
+- **Mistral AI — Workflow Actions**: integração nova (BYOK, chave própria
+  da Mistral) com 3 ações — Create Chat Completion, Create Embeddings,
+  Analyze Image (Vision). Aparece na aba "Apps" do builder, não na lista
+  de ações nativas por categoria — precisa decidir se conta como "nativo"
+  pros padrões deste guia (mesmo tratamento dado ao Slack, que foi
+  excluído por não ser nativo) antes de considerar incluir.
+- **Generate One Time Booking Link** (categoria Agendamentos/Appointments):
+  ação nativa antiga (doc com "last modified" de 2024) que não está no
+  nosso cat06 de ações (hoje só tem Atualizar Status, Marcar Agendamento,
+  Criar Nota). Não é novidade do HL, é um item que pode ter passado batido
+  nas auditorias anteriores — vale confirmar contra o builder real antes
+  de adicionar.
+- **Opportunity actions — granularidade Create/Update**: changelog oficial
+  menciona uma "Opportunity Workflow Actions" release com nota de
+  depreciação da ação combinada antiga em favor de Create/Update
+  separadas — já temos ambas separadas (cat07 A1/A2), então provavelmente
+  já coberto; sinalizado só por completude, sem ação necessária aparente.
+
+Nenhum destes teve confirmação de fonte primária nesta rodada — não contam
+como "achados confirmados", ficam só registrados pra não se perder.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

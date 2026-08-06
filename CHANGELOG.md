@@ -10,6 +10,49 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-06 — Content
+**Routine check for new native triggers/actions + fix homepage count drift**
+
+- Ran the periodic sweep for new native HighLevel workflow triggers/actions
+  (per the scheduled routine). Live access to `help.gohighlevel.com` and
+  `ideas.gohighlevel.com` was blocked from this environment (403 on direct
+  fetch), so this round relied on indexed search snippets only — not
+  authoritative enough to add new entries with the field-level fidelity
+  this guide requires. No new triggers/actions were applied this round;
+  see `AUDIT.md` for candidates surfaced during the search that need a
+  human to confirm against the real HL UI/docs before they're built out.
+- Fixed stale aggregate counts on `deploy-highlevel/index.html`: the tab
+  labels and section headers still read "84 gatilhos" / "117 ações" while
+  the hero stats, meta tags, and every per-category card already correctly
+  summed to **86 gatilhos, 120 ações** (post A10/A11 Followers actions and
+  the Conversation AI Bot action from the 2026-07-20/21 commits, which
+  updated hero stats but missed the tab/section aggregates).
+- `search-index.json` and `AUDIT-TABLE.md` reconfirmed in sync (206
+  entries, 86 gatilhos + 120 ações) — no regen needed.
+- Backfilled the two CHANGELOG entries below for content commits that
+  shipped without a changelog note.
+- Homepage "Última atualização" set to **6 de agosto de 2026**.
+
+## 2026-07-21 — Content
+**Add Remove Followers from Opportunity as cat07 A11**
+
+- Companion to A10 (Add Followers): removes specific users — or all at
+  once via the Remove All Followers toggle — from the opportunity's
+  follower list. Requires an opportunity in context; skipped otherwise.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004757-workflow-action-remove-followers-from-opportunity)
+- Totals now: **86 gatilhos, 120 ações, 206 entries** — index.html,
+  search-index.json and AUDIT-TABLE.md updated. Validator: all 28 pages OK.
+
+## 2026-07-20 — Content
+**Add Update Conversation AI Bot and Status as cat05 A6**
+
+- The per-contact Conversation AI bot control action was missing from the
+  guide. Added as cat05 A6 "Atualizar Bot de IA e Status": Conversation AI
+  Bot dropdown, Bot Status (Active/Inactive, per contact not global), and
+  a conditional Sleep Timer for auto-reactivation.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003821-workflow-action-update-conversation-ai-bot-and-status)
+- Sidebar, hero stats, index card, meta descriptions and AUDIT-TABLE updated.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
