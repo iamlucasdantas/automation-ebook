@@ -10,6 +10,44 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-07 — Content
+**Add 3 new native HighLevel workflow items + fix stale count drift across the guide**
+
+- **Gatilho — Upload de Arquivo no Client Portal (Client Portal File
+  Uploaded)** added (`guia-highlevel-cat07.html` G11) — fires when a contact
+  uploads a document via the Client Portal's Shared Documents experience. No
+  documented filters. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+- **Ação — AI Decision Maker** added (`acoes-highlevel-cat05.html` A8) —
+  plain-English AI routing across workflow branches, replacing manual
+  If/Else trees. Premium, always includes a locked Default Branch.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+- **Ação — AI Translate** added (`acoes-highlevel-cat05.html` A9) —
+  translates text inside the workflow (Source/Target Language, Input Text,
+  output as a custom variable). [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+- These 3 close out the candidate list first flagged in the 2026-07-10
+  round; the other 2 candidates from that list (Communities: Rejected Join
+  Request/New Post/New Comment, Update Conversation AI Bot and Status) were
+  already applied in later rounds. "Form Partially Completed" was found in
+  a third-party 2026 roundup but could not be confirmed against an official
+  HighLevel source this round — not applied.
+- Fixed drift found while auditing: every trigger-category footer said
+  "Categoria XX de 12" (should be de 13, cat13 has existed since
+  2026-07-10); every action-category footer said "Categoria XX de 14"
+  (should be de 15, cat15 has existed since 2026-07-10). `acoes-cat05`'s
+  hero-desc/hero-stat said "7 ações" / counter "6" — neither matched the 7
+  actions that already existed pre-round. `index.html` tab-counts said "13
+  cat · 84" / "15 cat · 117" while hero-stats already said 86/120.
+- Found (not fixed — needs human review): `scripts/auto-refine.py`'s
+  configData regeneration step drops whole node entries and truncates
+  field detail on non-`HAND_CRAFTED` pages (`guia-highlevel-cat13.html`,
+  `acoes-highlevel-cat15.html`), breaking the click-to-expand panel for
+  those nodes. Details in `AUDIT.md`. Did not run the script broadly this
+  round; those two files are untouched.
+- Totals now: **87 gatilhos, 122 ações, 209 entries** — `search-index.json`,
+  `AUDIT-TABLE.md`, and `index.html` regenerated/updated; per-category
+  counts on the homepage independently summed and verified to match 87/122.
+
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

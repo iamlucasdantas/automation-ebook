@@ -146,6 +146,80 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-08-07 — Checagem de novidades nativas
+
+Rotina automática comparou os 209 (86 gatilhos + 120 ações, estado antes desta
+rodada) itens do guia contra o changelog oficial do HighLevel
+(`ideas.gohighlevel.com/changelog`) e `help.gohighlevel.com` em busca de
+gatilhos/ações nativos lançados recentemente e não cobertos ainda. Acesso
+direto (WebFetch) a `ideas.gohighlevel.com` e `help.gohighlevel.com` está
+bloqueado pelo proxy de rede deste ambiente — a checagem usou WebSearch
+(resultados indexados) como fonte.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada via WebSearch)
+1. **Gatilho — Upload de Arquivo no Client Portal (Client Portal File
+   Uploaded)** · cat07 G11. Dispara quando um contato sobe um documento pela
+   experiência de Shared Documents do Client Portal. Nenhum filtro
+   documentado oficialmente — dispara em qualquer upload.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal) ·
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+2. **Ação — AI Decision Maker** · cat05 (Workflow AI) A8. Roteamento de
+   contatos por ramificações do workflow usando instruções em linguagem
+   natural em vez de If/Else manual. Default Branch obrigatório e travado.
+   Ação Premium (cobrança por execução).
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+3. **Ação — AI Translate** · cat05 (Workflow AI) A9. Traduz texto de um
+   idioma pra outro dentro do workflow — Source Language, Target Language,
+   Input Text (Static Value ou Custom Variable), saída como variável
+   customizada.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+
+Estes 3 itens já estavam listados como "candidatos pendentes" nas rodadas
+2026-07-10/2026-07-20 (junto com AI Decision Maker/AI Translate/Client
+Portal File Uploaded). Confirmado que **Communities: Rejected Join
+Request/New Post/New Comment** e **Update Conversation AI Bot and Status**
+— os outros candidatos da mesma lista — já tinham sido aplicados nas rodadas
+seguintes (commits `693a60a` e `86099b3`). "Form Partially Completed" foi
+pesquisado (apareceu numa busca de terceiros sobre triggers 2026) mas não
+foi possível confirmar via fonte oficial HighLevel — **não aplicado**, fica
+como candidato de baixa confiança.
+
+Totais atualizados: **87 gatilhos + 122 ações = 209 entries** (homepage,
+search-index.json e AUDIT-TABLE.md regenerados). Contagem por categoria
+auditada linha a linha contra o HTML real (soma bate 87 e 122).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- Rodapés de todas as páginas de gatilhos diziam "Categoria XX de 12"
+  (deveria ser de 13, já que cat13 Google Integrações existe desde
+  2026-07-10) — corrigido nas 13 páginas.
+- Rodapés de todas as páginas de ações diziam "Categoria XX de 14" (deveria
+  ser de 15, já que cat15 Google Integrações existe desde 2026-07-10) —
+  corrigido nas 15 páginas.
+- `acoes-highlevel-cat05.html`: hero-desc/hero-stat diziam "7 ações" /
+  contador "6" — nenhum dos dois batia com as 7 ações reais que já existiam
+  (A1-A7) antes desta rodada. Corrigido pra refletir as 9 ações atuais.
+- `index.html`: tab-counts diziam "13 cat · 84" / "15 cat · 117" enquanto os
+  hero-stats já diziam 86/120 — mais um caso de drift entre dois contadores
+  da mesma página. Corrigido.
+
+### ⚠ Bug encontrado em `scripts/auto-refine.py` (NÃO aplicado — reportado aqui)
+Rodar `auto-refine.py` nesta sessão para regenerar `search-index.json`
+também tentou "regenerar" o configData de páginas fora do `HAND_CRAFTED` set
+(`guia-highlevel-cat13.html`, `acoes-highlevel-cat15.html`) — mas o
+resultado **removeu entradas inteiras de configData** (`g1-3`, `a4-1`,
+`a6-1`) cujos nós ainda existem no DOM do mockup, e enxugou drasticamente o
+conteúdo dos campos restantes. Isso quebra o click-to-expand desses nós
+(painel fica vazio) e reduz a fidelidade que essas páginas já tinham.
+Revertido antes de commitar — **as duas páginas não foram alteradas por
+esta rodada**. Recomendo não rodar `auto-refine.py` sem revisão manual do
+diff até esse bug ser corrigido, ou adicionar cat13/cat15 ao `HAND_CRAFTED`
+set do script.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de mais confirmação)
+- **Form Partially Completed** (gatilho) — mencionado em busca de terceiros
+  sobre lançamentos 2026, sem confirmação numa fonte oficial HighLevel
+  (help.gohighlevel.com ou ideas.gohighlevel.com/changelog) nesta rodada.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
