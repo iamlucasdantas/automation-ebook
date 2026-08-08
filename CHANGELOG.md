@@ -10,6 +10,58 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-08 — Content
+**Native-triggers/actions audit round: add Client Portal File Uploaded, AI Translate, AI Decision Maker, Grant Community Group Leaderboard Points**
+
+Routine check of `ideas.gohighlevel.com/changelog` and `help.gohighlevel.com`
+against the guide's current 206 entries (86 gatilhos + 120 ações as of the
+last content commit). Only items with an official HighLevel doc/changelog
+URL were applied — no unconfirmed candidates added.
+
+### ✅ Added (native, official source confirmed)
+1. **Gatilho — Upload de Arquivo no Portal do Cliente (Client Portal File
+   Uploaded)** · `guia-highlevel-cat06.html` G13. Dispara quando um contato
+   sobe um arquivo pela experiência de Documentos Compartilhados do Client
+   Portal (até 10 arquivos por vez; vídeos não suportados). Sem filtros
+   nativos documentados. [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+2. **Ação — Traduzir Texto / AI Translate** · `acoes-highlevel-cat05.html`
+   A8. Traduz texto (mensagem recebida, campo customizado ou valor
+   estático) e devolve como variável reutilizável no workflow. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+3. **Ação — Decisor por IA / AI Decision Maker** · `acoes-highlevel-cat05.html`
+   A9. Roteamento inteligente por linguagem natural — alternativa ao
+   If/Else manual, ação Premium com custo por execução. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+4. **Ação — Conceder Pontos na Classificação / Grant Community Group
+   Leaderboard Points** · `acoes-highlevel-cat13.html` A7. Concede pontos
+   de gamificação a um membro dentro de um grupo específico; nível
+   recalcula sozinho a partir do total acumulado. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+
+Totais atualizados: **87 gatilhos + 123 ações = 210 entries** —
+`search-index.json` e `AUDIT-TABLE.md` regenerados, `index.html` (hero
+stats, tab counts, section labels, cat cards, meta descriptions e data de
+"Última atualização") sincronizado.
+
+### 🔍 Pesquisados e descartados (não confirmados como itens nativos distintos)
+- **SLA de Conversas**: feature real (lançada em junho/2026), mas é uma
+  configuração de Conversations/SLA tracking que interage com triggers
+  existentes — não é, ela própria, um novo trigger/action node no
+  Workflow Builder.
+- **Form Partially Completed**: não encontrada documentação oficial
+  confirmando esse trigger nativo — pode ser rumor ou feature em beta não
+  documentada. Não aplicado.
+- **Basecamp — New Actions & Triggers**: integração de app de terceiros no
+  marketplace, não é nativa da HighLevel (mesmo critério usado para
+  excluir Slack do guia).
+
+### 🐛 Drift pré-existente corrigido (não era novidade do HL, era bug nosso)
+- `index.html`: `tab-count` e `section-label` diziam 84/117 enquanto os
+  `hero-stats` e os cards de categoria (soma real) já diziam 86/120 —
+  dessincronizado desde os commits de 21/07 (cat07 A11) que não
+  atualizaram esses dois pontos específicos.
+- Footers de `acoes-highlevel-cat05.html` ("6 ações") e
+  `acoes-highlevel-cat13.html` ("6 ações") já estavam desatualizados
+  mesmo antes desta rodada (7 e 6 reais); corrigidos junto com as adições
+  desta rodada.
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

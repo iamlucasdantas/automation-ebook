@@ -2394,6 +2394,10 @@
 <a href="#g11" class="side-link"><span class="side-num">11</span>Produto Completado</a>
 <a href="#g12" class="side-link"><span class="side-num">12</span>Login de Usuário</a>
 </nav>
+<div class="side-section-label">Client Portal</div>
+<nav class="side-nav">
+<a href="#g13" class="side-link"><span class="side-num">13</span>Upload de Arquivo</a>
+</nav>
 
 
   <div class="side-cta-fixed">
@@ -4601,6 +4605,170 @@
     </div>
   </div>
 
+</div>
+<div class="trigger-block" id="g13" data-name="upload de arquivo portal do cliente client portal file uploaded">
+  <div class="trigger-head">
+    <div class="trigger-num">13</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Client Portal</div>
+      <h2 class="trigger-name">Upload de Arquivo no Portal do Cliente</h2>
+      <div class="trigger-en">Client Portal File Uploaded</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Cliente</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara automaticamente sempre que um contato sobe um arquivo pela experiência de Documentos Compartilhados do Client Portal — a área onde o cliente acessa cursos, contratos e conteúdo exclusivo da sua marca. Suporta múltiplos formatos; vídeos (.mp4, .mov, .avi, .mkv, .wmv) não podem ser enviados por lá. O cliente pode subir até 10 arquivos de uma vez, e cada upload dispara o gatilho individualmente.</p>
+      <p>É o "primo" do gatilho de Documentos e Contratos (assinatura): ali o disparo é sobre um documento específico enviado pra assinar, aqui é qualquer arquivo solto pelo cliente no portal — recibo, comprovante, foto, PDF.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Notificar a equipe</div><div class="use-case-desc">Notificação interna pro responsável assim que o cliente sobe um arquivo novo.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Criar tarefa de revisão</div><div class="use-case-desc">Task "Revisar documento enviado" com prazo de 24h pro time de onboarding.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Avançar o pipeline</div><div class="use-case-desc">Tag "Documento Recebido" + mover a oportunidade pro próximo estágio.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Sem filtros nativos</div>
+    <div class="filter-en">No native filters</div>
+    <div class="filter-type">informativo</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">A documentação oficial não lista filtros de configuração pra esse gatilho — ele dispara em qualquer upload feito por qualquer contato no Client Portal.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Use um If/Else logo em seguida se precisar restringir por tipo de arquivo, curso ou produto específico.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g13">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Cursos/ 13 — Client Portal · Novo Arquivo do Cliente</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g13">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g13-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Client Portal File Uploaded</div>
+              <div class="ghl-node-title">Upload de Arquivo no Portal do Cliente</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Client Portal File Uploaded</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer upload)</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g13-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-tag">✎</div>
+            <div>
+              <div class="ghl-node-type">Action · Contact</div>
+              <div class="ghl-node-title">Add Tag</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Tag</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">documento-recebido</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g13-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-task">✓</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal</div>
+              <div class="ghl-node-title">Create Task</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Create Task</span></div><div class="ghl-node-param"><span class="pk">Title</span><span class="pv highlight">Revisar documento enviado por {{contact.first_name}}</span></div><div class="ghl-node-param"><span class="pk">Due</span><span class="pv">+1 dia</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g13-4">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">@</div>
+            <div>
+              <div class="ghl-node-type">Action · Communication</div>
+              <div class="ghl-node-title">Internal Notification</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Internal Notification</span></div><div class="ghl-node-param"><span class="pk">Recipient</span><span class="pv">Owner do contato</span></div><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{contact.first_name}} enviou um novo arquivo no Client Portal.</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G13 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Sem filtros nativos documentados — dispara em cada upload no Client Portal.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Client Portal File Uploaded</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Client Portal File Uploaded" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-canvas-hint" style="margin: 4px 0 8px;">Nenhum filtro configurável — o gatilho dispara pra qualquer arquivo enviado por qualquer contato.</div>
+
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando o cliente sobe um arquivo no Client Portal (Shared Documents)</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat05.html" class="cat-nav-link prev">
@@ -4616,7 +4784,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 06 completa.</h3>
-    <p>12 gatilhos de Cursos explicados com impacto prático e mockups visuais.</p>
+    <p>13 gatilhos de Cursos explicados com impacto prático e mockups visuais.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -4678,7 +4846,11 @@
     'g12-1': { kind: 'Trigger · User Login', title: 'User Login', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Login detectado — engajamento ativo</div></div><div class="config-section"><div class="config-label">Frequency</div><div class="config-field dropdown">Each login event</div></div>` },
     'g12-2': { kind: 'Action · Update Contact', title: 'Update Contact Field', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Atualizar último login</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Custom Field · last_login_at</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{trigger.timestamp}}</div></div>` },
     'g12-3': { kind: 'Action · If/Else', title: 'If/Else (login após >30 dias?)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Re-engajamento após pausa?</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Custom Value · days_since_last_login</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Greater than</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">30</div></div>` },
-    'g12-4': { kind: 'Action · Send Email', title: 'Send Email (welcome back)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Welcome back após pausa</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">cursos@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Que bom te ver de volta, {{contact.first_name}}! 👋</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Welcome Back</div></div>` }
+    'g12-4': { kind: 'Action · Send Email', title: 'Send Email (welcome back)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Welcome back após pausa</div></div><div class="config-section"><div class="config-label">From Email *</div><div class="config-field dropdown">cursos@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Que bom te ver de volta, {{contact.first_name}}! 👋</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field highlight dropdown">Welcome Back</div></div>` },
+    'g13-1': { kind: 'Trigger · Client Portal File Uploaded', title: 'Client Portal File Uploaded', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Client Portal File Uploaded</div></div><div class="config-section"><div class="config-label">Filters</div><div class="config-field">Nenhum filtro nativo — dispara em qualquer upload</div></div>` },
+    'g13-2': { kind: 'Action · Add Tag', title: 'Add Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar documento recebido</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field highlight dropdown">documento-recebido</div></div>` },
+    'g13-3': { kind: 'Action · Create Task', title: 'Create Task', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Revisar documento enviado</div></div><div class="config-section"><div class="config-label">Title *</div><div class="config-field highlight">Revisar documento enviado por {{contact.first_name}}</div></div><div class="config-section"><div class="config-label">Due Date *</div><div class="config-field dropdown">+1 dia</div></div><div class="config-section"><div class="config-label">Assigned To</div><div class="config-field dropdown">Owner do contato</div></div>` },
+    'g13-4': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar time sobre novo arquivo</div></div><div class="config-section"><div class="config-label">Recipient *</div><div class="config-field dropdown">Owner do contato</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{contact.first_name}} enviou um novo arquivo no Client Portal.</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 36 | 76 | 8 | **120** |
+| Gatilhos | 31 | 53 | 3 | **87** |
+| Ações | 36 | 78 | 9 | **123** |
 
 
 ## Gatilhos · 12 categorias
@@ -95,6 +95,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g10 | [Produto Iniciado](guia-highlevel-cat06.html#g10) | Product Started | 2 | 2/6 | 🟡 | [ ] | |
 | g11 | [Produto Completado](guia-highlevel-cat06.html#g11) | Product Completed | 2 | 3/6 | 🟢 | [ ] | |
 | g12 | [Login de Usuário](guia-highlevel-cat06.html#g12) | User Login | 2 | 2/6 | 🟡 | [ ] | |
+| g13 | [Upload de Arquivo no Portal do Cliente](guia-highlevel-cat06.html#g13) | Client Portal File Uploaded | 2 | 1/6 | 🟡 | [ ] | |
 
 ### CAT07 · Recebimento
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -245,6 +246,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Classify | 2 | 2/6 | 🟡 | [ ] | |
 | a6 | [Agente de IA](acoes-highlevel-cat05.html#a6) | AI Agent | 2 | 3/6 | 🟢 | [ ] | |
 | a7 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a7) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
+| a8 | [Traduzir Texto (IA)](acoes-highlevel-cat05.html#a8) | AI Translate | 2 | 2/6 | 🟡 | [ ] | |
+| a9 | [Decisor por IA (Roteamento Inteligente)](acoes-highlevel-cat05.html#a9) | AI Decision Maker | 2 | 2/6 | 🔴 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -320,6 +323,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a4 | [Remover Acesso a Canal Privado](acoes-highlevel-cat13.html#a4) | Revoke Private Channel Access | 4 | 2/6 | 🟡 | [ ] | |
 | a5 | [Atribuir Nível na Classificação](acoes-highlevel-cat13.html#a5) | Assign Leaderboard Level | 4 | 2/6 | 🟡 | [ ] | |
 | a6 | [Publicar na Comunidade](acoes-highlevel-cat13.html#a6) | Post to Community | 3 | 2/6 | 🟡 | [ ] | |
+| a7 | [Conceder Pontos na Classificação](acoes-highlevel-cat13.html#a7) | Grant Community Group Leaderboard Points | 2 | 2/6 | 🟡 | [ ] | |
 
 ### CAT14 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 210,
   "items": [
     {
       "id": "g1",
@@ -790,6 +790,20 @@
       "description": "Dispara sempre que um aluno faz login na plataforma. É o gatilho mais frequente da categoria — use com filtros pra evitar rodar em todo acesso.",
       "keywords": "login de usuário user login",
       "href": "guia-highlevel-cat06.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Upload de Arquivo no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Client Portal",
+      "tags": [
+        "Tempo real",
+        "Cliente"
+      ],
+      "description": "Dispara automaticamente sempre que um contato sobe um arquivo pela experiência de Documentos Compartilhados do Client Portal — a área onde o cliente acessa cursos, contratos e conteúdo exclusivo da sua marca. Suporta múltiplos formatos; vídeos (.mp4, .mov, .avi, .mkv, .wmv) não podem ser enviados por lá. O cliente pode subir até 10 arquivos de uma vez, e cada upload dispara o gatilho individualmente.",
+      "keywords": "upload de arquivo portal do cliente client portal file uploaded",
+      "href": "guia-highlevel-cat06.html#g13"
     },
     {
       "id": "g1",
@@ -2118,6 +2132,34 @@
       "href": "acoes-highlevel-cat05.html#a7"
     },
     {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Traduzir Texto (IA)",
+      "en": "AI Translate",
+      "category": "Ação",
+      "tags": [
+        "Conversation AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "traduzir texto ai translate idioma",
+      "href": "acoes-highlevel-cat05.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Decisor por IA (Roteamento Inteligente)",
+      "en": "AI Decision Maker",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "decisor por ia ai decision maker roteamento inteligente",
+      "href": "acoes-highlevel-cat05.html#a9"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Atualizar Status do Agendamento",
@@ -2627,6 +2669,19 @@
       "description": "",
       "keywords": "publicar na comunidade post to community",
       "href": "acoes-highlevel-cat13.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Conceder Pontos na Classificação",
+      "en": "Grant Community Group Leaderboard Points",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "conceder pontos leaderboard grant community group leaderboard points gamificacao",
+      "href": "acoes-highlevel-cat13.html#a7"
     },
     {
       "id": "a1",
