@@ -10,6 +10,47 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-09 — Content
+**Routine native-item check: 2 new triggers + 2 new actions found and added, count drift fixed**
+
+- **Gatilho — SLA de Conversa (Conversation SLA)** · `guia-highlevel-cat02.html` G23.
+  Dispara quando o SLA de uma conversa fica Due Soon, vira Overdue ou é
+  dismissed manualmente. Filtros: SLA Event, Message Channel, Tags/Owner/
+  Custom Fields, toggle Avoid Repeated Triggers (1x/24h por conversa).
+  [Changelog oficial](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+- **Gatilho — Arquivo Enviado no Portal do Cliente (Client Portal File Uploaded)**
+  · `guia-highlevel-cat07.html` G11. Dispara quando o contato sobe um arquivo
+  pela experiência de Documentos Compartilhados do Client Portal; o arquivo
+  cai em Contacts → Documents → Received → Client Portal. Sem filtros
+  adicionais documentados oficialmente até o momento.
+  [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+- **Ação — AI Decision Maker** · `acoes-highlevel-cat05.html` A9. Ação Premium
+  de roteamento: em vez de If/Else manual, você descreve o critério em
+  linguagem natural (com merge fields) e a IA decide qual branch seguir.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+- **Ação — Tradução IA (AI Translate)** · `acoes-highlevel-cat05.html` A10.
+  Traduz texto (corpo de email, transcript, mensagem) de um idioma pra outro
+  dentro do workflow; Target Language pode ser fixo ou vir de um custom
+  field, output vira variável pras próximas actions.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+- Verificado e **não duplicado**: o gatilho de leaderboard de Comunidades
+  já existia como `guia-highlevel-cat11.html` G5, e a ação de pontos de
+  leaderboard já existia como `acoes-highlevel-cat13.html` A7 (Grant
+  Community Group Leaderboard Points, adicionada na rodada de 2026-07-29)
+  — nenhuma ação necessária nesses dois.
+- **Bug de busca corrigido**: `scripts/build-search-index.py` só reconhecia
+  o cabeçalho "O que esse/essa ... faz", mas toda entrada de Ação usa
+  "O que esta ação faz" — isso deixava a descrição vazia em praticamente
+  todas as ações no `search-index.json`. Regex ampliada pra cobrir "esta";
+  as 128 ações agora têm descrição na busca.
+- Fixed count drift found while auditing: `index.html` hero-stats ainda
+  diziam 87/123/213 enquanto tab-counts/section-labels já diziam 87/126
+  (drift antigo, anterior às adições desta rodada).
+- Totais atualizados: **89 gatilhos + 128 ações = 217 entries**, 13
+  categorias de gatilhos + 15 de ações. `search-index.json`, `AUDIT-TABLE.md`
+  e homepage (contadores + data de última atualização) regenerados/atualizados.
+  Todas as 30 páginas passam `validate-mockups.js`.
+
 ## 2026-08-03 — Content
 **Add tutorial video to Contact DND trigger (requested)**
 

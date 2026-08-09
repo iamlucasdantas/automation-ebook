@@ -56,9 +56,9 @@ def parse_blocks(path, kind):
         en_m = re.search(rf'<div class="{en_class}">([^<]+)</div>', body)
         cat_m = re.search(rf'<div class="{cat_class}">([^<]+)</div>', body)
         tags_m = re.search(rf'<div class="{tags_class}">(.*?)</div>', body, re.DOTALL)
-        # Description = first paragraph of "O que esse gatilho/ação faz" block
+        # Description = first paragraph of "O que esse/essa/esta gatilho/ação faz" block
         desc_m = re.search(
-            r'<div class="tblock-label">[^<]*(?:O que esse|O que essa)[^<]*</div>\s*<div class="tblock-content">(.*?)</div>',
+            r'<div class="tblock-label">[^<]*(?:O que esse|O que essa|O que esta)[^<]*</div>\s*<div class="tblock-content">(.*?)</div>',
             body, re.DOTALL,
         )
 

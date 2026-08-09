@@ -179,13 +179,68 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-09 — Checagem de novidades nativas
+
+Rotina automática comparou os 213 (87 gatilhos + 126 ações) itens do guia
+contra `help.gohighlevel.com` / `ideas.gohighlevel.com` em busca de
+gatilhos/ações nativos lançados recentemente e não cobertos ainda. Acesso
+direto a `help.gohighlevel.com` e `ideas.gohighlevel.com` via fetch estava
+bloqueado neste ambiente — toda confirmação abaixo veio de busca (snippets
++ URLs oficiais), não de leitura completa da página.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · cat02 G23. Due Soon /
+   Overdue / SLA Dismissed, com Avoid Repeated Triggers.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+2. **Gatilho — Arquivo Enviado no Portal do Cliente (Client Portal File
+   Uploaded)** · cat07 G11.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+3. **Ação — AI Decision Maker** · cat05 A9 (Premium).
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005649-workflow-action-ai-decision-maker)
+4. **Ação — Tradução IA (AI Translate)** · cat05 A10.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005892-workflow-action-ai-translate)
+
+### ✔ Candidatos verificados como já cobertos (não duplicados)
+- **Community Group Member Leaderboard Level Changed** — já existe como
+  `guia-highlevel-cat11.html` G5.
+- **Grant Community Group Leaderboard Points** — já existe como
+  `acoes-highlevel-cat13.html` A7 (adicionada na rodada 2026-07-29).
+- **AI Decision Maker / AI Translate** — confirmados como ainda ausentes
+  antes desta rodada (não confundir com Mistral AI cat05 A8, que é uma
+  integração diferente).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: hero-stats ainda diziam 87/123/213 enquanto tab-counts e
+  section-labels já diziam 87/126 (drift antigo, anterior às adições de
+  hoje — corrigido junto).
+- `scripts/build-search-index.py`: regex de descrição só reconhecia "O que
+  esse/essa ... faz", mas toda Ação usa "O que esta ação faz" — deixava a
+  descrição vazia em praticamente todas as ações no `search-index.json`.
+  Corrigido pra também aceitar "esta".
+
+### 🔍 Candidatos ainda pendentes (recap da rodada 2026-07-29 — não re-auditados agora)
+Integrações com múltiplos sub-itens que pedem confirmação humana de campos
+antes de montar mockup com fidelidade real:
+- **Browse AI** — 1 gatilho + 4 ações. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+- **OpenRouter** — ações/gatilhos. [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
+- **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
+
+### 🔍 Candidato novo, NÃO aplicado (precisa de validação humana antes de renomear conteúdo existente)
+- **cat13 A5 "Assign Leaderboard Level"** vs. A7 "Grant Community Group
+  Leaderboard Points" (já coexistem, ver acima) — nenhuma ação adicional
+  necessária, mas vale checar na UI real se A5 (atribuição direta de
+  nível) ainda existe como ação nativa separada da A7 (pontos), já que o
+  doc oficial de gamificação descreve principalmente o fluxo por pontos.
+
+Totais atualizados: **89 gatilhos + 128 ações = 217 entries** — homepage,
+`search-index.json` e `AUDIT-TABLE.md` já regenerados/atualizados.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+1. **Você abre HL** e valida os itens 🔍 pendentes acima — Browse AI,
+   OpenRouter e Manus são os mais substanciais (múltiplos campos cada)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

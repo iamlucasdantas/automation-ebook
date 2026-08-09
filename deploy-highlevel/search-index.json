@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 213,
+  "total": 217,
   "items": [
     {
       "id": "g1",
@@ -484,6 +484,20 @@
       "href": "guia-highlevel-cat02.html#g22"
     },
     {
+      "id": "g23",
+      "type": "Gatilho",
+      "name": "SLA de Conversa",
+      "en": "Conversation SLA",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara automaticamente quando o SLA configurado numa conversa muda de estado: fica Due Soon (perto de vencer), vira Overdue (vencido) ou é dismissed manualmente por um usuário. Em vez de depender de gestor ou atendente ficando de olho no timer, o workflow reage sozinho — notifica, reatribui, escalona.",
+      "keywords": "sla de conversa conversation sla overdue due soon dismissed",
+      "href": "guia-highlevel-cat02.html#g23"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -946,6 +960,19 @@
       "href": "guia-highlevel-cat07.html#g10"
     },
     {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Novo"
+      ],
+      "description": "Dispara sempre que um contato sobe um arquivo pela experiência de Documentos Compartilhados do Client Portal — o espaço onde o cliente acessa contratos, faturas e troca documentos direto com a sua conta, sem precisar de email. Aceita múltiplos formatos de arquivo.",
+      "keywords": "arquivo enviado portal do cliente client portal file uploaded documento",
+      "href": "guia-highlevel-cat07.html#g11"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Carrinho Abandonado",
@@ -1242,7 +1269,7 @@
       "tags": [
         "Integrações"
       ],
-      "description": "",
+      "description": "Cria um contato via automação. Muito usada em integrações externas — quando chega webhook de ferramentas como Elementor, Typeform, Hotmart ou Stripe, essa ação transforma os dados em contato real no HighLevel.",
       "keywords": "criar contato create contact",
       "href": "acoes-highlevel-cat01.html#a1"
     },
@@ -1255,7 +1282,7 @@
       "tags": [
         "Integrações"
       ],
-      "description": "",
+      "description": "Localiza um contato existente via automação. Essencial quando um evento externo precisa agir em contato já cadastrado sem duplicar. Use email ou telefone como chave de busca — são identificadores únicos.",
       "keywords": "encontrar contato find contact",
       "href": "acoes-highlevel-cat01.html#a2"
     },
@@ -1268,7 +1295,7 @@
       "tags": [
         "Sem limite"
       ],
-      "description": "",
+      "description": "Atualiza um ou mais campos (nativos ou personalizados) de um contato existente. Essencial pra manter dados vivos — temperatura de lead, status, última interação, etc.",
       "keywords": "atualizar campos do contato update contact field",
       "href": "acoes-highlevel-cat01.html#a3"
     },
@@ -1281,7 +1308,7 @@
       "tags": [
         "★ Mais usada"
       ],
-      "description": "",
+      "description": "Adiciona uma ou mais tags a um contato. Base pra segmentação — tags controlam quem recebe campanhas, quem entra em fluxos, quem aparece em smart lists.",
       "keywords": "adicionar tag ao contato add contact tag",
       "href": "acoes-highlevel-cat01.html#a4"
     },
@@ -1294,7 +1321,7 @@
       "tags": [
         "Higiene"
       ],
-      "description": "",
+      "description": "Remove uma ou mais tags de um contato. Crítica pra higiene de lista — quando cliente compra, remove \"Lead Frio\"; quando cancela, remove \"Cliente Ativo\".",
       "keywords": "remover tag do contato remove contact tag",
       "href": "acoes-highlevel-cat01.html#a5"
     },
@@ -1307,7 +1334,7 @@
       "tags": [
         "Equipes"
       ],
-      "description": "",
+      "description": "Atribui um contato a um ou mais usuários do HighLevel. Essencial pra distribuição de leads entre vendedores — com opções de round-robin (uniforme) ou peso desigual.",
       "keywords": "atribuir a usuário assign to user",
       "href": "acoes-highlevel-cat01.html#a6"
     },
@@ -1318,7 +1345,7 @@
       "en": "Remove Assigned User",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove a atribuição de usuário de um contato. Útil quando vendedor sai, oportunidade se perde, ou precisa redistribuir.",
       "keywords": "remover usuário atribuído remove assigned user",
       "href": "acoes-highlevel-cat01.html#a7"
     },
@@ -1331,7 +1358,7 @@
       "tags": [
         "Organização"
       ],
-      "description": "",
+      "description": "Altera status de leitura ou arquivamento de conversas associadas ao contato. Ajuda a manter inbox organizada — marca como lido automaticamente, arquiva inativas.",
       "keywords": "editar conversação edit conversation",
       "href": "acoes-highlevel-cat01.html#a8"
     },
@@ -1344,7 +1371,7 @@
       "tags": [
         "Compliance"
       ],
-      "description": "",
+      "description": "Controla o status \"Não Perturbe\" do contato por canal (Call, SMS, Email, WhatsApp, FB, GMB). Essencial pra respeitar preferências e evitar spam.",
       "keywords": "ativar/desativar dnd enable/disable dnd",
       "href": "acoes-highlevel-cat01.html#a9"
     },
@@ -1357,7 +1384,7 @@
       "tags": [
         "Histórico"
       ],
-      "description": "",
+      "description": "Adiciona anotação no histórico do contato. Registro interno valioso — todas as interações ficam rastreadas pra consulta posterior pelo time.",
       "keywords": "adicionar às notas add to notes",
       "href": "acoes-highlevel-cat01.html#a10"
     },
@@ -1370,7 +1397,7 @@
       "tags": [
         "Gestão"
       ],
-      "description": "",
+      "description": "Cria tarefa associada ao contato com título, descrição, responsável e prazo. Melhor jeito de garantir que alguém humano pegue uma ação follow-up sem esquecer.",
       "keywords": "adicionar tarefa add task",
       "href": "acoes-highlevel-cat01.html#a11"
     },
@@ -1383,7 +1410,7 @@
       "tags": [
         "Pago · $0,01"
       ],
-      "description": "",
+      "description": "Duplica um contato pra outra conta ou subconta. Útil em agências com múltiplas unidades/clientes quando mesmo contato precisa aparecer em vários lugares.",
       "keywords": "copiar contato copy contact",
       "href": "acoes-highlevel-cat01.html#a12"
     },
@@ -1396,7 +1423,7 @@
       "tags": [
         "⚠ Destrutiva"
       ],
-      "description": "",
+      "description": "Remove o contato permanentemente do sistema. USE COM EXTREMA CAUTELA — ação irreversível, perde histórico inteiro.",
       "keywords": "deletar contato delete contact",
       "href": "acoes-highlevel-cat01.html#a13"
     },
@@ -1409,7 +1436,7 @@
       "tags": [
         "Lead Scoring"
       ],
-      "description": "",
+      "description": "Aumenta ou diminui a pontuação de engajamento do contato. Core do lead scoring — pontua cliques, aberturas, compras, e penaliza desinteresse.",
       "keywords": "modificar pontuação de engajamento modify contact engagement score",
       "href": "acoes-highlevel-cat01.html#a14"
     },
@@ -1422,7 +1449,7 @@
       "tags": [
         "Equipes"
       ],
-      "description": "",
+      "description": "Adiciona usuários como seguidores do contato — permitindo que múltiplos membros da equipe tenham acesso à conversa e atualizações.",
       "keywords": "adicionar seguidores add contact followers",
       "href": "acoes-highlevel-cat01.html#a15"
     },
@@ -1433,7 +1460,7 @@
       "en": "Remove Contact Followers",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove usuários como seguidores do contato. Complementa a ação anterior — limpa acesso quando não é mais necessário.",
       "keywords": "remover seguidores remove contact followers",
       "href": "acoes-highlevel-cat01.html#a16"
     },
@@ -1446,7 +1473,7 @@
       "tags": [
         "★ Principal"
       ],
-      "description": "",
+      "description": "Envia emails automatizados ou manuais. Essencial pra campanhas, notificações transacionais e comunicações regulares. Requer módulo de email marketing configurado.",
       "keywords": "enviar email send email",
       "href": "acoes-highlevel-cat02.html#a1"
     },
@@ -1459,7 +1486,7 @@
       "tags": [
         "Rápido"
       ],
-      "description": "",
+      "description": "Envia SMS ou mensagens via WhatsApp API não oficial. Ideal pra comunicações rápidas e urgentes — confirmações de agendamento, códigos de verificação, lembretes.",
       "keywords": "enviar sms send sms",
       "href": "acoes-highlevel-cat02.html#a2"
     },
@@ -1472,7 +1499,7 @@
       "tags": [
         "Interno"
       ],
-      "description": "",
+      "description": "Envia notificação direta pro Slack da equipe — num canal ou pra usuário específico. Mantém o time informado sobre eventos importantes sem sair da ferramenta de trabalho.",
       "keywords": "mensagem no slack slack message",
       "href": "acoes-highlevel-cat02.html#a3"
     },
@@ -1485,7 +1512,7 @@
       "tags": [
         "Automatizada"
       ],
-      "description": "",
+      "description": "Inicia chamada telefônica com o contato via HighLevel. Pode ser automatizada — útil pra verificação de número, confirmações, ou conectar equipe direto com cliente VIP.",
       "keywords": "chamada telefônica call",
       "href": "acoes-highlevel-cat02.html#a4"
     },
@@ -1496,7 +1523,7 @@
       "en": "Voicemail",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Envia mensagem de voz pra contato. Útil pra comunicar algo importante quando cliente não atende — voicemail registrado fica na caixa postal.",
       "keywords": "correio de voz voicemail",
       "href": "acoes-highlevel-cat02.html#a5"
     },
@@ -1509,7 +1536,7 @@
       "tags": [
         "Janela 24h"
       ],
-      "description": "",
+      "description": "Envia mensagem via Facebook Messenger. Limitação: contato precisa ter enviado msg pra sua página nas últimas 24h. Ideal pra respostas e segundo toque depois de interação inicial.",
       "keywords": "facebook messenger facebook messenger",
       "href": "acoes-highlevel-cat02.html#a6"
     },
@@ -1523,7 +1550,7 @@
         "Janela 24h",
         "Alto ROI"
       ],
-      "description": "",
+      "description": "Envia DM pelo Instagram pra contato. Mesma regra dos 24h do FB. Canal extremamente eficaz — taxa de abertura de 95%+ e conversão altíssima.",
       "keywords": "instagram dm instagram dm",
       "href": "acoes-highlevel-cat02.html#a7"
     },
@@ -1536,7 +1563,7 @@
       "tags": [
         "Híbrido"
       ],
-      "description": "",
+      "description": "Cria tarefa pra usuário humano revisar e enviar SMS manualmente. Mistura automação + toque pessoal — automação prepara, humano aprova e envia.",
       "keywords": "ação manual para sms manual action to sms",
       "href": "acoes-highlevel-cat02.html#a8"
     },
@@ -1549,7 +1576,7 @@
       "tags": [
         "Híbrido"
       ],
-      "description": "",
+      "description": "Cria tarefa pra usuário fazer ligação manual. Não liga automaticamente — cria item na agenda do vendedor.",
       "keywords": "ação manual para chamada manual action to call",
       "href": "acoes-highlevel-cat02.html#a9"
     },
@@ -1562,7 +1589,7 @@
       "tags": [
         "Equipe"
       ],
-      "description": "",
+      "description": "Envia notificação pra equipe interna (não pro contato). Mantém pessoas informadas sobre eventos — novos leads, tarefas, alertas.",
       "keywords": "notificação interna internal notification",
       "href": "acoes-highlevel-cat02.html#a10"
     },
@@ -1575,7 +1602,7 @@
       "tags": [
         "Reputação"
       ],
-      "description": "",
+      "description": "Envia pedido de avaliação (review) pro cliente por email, SMS ou WhatsApp. Integra com Google e Facebook Reviews — automatiza a coleta de avaliações.",
       "keywords": "pedido de avaliação review request",
       "href": "acoes-highlevel-cat02.html#a11"
     },
@@ -1588,7 +1615,7 @@
       "tags": [
         "API oficial"
       ],
-      "description": "",
+      "description": "Envia mensagem WhatsApp via API oficial (Meta Business). Requer template aprovado pela Meta. Ideal pra mensagens transacionais e notificações.",
       "keywords": "whatsapp oficial whatsapp official",
       "href": "acoes-highlevel-cat02.html#a12"
     },
@@ -1601,7 +1628,7 @@
       "tags": [
         "AI"
       ],
-      "description": "",
+      "description": "Dispara resposta de email gerada por AI baseada no contexto da conversa. Experimental — requer Conversation AI configurado no HighLevel.",
       "keywords": "email do conversas ia conversation ai email",
       "href": "acoes-highlevel-cat02.html#a13"
     },
@@ -1614,7 +1641,7 @@
       "tags": [
         "AI"
       ],
-      "description": "",
+      "description": "Versão SMS do anterior — AI gera resposta baseada no histórico. Menor e mais conversacional.",
       "keywords": "sms do conversas ia conversation ai sms",
       "href": "acoes-highlevel-cat02.html#a14"
     },
@@ -1625,7 +1652,7 @@
       "en": "Send Form via SMS",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Envia link de formulário do HighLevel por SMS. Taxa de abertura altíssima (SMS) + conversão de form. Ótimo pra qualificação rápida.",
       "keywords": "enviar formulário por sms send form via sms",
       "href": "acoes-highlevel-cat02.html#a15"
     },
@@ -1636,7 +1663,7 @@
       "en": "Send Survey via SMS",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Similar ao anterior mas com survey ao invés de form. Survey costuma ter múltiplas páginas e lógica condicional — melhor pra pesquisas mais elaboradas.",
       "keywords": "enviar survey por sms send survey via sms",
       "href": "acoes-highlevel-cat02.html#a16"
     },
@@ -1649,7 +1676,7 @@
       "tags": [
         "AI · Beta"
       ],
-      "description": "",
+      "description": "Inicia ligação onde uma IA conversa com o cliente. Ainda experimental. Útil pra triage massivo, confirmações simples, pesquisas rápidas.",
       "keywords": "ligação com ia voice ai call",
       "href": "acoes-highlevel-cat02.html#a17"
     },
@@ -1662,7 +1689,7 @@
       "tags": [
         "Social"
       ],
-      "description": "",
+      "description": "Responde publicamente a comentário do Facebook que disparou o gatilho. Combinado com DM privada, cria flow \"responde público + manda info na DM\".",
       "keywords": "responder comentário fb reply to fb comment",
       "href": "acoes-highlevel-cat02.html#a18"
     },
@@ -1675,7 +1702,7 @@
       "tags": [
         "Social"
       ],
-      "description": "",
+      "description": "Versão Instagram da anterior. Responde publicamente no post do Instagram que disparou o gatilho.",
       "keywords": "responder comentário ig reply to ig comment",
       "href": "acoes-highlevel-cat02.html#a19"
     },
@@ -1688,7 +1715,7 @@
       "tags": [
         "AI"
       ],
-      "description": "",
+      "description": "Gera conteúdo (texto) usando IA baseado em prompt. Útil pra personalizar mensagens em escala — cada contato recebe algo levemente diferente sem intervenção humana.",
       "keywords": "gerar conteúdo com ia ai content generation",
       "href": "acoes-highlevel-cat02.html#a20"
     },
@@ -1701,7 +1728,7 @@
       "tags": [
         "Controle"
       ],
-      "description": "",
+      "description": "Especifica de qual número do HighLevel enviar. Útil quando você tem vários números (vendas, suporte, financeiro) e quer garantir que mensagem saia do certo.",
       "keywords": "mensagem via número específico send from specific number",
       "href": "acoes-highlevel-cat02.html#a21"
     },
@@ -1714,7 +1741,7 @@
       "tags": [
         "Distribuição"
       ],
-      "description": "",
+      "description": "Envia alternando entre um pool de números. Espalha risco de bloqueio por operadora e aparece mais natural (cliente recebe de números diferentes).",
       "keywords": "mensagem com número pool send from number pool",
       "href": "acoes-highlevel-cat02.html#a22"
     },
@@ -1727,7 +1754,7 @@
       "tags": [
         "Google"
       ],
-      "description": "",
+      "description": "Envia confirmação via Google My Business Messaging. Canal extra pra empresas locais que recebem mensagens via GMB.",
       "keywords": "confirmação gmb gmb confirmation",
       "href": "acoes-highlevel-cat02.html#a23"
     },
@@ -1740,7 +1767,7 @@
       "tags": [
         "Enterprise"
       ],
-      "description": "",
+      "description": "Envia SMS via códigos curtos (5-6 dígitos). Maior taxa de entrega e credibilidade. Uso mais comercial/enterprise.",
       "keywords": "sms via shortcode shortcode sms",
       "href": "acoes-highlevel-cat02.html#a24"
     },
@@ -1751,7 +1778,7 @@
       "en": "Attach File",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Anexa arquivo a mensagens (email, SMS, WhatsApp) enviadas. Extensão das ações de envio — não é ação standalone, é enhancement.",
       "keywords": "anexar arquivo attach file",
       "href": "acoes-highlevel-cat02.html#a25"
     },
@@ -1764,7 +1791,7 @@
       "tags": [
         "🆕 Novo"
       ],
-      "description": "",
+      "description": "Envia mensagens interativas do WhatsApp via API oficial (Meta) direto do workflow — diferente do \"WhatsApp Oficial\" (ação 12), que manda templates estáticos aprovados. Suporta 4 tipos: Interactive Reply Buttons (até 3 botões de resposta rápida), List Message (menu estruturado com seções e itens), Location Message (envia localização com latitude/longitude) e Contact Message (cartão de contato rico com nome, telefone, endereço, email). A resposta do contato pode ser usada como filtro em Wait ou If/Else no restante do workflow.",
       "keywords": "mensagens interativas do whatsapp whatsapp interactive messages",
       "href": "acoes-highlevel-cat02.html#a26"
     },
@@ -1777,7 +1804,7 @@
       "tags": [
         "🆕 Novo"
       ],
-      "description": "",
+      "description": "Verifica se a \"janela de atendimento\" (Customer Service Window) do WhatsApp está aberta pra um número — a janela abre por 24h toda vez que o contato manda uma mensagem, e enquanto ela estiver aberta você pode mandar mensagens livres (free-form) sem custo extra. A ação cria dois ramos automáticos no workflow: Open (janela aberta — pode mandar texto livre, mídia ou Flow) e Closed (janela fechada — só templates aprovados pela Meta iniciam uma nova conversa).",
       "keywords": "whatsapp verificar janela de atendimento whatsapp customer service window check",
       "href": "acoes-highlevel-cat02.html#a27"
     },
@@ -1790,7 +1817,7 @@
       "tags": [
         "🆕 Novo"
       ],
-      "description": "",
+      "description": "Envia um WhatsApp Flow (formulário/fluxo guiado da Meta que abre dentro do próprio WhatsApp) direto do workflow — o contato preenche etapas (agendar horário, escolher produto, dar consentimento) sem sair do app. Só funciona com a janela de atendimento aberta (ramo Open da ação 27), e não é suportado em integrações COEX — a Meta não libera Flows nesse modo.",
       "keywords": "whatsapp enviar flow whatsapp send flows",
       "href": "acoes-highlevel-cat02.html#a28"
     },
@@ -1803,7 +1830,7 @@
       "tags": [
         "🆕 Novo"
       ],
-      "description": "",
+      "description": "Envia imagem, vídeo, áudio ou documento pelo WhatsApp direto do workflow, com legenda opcional (exceto pra áudio). Só funciona com a janela de atendimento aberta (24h desde a última mensagem do contato) e respeita os limites da Meta: Imagem JPEG/PNG até 5MB, Vídeo MP4/3GP (H.264+AAC) até 16MB, Áudio AAC/AMR/MP3/M4A/OGG até 16MB, Documento TXT/PDF/DOC(X)/PPT(X)/XLS(X) até 100MB. Dentro da janela aberta, o envio de mídia não tem custo adicional.",
       "keywords": "whatsapp mídia whatsapp media",
       "href": "acoes-highlevel-cat02.html#a29"
     },
@@ -1816,7 +1843,7 @@
       "tags": [
         "★ Principal"
       ],
-      "description": "",
+      "description": "Envia dados do HighLevel pra um URL externo (Make, n8n, Zapier, API própria). Oposto do Inbound Webhook. Fundamental pra integrar HL com qualquer outra ferramenta fora do ecossistema.",
       "keywords": "webhook de saída outbound webhook",
       "href": "acoes-highlevel-cat03.html#a1"
     },
@@ -1829,7 +1856,7 @@
       "tags": [
         "Integração nativa"
       ],
-      "description": "",
+      "description": "Integração nativa com Google Sheets — adiciona linha em planilha específica. Não precisa configurar API, é só conectar conta Google.",
       "keywords": "google sheets google sheets",
       "href": "acoes-highlevel-cat03.html#a2"
     },
@@ -1842,7 +1869,7 @@
       "tags": [
         "Dev"
       ],
-      "description": "",
+      "description": "Similar ao webhook de saída, mas com suporte estendido pra autenticação complexa (OAuth, tokens dinâmicos). Pra quando webhook simples não basta.",
       "keywords": "enviar dados pra api custom custom api call",
       "href": "acoes-highlevel-cat03.html#a3"
     },
@@ -1856,7 +1883,7 @@
         "Ads",
         "Atribuição"
       ],
-      "description": "",
+      "description": "Manda um evento de conversão direto pra Meta Conversion API (CAPI) e Google Ads Enhanced Conversions com o valor da venda + email/telefone hasheados (LGPD compliant). Resolve o problema de atribuição quando o pixel do navegador é bloqueado por adblocker, iOS 17+ ou cookies third-party desativados.",
       "keywords": "enviar conversao meta google capi conversion api ads pixel",
       "href": "acoes-highlevel-cat03.html#a4"
     },
@@ -1871,7 +1898,7 @@
         "JavaScript",
         "Premium"
       ],
-      "description": "",
+      "description": "Roda um trecho de JavaScript direto dentro do workflow — pra qualquer lógica que as ações prontas não cobrem: transformar dados, fazer cálculo customizado, montar um payload complexo antes de mandar pra outra ação. É diferente do Custom API Call (que só faz uma chamada HTTP) e do Outbound Webhook (que só envia dados pra fora): aqui você escreve código de verdade que processa e retorna dados pra usar nos próximos passos.",
       "keywords": "custom code codigo customizado javascript ai code generation",
       "href": "acoes-highlevel-cat03.html#a5"
     },
@@ -1884,7 +1911,7 @@
       "tags": [
         "★ Lógica"
       ],
-      "description": "",
+      "description": "Ramifica o fluxo baseado em condições. Base de toda automação complexa — permite lógica \"se X então Y senão Z\" dentro do workflow.",
       "keywords": "if/else if/else condition",
       "href": "acoes-highlevel-cat04.html#a1"
     },
@@ -1897,7 +1924,7 @@
       "tags": [
         "★ Temporização"
       ],
-      "description": "",
+      "description": "Pausa o contato nesse ponto do workflow até uma condição ser satisfeita. O dropdown Wait Type tem 8 modos reais no HighLevel — não é só \"duração fixa ou evento\": dá pra esperar um tempo fixo, uma data/hora específica, uma agenda recorrente, o próximo compromisso/cobrança do contato, uma resposta (de cliente OU de usuário do time), um evento arbitrário, uma condição de Opportunity, ou o ciclo de uma solicitação de review.",
       "keywords": "wait (esperar) wait",
       "href": "acoes-highlevel-cat04.html#a2"
     },
@@ -1910,7 +1937,7 @@
       "tags": [
         "Evento"
       ],
-      "description": "",
+      "description": "Aguarda até X tempo antes/depois de uma data específica (data de agendamento, de evento, de vencimento). Diferente do Wait comum — é relativo a um evento, não a agora.",
       "keywords": "wait until event wait until event date",
       "href": "acoes-highlevel-cat04.html#a3"
     },
@@ -1923,7 +1950,7 @@
       "tags": [
         "Data custom"
       ],
-      "description": "",
+      "description": "Define uma data customizada pra o contato usar com Wait Until Event. Usado quando a data do evento não é nativa (não é appointment, não é invoice) — você cria manualmente.",
       "keywords": "set event date set event date",
       "href": "acoes-highlevel-cat04.html#a4"
     },
@@ -1936,7 +1963,7 @@
       "tags": [
         "Conversão"
       ],
-      "description": "",
+      "description": "Marca que o contato atingiu um \"objetivo\" no fluxo. Usado pra segmentar e medir taxa de conversão de workflows. Quem atinge o goal sai do fluxo (se configurado).",
       "keywords": "goal event goal event",
       "href": "acoes-highlevel-cat04.html#a5"
     },
@@ -1949,7 +1976,7 @@
       "tags": [
         "Cálculo"
       ],
-      "description": "",
+      "description": "Faz cálculos matemáticos com campos do contato. Permite lógica tipo \"soma pontos\", \"multiplica pra descobrir comissão\", \"divide pra rateio\".",
       "keywords": "math operation math operation",
       "href": "acoes-highlevel-cat04.html#a6"
     },
@@ -1962,7 +1989,7 @@
       "tags": [
         "Variável global"
       ],
-      "description": "",
+      "description": "Atualiza um Custom Value da conta (valor global, não do contato). Útil pra parâmetros globais que mudam — preços, cupons ativos, configs de campanha.",
       "keywords": "custom value update update custom value",
       "href": "acoes-highlevel-cat04.html#a7"
     },
@@ -1975,7 +2002,7 @@
       "tags": [
         "Calendário"
       ],
-      "description": "",
+      "description": "Cria evento em calendário do HighLevel. Diferente de book appointment (do cliente) — aqui você cria evento interno ou bloqueia horário.",
       "keywords": "create calendar event create calendar event",
       "href": "acoes-highlevel-cat04.html#a8"
     },
@@ -1988,7 +2015,7 @@
       "tags": [
         "Bulk"
       ],
-      "description": "",
+      "description": "Cancela todos os eventos futuros do contato. Uso em caso de cancelamento de assinatura, bloqueio de conta, ou limpeza antes de nova sequência.",
       "keywords": "cancel all events cancel all events",
       "href": "acoes-highlevel-cat04.html#a9"
     },
@@ -2001,7 +2028,7 @@
       "tags": [
         "Modularização"
       ],
-      "description": "",
+      "description": "Executa outro workflow dentro do atual. Permite modularizar — cria sub-fluxos reutilizáveis (ex.: \"onboarding básico\") e chama eles de múltiplos workflows principais.",
       "keywords": "call workflow (chamar outro fluxo) call another workflow",
       "href": "acoes-highlevel-cat04.html#a10"
     },
@@ -2012,7 +2039,7 @@
       "en": "Add to Workflow",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Adiciona contato a outro workflow (começa executar). Diferente de Call — não espera terminar, dispara paralelo.",
       "keywords": "adicionar a workflow add to workflow",
       "href": "acoes-highlevel-cat04.html#a11"
     },
@@ -2023,7 +2050,7 @@
       "en": "Remove from Workflow",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove contato de outro workflow em execução. Útil pra parar sequências quando cliente converte — evita continuar mandando \"compre agora\" pra quem já comprou.",
       "keywords": "remover de workflow remove from workflow",
       "href": "acoes-highlevel-cat04.html#a12"
     },
@@ -2034,7 +2061,7 @@
       "en": "Remove from Current Workflow",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove contato do workflow ATUAL (onde a ação está rodando). Funciona como \"abortar\" o próprio fluxo no meio — evita continuar execução.",
       "keywords": "remove from current workflow remove from current workflow",
       "href": "acoes-highlevel-cat04.html#a13"
     },
@@ -2047,7 +2074,7 @@
       "tags": [
         "Avançado"
       ],
-      "description": "",
+      "description": "Pula pra ação específica no mesmo workflow. Cria loops ou saltos não-lineares. Usar com cuidado — pode criar loops infinitos se mal configurado.",
       "keywords": "jump to action jump to action",
       "href": "acoes-highlevel-cat04.html#a14"
     },
@@ -2060,7 +2087,7 @@
       "tags": [
         "⚠ Global"
       ],
-      "description": "",
+      "description": "Para o workflow inteiro pra TODOS os contatos que estão nele. Diferente de Remove (só um contato) — isso é switch global.",
       "keywords": "stop workflow stop workflow",
       "href": "acoes-highlevel-cat04.html#a15"
     },
@@ -2071,7 +2098,7 @@
       "en": "Restart Workflow",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Reinicia execução do workflow desde o começo pro contato. Útil quando lógica requer recomeçar sequência (ex.: cliente voltou depois de inativo).",
       "keywords": "restart workflow restart workflow",
       "href": "acoes-highlevel-cat04.html#a16"
     },
@@ -2084,7 +2111,7 @@
       "tags": [
         "Novo"
       ],
-      "description": "",
+      "description": "Divide os contatos aleatoriamente em dois ou mais caminhos dentro do workflow, com base em percentuais definidos por você. É o teste A/B nativo do HighLevel — sem precisar de ferramenta externa.",
       "keywords": "split teste ab a/b experimento random percentage",
       "href": "acoes-highlevel-cat04.html#a17"
     },
@@ -2098,7 +2125,7 @@
         "AI",
         "Experimental"
       ],
-      "description": "",
+      "description": "Gera texto customizado usando IA (GPT/Claude) baseado em prompt. Pode usar variáveis do contato pra personalizar — cada contato recebe algo único.",
       "keywords": "generate text (texto) ai generate text",
       "href": "acoes-highlevel-cat05.html#a1"
     },
@@ -2111,7 +2138,7 @@
       "tags": [
         "Visão"
       ],
-      "description": "",
+      "description": "Analisa imagem com IA. Extrai texto (OCR), descreve conteúdo, identifica objetos. Útil pra extrair dados de comprovantes, notas fiscais, cartões.",
       "keywords": "parse image (analisar imagem) ai parse image",
       "href": "acoes-highlevel-cat05.html#a2"
     },
@@ -2124,7 +2151,7 @@
       "tags": [
         "Produtividade"
       ],
-      "description": "",
+      "description": "Resume histórico de conversa do contato com IA. Útil pra handoff entre vendedores, notas de CRM, visualização rápida do relacionamento.",
       "keywords": "summarize conversation summarize conversation",
       "href": "acoes-highlevel-cat05.html#a3"
     },
@@ -2138,7 +2165,7 @@
         "Parsing",
         "Premium"
       ],
-      "description": "",
+      "description": "Extrai informações específicas de texto usando AI. Ex.: de uma mensagem não estruturada, extrai nome, email, necessidade. Faz o trabalho de campos estruturados sem form.",
       "keywords": "extract info ai extract data ai extract info",
       "href": "acoes-highlevel-cat05.html#a4"
     },
@@ -2151,7 +2178,7 @@
       "tags": [
         "Categorização"
       ],
-      "description": "",
+      "description": "Classifica texto em categorias predefinidas com AI. Ex.: mensagem do cliente → categoria \"Suporte técnico\", \"Vendas\", \"Reclamação\", \"Dúvida geral\". Triage automático.",
       "keywords": "classify ai classify",
       "href": "acoes-highlevel-cat05.html#a5"
     },
@@ -2166,7 +2193,7 @@
         "Premium",
         "Novo"
       ],
-      "description": "",
+      "description": "Automatiza tarefas multi-etapa dentro do workflow usando instruções em linguagem natural. O agente decide quais ferramentas usar, em que ordem e com quais parâmetros — eliminando a necessidade de configurar manualmente cada ação em sequência.",
       "keywords": "agente de ia ai agent",
       "href": "acoes-highlevel-cat05.html#a6"
     },
@@ -2180,7 +2207,7 @@
         "Conversation AI",
         "Novo"
       ],
-      "description": "",
+      "description": "Atribui um bot de Conversation AI específico ao contato e liga/desliga o status dele (Active/Inactive) — por contato, não global. É a peça-chave do handoff humano: atendente assumiu a conversa? Desliga o bot pra ele não atropelar.",
       "keywords": "atualizar bot de ia e status update conversation ai bot and status agente",
       "href": "acoes-highlevel-cat05.html#a7"
     },
@@ -2195,9 +2222,36 @@
         "Beta",
         "Novo"
       ],
-      "description": "",
+      "description": "Conecta modelos da Mistral (Large, Medium, Small, Ministral, Magistral) direto no workflow, usando a sua própria API key da Mistral — não a conta de IA do HighLevel. Três modos dentro da mesma integração: Create Chat Completion (gera texto — resposta, resumo, reescrita, classificação), Create Embeddings (vetores pra busca semântica) e Analyze Image (visão computacional sobre imagem anexada).",
       "keywords": "mistral ai chat completion embeddings analyze image",
       "href": "acoes-highlevel-cat05.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "AI Decision Maker",
+      "en": "AI Decision Maker",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "Roteia o contato entre diferentes ramificações do workflow com base em instruções escritas em português/inglês simples — em vez de montar uma árvore de If/Else manual com várias condições, você descreve o critério de decisão e a IA avalia os dados do contato e escolhe o caminho certo sozinha.",
+      "keywords": "tomador de decisao ia ai decision maker roteamento ramificacao",
+      "href": "acoes-highlevel-cat05.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Tradução IA",
+      "en": "AI Translate",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "Traduz qualquer texto de um idioma pra outro dentro do workflow — corpo de email recebido, transcript de ligação, mensagem de WhatsApp, o que precisar. O texto traduzido fica disponível como variável pra usar nas ações seguintes (Send Email, Send SMS, Update Contact Field, etc.).",
+      "keywords": "traducao ia ai translate idioma origem destino",
+      "href": "acoes-highlevel-cat05.html#a10"
     },
     {
       "id": "a1",
@@ -2208,7 +2262,7 @@
       "tags": [
         "★ Principal"
       ],
-      "description": "",
+      "description": "Muda status de um agendamento (New → Confirmed → Showed/No-Show/Cancelled). Principal ação pra manter agenda atualizada automaticamente.",
       "keywords": "atualizar status do agendamento update appointment status",
       "href": "acoes-highlevel-cat06.html#a1"
     },
@@ -2221,7 +2275,7 @@
       "tags": [
         "Novo"
       ],
-      "description": "",
+      "description": "Cria um agendamento num calendário selecionado automaticamente quando o workflow roda — sem intervenção manual. O horário pode ser fixo (Standard) ou dinâmico, mapeado de dados do gatilho (payload de webhook, campo de formulário, custom field de data).",
       "keywords": "marcar agendamento book appointment",
       "href": "acoes-highlevel-cat06.html#a2"
     },
@@ -2234,7 +2288,7 @@
       "tags": [
         "Novo"
       ],
-      "description": "",
+      "description": "Adiciona uma nota interna ao agendamento. A nota aparece nos registros de Contato, Oportunidade e Conversa associados — o time inteiro vê o mesmo contexto em qualquer módulo.",
       "keywords": "criar nota no agendamento create appointment note",
       "href": "acoes-highlevel-cat06.html#a3"
     },
@@ -2247,7 +2301,7 @@
       "tags": [
         "★ Principal"
       ],
-      "description": "",
+      "description": "Cria nova oportunidade em pipeline específico. Normalmente disparada por eventos de alta intenção — compra, form de qualificação, clique em oferta.",
       "keywords": "criar oportunidade create opportunity",
       "href": "acoes-highlevel-cat07.html#a1"
     },
@@ -2258,7 +2312,7 @@
       "en": "Update Opportunity",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Atualiza campos da oportunidade (nome, valor, estágio, tags, campos custom). Usada pra mover no pipeline, ajustar valores estimados, mudar estágio.",
       "keywords": "atualizar oportunidade update opportunity",
       "href": "acoes-highlevel-cat07.html#a2"
     },
@@ -2271,7 +2325,7 @@
       "tags": [
         "Pipeline"
       ],
-      "description": "",
+      "description": "Move opp entre estágios do mesmo pipeline. Forma mais simples de progresso no funil de vendas sem precisar recriar.",
       "keywords": "mover estágio no pipeline move pipeline stage",
       "href": "acoes-highlevel-cat07.html#a3"
     },
@@ -2282,7 +2336,7 @@
       "en": "Move Between Pipelines",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Move opp de um pipeline pra outro completamente. Útil quando opp muda de natureza — deixa de ser \"Vendas\" e vira \"Onboarding\" ou \"Renovação\".",
       "keywords": "mover entre pipelines move between pipelines",
       "href": "acoes-highlevel-cat07.html#a4"
     },
@@ -2293,7 +2347,7 @@
       "en": "Update Opportunity Status",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Muda status da opp (Open/Won/Lost/Abandoned). Critério pra métricas — Win rate, loss reasons, churn.",
       "keywords": "atualizar status update opportunity status",
       "href": "acoes-highlevel-cat07.html#a5"
     },
@@ -2306,7 +2360,7 @@
       "tags": [
         "⚠ Destrutiva"
       ],
-      "description": "",
+      "description": "Remove opp permanentemente. Use pra duplicatas criadas por erro, teste interno, ou limpeza massiva.",
       "keywords": "deletar oportunidade delete opportunity",
       "href": "acoes-highlevel-cat07.html#a6"
     },
@@ -2317,7 +2371,7 @@
       "en": "Add Owner to Opportunity",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Define o usuário responsável pela oportunidade (separado do Assigned User do contato). Precisa de uma opp em contexto — ou veio do trigger de oportunidade, ou de um Find Opportunity antes.",
       "keywords": "adicionar dono à oportunidade add owner to opportunity",
       "href": "acoes-highlevel-cat07.html#a7"
     },
@@ -2328,7 +2382,7 @@
       "en": "Add Opportunity Tag",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Adiciona tag específica à oportunidade (não ao contato). Útil pra categorizar opps — \"Alto risco\", \"Fast-track\", \"Enterprise\".",
       "keywords": "adicionar tag à opp add opportunity tag",
       "href": "acoes-highlevel-cat07.html#a8"
     },
@@ -2339,7 +2393,7 @@
       "en": "Remove Opportunity Tag",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove tag da opp. Geralmente usado em transições — \"Em negociação\" → remove, adiciona \"Fechada\".",
       "keywords": "remover tag da opp remove opportunity tag",
       "href": "acoes-highlevel-cat07.html#a9"
     },
@@ -2350,7 +2404,7 @@
       "en": "Add Follower(s) to Opportunity",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Adiciona um ou mais usuários como followers da oportunidade. Followers recebem updates de mudanças (status, estágio, valor, notas) mesmo sem ser o dono. Sistema bloqueia duplicata automaticamente — adicionar alguém que já segue é no-op.",
       "keywords": "adicionar seguidores à oportunidade add followers to opportunity",
       "href": "acoes-highlevel-cat07.html#a10"
     },
@@ -2363,7 +2417,7 @@
       "tags": [
         "Novo"
       ],
-      "description": "",
+      "description": "Remove usuários da lista de followers da oportunidade — específicos ou todos de uma vez. Par da A10: quem entrou como follower num estágio sai quando o contexto muda (deal fechou, opp perdida, handoff concluído).",
       "keywords": "remover seguidores da oportunidade remove followers from opportunity",
       "href": "acoes-highlevel-cat07.html#a11"
     },
@@ -2376,7 +2430,7 @@
       "tags": [
         "★ Principal"
       ],
-      "description": "",
+      "description": "Cria cobrança (invoice) no HighLevel. Dispara envio automático pro cliente com link de pagamento integrado (cartão, PIX, boleto conforme configurado).",
       "keywords": "criar invoice create invoice",
       "href": "acoes-highlevel-cat08.html#a1"
     },
@@ -2387,7 +2441,7 @@
       "en": "Send Payment Link",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Envia link de pagamento direto. Diferente de invoice — é mais leve, pra quando cliente já tá pronto pra pagar e você só precisa mandar o link.",
       "keywords": "enviar payment link send payment link",
       "href": "acoes-highlevel-cat08.html#a2"
     },
@@ -2398,7 +2452,7 @@
       "en": "Update Payment Status",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Muda status de invoice/pagamento manualmente. Útil pra registrar pagamentos feitos fora do HL (PIX manual, transferência, dinheiro).",
       "keywords": "atualizar status de pagamento update payment status",
       "href": "acoes-highlevel-cat08.html#a3"
     },
@@ -2411,7 +2465,7 @@
       "tags": [
         "⚠ Financeiro"
       ],
-      "description": "",
+      "description": "Processa reembolso (total ou parcial) de pagamento. Integra com Stripe/gateway configurado. ATENÇÃO: movimento financeiro real.",
       "keywords": "processar reembolso process refund",
       "href": "acoes-highlevel-cat08.html#a4"
     },
@@ -2422,7 +2476,7 @@
       "en": "Cancel Subscription",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Cancela assinatura recorrente do cliente. Para cobranças futuras mas mantém histórico. Diferente de Delete — é graceful.",
       "keywords": "cancelar subscription cancel subscription",
       "href": "acoes-highlevel-cat08.html#a5"
     },
@@ -2433,7 +2487,7 @@
       "en": "Add to Campaign",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Adiciona contato a uma campanha específica (não workflow). Campanhas são mais estruturadas — geralmente drip campaigns de email.",
       "keywords": "adicionar a campanha add to campaign",
       "href": "acoes-highlevel-cat09.html#a1"
     },
@@ -2444,7 +2498,7 @@
       "en": "Remove from Campaign",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove contato de campanha ativa. Útil quando cliente converteu, pediu pra sair, ou mudou de contexto.",
       "keywords": "remover de campanha remove from campaign",
       "href": "acoes-highlevel-cat09.html#a2"
     },
@@ -2457,7 +2511,7 @@
       "tags": [
         "Meta Ads"
       ],
-      "description": "",
+      "description": "Adiciona contato a Custom Audience do Facebook Ads via Conversion API. Essencial pra remarketing — criar audiências qualificadas diretamente do HL.",
       "keywords": "adicionar à audiência facebook add to fb audience",
       "href": "acoes-highlevel-cat09.html#a3"
     },
@@ -2470,7 +2524,7 @@
       "tags": [
         "Meta Ads"
       ],
-      "description": "",
+      "description": "Remove contato de audience do Facebook. Útil pra parar remarketing quando cliente converteu.",
       "keywords": "remover de audiência fb remove from fb audience",
       "href": "acoes-highlevel-cat09.html#a4"
     },
@@ -2481,7 +2535,7 @@
       "en": "Add to Smart List",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Adiciona contato a Smart List (lista dinâmica baseada em critérios). Útil pra segmentação visual e campanhas ad-hoc.",
       "keywords": "adicionar ao smart list add to smart list",
       "href": "acoes-highlevel-cat09.html#a5"
     },
@@ -2494,7 +2548,7 @@
       "tags": [
         "★ Onboarding"
       ],
-      "description": "",
+      "description": "Cadastra contato como afiliado no sistema. Dispara o ciclo completo de afiliação — cria link único, permite rastrear vendas, calcular comissões.",
       "keywords": "adicionar ao gerenciador de afiliados add to affiliate manager",
       "href": "acoes-highlevel-cat10.html#a1"
     },
@@ -2505,7 +2559,7 @@
       "en": "Add Affiliate to Campaign",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Inscreve afiliado em campanha específica. Cada campanha tem materiais, comissões e termos próprios — um afiliado pode estar em várias.",
       "keywords": "adicionar afiliado a campanha add affiliate to campaign",
       "href": "acoes-highlevel-cat10.html#a2"
     },
@@ -2516,7 +2570,7 @@
       "en": "Remove Affiliate from Campaign",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove afiliado de campanha específica. Usado quando campanha termina, afiliado viola termos, ou muda de estratégia.",
       "keywords": "remover afiliado de campanha remove affiliate from campaign",
       "href": "acoes-highlevel-cat10.html#a3"
     },
@@ -2529,7 +2583,7 @@
       "tags": [
         "Financeiro"
       ],
-      "description": "",
+      "description": "Aprova comissão pendente do afiliado. Comissões normalmente ficam em \"Pending\" por X dias (proteção contra reembolso) antes de virar \"Approved\".",
       "keywords": "aprovar comissão approve commission",
       "href": "acoes-highlevel-cat10.html#a4"
     },
@@ -2542,7 +2596,7 @@
       "tags": [
         "⚠ Financeiro"
       ],
-      "description": "",
+      "description": "Processa pagamento da comissão aprovada. Integra com gateway de pagamento configurado. Movimentação real de dinheiro.",
       "keywords": "pagar comissão pay commission",
       "href": "acoes-highlevel-cat10.html#a5"
     },
@@ -2553,7 +2607,7 @@
       "en": "Update Affiliate Custom Field",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Atualiza campos personalizados do afiliado. Mantém dados relevantes pra segmentação — performance, tier, última venda, etc.",
       "keywords": "atualizar custom field do afiliado update affiliate custom field",
       "href": "acoes-highlevel-cat10.html#a6"
     },
@@ -2566,7 +2620,7 @@
       "tags": [
         "★ Principal"
       ],
-      "description": "",
+      "description": "Libera acesso de contato a uma oferta de curso. Normalmente disparado por compra aprovada ou inscrição em trial gratuito.",
       "keywords": "conceder acesso à oferta grant offer access",
       "href": "acoes-highlevel-cat11.html#a1"
     },
@@ -2577,7 +2631,7 @@
       "en": "Remove Offer Access",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove acesso do contato a uma oferta. Normalmente em cancelamentos, inadimplências, ou fim de trial.",
       "keywords": "remover acesso à oferta remove offer access",
       "href": "acoes-highlevel-cat11.html#a2"
     },
@@ -2590,7 +2644,7 @@
       "tags": [
         "IVR"
       ],
-      "description": "",
+      "description": "Reproduz mensagem pré-gravada ou text-to-speech pro contato que está na ligação IVR. Base de qualquer fluxo IVR.",
       "keywords": "tocar mensagem (say/play) say or play message",
       "href": "acoes-highlevel-cat12.html#a1"
     },
@@ -2603,7 +2657,7 @@
       "tags": [
         "★ Roteamento"
       ],
-      "description": "",
+      "description": "Menu interativo onde cliente escolhe opção via teclado. Cada tecla (1-9) pode disparar ação diferente — transferir, tocar submenu, executar fluxo.",
       "keywords": "menu ivr ivr menu",
       "href": "acoes-highlevel-cat12.html#a2"
     },
@@ -2614,7 +2668,7 @@
       "en": "Gather Input",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Coleta sequência de dígitos do cliente (CPF, código, telefone). Armazena em campo do contato pra uso posterior.",
       "keywords": "coletar input gather input",
       "href": "acoes-highlevel-cat12.html#a3"
     },
@@ -2625,7 +2679,7 @@
       "en": "Transfer Call",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Transfere ligação pra número externo ou ramal interno. Usado pra rotear pra vendedores, equipes especializadas, ou outros sistemas.",
       "keywords": "transferir ligação transfer call",
       "href": "acoes-highlevel-cat12.html#a4"
     },
@@ -2636,7 +2690,7 @@
       "en": "Hangup Call",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Encerra a ligação IVR. Usado ao fim de fluxos quando não há transferência (só mensagem gravada).",
       "keywords": "encerrar chamada hangup call",
       "href": "acoes-highlevel-cat12.html#a5"
     },
@@ -2649,7 +2703,7 @@
       "tags": [
         "★ Onboarding"
       ],
-      "description": "",
+      "description": "Adiciona contato a grupo da comunidade. Dispara onboarding do grupo — boas-vindas, regras, apresentação.",
       "keywords": "conceder acesso a grupo grant group access",
       "href": "acoes-highlevel-cat13.html#a1"
     },
@@ -2660,7 +2714,7 @@
       "en": "Revoke Group Access",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove acesso de contato ao grupo. Usado em cancelamentos, expulsões, downgrades.",
       "keywords": "remover acesso a grupo revoke group access",
       "href": "acoes-highlevel-cat13.html#a2"
     },
@@ -2671,7 +2725,7 @@
       "en": "Grant Private Channel Access",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Libera acesso a canal privado dentro de grupo. Granularidade maior — cliente pode estar no grupo mas sem acesso a certos canais.",
       "keywords": "conceder acesso a canal privado grant private channel access",
       "href": "acoes-highlevel-cat13.html#a3"
     },
@@ -2682,7 +2736,7 @@
       "en": "Revoke Private Channel Access",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Remove acesso a canal privado específico, mantendo acesso ao grupo.",
       "keywords": "remover acesso a canal privado revoke private channel access",
       "href": "acoes-highlevel-cat13.html#a4"
     },
@@ -2695,7 +2749,7 @@
       "tags": [
         "Gamificação"
       ],
-      "description": "",
+      "description": "Define nível do membro no leaderboard da comunidade. Gamificação — usado pra reconhecer membros ativos, atribuir tiers.",
       "keywords": "atribuir nível na classificação assign leaderboard level",
       "href": "acoes-highlevel-cat13.html#a5"
     },
@@ -2706,7 +2760,7 @@
       "en": "Post to Community",
       "category": "Ação",
       "tags": [],
-      "description": "",
+      "description": "Publica mensagem em grupo/canal automaticamente. Cuidado com spam — use pra anúncios oficiais, celebrações, conteúdo automatizado útil.",
       "keywords": "publicar na comunidade post to community",
       "href": "acoes-highlevel-cat13.html#a6"
     },
@@ -2720,7 +2774,7 @@
         "Gamificação",
         "Novo"
       ],
-      "description": "",
+      "description": "Concede uma quantidade específica de pontos no leaderboard de um grupo da comunidade pro membro que passou pelo workflow. Diferente da A5 (Atribuir Nível na Classificação), que seta o nível direto — aqui você soma pontos, e o nível sobe sozinho conforme os thresholds configurados no grupo.",
       "keywords": "conceder pontos na classificação grant community group leaderboard points pontos",
       "href": "acoes-highlevel-cat13.html#a7"
     },
@@ -2733,7 +2787,7 @@
       "tags": [
         "★ Marco"
       ],
-      "description": "",
+      "description": "Emite e envia certificado de conclusão. Entregue por email automaticamente com PDF gerado a partir do template configurado. Suporta múltiplos templates (um por curso/evento).",
       "keywords": "emitir certificado issue certificate",
       "href": "acoes-highlevel-cat14.html#a1"
     },
