@@ -10,6 +10,172 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-03 — Content
+**Add tutorial video to Contact DND trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Contato Ativou DND (Contact DND)** · `guia-highlevel-cat01.html` G3,
+  a pedido do usuário.
+
+## 2026-08-03 — Content
+**Add 3 native WhatsApp actions found missing (requested)**
+
+User cross-checked the real HighLevel action list (screenshot of the
+"Communication" category) against the guide and flagged 3 native WhatsApp
+actions we didn't have yet:
+
+- **Ação — WhatsApp: Verificar Janela de Atendimento (WhatsApp Customer
+  Service Window Check)** · `acoes-highlevel-cat02.html` A27. Checks if the
+  24h customer-service window is open for a number; branches the workflow
+  into Open (free-form messages, no extra cost) / Closed (only approved
+  templates). [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003533-workflow-action-whatsapp-customer-service-window-check)
+- **Ação — WhatsApp: Enviar Flow (WhatsApp: Send Flows)** · A28. Sends a
+  Meta WhatsApp Flow (in-app guided form/booking) — only works inside the
+  Open branch of A27, not supported on COEX integrations. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003720-whatsapp-flows-in-app-appointment-booking)
+- **Ação — WhatsApp: Mídia (WhatsApp Media)** · A29. Sends image/video/
+  audio/document with optional caption (not for audio); only within the
+  24h window; documented Meta size/type limits per media type. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000005235-how-to-send-whatsapp-media-images-videos-audio-document-via-workflow)
+- Totais reais agora: **87 gatilhos + 126 ações = 213 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados); `index.html`
+  atualizado (cat02: 26→29 ações; hero-stats, tab-count, section-label e
+  "Mockups interativos" — 203→206 — recontados).
+
+## 2026-08-03 — Content
+**Add tutorial video to Contact Changed trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Alterações no Contato (Contact Changed)** · `guia-highlevel-cat01.html`
+  G2, a pedido do usuário.
+
+## 2026-08-03 — Deploy
+**Update trial CTA link across the whole guide (requested)**
+
+- Replaced `https://magneticflows.com/30-dias` with the correct affiliate
+  link `https://www.gohighlevel.com/highlevel-bootcamp?fp_ref=dantasghl`
+  in all 117 occurrences across every page (sidebar CTA, footer CTA, hero
+  CTA) — 28 category pages + `index.html`.
+
+## 2026-08-03 — Content
+**Add tutorial video to Contact Created trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Criação de Contato (Contact Created)** · `guia-highlevel-cat01.html` G1,
+  a pedido do usuário.
+
+## 2026-08-03 — Content
+**Add WhatsApp Interactive Messages action (requested) + tutorial video**
+
+- **Ação — Mensagens Interativas do WhatsApp (WhatsApp Interactive Messages)**
+  · `acoes-highlevel-cat02.html` A26. Nova ação nativa que envia mensagens
+  interativas via API oficial do WhatsApp (Meta) — diferente da já
+  existente "WhatsApp Oficial" (A12), que só manda templates estáticos.
+  Suporta 4 tipos: Interactive Reply Buttons (até 3 botões), List Message,
+  Location Message e Contact Message.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006082-interactive-whatsapp-messages)
+- Vídeo tutorial incorporado logo abaixo da descrição da ação (a pedido do
+  usuário).
+- 🐛 Fix de drift: "Mockups interativos" no `index.html` estava parado em
+  42 há várias rodadas de crescimento de conteúdo; recontado
+  programaticamente (`.ghl-mockup` por arquivo) e corrigido pra **203**.
+- Totais reais agora: **87 gatilhos + 123 ações = 210 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados); `index.html`
+  atualizado (cat02: 25→26 ações; hero-stats, tab-count e section-label
+  batendo com o conteúdo real).
+
+## 2026-07-29 — Content
+**Add AI Studio Form Submitted as its own trigger (requested)**
+
+The earlier round today treated "AI Studio Form Submitted" as a filter
+note on the existing Form Submitted trigger (G5) instead of a separate
+entry. On request, added it as a full standalone trigger instead:
+
+- **Gatilho — AI Studio — Formulário Enviado (AI Studio Form Submitted)**
+  · `guia-highlevel-cat02.html` G22, new "AI Studio" sidebar section.
+  Same underlying Form Submitted engine, applied to forms embedded in an
+  AI Studio site, with its own `Domain` / `External Form` filters (both
+  required — a site can have more than one AI Studio domain/form). The
+  filter note added earlier on G5 stays as a cross-reference. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007599-connect-forms-and-calendars-in-ai-studio)
+- Sidebar, hero-stats, footer, `index.html` (Eventos card + aggregate
+  totals), `search-index.json` and `AUDIT-TABLE.md` updated.
+- Totals now: **87 gatilhos, 122 ações, 209 entries**.
+
+## 2026-07-29 — Content
+**Check for new native GHL triggers/actions + fix count drift across 4 files**
+
+Routine check against `help.gohighlevel.com` and `ideas.gohighlevel.com` for
+native workflow items released since the 2026-07-10 round.
+
+- **Ação — Conceder Pontos na Classificação (Grant Community Group Leaderboard
+  Points)** · cat13 A7. Soma pontos ao leaderboard de um grupo da comunidade —
+  diferente da A5 (Assign Leaderboard Level), que seta o nível direto. Não
+  concede pontos se o contato não for membro do grupo. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+- **Ação — Mistral AI (Create Chat Completion / Create Embeddings / Analyze
+  Image)** · cat05 A8. Native Beta integration — connects Mistral language,
+  embedding and vision models to workflows using the user's own Mistral API
+  key. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000007779-mistral-ai-workflow-actions)
+- **Gatilho — Form Submitted**: documented the `Domain` / `External Form`
+  filters used when the connected form lives on an AI Studio site (the "AI
+  Studio Form Submitted" changelog item is the same native trigger, not a
+  separate one — added as a filter note on `guia-highlevel-cat02.html` G5
+  instead of a duplicate entry).
+- **Rename** — our "AI Extract Info" → official doc now says **"AI Extract
+  Data"** (same action, confirmed rename, flagged since the 2026-07-10
+  audit). Tagged Premium per official doc (per-execution charge).
+- **Count drift fixed** (found while auditing, not new HL features):
+  - `index.html` tab-counts / section-labels still said 84 gatilhos / 117
+    ações while hero-stats already said 86 / 120 (drift from the
+    2026-07-20/21 commits that updated hero-stats but not these).
+  - `acoes-highlevel-cat05.html` had three different action counts on one
+    page (side-nav said 5, hero-desc said 7, hero-stat-num said 6) — the
+    Update Conversation AI Bot and Status action (07-20) never got the
+    counter bumped everywhere.
+  - `acoes-highlevel-cat07.html` side-nav/hero said 9 ações while the page
+    actually has 11 blocks — the Remove Followers action (07-21) had the
+    same partial-update bug.
+  - `CHANGELOG.md` was missing entries for both of those commits — backfilled
+    below.
+- Totals now: **86 gatilhos, 122 ações, 208 entries** — `search-index.json`
+  and `AUDIT-TABLE.md` regenerated, `validate-mockups.js` run against all 28
+  pages.
+- **Found, not applied** (need a human to confirm exact fields before adding
+  full mockups): **Browse AI** (1 trigger "New Completed Task" + 4 actions:
+  Run Task, Bulk Run Tasks, Get Task, Get Bulk Run — all premium, own API
+  key), **OpenRouter** actions/triggers, **Manus** actions/triggers. See
+  `AUDIT.md` for links.
+
+## 2026-07-21 — Content
+**Add Remove Followers from Opportunity as cat07 A11**
+
+*(Backfilled — this shipped in commit `2140ed4` without a changelog entry.)*
+
+Companion to A10 (Add Followers): removes specific users — or all at once
+via the Remove All Followers toggle — from the opportunity's follower list.
+The specific-users picker is shown disabled while the toggle is ON, matching
+the real panel behavior. Requires an opportunity in context; skipped
+otherwise. [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004757-workflow-action-remove-followers-from-opportunity)
+
+Sidebar, configData, index (120 ações / 206 painéis / cat07 card 11), meta
+descriptions, search-index.json (206 entries) and AUDIT-TABLE updated at the
+time. (The page's own hero/side-nav counters were left stale at 9 — fixed in
+the 2026-07-29 round above.)
+
+## 2026-07-20 — Content
+**Add Update Conversation AI Bot and Status as cat05 A6/A7**
+
+*(Backfilled — this shipped in commit `86099b3` without a changelog entry.)*
+
+The per-contact Conversation AI bot control action was missing from the
+ebook. Added to cat05 (AI actions) as an A6 (renumbered to A7 after a rebase
+folded in a parallel session's AI Agent addition), "Atualizar Bot de IA e
+Status" / "Update Conversation AI Bot and Status", verified against the
+official doc. Covers the Conversation AI Bot dropdown, Bot Status
+(Active/Inactive, per contact not global) and the conditional Sleep Timer.
+[Official doc](https://help.gohighlevel.com/support/solutions/articles/155000003821-workflow-action-update-conversation-ai-bot-and-status)
+
+Sidebar, hero description, index card, hero totals, meta descriptions and
+AUDIT-TABLE were updated at the time. (The page's own hero/side-nav counters
+were left stale at 5/6 — fixed in the 2026-07-29 round above.)
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 
