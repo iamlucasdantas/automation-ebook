@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 209,
   "items": [
     {
       "id": "g1",
@@ -470,6 +470,20 @@
       "href": "guia-highlevel-cat02.html#g21"
     },
     {
+      "id": "g22",
+      "type": "Gatilho",
+      "name": "SLA de Conversa",
+      "en": "Conversation SLA",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando uma conversa atinge um evento de SLA configurado em Conversations → SLA: o prazo de resposta está prestes a estourar (Due Soon), já estourou (Overdue), ou um atendente dispensou manualmente o SLA daquela conversa (SLA Dismissed, usado em mensagens tipo \"obrigado\"/\"entendi\" que não exigem resposta). Em vez de depender de um gestor ficando de olho no painel de SLA, o workflow decide automaticamente o que fazer em cada estágio.",
+      "keywords": "sla conversa conversation overdue due soon dismissed atraso resposta",
+      "href": "guia-highlevel-cat02.html#g22"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -790,6 +804,20 @@
       "description": "Dispara sempre que um aluno faz login na plataforma. É o gatilho mais frequente da categoria — use com filtros pra evitar rodar em todo acesso.",
       "keywords": "login de usuário user login",
       "href": "guia-highlevel-cat06.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado no Client Portal",
+      "en": "Client Portal File Uploaded",
+      "category": "Client Portal",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara automaticamente quando um contato sobe um documento pela experiência de Shared Documents do Client Portal. Suporta múltiplos tipos de arquivo. É o gatilho que fecha o loop de coleta de documentos sem precisar de um humano checando manualmente se o cliente já enviou o que foi pedido.",
+      "keywords": "arquivo enviado client portal file uploaded documento upload",
+      "href": "guia-highlevel-cat06.html#g13"
     },
     {
       "id": "g1",
@@ -2627,6 +2655,20 @@
       "description": "",
       "keywords": "publicar na comunidade post to community",
       "href": "acoes-highlevel-cat13.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Conceder Pontos na Classificação",
+      "en": "Grant Community Group Leaderboard Points",
+      "category": "Ação",
+      "tags": [
+        "Gamificação",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "conceder pontos na classificação grant community group leaderboard points gamificação",
+      "href": "acoes-highlevel-cat13.html#a7"
     },
     {
       "id": "a1",

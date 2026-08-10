@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 36 | 76 | 8 | **120** |
+| Gatilhos | 31 | 53 | 4 | **88** |
+| Ações | 36 | 77 | 8 | **121** |
 
 
 ## Gatilhos · 12 categorias
@@ -56,6 +56,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g19 | [Agendador (Scheduler)](guia-highlevel-cat02.html#g19) | Scheduler | 6 | 3/6 | 🟢 | [ ] | |
 | g20 | [Email Recebido](guia-highlevel-cat02.html#g20) | Inbound Email | 3 | 2/6 | 🟡 | [ ] | |
 | g21 | [Usuário Respondeu](guia-highlevel-cat02.html#g21) | User Replied | 3 | 3/6 | 🟡 | [ ] | |
+| g22 | [SLA de Conversa](guia-highlevel-cat02.html#g22) | Conversation SLA | 3 | 3/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -95,6 +96,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g10 | [Produto Iniciado](guia-highlevel-cat06.html#g10) | Product Started | 2 | 2/6 | 🟡 | [ ] | |
 | g11 | [Produto Completado](guia-highlevel-cat06.html#g11) | Product Completed | 2 | 3/6 | 🟢 | [ ] | |
 | g12 | [Login de Usuário](guia-highlevel-cat06.html#g12) | User Login | 2 | 2/6 | 🟡 | [ ] | |
+| g13 | [Arquivo Enviado no Client Portal](guia-highlevel-cat06.html#g13) | Client Portal File Uploaded | 2 | 1/6 | 🔴 | [ ] | |
 
 ### CAT07 · Recebimento
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -320,6 +322,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a4 | [Remover Acesso a Canal Privado](acoes-highlevel-cat13.html#a4) | Revoke Private Channel Access | 4 | 2/6 | 🟡 | [ ] | |
 | a5 | [Atribuir Nível na Classificação](acoes-highlevel-cat13.html#a5) | Assign Leaderboard Level | 4 | 2/6 | 🟡 | [ ] | |
 | a6 | [Publicar na Comunidade](acoes-highlevel-cat13.html#a6) | Post to Community | 3 | 2/6 | 🟡 | [ ] | |
+| a7 | [Conceder Pontos na Classificação](acoes-highlevel-cat13.html#a7) | Grant Community Group Leaderboard Points | 2 | 2/6 | 🟡 | [ ] | |
 
 ### CAT14 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

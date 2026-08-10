@@ -10,6 +10,55 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-10 — Content
+**Add 3 new native HighLevel workflow items + fix stale count drift (routine audit)**
+
+Automated round compared the guide against `help.gohighlevel.com` and
+`ideas.gohighlevel.com/changelog` for native triggers/actions shipped since
+the last content round (2026-07-21) and not yet covered.
+
+- **Conversation SLA** trigger added (`guia-highlevel-cat02.html` G22) —
+  fires on a conversation's SLA event (Due Soon / Overdue / SLA Dismissed),
+  with Message Channel, Tags, Owner filters and an "Avoid Repeated
+  Triggers" 24h dedupe toggle. [Official changelog](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+- **Client Portal File Uploaded** trigger added (`guia-highlevel-cat06.html`
+  G13, new "Client Portal" section) — fires when a contact uploads a
+  document via Client Portal → Shared Documents. This was flagged as a
+  pending candidate in the 2026-07-10 round; now confirmed with an official
+  changelog entry. [Official changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+- **Grant Community Group Leaderboard Points** action added
+  (`acoes-highlevel-cat13.html` A7) — grants leaderboard points to a group
+  member; the member's level changes automatically as points accumulate.
+  [Official doc](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+  See `AUDIT.md` — this reveals our existing A5 "Assign Leaderboard Level"
+  may not match the real HL mechanism (direct level-set vs. points-based
+  grant) and needs human confirmation before being touched.
+- Fixed stale count drift found while auditing: the homepage's
+  `hero-stats`/`tab-count`/`section-label` totals said 84 gatilhos / 117
+  ações while the actual per-category sum (and now `search-index.json`)
+  was already 86/120 before this round's additions — off by 2 and 3
+  respectively, unrelated to the new items. All totals now match reality:
+  **88 gatilhos, 121 ações, 209 entries**. `search-index.json` and
+  `AUDIT-TABLE.md` regenerated; homepage "Última atualização" bumped to
+  2026-08-10.
+- **Not applied**: `scripts/auto-refine.py` (full run, not `--check`) was
+  tried as part of this routine and found to regenerate `configData` in
+  `acoes-highlevel-cat15.html` and `guia-highlevel-cat13.html` in a way
+  that drops several node entries entirely and collapses others down to a
+  single generic field — a fidelity regression, not a fix. Reverted before
+  committing; flagged as a script bug to look at separately, not touched
+  further in this round.
+- Candidates considered but **not added** — no clear standalone official
+  doc, low confidence, or explicitly not corroborated this round:
+  "Payment Failed" and "Form Partially Completed" (only third-party SEO
+  blog roundups repeat these; no `help.gohighlevel.com`/
+  `ideas.gohighlevel.com` source found for either as a distinct native
+  trigger — Payment Failed already exists as a status filter on the
+  Payment Received / Subscription triggers). See `AUDIT.md` for the full
+  list of previously-flagged candidates still awaiting human confirmation
+  (AI Decision Maker, Communities: Rejected Join Request / New Post / New
+  Comment, AI Translate).
+
 ## 2026-07-10 — Content
 **Document all 8 Wait action parameters + fix orphaned duplicate markup (requested)**
 

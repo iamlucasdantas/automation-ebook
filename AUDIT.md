@@ -146,13 +146,72 @@ com confirmação humana antes de montar o mockup com fidelidade real:
 - Nosso "AI Extract Info" → doc oficial atual é **"AI Extract Data"**
   (mesma função, possível rename).
 
+## 🆕 Rodada 2026-08-10 — Checagem de novidades nativas
+
+Rotina automática comparou os 206 itens do guia (86 gatilhos + 120 ações,
+já incluindo o "Remove Followers from Opportunity" e o "Update Conversation
+AI Bot and Status" da rodada anterior) contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog`, procurando itens nativos lançados desde
+a última rodada de conteúdo (2026-07-21) e ainda não cobertos.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · cat02 G22. Dispara em
+   Due Soon / Overdue / SLA Dismissed. Filtros: Message Channel, Tags,
+   Owner + toggle "Avoid Repeated Triggers" (1x/24h). [Changelog oficial](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+2. **Gatilho — Arquivo Enviado no Client Portal (Client Portal File
+   Uploaded)** · cat06 G13, nova seção "Client Portal". Candidato da
+   rodada 2026-07-10, agora confirmado com changelog oficial. [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+3. **Ação — Conceder Pontos na Classificação (Grant Community Group
+   Leaderboard Points)** · cat13 A7. Concede pontos no leaderboard de um
+   grupo; o nível do membro muda automaticamente conforme os pontos
+   acumulam. Falha se o contato não for membro do grupo. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups)
+
+Totais atualizados: **88 gatilhos + 121 ações = 209 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados).
+
+### ⚠ Nova discrepância encontrada — precisa de validação humana
+- **Cat13 A5 "Assign Leaderboard Level"** (Atribuir Nível na Classificação)
+  — o doc oficial da mesma família de features (link acima) só documenta
+  **"Grant Community Group Leaderboard Points"** como a action nativa;
+  não achei doc dedicada pra uma action separada de "setar nível
+  diretamente". É possível que A5 seja: (a) uma feature real mas sem doc
+  dedicada (como vários outros itens dessa categoria), ou (b) uma
+  reconstrução equivocada de uma rodada anterior que deveria ter sido a
+  própria "Grant Points" com outro nome/mecânica. **Não mexi em A5** —
+  renomear/remover ação existente muda como o usuário busca ela no
+  builder, então isso fica pra você confirmar contra o HL real antes de
+  eu tocar.
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `index.html`: `hero-stats`/`tab-count`/`section-label` diziam 84
+  gatilhos / 117 ações enquanto a soma real por categoria (e o
+  `search-index.json`) já estava em 86/120 — drift de rodadas anteriores,
+  sem relação com os itens novos acima. Corrigido junto.
+- `scripts/auto-refine.py` (rodada completa, não `--check`) regenerou o
+  `configData` de `acoes-highlevel-cat15.html` e
+  `guia-highlevel-cat13.html` de um jeito que **apaga várias entries e
+  reduz outras a um campo genérico só** — isso é regressão de fidelidade,
+  não fix. Revertido antes do commit. **Não é fix aplicado nesta rodada,
+  é um bug no próprio script pra investigar depois.**
+
+### 🔍 Candidatos considerados, NÃO aplicados
+- **Payment Failed** e **Form Partially Completed** — apareceram em
+  roundups de blog de terceiros ("GHL Updates 2026" agregadores), mas não
+  achei doc dedicada em `help.gohighlevel.com` nem entrada em
+  `ideas.gohighlevel.com/changelog` confirmando qualquer um dos dois como
+  gatilho nativo distinto. Payment Failed já existe coberto como filtro de
+  status nos gatilhos Payment Received / Subscription. Baixa confiança —
+  não aplicado.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+1. **Você abre HL** e valida: a discrepância nova da A5 Leaderboard acima
+   + os ~15 itens ⚠ de rounds anteriores + os candidatos 🔍 ainda
+   pendentes (AI Decision Maker, Communities: Rejected Join Request / New
+   Post / New Comment, AI Translate — Client Portal File Uploaded já foi
+   confirmado e aplicado nesta rodada)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
