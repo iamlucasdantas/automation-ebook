@@ -2444,6 +2444,10 @@
     <a href="#a3" class="side-link"><span class="side-num">03</span>Atualizar Status de Pagamento</a>
     <a href="#a4" class="side-link"><span class="side-num">04</span>Processar Reembolso</a>
     <a href="#a5" class="side-link"><span class="side-num">05</span>Cancelar Subscription</a>
+    <a href="#a6" class="side-link"><span class="side-num">06</span>Cobrança Única Stripe</a>
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Enviar Estimate</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>Docs e Contratos</a>
+    <a href="#a9" class="side-link"><span class="side-num">09</span>Invoice Recorrente</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -3237,6 +3241,302 @@
       </div>
       <div class="hl-panel-caption">
         <strong>Cancela assinatura recorrente</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a6" data-name="cobrança única stripe stripe one time charge">
+  <div class="acao-head">
+    <div class="acao-num">06</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Cobrança Única Stripe</h2>
+      <div class="acao-en">Stripe One Time Charge</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Cobra o cartão salvo do contato via Stripe — uma cobrança única, sem checkout. Precisa de payment method salvo (compra anterior ou card-on-file).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Upsell 1-click</div>
+  <div class="use-case-desc">Comprou o front-end → cobra o order bump aprovado por resposta.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Renovação manual</div>
+  <div class="use-case-desc">Serviço avulso recorrente sem assinatura formal.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Amount, Currency, Description e Product opcional. Branches de sucesso/falha da cobrança. Requer Stripe conectado + cartão salvo.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A6 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Cobra o <strong>cartão salvo</strong> — sem cartão on-file, falha. Trate a branch de falha.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Stripe One Time Charge</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Cobrar upsell aprovado" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Amount <span class="req">*</span></div><input class="hl-input" value="197.00" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Currency <span class="req">*</span></div><div class="hl-dropdown has-value">BRL</div></div><div class="hl-filter-row"><div class="hl-filter-label">Description <span class="req">*</span></div><input class="hl-input" value="Upsell — Módulo Avançado" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Cobrança única no cartão salvo via Stripe.</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a7" data-name="enviar estimate send estimate">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Enviar Estimate</h2>
+      <div class="acao-en">Send Estimate</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Envia orçamento (estimate) pro contato por email/SMS. O contato aceita online e o estimate pode converter em invoice automaticamente.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Orçamento pós-diagnóstico</div>
+  <div class="use-case-desc">Call de descoberta → estimate com escopo e valor na hora.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Aprovação formal</div>
+  <div class="use-case-desc">Cliente aceita online → gatilho de Estimate segue o fluxo.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Template de estimate, itens/valores e canal de envio. Aceite online converte em invoice conforme configuração.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A7 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Estimate aceito pode virar <strong>invoice automaticamente</strong> — configure a conversão na área de Payments.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Send Estimate</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Orçamento da consultoria" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Estimate Template <span class="req">*</span></div><div class="hl-dropdown has-value">Consultoria — Escopo Padrão</div></div><div class="hl-filter-row"><div class="hl-filter-label">Send Via <span class="req">*</span></div><div class="hl-dropdown has-value">Email</div><div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Email</span><span class="opt-chip">SMS</span><span class="opt-chip">Ambos</span></div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Orçamento com aceite online.</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a8" data-name="enviar documentos e contratos send documents & contracts">
+  <div class="acao-head">
+    <div class="acao-num">08</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Enviar Documentos e Contratos</h2>
+      <div class="acao-en">Send Documents & Contracts</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Dispara um documento/contrato pra assinatura a partir de um template — o fluxo de Documents & Contracts do HL, automatizado. Status de assinatura vira gatilho (cat07 G5 dos gatilhos).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Contrato pós-fechamento</div>
+  <div class="use-case-desc">Opp virou Won → contrato de prestação vai sozinho pra assinatura.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Proposta + assinatura</div>
+  <div class="use-case-desc">Proposta com campo de assinatura embutido no mesmo doc.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Document Template (obrigatório), destinatário e canal. Campos dinâmicos do template preenchem com merge fields.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A8 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Template com <strong>merge fields</strong> preenchidos na hora — assinatura acompanhada pelo gatilho Documents & Contracts.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Send Documents & Contracts</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Contrato de prestação" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Document Template <span class="req">*</span></div><div class="hl-dropdown has-value">Contrato Consultoria 2026</div></div><div class="hl-filter-row"><div class="hl-filter-label">Send Via <span class="req">*</span></div><div class="hl-dropdown has-value">Email</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Contrato pra assinatura direto do workflow.</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a9" data-name="enviar invoice recorrente send recurring invoice">
+  <div class="acao-head">
+    <div class="acao-num">09</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Enviar Invoice Recorrente</h2>
+      <div class="acao-en">Send Recurring Invoice</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Cria e envia uma invoice recorrente — cobrança repetida no intervalo configurado (mensal, anual...) até cancelar ou atingir o número de ciclos.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Mensalidade sem assinatura Stripe</div>
+  <div class="use-case-desc">Fee mensal de serviço via invoice recorrente.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Parcelamento</div>
+  <div class="use-case-desc">12 ciclos mensais e para sozinho.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Template de invoice recorrente, frequência, data de início e número de ciclos (ou indefinido).</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A9 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Recorrência gerida pelo <strong>módulo de Invoices</strong> — pagamentos disparam os gatilhos de Payment Received.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Send Recurring Invoice</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Mensalidade do plano" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Recurring Template <span class="req">*</span></div><div class="hl-dropdown has-value">Plano Premium Mensal</div></div><div class="hl-filter-row"><div class="hl-filter-label">Frequency <span class="req">*</span></div><div class="hl-dropdown has-value">Monthly</div></div><div class="hl-filter-row"><div class="hl-filter-label">Cycles</div><div class="hl-dropdown has-value">12 (ou indefinido)</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Invoice que se repete no intervalo configurado.</strong>
       </div>
     </div>
   </div>

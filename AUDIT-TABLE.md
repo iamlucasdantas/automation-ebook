@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 39 | 83 | 8 | **130** |
+| Ações | 39 | 90 | 46 | **175** |
 
 
 ## Gatilhos · 12 categorias
@@ -176,6 +176,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a14 | [Modificar Pontuação de Engajamento](acoes-highlevel-cat01.html#a14) | Modify Contact Engagement Score | 2 | 3/6 | 🟡 | [ ] | |
 | a15 | [Adicionar Seguidores](acoes-highlevel-cat01.html#a15) | Add Contact Followers | 3 | 2/6 | 🟡 | [ ] | |
 | a16 | [Remover Seguidores](acoes-highlevel-cat01.html#a16) | Remove Contact Followers | 3 | 2/6 | 🟡 | [ ] | |
+| a17 | [Mesclar Contato](acoes-highlevel-cat01.html#a17) | Merge Contact | 0 | 2/6 | 🔴 | [ ] | |
+| a18 | [Verificação de Email](acoes-highlevel-cat01.html#a18) | Email Verification | 0 | 3/6 | 🟡 | [ ] | |
 
 ### CAT02 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -202,13 +204,21 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a20 | [Gerar Conteúdo com IA](acoes-highlevel-cat02.html#a20) | AI Content Generation | 3 | 3/6 | 🟢 | [ ] | |
 | a21 | [Mensagem via Número Específico](acoes-highlevel-cat02.html#a21) | Send From Specific Number | 3 | 2/6 | 🟡 | [ ] | |
 | a22 | [Mensagem com Número Pool](acoes-highlevel-cat02.html#a22) | Send From Number Pool | 2 | 2/6 | 🟡 | [ ] | |
-| a23 | [Confirmação GMB](acoes-highlevel-cat02.html#a23) | GMB Confirmation | 2 | 2/6 | 🔴 | [ ] | |
+| a23 | [Mensagem GMB (Google)](acoes-highlevel-cat02.html#a23) | GMB Messaging | 2 | 2/6 | 🔴 | [ ] | |
 | a24 | [SMS via Shortcode](acoes-highlevel-cat02.html#a24) | Shortcode SMS | 2 | 2/6 | 🟡 | [ ] | |
 | a25 | [Anexar Arquivo](acoes-highlevel-cat02.html#a25) | Attach File | 2 | 3/6 | 🟢 | [ ] | |
 | a26 | [Mensagens Interativas do WhatsApp](acoes-highlevel-cat02.html#a26) | WhatsApp Interactive Messages | 2 | 3/6 | 🟢 | [ ] | |
 | a27 | [WhatsApp: Verificar Janela de Atendimento](acoes-highlevel-cat02.html#a27) | WhatsApp Customer Service Window Check | 3 | 2/6 | 🟡 | [ ] | |
 | a28 | [WhatsApp: Enviar Flow](acoes-highlevel-cat02.html#a28) | WhatsApp: Send Flows | 2 | 2/6 | 🟡 | [ ] | |
 | a29 | [WhatsApp: Mídia](acoes-highlevel-cat02.html#a29) | WhatsApp Media | 2 | 2/6 | 🟡 | [ ] | |
+| a30 | [Messenger Interativo (Facebook)](acoes-highlevel-cat02.html#a30) | Facebook Interactive Messenger | 0 | 3/6 | 🟡 | [ ] | |
+| a31 | [Instagram DM Interativo](acoes-highlevel-cat02.html#a31) | Instagram Interactive Messenger | 0 | 3/6 | 🟡 | [ ] | |
+| a32 | [TikTok DM Interativo](acoes-highlevel-cat02.html#a32) | TikTok Interactive Messenger | 0 | 2/6 | 🔴 | [ ] | |
+| a33 | [Mensagem no Live Chat](acoes-highlevel-cat02.html#a33) | Send Live Chat Message | 0 | 1/6 | 🔴 | [ ] | |
+| a34 | [Mensagem Interativa RCS](acoes-highlevel-cat02.html#a34) | RCS Interactive Message | 0 | 3/6 | 🟡 | [ ] | |
+| a35 | [Enviar RCS](acoes-highlevel-cat02.html#a35) | Send RCS | 0 | 1/6 | 🔴 | [ ] | |
+| a36 | [Registrar Ligação Externa](acoes-highlevel-cat02.html#a36) | Log External Call | 0 | 3/6 | 🟡 | [ ] | |
+| a37 | [Bot de Agendamento (Conversation AI)](acoes-highlevel-cat02.html#a37) | Appointment Booking Conversation AI Bot | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT03 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -243,18 +253,21 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a19 | [Formatar Número](acoes-highlevel-cat04.html#a19) | Number Formatter | 2 | 3/6 | 🟡 | [ ] | |
 | a20 | [Formatar Array](acoes-highlevel-cat04.html#a20) | Array Formatter | 2 | 3/6 | 🟡 | [ ] | |
 | a21 | [Formatar Texto](acoes-highlevel-cat04.html#a21) | Text Formatter | 3 | 3/6 | 🟢 | [ ] | |
+| a22 | [Drip (Liberação em Lotes)](acoes-highlevel-cat04.html#a22) | Drip | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT05 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | a1 | [Generate Text (Texto)](acoes-highlevel-cat05.html#a1) | AI Generate Text | 3 | 3/6 | 🟢 | [ ] | |
 | a2 | [Parse Image (Analisar Imagem)](acoes-highlevel-cat05.html#a2) | AI Parse Image | 3 | 2/6 | 🟡 | [ ] | |
-| a3 | [Summarize Conversation](acoes-highlevel-cat05.html#a3) | Summarize Conversation | 3 | 3/6 | 🟢 | [ ] | |
+| a3 | [Summarize Conversation](acoes-highlevel-cat05.html#a3) | AI Summarize | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Extract Info](acoes-highlevel-cat05.html#a4) | AI Extract Data | 2 | 1/6 | 🟡 | [ ] | |
-| a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Classify | 2 | 2/6 | 🟡 | [ ] | |
+| a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Intent Detection | 2 | 2/6 | 🟡 | [ ] | |
 | a6 | [Agente de IA](acoes-highlevel-cat05.html#a6) | AI Agent | 2 | 3/6 | 🟢 | [ ] | |
 | a7 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a7) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
 | a8 | [Mistral AI](acoes-highlevel-cat05.html#a8) | Mistral AI: Create Chat Completion / Create Embeddings / Analyze Image | 2 | 3/6 | 🟢 | [ ] | |
+| a9 | [Tradução com IA](acoes-highlevel-cat05.html#a9) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
+| a10 | [Decisor com IA](acoes-highlevel-cat05.html#a10) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -262,6 +275,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a1 | [Atualizar Status do Agendamento](acoes-highlevel-cat06.html#a1) | Update Appointment Status | 2 | 3/6 | 🟡 | [ ] | |
 | a2 | [Marcar Agendamento](acoes-highlevel-cat06.html#a2) | Book Appointment | 3 | 4/6 | 🟢 | [ ] | |
 | a3 | [Criar Nota no Agendamento](acoes-highlevel-cat06.html#a3) | Create Appointment Note | 3 | 1/6 | 🟡 | [ ] | |
+| a4 | [Gerar Link de Agendamento Único](acoes-highlevel-cat06.html#a4) | Generate One Time Booking Link | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT07 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -277,6 +291,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a9 | [Remover Tag da Opp](acoes-highlevel-cat07.html#a9) | Remove Opportunity Tag | 2 | 2/6 | 🟡 | [ ] | |
 | a10 | [Adicionar Seguidores à Oportunidade](acoes-highlevel-cat07.html#a10) | Add Follower(s) to Opportunity | 4 | 3/6 | 🟢 | [ ] | |
 | a11 | [Remover Seguidores da Oportunidade](acoes-highlevel-cat07.html#a11) | Remove Followers from Opportunity | 3 | 4/6 | 🟢 | [ ] | |
+| a12 | [Buscar Oportunidade](acoes-highlevel-cat07.html#a12) | Find Opportunity | 0 | 3/6 | 🟡 | [ ] | |
+| a13 | [Remover Dono da Oportunidade](acoes-highlevel-cat07.html#a13) | Remove Owner from Opportunity | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT08 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -286,6 +302,10 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Atualizar Status de Pagamento](acoes-highlevel-cat08.html#a3) | Update Payment Status | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Processar Reembolso](acoes-highlevel-cat08.html#a4) | Process Refund | 4 | 2/6 | 🟡 | [ ] | |
 | a5 | [Cancelar Subscription](acoes-highlevel-cat08.html#a5) | Cancel Subscription | 3 | 3/6 | 🟢 | [ ] | |
+| a6 | [Cobrança Única Stripe](acoes-highlevel-cat08.html#a6) | Stripe One Time Charge | 0 | 2/6 | 🔴 | [ ] | |
+| a7 | [Enviar Estimate](acoes-highlevel-cat08.html#a7) | Send Estimate | 0 | 3/6 | 🟡 | [ ] | |
+| a8 | [Enviar Documentos e Contratos](acoes-highlevel-cat08.html#a8) | Send Documents & Contracts | 0 | 2/6 | 🔴 | [ ] | |
+| a9 | [Enviar Invoice Recorrente](acoes-highlevel-cat08.html#a9) | Send Recurring Invoice | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT09 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -295,6 +315,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a3 | [Adicionar à Audiência Facebook](acoes-highlevel-cat09.html#a3) | Add to FB Audience | 3 | 2/6 | 🟡 | [ ] | |
 | a4 | [Remover de Audiência FB](acoes-highlevel-cat09.html#a4) | Remove from FB Audience | 3 | 2/6 | 🟡 | [ ] | |
 | a5 | [Adicionar ao Smart List](acoes-highlevel-cat09.html#a5) | Add to Smart List | 2 | 2/6 | 🟡 | [ ] | |
+| a6 | [Adicionar ao Google Analytics](acoes-highlevel-cat09.html#a6) | Add to Google Analytics | 0 | 1/6 | 🔴 | [ ] | |
+| a7 | [Adicionar ao Google Ads](acoes-highlevel-cat09.html#a7) | Add to Google Ads | 0 | 2/6 | 🔴 | [ ] | |
+| a8 | [Relatório de Auditoria de Marketing](acoes-highlevel-cat09.html#a8) | Generate Marketing Audit Report | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT10 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -302,8 +325,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a1 | [Adicionar ao Gerenciador de Afiliados](acoes-highlevel-cat10.html#a1) | Add to Affiliate Manager | 2 | 3/6 | 🟢 | [ ] | |
 | a2 | [Adicionar Afiliado a Campanha](acoes-highlevel-cat10.html#a2) | Add Affiliate to Campaign | 3 | 2/6 | 🟡 | [ ] | |
 | a3 | [Remover Afiliado de Campanha](acoes-highlevel-cat10.html#a3) | Remove Affiliate from Campaign | 2 | 2/6 | 🟡 | [ ] | |
-| a4 | [Aprovar Comissão](acoes-highlevel-cat10.html#a4) | Approve Commission | 3 | 2/6 | 🟡 | [ ] | |
-| a5 | [Pagar Comissão](acoes-highlevel-cat10.html#a5) | Pay Commission | 2 | 2/6 | 🟡 | [ ] | |
+| a4 | [Adicionar Leads a um Afiliado](acoes-highlevel-cat10.html#a4) | Add Leads Under an Affiliate | 3 | 2/6 | 🟡 | [ ] | |
+| a5 | [Adicionar Venda Manual de Afiliado](acoes-highlevel-cat10.html#a5) | Add Manual Sales for an Affiliate | 2 | 2/6 | 🟡 | [ ] | |
 | a6 | [Atualizar Custom Field do Afiliado](acoes-highlevel-cat10.html#a6) | Update Affiliate Custom Field | 4 | 2/6 | 🟡 | [ ] | |
 
 ### CAT11 · Ação
@@ -331,6 +354,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a5 | [Atribuir Nível na Classificação](acoes-highlevel-cat13.html#a5) | Assign Leaderboard Level | 4 | 2/6 | 🟡 | [ ] | |
 | a6 | [Publicar na Comunidade](acoes-highlevel-cat13.html#a6) | Post to Community | 3 | 2/6 | 🟡 | [ ] | |
 | a7 | [Conceder Pontos na Classificação](acoes-highlevel-cat13.html#a7) | Grant Community Group Leaderboard Points | 3 | 2/6 | 🟡 | [ ] | |
+| a8 | [Notificação Push Inteligente](acoes-highlevel-cat13.html#a8) | Smart Push Notification | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT14 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -346,3 +370,32 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a4 | [Buscar ou Criar Contato Google](acoes-highlevel-cat15.html#a4) | Find or Create Google Contact | 2 | — | 🟡 | [ ] | |
 | a5 | [Criar Grupo Google](acoes-highlevel-cat15.html#a5) | Create Google Contact Group | 0 | — | 🔴 | [ ] | |
 | a6 | [Adicionar a Grupos Google](acoes-highlevel-cat15.html#a6) | Add to Google Groups | 2 | — | 🔴 | [ ] | |
+
+### CAT16 · Ação
+| # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
+|---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
+| a1 | [Criar Registro Associado (Custom Object)](acoes-highlevel-cat16.html#a1) | Create Associated Record for Contact | 0 | 2/6 | 🔴 | [ ] | |
+| a2 | [Atualizar Registro Associado](acoes-highlevel-cat16.html#a2) | Update Associated Record for Contact | 0 | 2/6 | 🔴 | [ ] | |
+| a3 | [Limpar Campos do Registro Associado](acoes-highlevel-cat16.html#a3) | Clear Fields of Associated Record for Contact | 0 | 2/6 | 🔴 | [ ] | |
+| a4 | [Criar e Associar Empresa](acoes-highlevel-cat16.html#a4) | Create and Associate Company | 0 | 1/6 | 🔴 | [ ] | |
+| a5 | [Atualizar Empresa Associada](acoes-highlevel-cat16.html#a5) | Update Associated Company | 0 | 2/6 | 🔴 | [ ] | |
+| a6 | [Limpar Campos da Empresa Associada](acoes-highlevel-cat16.html#a6) | Clear Associated Company Fields | 0 | 2/6 | 🔴 | [ ] | |
+| a7 | [Adicionar Registros Associados ao Workflow](acoes-highlevel-cat16.html#a7) | Add Associated Records to Workflow | 0 | 2/6 | 🔴 | [ ] | |
+| a8 | [Remover Registros Associados do Workflow](acoes-highlevel-cat16.html#a8) | Remove Associated Records from Workflow | 0 | 2/6 | 🔴 | [ ] | |
+| a9 | [Associar Registros](acoes-highlevel-cat16.html#a9) | Associate Records | 0 | 2/6 | 🔴 | [ ] | |
+
+### CAT17 · Ação
+| # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
+|---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
+| a1 | [Mensagem de IA](acoes-highlevel-cat17.html#a1) | AI Message | 0 | 1/6 | 🔴 | [ ] | |
+| a2 | [Mensagem Personalizada](acoes-highlevel-cat17.html#a2) | Custom Message | 0 | 1/6 | 🔴 | [ ] | |
+| a3 | [Capturar Informação com IA](acoes-highlevel-cat17.html#a3) | AI Capture Information | 0 | 2/6 | 🔴 | [ ] | |
+| a4 | [Agendar pelo Bot](acoes-highlevel-cat17.html#a4) | Book Appointment (Bot) | 0 | 2/6 | 🔴 | [ ] | |
+| a5 | [Agendamento de Serviços](acoes-highlevel-cat17.html#a5) | Services Booking | 0 | 2/6 | 🔴 | [ ] | |
+| a6 | [Divisor de IA](acoes-highlevel-cat17.html#a6) | AI Splitter | 0 | 1/6 | 🔴 | [ ] | |
+| a7 | [Transferir Bot](acoes-highlevel-cat17.html#a7) | Transfer Bot | 0 | 2/6 | 🔴 | [ ] | |
+| a8 | [Continuar Conversa](acoes-highlevel-cat17.html#a8) | Continue Conversation | 0 | 2/6 | 🔴 | [ ] | |
+| a9 | [Encerrar Conversa](acoes-highlevel-cat17.html#a9) | End Conversation | 0 | 1/6 | 🔴 | [ ] | |
+| a10 | [Eliza: Agendamento com IA](acoes-highlevel-cat17.html#a10) | Eliza AI Appointment Booking | 0 | 2/6 | 🔴 | [ ] | |
+| a11 | [Enviar pra Plataforma Eliza](acoes-highlevel-cat17.html#a11) | Send to Eliza Agent Platform | 0 | 2/6 | 🔴 | [ ] | |
+| a12 | [Invocar Agente (Agent Studio)](acoes-highlevel-cat17.html#a12) | Invoke Agent in Agent Studio | 0 | 2/6 | 🔴 | [ ] | |

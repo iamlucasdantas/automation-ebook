@@ -2442,8 +2442,8 @@
     <a href="#a1" class="side-link"><span class="side-num">01</span>Adicionar ao Gerenciador de Afiliados</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Adicionar Afiliado a Campanha</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Remover Afiliado de Campanha</a>
-    <a href="#a4" class="side-link"><span class="side-num">04</span>Aprovar Comissão</a>
-    <a href="#a5" class="side-link"><span class="side-num">05</span>Pagar Comissão</a>
+    <a href="#a4" class="side-link"><span class="side-num">04</span>Adicionar Leads a um Afiliado</a>
+    <a href="#a5" class="side-link"><span class="side-num">05</span>Adicionar Venda Manual de Afiliado</a>
     <a href="#a6" class="side-link"><span class="side-num">06</span>Atualizar Custom Field do Afiliado</a>
   </nav>
 
@@ -2895,8 +2895,8 @@
     <div class="acao-num">04</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Aprovar Comissão</h2>
-      <div class="acao-en">Approve Commission</div>
+      <h2 class="acao-name">Adicionar Leads a um Afiliado</h2>
+      <div class="acao-en">Add Leads Under an Affiliate</div>
       <div class="acao-tags"><span class="info-tag">Financeiro</span></div>
     </div>
   </div>
@@ -2904,7 +2904,7 @@
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Aprova comissão pendente do afiliado. Comissões normalmente ficam em "Pending" por X dias (proteção contra reembolso) antes de virar "Approved".</p>
+      <p>Atribui o contato do workflow como lead de um afiliado específico — a atribuição de indicação passa a contar pra ele, mesmo que o lead não tenha vindo pelo link de afiliado.</p>
     </div>
   </div>
 
@@ -2913,18 +2913,18 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Após janela anti-fraude</div>
-  <div class="use-case-desc">Wait 30 dias após venda → aprova comissão.</div>
+  <div class="use-case-title">Atribuição manual</div>
+  <div class="use-case-desc">Lead chegou por indicação verbal → atribui ao afiliado certo.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Aprovação manual</div>
-  <div class="use-case-desc">Gerente aprova em lote semanal.</div>
+  <div class="use-case-title">Corrigir tracking perdido</div>
+  <div class="use-case-desc">Cookie caiu mas o lead informou o indicador → reatribui via workflow.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Auto-aprovação</div>
-  <div class="use-case-desc">Sem reembolso no prazo → aprova automático.</div>
+  <div class="use-case-title">Campo "quem te indicou"</div>
+  <div class="use-case-desc">Form pergunta o indicador → workflow atribui automaticamente.</div>
 </div>
 
     </div>
@@ -2933,7 +2933,7 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Comissão específica ou filtro (todas pendentes do período).</p>
+      <p>Afiliado de destino (dropdown) — o contato em contexto entra como lead dele.</p>
     </div>
   </div>
 
@@ -2984,10 +2984,10 @@
             <div class="ghl-node-icon action-email">✓</div>
             <div>
               <div class="ghl-node-type">Action · Afiliados</div>
-              <div class="ghl-node-title">Approve Commission</div>
+              <div class="ghl-node-title">Add Leads Under an Affiliate</div>
             </div>
           </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Approve Commission</span></div></div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Add Leads Under an Affiliate</span></div></div>
         </div>
         <div class="config-panel">
           <div class="config-header">
@@ -3017,7 +3017,7 @@
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Approve Commission</span>
+              <span>Add Leads Under an Affiliate</span>
             </div>
           </div>
           <div class="hl-panel-body">
@@ -3041,8 +3041,8 @@
     <div class="acao-num">05</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Pagar Comissão</h2>
-      <div class="acao-en">Pay Commission</div>
+      <h2 class="acao-name">Adicionar Venda Manual de Afiliado</h2>
+      <div class="acao-en">Add Manual Sales for an Affiliate</div>
       <div class="acao-tags"><span class="info-tag">⚠ Financeiro</span></div>
     </div>
   </div>
@@ -3050,7 +3050,7 @@
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Processa pagamento da comissão aprovada. Integra com gateway de pagamento configurado. Movimentação real de dinheiro.</p>
+      <p>Registra uma venda manual pro afiliado — valor e produto entram no relatório dele e a comissão é calculada como se a venda tivesse vindo pelo tracking normal.</p>
     </div>
   </div>
 
@@ -3059,18 +3059,18 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Pagamento mensal</div>
-  <div class="use-case-desc">Dia 10 de cada mês → paga comissões aprovadas.</div>
+  <div class="use-case-title">Venda fechada por fora</div>
+  <div class="use-case-desc">Negócio fechou no PIX/boleto fora do checkout → registra pro afiliado.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Threshold atingido</div>
-  <div class="use-case-desc">Afiliado acumulou > R$100 → libera pagamento.</div>
+  <div class="use-case-title">Correção de atribuição</div>
+  <div class="use-case-desc">Venda caiu sem referral → adiciona manualmente pro indicador certo.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Pagamento sob demanda</div>
-  <div class="use-case-desc">Afiliado solicitou saque → processa.</div>
+  <div class="use-case-title">Upsell offline</div>
+  <div class="use-case-desc">Upgrade vendido por telefone → comissão do afiliado original preservada.</div>
 </div>
 
     </div>
@@ -3079,7 +3079,7 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Método (PIX, TED, Paypal conforme configurado).</p>
+      <p>Afiliado, valor da venda e produto — comissão calculada pela regra da campanha.</p>
     </div>
   </div>
 
@@ -3130,7 +3130,7 @@
             <div class="ghl-node-icon action-email">💰</div>
             <div>
               <div class="ghl-node-type">Action · Afiliados</div>
-              <div class="ghl-node-title">Pay Commission</div>
+              <div class="ghl-node-title">Add Manual Sales for an Affiliate</div>
             </div>
           </div>
           <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Método</span><span class="pv highlight">PIX</span></div><div class="ghl-node-param"><span class="pk">⚠</span><span class="pv">Financeiro real</span></div></div>
@@ -3163,7 +3163,7 @@
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Pay Commission</span>
+              <span>Add Manual Sales for an Affiliate</span>
             </div>
           </div>
           <div class="hl-panel-body">
@@ -3452,10 +3452,10 @@
     'a3-2': { kind: 'Action · Remove Affiliate from Campaign', title: 'Remove Affiliate from Campaign', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tirar afiliado da BF</div></div><div class="config-section"><div class="config-label">Campaign *</div><div class="config-field highlight dropdown">Black Friday 2026</div></div><div class="config-section"><div class="config-label">Disable Coupons</div><div class="config-field">🟢 ON — invalida BF-* deste afiliado</div></div><div class="config-section"><div class="config-label">Keep Historical Sales</div><div class="config-field">🟢 ON — comissões já geradas preservadas</div></div>` },
     'a4-1': { kind: 'Trigger · Custom Date Reminder', title: 'Commission Pending 30d', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Janela de reembolso passou — liberar</div></div><div class="config-section"><div class="config-label">Custom Date Field *</div><div class="config-field highlight dropdown">Data da Venda do Afiliado</div></div><div class="config-section"><div class="config-label">Timing *</div><div class="config-field dropdown">After · 30 days</div></div>` },
     'a4-2': { kind: 'Action · If/Else', title: 'If/Else (sem reembolso?)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Cliente não pediu reembolso?</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Custom Value · refund_status</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Equals</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">none</div></div>` },
-    'a4-3': { kind: 'Action · Approve Commission', title: 'Approve Commission', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Liberar comissão pra pagamento</div></div><div class="config-section"><div class="config-label">Commission *</div><div class="config-field highlight dropdown">Affiliate&#x27;s Pending Commission</div></div><div class="config-section"><div class="config-label">New Status *</div><div class="config-field highlight dropdown">Approved · Ready to Pay</div></div><div class="config-section"><div class="config-label">Notify Affiliate</div><div class="config-field">🟢 ON — email + WhatsApp</div></div>` },
+    'a4-3': { kind: 'Action · Add Leads Under an Affiliate', title: 'Add Leads Under an Affiliate', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Liberar comissão pra pagamento</div></div><div class="config-section"><div class="config-label">Commission *</div><div class="config-field highlight dropdown">Affiliate&#x27;s Pending Commission</div></div><div class="config-section"><div class="config-label">New Status *</div><div class="config-field highlight dropdown">Approved · Ready to Pay</div></div><div class="config-section"><div class="config-label">Notify Affiliate</div><div class="config-field">🟢 ON — email + WhatsApp</div></div>` },
     'a5-1': { kind: 'Trigger · Schedule', title: 'Dia 10 do Mês', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pagamento mensal de comissões</div></div><div class="config-section"><div class="config-label">Schedule Type *</div><div class="config-field highlight dropdown">Recurring · Monthly on day 10 at 09:00 BRT</div></div>` },
     'a5-2': { kind: 'Action · If/Else', title: 'If > R$ 100', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Valor acima do mínimo de pagamento?</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Affiliate · Approved Commission Balance</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Greater than or equal</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">100</div></div>` },
-    'a5-3': { kind: 'Action · Pay Commission', title: 'Pay Commission', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Disparar PIX da comissão</div></div><div class="config-section"><div class="config-label">Payment Method *</div><div class="config-field highlight dropdown">PIX (chave do cadastro)</div></div><div class="config-section"><div class="config-label">Amount *</div><div class="config-field highlight">{{affiliate.approved_balance}}</div></div><div class="config-section"><div class="config-label">Reset Balance</div><div class="config-field">🟢 ON · zera após pagamento</div></div><div class="config-section"><div class="config-label">Send Receipt</div><div class="config-field">🟢 ON — comprovante via email</div></div>` },
+    'a5-3': { kind: 'Action · Add Manual Sales for an Affiliate', title: 'Add Manual Sales for an Affiliate', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Disparar PIX da comissão</div></div><div class="config-section"><div class="config-label">Payment Method *</div><div class="config-field highlight dropdown">PIX (chave do cadastro)</div></div><div class="config-section"><div class="config-label">Amount *</div><div class="config-field highlight">{{affiliate.approved_balance}}</div></div><div class="config-section"><div class="config-label">Reset Balance</div><div class="config-field">🟢 ON · zera após pagamento</div></div><div class="config-section"><div class="config-label">Send Receipt</div><div class="config-field">🟢 ON — comprovante via email</div></div>` },
     'a6-1': { kind: 'Trigger · Custom Value', title: 'Vendas > 10 (mês)', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Upgrade automático de tier</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Affiliate · Monthly Sales Count</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Greater than</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">10</div></div>` },
     'a6-2': { kind: 'Action · Update Affiliate Custom Field', title: 'Update Custom Field (tier)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Promover Bronze → Prata</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field highlight dropdown">Affiliate · tier</div></div><div class="config-section"><div class="config-label">New Value *</div><div class="config-field highlight">Prata</div></div><div class="config-section"><div class="config-label">Trigger Side Effect</div><div class="config-field">Sobe comissão pra 30% automaticamente</div></div>` }
   };

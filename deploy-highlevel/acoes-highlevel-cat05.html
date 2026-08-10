@@ -2446,7 +2446,9 @@
     <a href="#a5" class="side-link"><span class="side-num">05</span>Classify</a>
     <a href="#a6" class="side-link"><span class="side-num">06</span>AI Agent (Agente de IA)</a>
     <a href="#a7" class="side-link"><span class="side-num">07</span>Atualizar Bot de IA e Status</a>
-    <a href="#a8" class="side-link"><span class="side-num">08</span>Mistral AI</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>Mistral AI
+    <a href="#a9" class="side-link"><span class="side-num">09</span>Tradução com IA</a>
+    <a href="#a10" class="side-link"><span class="side-num">10</span>Decisor com IA</a></a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2784,7 +2786,7 @@
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
       <h2 class="acao-name">Summarize Conversation</h2>
-      <div class="acao-en">Summarize Conversation</div>
+      <div class="acao-en">AI Summarize</div>
       <div class="acao-tags"><span class="info-tag">Produtividade</span></div>
     </div>
   </div>
@@ -3085,7 +3087,7 @@
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
       <h2 class="acao-name">Classify</h2>
-      <div class="acao-en">AI Classify</div>
+      <div class="acao-en">AI Intent Detection</div>
       <div class="acao-tags"><span class="info-tag">Categorização</span></div>
     </div>
   </div>
@@ -3680,6 +3682,154 @@
       </div>
       <div class="hl-panel-caption">
         <strong>Beta — requer API key própria da Mistral. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007779-mistral-ai-workflow-actions" target="_blank" rel="noopener">help.gohighlevel.com/...mistral-ai-workflow-actions</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a9" data-name="tradução com ia ai translate">
+  <div class="acao-head">
+    <div class="acao-num">09</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Tradução com IA</h2>
+      <div class="acao-en">AI Translate</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Traduz texto dentro do workflow — mensagem recebida, campo do contato ou payload — pro idioma alvo. Resultado sai em variável pras próximas ações.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Atender lead gringo</div>
+  <div class="use-case-desc">Mensagem em inglês → traduz pra PT pro time responder.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Responder no idioma do lead</div>
+  <div class="use-case-desc">Resposta padrão em PT → traduz pro idioma detectado antes de enviar.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Input Text (merge field), Target Language (dropdown de idiomas) e variável de saída.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A9 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Target Language</strong> define o alvo; o texto pode vir de qualquer merge field.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>AI Translate</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Traduzir mensagem do lead" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Input Text <span class="req">*</span></div><input class="hl-input" value="{{trigger.message_body}}" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Target Language <span class="req">*</span></div><div class="hl-dropdown has-value">Português (Brasil)</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Traduz texto pro idioma alvo no workflow.</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a10" data-name="decisor com ia ai decision maker">
+  <div class="acao-head">
+    <div class="acao-num">10</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Decisor com IA</h2>
+      <div class="acao-en">AI Decision Maker</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>A IA decide o caminho do workflow com base numa instrução em linguagem natural — você descreve o critério, ela avalia o contexto do contato/conversa e escolhe a branch.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Triagem inteligente</div>
+  <div class="use-case-desc">"Se o lead parece pronto pra comprar, branch A; se está só pesquisando, branch B."</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Priorizar reclamações</div>
+  <div class="use-case-desc">IA lê o tom da mensagem → urgente vai pro gerente.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Decision Prompt (instrução em linguagem natural), contexto avaliado (conversa/campos) e branches de saída definidas por você.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A10 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Você escreve o critério em <strong>linguagem natural</strong> e cada resultado vira uma branch no canvas.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>AI Decision Maker</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Decidir rota do lead" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Decision Prompt <span class="req">*</span></div><div class="hl-textarea">O lead demonstra intenção de compra nas últimas mensagens?</div></div><div class="hl-filter-row"><div class="hl-filter-label">Branches</div><div class="hl-dropdown has-value">Pronto pra comprar · Pesquisando · Indeciso</div><div class="hl-conditional"><div class="hl-conditional-note">Cada resultado vira uma branch no canvas</div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>IA escolhe a branch pelo critério que você descrever.</strong>
       </div>
     </div>
   </div>

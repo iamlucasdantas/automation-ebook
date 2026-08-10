@@ -2442,6 +2442,7 @@
     <a href="#a1" class="side-link"><span class="side-num">01</span>Atualizar Status do Agendamento</a>
     <a href="#a2" class="side-link"><span class="side-num">02</span>Marcar Agendamento</a>
     <a href="#a3" class="side-link"><span class="side-num">03</span>Criar Nota no Agendamento</a>
+    <a href="#a4" class="side-link"><span class="side-num">04</span>Link de Agendamento Único</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2923,6 +2924,80 @@ Interesse: {{contact.interesse_principal}}</div>
       </div>
       <div class="hl-panel-caption">
         <strong>Nota interna sincronizada entre módulos. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000004580-create-appointment-note-workflow-action" target="_blank" rel="noopener">help.gohighlevel.com/...create-appointment-note</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a4" data-name="gerar link de agendamento único generate one time booking link">
+  <div class="acao-head">
+    <div class="acao-num">04</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Gerar Link de Agendamento Único</h2>
+      <div class="acao-en">Generate One Time Booking Link</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Gera um link de agendamento de uso único pro contato — expira depois de usado. O link sai numa variável pra enviar por SMS/email na sequência.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Reagendar no-show</div>
+  <div class="use-case-desc">Faltou → link único de reagendamento por SMS, sem abrir a agenda pública.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Oferta com urgência</div>
+  <div class="use-case-desc">Link exclusivo que só funciona uma vez reforça escassez.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Calendar (obrigatório). O link gerado fica em {{one_time_booking_link}} pra usar nas mensagens seguintes.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A4 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">O link <strong>expira após o primeiro agendamento</strong> — cada contato recebe o seu.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Generate One Time Booking Link</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Link único de reagendamento" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Calendar <span class="req">*</span></div><div class="hl-dropdown has-value">Consultoria — Time Comercial</div></div><div class="hl-filter-row"><div class="hl-filter-label">Variável gerada</div><input class="hl-input" value="{{one_time_booking_link}}" readonly><div class="hl-conditional"><div class="hl-conditional-note">Use nas ações de mensagem seguintes</div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Link de agenda que funciona uma única vez.</strong>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 217,
+  "total": 262,
   "items": [
     {
       "id": "g1",
@@ -1438,6 +1438,32 @@
       "href": "acoes-highlevel-cat01.html#a16"
     },
     {
+      "id": "a17",
+      "type": "Ação",
+      "name": "Mesclar Contato",
+      "en": "Merge Contact",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "mesclar contato merge contact",
+      "href": "acoes-highlevel-cat01.html#a17"
+    },
+    {
+      "id": "a18",
+      "type": "Ação",
+      "name": "Verificação de Email",
+      "en": "Email Verification",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "verificação de email email verification",
+      "href": "acoes-highlevel-cat01.html#a18"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Enviar Email",
@@ -1721,8 +1747,8 @@
     {
       "id": "a23",
       "type": "Ação",
-      "name": "Confirmação GMB",
-      "en": "GMB Confirmation",
+      "name": "Mensagem GMB (Google)",
+      "en": "GMB Messaging",
       "category": "Ação",
       "tags": [
         "Google"
@@ -1806,6 +1832,110 @@
       "description": "",
       "keywords": "whatsapp mídia whatsapp media",
       "href": "acoes-highlevel-cat02.html#a29"
+    },
+    {
+      "id": "a30",
+      "type": "Ação",
+      "name": "Messenger Interativo (Facebook)",
+      "en": "Facebook Interactive Messenger",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "messenger interativo (facebook) facebook interactive messenger",
+      "href": "acoes-highlevel-cat02.html#a30"
+    },
+    {
+      "id": "a31",
+      "type": "Ação",
+      "name": "Instagram DM Interativo",
+      "en": "Instagram Interactive Messenger",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "instagram dm interativo instagram interactive messenger",
+      "href": "acoes-highlevel-cat02.html#a31"
+    },
+    {
+      "id": "a32",
+      "type": "Ação",
+      "name": "TikTok DM Interativo",
+      "en": "TikTok Interactive Messenger",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "tiktok dm interativo tiktok interactive messenger",
+      "href": "acoes-highlevel-cat02.html#a32"
+    },
+    {
+      "id": "a33",
+      "type": "Ação",
+      "name": "Mensagem no Live Chat",
+      "en": "Send Live Chat Message",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "mensagem no live chat send live chat message",
+      "href": "acoes-highlevel-cat02.html#a33"
+    },
+    {
+      "id": "a34",
+      "type": "Ação",
+      "name": "Mensagem Interativa RCS",
+      "en": "RCS Interactive Message",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "mensagem interativa rcs rcs interactive message",
+      "href": "acoes-highlevel-cat02.html#a34"
+    },
+    {
+      "id": "a35",
+      "type": "Ação",
+      "name": "Enviar RCS",
+      "en": "Send RCS",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "enviar rcs send rcs",
+      "href": "acoes-highlevel-cat02.html#a35"
+    },
+    {
+      "id": "a36",
+      "type": "Ação",
+      "name": "Registrar Ligação Externa",
+      "en": "Log External Call",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "registrar ligação externa log external call",
+      "href": "acoes-highlevel-cat02.html#a36"
+    },
+    {
+      "id": "a37",
+      "type": "Ação",
+      "name": "Bot de Agendamento (Conversation AI)",
+      "en": "Appointment Booking Conversation AI Bot",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "bot de agendamento (conversation ai) appointment booking conversation ai bot",
+      "href": "acoes-highlevel-cat02.html#a37"
     },
     {
       "id": "a1",
@@ -2145,6 +2275,19 @@
       "href": "acoes-highlevel-cat04.html#a21"
     },
     {
+      "id": "a22",
+      "type": "Ação",
+      "name": "Drip (Liberação em Lotes)",
+      "en": "Drip",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "drip (liberação em lotes) drip",
+      "href": "acoes-highlevel-cat04.html#a22"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Generate Text (Texto)",
@@ -2175,7 +2318,7 @@
       "id": "a3",
       "type": "Ação",
       "name": "Summarize Conversation",
-      "en": "Summarize Conversation",
+      "en": "AI Summarize",
       "category": "Ação",
       "tags": [
         "Produtividade"
@@ -2202,7 +2345,7 @@
       "id": "a5",
       "type": "Ação",
       "name": "Classify",
-      "en": "AI Classify",
+      "en": "AI Intent Detection",
       "category": "Ação",
       "tags": [
         "Categorização"
@@ -2256,6 +2399,32 @@
       "href": "acoes-highlevel-cat05.html#a8"
     },
     {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Tradução com IA",
+      "en": "AI Translate",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "tradução com ia ai translate",
+      "href": "acoes-highlevel-cat05.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Decisor com IA",
+      "en": "AI Decision Maker",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "decisor com ia ai decision maker",
+      "href": "acoes-highlevel-cat05.html#a10"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Atualizar Status do Agendamento",
@@ -2293,6 +2462,19 @@
       "description": "",
       "keywords": "criar nota no agendamento create appointment note",
       "href": "acoes-highlevel-cat06.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Gerar Link de Agendamento Único",
+      "en": "Generate One Time Booking Link",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "gerar link de agendamento único generate one time booking link",
+      "href": "acoes-highlevel-cat06.html#a4"
     },
     {
       "id": "a1",
@@ -2424,6 +2606,32 @@
       "href": "acoes-highlevel-cat07.html#a11"
     },
     {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Buscar Oportunidade",
+      "en": "Find Opportunity",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "buscar oportunidade find opportunity",
+      "href": "acoes-highlevel-cat07.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Remover Dono da Oportunidade",
+      "en": "Remove Owner from Opportunity",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "remover dono da oportunidade remove owner from opportunity",
+      "href": "acoes-highlevel-cat07.html#a13"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Criar Invoice",
@@ -2481,6 +2689,58 @@
       "description": "",
       "keywords": "cancelar subscription cancel subscription",
       "href": "acoes-highlevel-cat08.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Cobrança Única Stripe",
+      "en": "Stripe One Time Charge",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "cobrança única stripe stripe one time charge",
+      "href": "acoes-highlevel-cat08.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Enviar Estimate",
+      "en": "Send Estimate",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "enviar estimate send estimate",
+      "href": "acoes-highlevel-cat08.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Enviar Documentos e Contratos",
+      "en": "Send Documents & Contracts",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "enviar documentos e contratos send documents & contracts",
+      "href": "acoes-highlevel-cat08.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Enviar Invoice Recorrente",
+      "en": "Send Recurring Invoice",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "enviar invoice recorrente send recurring invoice",
+      "href": "acoes-highlevel-cat08.html#a9"
     },
     {
       "id": "a1",
@@ -2542,6 +2802,45 @@
       "href": "acoes-highlevel-cat09.html#a5"
     },
     {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Adicionar ao Google Analytics",
+      "en": "Add to Google Analytics",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "adicionar ao google analytics add to google analytics",
+      "href": "acoes-highlevel-cat09.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Adicionar ao Google Ads",
+      "en": "Add to Google Ads",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "adicionar ao google ads add to google ads",
+      "href": "acoes-highlevel-cat09.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Relatório de Auditoria de Marketing",
+      "en": "Generate Marketing Audit Report",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "relatório de auditoria de marketing generate marketing audit report",
+      "href": "acoes-highlevel-cat09.html#a8"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Adicionar ao Gerenciador de Afiliados",
@@ -2579,8 +2878,8 @@
     {
       "id": "a4",
       "type": "Ação",
-      "name": "Aprovar Comissão",
-      "en": "Approve Commission",
+      "name": "Adicionar Leads a um Afiliado",
+      "en": "Add Leads Under an Affiliate",
       "category": "Ação",
       "tags": [
         "Financeiro"
@@ -2592,8 +2891,8 @@
     {
       "id": "a5",
       "type": "Ação",
-      "name": "Pagar Comissão",
-      "en": "Pay Commission",
+      "name": "Adicionar Venda Manual de Afiliado",
+      "en": "Add Manual Sales for an Affiliate",
       "category": "Ação",
       "tags": [
         "⚠ Financeiro"
@@ -2781,6 +3080,19 @@
       "href": "acoes-highlevel-cat13.html#a7"
     },
     {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Notificação Push Inteligente",
+      "en": "Smart Push Notification",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "notificação push inteligente smart push notification",
+      "href": "acoes-highlevel-cat13.html#a8"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Emitir Certificado",
@@ -2880,6 +3192,280 @@
       "description": "Adiciona o contato atual do workflow a um ou mais Grupos do Google Contacts. O contato precisa existir no Google — por isso é sempre combinada com \"Find or Create Google Contact\" antes.",
       "keywords": "adicionar grupos google add to google groups",
       "href": "acoes-highlevel-cat15.html#a6"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Registro Associado (Custom Object)",
+      "en": "Create Associated Record for Contact",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "criar registro associado (custom object) create associated record for contact",
+      "href": "acoes-highlevel-cat16.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Atualizar Registro Associado",
+      "en": "Update Associated Record for Contact",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "atualizar registro associado update associated record for contact",
+      "href": "acoes-highlevel-cat16.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Limpar Campos do Registro Associado",
+      "en": "Clear Fields of Associated Record for Contact",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "limpar campos do registro associado clear fields of associated record for contact",
+      "href": "acoes-highlevel-cat16.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Criar e Associar Empresa",
+      "en": "Create and Associate Company",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "criar e associar empresa create and associate company",
+      "href": "acoes-highlevel-cat16.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Atualizar Empresa Associada",
+      "en": "Update Associated Company",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "atualizar empresa associada update associated company",
+      "href": "acoes-highlevel-cat16.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Limpar Campos da Empresa Associada",
+      "en": "Clear Associated Company Fields",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "limpar campos da empresa associada clear associated company fields",
+      "href": "acoes-highlevel-cat16.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Adicionar Registros Associados ao Workflow",
+      "en": "Add Associated Records to Workflow",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "adicionar registros associados ao workflow add associated records to workflow",
+      "href": "acoes-highlevel-cat16.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Remover Registros Associados do Workflow",
+      "en": "Remove Associated Records from Workflow",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "remover registros associados do workflow remove associated records from workflow",
+      "href": "acoes-highlevel-cat16.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Associar Registros",
+      "en": "Associate Records",
+      "category": "Ação",
+      "tags": [
+        "Beta",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "associar registros associate records",
+      "href": "acoes-highlevel-cat16.html#a9"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Mensagem de IA",
+      "en": "AI Message",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "mensagem de ia ai message",
+      "href": "acoes-highlevel-cat17.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Mensagem Personalizada",
+      "en": "Custom Message",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "mensagem personalizada custom message",
+      "href": "acoes-highlevel-cat17.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Capturar Informação com IA",
+      "en": "AI Capture Information",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "capturar informação com ia ai capture information",
+      "href": "acoes-highlevel-cat17.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Agendar pelo Bot",
+      "en": "Book Appointment (Bot)",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "agendar pelo bot book appointment (bot)",
+      "href": "acoes-highlevel-cat17.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Agendamento de Serviços",
+      "en": "Services Booking",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "agendamento de serviços services booking",
+      "href": "acoes-highlevel-cat17.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Divisor de IA",
+      "en": "AI Splitter",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "divisor de ia ai splitter",
+      "href": "acoes-highlevel-cat17.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Transferir Bot",
+      "en": "Transfer Bot",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "transferir bot transfer bot",
+      "href": "acoes-highlevel-cat17.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Continuar Conversa",
+      "en": "Continue Conversation",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "continuar conversa continue conversation",
+      "href": "acoes-highlevel-cat17.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Encerrar Conversa",
+      "en": "End Conversation",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "encerrar conversa end conversation",
+      "href": "acoes-highlevel-cat17.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Eliza: Agendamento com IA",
+      "en": "Eliza AI Appointment Booking",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "eliza: agendamento com ia eliza ai appointment booking",
+      "href": "acoes-highlevel-cat17.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Enviar pra Plataforma Eliza",
+      "en": "Send to Eliza Agent Platform",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "enviar pra plataforma eliza send to eliza agent platform",
+      "href": "acoes-highlevel-cat17.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Invocar Agente (Agent Studio)",
+      "en": "Invoke Agent in Agent Studio",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "invocar agente (agent studio) invoke agent in agent studio",
+      "href": "acoes-highlevel-cat17.html#a12"
     }
   ]
 }

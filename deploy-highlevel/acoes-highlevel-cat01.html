@@ -2454,7 +2454,9 @@
     <a href="#a13" class="side-link"><span class="side-num">13</span>Deletar Contato</a>
     <a href="#a14" class="side-link"><span class="side-num">14</span>Modificar Pontuação de Engajamento</a>
     <a href="#a15" class="side-link"><span class="side-num">15</span>Adicionar Seguidores</a>
-    <a href="#a16" class="side-link"><span class="side-num">16</span>Remover Seguidores</a>
+    <a href="#a16" class="side-link"><span class="side-num">16</span>Remover Seguidores
+    <a href="#a17" class="side-link"><span class="side-num">17</span>Mesclar Contato</a>
+    <a href="#a18" class="side-link"><span class="side-num">18</span>Verificação de Email</a></a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -5150,6 +5152,156 @@ Próximo passo: agendar demo.</textarea>
       </div>
       <div class="hl-panel-caption">
         <strong>Remove usuários da lista de seguidores</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a17" data-name="mesclar contato merge contact">
+  <div class="acao-head">
+    <div class="acao-num">17</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Mesclar Contato</h2>
+      <div class="acao-en">Merge Contact</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Une o contato do workflow com um contato duplicado — históricos de conversa, tags, oportunidades e atividades são consolidados num registro só. O registro primário vence nos campos em conflito.</p>
+      <p>⚠ Irreversível — depois do merge não dá pra separar os dois registros.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Duplicata por email+telefone</div>
+  <div class="use-case-desc">Find Contact achou registro duplicado → merge automático mantendo o mais antigo como primário.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Importação suja</div>
+  <div class="use-case-desc">Lista importada criou duplicatas → workflow varre e consolida.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Contato primário (o que prevalece nos conflitos) e critério de identificação da duplicata (email/telefone). Campos vazios do primário herdam do secundário.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A17 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Primary Contact</strong> vence nos campos em conflito. Merge consolida conversas, tags, opps e atividades. Irreversível.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Merge Contact</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Consolidar duplicata de email" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Primary Contact <span class="req">*</span></div><div class="hl-dropdown has-value">Contato do workflow (mais antigo)</div></div><div class="hl-filter-row"><div class="hl-filter-label">Merge With <span class="req">*</span></div><div class="hl-dropdown has-value">Duplicata por email exato</div><div class="hl-conditional"><div class="hl-conditional-note">Identificada por email/telefone iguais</div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Consolida contato duplicado num registro só.</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a18" data-name="verificação de email email verification">
+  <div class="acao-head">
+    <div class="acao-num">18</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Verificação de Email</h2>
+      <div class="acao-en">Email Verification</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Valida o email do contato em tempo real (LC Email Verification) — checa se a caixa existe, se é descartável, se é catch-all. Protege sua reputação de envio: email inválido não entra na sequência.</p>
+      <p>Cobra por verificação executada (LC Premium). O resultado fica disponível pra ramificar com If/Else.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Gate antes da sequência</div>
+  <div class="use-case-desc">Form preenchido → verifica email → só entra no funil se deliverable.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Higiene de lista importada</div>
+  <div class="use-case-desc">Import em massa → verificação em workflow → tag "Email Inválido" pros ruins.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Campo de email a verificar (padrão: email do contato). Resultado (Deliverable / Undeliverable / Risky / Unknown) usável em If/Else na sequência.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A18 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Resultado sai como dado do contato — combine com <span class='arrow'>→</span> <strong>If/Else</strong> na sequência pra rotear. Ação <strong>LC Premium</strong> (custo por verificação).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Email Verification</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Verificar email do lead" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Email Field <span class="req">*</span></div><input class="hl-input" value="{{contact.email}}" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Resultados possíveis</div><div class="hl-dropdown has-value">Deliverable</div><div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Deliverable</span><span class="opt-chip">Undeliverable</span><span class="opt-chip">Risky</span><span class="opt-chip">Unknown</span></div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Valida email em tempo real antes de enviar.</strong>
       </div>
     </div>
   </div>

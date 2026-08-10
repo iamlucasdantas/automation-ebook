@@ -2460,6 +2460,7 @@
     <a href="#a19" class="side-link"><span class="side-num">19</span>Formatar Número</a>
     <a href="#a20" class="side-link"><span class="side-num">20</span>Formatar Array</a>
     <a href="#a21" class="side-link"><span class="side-num">21</span>Formatar Texto</a>
+    <a href="#a22" class="side-link"><span class="side-num">22</span>Drip (Lotes)</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -5715,6 +5716,80 @@
       </div>
       <div class="hl-panel-caption">
         <strong>Nove operações de string no workflow. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000003361-workflow-action-text-formatter" target="_blank" rel="noopener">help.gohighlevel.com/...text-formatter</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a22" data-name="drip (liberação em lotes) drip">
+  <div class="acao-head">
+    <div class="acao-num">22</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Drip (Liberação em Lotes)</h2>
+      <div class="acao-en">Drip</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Segura os contatos e libera em <strong>lotes</strong> — N contatos a cada intervalo, respeitando janela de horário e dias da semana. Protege limites de envio e simula cadência humana em campanhas grandes.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Blast sem queimar o número</div>
+  <div class="use-case-desc">5.000 contatos → libera 100 a cada 10 min dentro do horário comercial.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Aquecimento de domínio</div>
+  <div class="use-case-desc">Volume crescente de email distribuído ao longo dos dias.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Batch Size (contatos por lote), Drip Interval (intervalo entre lotes) e janela de envio (horários + dias da semana permitidos).</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A22 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Batch Size</strong> + <strong>Interval</strong> definem a vazão; a janela de horário segura os lotes fora do permitido.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Drip</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Liberar blast em lotes" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Batch Size <span class="req">*</span></div><input class="hl-input" value="100" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Drip Interval <span class="req">*</span></div><div class="hl-dropdown has-value">10 minutos</div></div><div class="hl-filter-row"><div class="hl-filter-label">Send Window</div><div class="hl-dropdown has-value">09:00 – 18:00 · Seg a Sex</div><div class="hl-conditional"><div class="hl-conditional-note">Lotes fora da janela esperam a próxima abertura</div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Libera contatos em lotes controlados.</strong>
       </div>
     </div>
   </div>

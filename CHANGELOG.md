@@ -10,6 +10,35 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-10 — Content
+**Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
+
+Auditoria da lista completa do painel de Actions da UI real contra o ebook
+encontrou 45 ações faltantes. Todas adicionadas:
+
+- **cat01 Contatos** +2: Mesclar Contato, Verificação de Email
+- **cat02 Comunicação** +8: Messenger/IG/TikTok Interativos, Live Chat,
+  RCS (interativa + simples), Registrar Ligação Externa, Bot de Agendamento
+  Conversation AI. Rename: GMB Confirmation → GMB Messaging
+- **cat04 Interno** +1: Drip (liberação em lotes)
+- **cat05 IA** +2 e renames: AI Translate, AI Decision Maker;
+  Summarize Conversation → AI Summarize; AI Classify → AI Intent Detection
+- **cat06 Agendamentos** +1: Gerar Link de Agendamento Único
+- **cat07 Oportunidades** +2: Buscar Oportunidade, Remover Dono
+- **cat08 Pagamentos** +4: Cobrança Única Stripe, Enviar Estimate,
+  Docs & Contratos, Invoice Recorrente
+- **cat09 Marketing** +3: Add ao Google Analytics, Add ao Google Ads,
+  Relatório de Auditoria de Marketing
+- **cat10 Afiliados**: a4/a5 substituídas (Approve/Pay Commission não
+  existem no painel) por Adicionar Leads a um Afiliado e Venda Manual
+- **cat13 Comunidades** +1: Notificação Push Inteligente
+- **NOVA acoes-highlevel-cat16.html** · Objetos & Empresas (9): Custom
+  Objects (3), Companies (3), Associations (3, uma em beta)
+- **NOVA acoes-highlevel-cat17.html** · Bots & Agentes (12): fluxo interno
+  do Conversation AI Bot (9), Eliza (2), Agent Studio (1)
+
+Totais: 87 gatilhos + 175 ações = 262 painéis · 30 páginas · validador OK.
+
 ## 2026-08-03 — Content
 **Add tutorial video to Contact DND trigger (requested)**
 

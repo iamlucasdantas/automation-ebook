@@ -2450,6 +2450,8 @@
     <a href="#a9" class="side-link"><span class="side-num">09</span>Remover Tag da Opp</a>
     <a href="#a10" class="side-link"><span class="side-num">10</span>Adicionar Seguidores à Oportunidade</a>
     <a href="#a11" class="side-link"><span class="side-num">11</span>Remover Seguidores da Oportunidade</a>
+    <a href="#a12" class="side-link"><span class="side-num">12</span>Buscar Oportunidade</a>
+    <a href="#a13" class="side-link"><span class="side-num">13</span>Remover Dono da Oportunidade</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -3990,6 +3992,154 @@
       </div>
       <div class="hl-panel-caption">
         <strong>Par da A10 — tira followers da opp. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000004757-workflow-action-remove-followers-from-opportunity" target="_blank" rel="noopener">help.gohighlevel.com/...remove-followers-from-opportunity</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a12" data-name="buscar oportunidade find opportunity">
+  <div class="acao-head">
+    <div class="acao-num">12</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Buscar Oportunidade</h2>
+      <div class="acao-en">Find Opportunity</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Localiza uma oportunidade do contato e coloca ela em contexto pras ações seguintes (Add Owner, Followers, Update...). Sem opp em contexto, várias ações de opp são skipadas — esta é a que resolve.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Preparar contexto</div>
+  <div class="use-case-desc">Workflow disparou por tag → Find Opportunity antes de mexer na opp.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Ramificar por existência</div>
+  <div class="use-case-desc">Branches Found / Not Found → cria opp só se não existir.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Critério de busca (pipeline, status, mais recente) e branches Opportunity Found / Not Found.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A12 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Coloca a opp <strong>em contexto</strong> pras próximas ações — com branches <strong>Found / Not Found</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Find Opportunity</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Localizar opp aberta do contato" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">In Pipeline</div><div class="hl-dropdown has-value">Vendas Enterprise</div></div><div class="hl-filter-row"><div class="hl-filter-label">Status</div><div class="hl-dropdown has-value">Open</div></div><div class="hl-filter-row"><div class="hl-filter-label">Selection</div><div class="hl-dropdown has-value">Most Recent</div><div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Most Recent</span><span class="opt-chip">Oldest</span></div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Acha a opp e habilita as ações de opp na sequência.</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a13" data-name="remover dono da oportunidade remove owner from opportunity">
+  <div class="acao-head">
+    <div class="acao-num">13</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Remover Dono da Oportunidade</h2>
+      <div class="acao-en">Remove Owner from Opportunity</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Tira o dono da oportunidade — ela volta pra fila de não-atribuídas. Par do Add Owner (a7).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Vendedor saiu do time</div>
+  <div class="use-case-desc">Opps dele voltam pra fila de distribuição.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">SLA estourou</div>
+  <div class="use-case-desc">Sem movimento em 48h → remove dono → round-robin redistribui.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Sem campos além do Action Name — remove o dono da opp em contexto.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A13 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Sem configuração extra: limpa o campo Owner da opp em contexto. Sincronia com dono do contato depende da configuração da conta.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Remove Owner from Opportunity</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Devolver opp pra fila" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Efeito</div><div class="hl-dropdown has-value">Owner removido — opp fica Unassigned</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Tira o dono e devolve a opp pra fila.</strong>
       </div>
     </div>
   </div>

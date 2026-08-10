@@ -2425,7 +2425,7 @@
       <span>Voltar ao índice</span>
     </a>
     <div class="top-nav-divider"></div>
-    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>13/14</strong> · <strong>Comunidades</strong></div>
+    <div class="top-nav-breadcrumb">Parte 2 · Ações · <strong>16/17</strong> · <strong>Objetos & Empresas</strong></div>
   </div>
 </div>
 
@@ -2433,20 +2433,27 @@
 
 <aside>
   <div class="side-brand">Ações<br><span class="brand-thin">HighLevel.</span></div>
-  <div class="side-cat">Parte 2 · Ações · Categoria 13</div>
+  <div class="side-cat">Parte 2 · Ações · Categoria 16</div>
 
   <input type="text" class="side-search" id="search" placeholder="Buscar ação..." />
 
-  <div class="side-section-label">Comunidades · 7 ações</div>
+  <div class="side-section-label">Custom Objects · 3 ações</div>
   <nav class="side-nav">
-    <a href="#a1" class="side-link"><span class="side-num">01</span>Conceder Acesso a Grupo</a>
-    <a href="#a2" class="side-link"><span class="side-num">02</span>Remover Acesso a Grupo</a>
-    <a href="#a3" class="side-link"><span class="side-num">03</span>Conceder Acesso a Canal Privado</a>
-    <a href="#a4" class="side-link"><span class="side-num">04</span>Remover Acesso a Canal Privado</a>
-    <a href="#a5" class="side-link"><span class="side-num">05</span>Atribuir Nível na Classificação</a>
-    <a href="#a6" class="side-link"><span class="side-num">06</span>Publicar na Comunidade</a>
-    <a href="#a7" class="side-link"><span class="side-num">07</span>Conceder Pontos na Classificação</a>
-    <a href="#a8" class="side-link"><span class="side-num">08</span>Push Inteligente</a>
+    <a href="#a1" class="side-link"><span class="side-num">01</span>Criar Registro Associado</a>
+    <a href="#a2" class="side-link"><span class="side-num">02</span>Atualizar Registro Associado</a>
+    <a href="#a3" class="side-link"><span class="side-num">03</span>Limpar Campos do Registro</a>
+  </nav>
+  <div class="side-section-label">Empresas (Company)</div>
+  <nav class="side-nav">
+    <a href="#a4" class="side-link"><span class="side-num">04</span>Criar e Associar Empresa</a>
+    <a href="#a5" class="side-link"><span class="side-num">05</span>Atualizar Empresa</a>
+    <a href="#a6" class="side-link"><span class="side-num">06</span>Limpar Campos da Empresa</a>
+  </nav>
+  <div class="side-section-label">Associações</div>
+  <nav class="side-nav">
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Add Associados ao Workflow</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>Remover Associados do Workflow</a>
+    <a href="#a9" class="side-link"><span class="side-num">09</span>Associar Registros (Beta)</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2463,12 +2470,12 @@
 
 <main>
 <div class="hero-area">
-  <span class="hero-tag">Parte 2 · Ações · Categoria 13/14</span>
-  <h1 class="hero-title">Ações de <em>Comunidades</em>.</h1>
-  <p class="hero-desc">7 ações pra gerenciar comunidades e grupos — dar/remover acesso a grupos, canais privados, atribuir níveis e conceder pontos na classificação.</p>
+  <span class="hero-tag">Parte 2 · Ações · Categoria 16/15</span>
+  <h1 class="hero-title">Ações de <em>Objetos &amp; Empresas</em>.</h1>
+  <p class="hero-desc">9 ações do modelo de dados avançado — Custom Objects, Companies (CRM B2B) e Associations. Registros relacionados ao contato criados, atualizados e automatizados direto no workflow.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">7</span>
+      <span class="hero-stat-num">1</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -2478,21 +2485,21 @@
   </div>
 </div>
 
-<div class="acao-block" id="a1" data-name="conceder acesso a grupo grant group access">
+<div class="acao-block" id="a1" data-name="criar registro associado (custom object) create associated record for contact">
   <div class="acao-head">
     <div class="acao-num">01</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Conceder Acesso a Grupo</h2>
-      <div class="acao-en">Grant Group Access</div>
-      <div class="acao-tags"><span class="info-tag">★ Onboarding</span></div>
+      <h2 class="acao-name">Criar Registro Associado (Custom Object)</h2>
+      <div class="acao-en">Create Associated Record for Contact</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Adiciona contato a grupo da comunidade. Dispara onboarding do grupo — boas-vindas, regras, apresentação.</p>
+      <p>Cria um registro de <strong>Custom Object</strong> (Pet, Imóvel, Veículo, Apólice...) já associado ao contato do workflow. Os campos do objeto são preenchidos com merge fields.</p>
     </div>
   </div>
 
@@ -2501,18 +2508,13 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Compra confirmada</div>
-  <div class="use-case-desc">Pagou → acesso à comunidade exclusiva.</div>
+  <div class="use-case-title">Pet do cliente</div>
+  <div class="use-case-desc">Form de cadastro → cria registro "Pet" com nome/raça vinculado ao tutor.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Tier premium</div>
-  <div class="use-case-desc">Plano VIP → acesso a grupo VIP.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Bônus</div>
-  <div class="use-case-desc">Engajamento alto → acesso a grupo especial.</div>
+  <div class="use-case-title">Apólice por contato</div>
+  <div class="use-case-desc">Venda fechada → registro "Apólice" com número e vigência.</div>
 </div>
 
     </div>
@@ -2521,62 +2523,9 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Grupo específico.</p>
+      <p>Custom Object (dropdown dos objetos da conta) e mapeamento de campos do registro. O registro nasce associado ao contato em contexto.</p>
     </div>
   </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a1">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Comunidades/ Grant Group · Cliente Novo</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a1">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a1-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Invoice Paid · Curso</div>
-              <div class="ghl-node-title">Invoice Paid · Curso</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Invoice Paid · Curso</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a1-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">👥</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunidades</div>
-              <div class="ghl-node-title">Grant Group Access</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Group Access</span></div><div class="ghl-node-param"><span class="pk">Invoice Source</span><span class="pv highlight">Curso</span></div><div class="ghl-node-param"><span class="pk">Status</span><span class="pv highlight">Paid</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
 
   <!-- ═════════════════════ HL CONFIG PANEL — ACTION A1 ═════════════════════ -->
   <div class="tblock">
@@ -2586,18 +2535,17 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Group</strong> dropdown.</div>
+        <div class="hl-canvas-hint">Requer <strong>Custom Objects</strong> configurados na conta (Settings → Objects). Campos aceitam merge fields.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Grant Group Access</span>
+              <span>Create Associated Record for Contact</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Liberar acesso · comunidade VIP" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Group <span class="req">*</span></div><div class="hl-dropdown has-value">Magnetic Flows · Comunidade VIP</div></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Criar registro Pet" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Object <span class="req">*</span></div><div class="hl-dropdown has-value">Pet</div><div class="hl-conditional"><div class="hl-conditional-note">Lista os Custom Objects da conta</div></div></div><div class="hl-filter-row"><div class="hl-filter-label">Nome <span class="req">*</span></div><input class="hl-input" value="{{contact.pet_nome}}" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Raça</div><input class="hl-input" value="{{contact.pet_raca}}" readonly></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -2606,26 +2554,26 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Adiciona contato a grupo de Communities</strong>
+        <strong>Registro de Custom Object vinculado ao contato.</strong>
       </div>
     </div>
   </div>
 
-</div><div class="acao-block" id="a2" data-name="remover acesso a grupo revoke group access">
+</div><div class="acao-block" id="a2" data-name="atualizar registro associado update associated record for contact">
   <div class="acao-head">
     <div class="acao-num">02</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Remover Acesso a Grupo</h2>
-      <div class="acao-en">Revoke Group Access</div>
-      <div class="acao-tags"></div>
+      <h2 class="acao-name">Atualizar Registro Associado</h2>
+      <div class="acao-en">Update Associated Record for Contact</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Remove acesso de contato ao grupo. Usado em cancelamentos, expulsões, downgrades.</p>
+      <p>Atualiza campos de um registro de Custom Object já associado ao contato — ex.: mudar status da apólice, atualizar peso do pet.</p>
     </div>
   </div>
 
@@ -2634,18 +2582,13 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Cancelou</div>
-  <div class="use-case-desc">Assinatura cancelada → remove do grupo.</div>
+  <div class="use-case-title">Renovação de apólice</div>
+  <div class="use-case-desc">Pagamento recebido → status do registro vira "Vigente".</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Violação</div>
-  <div class="use-case-desc">Quebrou regras → expulsa.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Downgrade</div>
-  <div class="use-case-desc">Mudou plano → remove do VIP, mantém no básico.</div>
+  <div class="use-case-title">Atualização periódica</div>
+  <div class="use-case-desc">Check-up feito → data do último atendimento no registro.</div>
 </div>
 
     </div>
@@ -2654,62 +2597,9 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Grupo específico.</p>
+      <p>Object + registro alvo (associado ao contato) e campos a atualizar.</p>
     </div>
   </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a2">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Comunidades/ Revoke · Assinatura Cancelada</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a2">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a2-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Sub Canceled</div>
-              <div class="ghl-node-title">Sub Canceled</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Sub Canceled</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a2-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🚪</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunidades</div>
-              <div class="ghl-node-title">Revoke Group Access</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Group Access</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
 
   <!-- ═════════════════════ HL CONFIG PANEL — ACTION A2 ═════════════════════ -->
   <div class="tblock">
@@ -2719,18 +2609,17 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Group</strong>.</div>
+        <div class="hl-canvas-hint">Atualiza o registro <strong>associado em contexto</strong> — sem registro associado, a action é skipada.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Revoke Group Access</span>
+              <span>Update Associated Record for Contact</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Remover · cancelou plano" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Group <span class="req">*</span></div><div class="hl-dropdown has-value">Magnetic Flows · Comunidade VIP</div></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Atualizar status da apólice" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Object <span class="req">*</span></div><div class="hl-dropdown has-value">Apólice</div></div><div class="hl-filter-row"><div class="hl-filter-label">Status</div><div class="hl-dropdown has-value">Vigente</div></div><div class="hl-filter-row"><div class="hl-filter-label">Última atualização</div><input class="hl-input" value="{{right_now.date}}" readonly></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -2739,26 +2628,26 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Remove contato de grupo</strong>
+        <strong>Edita campos do registro associado.</strong>
       </div>
     </div>
   </div>
 
-</div><div class="acao-block" id="a3" data-name="conceder acesso a canal privado grant private channel access">
+</div><div class="acao-block" id="a3" data-name="limpar campos do registro associado clear fields of associated record for contact">
   <div class="acao-head">
     <div class="acao-num">03</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Conceder Acesso a Canal Privado</h2>
-      <div class="acao-en">Grant Private Channel Access</div>
-      <div class="acao-tags"></div>
+      <h2 class="acao-name">Limpar Campos do Registro Associado</h2>
+      <div class="acao-en">Clear Fields of Associated Record for Contact</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Libera acesso a canal privado dentro de grupo. Granularidade maior — cliente pode estar no grupo mas sem acesso a certos canais.</p>
+      <p>Esvazia campos específicos do registro de Custom Object associado — reset controlado sem apagar o registro.</p>
     </div>
   </div>
 
@@ -2767,18 +2656,13 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Canal VIP</div>
-  <div class="use-case-desc">Atingiu X nível → libera canal "Mentorias VIP".</div>
+  <div class="use-case-title">Reset de ciclo</div>
+  <div class="use-case-desc">Renovação → limpa campos da vigência anterior.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Bônus temporário</div>
-  <div class="use-case-desc">Promoção → canal "Acesso Especial" por 30 dias.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Programa especial</div>
-  <div class="use-case-desc">Afiliados → canal "Afiliados" dentro da comunidade.</div>
+  <div class="use-case-title">LGPD parcial</div>
+  <div class="use-case-desc">Remove dados sensíveis do registro mantendo o histórico.</div>
 </div>
 
     </div>
@@ -2787,62 +2671,9 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Grupo, Canal específico.</p>
+      <p>Object e lista de campos a limpar (multi-select).</p>
     </div>
   </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a3">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Comunidades/ Grant Channel · Upgrade VIP</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a3">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a3-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Atingiu Nível 5</div>
-              <div class="ghl-node-title">Atingiu Nível 5</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Atingiu Nível 5</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a3-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🔓</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunidades</div>
-              <div class="ghl-node-title">Grant Private Channel</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Grant Private Channel</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
 
   <!-- ═════════════════════ HL CONFIG PANEL — ACTION A3 ═════════════════════ -->
   <div class="tblock">
@@ -2852,21 +2683,17 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Cascata: <span class='arrow'>→</span> <strong>Group</strong>, <span class='arrow'>→</span> <strong>Private Channel</strong> filtrado.</div>
+        <div class="hl-canvas-hint">Limpa <strong>só os campos escolhidos</strong> — o registro e a associação continuam existindo.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Grant Private Channel Access</span>
+              <span>Clear Fields of Associated Record for Contact</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Liberar #vip-mentoria" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Group <span class="req">*</span></div><div class="hl-dropdown has-value">Magnetic Flows · Comunidade</div></div>
-<div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
-<div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Canais filtrados pelo grupo</div>
-<div class="hl-filter-label">Private Channel</div><div class="hl-dropdown has-value">#vip-mentoria</div></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Limpar dados da vigência" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Object <span class="req">*</span></div><div class="hl-dropdown has-value">Apólice</div></div><div class="hl-filter-row"><div class="hl-filter-label">Fields to Clear <span class="req">*</span></div><div class="hl-dropdown has-value">Nº Anterior · Vigência Anterior</div><div class="hl-conditional"><div class="hl-conditional-note">Multi-select de campos do objeto</div></div></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -2875,26 +2702,26 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Dá acesso a canal privado dentro do grupo</strong>
+        <strong>Esvazia campos escolhidos do registro.</strong>
       </div>
     </div>
   </div>
 
-</div><div class="acao-block" id="a4" data-name="remover acesso a canal privado revoke private channel access">
+</div><div class="acao-block" id="a4" data-name="criar e associar empresa create and associate company">
   <div class="acao-head">
     <div class="acao-num">04</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Remover Acesso a Canal Privado</h2>
-      <div class="acao-en">Revoke Private Channel Access</div>
-      <div class="acao-tags"></div>
+      <h2 class="acao-name">Criar e Associar Empresa</h2>
+      <div class="acao-en">Create and Associate Company</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Remove acesso a canal privado específico, mantendo acesso ao grupo.</p>
+      <p>Cria um registro de <strong>Company</strong> (empresa/B2B) e associa ao contato — a base do CRM B2B do HL: vários contatos pendurados na mesma empresa.</p>
     </div>
   </div>
 
@@ -2903,18 +2730,13 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Fim de bônus</div>
-  <div class="use-case-desc">Período expirou → remove do canal especial.</div>
+  <div class="use-case-title">Lead B2B entra</div>
+  <div class="use-case-desc">Form com CNPJ/empresa → cria a Company e vincula o contato.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Mudança de tier</div>
-  <div class="use-case-desc">Downgrade → remove canais premium.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Violação de tópico</div>
-  <div class="use-case-desc">Usou canal errado → remove desse canal.</div>
+  <div class="use-case-title">Enriquecimento</div>
+  <div class="use-case-desc">Webhook de enriquecimento → cria empresa com porte/segmento.</div>
 </div>
 
     </div>
@@ -2923,62 +2745,9 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Grupo, Canal específico.</p>
+      <p>Campos da empresa (nome obrigatório, site, telefone, endereço...) com merge fields. Se já existir empresa igual, considere Update Associated Company.</p>
     </div>
   </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a4">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Comunidades/ Revoke Channel · Downgrade</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a4">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a4-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Desceu pra Nível 3</div>
-              <div class="ghl-node-title">Desceu pra Nível 3</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Desceu pra Nível 3</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a4-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🔒</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunidades</div>
-              <div class="ghl-node-title">Revoke Channel</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Revoke Channel</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
 
   <!-- ═════════════════════ HL CONFIG PANEL — ACTION A4 ═════════════════════ -->
   <div class="tblock">
@@ -2988,21 +2757,17 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Cascata Group → Private Channel.</div>
+        <div class="hl-canvas-hint">Nasce <strong>associada ao contato</strong> do workflow — outros contatos podem ser associados depois.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Revoke Private Channel Access</span>
+              <span>Create and Associate Company</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Remover de #vip-mentoria" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Group</div><div class="hl-dropdown has-value">Magnetic Flows · Comunidade</div></div>
-<div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
-<div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Cascata</div>
-<div class="hl-filter-label">Private Channel</div><div class="hl-dropdown has-value">#vip-mentoria</div></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Criar empresa do lead" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Company Name <span class="req">*</span></div><input class="hl-input" value="{{contact.empresa}}" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Website</div><input class="hl-input" value="{{contact.website}}" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Phone</div><input class="hl-input" value="{{contact.phone}}" readonly></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -3011,26 +2776,26 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Remove acesso a canal privado</strong>
+        <strong>Cria a empresa e vincula o contato (CRM B2B).</strong>
       </div>
     </div>
   </div>
 
-</div><div class="acao-block" id="a5" data-name="atribuir nível na classificação assign leaderboard level">
+</div><div class="acao-block" id="a5" data-name="atualizar empresa associada update associated company">
   <div class="acao-head">
     <div class="acao-num">05</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Atribuir Nível na Classificação</h2>
-      <div class="acao-en">Assign Leaderboard Level</div>
-      <div class="acao-tags"><span class="info-tag">Gamificação</span></div>
+      <h2 class="acao-name">Atualizar Empresa Associada</h2>
+      <div class="acao-en">Update Associated Company</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Define nível do membro no leaderboard da comunidade. Gamificação — usado pra reconhecer membros ativos, atribuir tiers.</p>
+      <p>Atualiza campos da empresa associada ao contato — segmento, porte, estágio da conta, campos customizados de Company.</p>
     </div>
   </div>
 
@@ -3039,18 +2804,13 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Progressão automática</div>
-  <div class="use-case-desc">X pontos → avança pro próximo nível.</div>
+  <div class="use-case-title">Mudou de plano</div>
+  <div class="use-case-desc">Upgrade fechado → campo "Plano" da empresa atualiza pra todos os contatos dela.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Reconhecimento</div>
-  <div class="use-case-desc">Top contributor → nível "Expert".</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Tiers pagos</div>
-  <div class="use-case-desc">Plano Gold → nível "Gold" no leaderboard.</div>
+  <div class="use-case-title">Score da conta</div>
+  <div class="use-case-desc">Engajamento somado → atualiza health score no nível empresa.</div>
 </div>
 
     </div>
@@ -3059,62 +2819,9 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Novo nível.</p>
+      <p>Campos da Company a atualizar (padrão + custom fields de empresa).</p>
     </div>
   </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a5">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Comunidades/ Assign Level · Gamificação</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a5">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a5-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Pontos > 1000</div>
-              <div class="ghl-node-title">Pontos > 1000</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Pontos &gt; 1000</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a5-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🏆</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunidades</div>
-              <div class="ghl-node-title">Assign Level</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Assign Level</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv highlight">Round-robin SDR</span></div><div class="ghl-node-param"><span class="pk">Split Traffic</span><span class="pv">Equally (round-robin)</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
 
   <!-- ═════════════════════ HL CONFIG PANEL — ACTION A5 ═════════════════════ -->
   <div class="tblock">
@@ -3124,21 +2831,17 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Cascata Group → Level filtrado.</div>
+        <div class="hl-canvas-hint">Mexe no registro <strong>nível empresa</strong> — vale pra todos os contatos associados a ela.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Assign Leaderboard Level</span>
+              <span>Update Associated Company</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Promover pra Nível 3" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Group <span class="req">*</span></div><div class="hl-dropdown has-value">Magnetic Flows</div></div>
-<div class="hl-filter-row" style="border-left: 2px solid var(--brand-accent);">
-<div class="hl-conditional-note" style="margin-bottom: 8px;">⚡ Levels do grupo</div>
-<div class="hl-filter-label">Level <span class="req">*</span></div><div class="hl-dropdown has-value">Nível 3 · Praticante</div></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Atualizar plano da conta" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Plano</div><div class="hl-dropdown has-value">Premium Anual</div></div><div class="hl-filter-row"><div class="hl-filter-label">Health Score</div><input class="hl-input" value="{{custom_values.health_score}}" readonly></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -3147,26 +2850,26 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Define nível do membro no leaderboard</strong>
+        <strong>Edita a empresa vinculada ao contato.</strong>
       </div>
     </div>
   </div>
 
-</div><div class="acao-block" id="a6" data-name="publicar na comunidade post to community">
+</div><div class="acao-block" id="a6" data-name="limpar campos da empresa associada clear associated company fields">
   <div class="acao-head">
     <div class="acao-num">06</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Publicar na Comunidade</h2>
-      <div class="acao-en">Post to Community</div>
-      <div class="acao-tags"></div>
+      <h2 class="acao-name">Limpar Campos da Empresa Associada</h2>
+      <div class="acao-en">Clear Associated Company Fields</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Publica mensagem em grupo/canal automaticamente. Cuidado com spam — use pra anúncios oficiais, celebrações, conteúdo automatizado útil.</p>
+      <p>Esvazia campos específicos da empresa associada — reset sem excluir a Company nem desassociar contatos.</p>
     </div>
   </div>
 
@@ -3175,18 +2878,13 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Novo membro</div>
-  <div class="use-case-desc">Posta "Bem-vindo @fulano!" no grupo.</div>
+  <div class="use-case-title">Churn</div>
+  <div class="use-case-desc">Conta cancelou → limpa campos de plano/renovação mantendo o cadastro.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Anúncio</div>
-  <div class="use-case-desc">Novo curso lançado → post oficial.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Celebrações</div>
-  <div class="use-case-desc">Membro atingiu marco → post reconhecendo.</div>
+  <div class="use-case-title">Recomeço comercial</div>
+  <div class="use-case-desc">Reabertura de negociação → limpa campos do ciclo anterior.</div>
 </div>
 
     </div>
@@ -3195,62 +2893,9 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Grupo, Canal, Mensagem, Anexos.</p>
+      <p>Lista de campos de Company a limpar.</p>
     </div>
   </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a6">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Comunidades/ Post · Anúncio de Lançamento</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a6">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-        
-        <div class="ghl-node" data-node-id="a6-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Data · Lançamento Curso</div>
-              <div class="ghl-node-title">Data · Lançamento Curso</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Data · Lançamento Curso</span></div><div class="ghl-node-param"><span class="pk">Filters</span><span class="pv">Sem filtros (dispara em qualquer caso)</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a6-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">📣</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunidades</div>
-              <div class="ghl-node-title">Post to Community</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Grupo</span><span class="pv highlight">Geral</span></div><div class="ghl-node-param"><span class="pk">Canal</span><span class="pv">Anúncios</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
 
   <!-- ═════════════════════ HL CONFIG PANEL — ACTION A6 ═════════════════════ -->
   <div class="tblock">
@@ -3260,21 +2905,17 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Group</strong>, <span class='arrow'>→</span> <strong>Channel</strong>, <span class='arrow'>→</span> <strong>Post Content</strong>.</div>
+        <div class="hl-canvas-hint">Igual ao Clear de Custom Object, no nível <strong>empresa</strong>.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Post to Community</span>
+              <span>Clear Associated Company Fields</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Anunciar novo aluno · #boas-vindas" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Group</div><div class="hl-dropdown has-value">Magnetic Flows</div></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Channel</div><div class="hl-dropdown has-value">#boas-vindas</div></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Post Content</div>
-<textarea class="hl-input" rows="3" style="resize: vertical;">🎉 Boas-vindas {{contact.first_name}}! Conta pra galera o que espera aprender.</textarea></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Limpar dados do plano" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Fields to Clear <span class="req">*</span></div><div class="hl-dropdown has-value">Plano · Data Renovação · CSM Responsável</div></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -3283,27 +2924,26 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Publica post automaticamente em canal da comunidade</strong>
+        <strong>Esvazia campos da empresa mantendo o registro.</strong>
       </div>
     </div>
   </div>
 
-</div><div class="acao-block" id="a7" data-name="conceder pontos na classificação grant community group leaderboard points pontos">
+</div><div class="acao-block" id="a7" data-name="adicionar registros associados ao workflow add associated records to workflow">
   <div class="acao-head">
     <div class="acao-num">07</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Conceder Pontos na Classificação</h2>
-      <div class="acao-en">Grant Community Group Leaderboard Points</div>
-      <div class="acao-tags"><span class="info-tag">Gamificação</span><span class="info-tag new">Novo</span></div>
+      <h2 class="acao-name">Adicionar Registros Associados ao Workflow</h2>
+      <div class="acao-en">Add Associated Records to Workflow</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
     </div>
   </div>
 
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Concede uma quantidade específica de pontos no leaderboard de um grupo da comunidade pro membro que passou pelo workflow. Diferente da A5 (Atribuir Nível na Classificação), que seta o nível direto — aqui você soma pontos, e o nível sobe sozinho conforme os thresholds configurados no grupo.</p>
-      <p><strong>Atenção:</strong> os pontos só são concedidos se o contato já for membro do grupo selecionado. Se não for, a ação falha silenciosamente (o workflow não trava, mas nenhum ponto é dado) — confirme o membership antes, com um filtro ou uma etapa de Grant Group Access anterior.</p>
+      <p>Puxa os registros associados ao contato (via Associations) pra dentro de um workflow — dispara automação pra cada registro relacionado.</p>
     </div>
   </div>
 
@@ -3312,18 +2952,13 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Concluiu curso</div>
-  <div class="use-case-desc">Módulo final assistido → +500 pontos no leaderboard da comunidade.</div>
+  <div class="use-case-title">Notificar todos os contatos da empresa</div>
+  <div class="use-case-desc">Deal fechou → todos os contatos associados à Company entram no fluxo de onboarding.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Participou de evento ao vivo</div>
-  <div class="use-case-desc">Check-in confirmado no evento do grupo → +100 pontos.</div>
-</div>
-<div class="use-case">
-  <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Indicou um amigo</div>
-  <div class="use-case-desc">Indicação virou membro pago → +250 pontos pro indicador.</div>
+  <div class="use-case-title">Automação por objeto</div>
+  <div class="use-case-desc">Cada Pet do tutor entra no workflow de lembrete de vacina.</div>
 </div>
 
     </div>
@@ -3332,62 +2967,9 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Community, Group (o leaderboard é por grupo, não pela comunidade inteira) e Points (número de pontos a conceder). Pontos não são concedidos se o contato não for membro do grupo.</p>
+      <p>Association (tipo de relação), workflow de destino e filtros do registro.</p>
     </div>
   </div>
-
-  <div class="tblock">
-    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
-    <div class="ghl-mockup" data-mockup="a7">
-      <div class="ghl-toolbar">
-        <div class="ghl-workflow-name">/Comunidades/ Pontos · Curso Concluído</div>
-        <div class="ghl-toolbar-right">
-          <button class="ghl-btn play" data-play="a7">▶ Reproduzir montagem</button>
-          <button class="ghl-btn">Save</button>
-          <button class="ghl-btn primary">Publish</button>
-        </div>
-      </div>
-      <div class="ghl-canvas">
-        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
-
-        <div class="ghl-node" data-node-id="a7-1">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon trigger">T</div>
-            <div>
-              <div class="ghl-node-type">Trigger · Tag Added</div>
-              <div class="ghl-node-title">Tag · Curso Concluído</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Tag Operation</span><span class="pv">Added</span></div><div class="ghl-node-param"><span class="pk">Tag</span><span class="pv highlight">Curso Concluído</span></div></div>
-        </div>
-        <div class="ghl-connector"></div>
-        <div class="ghl-node" data-node-id="a7-2">
-          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
-          <span class="click-hint">clique para ver ↗</span>
-          <div class="ghl-node-header">
-            <div class="ghl-node-icon action-email">🏆</div>
-            <div>
-              <div class="ghl-node-type">Action · Comunidades</div>
-              <div class="ghl-node-title">Grant Leaderboard Points</div>
-            </div>
-          </div>
-          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Group</span><span class="pv highlight">Magnetic Flows Community</span></div><div class="ghl-node-param"><span class="pk">Points</span><span class="pv">500</span></div></div>
-        </div>
-        <div class="config-panel">
-          <div class="config-header">
-            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
-            <button class="config-close">×</button>
-          </div>
-          <div class="config-body"></div>
-        </div>
-      </div>
-      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
-    </div>
-  </div>
-
-
 
   <!-- ═════════════════════ HL CONFIG PANEL — ACTION A7 ═════════════════════ -->
   <div class="tblock">
@@ -3397,22 +2979,17 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Pontos não concedidos se o contato não for membro do <strong>Group</strong> selecionado. <span class='arrow'>→</span> combine com um filtro de membership ou uma etapa de Grant Group Access antes.</div>
+        <div class="hl-canvas-hint">Fan-out: <strong>cada registro associado</strong> entra individualmente no workflow alvo.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Grant Community Group Leaderboard Points</span>
+              <span>Add Associated Records to Workflow</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Curso concluído — +500 pontos" readonly></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Community <span class="req">*</span></div><div class="hl-dropdown has-value">Magnetic Flows</div></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Group <span class="req">*</span></div><div class="hl-dropdown has-value">Magnetic Flows Community</div>
-<div class="hl-conditional"><div class="hl-conditional-note">O leaderboard é por grupo — mesma comunidade pode ter grupos com rankings separados</div></div></div>
-<div class="hl-filter-row"><div class="hl-filter-label">Points <span class="req">*</span></div><input class="hl-input highlight" value="500" readonly>
-<div class="hl-conditional"><div class="hl-conditional-note">⚠ Não concede se o contato não for membro do grupo selecionado — o workflow segue, mas os pontos são perdidos</div></div></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Onboarding pra conta inteira" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Association <span class="req">*</span></div><div class="hl-dropdown has-value">Contato ↔ Company</div></div><div class="hl-filter-row"><div class="hl-filter-label">Target Workflow <span class="req">*</span></div><div class="hl-dropdown has-value">Onboarding Cliente</div></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -3421,18 +2998,18 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Soma pontos ao leaderboard do grupo. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000004080-gamification-leaderboard-triggers-and-actions-for-community-groups" target="_blank" rel="noopener">help.gohighlevel.com/...leaderboard-triggers-and-actions-for-community-groups</a></strong>
+        <strong>Registros relacionados entram no workflow alvo.</strong>
       </div>
     </div>
   </div>
 
-</div><div class="acao-block" id="a8" data-name="notificação push inteligente smart push notification">
+</div><div class="acao-block" id="a8" data-name="remover registros associados do workflow remove associated records from workflow">
   <div class="acao-head">
     <div class="acao-num">08</div>
     <div class="acao-titles">
       <div class="acao-cat">Ação</div>
-      <h2 class="acao-name">Notificação Push Inteligente</h2>
-      <div class="acao-en">Smart Push Notification</div>
+      <h2 class="acao-name">Remover Registros Associados do Workflow</h2>
+      <div class="acao-en">Remove Associated Records from Workflow</div>
       <div class="acao-tags"><span class="info-tag new">Novo</span></div>
     </div>
   </div>
@@ -3440,7 +3017,7 @@
   <div class="tblock">
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
-      <p>Envia push notification pro membro no app da comunidade (mobile/PWA) — título, mensagem e deep link pra um post, canal ou curso.</p>
+      <p>Tira os registros associados de um workflow — o par de saída da action anterior, pra encerrar automações relacionadas em cascata.</p>
     </div>
   </div>
 
@@ -3449,13 +3026,13 @@
     <div class="use-cases">
       <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Novo conteúdo no ar</div>
-  <div class="use-case-desc">Aula liberada → push pra turma inteira com link direto.</div>
+  <div class="use-case-title">Conta cancelou</div>
+  <div class="use-case-desc">Todos os contatos da empresa saem dos fluxos de upsell.</div>
 </div>
 <div class="use-case">
   <div class="use-case-label">Caso</div>
-  <div class="use-case-title">Reengajar sumido</div>
-  <div class="use-case-desc">Sem login há 7 dias → push com destaque da semana.</div>
+  <div class="use-case-title">Objeto encerrado</div>
+  <div class="use-case-desc">Apólice cancelada → lembretes relacionados param.</div>
 </div>
 
     </div>
@@ -3464,7 +3041,7 @@
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Title, Message e Link de destino (post/canal/curso). Requer app de comunidade dos membros com push habilitado.</p>
+      <p>Association e workflow do qual remover.</p>
     </div>
   </div>
 
@@ -3476,17 +3053,17 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Chega no <strong>app da comunidade</strong> — o deep link abre direto no conteúdo.</div>
+        <div class="hl-canvas-hint">Cascata de <strong>saída</strong>: remove os relacionados do fluxo indicado.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
             <div class="hl-panel-title">
               <span class="en">Action Configuration</span>
-              <span>Smart Push Notification</span>
+              <span>Remove Associated Records from Workflow</span>
             </div>
           </div>
           <div class="hl-panel-body">
-<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Push de aula nova" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Title <span class="req">*</span></div><input class="hl-input" value="Aula nova disponível 🎉" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Message <span class="req">*</span></div><div class="hl-textarea">O módulo 3 acabou de sair — bora?</div></div><div class="hl-filter-row"><div class="hl-filter-label">Link</div><div class="hl-dropdown has-value">Curso Avançado → Módulo 3</div></div>
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Parar fluxos da conta" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Association <span class="req">*</span></div><div class="hl-dropdown has-value">Contato ↔ Company</div></div><div class="hl-filter-row"><div class="hl-filter-label">Workflow <span class="req">*</span></div><div class="hl-dropdown has-value">Upsell Trimestral</div></div>
 </div>
           <div class="hl-panel-footer">
             <button class="hl-btn-cancel">Cancel</button>
@@ -3495,7 +3072,81 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Push com deep link pro app da comunidade.</strong>
+        <strong>Remove os relacionados do workflow indicado.</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a9" data-name="associar registros associate records">
+  <div class="acao-head">
+    <div class="acao-num">09</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Associar Registros</h2>
+      <div class="acao-en">Associate Records</div>
+      <div class="acao-tags"><span class="info-tag">Beta</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Cria a associação entre dois registros (contato ↔ empresa, contato ↔ custom object) dentro do workflow. Em <strong>beta</strong> — pode aparecer desativada na sua conta.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Vincular contato à empresa</div>
+  <div class="use-case-desc">Domínio do email bate com Company existente → associa.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Relacionar objetos</div>
+  <div class="use-case-desc">Registro de Imóvel criado por webhook → associa ao corretor.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Tipo de associação e os dois registros a vincular.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A9 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">⚠ <strong>Beta</strong> — sujeita a mudança; se aparecer desativada, o recurso ainda não liberou na conta.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Associate Records</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Vincular contato à Company" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Association Type <span class="req">*</span></div><div class="hl-dropdown has-value">Contato ↔ Company</div></div><div class="hl-filter-row"><div class="hl-filter-label">Record <span class="req">*</span></div><div class="hl-dropdown has-value">Company por domínio do email</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Cria o vínculo entre dois registros no fluxo.</strong>
       </div>
     </div>
   </div>
@@ -3504,21 +3155,21 @@
 </div>
 
 <nav class="cat-nav">
-  <a href="acoes-highlevel-cat12.html" class="cat-nav-link prev">
-    <span class="cat-nav-label">← Anterior · Categoria 12</span>
-    <span class="cat-nav-name">IVR</span>
+  <a href="acoes-highlevel-cat15.html" class="cat-nav-link prev">
+    <span class="cat-nav-label">← Anterior · Categoria 15</span>
+    <span class="cat-nav-name">Bots & Agentes</span>
   </a>
-  <a href="acoes-highlevel-cat14.html" class="cat-nav-link next">
-    <span class="cat-nav-label">Próxima · Categoria 14 →</span>
-    <span class="cat-nav-name">Certificados</span>
+  <a href="acoes-highlevel-cat17.html" class="cat-nav-link next">
+    <span class="cat-nav-label">Próxima · Categoria 17 →</span>
+    <span class="cat-nav-name">Bots & Agentes</span>
   </a>
 </nav>
 
 <div class="guide-footer">
 
   <div class="footer-top">
-    <h3>Categoria 13 completa.</h3>
-    <p>7 ações de Comunidades explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <h3>Categoria 16 completa.</h3>
+    <p>9 ações explicadas com impacto prático e painéis de configuração fiéis. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3552,7 +3203,7 @@
   </div>
 
   <div class="footer-legal">
-    Guia oficial Magnetic Funnels · Parte 2 · Categoria 13 de 14 · Atualizado em 2026
+    Guia oficial Magnetic Funnels · Parte 2 · Categoria 14 de 15 · Atualizado em julho de 2026
   </div>
 </div>
 
@@ -3624,22 +3275,7 @@
     });
   });
 
-  const configData = {
-    'a1-1': { kind: 'Trigger · Tag Added', title: 'Tag · Cliente Pago', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cliente pagante — liberar grupo VIP</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cliente Pago</span></div></div>` },
-    'a1-2': { kind: 'Action · Grant Group Access', title: 'Grant Group Access', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Liberar acesso ao grupo VIP de alunos</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Group *</div><div class="config-field highlight dropdown">Grupo VIP · Alunos Avançado</div></div><div class="config-section"><div class="config-label">User Account</div><div class="config-field dropdown">Existing or Auto-create</div></div><div class="config-section"><div class="config-label">Welcome Post</div><div class="config-field">🟢 ON — anuncia novo membro no canal de boas-vindas</div></div><div class="config-section"><div class="config-label">Send Email</div><div class="config-field">🟢 ON · com instruções de acesso</div></div>` },
-    'a2-1': { kind: 'Trigger · Tag Added', title: 'Tag · Cancelou', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Cancelou — remover do grupo</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cancelou Assinatura</span></div></div>` },
-    'a2-2': { kind: 'Action · Revoke Group Access', title: 'Revoke Group Access', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tirar do grupo VIP</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Group *</div><div class="config-field highlight dropdown">Grupo VIP · Alunos Avançado</div></div><div class="config-section"><div class="config-label">Effective *</div><div class="config-field highlight dropdown">Immediate</div></div><div class="config-section"><div class="config-label">Notify Member</div><div class="config-field">🟢 ON — email educado de saída + janela win-back 30d</div></div>` },
-    'a3-1': { kind: 'Trigger · Tag Added', title: 'Tag · Mentoria 1:1', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Mentoria contratada — abrir canal privado</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Mentoria 1:1 Ativa</span></div></div>` },
-    'a3-2': { kind: 'Action · Grant Private Channel Access', title: 'Grant Private Channel', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Criar canal privado contato↔mentor</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Channel Type *</div><div class="config-field highlight dropdown">Private 1:1 (com mentor atribuído)</div></div><div class="config-section"><div class="config-label">Channel Name</div><div class="config-field highlight">#mentoria-{{contact.first_name}}-{{user.first_name}}</div></div><div class="config-section"><div class="config-label">Members *</div><div class="config-field"><span class="opt-chip">{{contact.id}}</span> <span class="opt-chip">{{assigned_user.id}}</span> <span class="opt-chip">Admin</span></div></div><div class="config-section"><div class="config-label">Pinned Welcome Message</div><div class="config-field">🟢 ON</div></div>` },
-    'a4-1': { kind: 'Trigger · Custom Field', title: 'Mentoria Encerrada', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Mentoria acabou — arquivar canal</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Custom Field · mentoria_status</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Equals</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">Encerrada</div></div>` },
-    'a4-2': { kind: 'Action · Revoke Channel Access', title: 'Revoke Channel', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Arquivar canal de mentoria</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field highlight dropdown">Trigger Contact Private Channel</div></div><div class="config-section"><div class="config-label">Action on Channel *</div><div class="config-field highlight dropdown">Archive (preserva histórico)</div></div><div class="config-section"><div class="config-label">Export Transcript</div><div class="config-field">🟢 ON — PDF anexado à ficha do contato</div></div>` },
-    'a5-1': { kind: 'Trigger · Custom Value', title: 'Pontos > 1000', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Subir de nível na comunidade</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Community · Total Points</div></div><div class="config-section"><div class="config-label">Operator *</div><div class="config-field dropdown">Greater than or equal</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">1000</div></div>` },
-    'a5-2': { kind: 'Action · Assign Leaderboard Level', title: 'Assign Level (Prata)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Promover pra nível Prata</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Level *</div><div class="config-field highlight dropdown">Prata (Silver)</div></div><div class="config-section"><div class="config-label">Award Badge</div><div class="config-field">🟢 ON — badge visível no perfil</div></div><div class="config-section"><div class="config-label">Public Announcement</div><div class="config-field">🟢 ON — post automático em #conquistas</div></div><div class="config-section"><div class="config-label">Bonus Perks</div><div class="config-field">Acesso ao canal #prata-exclusivo</div></div>` },
-    'a6-1': { kind: 'Trigger · Tag Added', title: 'Tag · Concluiu Certificação', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Celebrar conquista publicamente</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Certificado Concluído</span></div></div>` },
-    'a6-2': { kind: 'Action · Post to Community', title: 'Post to Community', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Anunciar nova certificação em #conquistas</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field highlight dropdown">#conquistas</div></div><div class="config-section"><div class="config-label">Post Author</div><div class="config-field dropdown">Workflow Bot (oficial)</div></div><div class="config-section"><div class="config-label">Content *</div><div class="config-field highlight">🎓 {{contact.first_name}} acabou de concluir o {{custom_value.curso_concluido}}! Manda os parabéns 👏</div></div><div class="config-section"><div class="config-label">Mention Member</div><div class="config-field">🟢 ON — @{{contact.community_handle}}</div></div><div class="config-section"><div class="config-label">Allow Comments</div><div class="config-field">🟢 ON</div></div>` },
-    'a7-1': { kind: 'Trigger · Tag Added', title: 'Tag · Curso Concluído', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Curso concluído — pontuar no leaderboard</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Curso Concluído</span></div></div>` },
-    'a7-2': { kind: 'Action · Grant Community Group Leaderboard Points', title: 'Grant Leaderboard Points', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Curso concluído — +500 pontos</div></div><div class="config-section"><div class="config-label">Community *</div><div class="config-field dropdown">Magnetic Flows</div></div><div class="config-section"><div class="config-label">Group *</div><div class="config-field highlight dropdown">Magnetic Flows Community</div></div><div class="config-section"><div class="config-label">Points *</div><div class="config-field highlight">500</div></div>` }
-  };
+  const configData = {};
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {
     try { initMockup(m); }
