@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 206,
+  "total": 210,
   "items": [
     {
       "id": "g1",
@@ -2021,6 +2021,62 @@
       "description": "",
       "keywords": "split teste ab a/b experimento random percentage",
       "href": "acoes-highlevel-cat04.html#a17"
+    },
+    {
+      "id": "a18",
+      "type": "Ação",
+      "name": "Formatar Data/Hora",
+      "en": "Date/Time Formatter",
+      "category": "Ação",
+      "tags": [
+        "LC Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "formatar data/hora date/time formatter formatter interno",
+      "href": "acoes-highlevel-cat04.html#a18"
+    },
+    {
+      "id": "a19",
+      "type": "Ação",
+      "name": "Formatar Número",
+      "en": "Number Formatter",
+      "category": "Ação",
+      "tags": [
+        "LC Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "formatar número number formatter formatter interno",
+      "href": "acoes-highlevel-cat04.html#a19"
+    },
+    {
+      "id": "a20",
+      "type": "Ação",
+      "name": "Formatar Array",
+      "en": "Array Formatter",
+      "category": "Ação",
+      "tags": [
+        "Webhook",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "formatar array array formatter formatter interno",
+      "href": "acoes-highlevel-cat04.html#a20"
+    },
+    {
+      "id": "a21",
+      "type": "Ação",
+      "name": "Formatar Texto",
+      "en": "Text Formatter",
+      "category": "Ação",
+      "tags": [
+        "Texto",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "formatar texto text formatter formatter interno",
+      "href": "acoes-highlevel-cat04.html#a21"
     },
     {
       "id": "a1",

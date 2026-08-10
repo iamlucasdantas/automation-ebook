@@ -2456,6 +2456,10 @@
     <a href="#a15" class="side-link"><span class="side-num">15</span>Stop Workflow</a>
     <a href="#a16" class="side-link"><span class="side-num">16</span>Restart Workflow</a>
     <a href="#a17" class="side-link"><span class="side-num">17</span>Split (Teste A/B)</a>
+    <a href="#a18" class="side-link"><span class="side-num">18</span>Formatar Data/Hora</a>
+    <a href="#a19" class="side-link"><span class="side-num">19</span>Formatar Número</a>
+    <a href="#a20" class="side-link"><span class="side-num">20</span>Formatar Array</a>
+    <a href="#a21" class="side-link"><span class="side-num">21</span>Formatar Texto</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2474,7 +2478,7 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 04/14</span>
   <h1 class="hero-title">Ações de <em>Ferramentas Internas</em>.</h1>
-  <p class="hero-desc">As 17 ações de ferramentas internas controlam o fluxo da automação em si — IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B, chamadas pra outros workflows. São o "cérebro lógico" das automações complexas.</p>
+  <p class="hero-desc">As 21 ações de ferramentas internas controlam o fluxo da automação em si — IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B, chamadas pra outros workflows e os 4 Formatters (data, número, array, texto). São o "cérebro lógico" das automações complexas.</p>
   <div class="hero-stats">
     <div class="hero-stat">
       <span class="hero-stat-num">17</span>
@@ -5114,6 +5118,607 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a18" data-name="formatar data/hora date/time formatter formatter interno">
+  <div class="acao-head">
+    <div class="acao-num">18</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Formatar Data/Hora</h2>
+      <div class="acao-en">Date/Time Formatter</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Reformata datas e horários dentro do workflow — muda o formato de exibição, soma/subtrai tempo e compara duas datas. Resolve o clássico "webhook manda 2026-07-10 mas o email precisa mostrar 10/07/2026".</p>
+      <p>O resultado sai numa variável que você usa nas ações seguintes ({{}} merge field).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Formato BR em emails</div>
+  <div class="use-case-desc">Data ISO do webhook → DD/MM/YYYY antes de enviar pro cliente.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Data de vencimento</div>
+  <div class="use-case-desc">Data da compra + 30 dias → grava custom field de renovação.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Dias desde o cadastro</div>
+  <div class="use-case-desc">Compare Dates entre hoje e criação → segmenta por idade do lead.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Action Type (Format Date, Format Date/Time, Add/Subtract Time, Compare Dates), campo de entrada (merge field), From Format / To Format, e unidades pra somar/subtrair. Ação LC Premium — consome créditos de execução.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a18">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Interno/ Formatter · Data BR no Email</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a18">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a18-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Inbound Webhook</div>
+              <div class="ghl-node-title">Webhook · Pedido criado</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Payload</span><span class="pv">{"order_date": "2026-07-10T14:30:00Z"}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a18-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">📅</div>
+            <div>
+              <div class="ghl-node-type">Action · Date/Time Formatter</div>
+              <div class="ghl-node-title">Formatar pra DD/MM/YYYY</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Type</span><span class="pv highlight">Format Date/Time</span></div><div class="ghl-node-param"><span class="pk">To Format</span><span class="pv highlight">DD/MM/YYYY HH:mm</span></div><div class="ghl-node-param"><span class="pk">Output</span><span class="pv">{{datetime.formatted}}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a18-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">✉</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Email</div>
+              <div class="ghl-node-title">Email de confirmação</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Subject</span><span class="pv">Pedido confirmado — entrega em {{datetime.formatted}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A18 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Action Type</strong> muda os campos abaixo (lógica condicional). Formatos usam tokens tipo DD/MM/YYYY, HH:mm. Ação <strong>LC Premium</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Date/Time Formatter</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Data BR pro email" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Action Type <span class="req">*</span></div><div class="hl-dropdown has-value">Format Date/Time</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Format Date</span><span class="opt-chip">Format Date/Time</span><span class="opt-chip">Add/Subtract Time</span><span class="opt-chip">Compare Dates</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Date Field <span class="req">*</span></div><input class="hl-input" value="{{inboundWebhookRequest.order_date}}" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">From Format</div><div class="hl-dropdown has-value">Auto-detect (ISO 8601)</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">To Format <span class="req">*</span></div><div class="hl-dropdown has-value">DD/MM/YYYY HH:mm</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Reformata, soma/subtrai e compara datas. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/48001238249-guide-to-date-time-formatter-workflow-action" target="_blank" rel="noopener">help.gohighlevel.com/...date-time-formatter</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a19" data-name="formatar número number formatter formatter interno">
+  <div class="acao-head">
+    <div class="acao-num">19</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Formatar Número</h2>
+      <div class="acao-en">Number Formatter</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Transforma números dentro do workflow com 5 tipos: <strong>Text to Number</strong> (converte texto em número), <strong>Format Number</strong> (decimais/separadores), <strong>Format Phone Number</strong> (padroniza telefone), <strong>Format Currency</strong> (moeda) e <strong>Random Number</strong> (número aleatório).</p>
+      <p>Entrada vem de campo do contato, custom field, custom value ou payload de webhook. Saída vira variável pras próximas ações.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Valor em R$ no email</div>
+  <div class="use-case-desc">Webhook manda 1497.5 → Format Currency → "R$ 1.497,50" na mensagem.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Telefone padronizado</div>
+  <div class="use-case-desc">Lead importado com formato solto → Format Phone Number E.164 antes do SMS.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Cupom com número aleatório</div>
+  <div class="use-case-desc">Random Number → código de desconto único por contato.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Format Type (5 opções — cada uma muda os campos), Input Field (contato/custom field/custom value/webhook), e opções específicas do tipo (moeda, formato de telefone, range do random). Ação LC Premium.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a19">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Interno/ Formatter · Valor em R$</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a19">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a19-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Payment Received</div>
+              <div class="ghl-node-title">Pagamento recebido</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Source</span><span class="pv">Funnel</span></div><div class="ghl-node-param"><span class="pk">Amount</span><span class="pv highlight">{{payment.amount}} = 1497.5</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a19-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">💰</div>
+            <div>
+              <div class="ghl-node-type">Action · Number Formatter</div>
+              <div class="ghl-node-title">Format Currency BRL</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Format Type</span><span class="pv highlight">Format Currency</span></div><div class="ghl-node-param"><span class="pk">Currency</span><span class="pv highlight">BRL (R$)</span></div><div class="ghl-node-param"><span class="pk">Output</span><span class="pv">{{number.formatted}}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a19-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">✉</div>
+            <div>
+              <div class="ghl-node-type">Action · Send Email</div>
+              <div class="ghl-node-title">Recibo formatado</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Body</span><span class="pv">Recebemos {{number.formatted}} — obrigado!</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A19 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Format Type</strong> tem 5 opções e cada uma troca os campos abaixo. Currency usa código ISO (BRL, USD). Ação <strong>LC Premium</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Number Formatter</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Valor em R$ pro recibo" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Format Type <span class="req">*</span></div><div class="hl-dropdown has-value">Format Currency</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Text to Number</span><span class="opt-chip">Format Number</span><span class="opt-chip">Format Phone Number</span><span class="opt-chip">Format Currency</span><span class="opt-chip">Random Number</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Input Field <span class="req">*</span></div><input class="hl-input" value="{{payment.amount}}" readonly>
+<div class="hl-conditional"><div class="hl-conditional-note">Contact field, custom field, custom value ou webhook payload</div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Currency <span class="req">*</span></div><div class="hl-dropdown has-value">BRL — Real brasileiro</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Números, telefones, moeda e random no workflow. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000003355-workflow-action-number-formatter" target="_blank" rel="noopener">help.gohighlevel.com/...number-formatter</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a20" data-name="formatar array array formatter formatter interno">
+  <div class="acao-head">
+    <div class="acao-num">20</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Formatar Array</h2>
+      <div class="acao-en">Array Formatter</div>
+      <div class="acao-tags"><span class="info-tag">Webhook</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Opera em listas (arrays) — quase sempre vindas de payload de Inbound Webhook. Operações matemáticas: <strong>Sum</strong>, <strong>Min</strong>, <strong>Max</strong>, <strong>Average</strong> e <strong>Count</strong>.</p>
+      <p>Era LC Premium, hoje é <strong>grátis</strong>. Sem ela, um array no payload é inutilizável nas ações seguintes.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Total do carrinho</div>
+  <div class="use-case-desc">Webhook manda array de preços → Sum → total pra usar no email.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Quantos itens</div>
+  <div class="use-case-desc">Array de produtos → Count → "Seu pedido tem 4 itens".</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Maior ticket</div>
+  <div class="use-case-desc">Array de compras do cliente → Max → segmenta VIP por maior compra.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Operation (Sum/Min/Max/Average/Count) e Input Array (referência ao array do payload de webhook). Resultado sai numa variável.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a20">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Interno/ Formatter · Total do Carrinho</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a20">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a20-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Inbound Webhook</div>
+              <div class="ghl-node-title">Webhook · Carrinho</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Payload</span><span class="pv highlight">{"prices": [297, 197, 97]}</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a20-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">∑</div>
+            <div>
+              <div class="ghl-node-type">Action · Array Formatter</div>
+              <div class="ghl-node-title">Sum dos preços</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Operation</span><span class="pv highlight">Sum</span></div><div class="ghl-node-param"><span class="pk">Input Array</span><span class="pv">{{inboundWebhookRequest.prices}}</span></div><div class="ghl-node-param"><span class="pk">Output</span><span class="pv highlight">{{array.result}} = 591</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a20-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">✉</div>
+            <div>
+              <div class="ghl-node-type">Action · Send SMS</div>
+              <div class="ghl-node-title">SMS com total</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Message</span><span class="pv">Seu carrinho fechou em R$ {{array.result}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A20 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Operation</strong> com as 5 operações matemáticas. Input aponta pro array do payload. Hoje é grátis (era LC Premium).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Array Formatter</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Somar preços do carrinho" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Operation <span class="req">*</span></div><div class="hl-dropdown has-value">Sum</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Sum</span><span class="opt-chip">Min</span><span class="opt-chip">Max</span><span class="opt-chip">Average</span><span class="opt-chip">Count</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Input Array <span class="req">*</span></div><input class="hl-input" value="{{inboundWebhookRequest.prices}}" readonly>
+<div class="hl-conditional"><div class="hl-conditional-note">Normalmente um array do payload de Inbound Webhook</div></div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Sum, Min, Max, Average e Count em arrays de webhook. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000001466-workflow-action-array-formatter" target="_blank" rel="noopener">help.gohighlevel.com/...array-formatter</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a21" data-name="formatar texto text formatter formatter interno">
+  <div class="acao-head">
+    <div class="acao-num">21</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Formatar Texto</h2>
+      <div class="acao-en">Text Formatter</div>
+      <div class="acao-tags"><span class="info-tag">Texto</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Manipula strings dentro do workflow: <strong>Upper/Lower/Title Case</strong>, <strong>Capitalize</strong>, <strong>Trim</strong> (com limite de caracteres, skip do início e toggle de reticências), <strong>Trim Whitespaces</strong>, <strong>Replace Text</strong>, <strong>Find</strong> (posição de um padrão) e <strong>Split</strong> (separador + segmento First/Second/Last/Second Last).</p>
+      <p>O clássico: lead digita o nome em CAIXA ALTA no formulário e o email sai "Olá JOÃO" — Title Case resolve.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Nome bonito no email</div>
+  <div class="use-case-desc">JOÃO SILVA do form → Title Case → "João Silva" em toda comunicação.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Primeiro nome via Split</div>
+  <div class="use-case-desc">Full name → Split por espaço → First → só o primeiro nome no SMS.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Limpar UTM</div>
+  <div class="use-case-desc">Replace Text remove prefixo "utm_" antes de gravar em custom field.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Action Type (9 operações — cada uma troca os campos), Input Text (merge field) e opções específicas: separador + segmento no Split, buscar/substituir no Replace, comprimento + skip + reticências no Trim.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a21">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Interno/ Formatter · Nome em Title Case</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a21">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="a21-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Form Submitted</div>
+              <div class="ghl-node-title">Form · nome em caps</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Form Is</span><span class="pv">Captura de Lead</span></div><div class="ghl-node-param"><span class="pk">Nome digitado</span><span class="pv highlight">JOÃO SILVA</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a21-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">Tt</div>
+            <div>
+              <div class="ghl-node-type">Action · Text Formatter</div>
+              <div class="ghl-node-title">Title Case no nome</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Type</span><span class="pv highlight">Title Case</span></div><div class="ghl-node-param"><span class="pk">Input</span><span class="pv">{{contact.full_name}}</span></div><div class="ghl-node-param"><span class="pk">Output</span><span class="pv highlight">{{text.formatted}} = João Silva</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a21-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-email">✎</div>
+            <div>
+              <div class="ghl-node-type">Action · Update Contact Field</div>
+              <div class="ghl-node-title">Gravar nome formatado</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Field</span><span class="pv">Full Name</span></div><div class="ghl-node-param"><span class="pk">Value</span><span class="pv highlight">{{text.formatted}}</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A21 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Action Type</strong> com 9 operações de string — cada uma troca os campos abaixo (Split pede separador + segmento; Trim pede comprimento + skip + reticências).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Text Formatter</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Title Case no nome" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Action Type <span class="req">*</span></div><div class="hl-dropdown has-value">Title Case</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Opções</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Upper Case</span><span class="opt-chip">Lower Case</span><span class="opt-chip">Title Case</span><span class="opt-chip">Capitalize</span><span class="opt-chip">Trim</span><span class="opt-chip">Trim Whitespaces</span><span class="opt-chip">Replace Text</span><span class="opt-chip">Find</span><span class="opt-chip">Split</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Input Text <span class="req">*</span></div><input class="hl-input" value="{{contact.full_name}}" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Nove operações de string no workflow. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000003361-workflow-action-text-formatter" target="_blank" rel="noopener">help.gohighlevel.com/...text-formatter</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -5287,7 +5892,19 @@
     'a16-1': { kind: 'Trigger · Tag Added', title: 'Tag Added · Reativado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Recomeçar jornada do zero</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Reativado</span></div></div>` },
     'a16-2': { kind: 'Action · Restart Workflow', title: 'Restart Workflow', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Reiniciar este fluxo do passo 1</div></div><div class="config-section"><div class="config-label">Behavior</div><div class="config-field highlight">Contato volta pro início — histórico anterior preservado nos logs</div></div><div class="config-section"><div class="config-label">Allow Re-entry</div><div class="config-field">🟢 ON</div></div>` },
     'a17-1': { kind: 'Trigger · Tag Added', title: 'Tag Added (Follow-up Test)', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Teste A/B de follow-up</div></div><div class="config-section"><div class="config-label">Tag Operation *</div><div class="config-field dropdown">Added</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Follow-up Test</span></div></div>` },
-    'a17-2': { kind: 'Action · Split', title: 'Split A/B · Follow-up', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">A/B: email vs WhatsApp</div></div><div class="config-section"><div class="config-label">Split Type *</div><div class="config-field dropdown">Random Percentage</div></div><div class="config-section"><div class="config-label">Path A</div><div class="config-field highlight">50% → Follow-up por Email</div></div><div class="config-section"><div class="config-label">Path B</div><div class="config-field highlight">50% → Follow-up por WhatsApp</div></div><div class="config-section"><div class="config-label">Winner Metric</div><div class="config-field">Reply rate em 7 dias</div></div>` }
+    'a17-2': { kind: 'Action · Split', title: 'Split A/B · Follow-up', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">A/B: email vs WhatsApp</div></div><div class="config-section"><div class="config-label">Split Type *</div><div class="config-field dropdown">Random Percentage</div></div><div class="config-section"><div class="config-label">Path A</div><div class="config-field highlight">50% → Follow-up por Email</div></div><div class="config-section"><div class="config-label">Path B</div><div class="config-field highlight">50% → Follow-up por WhatsApp</div></div><div class="config-section"><div class="config-label">Winner Metric</div><div class="config-field">Reply rate em 7 dias</div></div>` },
+    'a18-1': { kind: 'Trigger · Inbound Webhook', title: 'Webhook · Pedido criado', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pedido criado no sistema externo</div></div><div class="config-section"><div class="config-label">Payload de exemplo</div><div class="config-field">{"order_date": "2026-07-10T14:30:00Z"}</div></div>` },
+    'a18-2': { kind: 'Action · Date/Time Formatter', title: 'Formatar pra DD/MM/YYYY', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Data BR pro email</div></div><div class="config-section"><div class="config-label">Action Type *</div><div class="config-field highlight dropdown">Format Date/Time</div></div><div class="config-section"><div class="config-label">Date Field *</div><div class="config-field">{{inboundWebhookRequest.order_date}}</div></div><div class="config-section"><div class="config-label">To Format *</div><div class="config-field highlight dropdown">DD/MM/YYYY HH:mm</div></div><div class="config-section"><div class="config-label">Nota</div><div class="config-field">⚡ Ação LC Premium — consome créditos de execução</div></div>` },
+    'a18-3': { kind: 'Action · Send Email', title: 'Email de confirmação', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Confirmação com data BR</div></div><div class="config-section"><div class="config-label">Subject *</div><div class="config-field">Pedido confirmado — entrega em {{datetime.formatted}}</div></div>` },
+    'a19-1': { kind: 'Trigger · Payment Received', title: 'Pagamento recebido', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Recibo formatado em R$</div></div><div class="config-section"><div class="config-label">Source</div><div class="config-field dropdown">Funnel</div></div>` },
+    'a19-2': { kind: 'Action · Number Formatter', title: 'Format Currency BRL', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Valor em R$ pro recibo</div></div><div class="config-section"><div class="config-label">Format Type *</div><div class="config-field highlight dropdown">Format Currency</div></div><div class="config-section"><div class="config-label">Input Field *</div><div class="config-field">{{payment.amount}} = 1497.5</div></div><div class="config-section"><div class="config-label">Currency *</div><div class="config-field highlight dropdown">BRL — R$ 1.497,50</div></div><div class="config-section"><div class="config-label">Tipos disponíveis</div><div class="config-field"><span class="opt-chip">Text to Number</span> <span class="opt-chip">Format Number</span> <span class="opt-chip">Format Phone Number</span> <span class="opt-chip">Format Currency</span> <span class="opt-chip">Random Number</span></div></div>` },
+    'a19-3': { kind: 'Action · Send Email', title: 'Recibo formatado', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Recibo com valor BR</div></div><div class="config-section"><div class="config-label">Body</div><div class="config-field">Recebemos {{number.formatted}} — obrigado!</div></div>` },
+    'a20-1': { kind: 'Trigger · Inbound Webhook', title: 'Webhook · Carrinho', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Carrinho externo fechado</div></div><div class="config-section"><div class="config-label">Payload de exemplo</div><div class="config-field highlight">{"prices": [297, 197, 97]}</div></div>` },
+    'a20-2': { kind: 'Action · Array Formatter', title: 'Sum dos preços', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Somar preços do carrinho</div></div><div class="config-section"><div class="config-label">Operation *</div><div class="config-field highlight dropdown">Sum</div></div><div class="config-section"><div class="config-label">Input Array *</div><div class="config-field">{{inboundWebhookRequest.prices}}</div></div><div class="config-section"><div class="config-label">Resultado</div><div class="config-field highlight">{{array.result}} = 591</div></div><div class="config-section"><div class="config-label">Operações disponíveis</div><div class="config-field"><span class="opt-chip">Sum</span> <span class="opt-chip">Min</span> <span class="opt-chip">Max</span> <span class="opt-chip">Average</span> <span class="opt-chip">Count</span></div></div>` },
+    'a20-3': { kind: 'Action · Send SMS', title: 'SMS com total', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">SMS total do carrinho</div></div><div class="config-section"><div class="config-label">Message</div><div class="config-field">Seu carrinho fechou em R$ {{array.result}}</div></div>` },
+    'a21-1': { kind: 'Trigger · Form Submitted', title: 'Form · nome em caps', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Normalizar nome do lead</div></div><div class="config-section"><div class="config-label">Form Is *</div><div class="config-field dropdown">Captura de Lead</div></div><div class="config-section"><div class="config-label">Exemplo digitado</div><div class="config-field highlight">JOÃO SILVA</div></div>` },
+    'a21-2': { kind: 'Action · Text Formatter', title: 'Title Case no nome', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Title Case no nome</div></div><div class="config-section"><div class="config-label">Action Type *</div><div class="config-field highlight dropdown">Title Case</div></div><div class="config-section"><div class="config-label">Input Text *</div><div class="config-field">{{contact.full_name}}</div></div><div class="config-section"><div class="config-label">Resultado</div><div class="config-field highlight">{{text.formatted}} = João Silva</div></div><div class="config-section"><div class="config-label">Operações disponíveis</div><div class="config-field"><span class="opt-chip">Upper Case</span> <span class="opt-chip">Lower Case</span> <span class="opt-chip">Title Case</span> <span class="opt-chip">Capitalize</span> <span class="opt-chip">Trim</span> <span class="opt-chip">Trim Whitespaces</span> <span class="opt-chip">Replace Text</span> <span class="opt-chip">Find</span> <span class="opt-chip">Split</span></div></div>` },
+    'a21-3': { kind: 'Action · Update Contact Field', title: 'Gravar nome formatado', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Atualizar Full Name</div></div><div class="config-section"><div class="config-label">Field *</div><div class="config-field dropdown">Full Name</div></div><div class="config-section"><div class="config-label">Value *</div><div class="config-field highlight">{{text.formatted}}</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

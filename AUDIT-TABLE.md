@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 52 | 3 | **86** |
-| Ações | 36 | 76 | 8 | **120** |
+| Ações | 37 | 79 | 8 | **124** |
 
 
 ## Gatilhos · 12 categorias
@@ -234,6 +234,10 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a15 | [Stop Workflow](acoes-highlevel-cat04.html#a15) | Stop Workflow | 3 | 1/6 | 🟡 | [ ] | |
 | a16 | [Restart Workflow](acoes-highlevel-cat04.html#a16) | Restart Workflow | 3 | 1/6 | 🟡 | [ ] | |
 | a17 | [Split (Teste A/B)](acoes-highlevel-cat04.html#a17) | Split | 3 | 1/6 | 🟡 | [ ] | |
+| a18 | [Formatar Data/Hora](acoes-highlevel-cat04.html#a18) | Date/Time Formatter | 2 | 3/6 | 🟡 | [ ] | |
+| a19 | [Formatar Número](acoes-highlevel-cat04.html#a19) | Number Formatter | 2 | 3/6 | 🟡 | [ ] | |
+| a20 | [Formatar Array](acoes-highlevel-cat04.html#a20) | Array Formatter | 2 | 3/6 | 🟡 | [ ] | |
+| a21 | [Formatar Texto](acoes-highlevel-cat04.html#a21) | Text Formatter | 3 | 3/6 | 🟢 | [ ] | |
 
 ### CAT05 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
