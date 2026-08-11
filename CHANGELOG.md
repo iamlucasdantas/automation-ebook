@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-11 — Automation
+**Checagem diária de novidades nativas — nenhuma novidade confirmada**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `ideas.gohighlevel.com/changelog` e `help.gohighlevel.com` em busca
+de gatilhos/ações nativos lançados desde a auditoria de 2026-08-10. Nenhum
+item novo confirmado — ver detalhes e o candidato pendente (Jira Workflow
+Actions and Triggers, provavelmente anterior a 08-10, precisa validação
+humana) em [AUDIT.md](./AUDIT.md#-rodada-2026-08-11--checagem-de-novidades-nativas).
+
+- `index.html`: campo "Última atualização" avançado de 10→11 de agosto de
+  2026. Totais (87/175/262/210) sem alteração — nada foi adicionado.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

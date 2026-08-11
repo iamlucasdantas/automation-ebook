@@ -179,6 +179,38 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-11 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+fechado na rodada anterior de 2026-08-10) contra `ideas.gohighlevel.com/changelog`
+e `help.gohighlevel.com` em busca de gatilhos/ações nativos lançados nas
+últimas 24h.
+
+### Resultado: nenhuma novidade confirmada
+Nenhum trigger ou action nativo novo com data de publicação posterior a
+2026-08-10 foi encontrado. Os únicos itens de changelog datados de
+2026-08-10 são "Ad Manager — Opportunity Score estendido pra Google/LinkedIn"
+e "Whitelabel Desktop App — Agency Banners & Build Notifications", nenhum
+dos dois é gatilho/ação de workflow.
+
+### 🔍 Candidato encontrado, NÃO aplicado (precisa validação humana)
+- **Jira — Workflow Actions and Triggers** (2 gatilhos + 11 ações: create/
+  update/link/comment/watch/attach files/log work/move to sprint).
+  [Changelog](https://ideas.gohighlevel.com/changelog/jira-workflow-actions-and-triggers) ·
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers)
+  Não foi possível confirmar a data exata de publicação — evidência
+  contextual sugere que faz parte de uma leva de conectores nativos de
+  ferramentas de projeto (Basecamp, ClickUp, Jira, Calendly) lançada em
+  junho/julho de 2026, ou seja, provavelmente **anterior** à auditoria de
+  2026-08-10 e não uma novidade desta rodada. Fica pra próxima rodada com
+  confirmação humana da data e dos campos antes de montar categoria nova
+  (o guia ainda não tem uma seção de integrações nativas de PM tools).
+- Browse AI / OpenRouter / Manus seguem como candidatos não confirmados
+  desde 2026-07-29 (ver rodada acima) — nada novo apareceu sobre eles.
+
+Guia segue em 87 gatilhos + 175 ações = 262 painéis. `index.html` atualizado
+apenas no campo "Última atualização" (10→11 de agosto de 2026).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
