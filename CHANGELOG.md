@@ -10,6 +10,24 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-12 — Content
+**Rodada de auditoria automática — filtro novo em 2 gatilhos, 2 candidatos pendentes**
+
+Checagem automática contra `help.gohighlevel.com` / `ideas.gohighlevel.com`
+desde a rodada de 2026-08-10 (ver `AUDIT.md` para detalhes completos).
+
+- **Gatilhos cat08 G1 (Carrinho Abandonado) e G3 (Pedido Concluído)** —
+  adicionado o filtro nativo **Quantidade Disponível (Available Quantity)**,
+  lançado pela HighLevel em 11/ago/2026 (aninhado em Global Products →
+  Price → Available Quantity). Não muda os totais — é filtro novo em
+  gatilhos já existentes.
+- **Candidatos NÃO aplicados** (precisam validação humana campo a campo):
+  integrações nativas **Cal.com** (6 triggers + 4 actions) e **Linear**
+  (12 triggers + 13 actions), achadas no changelog oficial. Mesmo
+  tratamento dado a Browse AI/OpenRouter/Manus na rodada anterior.
+- Totais seguem em **87 gatilhos + 175 ações = 262 entries**; `index.html`
+  com data de "Última atualização" recontada pra 12 de agosto de 2026.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

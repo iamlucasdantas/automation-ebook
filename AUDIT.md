@@ -179,6 +179,53 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-12 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 entries,
+estado da rodada 2026-08-10) contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` em busca de itens nativos lançados desde
+então. Acesso direto a esses domínios via WebFetch está bloqueado pelo
+proxy da sessão — auditoria feita via resultados agregados de WebSearch.
+
+### ✅ Fix aplicado nesta rodada
+- **Gatilhos cat08 G1 (Carrinho Abandonado) e G3 (Pedido Concluído)** —
+  HighLevel lançou em 11/ago/2026 o filtro **Quantidade Disponível
+  (Available Quantity)**, aninhado em Global Products → Price → Available
+  Quantity, pra segmentar por nível de estoque. Primeira versão só aceita
+  1 Price + 1 valor numérico, sem suporte a If/Else ainda. Adicionado como
+  novo `filter-item` nos dois gatilhos.
+  [Changelog oficial](https://ideas.gohighlevel.com/changelog) (post de
+  e-commerce, 11/ago/2026)
+
+Não muda os totais (87/175/262) — é um filtro novo em gatilhos que já
+existiam, não uma entry nova.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+Dois pacotes de integração nativa novos apareceram no changelog da
+HighLevel, ambos com múltiplos triggers/actions cada — mesmo padrão do
+Browse AI/OpenRouter/Manus da rodada 2026-07-29 (que também seguem
+pendentes): não dá pra montar mockup com fidelidade real sem confirmar
+campo a campo contra a UI, e o acesso direto às docs está bloqueado nesta
+sessão.
+
+- **Cal.com — Workflow Actions & Triggers** (Premium). ~6 triggers
+  (booking created/rescheduled/cancelled, meeting ended, out-of-office
+  updated, new recording) + 4 actions (Create/Cancel/Reschedule/Find
+  Booking). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers) ·
+  [Changelog](https://ideas.gohighlevel.com/changelog/calcom-workflow-actions-triggers)
+- **Linear — Workflow Actions & Triggers**. 12 triggers instantâneos +
+  13 actions cobrindo issues, projects, customers, customer needs,
+  initiatives e documents. [Changelog](https://ideas.gohighlevel.com/changelog/linear-workflow-actions-triggers) ·
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows)
+
+Também vistos no changelog mas não investigados a fundo nesta rodada
+(nomes batidos por busca, sem confirmação de escopo): Klaviyo, Jira,
+Apify, Housecall Pro. Podem já ser cobertura antiga ou candidatos novos —
+checar na próxima rodada.
+
+Browse AI / OpenRouter / Manus (rodada 2026-07-29) seguem sem validação
+humana — ninguém confirmou os campos ainda.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
