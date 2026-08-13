@@ -10,6 +10,30 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-13 — Automation
+**Checagem de novidades nativas (rotina automática)**
+
+Comparação do guia contra o changelog oficial do HighLevel desde a última
+rodada (2026-08-10). Dois filtros novos publicados em 2026-08-11 foram
+adicionados a gatilhos já existentes:
+
+- **Carrinho Abandonado** e **Pedido Concluído** (`guia-highlevel-cat08.html`
+  G1/G3) ganharam o filtro **Quantidade Disponível** (Available Quantity,
+  de Global Products → Price).
+- **Nova Avaliação Recebida** (`guia-highlevel-cat02.html` G16) teve o
+  filtro **Fonte da Avaliação** expandido: antes só Google/Facebook, agora
+  qualquer plataforma de review conectada (Trustpilot, Yelp, TripAdvisor
+  etc).
+
+Integrações de terceiros encontradas no mesmo período (Fathom, Jira,
+HouseCall Pro, Apify) foram descartadas — não são nativas do HighLevel.
+Um candidato (gatilho **Product Review Submitted**) ficou pendente de
+validação — ver [AUDIT.md](./AUDIT.md#-rodada-2026-08-13--checagem-de-novidades-nativas).
+
+Totais inalterados: **87 gatilhos + 175 ações = 262 entries** (só campos
+novos em entries existentes, `search-index.json` regenerado). `index.html`:
+"Última atualização" → 13 de agosto de 2026.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

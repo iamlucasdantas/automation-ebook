@@ -179,6 +179,55 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-13 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 entries,
+estado pós "Fechamento do gap" de 2026-08-10) contra o changelog oficial
+(`ideas.gohighlevel.com/changelog`) e `help.gohighlevel.com` em busca de
+novidades nativas desde então.
+
+### ✅ Aplicado nesta rodada — filtros novos em gatilhos já existentes
+Ambos publicados no changelog oficial em **2026-08-11**, confirmados via
+WebSearch (fetch direto a `ideas.gohighlevel.com`/`help.gohighlevel.com`
+bloqueado pelo proxy de rede desta sessão — achados vieram de snippets/
+resumo de busca, não da página completa):
+
+1. **Filtro "Quantidade Disponível" (Available Quantity)** — novo filtro
+   condicional em **Carrinho Abandonado** (`guia-highlevel-cat08.html` G1)
+   e **Pedido Concluído** (G3). Vem de Global Products → Price → Available
+   Quantity, com condição + valor numérico. Permite segmentar por estoque
+   (ex: não recuperar carrinho de item esgotado, priorizar urgência de
+   "últimas unidades").
+2. **Filtro "Fonte da Avaliação" (Review Source) expandido** — o gatilho
+   **Nova Avaliação Recebida** (`guia-highlevel-cat02.html` G16) antes só
+   filtrava Google/Facebook; a lista agora inclui qualquer plataforma de
+   review conectada à subconta (Trustpilot, Yelp, TripAdvisor, etc).
+   Atualizado texto do gatilho, filtro, painel de config (dropdown +
+   chips de opções) e legenda do mockup.
+
+Nenhum dos dois é uma entry nova (gatilho/ação novo) — são campos
+adicionados a triggers que já existiam no guia. **Totais não mudam:
+87 gatilhos + 175 ações = 262 entries** (`search-index.json` regenerado,
+confere).
+
+### 🚫 Descartado — não é nativo
+O changelog do período também trouxe integrações de terceiros com
+gatilhos/ações próprios: **Fathom**, **Jira**, **HouseCall Pro** (9
+triggers + 14 actions) e **Apify**. Por instrução explícita ("only native
+triggers and actions"), nenhuma entrou no guia — são apps do marketplace,
+não nativos do HighLevel, mesma régua já aplicada ao Slack em
+`auto-refine.py`.
+
+### 🔍 Candidato encontrado, NÃO aplicado (precisa validação humana)
+- **Product Review Submitted** (gatilho de ecommerce — dispara quando um
+  cliente avalia um produto na loja). Achado via busca por
+  `help.gohighlevel.com/support/solutions/articles/155000007386-workflow-trigger-product-review-submitted-for-e-commerce-stores-`,
+  mas o fetch direto da página foi bloqueado nesta sessão — não dá pra
+  confirmar filtros/campos exatos com segurança pra montar o mockup com
+  fidelidade real. Não achado em nenhuma rodada anterior deste AUDIT.md.
+  Fica pra próxima rodada com acesso à página completa ou confirmação
+  humana.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
