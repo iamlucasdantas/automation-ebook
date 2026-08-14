@@ -10,6 +10,31 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-14 — Content
+**Check for new native GHL triggers/actions since the 2026-08-10 round**
+
+Routine check against `ideas.gohighlevel.com/changelog` for native workflow
+items released since the 2026-08-10 mega-round (+45 actions). Short window
+(4 days) — no brand-new native trigger or action shipped, only 2 confirmed
+enhancements to items already in the guide:
+
+- **Gatilho — Nova Avaliação Recebida (New Review Received)** ·
+  `guia-highlevel-cat02.html` G16. Source filter expanded (13/ago/2026) from
+  Google/Facebook only to **all connected review platforms** (Trustpilot,
+  Yelp, TripAdvisor, etc). Description, mockup config panel and caption
+  updated. [Official changelog](https://ideas.gohighlevel.com/changelog/new-review-received-trigger-now-supports-all-integrated-review-platforms)
+- **Gatilhos — Carrinho Abandonado (Abandoned Cart) e Pedido Concluído
+  (Order Fulfilled)** · `guia-highlevel-cat08.html` G1/G3. New **Available
+  Quantity** filter (11/ago/2026) — filters by Global Product stock (single
+  Price + numeric condition), also usable as a custom value in workflow
+  actions. Added as a new filter item on both triggers.
+
+Totals unchanged — these are enhancements to existing entries, not new
+ones: **87 gatilhos + 175 ações = 262 entries** (`search-index.json` and
+`AUDIT-TABLE.md` regenerated to keep search `data-name` in sync);
+`index.html` "Última atualização" bumped to 14 de agosto de 2026. Full
+notes in [AUDIT.md](./AUDIT.md#-rodada-2026-08-14--checagem-de-novidades-nativas).
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

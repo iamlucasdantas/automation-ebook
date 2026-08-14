@@ -179,6 +179,50 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-14 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `ideas.gohighlevel.com/changelog` em
+busca de gatilhos/ações nativos lançados desde a rodada de 2026-08-10 (que já
+tinha fechado o gap de 45 ações). Janela curta (4 dias) — nenhum gatilho ou
+ação **novo** foi lançado nesse período, só 2 melhorias em itens que já
+tínhamos:
+
+### ✅ Aplicados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Nova Avaliação Recebida (New Review Received)** ·
+   `guia-highlevel-cat02.html` G16. O filtro "Fonte da Avaliação" (Source)
+   estava documentado como Google/Facebook apenas — desde 13/ago/2026 a
+   HighLevel expandiu pra **todas as plataformas de review conectadas à
+   conta** (Trustpilot, Yelp, TripAdvisor, etc). Descrição, mockup
+   (config panel + opções) e caption atualizados; workflows existentes com
+   filtro Google/Facebook continuam funcionando normalmente.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/new-review-received-trigger-now-supports-all-integrated-review-platforms)
+2. **Gatilhos — Carrinho Abandonado (Abandoned Cart) e Pedido Concluído
+   (Order Fulfilled)** · `guia-highlevel-cat08.html` G1 e G3. Novo filtro
+   **Quantidade Disponível (Available Quantity)** lançado em 11/ago/2026 —
+   filtra por estoque de um Global Product (produto + Price único +
+   condição numérica), também disponível como custom value em ações do
+   workflow. Primeira versão só suporta 1 Price/quantidade e não funciona
+   dentro de If/Else. Adicionado como novo `filter-item` em ambos os
+   gatilhos.
+
+Nenhuma mudança nos totais — são melhorias em itens já existentes, não
+entradas novas: **87 gatilhos + 175 ações = 262 entries** (inalterado;
+`search-index.json` e `AUDIT-TABLE.md` regenerados pra manter os `data-name`
+de busca em sincronia; `index.html` com data de atualização recontada pra
+14/ago/2026).
+
+### 🔍 Candidatos ainda pendentes (recap, sem novidade nesta rodada)
+Continuam aguardando validação humana de campos exatos antes de virar
+mockup — nenhum progresso desde a rodada de 2026-08-11:
+- **Browse AI** (1 gatilho + 4 ações, requer API key própria)
+- **OpenRouter** (achado só pelo changelog, não detalhado)
+- **Manus** (ações/gatilhos)
+- **Jira — Workflow Actions and Triggers** (2 gatilhos + 11 ações:
+  create/update/link/comment/watch/attach files/log work/move to sprint).
+  Provavelmente parte da leva de conectores de PM tools (Basecamp, ClickUp,
+  Jira, Calendly) lançada em jun/jul de 2026 — precisa de confirmação
+  humana da data e dos campos exatos antes de virar categoria nova. [Changelog](https://ideas.gohighlevel.com/changelog/jira-workflow-actions-and-triggers) · [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers)
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
