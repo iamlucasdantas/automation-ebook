@@ -179,6 +179,51 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-15 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` em busca de gatilhos/ações nativos
+lançados desde a rodada de 2026-08-10 (fechamento do gap de Actions).
+
+### ✅ Aplicado nesta rodada (fonte oficial confirmada)
+1. **Filtro — Quantidade Disponível (Available Quantity)** adicionado aos
+   gatilhos **Carrinho Abandonado** (`guia-highlevel-cat08.html` G1) e
+   **Pedido Concluído** (G3). Filtro aninhado Global Products → Price →
+   Available Quantity, lançado em 11/ago/2026. Não muda a contagem de
+   entries (é um filtro novo num gatilho já existente, não um gatilho
+   novo). [Changelog oficial](https://ideas.gohighlevel.com/changelog)
+
+### 🔍 Candidato encontrado, NÃO aplicado (precisa validação humana)
+- **Cal.com — Workflow Actions & Triggers**: integração nativa com 6
+  gatilhos (Booking Created, Rescheduled, Cancelled, Meeting Ended,
+  Out-of-Office Updated, New Recording) + 4 ações (Create Booking, Cancel
+  Booking, Reschedule Booking, Find Booking). Requer conexão via API key
+  ou OAuth do Cal.com. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers) ·
+  [Changelog](https://ideas.gohighlevel.com/changelog/calcom-workflow-actions-triggers)
+  Igual Browse AI/OpenRouter/Manus na rodada anterior — 10 sub-itens ao
+  todo, precisa confirmação humana dos campos exatos de cada painel antes
+  de montar os mockups com fidelidade real. Se confirmado, provavelmente
+  vira uma categoria nova (ex.: `guia-highlevel-cat14.html` pros 6
+  gatilhos + nova seção de ações).
+
+### ✅ Conferido e já coberto (sem ação necessária)
+- **Review Left / New Review Received** — changelog anunciou que o
+  gatilho agora aceita todas as plataformas de review conectadas (antes
+  só Google/Facebook). Já temos o gatilho "Avaliação Recebida" no guia
+  (`guia-highlevel-cat02.html`); é enhancement de filtro, não gatilho novo.
+- **Community Group Member Leaderboard Level Changed** — já coberto como
+  G5 em `guia-highlevel-cat11.html`.
+- **New Affiliate Sales** — já coberto como G3 em
+  `guia-highlevel-cat05.html`.
+- **Wait Action: Major Revamp** — revamp de UI da ação Wait já existente
+  (`acoes-highlevel-cat04.html`), sem novo campo documentado que exija
+  mudança no painel.
+
+Totais inalterados nesta rodada: **87 gatilhos + 175 ações = 262
+entries** (nenhum gatilho/ação novo confirmado o suficiente pra entrar
+sem validação humana). `index.html` teve a data de "Última atualização"
+atualizada para refletir a checagem.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

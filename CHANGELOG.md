@@ -10,6 +10,29 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-15 — Automation
+**Checagem periódica de novidades nativas (nenhum gatilho/ação novo aplicado)**
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` em busca de itens nativos lançados desde
+a rodada de 2026-08-10.
+
+- **Aplicado**: filtro **Quantidade Disponível (Available Quantity)**
+  adicionado aos gatilhos Carrinho Abandonado (G1) e Pedido Concluído (G3)
+  em `guia-highlevel-cat08.html` — filtro aninhado Global Products → Price
+  → Available Quantity, lançado oficialmente em 11/ago/2026. Não altera a
+  contagem de entries.
+- **Candidato pendente de validação humana**: **Cal.com — Workflow
+  Actions & Triggers**, integração nativa com 6 gatilhos + 4 ações.
+  Documentado em `AUDIT.md` § Rodada 2026-08-15 — precisa confirmação de
+  campos exatos antes de virar mockup.
+- Conferido e já coberto: Review Left (agora multi-plataforma), Community
+  Leaderboard Level Changed, New Affiliate Sales, Wait Action revamp —
+  nenhum exige mudança.
+
+Totais mantidos: **87 gatilhos + 175 ações = 262 entries**. `index.html`
+com data de "Última atualização" atualizada para 15 de agosto de 2026.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 
