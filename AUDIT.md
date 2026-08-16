@@ -179,6 +179,44 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-16 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` em busca de gatilhos/ações nativos
+lançados desde a rodada de conteúdo de 2026-08-10 (que fechou o gap
+contra o painel real de Actions, 87 gatilhos + 175 ações).
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · cat02 G23.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas)
+2. **Gatilho — Upload no Client Portal (Client Portal File Uploaded)** ·
+   cat07 G11. Já era candidato pendente desde a rodada 2026-07-10 —
+   agora aplicado com doc oficial dedicada. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+
+### 🔧 Drift de plataforma corrigido (não é item novo)
+- **New Review Received (cat02 G16)**: filtro Source deixou de ser fixo
+  Google/Facebook — HighLevel expandiu em 11/08/2026 pra listar toda
+  plataforma de review integrada na subconta.
+
+Totais atualizados: **89 gatilhos + 175 ações = 264 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados).
+
+### ⛔ Encontrados e descartados — não são nativos
+Varredura no changelog encontrou vários lançamentos recentes, mas a
+maioria são **integrações de marketplace de terceiros** (exigem instalar
+um app e não fazem parte do motor nativo de triggers/actions do
+HighLevel) — por instrução explícita desta rotina ("only native triggers
+and actions"), nenhum foi aplicado:
+- Jira, Linear, Cal.com, Klaviyo, Housecall Pro, Fathom, Manus — workflow
+  actions/triggers via marketplace app.
+- HubSpot Importer (13/08/2026) — ferramenta de migração de dados, não é
+  trigger/action de workflow.
+
+### 🔍 Candidatos ainda pendentes de round anterior (recap, sem mudança)
+- Browse AI, OpenRouter — mesma situação: marketplace, não nativos.
+  Mantidos fora do guia por esse motivo (reclassificados; antes estavam
+  como "precisa validação humana", agora como "fora de escopo").
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

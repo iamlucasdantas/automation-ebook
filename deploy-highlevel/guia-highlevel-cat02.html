@@ -2432,6 +2432,7 @@
   <nav class="side-nav">
     <a href="#g20" class="side-link"><span class="side-num">20</span>Email Recebido</a>
     <a href="#g21" class="side-link"><span class="side-num">21</span>Usuário Respondeu</a>
+    <a href="#g23" class="side-link"><span class="side-num">23</span>SLA de Conversa</a>
   </nav>
 
   <div class="side-section-label">AI Studio</div>
@@ -2468,7 +2469,7 @@
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">22</span>
+      <span class="hero-stat-num">23</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -6212,8 +6213,8 @@
           <div class="filter-type">condicional</div>
         </div>
         <div class="filter-body">
-          <div class="filter-desc">Google ou Facebook.</div>
-          <div class="filter-impact"><strong>Impacto:</strong> Google geralmente pesa mais em SEO local; Facebook é social. Tratamentos podem ser diferentes.</div>
+          <div class="filter-desc">Atualizado em 11/08/2026: a lista deixou de ser fixa (Google/Facebook) e agora traz <strong>toda plataforma de review integrada na subconta</strong> — qualquer fonte conectada aparece como opção.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> antes, reviews de plataformas fora Google/Facebook não disparavam workflow nenhum. Agora dá pra automatizar resposta pra qualquer fonte conectada. Workflows já publicados com Google/Facebook continuam funcionando sem alteração.</div>
         </div>
       </div>
       <div class="filter-item">
@@ -6344,9 +6345,9 @@
         <div class="hl-filter-label">Source</div>
         <div class="hl-dropdown has-value">Google</div>
         <div class="hl-conditional">
-          <div class="hl-conditional-note">Opções</div>
+          <div class="hl-conditional-note">Opções (a partir de 11/08/2026)</div>
           <div class="field-spec-val" style="margin-top:4px;">
-            <span class="opt-chip">Google</span><span class="opt-chip">Facebook</span>
+            <span class="opt-chip">Google</span><span class="opt-chip">Facebook</span><span class="opt-chip">+ toda plataforma de review integrada</span>
           </div>
         </div>
       </div>
@@ -6373,7 +6374,7 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Dispara quando uma review do Google ou Facebook é recebida — workflow CONTACTLESS</strong>
+        <strong>Dispara quando uma review chega de qualquer plataforma integrada (Google, Facebook e demais fontes conectadas desde 11/08/2026) — workflow CONTACTLESS</strong>
       </div>
     </div>
   </div>
@@ -7606,6 +7607,217 @@
   </div>
 
 </div><!-- ═══════════════════════════════════════════════════════════════════════
+     GATILHO 23 — SLA DE CONVERSA (Conversation SLA)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g23" data-name="sla conversa conversation overdue due soon dismissed atendimento tempo resposta">
+  <div class="trigger-head">
+    <div class="trigger-num">23</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Comunicação</div>
+      <h2 class="trigger-name">SLA de Conversa</h2>
+      <div class="trigger-en">Conversation SLA</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara nos três eventos do sistema de <strong>SLA de Conversas</strong> (Settings → Conversations → SLA): <strong>Due Soon</strong> (o prazo de resposta configurado está prestes a estourar), <strong>Overdue</strong> (o prazo já estourou sem resposta do time) ou <strong>SLA Dismissed</strong> (um usuário dispensou manualmente o SLA daquela conversa, sem responder).</p>
+      <p>Substitui a prática manual de gestor ficando de olho no painel de Conversas — em vez disso, o próprio SLA aciona notificação, reatribuição ou escalonamento automaticamente. Tem um toggle <strong>Avoid Repeated Triggers</strong> que, quando ligado, limita o workflow a rodar 1x por conversa a cada 24h, mesmo que várias mensagens do mesmo contato gerem múltiplos eventos de SLA.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Overdue → escalar pro gestor</div>
+        <div class="use-case-desc">Conversa passou do prazo sem resposta → notificação interna pro gestor + tarefa de escalonamento com prioridade alta.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Due Soon → lembrete antes de estourar</div>
+        <div class="use-case-desc">Prazo perto de vencer → SMS interno pro atendente responsável, dando chance de responder antes do SLA virar Overdue.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid">
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Evento de SLA</div>
+          <div class="filter-en">SLA Event</div>
+          <div class="filter-type required">principal</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Due Soon, Overdue ou SLA Dismissed.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> o coração do gatilho — normalmente vale a pena montar um workflow por evento, já que a ação certa (lembrete vs. escalonamento) muda bastante entre eles.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Canal da Mensagem</div>
+          <div class="filter-en">Message Channel</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Restringe o SLA a um canal específico (SMS, WhatsApp, Email, Instagram DM, etc.).</div>
+          <div class="filter-impact"><strong>Impacto:</strong> útil quando canais diferentes têm SLA operacional diferente — WhatsApp costuma exigir resposta mais rápida que email.</div>
+        </div>
+      </div>
+      <div class="filter-item">
+        <div class="filter-header">
+          <div class="filter-name">Usuário Responsável</div>
+          <div class="filter-en">Owner / Assigned User</div>
+          <div class="filter-type">condicional</div>
+        </div>
+        <div class="filter-body">
+          <div class="filter-desc">Filtra pelo usuário dono da conversa, além de Tags e Custom Fields do contato.</div>
+          <div class="filter-impact"><strong>Impacto:</strong> permite workflows de escalonamento diferentes por time ou fila de atendimento.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g23">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Comunicação/ 23 — SLA Overdue → Escalonar</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g23">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g23-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Conversation SLA</div>
+              <div class="ghl-node-title">SLA de Conversa</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">SLA Event</span><span class="pv highlight">Overdue</span></div><div class="ghl-node-param"><span class="pk">Message Channel</span><span class="pv">WhatsApp</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g23-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Internal Notification</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Alertar gestor — SLA estourado</span></div><div class="ghl-node-param"><span class="pk">User</span><span class="pv">Gestor de Atendimento</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g23-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-pipeline">✓</div>
+            <div>
+              <div class="ghl-node-type">Action · Add Task</div>
+              <div class="ghl-node-title">Add Task</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Tarefa de escalonamento</span></div><div class="ghl-node-param"><span class="pk">Assigned To</span><span class="pv">Owner da conversa</span></div><div class="ghl-node-param"><span class="pk">Priority</span><span class="pv">High</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G23 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Baseado no prazo de resposta configurado em <strong>Settings → Conversations → SLA</strong>. <span class='arrow'>→</span> toggle <strong>Avoid Repeated Triggers</strong> limita a 1 disparo por conversa a cada 24h.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Conversation SLA</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="SLA de Conversa" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">SLA Event <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Overdue</div>
+        <div class="hl-conditional">
+          <div class="hl-conditional-note">Opções</div>
+          <div class="field-spec-val" style="margin-top:4px;">
+            <span class="opt-chip">Due Soon</span><span class="opt-chip">Overdue</span><span class="opt-chip">SLA Dismissed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Message Channel</div>
+        <div class="hl-dropdown has-value">WhatsApp</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Tags</div>
+        <div class="hl-tag-picker"><span class="opt-chip">Cliente VIP</span></div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Owner / Assigned User</div>
+        <div class="hl-dropdown has-value">Qualquer usuário</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Avoid Repeated Triggers</div>
+        <div class="hl-toggle on"></div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara em Due Soon / Overdue / SLA Dismissed do sistema de SLA de Conversas. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas" target="_blank" rel="noopener">help.gohighlevel.com/...conversations-how-to-setup-track-slas</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
 <!-- NAV PREV/NEXT entre categorias -->
@@ -7741,7 +7953,10 @@
     'g21-3': { kind: 'Action · Internal Notification', title: 'Notificar gestor', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aviso · SDR respondeu lead</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Gestor Comercial</div></div>` },
     'g22-1': { kind: 'Trigger · AI Studio Form Submitted', title: 'Lead do site AI Studio', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Lead do site AI Studio</div></div><div class="config-section"><div class="config-label">Domain *</div><div class="config-field highlight dropdown">magneticflows-site.aistudio.app</div></div><div class="config-section"><div class="config-label">External Form *</div><div class="config-field highlight dropdown">Form Orçamento</div></div>` },
     'g22-2': { kind: 'Action · Find or Create Contact', title: 'Find or Create Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Match por email do form</div></div><div class="config-section"><div class="config-label">Match Value *</div><div class="config-field highlight">{{form.email}}</div></div>` },
-    'g22-3': { kind: 'Action · Internal Notification', title: 'Notificar comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Novo lead do site AI Studio</div></div><div class="config-section"><div class="config-label">Type *</div><div class="config-field">In-App + Email</div></div>` }
+    'g22-3': { kind: 'Action · Internal Notification', title: 'Notificar comercial', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Novo lead do site AI Studio</div></div><div class="config-section"><div class="config-label">Type *</div><div class="config-field">In-App + Email</div></div>` },
+    'g23-1': { kind: 'Trigger · Conversation SLA', title: 'SLA de Conversa', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">SLA de Conversa</div></div><div class="config-section"><div class="config-label">SLA Event *</div><div class="config-field highlight dropdown">Overdue</div></div><div class="config-section"><div class="config-label">Message Channel</div><div class="config-field dropdown">WhatsApp</div></div><div class="config-section"><div class="config-label">Avoid Repeated Triggers</div><div class="config-field">🟢 ON — 1x por conversa a cada 24h</div></div>` },
+    'g23-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Alertar gestor — SLA estourado</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Gestor de Atendimento</div></div>` },
+    'g23-3': { kind: 'Action · Add Task', title: 'Add Task', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tarefa de escalonamento</div></div><div class="config-section"><div class="config-label">Assigned To *</div><div class="config-field dropdown">Owner da conversa</div></div><div class="config-section"><div class="config-label">Priority</div><div class="config-field dropdown">High</div></div>` }
   };
 
   // ========== INICIALIZAÇÃO DE CADA MOCKUP ==========

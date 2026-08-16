@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -484,6 +484,20 @@
       "href": "guia-highlevel-cat02.html#g22"
     },
     {
+      "id": "g23",
+      "type": "Gatilho",
+      "name": "SLA de Conversa",
+      "en": "Conversation SLA",
+      "category": "Comunicação",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara nos três eventos do sistema de SLA de Conversas (Settings → Conversations → SLA): Due Soon (o prazo de resposta configurado está prestes a estourar), Overdue (o prazo já estourou sem resposta do time) ou SLA Dismissed (um usuário dispensou manualmente o SLA daquela conversa, sem responder).",
+      "keywords": "sla conversa conversation overdue due soon dismissed atendimento tempo resposta",
+      "href": "guia-highlevel-cat02.html#g23"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Status de Compromisso",
@@ -944,6 +958,20 @@
       "description": "Dispara quando um cupom atinge data de expiração e se torna inativo. Avaliação é feita pelo sistema quando o momento chega.",
       "keywords": "cupom expirado coupon code expired",
       "href": "guia-highlevel-cat07.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Upload no Client Portal",
+      "en": "Client Portal File Uploaded",
+      "category": "Contratos e Assinaturas",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um contato sobe um documento pela experiência de Shared Documents do Client Portal — a área onde o cliente final acessa faturas, contratos e arquivos compartilhados pela agência. O upload aceita múltiplos tipos de documento (não aceita vídeo) e o arquivo fica salvo em Contacts → Documents → Received → Client Portal.",
+      "keywords": "client portal upload arquivo documento contrato cliente",
+      "href": "guia-highlevel-cat07.html#g11"
     },
     {
       "id": "g1",

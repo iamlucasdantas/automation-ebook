@@ -10,6 +10,50 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-16 — Content
+**Rotina automática: checagem de novidades nativas — +2 gatilhos, filtro atualizado**
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` em busca de gatilhos/ações nativos
+lançados desde a rodada de 2026-08-10. Só foram aplicados itens **nativos**
+da plataforma HighLevel — integrações de marketplace de terceiros
+encontradas na varredura (Cal.com, Linear, Jira, Klaviyo, Housecall Pro,
+Fathom, Manus) foram deliberadamente descartadas por não serem gatilhos/
+ações nativos.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · `guia-highlevel-cat02.html`
+   G23. Dispara nos 3 eventos do sistema de SLA de Conversas: Due Soon,
+   Overdue, SLA Dismissed. Filtros: SLA Event, Message Channel, Tags,
+   Owner/Assigned User; toggle Avoid Repeated Triggers (1x/24h por
+   conversa). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas)
+2. **Gatilho — Upload no Client Portal (Client Portal File Uploaded)** ·
+   `guia-highlevel-cat07.html` G11. Dispara quando um contato sobe um
+   documento pelo Client Portal (Shared Documents) — sem filtros
+   dedicados no trigger. Candidato já apontado na rodada 2026-07-10,
+   agora confirmado com doc oficial dedicada. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+
+### 🔧 Filtro atualizado (drift da plataforma, não é gatilho novo)
+- **Nova Avaliação Recebida (New Review Received)** · `guia-highlevel-cat02.html`
+  G16 — o filtro **Source** deixou de ser fixo (Google/Facebook) em
+  11/08/2026: agora lista toda plataforma de review integrada na
+  subconta. Workflows publicados com Google/Facebook continuam
+  funcionando sem alteração. [Changelog oficial](https://ideas.gohighlevel.com/changelog)
+
+Totais atualizados: **89 gatilhos + 175 ações = 264 entries** · 212
+mockups interativos (`search-index.json`, `AUDIT-TABLE.md` e
+`index.html` regenerados/atualizados).
+
+### 🔍 Candidatos encontrados, NÃO aplicados (marketplace de terceiros — fora do escopo "nativo")
+- **Jira, Linear, Cal.com, Klaviyo, Housecall Pro, Fathom, Manus** —
+  triggers/actions via app de marketplace instalado, não nativos do
+  motor de workflows do HighLevel. Fora do escopo desta rotina por
+  instrução explícita ("only native triggers and actions").
+- **Enhancement no Remove Workflows action** (agora permite remover de
+  múltiplos workflows específicos de uma vez) — melhoria de UI numa
+  ação já coberta, não é ação nova; não gerou entrada própria.
+
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 
