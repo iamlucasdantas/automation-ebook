@@ -10,6 +10,31 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-17 — Automation
+**Rotina automática: checagem de novidades nativas — nada novo, backlog de merge encontrado**
+
+Rotina automática comparou o guia (89 gatilhos + 175 ações = 264 entries,
+estado deixado pela rodada 2026-08-16) contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` via `WebSearch` em busca de itens nativos
+lançados desde então.
+
+- **Nenhum gatilho/ação nativo novo encontrado.** Achados da varredura
+  (Apify, Monday.com) são integrações de marketplace de terceiros — mesma
+  categoria já excluída nas rodadas anteriores (Jira, Linear, Klaviyo,
+  Manus, Browse AI, OpenRouter) por instrução explícita ("only native
+  triggers and actions"). Ver `AUDIT.md` pra detalhes.
+- Totais inalterados: **89 gatilhos + 175 ações = 264 entries**.
+  `index.html` teve só a data de "Última atualização" avançada pra
+  17 de agosto de 2026, registrando que a checagem rodou.
+- **Achado operacional relevante:** o `main` do repositório está travado
+  no commit de 2026-08-10 — nenhuma rodada diária de 08-11 a 08-16 foi
+  mergeada (trabalho real ficou em branches órfãs, ex. `fam6j4` pro
+  08-16, e um PR #14 aberto desde 08-14 nunca mergeado). Esta rodada
+  partiu do conteúdo mais avançado (`fam6j4`) em vez do `main`
+  desatualizado, pra não redigitar o mesmo trabalho. Ver `AUDIT.md` §
+  "Nota operacional" e aviso enviado ao usuário — decisão de merge é
+  humana.
+
 ## 2026-08-16 — Content
 **Rotina automática: checagem de novidades nativas — +2 gatilhos, filtro atualizado**
 

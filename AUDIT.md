@@ -217,6 +217,44 @@ and actions"), nenhum foi aplicado:
   Mantidos fora do guia por esse motivo (reclassificados; antes estavam
   como "precisa validação humana", agora como "fora de escopo").
 
+## 🆕 Rodada 2026-08-17 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (89 gatilhos + 175 ações = 264 painéis,
+estado deixado pela rodada 2026-08-16) contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` via `WebSearch` em busca de itens nativos
+lançados desde então (`WebFetch` direto nesses dois domínios segue
+bloqueado pelo proxy de egress deste ambiente).
+
+### ⚠️ Nota operacional — branches não mergeadas
+Ao investigar o estado real do guia, esta rodada descobriu que o `main` do
+repositório está travado no commit de 2026-08-10 (87/175/262) — **nenhuma**
+das rodadas diárias 08-11 a 08-16 chegou a ser mergeada. O trabalho de
+08-16 (2 gatilhos novos + fix do G16) existia só na branch órfã
+`claude/friendly-meitner-fam6j4`, sem PR aberto. Há também um PR aberto
+(#14, 08-14) nunca mergeado contra `claude/loving-faraday-UK9eK`, e
+dezenas de outras branches `claude/friendly-meitner-*` de rodadas
+anteriores, também não mergeadas. Esta rodada partiu do conteúdo real mais
+avançado (`fam6j4`) em vez do `main` desatualizado, pra não duplicar
+trabalho — mas o backlog de merge é uma decisão humana pendente. Ver aviso
+enviado ao usuário.
+
+### ⛔ Encontrado e descartado — não é nativo
+- **Apify** — actions & triggers em workflows (scraping/coleta de dados
+  externos): gatilhos Finished Actor Run / Run A Task / Scrape Single URL
+  + ações Find Last Actor Run / Find Last Task Run / Fetch Dataset Items.
+  Mesma categoria de Jira/Linear/Klaviyo/Manus/Browse AI/OpenRouter —
+  integração de marketplace com API key própria, não nativa do motor de
+  workflows. Descartado por instrução explícita ("only native triggers and
+  actions"). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-workflows)
+- **Monday.com** — mesma situação (marketplace), achado nesta rodada.
+
+### ✅ Nenhum item nativo novo encontrado nesta rodada
+Nenhum gatilho/ação nativo do motor HighLevel lançado entre 08-16 e 08-17
+foi localizado via WebSearch. Totais permanecem **89 gatilhos + 175 ações
+= 264 entries**. `index.html` só teve a data de "Última atualização"
+avançada pra registrar que a checagem rodou (mesmo padrão da rodada
+2026-08-14, que também não alterou totais).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
