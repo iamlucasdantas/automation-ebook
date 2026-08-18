@@ -10,7 +10,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
+| Gatilhos | 31 | 53 | 4 | **88** |
 | Ações | 39 | 90 | 46 | **175** |
 
 
@@ -142,6 +142,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g7 | [Solicitação de Entrada Rejeitada](guia-highlevel-cat11.html#g7) | Community Group Join Request Rejected | 0 | 2/6 | 🔴 | [ ] | |
 | g8 | [Nova Publicação no Grupo](guia-highlevel-cat11.html#g8) | Community Group New Post | 0 | 2/6 | 🔴 | [ ] | |
 | g9 | [Novo Comentário no Grupo](guia-highlevel-cat11.html#g9) | Community Group New Comment | 0 | 2/6 | 🔴 | [ ] | |
+| g10 | [Solicitação de Entrada no Grupo](guia-highlevel-cat11.html#g10) | Community Group Join Requested | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT12 · Conclusão
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

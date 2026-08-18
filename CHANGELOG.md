@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-18 — Content
+**Auditoria automática de novidades nativas: +1 gatilho de Comunidades**
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` em busca de gatilhos/ações nativos
+lançados desde a rodada de 2026-08-10.
+
+- **Gatilho — Solicitação de Entrada no Grupo (Community Group Join
+  Requested)** · `guia-highlevel-cat11.html` g10. Lançado pela HighLevel
+  em 17/08/2026 — dispara quando um contato envia pedido de entrada num
+  grupo com aprovação, antes de qualquer decisão do admin. Filtros:
+  Group + Membership Question Responses (dinâmico por grupo). [Doc
+  oficial](https://help.gohighlevel.com/support/solutions/articles/155000008439-automate-group-join-requests-with-workflows)
+- Totais atualizados: **88 gatilhos + 175 ações = 263 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados); `index.html`
+  atualizado (cat11: 9→10 gatilhos; hero-stats, tab-count, section-label
+  e "Última atualização" — 18 de agosto de 2026).
+- Detalhes completos, incluindo candidatos re-verificados (Browse AI,
+  OpenRouter, Manus) que seguem pendentes de validação humana, em
+  [AUDIT.md](./AUDIT.md#-rodada-2026-08-18--checagem-de-novidades-nativas).
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

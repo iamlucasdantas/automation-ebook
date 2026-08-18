@@ -179,13 +179,72 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-18 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 entries,
+estado da rodada 2026-08-10) contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` em busca de gatilhos/ações nativos
+lançados desde então.
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Solicitação de Entrada no Grupo (Community Group Join
+   Requested)** · `guia-highlevel-cat11.html` g10. Lançado pela HighLevel
+   em 17/08/2026. Dispara quando um contato envia pedido de entrada num
+   grupo com acesso por aprovação — antes de qualquer decisão do admin
+   (diferente do "Entrada Rejeitada", que dispara só depois da recusa).
+   Filtros: Group (obrigatório) + Membership Question Responses (um
+   filtro por pergunta de admissão configurada no grupo, dinâmico).
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008439-automate-group-join-requests-with-workflows)
+   · [Changelog](https://ideas.gohighlevel.com/changelog/communities-smarter-join-requests-with-workflow-automation)
+
+Totais atualizados: **88 gatilhos + 175 ações = 263 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados).
+
+### 🔧 Melhorias em ações já existentes (não são entries novas)
+- **Update Contact Field** ganhou modo "Add" pra campos multi-select
+  (além de "Replace") — acrescenta valores em vez de sobrescrever.
+- **Docs & Contracts → Send Document** agora suporta até 6 papéis de
+  assinatura (comprador/vendedor/testemunha/custom) com roteamento
+  sequencial, populado automaticamente pelo template.
+
+Nenhuma das duas é uma action nova — são melhorias de campo em actions já
+catalogadas, registradas aqui só pra contexto.
+
+### 🔍 Candidatos re-verificados — status avançou, mas NÃO aplicados
+Essas três integrações nativas (mesmo padrão do Mistral AI: node nativo
+do workflow builder, mas exige API key própria do vendor) agora têm
+documentação completa com todos os campos, mas continuam fora do guia
+porque são vários itens novos cada — pedem confirmação humana da UI real
+antes de montar mockups com fidelidade:
+- **Browse AI** — 1 gatilho (New Completed Task — filtros Robot, Select
+  Operator) + 4 ações (Run Task, Bulk Run Tasks, Get Task, Get Bulk Run).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+- **OpenRouter** — 1 ação (Generate Response — System Prompt, Prompt,
+  Model Selection entre 300+ modelos). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+- **Manus** — 6 ações (Create/Get/Update/Fetch/Delete Task, Continue Task
+  with Prompt) + 2 gatilhos (New Task Created, Task Stopped). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
+
+### 🟢 Achado adicional, fora do escopo desta rotina
+Durante a pesquisa apareceram outras integrações nativas no mesmo padrão
+(API key própria, node nativo do builder) que parecem não estar no guia
+ainda e não tinham sido auditadas antes: Apify, Cal.com, Jira, Notion,
+Housecall Pro, Monday.com, Basecamp, Vapi, Fathom, Asana, ClickUp.
+Nenhuma é nova de agosto/2026 — ficam registradas aqui como pendência de
+backlog pra uma rodada de auditoria dedicada.
+
+### 🐛 Drift pré-existente notado (não desta rodada)
+`scripts/auto-refine.py --check` acusa `acoes-highlevel-cat15.html` como
+desatualizado — drift que já existia antes desta rodada (confirmado via
+`git stash`), não relacionado às mudanças acima. Fica registrado pra
+correção numa próxima passada do `auto-refine.py`.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+1. **Você abre HL** e valida os campos de **Browse AI, OpenRouter e
+   Manus** acima (confirmar nome real do campo / da action) antes de eu
+   montar os mockups
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
