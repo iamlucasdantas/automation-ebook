@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 263,
   "items": [
     {
       "id": "g1",
@@ -944,6 +944,20 @@
       "description": "Dispara quando um cupom atinge data de expiração e se torna inativo. Avaliação é feita pelo sistema quando o momento chega.",
       "keywords": "cupom expirado coupon code expired",
       "href": "guia-highlevel-cat07.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Tempo real",
+        "Documentos"
+      ],
+      "description": "Dispara sempre que o contato sobe um ou mais arquivos (até 10 de uma vez) na área de Documentos Compartilhados do Portal do Cliente. Elimina o monitoramento manual de \"o cliente já mandou o documento?\".",
+      "keywords": "arquivo enviado no portal do cliente client portal file uploaded",
+      "href": "guia-highlevel-cat07.html#g11"
     },
     {
       "id": "g1",

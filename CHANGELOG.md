@@ -10,6 +10,38 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-19 — Content
+**Checagem de novidades nativas — Client Portal File Uploaded (novo gatilho)**
+
+Rotina automática comparou o guia contra o changelog oficial do HighLevel
+(`ideas.gohighlevel.com/changelog`) e o support portal em busca de
+gatilhos/ações nativos lançados desde a rodada de 2026-08-10.
+
+- **Gatilho — Arquivo Enviado no Portal do Cliente (Client Portal File
+  Uploaded)** · `guia-highlevel-cat07.html` G11, nova subcategoria "Portal
+  do Cliente". Dispara quando o contato sobe 1-10 arquivos na área de
+  Documentos Compartilhados do Portal do Cliente; o arquivo cai em
+  Contatos → Documentos → Recebidos → Client Portal. Vídeos (.mp4/.mov/
+  .avi/.mkv/.wmv) não são aceitos. [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal) ·
+  [Doc de suporte](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+  — a documentação pública não detalha um painel de filtros pra esse
+  gatilho, então o painel de config foi marcado 🔍 pendente de confirmação
+  humana em vez de inventar dropdowns.
+- **Descartados por já estarem cobertos ou não serem nativos ainda:**
+  "Payment Failed" (já é o status **Failed** do gatilho Subscription
+  existente, cat07 G6), "Form Partially Completed" e gatilhos baseados em
+  SLA de conversa (ambos são pedidos em aberto no board de ideias, não
+  recursos lançados), "Review Received" (não encontrado como native
+  trigger dedicado — só existe "Product Review Submitted" pras Ecommerce
+  Stores nativas do HL, que **não é a mesma coisa que Shopify** e viraria
+  categoria nova; ficou como candidato 🔍 pra rodada seguinte, ver
+  `AUDIT.md`).
+- Totais atualizados: **88 gatilhos + 175 ações = 263 painéis** · 30
+  páginas · `search-index.json` e `AUDIT-TABLE.md` regenerados ·
+  `validate-mockups.js` rodado contra todas as páginas · `index.html`
+  (hero-stats, tab-count, section-label, card cat07 e data de última
+  atualização) sincronizado.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

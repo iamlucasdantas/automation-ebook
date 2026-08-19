@@ -10,7 +10,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
+| Gatilhos | 31 | 54 | 3 | **88** |
 | Ações | 39 | 90 | 46 | **175** |
 
 
@@ -110,6 +110,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g8 | [Cupom Aplicado](guia-highlevel-cat07.html#g8) | Coupon Code Applied | 2 | 4/6 | 🟡 | [ ] | |
 | g9 | [Limite de Cupom Atingido](guia-highlevel-cat07.html#g9) | Coupon Redemption Limit Reached | 2 | 1/6 | 🟡 | [ ] | |
 | g10 | [Cupom Expirado](guia-highlevel-cat07.html#g10) | Coupon Code Expired | 2 | 2/6 | 🟡 | [ ] | |
+| g11 | [Arquivo Enviado no Portal do Cliente](guia-highlevel-cat07.html#g11) | Client Portal File Uploaded | 2 | 1/6 | 🟡 | [ ] | |
 
 ### CAT08 · Pré-compra
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

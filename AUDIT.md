@@ -179,6 +179,57 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-19 — Checagem de novidades nativas
+
+Comparou o guia contra `ideas.gohighlevel.com/changelog` e
+`help.gohighlevel.com` em busca de itens nativos lançados desde a rodada
+de 2026-08-10 (fechamento do gap de Actions). Acesso direto via WebFetch a
+esses dois domínios está bloqueado pelo proxy de rede deste ambiente — a
+checagem foi feita via WebSearch com `site:help.gohighlevel.com` e
+cross-referência de múltiplas queries, mesmo método já usado (e rotulado
+"✅ Confirmado por WebSearch") nas rodadas anteriores.
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Arquivo Enviado no Portal do Cliente (Client Portal File
+   Uploaded)** · `guia-highlevel-cat07.html` G11. Confirmado pelo
+   changelog oficial. [Changelog oficial](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal) ·
+   [Doc de suporte](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+
+### 🔍 Pendente de confirmação humana (não aplicado)
+- **G11 acima — painel de filtros**: a doc pública confirma o gatilho e o
+  comportamento, mas não lista opções de filtro (tipo de arquivo,
+  destinatário). Abrir a conta HL real e confirmar se existe algo além do
+  campo padrão "Workflow Trigger Name" antes de expandir o mockup.
+- **Ecommerce Store nativo (não é Shopify)** — achado via
+  `help.gohighlevel.com/.../155000007386-workflow-trigger-product-review-submitted-for-e-commerce-stores-`:
+  gatilho **Product Review Submitted** pra lojas do HL Ecommerce Store
+  (produto nativo diferente da integração Shopify que já cobrimos em
+  cat08). Pode significar que existe uma categoria inteira de
+  triggers/actions nativos de Ecommerce Store ainda não auditada — precisa
+  de rodada dedicada com confirmação humana antes de criar categoria nova
+  (mesmo tratamento dado a Browse AI/OpenRouter/Manus abaixo).
+- ~~Browse AI~~ / ~~OpenRouter~~ / ~~Manus~~ — continuam pendentes desde
+  2026-07-29, nenhuma mudança encontrada nesta rodada.
+
+### ❌ Investigado e descartado (não é feature nativa lançada)
+Um agregador de blog de terceiros (não `help.gohighlevel.com` nem
+`ideas.gohighlevel.com`) alegou que HL lançou "Review Received",
+"Payment Failed", "Form Partially Completed" e gatilhos de SLA de
+conversa como triggers dedicados em agosto de 2026. Verificação direta:
+- **Payment Failed** → já existe como valor do filtro **Status = Failed**
+  do gatilho Subscription (cat07 G6) e do transaction-status do Payment
+  Received (cat07 G2). Não é gatilho novo.
+- **Form Partially Completed** e **SLA-based workflow triggers** → ambos
+  aparecem só como pedidos em aberto no ideas.gohighlevel.com (board de
+  sugestões), não no `/changelog`. Não lançados — não adicionar.
+- **Review Received** (Google/Facebook) → nenhum artigo dedicado
+  encontrado; o único "review trigger" real é o Product Review Submitted
+  de Ecommerce Store acima, que é outra coisa.
+
+Lição: agregadores de terceiros confundem pedidos do board de ideias com
+lançamentos reais. Only trust `/changelog` (lançado) vs `/automations/p/`,
+`/invoicing/p/` etc. (pedido em aberto) on `ideas.gohighlevel.com`.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
