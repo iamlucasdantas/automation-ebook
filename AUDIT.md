@@ -179,6 +179,57 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-20 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra o changelog oficial da HighLevel em
+busca de gatilhos/ações nativos lançados desde a rodada de 2026-08-10.
+Observação de infra: `help.gohighlevel.com` e `ideas.gohighlevel.com` estão
+bloqueados pelo proxy de egress desta sessão — a verificação foi feita via
+resumo de busca das páginas oficiais, não por leitura direta.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Solicitou Entrada no Grupo (Requested to Join Group)** ·
+   `guia-highlevel-cat11.html` G10. Lançado em 17/08/2026. Dispara quando
+   alguém *solicita* entrada num grupo da comunidade (não na entrada direta);
+   o grupo precisa estar em modo request-based. Filtros: **Group** e
+   **Membership Question Responses** — filtro dinâmico em que cada pergunta
+   de aprovação configurada no grupo vira um campo próprio, com a resposta
+   real do solicitante. Permite triagem com IA (respostas dentro do prompt
+   GPT) + If/Else → Grant Group Access automático ou revisão manual. Ações
+   de GPT têm custo por execução.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008439-automate-group-join-requests-with-workflows)
+   · [Changelog](https://ideas.gohighlevel.com/changelog/communities-smarter-join-requests-with-workflow-automation)
+
+### 🔄 Ação existente atualizada (não é entry nova)
+2. **Ação — Atualizar Campos do Contato (Update Contact Field)** ·
+   `acoes-highlevel-cat01.html` A3. Em 18/08/2026 o Action Type ganhou a
+   opção **Add**, exclusiva pra campos multi-select: soma o valor aos que o
+   contato já tem em vez de substituir. Ao escolher *Add*, o dropdown de
+   Field passa a listar apenas **Multi Dropdown** e **Multiple Checkbox**.
+   Antes, atualizar um multi-select apagava todas as seleções anteriores.
+   Painel, hint de cascata, descrição e legenda atualizados; tag
+   "Atualizado ago/2026" adicionada.
+   [Changelog](https://ideas.gohighlevel.com/changelog)
+
+Totais atualizados: **88 gatilhos + 175 ações = 263 entries** (homepage,
+`search-index.json` e `AUDIT-TABLE.md` regenerados).
+
+### 🔍 Verificado e descartado nesta rodada (não é gatilho/ação nativa)
+- **Client Portal — notificações de invoice/estimate** (17/08/2026): é
+  notificação in-app pro contato, não gera gatilho nem ação de workflow.
+- **Ad Manager — Google/LinkedIn** e **AskAI monta campanhas** (ago/2026):
+  features de produto, fora do Workflow Builder.
+- **WhatsApp — estatísticas dentro do workflow** (ago/2026): painel de
+  métricas ao lado da ação, não é ação nova.
+
+### 🔍 Candidatos ainda pendentes de validação humana (arrastados)
+Continuam abertos da rodada de 2026-07-29 — integrações nativas reais, mas
+com múltiplos sub-itens cada, o que pede confirmação de campos antes de
+montar os mockups com fidelidade:
+- **Browse AI** — 1 gatilho + 4 ações. Premium, API key própria.
+- **OpenRouter** — ações/gatilhos, só achado pelo changelog.
+- **Manus** — ações/gatilhos.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

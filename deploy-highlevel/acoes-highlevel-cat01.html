@@ -2879,7 +2879,7 @@
       <div class="acao-cat">Ação</div>
       <h2 class="acao-name">Atualizar Campos do Contato</h2>
       <div class="acao-en">Update Contact Field</div>
-      <div class="acao-tags"><span class="info-tag">Sem limite</span></div>
+      <div class="acao-tags"><span class="info-tag">Sem limite</span><span class="info-tag">Atualizado ago/2026</span></div>
     </div>
   </div>
 
@@ -2887,6 +2887,7 @@
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
       <p>Atualiza um ou mais campos (nativos ou personalizados) de um contato existente. Essencial pra manter dados vivos — temperatura de lead, status, última interação, etc.</p>
+      <p><strong>Novidade (ago/2026):</strong> além de <em>Update Field</em> e <em>Clear Field</em>, o Action Type agora tem <strong>Add</strong> pra campos multi-select. Antes, atualizar um Multi Dropdown ou Multiple Checkbox apagava todas as seleções anteriores; com <em>Add</em>, o valor novo é somado ao que já estava salvo. Exemplo: o contato marcou "Email Marketing" num formulário e, mais pra frente no workflow, você acrescenta "SMS Marketing" no mesmo campo sem perder a primeira escolha.</p>
     </div>
   </div>
 
@@ -2916,6 +2917,7 @@
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
       <p>Sem limite de campos por ação. Pode atualizar nativos e customizados na mesma execução.</p>
+      <p><strong>Action Type:</strong> <span class="opt-chip">Update Field</span> substitui o valor · <span class="opt-chip">Clear Field</span> esvazia o campo · <span class="opt-chip">Add</span> soma ao valor existente (apenas Multi Dropdown e Multiple Checkbox).</p>
     </div>
   </div>
 
@@ -2993,7 +2995,7 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint">Cascata Action Type → Field → Value: <span class='arrow'>→</span> <strong>Action Type</strong> (Update/Clear Field), <span class='arrow'>→</span> <strong>Field</strong> dropdown lista standard + custom, <span class='arrow'>→</span> <strong>Value</strong> input se adapta ao tipo do campo.</div>
+        <div class="hl-canvas-hint">Cascata Action Type → Field → Value: <span class='arrow'>→</span> <strong>Action Type</strong> (Update Field / Clear Field / Add), <span class='arrow'>→</span> <strong>Field</strong> dropdown lista standard + custom (só multi-select quando o tipo é <em>Add</em>), <span class='arrow'>→</span> <strong>Value</strong> input se adapta ao tipo do campo.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
@@ -3013,8 +3015,9 @@
         <div class="hl-dropdown has-value">Update Field</div>
         <div class="hl-conditional"><div class="hl-conditional-note">Opções</div>
           <div class="field-spec-val" style="margin-top:4px;">
-            <span class="opt-chip">Update Field</span><span class="opt-chip">Clear Field</span>
-          </div></div>
+            <span class="opt-chip">Update Field</span><span class="opt-chip">Clear Field</span><span class="opt-chip">Add</span>
+          </div>
+          <div class="hl-conditional-note" style="margin-top:8px;">⚡ <strong>Add</strong> (ago/2026) — só pra campos multi-select: soma o valor aos que o contato já tem, em vez de substituir. Ao escolher <em>Add</em>, o dropdown de Field passa a listar apenas <strong>Multi Dropdown</strong> e <strong>Multiple Checkbox</strong>.</div></div>
       </div>
       <div class="hl-filter-row">
         <div class="hl-filter-label">Field <span class="req">*</span></div>
@@ -3034,7 +3037,7 @@
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Atualiza ou limpa valores de campos do contato</strong>
+        <strong>Atualiza, limpa ou soma valores de campos do contato</strong>
       </div>
     </div>
   </div>

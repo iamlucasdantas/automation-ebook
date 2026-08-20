@@ -10,6 +10,38 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-20 — Content
+**Rodada de novidades nativas: +1 gatilho de Comunidades, +1 opção no Update Contact Field**
+
+Checagem automática do changelog oficial da HighLevel desde 10/08. Dois
+itens nativos novos encontrados e aplicados:
+
+- **Gatilho — Solicitou Entrada no Grupo (Requested to Join Group)** ·
+  `guia-highlevel-cat11.html` G10 (novo). Lançado em 17/08/2026. Dispara na
+  *solicitação* de entrada num grupo da comunidade, não na entrada direta —
+  o grupo precisa estar em modo request-based. Filtros: **Group** e
+  **Membership Question Responses**, esse último dinâmico (cada pergunta de
+  aprovação do grupo escolhido vira um campo de filtro com a resposta real
+  do solicitante). Abre a porta pra triagem com IA: joga as respostas num
+  prompt GPT, If/Else, e Grant Group Access automático nos pedidos legítimos.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008439-automate-group-join-requests-with-workflows)
+- **Ação — Atualizar Campos do Contato (Update Contact Field)** ·
+  `acoes-highlevel-cat01.html` A3 (atualizada, não é entry nova). Em
+  18/08/2026 o Action Type ganhou **Add** pra campos multi-select: soma o
+  valor ao que já está salvo em vez de substituir; com *Add* selecionado o
+  dropdown de Field lista só Multi Dropdown e Multiple Checkbox. Painel de
+  configuração, hint de cascata, descrição, bloco de configurações e legenda
+  atualizados; tag "Atualizado ago/2026" adicionada.
+
+Descartados por não serem gatilho/ação de workflow: notificações de
+invoice/estimate no Client Portal, Ad Manager Google/LinkedIn, AskAI para
+campanhas e o painel de estatísticas de WhatsApp.
+
+Totais: **88 gatilhos + 175 ações = 263 painéis** · 210 mockups · 30 páginas.
+`index.html` (hero-stats, meta description, tab-count, section-label, card
+da cat11 e data de última atualização), `search-index.json`, `AUDIT.md` e
+`AUDIT-TABLE.md` regenerados.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

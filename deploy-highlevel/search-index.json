@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 263,
   "items": [
     {
       "id": "g1",
@@ -1175,6 +1175,21 @@
       "href": "guia-highlevel-cat11.html#g9"
     },
     {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Solicitou Entrada no Grupo",
+      "en": "Requested to Join Group",
+      "category": "Engajamento",
+      "tags": [
+        "Tempo real",
+        "Grupos",
+        "Novo"
+      ],
+      "description": "Dispara quando alguém solicita entrada num grupo da comunidade — antes da aprovação, não depois. É o gatilho que faltava pra automatizar todo o ciclo de triagem: revisar, rotear e aprovar (ou barrar) pedidos de acesso sem admin olhando um por um.",
+      "keywords": "solicitou entrada no grupo requested to join group join request",
+      "href": "guia-highlevel-cat11.html#g10"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Certificado Enviado",
@@ -1266,7 +1281,8 @@
       "en": "Update Contact Field",
       "category": "Ação",
       "tags": [
-        "Sem limite"
+        "Sem limite",
+        "Atualizado ago/2026"
       ],
       "description": "",
       "keywords": "atualizar campos do contato update contact field",
