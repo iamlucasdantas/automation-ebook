@@ -11,6 +11,20 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-08-21 — Content
+**Add WhatsApp as a native Notification Type on Internal Notification (requested)**
+
+User asked if the native **Notificação Interna (Internal Notification)**
+action supports WhatsApp as a channel. Official doc confirms `Notification
+Type` accepts Email, In-App, SMS **or WhatsApp**:
+[Workflow Action – Internal Notifications](https://help.gohighlevel.com/support/solutions/articles/155000003202-workflow-action-internal-notification)
+
+- `acoes-highlevel-cat02.html` A10: added WhatsApp to the `Notification
+  Type` option-chip list (both the static mockup panel and the
+  `configData` example), updated "Configurações principais" and the panel
+  caption to mention WhatsApp.
+- No count change — same action, no new entries.
+
+## 2026-08-21 — Content
 **Check for new native GHL triggers/actions (routine)**
 
 Routine check against `help.gohighlevel.com` and `ideas.gohighlevel.com` for
