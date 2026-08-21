@@ -179,6 +179,52 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-21 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com` (via WebSearch — os dois domínios estão bloqueados
+para fetch direto neste ambiente, então a checagem usou apenas snippets de
+busca) em busca de itens nativos lançados desde a rodada de conteúdo de
+2026-08-10 (que fechou o gap contra o painel real de Actions, +45 ações).
+
+### ✅ Aplicado nesta rodada (fonte oficial confirmada)
+1. **Ação — AI Agent · expansão de provedores de modelo** (changelog oficial
+   de 20/08/2026). O seletor de modelo do AI Agent (`acoes-highlevel-cat05.html`
+   A6) foi redesenhado: além da OpenAI, agora oferece modelos da Anthropic
+   (Claude Opus 5, Sonnet 5, Haiku 4.5) e do Google (Gemini 3.6 Flash, Gemini
+   3.1 Pro Preview), com campo `Provider` separado do `Model` e chip
+   "thinking" nos modelos com raciocínio ajustável. Painel de config e
+   `configData` atualizados para refletir `Provider: Anthropic` /
+   `Model: Claude Sonnet 5`. Não é uma ação nova — é atualização de
+   fidelidade numa ação já existente, então não muda a contagem de
+   gatilhos/ações.
+
+### 🔎 Investigado, sem mudança necessária
+- **"Payment Failed" trigger** — não é um gatilho nativo separado; é um dos
+  valores de status (`Failed`) do gatilho **Subscription** que já temos
+  (`guia-highlevel-cat07.html` G6).
+- **"Form Partially Completed" trigger** — não achamos doc oficial
+  confirmando que existe como gatilho nativo. Pode ser rumor/feature de
+  terceiro; não aplicado.
+- **"New Review Received"** — já está no guia (`guia-highlevel-cat02.html`
+  G16).
+
+### 🔍 Candidatos ainda pendentes (precisam de validação humana / doc completa)
+Continuam sem confirmação suficiente de campos pra montar mockup fiel —
+carregados das rodadas anteriores, ainda não resolvidos:
+- **Client Portal File Uploaded** (gatilho — contato sobe arquivo no Client
+  Portal). Múltiplas buscas confirmam que o artigo existe no support portal
+  oficial, mas o fetch direto de `help.gohighlevel.com` está bloqueado neste
+  ambiente e os snippets de busca não trazem os campos/filtros exatos do
+  painel. Doc relacionado (não é o artigo do trigger em si): [Upload
+  Documents Through the Client Portal](https://help.gohighlevel.com/support/solutions/articles/155000008172-upload-documents-through-the-client-portal)
+- **Browse AI** — 1 gatilho + 4 ações. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+- **OpenRouter** — ações/gatilhos. [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
+- **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
+
+Totais permanecem: **87 gatilhos + 175 ações = 262 painéis** (nenhuma
+entrada nova nesta rodada — só fidelidade de uma ação existente).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

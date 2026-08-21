@@ -10,6 +10,30 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-21 — Content
+**Check for new native GHL triggers/actions (routine)**
+
+Routine check against `help.gohighlevel.com` and `ideas.gohighlevel.com` for
+native workflow items released since the 2026-08-10 round. Full findings in
+[AUDIT.md](./AUDIT.md#-rodada-2026-08-21--checagem-de-novidades-nativas).
+
+- **Ação — AI Agent**: HighLevel's Aug 20 2026 changelog expanded the AI
+  Agent action's model selector beyond OpenAI to include Anthropic (Claude
+  Opus 5 / Sonnet 5 / Haiku 4.5) and Google (Gemini 3.6 Flash / 3.1 Pro
+  Preview), with a separate `Provider` field and a "thinking" chip for
+  reasoning-capable models. Updated `acoes-highlevel-cat05.html` A6 (config
+  panel + description) to match — fidelity fix on an existing action, no
+  new entry.
+- Investigated "Payment Failed" (already covered by the Subscription
+  trigger's `Failed` status filter), "Form Partially Completed" (no
+  official doc found, not applied) and "New Review Received" (already in
+  the guide) — no changes needed.
+- **Client Portal File Uploaded** trigger, **Browse AI**, **OpenRouter** and
+  **Manus** integrations remain open candidates — official docs exist but
+  this environment can't fetch `help.gohighlevel.com` directly, so exact
+  panel fields are still unconfirmed. Carried forward for a future round.
+- Totals unchanged: **87 gatilhos + 175 ações = 262 painéis**.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 
