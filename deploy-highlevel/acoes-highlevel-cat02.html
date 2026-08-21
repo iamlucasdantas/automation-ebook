@@ -3936,7 +3936,7 @@ Dúvidas? Responde aqui.</textarea>
   <div class="tblock">
     <div class="tblock-label">Configurações principais</div>
     <div class="tblock-content">
-      <p>Tipo (Email / Notificação in-app / SMS). Destinatário (usuário HL).</p>
+      <p>Tipo (Email / Notificação in-app / SMS / WhatsApp). Destinatário (usuário HL).</p>
     </div>
   </div>
 
@@ -4014,7 +4014,7 @@ Dúvidas? Responde aqui.</textarea>
 <div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Avisar SDR · lead quente" readonly></div>
 <div class="hl-filter-row"><div class="hl-filter-label">Notification Type <span class="req">*</span></div>
 <div class="hl-multiselect"><span class="hl-multiselect-chip">Email</span><span class="hl-multiselect-chip">Push</span></div>
-<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Email</span><span class="opt-chip">SMS</span><span class="opt-chip">Push</span><span class="opt-chip">In-App</span></div></div></div>
+<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Email</span><span class="opt-chip">SMS</span><span class="opt-chip">Push</span><span class="opt-chip">In-App</span><span class="opt-chip">WhatsApp</span></div></div></div>
 <div class="hl-filter-row"><div class="hl-filter-label">User Type</div>
 <div class="hl-dropdown has-value">Assigned User</div>
 <div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">Assigned User</span><span class="opt-chip">Specific User</span><span class="opt-chip">All Users</span></div></div></div>
@@ -4029,7 +4029,7 @@ Dúvidas? Responde aqui.</textarea>
         </div>
       </div>
       <div class="hl-panel-caption">
-        <strong>Notifica USER do CRM via Email/SMS/Push</strong>
+        <strong>Notifica USER do CRM via Email/SMS/Push/WhatsApp</strong>
       </div>
     </div>
   </div>
@@ -7424,7 +7424,7 @@ Dúvidas? Responde aqui.</textarea>
     'a9-2': { kind: 'Action · Wait', title: 'Wait (2 dias)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Dar tempo de ler a proposta</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait For Time Delay</div></div><div class="config-section"><div class="config-label">Duration *</div><div class="config-field highlight">2 days</div></div>` },
     'a9-3': { kind: 'Action · Manual Call', title: 'Manual Action · Call', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Call de follow-up da proposta</div></div><div class="config-section"><div class="config-label">Assigned To *</div><div class="config-field dropdown">Opportunity Owner</div></div><div class="config-section"><div class="config-label">Instructions</div><div class="config-field highlight">Ligar pra discutir a proposta. Objeções comuns: preço e prazo.</div></div>` },
     'a10-1': { kind: 'Trigger · Form Submitted', title: 'Form Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Form enterprise — avisar time</div></div><div class="config-section"><div class="config-label">Form *</div><div class="config-field highlight dropdown">Contato Enterprise</div></div>` },
-    'a10-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Alerta lead enterprise</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Time Enterprise</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span> <span class="opt-chip">SMS</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">🏢 Lead Enterprise no form</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{contact.first_name}} ({{contact.company_name}}) pediu contato. SLA 30 min.</div></div>` },
+    'a10-2': { kind: 'Action · Internal Notification', title: 'Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Alerta lead enterprise</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Time Enterprise</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">In-app</span> <span class="opt-chip">Email</span> <span class="opt-chip">SMS</span> <span class="opt-chip">WhatsApp</span></div></div><div class="config-section"><div class="config-label">Subject</div><div class="config-field">🏢 Lead Enterprise no form</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{contact.first_name}} ({{contact.company_name}}) pediu contato. SLA 30 min.</div></div>` },
     'a11-1': { kind: 'Trigger · Appointment Status', title: 'Appointment Completed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pós-atendimento — pedir review</div></div><div class="config-section"><div class="config-label">Calendar</div><div class="config-field dropdown">Qualquer calendário</div></div><div class="config-section"><div class="config-label">Status *</div><div class="config-field highlight dropdown">Showed</div></div>` },
     'a11-2': { kind: 'Action · Wait', title: 'Wait (3 horas)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Esperar experiência fresca</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait For Time Delay</div></div><div class="config-section"><div class="config-label">Duration *</div><div class="config-field highlight">3 hours</div></div>` },
     'a11-3': { kind: 'Action · Send Review Request', title: 'Send Review Request', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Pedir avaliação Google</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field"><span class="opt-chip">SMS</span> <span class="opt-chip">Email</span></div></div><div class="config-section"><div class="config-label">Review Source</div><div class="config-field dropdown">Google</div></div>` },
