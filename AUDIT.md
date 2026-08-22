@@ -179,13 +179,52 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-22 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com` em busca de itens nativos lançados desde a última
+atualização de conteúdo (2026-08-10, fechamento do gap de ações).
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Emblema Concedido (Badge Issued)** · `guia-highlevel-cat12.html`
+   g2. Dispara quando um emblema (badge) é concedido a um contato — manual
+   pelo Certificate Builder ou pela ação "Emitir Emblema". Filtro: Badge.
+   Lançado 21/08/2026. [Changelog oficial](https://ideas.gohighlevel.com/changelog/badge-automation-is-now-available-in-workflows)
+2. **Ação — Emitir Emblema (Issue Badge)** · `acoes-highlevel-cat14.html` a2.
+   Concede automaticamente um emblema cadastrado no Certificate Builder pro
+   contato do workflow. Mesma data/fonte do gatilho acima.
+
+Totais atualizados: **88 gatilhos + 176 ações = 264 entries** (homepage,
+search-index.json e AUDIT-TABLE.md já regenerados).
+
+### 🔧 Enhancements encontrados em itens já existentes (não são novos itens)
+- **Email Events** (gatilho, cat02) ganhou variável **Message ID** única,
+  utilizável na ação Send Webhook — anunciado 19/08/2026. Não alteramos o
+  mockup ainda; fica pra próxima rodada com validação humana do campo.
+- **AI Agent Action** (ação, cat05) passou a suportar modelos **Anthropic e
+  Google**, além do OpenAI já coberto — anunciado 20/08/2026. Mockup atual já
+  trata o seletor de modelo de forma genérica; considerar citar os 3
+  provedores explicitamente numa próxima passada.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+Integrações nativas de terceiros achadas no changelog, cada uma com múltiplos
+sub-itens — mesmo padrão do Browse AI/OpenRouter/Manus da rodada 2026-07-29
+(ainda pendentes de validação, recap abaixo):
+- **Jira** — ações/gatilhos de issue management. [Changelog](https://ideas.gohighlevel.com/changelog/jira-workflow-actions-and-triggers)
+- **Monday.com** — ações/gatilhos. [Changelog](https://ideas.gohighlevel.com/changelog/mondaycom-actions-and-triggers)
+- **Basecamp** — novas ações/gatilhos. [Changelog](https://ideas.gohighlevel.com/changelog/basecamp-new-actions-triggers-in-workflows)
+- **Apify** — ações/gatilhos. [Changelog](https://ideas.gohighlevel.com/changelog/apify-actions-and-triggers-in-workflows)
+- ~~Browse AI~~ / ~~OpenRouter~~ / ~~Manus~~ — recap da rodada 2026-07-29,
+  ainda não aplicados.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+   candidatos 🔍 da rodada 2026-07-10 + Jira/Monday.com/Basecamp/Apify/Browse
+   AI/OpenRouter/Manus (rodadas 2026-07-29 e 2026-08-22) acima (confirmar
+   nome real do campo / da action)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -1187,6 +1187,21 @@
       "description": "Dispara quando um certificado é emitido e enviado a um aluno. Normalmente acionado após \"Produto Completado\" (cat 06), mas pode ser emitido manualmente.",
       "keywords": "certificado enviado certificate issued",
       "href": "guia-highlevel-cat12.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Emblema Concedido",
+      "en": "Badge Issued",
+      "category": "Conclusão",
+      "tags": [
+        "Tempo real",
+        "Reconhecimento",
+        "🆕 Novo"
+      ],
+      "description": "Dispara quando um emblema (badge) é concedido a um contato — seja manualmente pelo Certificate Builder, seja pela ação \"Emitir Emblema\" dentro de outro workflow. Lançado em 21/08/2026 junto com a ação de emissão, complementando o \"Certificado Enviado\": enquanto certificados marcam a conclusão formal de um curso, emblemas reconhecem marcos menores — nível de gamificação, participação, conquistas dentro de comunidades.",
+      "keywords": "emblema concedido badge issued",
+      "href": "guia-highlevel-cat12.html#g2"
     },
     {
       "id": "g1",
@@ -3104,6 +3119,20 @@
       "description": "",
       "keywords": "emitir certificado issue certificate",
       "href": "acoes-highlevel-cat14.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Emitir Emblema",
+      "en": "Issue Badge",
+      "category": "Ação",
+      "tags": [
+        "★ Marco",
+        "🆕 Novo"
+      ],
+      "description": "",
+      "keywords": "emitir emblema issue badge",
+      "href": "acoes-highlevel-cat14.html#a2"
     },
     {
       "id": "a1",

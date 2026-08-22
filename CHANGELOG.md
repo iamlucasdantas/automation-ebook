@@ -10,6 +10,34 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-22 — Content
+**Checagem de novidades nativas: +1 gatilho, +1 ação (Badges)**
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com` em busca de gatilhos/ações nativos lançados desde
+2026-08-10.
+
+- **Gatilho — Emblema Concedido (Badge Issued)** · `guia-highlevel-cat12.html`
+  g2. Dispara quando um emblema é concedido a um contato — manualmente pelo
+  Certificate Builder ou pela nova ação "Emitir Emblema". Filtro: Badge.
+  [Changelog oficial](https://ideas.gohighlevel.com/changelog/badge-automation-is-now-available-in-workflows)
+- **Ação — Emitir Emblema (Issue Badge)** · `acoes-highlevel-cat14.html` a2.
+  Concede automaticamente um emblema cadastrado no Certificate Builder pro
+  contato do workflow. Lançada em 21/08/2026, mesma data do gatilho acima.
+  [Changelog oficial](https://ideas.gohighlevel.com/changelog/badge-automation-is-now-available-in-workflows)
+
+Totais atualizados: **88 gatilhos + 176 ações = 264 entries**
+(`search-index.json` e `AUDIT-TABLE.md` regenerados via script; `index.html`
+— hero-stats, tab-counts, section-labels, meta descriptions, cat-cards 12/14
+e data de "Última atualização" — recontados).
+
+Ver [AUDIT.md](./AUDIT.md#-rodada-2026-08-22--checagem-de-novidades-nativas)
+pra detalhes da rodada, incluindo candidatos não aplicados (integrações tipo
+Jira/Monday.com/Basecamp/Apify — múltiplos sub-itens, precisam validação
+humana) e 2 enhancements não-estruturais encontrados em gatilhos/ações já
+existentes (Email Events ganhou variável Message ID; AI Agent Action ganhou
+modelos Anthropic/Google).
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 
