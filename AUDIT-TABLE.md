@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 39 | 90 | 46 | **175** |
+| Gatilhos | 31 | 51 | 8 | **90** |
+| Ações | 39 | 90 | 51 | **180** |
 
 
 ## Gatilhos · 12 categorias
@@ -57,6 +57,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g20 | [Email Recebido](guia-highlevel-cat02.html#g20) | Inbound Email | 3 | 2/6 | 🟡 | [ ] | |
 | g21 | [Usuário Respondeu](guia-highlevel-cat02.html#g21) | User Replied | 3 | 3/6 | 🟡 | [ ] | |
 | g22 | [AI Studio — Formulário Enviado](guia-highlevel-cat02.html#g22) | AI Studio Form Submitted | 3 | 2/6 | 🟡 | [ ] | |
+| g23 | [Browse AI — Tarefa Concluída](guia-highlevel-cat02.html#g23) | New Completed Task | 4 | 2/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -142,6 +143,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g7 | [Solicitação de Entrada Rejeitada](guia-highlevel-cat11.html#g7) | Community Group Join Request Rejected | 0 | 2/6 | 🔴 | [ ] | |
 | g8 | [Nova Publicação no Grupo](guia-highlevel-cat11.html#g8) | Community Group New Post | 0 | 2/6 | 🔴 | [ ] | |
 | g9 | [Novo Comentário no Grupo](guia-highlevel-cat11.html#g9) | Community Group New Comment | 0 | 2/6 | 🔴 | [ ] | |
+| g10 | [Solicitação de Entrada no Grupo](guia-highlevel-cat11.html#g10) | Requested to Join Group | 0 | 2/6 | 🔴 | [ ] | |
+| g11 | [Badge Emitido](guia-highlevel-cat11.html#g11) | Badge Issued | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT12 · Conclusão
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -151,9 +154,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ### CAT13 · Contatos Google
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
-| g1 | [Contato Google Criado](guia-highlevel-cat13.html#g1) | Google Contact Created | 2 | 2/6 | 🟡 | [ ] | |
-| g2 | [Novo Grupo de Contatos Google](guia-highlevel-cat13.html#g2) | New Google Contact Group | 3 | 2/6 | 🟡 | [ ] | |
-| g3 | [Resposta de Formulário Google](guia-highlevel-cat13.html#g3) | Google Form Response | 3 | 2/6 | 🟡 | [ ] | |
+| g1 | [Contato Google Criado](guia-highlevel-cat13.html#g1) | Google Contact Created | 1 | 2/6 | 🔴 | [ ] | |
+| g2 | [Novo Grupo de Contatos Google](guia-highlevel-cat13.html#g2) | New Google Contact Group | 1 | 2/6 | 🔴 | [ ] | |
+| g3 | [Resposta de Formulário Google](guia-highlevel-cat13.html#g3) | Google Form Response | 1 | 2/6 | 🔴 | [ ] | |
 
 ## Ações · 14 categorias
 
@@ -268,6 +271,11 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a8 | [Mistral AI](acoes-highlevel-cat05.html#a8) | Mistral AI: Create Chat Completion / Create Embeddings / Analyze Image | 2 | 3/6 | 🟢 | [ ] | |
 | a9 | [Tradução com IA](acoes-highlevel-cat05.html#a9) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
 | a10 | [Decisor com IA](acoes-highlevel-cat05.html#a10) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
+| a11 | [OpenRouter](acoes-highlevel-cat05.html#a11) | OpenRouter: Generate Response | 0 | 3/6 | 🟡 | [ ] | |
+| a12 | [Browse AI: Executar Tarefa](acoes-highlevel-cat05.html#a12) | Browse AI: Run Task | 0 | 2/6 | 🔴 | [ ] | |
+| a13 | [Browse AI: Executar Tarefas em Lote](acoes-highlevel-cat05.html#a13) | Browse AI: Bulk Run Tasks | 0 | 2/6 | 🔴 | [ ] | |
+| a14 | [Browse AI: Buscar Tarefa](acoes-highlevel-cat05.html#a14) | Browse AI: Get Task | 0 | 2/6 | 🔴 | [ ] | |
+| a15 | [Browse AI: Buscar Execução em Lote](acoes-highlevel-cat05.html#a15) | Browse AI: Get Bulk Run | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -367,9 +375,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a1 | [Criar Contato Google](acoes-highlevel-cat15.html#a1) | Create Google Contact | 0 | — | 🔴 | [ ] | |
 | a2 | [Atualizar Contato Google](acoes-highlevel-cat15.html#a2) | Update Google Contact | 0 | — | 🔴 | [ ] | |
 | a3 | [Buscar Contato Google](acoes-highlevel-cat15.html#a3) | Find Google Contact | 0 | — | 🔴 | [ ] | |
-| a4 | [Buscar ou Criar Contato Google](acoes-highlevel-cat15.html#a4) | Find or Create Google Contact | 2 | — | 🟡 | [ ] | |
+| a4 | [Buscar ou Criar Contato Google](acoes-highlevel-cat15.html#a4) | Find or Create Google Contact | 0 | — | 🔴 | [ ] | |
 | a5 | [Criar Grupo Google](acoes-highlevel-cat15.html#a5) | Create Google Contact Group | 0 | — | 🔴 | [ ] | |
-| a6 | [Adicionar a Grupos Google](acoes-highlevel-cat15.html#a6) | Add to Google Groups | 2 | — | 🔴 | [ ] | |
+| a6 | [Adicionar a Grupos Google](acoes-highlevel-cat15.html#a6) | Add to Google Groups | 0 | — | 🔴 | [ ] | |
 
 ### CAT16 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

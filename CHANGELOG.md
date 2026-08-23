@@ -10,6 +10,35 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-23 — Content
+**Rodada de novidades nativas: +3 gatilhos, +5 ações (Browse AI, OpenRouter, Communities)**
+
+Auditoria automática comparou o guia contra help.gohighlevel.com e
+ideas.gohighlevel.com/changelog em busca de gatilhos/ações nativos
+lançados desde a rodada de 2026-08-10. Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-08-23--checagem-de-novidades-nativas).
+
+- **cat11 Comunidades** +2 gatilhos: Solicitação de Entrada no Grupo
+  (Requested to Join Group, G10), Badge Emitido (Badge Issued, G11)
+- **cat02 Eventos** +1 gatilho: Browse AI — Tarefa Concluída (New
+  Completed Task, G23). Premium, API key própria.
+- **cat05 Workflow AI** +5 ações: OpenRouter — Gerar Resposta (A11) e as
+  4 ações do Browse AI — Executar Tarefa, Executar em Lote, Buscar Tarefa,
+  Buscar Execução em Lote (A12-A15). Todas Premium, API key própria.
+- Drift corrigido: hero-stat-num de `acoes-highlevel-cat05.html` dizia "8
+  ações" com 10 blocos reais já no arquivo antes desta rodada; drift
+  mecânico pré-existente em `acoes-highlevel-cat15.html` e
+  `guia-highlevel-cat13.html` corrigido via `auto-refine.py`; 8 cards de
+  ações em `index.html` estavam subcontando (Comunicação era o pior caso,
+  29 no card vs 37 reais) — todos os 30 cards agora batem com a contagem
+  real de blocos.
+- Pendente pra próxima rodada: rename de A3/A5 em cat05 (Summarize
+  Conversation → AI Summarize, Classify → AI Intent Detection) registrado
+  no changelog de 2026-08-10 mas não aplicado no HTML real — precisa
+  confirmação humana antes de mexer.
+
+Totais: **90 gatilhos + 180 ações = 270 painéis** · `search-index.json` e
+`AUDIT-TABLE.md` regenerados.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

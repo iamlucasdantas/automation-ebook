@@ -179,6 +179,89 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-23 — Checagem de novidades nativas
+
+Rotina automática comparou o guia contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com/changelog` em busca de itens nativos lançados desde a
+rodada de 2026-08-10. `WebFetch` ficou bloqueado pela política de rede desta
+sessão (egress proxy recusou até domínios não relacionados) — a confirmação
+abaixo veio só de `WebSearch` (múltiplas queries independentes por item,
+convergindo pro mesmo conteúdo), no mesmo padrão "✅ Confirmado por
+WebSearch" já usado nas rodadas anteriores.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Solicitação de Entrada no Grupo (Requested to Join Group)**
+   · `guia-highlevel-cat11.html` G10. Dispara na submissão do pedido de
+   entrada — antes de aprovar/rejeitar (diferente do já existente G07
+   "Solicitação de Entrada Rejeitada"). Filtro Group + Membership Question
+   Responses dinâmico por pergunta de admissão do grupo. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008439-automate-group-join-requests-with-workflows)
+2. **Gatilho — Badge Emitido (Badge Issued)** · `guia-highlevel-cat11.html`
+   G11. Dispara quando um badge é emitido pra um membro. Uma ação dedicada
+   "Issue Badge" ainda não existe (changelog oficial diz "coming soon") —
+   só o gatilho foi adicionado, badges continuam emitidos manualmente ou
+   via Issue Certificate. [Changelog oficial](https://ideas.gohighlevel.com/changelog/badge-automation-is-now-available-in-workflows)
+3. **Gatilho — Browse AI: Tarefa Concluída (New Completed Task)** ·
+   `guia-highlevel-cat02.html` G23. Webhook-backed, dispara quando um robot
+   do Browse AI termina uma tarefa. Filtros Robot (obrigatório) + Select
+   Operator (condicional). Premium, requer API key própria do Browse AI.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+4. **Ação — OpenRouter: Gerar Resposta (Generate Response)** ·
+   `acoes-highlevel-cat05.html` A11. Gateway unificado pra 300+ modelos
+   (Claude, GPT, Gemini, Perplexity...) — troca de modelo sem trocar de
+   ação, diferente do Mistral AI (A08) que só fala com a Mistral. Requer
+   API key própria do OpenRouter. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+5. **Ações — Browse AI (4 ações)** · `acoes-highlevel-cat05.html` A12-A15:
+   Executar Tarefa (Run Task), Executar Tarefas em Lote (Bulk Run Tasks),
+   Buscar Tarefa (Get Task), Buscar Execução em Lote (Get Bulk Run). Item
+   já estava na lista de candidatos pendentes desde 2026-07-29 — confirmado
+   nesta rodada com detalhe de campos o suficiente pra montar com
+   fidelidade. Todas Premium, API key própria do Browse AI. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+
+Totais atualizados: **90 gatilhos + 180 ações = 270 entries** (`index.html`,
+`search-index.json` e `AUDIT-TABLE.md` já regenerados via
+`scripts/build-search-index.py` e `scripts/build-audit.py`).
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- `acoes-highlevel-cat05.html`: hero-stat-num da própria página dizia "8
+  ações" enquanto o arquivo já tinha 10 blocos reais (A1-A10) antes desta
+  rodada — corrigido pro número real antes de somar as 5 novas.
+- `guia-highlevel-cat02.html` G22 e `guia-highlevel-cat11.html`: mesma
+  classe de bug (hero-stat-num desatualizado na própria página, mesmo com
+  `index.html` e o total geral corretos) não encontrada nesses dois, mas
+  vale checar as demais 15 páginas de ação na próxima rodada — o padrão se
+  repetiu em pelo menos uma página por rodada nas últimas 3 auditorias.
+- `python3 scripts/auto-refine.py --check` sinalizou drift mecânico
+  pré-existente (não relacionado a esta rodada) em
+  `acoes-highlevel-cat15.html` e `guia-highlevel-cat13.html` — corrigido
+  rodando `auto-refine.py` (idempotente).
+- `index.html`: conferi cada card de categoria contra a contagem real de
+  blocos (`id="aN"`/`id="gN"`) em cada página e achei **8 categorias de
+  ações desatualizadas havia pelo menos uma rodada** — provavelmente
+  esquecidas na correção de contadores do fechamento de gap de 2026-08-10:
+  Contatos 16→18, Comunicação 29→37 (a maior — tinha 8 ações a mais no
+  arquivo do que o card mostrava), Ferramentas Internas 21→22,
+  Agendamentos 3→4, Oportunidades 11→13, Pagamentos 5→9, Marketing 5→8,
+  Comunidades 6→8. Todos os 13 cards de gatilhos já batiam. Corrigido —
+  a soma dos cards agora bate exatamente com o total geral (90/180).
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de outra rodada)
+- **Manus** — forma confirmada (2 vias: ~5 ações de workflow pra
+  Create/Update/Continue/Fetch/Delete de uma task Manus + triggers no lado
+  do Manus quando a task é criada via ação de workflow — não dispara pra
+  tasks criadas direto no app Manus), mas o texto exato dos botões/nome dos
+  5 campos de ação ainda diverge entre fontes. Precisa de uma passada com
+  acesso direto à doc antes de montar mockup com fidelidade real.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
+
+### ⚠ Drift de conteúdo encontrado, NÃO corrigido (precisa validação humana)
+- `acoes-highlevel-cat05.html` A3 e A5: CHANGELOG de 2026-08-10 registra os
+  renames "Summarize Conversation → AI Summarize" e "AI Classify → AI
+  Intent Detection" como aplicados, mas o HTML real da categoria ainda usa
+  os nomes antigos (H2 "Summarize Conversation" / "Classify"). Ou o
+  CHANGELOG documentou algo que não foi commitado, ou uma reversão
+  aconteceu depois. Não mexi nos nomes nesta rodada — fica pra confirmação
+  humana antes de tocar (rename muda como o usuário busca a ação no guia).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

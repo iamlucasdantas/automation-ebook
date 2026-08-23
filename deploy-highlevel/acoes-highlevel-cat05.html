@@ -2448,7 +2448,12 @@
     <a href="#a7" class="side-link"><span class="side-num">07</span>Atualizar Bot de IA e Status</a>
     <a href="#a8" class="side-link"><span class="side-num">08</span>Mistral AI
     <a href="#a9" class="side-link"><span class="side-num">09</span>Tradução com IA</a>
-    <a href="#a10" class="side-link"><span class="side-num">10</span>Decisor com IA</a></a>
+    <a href="#a10" class="side-link"><span class="side-num">10</span>Decisor com IA</a>
+    <a href="#a11" class="side-link"><span class="side-num">11</span>OpenRouter</a>
+    <a href="#a12" class="side-link"><span class="side-num">12</span>Browse AI: Executar Tarefa</a>
+    <a href="#a13" class="side-link"><span class="side-num">13</span>Browse AI: Executar em Lote</a>
+    <a href="#a14" class="side-link"><span class="side-num">14</span>Browse AI: Buscar Tarefa</a>
+    <a href="#a15" class="side-link"><span class="side-num">15</span>Browse AI: Buscar Lote</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2467,10 +2472,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 05/15</span>
   <h1 class="hero-title">Ações de <em>Workflow AI</em>.</h1>
-  <p class="hero-desc">As 8 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação, agentes autônomos e modelos Mistral com sua própria API key.</p>
+  <p class="hero-desc">As 15 ações de Workflow AI adicionam inteligência artificial dentro das automações — geração de texto, análise de imagem, processamento de linguagem natural, classificação, agentes autônomos e modelos de terceiros (Mistral AI, OpenRouter, Browse AI) com sua própria API key.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">8</span>
+      <span class="hero-stat-num">15</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -3834,6 +3839,379 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a11" data-name="openrouter gerar resposta generate response 300 modelos gateway">
+  <div class="acao-head">
+    <div class="acao-num">11</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">OpenRouter</h2>
+      <div class="acao-en">OpenRouter: Generate Response</div>
+      <div class="acao-tags"><span class="info-tag">AI</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Manda um prompt pra qualquer um dos 300+ modelos disponíveis no <a href="https://openrouter.ai" target="_blank" rel="noopener">OpenRouter</a> (gateway unificado que dá acesso a Claude, GPT, Gemini, Perplexity e outros através de uma única integração) e traz a resposta de volta pro workflow como variável de saída. Requer conectar sua própria API key do OpenRouter — não usa a cota de IA do HighLevel.</p>
+      <p>Diferente do Mistral AI (A08), que só fala com modelos da Mistral, o OpenRouter deixa <strong>trocar de modelo/provedor sem trocar de ação</strong> — útil pra comparar custo/qualidade entre modelos sem reconstruir o workflow.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Testar modelo mais barato</div>
+  <div class="use-case-desc">Troca o Model Selection pra um modelo mais barato sem mexer no resto do workflow, pra comparar qualidade de resposta.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Resposta com modelo específico do cliente</div>
+  <div class="use-case-desc">Agência que atende clientes com preferência de modelo (ex.: só Claude, só Gemini) usa a mesma ação pra todos, só trocando o Model Selection por subconta.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Connect OpenRouter (API key própria, gerada em openrouter.ai), System Prompt (opcional), Prompt (obrigatório — aceita variáveis de workflow), Model Selection (obrigatório — qualquer modelo dos 300+ disponíveis no gateway), Temperature, Max Tokens, Output Format e Output Variable.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A11 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Requer <strong>Connect OpenRouter</strong> com sua própria API key (openrouter.ai). <span class='arrow'>→</span> a resposta fica disponível como <strong>Output Variable</strong> pra qualquer etapa seguinte.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>OpenRouter: Generate Response</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Resposta via OpenRouter" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Connect OpenRouter <span class="req">*</span></div><div class="hl-dropdown has-value">🟢 Conectado — API key salva</div>
+<div class="hl-conditional"><div class="hl-conditional-note">Gerada em openrouter.ai → Keys → Create Key</div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">System Prompt</div><div class="hl-textarea">Responda de forma breve e direta, sem enrolação.</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Prompt <span class="req">*</span></div><div class="hl-textarea highlight">{{contact.last_message}}</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Model Selection <span class="req">*</span></div><div class="hl-dropdown has-value">anthropic/claude-sonnet</div>
+<div class="hl-conditional"><div class="hl-conditional-note">300+ modelos disponíveis via gateway</div><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">OpenAI</span><span class="opt-chip">Anthropic</span><span class="opt-chip">Google</span><span class="opt-chip">Perplexity</span><span class="opt-chip">+296 outros</span></div></div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Temperature</div><div class="hl-input">0.7</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Max Tokens</div><div class="hl-input">500</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output Format</div><div class="hl-dropdown has-value">Text</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output Variable</div><div class="hl-input highlight">ai.openrouter_resposta</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Requer API key própria do OpenRouter. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response" target="_blank" rel="noopener">help.gohighlevel.com/...workflow-action-openrouter-generate-response</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a12" data-name="browse ai run task executar tarefa robot scraping raspagem">
+  <div class="acao-head">
+    <div class="acao-num">12</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Browse AI: Executar Tarefa</h2>
+      <div class="acao-en">Browse AI: Run Task</div>
+      <div class="acao-tags"><span class="info-tag">Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Dispara a execução de um <strong>robot</strong> do Browse AI direto de dentro do workflow, passando os parâmetros de input que aquele robot espera (ex.: URL a raspar, termo de busca). A execução é assíncrona — combine com o gatilho <strong>New Completed Task</strong> (Categoria 02, G23) ou com a ação <strong>Get Task</strong> (A14) pra pegar o resultado depois.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Raspar sob demanda</div>
+  <div class="use-case-desc">Contato preenche form com uma URL → workflow manda o robot raspar aquela página específica.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Connect Browse AI (API key própria), Robot (obrigatório), e um campo de Input por parâmetro configurado naquele robot.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A12 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Os campos de <strong>Input</strong> mudam conforme o Robot selecionado — cada robot tem seus próprios parâmetros de entrada.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Browse AI: Run Task</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Raspar página do lead" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Connect Browse AI <span class="req">*</span></div><div class="hl-dropdown has-value">🟢 Conectado — API key salva</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Robot <span class="req">*</span></div><div class="hl-dropdown has-value">Monitor Preço — Concorrente X</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Input · url</div><div class="hl-input highlight">{{contact.website}}</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Premium — requer API key própria do Browse AI. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger" target="_blank" rel="noopener">help.gohighlevel.com/...browse-ai-workflow-actions-and-trigger</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a13" data-name="browse ai bulk run tasks executar tarefas em lote">
+  <div class="acao-head">
+    <div class="acao-num">13</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Browse AI: Executar Tarefas em Lote</h2>
+      <div class="acao-en">Browse AI: Bulk Run Tasks</div>
+      <div class="acao-tags"><span class="info-tag">Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Mesma ideia da A12, mas roda o robot <strong>uma vez por linha</strong> de uma fonte de dados — cada linha vira uma execução própria, com os valores daquela linha como input. Útil pra raspar várias URLs/registros de uma vez em vez de repetir a ação A12 manualmente.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Raspar lista de concorrentes</div>
+  <div class="use-case-desc">Lista com 20 URLs de concorrentes → uma execução do robot por URL, todas de uma vez.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Connect Browse AI, Robot (obrigatório) e a fonte de dados/linhas — cada linha mapeia pros parâmetros de input do robot.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A13 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Cada linha da fonte de dados dispara uma execução independente do robot.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Browse AI: Bulk Run Tasks</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Raspar lista de concorrentes" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Connect Browse AI <span class="req">*</span></div><div class="hl-dropdown has-value">🟢 Conectado — API key salva</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Robot <span class="req">*</span></div><div class="hl-dropdown has-value">Monitor Preço — Concorrente X</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Data Source · Rows <span class="req">*</span></div><div class="hl-input highlight">20 linhas · coluna "url"</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Premium — requer API key própria do Browse AI. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger" target="_blank" rel="noopener">help.gohighlevel.com/...browse-ai-workflow-actions-and-trigger</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a14" data-name="browse ai get task buscar tarefa resultado">
+  <div class="acao-head">
+    <div class="acao-num">14</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Browse AI: Buscar Tarefa</h2>
+      <div class="acao-en">Browse AI: Get Task</div>
+      <div class="acao-tags"><span class="info-tag">Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Busca o resultado (dados capturados) de uma tarefa específica do Browse AI pelo Task ID — normalmente o ID que veio do gatilho New Completed Task ou da ação Run Task (A12).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Puxar dado já capturado</div>
+  <div class="use-case-desc">Task ID salvo em etapa anterior → Get Task traz o valor capturado pra usar em Update Contact Field.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Connect Browse AI, Task ID (obrigatório) e uma Output Variable por campo capturado pelo robot.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A14 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Use o <strong>Task ID</strong> retornado pelo gatilho New Completed Task ou pela ação Run Task.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Browse AI: Get Task</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Buscar dado capturado" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Connect Browse AI <span class="req">*</span></div><div class="hl-dropdown has-value">🟢 Conectado — API key salva</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Task ID <span class="req">*</span></div><div class="hl-input highlight">{{trigger.browseAi.taskId}}</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output Variable</div><div class="hl-input highlight">browseAi.preco</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Premium — requer API key própria do Browse AI. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger" target="_blank" rel="noopener">help.gohighlevel.com/...browse-ai-workflow-actions-and-trigger</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a15" data-name="browse ai get bulk run buscar execução em lote">
+  <div class="acao-head">
+    <div class="acao-num">15</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Browse AI: Buscar Execução em Lote</h2>
+      <div class="acao-en">Browse AI: Get Bulk Run</div>
+      <div class="acao-tags"><span class="info-tag">Premium</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Busca o resultado agregado de uma execução em lote disparada pela A13 (Bulk Run Tasks) — todas as tarefas daquele lote, pelo Bulk Run ID.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Consolidar resultado do lote</div>
+  <div class="use-case-desc">Bulk Run ID salvo em etapa anterior → Get Bulk Run traz todos os resultados pra gerar um relatório único.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Connect Browse AI, Bulk Run ID (obrigatório) e Output Variable com o conjunto de resultados.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A15 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Use o <strong>Bulk Run ID</strong> retornado pela ação Bulk Run Tasks (A13).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Browse AI: Get Bulk Run</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Consolidar resultado do lote" readonly></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Connect Browse AI <span class="req">*</span></div><div class="hl-dropdown has-value">🟢 Conectado — API key salva</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Bulk Run ID <span class="req">*</span></div><div class="hl-input highlight">{{a13.bulkRunId}}</div></div>
+<div class="hl-filter-row"><div class="hl-filter-label">Output Variable</div><div class="hl-input highlight">browseAi.resultados_lote</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Premium — requer API key própria do Browse AI. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger" target="_blank" rel="noopener">help.gohighlevel.com/...browse-ai-workflow-actions-and-trigger</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3852,7 +4230,7 @@
 
   <div class="footer-top">
     <h3>Categoria 05 completa.</h3>
-    <p>8 ações de Workflow AI explicadas com impacto prático. Inclui o AI Agent, o controle de bot de Conversation AI e as ações Mistral AI (Beta).</p>
+    <p>15 ações de Workflow AI explicadas com impacto prático. Inclui o AI Agent, o controle de bot de Conversation AI, Mistral AI (Beta) e, adicionados em agosto/2026, OpenRouter e as 4 ações do Browse AI (todas Premium, API key própria).</p>
   </div>
 
   <div class="footer-main-cta">

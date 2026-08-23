@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 270,
   "items": [
     {
       "id": "g1",
@@ -482,6 +482,21 @@
       "description": "Dispara quando um visitante preenche um formulário conectado dentro de um site gerado pelo AI Studio (o site builder com IA do HighLevel). É o mesmo motor do gatilho \"Formulário Preenchido\" (Form Submitted) — só que aplicado a forms embutidos numa página AI Studio, com dois filtros específicos desse contexto: Domain (qual domínio do site AI Studio) e External Form (qual formulário embutido na página).",
       "keywords": "ai studio formulário enviado form submitted site ia domain external form",
       "href": "guia-highlevel-cat02.html#g22"
+    },
+    {
+      "id": "g23",
+      "type": "Gatilho",
+      "name": "Browse AI — Tarefa Concluída",
+      "en": "New Completed Task",
+      "category": "Browse AI",
+      "tags": [
+        "Tempo real",
+        "Premium",
+        "Novo"
+      ],
+      "description": "Dispara assim que um robot do Browse AI (ferramenta de raspagem de dados/web scraping sem código) termina uma tarefa — é webhook-backed, ou seja, dispara na hora, sem o delay de 5 minutos comum em gatilhos por polling. Requer conectar sua própria conta Browse AI (Connect Browse AI) dentro do painel do gatilho.",
+      "keywords": "browse ai tarefa concluída new completed task robot scraping raspagem",
+      "href": "guia-highlevel-cat02.html#g23"
     },
     {
       "id": "g1",
@@ -1173,6 +1188,36 @@
       "description": "Dispara quando um novo comentário é adicionado a uma publicação do grupo. Permite reagir a interações específicas dentro da comunidade.",
       "keywords": "novo comentário no grupo community group new comment",
       "href": "guia-highlevel-cat11.html#g9"
+    },
+    {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Solicitação de Entrada no Grupo",
+      "en": "Requested to Join Group",
+      "category": "Eventos de Grupo",
+      "tags": [
+        "Tempo real",
+        "Moderação",
+        "Novo"
+      ],
+      "description": "Dispara assim que um membro submete um pedido de entrada em um grupo da comunidade — antes de qualquer decisão de aprovação ou rejeição (esse é o momento anterior ao já existente \"Solicitação de Entrada Rejeitada\", G07). Ao selecionar o Group, o painel carrega automaticamente todas as perguntas de admissão configuradas pra aquele grupo, e cada uma vira um filtro próprio — Membership Question Responses.",
+      "keywords": "solicitação de entrada no grupo requested to join group community group join request question",
+      "href": "guia-highlevel-cat11.html#g10"
+    },
+    {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Badge Emitido",
+      "en": "Badge Issued",
+      "category": "Gamificação",
+      "tags": [
+        "Tempo real",
+        "Gamificação",
+        "Novo"
+      ],
+      "description": "Dispara assim que um badge é emitido pra um membro da comunidade — seja manualmente por um admin ou automaticamente por outro workflow usando a ação Issue Certificate (que hoje também cobre a emissão de badges). Deixa a conquista visível fora da comunidade: mensagem, email, atualização de contato ou início de outro automação.",
+      "keywords": "badge emitido badge issued gamificação conquista",
+      "href": "guia-highlevel-cat11.html#g11"
     },
     {
       "id": "g1",
@@ -2423,6 +2468,76 @@
       "description": "",
       "keywords": "decisor com ia ai decision maker",
       "href": "acoes-highlevel-cat05.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "OpenRouter",
+      "en": "OpenRouter: Generate Response",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "openrouter gerar resposta generate response 300 modelos gateway",
+      "href": "acoes-highlevel-cat05.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Browse AI: Executar Tarefa",
+      "en": "Browse AI: Run Task",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "browse ai run task executar tarefa robot scraping raspagem",
+      "href": "acoes-highlevel-cat05.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Browse AI: Executar Tarefas em Lote",
+      "en": "Browse AI: Bulk Run Tasks",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "browse ai bulk run tasks executar tarefas em lote",
+      "href": "acoes-highlevel-cat05.html#a13"
+    },
+    {
+      "id": "a14",
+      "type": "Ação",
+      "name": "Browse AI: Buscar Tarefa",
+      "en": "Browse AI: Get Task",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "browse ai get task buscar tarefa resultado",
+      "href": "acoes-highlevel-cat05.html#a14"
+    },
+    {
+      "id": "a15",
+      "type": "Ação",
+      "name": "Browse AI: Buscar Execução em Lote",
+      "en": "Browse AI: Get Bulk Run",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "browse ai get bulk run buscar execução em lote",
+      "href": "acoes-highlevel-cat05.html#a15"
     },
     {
       "id": "a1",
