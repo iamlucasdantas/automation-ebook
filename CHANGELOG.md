@@ -10,6 +10,31 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-24 — Content + Automation
+**Checagem de novidades nativas + fix de bug no auto-refine**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos lançados
+desde a rodada de 2026-08-10. Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-08-24--checagem-de-novidades-nativas).
+
+- **AI Agent** (`acoes-highlevel-cat05.html` A6): seletor de modelo agora
+  também traz Anthropic e Google, além de OpenAI — campos **Model
+  Provider** e **Reasoning Effort** adicionados ao painel e ao mockup.
+- **Eventos de Email** (`guia-highlevel-cat02.html` G3): nota sobre o novo
+  **Message ID** disponível como custom value no Send Webhook.
+- Nenhuma das duas muda a contagem total (são enhancements a itens já
+  existentes, não itens novos).
+- 6 candidatos novos encontrados mas **não aplicados** — precisam de
+  validação humana de campos antes de virar mockup: Badge Issued
+  (gatilho), Monday.com, Jira, Linear (25 itens), Housecall Pro, Apify.
+- 🐛 **Fix**: `scripts/auto-refine.py` tinha a lista `HAND_CRAFTED`
+  desatualizada — não protegia `guia-highlevel-cat13.html` nem
+  `acoes-highlevel-cat15/16/17.html`. Rodar o refine nelas destruía o
+  `configData` de vários nós (colapsava painéis ricos pra 1 campo
+  genérico). Corrigido antes que a rotina semanal abrisse um PR
+  corrompendo essas 4 páginas.
+- `index.html`: data de "Última atualização" recontada para hoje.
+
 ## 2026-08-10 — Content
 **Fechamento do gap contra o painel real de Actions: +45 ações, 2 categorias novas**
 

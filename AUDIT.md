@@ -179,13 +179,77 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-08-24 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-10) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `ideas.gohighlevel.com` está
+bloqueado por egress direto neste ambiente — a checagem usou busca web
+para ler o conteúdo do changelog indiretamente.
+
+### ✅ Aplicado nesta rodada (enhancement a itens já existentes, sem novo total)
+1. **AI Agent** (`acoes-highlevel-cat05.html` A6) — desde 20/08/2026 o
+   seletor de modelo deixou de ser exclusivo OpenAI: agora lista também
+   Anthropic (Claude) e Google (Gemini), com interface redesenhada pra
+   escolher provedor + modelo + nível de raciocínio. Adicionados campos
+   **Model Provider** e **Reasoning Effort** ao painel de config e ao
+   mockup, e nota explicativa no texto.
+2. **Eventos de Email** (`guia-highlevel-cat02.html` G3) — desde
+   19/08/2026, Opened/Clicked carregam um **Message ID** único disponível
+   como custom value dentro do Send Webhook — colapsa aberturas
+   duplicadas do mesmo email num único registro. Nota adicionada ao texto
+   do gatilho.
+
+Nenhum dos dois muda a contagem de gatilhos/ações — são melhorias em
+campos de itens já existentes, não itens novos.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **Badge Issued** (gatilho) — dispara quando um badge é emitido; anunciado
+  no changelog oficial (~20-21/08/2026) mas sem artigo dedicado com os
+  campos exatos de filtro ainda. A ação companion **Issue Badge** está
+  marcada pela própria HighLevel como "em desenvolvimento" — hoje o
+  workaround é usar a ação **Issue Certificate** já existente
+  (`acoes-highlevel-cat14.html` A1) selecionando um template de Badge em
+  vez de Certificado. [Changelog](https://ideas.gohighlevel.com/changelog/badge-automation-is-now-available-in-workflows)
+- **Monday.com** — ações/gatilhos nativos pra automação em tempo real com
+  boards do Monday (elimina Zapier/Make). Campos não detalhados ainda.
+  [Changelog](https://ideas.gohighlevel.com/changelog/mondaycom-actions-and-triggers)
+- **Jira** — ações/gatilhos nativos. Campos não detalhados ainda.
+  [Changelog](https://ideas.gohighlevel.com/changelog/jira-workflow-actions-and-triggers)
+- **Linear** — conexão nativa via OAuth (sem tokens de API pra gerenciar);
+  12 gatilhos instantâneos + 13 ações cobrindo issues, projects,
+  customers, customer needs, initiatives e documents. Volume grande —
+  precisa de rodada dedicada pra levantar os nomes exatos de cada um dos
+  25 itens antes de montar mockups. [Changelog](https://ideas.gohighlevel.com/changelog/linear-workflow-actions-triggers)
+- **Housecall Pro** — ações/gatilhos adicionais (a integração já existente
+  ganhou mais itens). Campos não detalhados ainda. [Changelog](https://ideas.gohighlevel.com/changelog/housecall-pro-more-workflow-actions-triggers)
+- **Apify** — ações/gatilhos nativos pra rodar robôs de scraping/automação
+  dentro do workflow. Campos não detalhados ainda. [Changelog](https://ideas.gohighlevel.com/changelog/apify-actions-and-triggers-in-workflows)
+
+Igual às rodadas anteriores (Browse AI, OpenRouter, Manus — ainda
+pendentes desde 2026-07-29): são integrações nativas reais, mas com
+campos/sub-itens que precisam de confirmação humana antes de montar
+mockup com fidelidade real. Não foram inventados campos pra nenhum desses.
+
+### 🐛 Bug de manutenção corrigido nesta rodada
+`scripts/auto-refine.py` tinha uma lista `HAND_CRAFTED` desatualizada —
+não incluía `guia-highlevel-cat13.html` nem `acoes-highlevel-cat15/16/17.html`
+(as páginas de Google Integrações, Objetos & Empresas e Bots & Agentes,
+todas escritas à mão depois que a lista foi congelada). Rodar
+`auto-refine.py` nelas **destruía** o `configData` de vários nós — o
+regenerador mecânico não reconhece a estrutura mais rica desses painéis e
+colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
+aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
+adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ do round anterior + os 6
-   candidatos 🔍 da rodada 2026-07-10 acima (confirmar nome real do
-   campo / da action)
+1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
+   candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
+   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
+   do campo / da action antes de qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
