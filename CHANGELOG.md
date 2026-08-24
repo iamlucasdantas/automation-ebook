@@ -10,6 +10,43 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-24 — Deploy
+**SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
+
+Requested SEO pass on the live site (`guia.magneticflows.com`). Found and fixed:
+
+- **Duplicate title + meta description on 16 of 17 Ações pages.** Every
+  category page from `acoes-highlevel-cat01.html` through `cat14.html`
+  (plus `cat16`/`cat17`) shared the exact same `<title>` ("Ações do
+  HighLevel — Guia Magnetic Funnels") and the exact same description —
+  which described **Contact triggers**, not the actions on that page. Google
+  treats near-duplicate title/description across 16 URLs as duplicate
+  content and tends to index only one of them. Wrote a unique, accurate
+  title + description + keywords + OG/Twitter tags for each of the 16
+  pages, based on that page's real category and action count.
+  `acoes-highlevel-cat15.html` already had unique content; only its stale
+  "Parte 15/15" was corrected to "Parte 15/17" (17 Ações categories exist
+  now).
+- **No `<link rel="canonical">` anywhere.** Added one to all 31 pages
+  (30 category pages + `index.html`), pointing at
+  `https://guia.magneticflows.com/<page>`. This also backstops the
+  duplicate-content issue above going forward.
+- **Sitemap missing 4 pages.** `sitemap.xml` had 27 `<loc>` entries; the
+  4 pages added in the 2026-08-10 round (`guia-highlevel-cat13.html`,
+  `acoes-highlevel-cat15/16/17.html`) were never added. Fixed — now 31/31.
+- **Stale "Parte NN/12" denominator on all 12 original Gatilhos pages.**
+  `guia-highlevel-cat13.html` (added 2026-07-29) correctly says "13/13",
+  but cat01–cat12 still said "/12" in their description/OG/Twitter tags.
+  Corrected to "/13" across all 12.
+
+Not done yet (needs a decision, not code): `og:image` — no page has one,
+so link previews on social/WhatsApp show no image. Needs a real image
+asset before it can be added. Also skipped: JSON-LD structured data —
+lower priority, no blocker, can follow in a later round.
+
+No trigger/action content changed — this is metadata/deploy-surface only.
+`build-search-index.py` confirms 262 entries unchanged; `auto-refine.py
+--check` reports 0 drift.
 ## 2026-08-24 — Content
 **Add tutorial video to Appointment Status trigger (requested)**
 
