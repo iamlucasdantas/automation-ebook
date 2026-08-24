@@ -11,6 +11,13 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-08-24 — Content
+**Add tutorial video to Appointment Status trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Status de Compromisso (Appointment Status)** ·
+  `guia-highlevel-cat03.html` G1, a pedido do usuário.
+
+## 2026-08-24 — Content
 **Add tutorial videos to 2 Pipeline/Opportunity triggers (requested)**
 
 - Vídeo tutorial incorporado logo abaixo da descrição do gatilho
