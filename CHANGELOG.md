@@ -10,6 +10,16 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-24 — Content
+**Add tutorial videos to 2 Pipeline/Opportunity triggers (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Mudança de Estágio no Pipeline (Pipeline Stage Changed)** ·
+  `guia-highlevel-cat04.html` G4, a pedido do usuário.
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Mudança de Status em Oportunidade (Opportunity Status Changed)** ·
+  `guia-highlevel-cat04.html` G3, a pedido do usuário.
+
 ## 2026-08-24 — Content + Automation
 **Checagem de novidades nativas + fix de bug no auto-refine**
 
