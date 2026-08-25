@@ -10,6 +10,30 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-25 — Automation
+**Checagem de novidades nativas (nenhum item novo confirmado)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-08-25--checagem-de-novidades-nativas).
+
+- Nenhum gatilho/ação novo confirmado nesta rodada.
+- 3 itens citados por blogs agregadores como "novos gatilhos 2026"
+  (Review Received, Payment Failed, Form Partially Completed) foram
+  checados: os dois primeiros já estavam cobertos (G16 Avaliação
+  Recebida; filtro Payment Status = Failed dentro de Pagamento
+  Recebido); o terceiro não tem confirmação oficial e não foi aplicado.
+- Candidato **Issue Badge / Badge Issued** parece ter saído de "em
+  desenvolvimento" pra disponível, mas os campos exatos do painel ainda
+  não puderam ser confirmados (doc bloqueada por egress) — segue
+  pendente de validação humana.
+- Candidato **Linear** ganhou artigo de doc dedicado, mas só nomes
+  parciais dos 25 itens (12 gatilhos + 13 ações) puderam ser lidos —
+  ainda insuficiente pra montar mockups com fidelidade real.
+- `index.html`: data de "Última atualização" atualizada para hoje.
+  Nenhuma contagem mudou; `auto-refine.py --check` confirma 0 drift.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

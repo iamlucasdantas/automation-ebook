@@ -242,6 +242,58 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-08-25 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+sem mudança desde 24/08) contra o changelog oficial da HighLevel em busca
+de itens nativos lançados desde a rodada anterior.
+`help.gohighlevel.com` e `ideas.gohighlevel.com` seguem bloqueados por
+egress direto neste ambiente — a checagem usou busca web pra ler o
+conteúdo indiretamente.
+
+### Nenhum item novo confirmado com fidelidade suficiente pra virar mockup
+
+Nenhum gatilho/ação nativo novo (fora dos já catalogados como candidatos)
+apareceu nesta rodada. Três itens que surgiram em blogs agregadores como
+"novos gatilhos 2026" (Review Received, Payment Failed, Form Partially
+Completed) foram checados e **dois já estão cobertos**:
+- **Review Received** → já é o gatilho `guia-highlevel-cat02.html` G16
+  (Nova Avaliação Recebida).
+- **Payment Failed** → não é gatilho próprio; é o valor `Failed` do filtro
+  **Payment Status** dentro do gatilho `guia-highlevel-cat07.html` G2
+  (Pagamento Recebido), já documentado.
+- **Form Partially Completed** → sem confirmação oficial encontrada (nem
+  em help.gohighlevel.com nem no changelog); não aplicado.
+
+Também confirmado que **Associate Records** (ação, já em
+`acoes-highlevel-cat16.html`) e **Google Forms** (já em
+`guia-highlevel-cat13.html`) — citados em buscas como "novidades" — já
+estavam cobertos em rodadas anteriores.
+
+### 🔍 Atualização nos candidatos pendentes (ainda sem mockup)
+- **Issue Badge / Badge Issued** — na rodada de 24/08 a ação "Issue Badge"
+  estava marcada pela HighLevel como "em desenvolvimento". Busca de hoje
+  sugere que já foi lançada (changelog: "Badges can now be issued and
+  used to trigger follow-up actions directly through Workflows"), mas
+  não foi possível confirmar os nomes exatos de campo/filtro do painel
+  (dropdown de Badge, tipo de destinatário, etc.) — `help.gohighlevel.com`
+  bloqueado impede ler o artigo dedicado diretamente. Fica pendente de
+  validação humana antes de montar o painel com fidelidade real.
+- **Linear** — a HighLevel publicou um artigo dedicado
+  ("Linear Integration in HighLevel Workflows Guide", 155000007978) desde
+  a rodada anterior, mas o conteúdo não pôde ser lido (egress bloqueado) e
+  a busca só devolve nomes parciais de 3 dos 12 gatilhos e 2 das 13 ações.
+  Ainda insuficiente pra montar os 25 painéis com fidelidade — mesma
+  decisão da rodada de 24/08: precisa de rodada dedicada com acesso ao
+  artigo completo.
+- **Monday.com, Jira, Housecall Pro, Apify, OpenRouter, Manus, Browse AI**
+  — sem novidade encontrada nesta rodada; seguem como candidatos.
+
+Nenhuma mudança de contagem nesta rodada. `index.html` teve apenas a data
+de "Última atualização" atualizada para hoje; `auto-refine.py --check`
+confirma 0 drift e os 262 painéis continuam batendo com
+`search-index.json`.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
