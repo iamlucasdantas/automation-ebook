@@ -10,6 +10,26 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-26 — Automation
+**Rotina de checagem de novidades nativas — nenhum item novo aplicado**
+
+Comparou o guia (87 gatilhos + 175 ações = 262 painéis) contra o
+changelog da HighLevel via WebSearch. Achou 3 candidatos novos não
+rastreados antes (Cal.com, Calendly, Todoist) e uma atualização de status
+do candidato pendente Badge Issued/Issue Badge (agora descrito como
+disponível, não mais "em desenvolvimento"). Nenhum foi aplicado ao guia:
+`WebFetch` está bloqueado para qualquer domínio nesta sessão (não só
+`ideas.gohighlevel.com` como em rounds anteriores — `help.gohighlevel.com`
+e até domínios de controle fora do HighLevel também retornaram bloqueado),
+então não há como confirmar campo a campo sem inventar conteúdo. Detalhes
+e fontes em `AUDIT.md`, "Rodada 2026-08-26". Homepage (`index.html`)
+recontada — "Última atualização: 26 de agosto de 2026" — totais
+inalterados. Também documentado no AUDIT.md: 76 branches
+`claude/friendly-meitner-*` no remoto nunca foram mescladas em `main`,
+inclusive achados de rodadas passadas com mais detalhe (Cal.com, Linear,
+Browse AI) — fica como observação pra revisão humana, fora do escopo
+desta rodada.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

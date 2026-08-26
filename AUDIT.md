@@ -242,14 +242,69 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-08-26 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então.
+
+### ⚠ Regressão de ambiente nesta rodada
+Rodadas anteriores conseguiam pelo menos ler `help.gohighlevel.com`
+diretamente (só `ideas.gohighlevel.com` estava bloqueado). Nesta rodada o
+`WebFetch` foi testado contra `help.gohighlevel.com`,
+`help.leadconnectorhq.com` (espelho do mesmo conteúdo), um wiki de
+terceiros e até `en.wikipedia.org` como controle — **todos bloqueados
+pelo proxy de egress da sessão**, não só os domínios da HighLevel. Ou
+seja: nesta rodada só deu pra usar resultados agregados de busca
+(WebSearch), sem acesso a nenhuma página completa. Isso reduz ainda mais
+a confiança pra aplicar qualquer achado com fidelidade de campo — ver
+nota no método de verificação no topo deste arquivo.
+
+### 🔍 Candidatos novos encontrados, NÃO aplicados (precisam de validação humana)
+- **Cal.com** — Workflow Actions & Triggers (Premium). Pelos snippets de
+  busca: gatilhos Booking Created/Rescheduled/Cancelled/Completed com
+  filtros opcionais (Event Type, Host, Location); ações Create/Cancel/
+  Reschedule/Find Booking — Create Booking pede Event Type, Attendee
+  Name, Attendee Email, Start Time (+ Attendee Timezone opcional, formato
+  IANA). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers)
+- **Calendly** — Workflow Actions & Triggers. Achado nesta rodada, artigo
+  oficial dedicado existe mas conteúdo não confirmado por falta de
+  acesso direto. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008110-calendly-workflow-actions-triggers)
+- **Todoist** — conector nativo com 3 gatilhos por polling a cada 5min
+  (New incomplete task, New completed task, New project) + 12 ações
+  cobrindo ciclo de vida de tarefa, comentários e projeto. Já existia
+  desde ~26/07/2026 — não é novidade desta rodada, é um item que passou
+  batido nas rodadas anteriores.
+- **Badge Issued / Issue Badge** — o changelog oficial agora descreve os
+  dois como disponíveis ("Badge automation is now available in
+  Workflows"), sem mais o aviso de "em desenvolvimento" que constava na
+  rodada de 2026-08-24. Ainda sem artigo dedicado com os campos exatos
+  de filtro/config — segue pendente.
+
+Nenhum dos quatro foi aplicado: sem acesso direto às docs pra confirmar
+nome exato de campo/tipo/opções, e a política deste guia é não inventar
+conteúdo de painel. Totais continuam 87 gatilhos + 175 ações = 262.
+
+### 🧹 Observação de manutenção (fora do escopo desta rodada de conteúdo)
+`git branch -r` no repositório mostra **76 branches `claude/friendly-
+meitner-*`** no remoto, nenhuma delas mesclada em `main` (confirmado com
+`git merge-base --is-ancestor`). São rodadas anteriores desta mesma
+rotina automática — inclusive achados já pesquisados a fundo em rodadas
+passadas (Cal.com com detalhe de campo, Linear, Browse AI, Mistral já
+aplicado via outro caminho, Client Portal File Uploaded, Community Group
+Join Requested) que nunca chegaram a esta branch principal. Não mexi
+nelas — só registro pra quem for revisar decidir o que aproveitar antes
+que fiquem obsoletas ou conflitem entre si.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, Cal.com, Calendly,
+   Todoist) — confirmar nome real do campo / da action antes de qualquer
+   um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
