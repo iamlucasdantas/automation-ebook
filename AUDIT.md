@@ -242,14 +242,68 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-08-27 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `help.gohighlevel.com` e
+`ideas.gohighlevel.com` seguem bloqueados por egress direto neste
+ambiente — checagem feita via busca web (snippets indiretos), sem acesso
+ao HTML completo das páginas oficiais.
+
+### ✅ Aplicado nesta rodada
+Nenhum. Nada encontrado com detalhe de campo confirmado o suficiente pra
+montar mockup fiel — ver candidatos abaixo. Totais permanecem
+**87 gatilhos + 175 ações = 262 entries**; `index.html` não foi alterado.
+
+### 🔎 Itens verificados que JÁ estavam cobertos (sem ação necessária)
+- **Payment Failed** (gatilho) — já existe (`acoes-highlevel-cat02.html` A24
+  / referência em `acoes-highlevel-cat08.html` A5).
+- **New Review Received** (gatilho) — já existe (`guia-highlevel-cat02.html` G16).
+- **New Affiliate Sales** (gatilho) — já existe (`guia-highlevel-cat05.html` G3).
+
+### 🚫 Fora do escopo do guia
+- **"Trigger Automation in Bulk for Companies & Custom Objects"** (changelog
+  oficial, 26/08/2026) — não é um novo tipo de nó de trigger/action; é um
+  recurso de enrollment em massa direto da list view (selecionar vários
+  registros de Company/Custom Object e rodar um workflow existente neles).
+  Não se aplica à estrutura do guia (que documenta nós do Workflow
+  Builder).
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **Form Partially Completed** (gatilho) — citado por múltiplas fontes
+  como um dos 3 novos gatilhos nativos de 2026 ("dispara quando alguém
+  preenche parte de um formulário mas não envia"), junto com Review
+  Received e Payment Failed (esses dois já cobertos). Não achei o artigo
+  oficial dedicado pra confirmar nome exato do campo/filtro — proxy bloqueia
+  acesso direto a `help.gohighlevel.com`.
+- **Cal.com** (gatilhos nativos) — cobertura do ciclo de agendamento:
+  created, rescheduled, cancelled, ended, recording ready (onde suportado).
+  [Changelog](https://ideas.gohighlevel.com/changelog/calcom-workflow-actions-triggers)
+- **Todoist** (gatilhos + ações nativos) — 3 gatilhos por polling (New
+  incomplete task, New completed task, New project) + 12 ações (ciclo de
+  vida de tarefa, comentários, criação de projeto, mover seção,
+  colaboradores). [Changelog](https://ideas.gohighlevel.com/changelog/todoist-workflow-actions-triggers)
+- **Housecall Pro** (integração base) — 2 gatilhos (Job scheduled, Job
+  completed) + 1 ação (Create new customer). Distinto do pacote "more
+  workflow actions & triggers" do Housecall Pro já listado como pendente
+  desde 2026-08-24. [Changelog](https://ideas.gohighlevel.com/changelog/housecall-pro-workflow-action-triggers)
+
+Igual às rodadas anteriores: são integrações/gatilhos nativos reais mas
+sem confirmação de campo exato acessível neste ambiente — não foram
+inventados campos pra nenhum desses. Seguem na fila junto com Browse AI,
+OpenRouter, Manus, Badge Issued, Monday.com, Jira, Linear, Housecall Pro
+(more) e Apify.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, Cal.com, Todoist,
+   Form Partially Completed) — confirmar nome real do campo / da action
+   antes de qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

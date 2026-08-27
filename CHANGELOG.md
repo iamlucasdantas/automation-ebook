@@ -10,6 +10,26 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-27 — Automation
+**Checagem de novidades nativas — nada aplicado, 4 candidatos novos registrados**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos lançados
+desde a rodada de 2026-08-24. Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-08-27--checagem-de-novidades-nativas).
+
+- Confirmado que **Payment Failed**, **New Review Received** e **New
+  Affiliate Sales** já estavam cobertos — nenhuma ação necessária.
+- **Trigger Automation in Bulk for Companies & Custom Objects** (changelog
+  oficial 26/08/2026) é um recurso de enrollment em massa pela list view,
+  não um novo tipo de nó — fora do escopo do guia.
+- 4 candidatos novos encontrados, **não aplicados** (sem confirmação de
+  campo exato — `help.gohighlevel.com` e `ideas.gohighlevel.com` seguem
+  bloqueados por egress direto neste ambiente): **Form Partially
+  Completed** (gatilho), **Cal.com** (gatilhos), **Todoist** (gatilhos +
+  ações), **Housecall Pro** integração base (2 gatilhos + 1 ação).
+- Nenhuma mudança em `deploy-highlevel/*.html` — contagem, mockups e data
+  de "Última atualização" no `index.html` permanecem inalterados.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
