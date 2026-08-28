@@ -10,6 +10,24 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-28 — Content + Automation
+**Checagem de novidades nativas**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos lançados
+desde a rodada de 2026-08-24. Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-08-28--checagem-de-novidades-nativas).
+
+- **If/Else** (`acoes-highlevel-cat04.html` A1): seletor de **Field** agora
+  também aceita **Opportunity Owner** e **Opportunity Followers** como
+  condição. Não muda a contagem (enhancement a item já existente).
+- 1 candidato novo encontrado mas **não aplicado** — precisa de validação
+  humana de campos antes de virar mockup: **Conversation SLA** (gatilho,
+  Due Soon/Overdue/Dismissed).
+- Avaliado e descartado: "Bulk workflow trigger from list view" (26/08) —
+  não é um nó novo do Workflow Builder, é uma forma alternativa de disparar
+  um workflow já existente a partir da list view.
+- `index.html`: data de "Última atualização" recontada para hoje.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

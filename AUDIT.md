@@ -242,14 +242,59 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-08-28 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. Tanto `help.gohighlevel.com`
+quanto `ideas.gohighlevel.com` estão bloqueados por egress direto neste
+ambiente — a checagem usou busca web pra ler o conteúdo indiretamente.
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente, sem novo total)
+1. **If/Else** (`acoes-highlevel-cat04.html` A1) — desde 18/06/2026 o
+   seletor de **Field** passou a incluir **Opportunity Owner** e
+   **Opportunity Followers** como opções de condição (antes não davam pra
+   usar em lógica condicional). Nota explicativa adicionada ao texto da
+   ação. [Changelog oficial](https://ideas.gohighlevel.com/changelog/opportunity-owners-followers-in-if-else-conditions)
+
+Não muda a contagem de gatilhos/ações — é melhoria em campo de item já
+existente, não item novo.
+
+### 🔍 Candidato novo encontrado, NÃO aplicado (precisa de validação humana)
+- **Conversation SLA** (gatilho) — dispara quando a SLA de uma conversa
+  fica Due Soon / Overdue / é dispensada manualmente (SLA Dismissed).
+  Filtros mencionados: message channel, tags, owner, custom fields, mais
+  um toggle "Avoid Repeated Triggers" (evita disparo repetido na mesma
+  conversa dentro de 24h). Fonte: [changelog](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+  e [doc de setup de SLA](https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas) —
+  mas como as duas fontes estão bloqueadas por egress neste ambiente, só
+  temos os campos via resumo de busca, não a página oficial completa.
+  Fica pendente até alguém confirmar o texto exato dos labels/opções
+  direto no HL antes de virar mockup (categoria natural: cat02
+  Comunicação, ao lado de User Replied / Inbound Email).
+
+### 🚫 Não é item novo do builder (avaliado e descartado)
+- **Bulk workflow trigger from list view** (26/08/2026) — permite
+  selecionar vários registros de Company/Custom Object na list view e
+  disparar um workflow existente em massa. Não é um novo tipo de nó
+  Trigger/Action dentro do canvas do Workflow Builder — é uma forma
+  alternativa de invocar um workflow já existente a partir da lista.
+  Fora do escopo deste guia (que documenta os nós do builder).
+
+Candidatos ainda pendentes de rodadas anteriores (sem novidade nesta
+checagem): Browse AI, OpenRouter, Manus (desde 2026-07-29); Badge Issued,
+Monday.com, Jira, Linear (25 itens), Housecall Pro, Apify (desde
+2026-08-24).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, Conversation SLA) —
+   confirmar nome real do campo / da action antes de qualquer um virar
+   mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
