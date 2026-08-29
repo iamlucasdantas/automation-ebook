@@ -10,6 +10,33 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-29 — Automation
+**Scheduled native-features check: no new trigger/action confirmed, homepage date bumped**
+
+Scheduled audit compared the guide (87 gatilhos + 175 ações = 262 painéis)
+against the HighLevel changelog for anything native shipped since the
+2026-08-24 round. `help.gohighlevel.com` and `ideas.gohighlevel.com` are
+still blocked by direct egress in this environment — checked indirectly
+via web search, same workaround as prior rounds.
+
+- No new trigger/action confirmed this round. Everything found in the
+  2026-08-24→08-29 window was either already covered (New Affiliate
+  Sales, Claude/Gemini AI Agent providers, Custom Object associated-record
+  actions) or not a workflow-builder trigger/action node (bulk list-view
+  workflow triggering, Workflow Settings sender-domain dropdown, WhatsApp
+  stats, multi-role document signing, calendar counting mode).
+- New candidate logged for human validation: **Company Created** trigger
+  + the wider **Custom Object / Company Based Workflow Actions & Triggers**
+  family — only usable on Company-based/Custom-Object-based workflows
+  (the guide only covers Contact-based workflows today). Not applied —
+  needs a dedicated round to confirm exact fields, same treatment as the
+  still-pending Linear/Browse AI/Monday.com/Jira/Housecall Pro/Apify/Manus/
+  OpenRouter/Badge Issued candidates. Full detail in
+  [AUDIT.md](./AUDIT.md#-rodada-2026-08-29--checagem-de-novidades-nativas).
+- `deploy-highlevel/index.html` "Última atualização" bumped to 29 de
+  agosto de 2026. Trigger/action totals (87/175/262) unchanged — nothing
+  confirmed to add.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

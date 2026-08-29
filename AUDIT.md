@@ -242,14 +242,66 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-08-29 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `ideas.gohighlevel.com` e
+`help.gohighlevel.com` seguem bloqueados por egress direto neste
+ambiente — a checagem usou busca web para ler o conteúdo indiretamente.
+
+### ✅ Nenhum item novo confirmado nesta rodada
+
+Itens do changelog do período 2026-08-24 a 2026-08-29 revisados e
+descartados por já estarem cobertos ou não serem nós de trigger/action
+do workflow builder:
+- **New Affiliate Sales** (trigger) — já existe (`guia-highlevel-cat05.html`,
+  adicionado em rodada anterior).
+- **Manage Associated Custom Object Records** (ações) — já coberto pelas
+  9 ações de `acoes-highlevel-cat16.html` (Create/Update/Clear Associated
+  Record, Add/Remove from Workflow, Associate Records).
+- **Claude e Gemini em workflows** — já aplicado na rodada 2026-08-24 (AI
+  Agent Model Provider).
+- **Trigger Automation in Bulk for Companies & Custom Objects** (26/08) —
+  feature de lista (rodar workflow em massa em registros selecionados),
+  não é um novo nó de trigger dentro do Workflow Builder.
+- **Sender domain dropdown em Workflow Settings** (28/08) — configuração
+  de nível de workflow, não um node de action.
+- **WhatsApp Workflow Statistics**, **Multi-Role Document Signing**,
+  **Calendar counting mode** — features de produto sem novo nó de
+  trigger/action nativo associado.
+
+### 🔍 Candidato novo encontrado, NÃO aplicado (precisa validação humana)
+- **Company Created** (trigger) + família **Custom Object / Company Based
+  Workflow Actions & Triggers** — doc oficial dedicado
+  ([Company Created](https://help.gohighlevel.com/support/solutions/articles/155000006609-workflow-trigger-company-created),
+  [visão geral](https://help.gohighlevel.com/support/solutions/articles/155000006701-custom-object-and-company-based-workflow-actions-triggers)).
+  Disponível só quando o tipo do workflow é Company-based ou Custom
+  Object-based (diferente dos workflows Contact-based que o guia cobre
+  hoje). É uma família inteira nova (Created/Updated/Deleted por tipo de
+  objeto + ações correspondentes), não um item isolado — precisa de
+  rodada dedicada pra levantar os campos exatos de filtro antes de montar
+  mockup, igual ao caso do Linear (rodada 2026-08-24). Não foi possível
+  confirmar se é lançamento recente ou gap antigo do guia (guia cobre só
+  workflows Contact-based até agora).
+
+Nenhum total mudou nesta rodada: segue **87 gatilhos + 175 ações = 262
+entries**.
+
+Backlog acumulado de candidatos pendentes de validação humana (sem
+mudança desde 2026-08-24): Browse AI, OpenRouter, Manus, Badge Issued,
+Monday.com, Jira, Linear, Housecall Pro, Apify — mais o Company/Custom
+Object Based Workflows encontrado nesta rodada.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, Company/Custom Object
+   Based Workflows) — confirmar nome real do campo / da action antes de
+   qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
