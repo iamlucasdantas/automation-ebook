@@ -10,6 +10,30 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-30 — Automation
+**Checagem de novidades nativas — nenhuma nova encontrada**
+
+Rodada de auditoria comparou o guia (87 gatilhos + 175 ações = 262
+painéis) contra `help.gohighlevel.com` e o changelog oficial desde a
+rodada de 2026-08-24. Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-08-30--checagem-de-novidades-nativas).
+
+- Nenhum gatilho/ação nativo novo lançado nos últimos ~6 dias cruzou a
+  barra de confirmação. Dois itens do changelog da semana (disparo em
+  massa pra Companies/Custom Objects via list view, dropdown de Sender
+  Domain em Workflow Settings) são features de produto reais mas não são
+  nós de Trigger/Action do Workflow Builder — fora do escopo do guia.
+- `help.gohighlevel.com` e `ideas.gohighlevel.com` estavam bloqueados por
+  egress direto neste ambiente (diferente de rodadas anteriores) — a
+  checagem rodou só com resumos do WebSearch, o que manteve os
+  candidatos pendentes (Badge Issued/Issue Badge, Monday.com, Jira,
+  Linear, Housecall Pro, Apify, Browse AI, OpenRouter, Manus) como
+  candidatos — nenhum tinha nomes de campo confirmados via fonte
+  primária direta.
+- Totais e "Última atualização" do `index.html` **não mudaram** — nada
+  de conteúdo foi tocado nesta rodada.
+- `auto-refine.py --check`, `build-search-index.py` e `build-audit.py`
+  confirmam 0 drift (262 entries, já sincronizado).
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

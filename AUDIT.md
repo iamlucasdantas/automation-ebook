@@ -242,6 +242,82 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-08-30 — Checagem de novidades nativas
+
+Rotina comparou o guia (87 gatilhos + 175 ações = 262 painéis, estado da
+rodada 2026-08-24) contra `help.gohighlevel.com` e o changelog oficial em
+busca de itens nativos lançados desde então. Diferente das rodadas
+anteriores, **`help.gohighlevel.com` e `ideas.gohighlevel.com` estavam
+ambos bloqueados por egress direto neste ambiente** (inclusive via
+WebFetch em URLs específicas de artigo, que normalmente funciona) — toda
+a checagem desta rodada rodou só com resumos do WebSearch, sem acesso ao
+HTML original das páginas.
+
+Nenhum gatilho/ação nativo novo (não coberto ainda) foi encontrado desde
+2026-08-24. Dois itens reais apareceram no changelog da semana mas **não
+são nós de Trigger/Action do Workflow Builder** — ficam fora do escopo do
+guia (que cataloga apenas nós clicáveis no builder):
+- **Trigger Automation in Bulk for Companies & Custom Objects**
+  (26/08/2026) — recurso de disparo manual em massa a partir da list
+  view de Companies/Custom Objects, não um novo tipo de nó de gatilho.
+- **Sender domain dropdown em Workflow Settings** (28/08/2026) —
+  configuração de nível de workflow (domínio de envio de email), não uma
+  action nova.
+
+Os candidatos pendentes de rodadas anteriores foram checados de novo —
+grep em `deploy-highlevel/*.html` confirma que nenhum já está coberto sob
+outro nome. Nenhum cruzou a barra de confirmação (doc oficial com nomes
+exatos de campo, verificado diretamente — não resumo de busca) mesmo
+onde o WebSearch trouxe mais detalhe do que antes:
+
+- **Badge Issued (gatilho) / Issue Badge (ação)** — sem mudança. A ação
+  dedicada **Issue Badge** continua "em desenvolvimento" pela própria
+  HighLevel; o workaround documentado continua sendo **Issue Certificate**
+  selecionando um template de Badge (já coberto em
+  `acoes-highlevel-cat14.html` A1). O gatilho **Badge Issued** existe
+  ("dispara quando um badge é emitido, permite enviar mensagem/email,
+  atualizar contato ou iniciar outra automação") mas sem artigo dedicado
+  com os filtros exatos.
+- **Monday.com** — ações agora nomeadas por um resumo de busca (Create
+  New Board / Group / Column / Item / Subitem, Update Item, Update
+  Subitem, Get Board Items, Find Items by Column Value, Find Items by
+  ID), mas sem os campos de cada uma. **Gatilhos continuam "coming soon"
+  — ainda não lançados.** [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007216-monday-com-actions-and-triggers-in-workflows)
+- **Jira** — ações descritas em termos genéricos (create/update/link/
+  comment/watch/attach/log work/move to sprint), sem lista fechada de
+  nomes exatos nem campos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers)
+- **Linear** — confirmado 12 gatilhos + 13 ações (issues, projects,
+  customers, customer needs, initiatives, documents), mas ainda sem os
+  25 nomes exatos individuais. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows)
+- **Housecall Pro** — escopo mais claro agora: partiu de 2 gatilhos
+  (Job Scheduled, Job Completed) + 1 ação (Create New Customer) e cresceu
+  pra **9 gatilhos + 14 ações** cobrindo jobs/estimates/leads/customers,
+  com gatilhos rodando por polling (criação a cada 5 min, agendamento/
+  conclusão/cancelamento a cada 10 min). Campo-a-campo de cada um dos 23
+  itens ainda não levantado.
+- **Apify** — ações/gatilho com nomes mais claros agora (trigger
+  "Finished Actor Run"; ações "Run A Task", "Scrape Single URL", "Find
+  Last Actor Run", "Find Last Task Run", "Fetch Dataset Items"), mas sem
+  os parâmetros exatos de cada campo de input. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-workflows)
+- **Browse AI** — sem mudança desde 2026-07-29 (1 gatilho + 4 ações,
+  filtros Robot/Select Operator já identificados, mas não confirmados
+  campo-a-campo na página real).
+- **OpenRouter** — pendente desde 2026-07-29, ainda sem doc dedicada
+  encontrada com campos exatos (aparece listado como "OpenRouter Generate
+  Response" ao lado de GPT/Mistral, mas nenhum artigo próprio apareceu
+  na busca).
+- **Manus** — pendente desde 2026-07-29, sem novidade encontrada.
+
+Nenhum campo foi inventado ou chutado pra nenhum desses. Todos ficam como
+candidatos pra próxima rodada, idealmente com acesso direto restaurado a
+`help.gohighlevel.com`/`ideas.gohighlevel.com` pra confirmar os nomes de
+campo exatos antes de montar qualquer mockup.
+
+**Resultado: 0 entradas adicionadas nesta rodada.** Totais inalterados:
+**87 gatilhos + 175 ações = 262 painéis, 210 mockups interativos**.
+`auto-refine.py --check`, `build-search-index.py` e `build-audit.py`
+confirmam 0 drift (262 entries, já sincronizado).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
