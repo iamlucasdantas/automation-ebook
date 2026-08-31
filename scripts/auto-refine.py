@@ -44,6 +44,7 @@ HAND_CRAFTED = {
     os.path.join(ROOT, 'guia-highlevel-cat10.html'),
     os.path.join(ROOT, 'guia-highlevel-cat11.html'),
     os.path.join(ROOT, 'guia-highlevel-cat12.html'),
+    os.path.join(ROOT, 'guia-highlevel-cat13.html'),
     os.path.join(ROOT, 'acoes-highlevel-cat01.html'),
     os.path.join(ROOT, 'acoes-highlevel-cat02.html'),
     os.path.join(ROOT, 'acoes-highlevel-cat03.html'),
@@ -58,6 +59,9 @@ HAND_CRAFTED = {
     os.path.join(ROOT, 'acoes-highlevel-cat12.html'),
     os.path.join(ROOT, 'acoes-highlevel-cat13.html'),
     os.path.join(ROOT, 'acoes-highlevel-cat14.html'),
+    os.path.join(ROOT, 'acoes-highlevel-cat15.html'),
+    os.path.join(ROOT, 'acoes-highlevel-cat16.html'),
+    os.path.join(ROOT, 'acoes-highlevel-cat17.html'),
     # cat03 hand-rewritten (incl. the new Send Conversion to Meta+Google entry)
     # is implicit; both acoes-cat03 and acoes-cat04 were rewritten above.
 }
