@@ -10,6 +10,39 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-08-31 — Content
+**Checagem de novidades nativas: +1 ação (OpenRouter) + fix de drift no cat05**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `help.gohighlevel.com` e o changelog oficial da HighLevel em busca de
+itens nativos lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-08-31--checagem-de-novidades-nativas).
+
+- **Ação — OpenRouter (Generate Response)** (`acoes-highlevel-cat05.html`
+  A11): conecta o workflow a mais de 300 modelos de IA via API key própria
+  da OpenRouter — Connect OpenRouter, Model Selection, System Prompt,
+  Prompt, Temperature/Max Tokens/Output Format. Resolve o candidato
+  pendente desde 2026-07-29.
+- 🐛 **Fix de drift pré-existente**: `acoes-highlevel-cat05.html` já tinha
+  10 ações reais no HTML (não 8) desde que A9/AI Translate e A10/AI
+  Decision Maker foram implementadas numa rodada passada — hero-stat,
+  section label, meta tags e rodapé da própria página nunca foram
+  atualizados, e o card da categoria em `index.html` ainda dizia "7 ações".
+  `search-index.json` sempre esteve correto (gerado varrendo o HTML real),
+  então o total do site nunca esteve errado — só os labels manuais dentro
+  da página e o card da home. Corrigido junto com a adição da A11, agora
+  todos os lugares dizem 11. Também corrigida uma tag `<a>` mal-fechada no
+  side-nav (item 08 aninhava o item 09 dentro do próprio link).
+- 9 candidatos encontrados mas **não aplicados** (campos exatos ainda sem
+  confirmação): Calendly e HubSpot (achados novos), Basecamp (achado novo,
+  sem campo nenhum ainda), Browse AI, Manus, Monday.com, Jira, Linear (25
+  itens), Housecall Pro, Apify (Browse AI/Monday/Jira/Linear/Housecall Pro
+  com mais detalhe de contagem que na rodada anterior, mas ainda sem schema
+  de campo item-a-item).
+- Totais atualizados: **87 gatilhos + 176 ações = 263 painéis** (mockups
+  interativos: 210 → 211). `index.html`: data de "Última atualização"
+  recontada para hoje.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
