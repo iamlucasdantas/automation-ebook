@@ -242,14 +242,123 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-01 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra `help.gohighlevel.com` e o changelog
+oficial da HighLevel em busca de itens nativos lançados/atualizados desde
+então. `ideas.gohighlevel.com` segue bloqueado por egress direto neste
+ambiente — a checagem usou busca web pra ler o conteúdo do changelog e dos
+artigos de `help.gohighlevel.com` indiretamente.
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+1. **Gatilho — Solicitação de Entrada no Grupo (Requested to Join Group)**
+   · `guia-highlevel-cat11.html` G10. Dispara quando um usuário envia um
+   pedido de entrada num grupo da comunidade com acesso por solicitação —
+   antes de qualquer aprovação/rejeição (diferente do já existente G7
+   "Community Group Join Request Rejected", que dispara só na rejeição).
+   Filtro principal **Group** (obrigatório) + filtros dinâmicos por
+   **Membership Question Responses** (cada pergunta de admissão
+   configurada pro grupo vira um campo de filtro próprio). Caso de uso
+   oficial: passar a resposta por um prompt de IA pra triagem de spam
+   antes do If/Else decidir aprovar ou encaminhar pra revisão manual.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008439-automate-group-join-requests-with-workflows) ·
+   [Changelog](https://ideas.gohighlevel.com/changelog/communities-smarter-join-requests-with-workflow-automation)
+
+Totais atualizados: **88 gatilhos + 175 ações = 263 painéis** (homepage,
+`guia-highlevel-cat11.html` e `search-index.json` já regenerados).
+
+Conferido e **não** alterado — o outro trigger do mesmo artigo-irmão
+"Communities Workflow Triggers for Posts, Comments, Requests, and Events"
+([doc](https://help.gohighlevel.com/support/solutions/articles/155000008289-communities-workflow-triggers-for-posts-comments-requests-and-events))
+cobre join-request-rejeitada/post/comentário/event-registration — os 4 já
+existem no guia (G5-G9), nada novo ali.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+Integrações nativas novas encontradas nesta rodada — múltiplos sub-itens
+cada, pedem confirmação humana de campos antes de virar mockup:
+- **Klaviyo** — 4 gatilhos de polling (New Event, New Profile, Profile
+  Added to List, Profile Added to Segment, a cada 5 min) + 17 ações
+  cobrindo ciclo de vida de profile (create/update/find/subscribe/
+  unsubscribe), listas, segmentos, tags e envio de campanha. Premium, OAuth.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008018-klaviyo-workflow-actions-triggers)
+- **Calendly** — 5 gatilhos (bookings, cancelamento por invitee/host,
+  no-show, routing-form; 4 instantâneos + 1 via polling a cada 5 min) + 9
+  ações (criar reunião, booking, find/cancel event, marcar no-show,
+  contact create/find/update, user lookup). Premium, OAuth.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008110-calendly-workflow-actions-triggers)
+- **Cal.com** — gatilhos/ações nativos (integração irmã do Calendly).
+  Campos não detalhados ainda nesta rodada.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers)
+- **HubSpot** — 1 gatilho (New Contact Created) + ações (Create Contact,
+  Find Contact, Create Association a Company/Deal/Ticket, entre outras).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007955-hubspot-workflow-actions-trigger)
+
+### 🔁 Atualizações nos candidatos pendentes de rodadas anteriores
+Sem novo item confirmado o suficiente pra virar mockup, mas vale registrar
+o que mudou desde 2026-08-24 (a pedido, checagem rápida sem re-pesquisar
+do zero):
+- **Linear** — agora tem doc dedicada com nomes reais dos gatilhos: **New
+  Issue**, **Updated Issue**, **New Issue Comment**, **New Project** (dos
+  12 gatilhos + 13 ações totais). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows) —
+  promovível, mas ainda faltam os ~21 itens restantes documentados.
+- **Monday.com** — doc dedicada agora lista ações concretas: Create New
+  Board/Group/Column/Item/Subitem, Update Item/Subitem, Archive Board/
+  Group, Delete Item/Group, Get Board Items, Find Items by Column
+  Value/by ID. Gatilhos aparecem como "coming soon" na própria doc — ainda
+  não lançados. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007216-monday-com-actions-and-triggers-in-workflows)
+- **Jira** — doc dedicada agora existe: campo **Cloud Site** obrigatório
+  em toda ação/gatilho, ações create/update/link/comment/watch/attach
+  files/log work/move to sprint. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers)
+- **Apify** — doc dedicada agora existe: trigger **"Finished Actor Run"**
+  (dispara quando um actor termina) + ação **"Run A Task"** (roda uma
+  Apify task salva). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-workflows)
+- **Housecall Pro** — doc dedicada agora existe: 2 gatilhos concretos
+  (**Job Scheduled** — novo agendamento/reagendamento; **Job Completed** —
+  job marcado como concluído, ambos filtráveis por cliente/tag/técnico) +
+  1 ação de criar cliente (First Name/Last Name obrigatórios; Email/
+  Company/Mobile Number/Home Number opcionais). Auth via API key própria.
+  [Changelog](https://ideas.gohighlevel.com/changelog/housecall-pro-workflow-action-triggers)
+- **Badge Issued** — sem atualização; segue sem artigo dedicado com campos
+  exatos de filtro.
+- **Browse AI, OpenRouter, Manus** — sem atualização encontrada nesta
+  rodada (docs seguem as mesmas de fevereiro/julho de 2026).
+
+Nenhum desses foi promovido a mockup nesta rodada — mesmo os que ganharam
+doc dedicada com campos mais concretos (Housecall Pro, Apify) ainda somam
+múltiplos sub-itens e pedem confirmação humana antes da montagem com
+fidelidade real, seguindo a mesma régua das rodadas anteriores.
+
+### 🧐 Verificado e descartado (fora de escopo do guia)
+- **"Trigger Automation in Bulk for Companies & Custom Objects"**
+  (changelog 26/08/2026) — é um recurso de disparo manual em massa a
+  partir da list view (seleciona vários registros de Company/Custom
+  Object e roda um workflow já existente neles), não um novo node de
+  trigger/action dentro do Workflow Builder. Não se aplica ao inventário
+  deste guia. [Changelog](https://ideas.gohighlevel.com/changelog/trigger-automation-in-bulk-for-companies-custom-objects)
+- **Python no Custom Code**, **Sender domain dropdown** (Workflow
+  Settings) e **criação de Certificado via prompt de IA** — são melhorias
+  a features/telas já existentes (Custom Code Action, configurações
+  gerais de workflow, tela de criação de Certificate), não itens novos de
+  trigger/action pro inventário.
+- **Review Received** e **Payment Failed** — já cobertos no guia (cat02
+  G16 e cat08 G... via "Payment Failed" respectivamente); nenhuma
+  mudança de campo encontrada.
+- **Form Partially Completed** — mencionado em blogs de terceiros como
+  gatilho 2026, mas nenhum artigo oficial em `help.gohighlevel.com` com o
+  nome exato/campos foi encontrado nesta rodada. Fica como candidato
+  fraco — não logado como pendente formal por falta de fonte oficial
+  (nem changelog, nem doc) confirmando a existência do item.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, Klaviyo, Calendly,
+   Cal.com, HubSpot) — confirmar nome real do campo / da action antes de
+   qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

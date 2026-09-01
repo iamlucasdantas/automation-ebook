@@ -10,6 +10,38 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-01 — Content
+**Checagem de novidades nativas: +1 gatilho de Comunidades**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `help.gohighlevel.com` e o changelog oficial da HighLevel em busca
+de itens nativos lançados/atualizados desde a rodada de 2026-08-24.
+Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-09-01--checagem-de-novidades-nativas).
+
+- **Adicionado**: gatilho **Solicitação de Entrada no Grupo (Requested to
+  Join Group)** · `guia-highlevel-cat11.html` G10 — dispara quando um
+  usuário envia pedido de entrada num grupo com acesso por solicitação,
+  antes de qualquer aprovação/rejeição. Filtro **Group** + filtros
+  dinâmicos por resposta às perguntas de admissão do grupo.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008439-automate-group-join-requests-with-workflows)
+- Novos totais: **88 gatilhos + 175 ações = 263 painéis**. `index.html`
+  (hero-stats, tab-counts, section-labels, meta description/OG/Twitter),
+  `guia-highlevel-cat11.html` (side-nav, hero-stats, footer) e
+  `search-index.json` atualizados. `AUDIT-TABLE.md` regenerado.
+- **Candidatos novos encontrados, não aplicados** (integrações
+  multi-item, precisam de validação humana): Klaviyo (4 gatilhos + 17
+  ações), Calendly (5 gatilhos + 9 ações), Cal.com, HubSpot.
+- **Candidatos pendentes de rodadas anteriores** (Linear, Monday.com,
+  Jira, Apify, Housecall Pro) agora têm doc oficial dedicada com campos
+  mais concretos — ainda não promovidos a mockup. Badge Issued, Browse
+  AI, OpenRouter e Manus seguem sem atualização.
+- Verificado e descartado por estar fora de escopo do guia: o recurso de
+  disparo manual em massa "Trigger Automation in Bulk for Companies &
+  Custom Objects" (não é um node de trigger/action do Workflow Builder).
+
+`auto-refine.py --check` reporta 0 drift; `validate-mockups.js` passou
+limpo nas páginas tocadas.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 263,
   "items": [
     {
       "id": "g1",
@@ -1173,6 +1173,21 @@
       "description": "Dispara quando um novo comentário é adicionado a uma publicação do grupo. Permite reagir a interações específicas dentro da comunidade.",
       "keywords": "novo comentário no grupo community group new comment",
       "href": "guia-highlevel-cat11.html#g9"
+    },
+    {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Solicitação de Entrada no Grupo",
+      "en": "Requested to Join Group",
+      "category": "Eventos de Grupo",
+      "tags": [
+        "Tempo real",
+        "Moderação",
+        "Novo"
+      ],
+      "description": "Dispara no momento em que um usuário envia um pedido de entrada em um grupo da comunidade — antes de qualquer aprovação ou rejeição. Só existe em grupos configurados com acesso por solicitação (não dispara em grupos de entrada direta).",
+      "keywords": "solicitação de entrada no grupo requested to join group pedido de entrada",
+      "href": "guia-highlevel-cat11.html#g10"
     },
     {
       "id": "g1",
