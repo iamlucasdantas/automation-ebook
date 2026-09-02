@@ -242,6 +242,51 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-02 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `help.gohighlevel.com` e
+`ideas.gohighlevel.com` seguem bloqueados por egress direto neste
+ambiente — a checagem usou busca web pra ler o conteúdo indiretamente,
+sem conseguir abrir as páginas originais.
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente, sem novo total)
+1. **Alterações no Contato** (`guia-highlevel-cat01.html` G2) — o filtro
+   "Campos Nativos" agora também cobre **Endereço (rua)** e **CEP** como
+   campos filtráveis separados (antes só cidade/estado/país apareciam no
+   texto). Nota adicionada à descrição do filtro e ao texto de impacto.
+   Fonte: [Changelog oficial](https://ideas.gohighlevel.com/changelog/contact-changed-trigger-address-fields-added)
+   (data exata não confirmável — página bloqueada; conteúdo confirmado via
+   busca web e por `help.gohighlevel.com/.../workflow-trigger-contact-changed`).
+
+Não muda a contagem de gatilhos/ações — é melhoria em filtro de item já
+existente, não item novo.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **Cal.com** — integração nativa: gatilhos (Booking Created, Rescheduled,
+  Cancelled, Completed) + ações (Create Booking, Cancel Booking,
+  Reschedule Booking, Find Booking). Ações são Premium (consomem
+  créditos). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers)
+- **Fathom** — integração nativa: gatilho "New Recording" (nova gravação
+  de reunião disponível) + ações List Recordings, Fetch Transcript, Fetch
+  Summary. Ações Premium. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007578-fathom-actions-triggers-in-workflows)
+
+Igual às rodadas anteriores, nenhum campo foi inventado pra esses dois —
+sabemos os nomes do gatilho/ações mas não a estrutura exata do painel
+(dropdowns, filtros, campos obrigatórios), então ficam de fora do guia até
+confirmação humana contra a UI real do HL.
+
+Confirmado que **não são novidade desta rodada** (já pendentes desde
+2026-08-24, sem mudança de status): Browse AI, OpenRouter, Manus, Badge
+Issued, Monday.com, Jira, Linear, Housecall Pro, Apify. A rotina não
+encontrou detalhamento novo de campos pra nenhum deles.
+
+O enhancement do gatilho **Opportunity Changed** (operadores Has
+Changed/Has Changed To/Equals) que apareceu nas buscas desta rodada **já
+está no guia** desde antes (ver `guia-highlevel-cat04.html`) — confirmado,
+sem ação necessária.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

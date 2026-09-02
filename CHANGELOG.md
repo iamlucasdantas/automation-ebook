@@ -10,6 +10,25 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-02 — Content + Automation
+**Checagem de novidades nativas (rotina agendada)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-02--checagem-de-novidades-nativas).
+
+- **Alterações no Contato** (`guia-highlevel-cat01.html` G2): nota
+  adicionada sobre os filtros **Endereço (rua)** e **CEP**, agora
+  disponíveis separadamente no gatilho Contact Changed.
+- Não muda a contagem total (enhancement a item já existente).
+- 2 candidatos novos encontrados e registrados como pendentes de validação
+  humana (não aplicados — sem detalhamento de campos ainda): **Cal.com**
+  (4 gatilhos + 4 ações) e **Fathom** (1 gatilho + 3 ações).
+- `search-index.json` regenerado — 262 entries confirmados, sem drift.
+- `index.html`: data de "Última atualização" corrigida pra 2 de setembro
+  de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
