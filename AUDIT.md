@@ -242,14 +242,55 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-03 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) em busca de itens nativos lançados desde
+então. Neste ambiente `help.gohighlevel.com` **e** `ideas.gohighlevel.com`
+estão bloqueados por egress direto (WebFetch) — diferente da rodada
+anterior, desta vez nem o help ficou acessível. A checagem foi feita
+100% via resumos de busca web, o que é suficiente pra *detectar* itens
+mas não pra confirmar campo-a-campo com a fidelidade que o guia exige.
+Por isso, igual às rodadas anteriores com integrações grandes, nenhum
+item novo foi aplicado — só registrado como candidato.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **Calendly** — integração nativa com **5 gatilhos** (booking, cancelamento
+  por convidado, cancelamento por host, no-show, envio de formulário de
+  routing) e **9 ações** (criar reunião avulsa, booking pelo lado do
+  convidado, find/cancel de evento, marcar no-show, criar/buscar/atualizar
+  contato, buscar usuário). Doc oficial:
+  `help.gohighlevel.com/support/solutions/articles/155000008110-calendly-workflow-actions-triggers`.
+  Buscas indicam publicação por volta de meados de 2026 — **mais antiga
+  que a rodada 2026-07-10** e não pega pelas 3 rodadas anteriores. Volume
+  grande (14 itens) — precisa de rodada dedicada com acesso direto ao doc
+  pra levantar os campos exatos de cada gatilho/ação.
+- **Cal.com** — integração nativa com gatilhos de booking (criado,
+  reagendado, cancelado, reunião encerrada, out-of-office, nova gravação)
+  e **4 ações** (Create Booking, Cancel Booking, Reschedule Booking, Find
+  Booking). Doc oficial:
+  `help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers`.
+  Mesma situação do Calendly — item real, mais antigo que a rodada
+  2026-07-10, ainda sem campos confirmados.
+
+Nenhum dos dois é enhancement de item já existente — são integrações
+100% novas pro guia. Ficam na fila junto com os candidatos das rodadas
+anteriores (nenhum dos itens abaixo ganhou doc dedicada nova desde
+2026-08-24, permanecem como estavam):
+Browse AI, OpenRouter, Manus (desde 2026-07-29); Badge Issued, Monday.com,
+Jira, Linear, Housecall Pro, Apify (desde 2026-08-24).
+
+Totais **não mudaram**: continuam 87 gatilhos + 175 ações = 262 entries.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
-   candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   candidatos 🔍 acumulados (Calendly, Cal.com, Browse AI, OpenRouter,
+   Manus, Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify) —
+   confirmar nome real do campo / da action antes de qualquer um virar
+   mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

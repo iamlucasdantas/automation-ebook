@@ -10,6 +10,30 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-03 — Automation
+**Checagem de novidades nativas (rodada semanal)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-03--checagem-de-novidades-nativas).
+
+- Neste ambiente, tanto `help.gohighlevel.com` quanto
+  `ideas.gohighlevel.com` estavam bloqueados por egress direto — a
+  checagem inteira foi feita via busca web indireta, sem acesso aos docs
+  primários.
+- 2 candidatos novos encontrados — **Calendly** (5 gatilhos + 9 ações) e
+  **Cal.com** (gatilhos de booking + 4 ações) — mas **não aplicados**:
+  são integrações reais, porém sem acesso direto ao doc oficial neste
+  round pra confirmar campo-a-campo, e volume grande demais pra
+  arriscar mockup com campos inventados. Ficam na fila de candidatos
+  junto com Browse AI, OpenRouter, Manus, Badge Issued, Monday.com,
+  Jira, Linear, Housecall Pro e Apify (sem novidade nesses desde a
+  rodada anterior).
+- Nenhuma mudança na contagem total (262 continua). `auto-refine.py
+  --check` reporta 0 drift.
+- `index.html`: data de "Última atualização" recontada para hoje.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
