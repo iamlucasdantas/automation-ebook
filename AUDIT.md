@@ -242,14 +242,143 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-04 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então, e reconferiu o status dos
+candidatos pendentes acumulados (Badge Issued/Issue Badge, Monday.com,
+Jira, Linear, Housecall Pro, Apify, Browse AI, OpenRouter, Manus).
+`ideas.gohighlevel.com` e `help.gohighlevel.com` estão bloqueados por
+egress direto neste ambiente (WebFetch retornou `EGRESS_BLOCKED` nos
+dois domínios) — a checagem usou WebSearch pra ler o conteúdo indireto.
+
+### ✅ Adicionado nesta rodada (1 ação nova, fonte oficial confirmada)
+1. **Ação — OpenRouter (Generate Response)** · `acoes-highlevel-cat05.html`
+   A11. Desde a atualização de fevereiro/2026, o OpenRouter ficou
+   disponível como ação nativa de Workflow AI — gateway único pra 300+
+   modelos (OpenAI, Anthropic/Claude, Google/Gemini, Perplexity e outros)
+   usando a própria API key do OpenRouter, com campos claros o bastante
+   pra montar um mockup honesto: **Model** (obrigatório), **Prompt**
+   (obrigatório, aceita variáveis do workflow), **System Prompt**
+   (opcional) e **Output Variable**. Mesmo padrão já usado no mockup da
+   Mistral AI (A8). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+
+   Esse candidato já estava pendente desde a rodada 2026-07-29 — o que
+   mudou foi a publicação do artigo dedicado com os campos exatos.
+
+Totais atualizados: **87 gatilhos + 176 ações = 263 painéis**
+(homepage, `search-index.json` e `AUDIT-TABLE.md` já regenerados).
+
+### 🐛 Drift de contagem corrigido nesta rodada (não era novidade do HL, era bug nosso)
+Ao editar `acoes-highlevel-cat05.html` pra adicionar a A11, encontramos
+que essa página já tinha 10 ações reais no HTML (A9 Tradução com IA e
+A10 Decisor com IA — ambos eram candidatos 🔍 da rodada 2026-07-10 que
+foram aplicados em algum commit posterior sem que o meta/side-nav/hero
+da própria página fossem atualizados). O `<meta>`, side-nav, hero-stat e
+footer da página ainda diziam "8 ações", e o side-nav tinha uma tag
+`<a>` mal fechada (`#a8` nunca fechava antes do `#a9` abrir). Corrigido
+junto com a adição da A11 — agora a página diz corretamente "11 ações"
+em todo lugar e o HTML do side-nav está bem formado.
+
+Também corrigimos o `cat-stat` da Categoria 05 na home (`index.html`),
+que dizia "7 ações" — desatualizado desde antes da própria rodada
+2026-07-10. Contagem por categoria de Ações na home foi conferida
+integralmente contra o HTML real de cada `acoes-highlevel-catNN.html`
+nesta rodada (ver seção seguinte pra o que ainda ficou pendente).
+
+### 🔍 Candidatos reconferidos nesta rodada — ainda NÃO aplicados
+Pra cada um: já existe artigo oficial dedicado (progresso desde a
+rodada 2026-08-24, que só tinha links de changelog), mas os detalhes de
+campo encontrados via WebSearch ainda não são suficientes pra montar
+mockups fiéis de cada sub-item sem inventar rótulo de campo — volume
+grande, precisa de rodada dedicada com confirmação humana ou acesso
+direto ao doc (bloqueado neste sandbox):
+
+- **Badge Issued (gatilho) / Issue Badge (ação)** — **sem mudança de
+  status**. A HighLevel continua descrevendo a ação "Issue Badge" como
+  em desenvolvimento; o workaround oficial recomendado continua sendo a
+  ação **Issue Certificate** já existente
+  (`acoes-highlevel-cat14.html` A1) selecionando um template de Badge.
+  [Doc oficial — workaround](https://help.gohighlevel.com/support/solutions/articles/155000005887-automate-badge-issuance-in-workflows-using-issue-certificate-action-)
+- **Monday.com** — agora tem artigo oficial dedicado
+  ([doc](https://help.gohighlevel.com/support/solutions/articles/155000007216-monday-com-actions-and-triggers-in-workflows)).
+  Ações nativas confirmadas (create board/group/column/item/subitem,
+  update item/subitem, archive board/group, delete item/group, get
+  board items, find items by column value, find items by ID) — mas os
+  **gatilhos ainda estão "Coming Soon"** (não lançados), e os campos
+  exatos de cada uma das ~12 ações (ex.: quais colunas/valores um
+  "Create Item" espera) não vieram detalhados o bastante pra evitar
+  inventar rótulo.
+- **Jira** — agora tem artigo oficial dedicado
+  ([doc](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers)).
+  Confirmado: **2 gatilhos** (issue criada / issue atualizada) + **11
+  ações** (create, update, link, comment, watch, attach, log work, move
+  to sprint, entre outras) via OAuth com Atlassian + filtro "Cloud Site".
+  Contagem exata agora conhecida, mas os campos específicos de cada uma
+  das 13 entradas não.
+- **Linear** — artigo oficial confirmado
+  ([doc](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows)),
+  mesmo volume grande já registrado em 2026-08-24 (12 gatilhos + 13
+  ações instantâneos via webhook nativo do Linear, cobrindo issues,
+  projects, customers, customer needs, initiatives e documents). Ainda
+  sem os 25 nomes exatos + campos de cada item.
+- **Housecall Pro** — a integração ganhou mais detalhe desde 2026-08-24:
+  agora são **9 gatilhos** (Job/Estimate/Lead/Customer Created, Job
+  Scheduled, Job Completed/Finished/Canceled, Estimate Scheduled/
+  Finished) + **14 ações**, com filtro por customer/tag/employee/campo
+  capturado nos gatilhos, e ao menos um campo detalhado (Create Customer
+  exige First Name + Last Name, opcionais Email/Company/Mobile/Home
+  Number). Ainda falta o detalhe de campo das outras ~22 entradas — não
+  o suficiente pra cobrir a integração inteira sem inventar.
+- **Apify** — artigo oficial confirmado
+  ([doc](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-workflows)),
+  mas o WebSearch não trouxe os campos (ex.: nome exato do parâmetro do
+  Actor/input JSON) — mesmo status de 2026-08-24.
+- **Manus** — mesmo artigo já linkado desde 2026-07-29
+  ([doc](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)).
+  Confirmado o padrão geral (task-based: create/update/continue/fetch/
+  delete task, cada task começa com um prompt) mas sem os rótulos
+  exatos de campo de cada uma das ações — sem mudança suficiente pra
+  aplicar.
+- **Browse AI** — mesmo status de 2026-07-29 (1 gatilho + 4 ações,
+  campos ainda não detalhados o bastante).
+
+### 📋 Achados que já existiam no guia (não são gaps)
+Durante a checagem, o changelog geral mencionou "Review Received",
+"Payment Failed" e "Form Partially Completed" como triggers relevantes
+de 2026 — conferimos e **"New Review Received"** já existe como
+`guia-highlevel-cat02.html` G16 e **"Payment Failed"** já existe como
+gatilho em `acoes-highlevel-cat08.html` (referenciado também em mockup
+de `acoes-highlevel-cat02.html`). "Form Partially Completed" não foi
+encontrado com artigo oficial dedicado nesta busca — fica de olho pra
+próxima rodada, sem virar candidato ainda por falta de fonte oficial
+clara.
+
+### ℹ️ Observado mas NÃO corrigido (fora do escopo desta rodada)
+Ao investigar o bug de contagem da cat05, notamos que o `cat-stat`
+("N ações") de **outras 15 das 17 categorias de Ações** na home
+(`index.html`) também está desatualizado em relação à contagem real do
+HTML de cada página — soma real 175→176, soma exibida antes desta
+rodada era 149. Só corrigimos a Categoria 05 (a que editamos). Também
+notamos que o badge visível "Categoria NN/YY" no topo de cada página de
+Ações (`hero-tag`) ainda usa denominador antigo (`/14` em cat01-13,
+`/15` em cat14-17) enquanto o `<meta>` da mesma página já foi corrigido
+pra `/17` numa rodada de SEO anterior (2026-08-24 "Deploy"). Nenhum dos
+dois afeta os totais gerais do guia (87/176/263) — são bugs de exibição
+por categoria, isolados, que pedem uma rodada de manutenção dedicada
+pra recontar e corrigir as 17 páginas de Ações de uma vez, sem risco de
+mexer em conteúdo por engano.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
-   candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   candidatos 🔍 acumulados (Browse AI, Manus, Badge Issued, Monday.com,
+   Jira, Linear, Housecall Pro, Apify) — confirmar nome real do campo /
+   da action antes de qualquer um virar mockup. (OpenRouter já saiu
+   dessa lista — aplicado na rodada 2026-09-04.)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

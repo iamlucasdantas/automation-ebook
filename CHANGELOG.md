@@ -10,6 +10,39 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-04 — Content
+**Checagem de novidades nativas — OpenRouter adicionado, drift de contagem da cat05 corrigido**
+
+- **Ação — OpenRouter (Generate Response)** · `acoes-highlevel-cat05.html`
+  A11. Candidato pendente desde 2026-07-29 que ganhou artigo oficial
+  dedicado com campos claros (Model, Prompt, System Prompt, Output
+  Variable) — mesmo padrão do mockup já existente da Mistral AI (A8).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+- Reconferido o status de todos os outros candidatos pendentes (Badge
+  Issued/Issue Badge, Monday.com, Jira, Linear, Housecall Pro, Apify,
+  Browse AI, Manus) — todos ganharam mais detalhe de doc oficial desde
+  2026-08-24, mas nenhum ainda tem campo exato o bastante em todos os
+  seus sub-itens pra virar mockup sem inventar rótulo. Seguem 🔍
+  pendentes — detalhes em `AUDIT.md`.
+- **Bug de contagem corrigido**: `acoes-highlevel-cat05.html` já tinha
+  10 ações reais no HTML (A9/A10 aplicadas num commit anterior) mas o
+  `<meta>`/side-nav/hero/footer da própria página ainda diziam "8
+  ações", e o side-nav tinha uma tag `<a>` mal fechada. Corrigido junto
+  com a A11 (agora "11 ações" em todo lugar, side-nav válido). O
+  `cat-stat` da Categoria 05 na home também estava desatualizado ("7
+  ações") e foi corrigido pra 11.
+- Totais do guia: **87 gatilhos + 176 ações = 263 painéis** (antes: 87 +
+  175 = 262). `index.html` (hero-stats, tab-count, section-label,
+  cat-stat da Categoria 05, "Última atualização" → 4 de setembro de
+  2026), `search-index.json` e `AUDIT-TABLE.md` regenerados;
+  `auto-refine.py --check` limpo.
+- Nota de manutenção: encontramos (mas não corrigimos, fora do escopo
+  desta rodada) drift de contagem pré-existente nos `cat-stat` de outras
+  15 categorias de Ações na home, e denominador "Categoria NN/YY"
+  desatualizado no `hero-tag` visível das 17 páginas de Ações. Ver
+  `AUDIT.md` (rodada 2026-09-04) para detalhes — fica pra uma rodada de
+  manutenção dedicada.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
