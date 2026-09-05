@@ -10,6 +10,36 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-05 — Content + Automation
+**Checagem de novidades nativas: +1 gatilho (Product Review Submitted) + enhancement no Review Received**
+
+Rotina automática comparou o guia (87 gatilhos + 176 ações = 263 painéis)
+contra `help.gohighlevel.com` e o changelog oficial da HighLevel em busca de
+itens nativos lançados desde a rodada de 2026-08-31. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-05--checagem-de-novidades-nativas).
+
+- **NOVO gatilho — Avaliação de Produto Enviada (Product Review Submitted)**
+  · `guia-highlevel-cat08.html` G4 (categoria Shopify/E-commerce Stores).
+  Dispara no instante em que um cliente envia review de produto na loja
+  HighLevel. Campos confirmados via doc oficial: Global Product, Store
+  Name, Review Rating (1-5★), Review Headline, Review Comment, User
+  Email, User Name. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007386-workflow-trigger-product-review-submitted-for-e-commerce-stores-)
+- **Nova Avaliação Recebida** (`guia-highlevel-cat02.html` G16) —
+  enhancement: o filtro Fonte da Avaliação (Review Source) era só
+  Google/Facebook; a atualização oficial "New Review Received Trigger Now
+  Supports All Integrated Review Platforms" expande pra qualquer
+  plataforma de reputação conectada (Trustpilot, Yelp, TripAdvisor etc.),
+  preservando compatibilidade com workflows existentes. Não muda a
+  contagem — enhancement a item já existente.
+- Totais atualizados: **88 gatilhos + 176 ações = 264 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados via script;
+  `auto-refine.py --check` confirma 0 drift). `index.html` recontado
+  (hero-stats, tab-count, section-label, card do cat08) e "Última
+  atualização" avançada para 5 de setembro de 2026.
+- Backlog de candidatos (Jira, Housecall Pro, Monday.com, Linear, Browse
+  AI, Manus, Apify, Badge Issued) segue sem mudança de campos desde
+  2026-08-31 — nenhum aplicado nesta rodada.
+
 ## 2026-08-31 — Content
 **Checagem de novidades nativas: +1 ação (OpenRouter) + fix de drift no cat05**
 

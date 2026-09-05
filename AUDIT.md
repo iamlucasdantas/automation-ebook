@@ -352,6 +352,63 @@ o nome exato do campo, o item ficou de fora do mockup.
   comportamento de UI — não muda nenhum mockup existente.
   [Changelog](https://ideas.gohighlevel.com/changelog/triggers-actions-smoother-integration-setup-with-field-previews)
 
+## 🆕 Rodada 2026-09-05 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 176 ações = 263 painéis,
+estado da rodada 2026-08-31) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `ideas.gohighlevel.com` e
+`help.gohighlevel.com` seguem bloqueados por egress direto neste
+ambiente — a checagem usou busca web pra ler o conteúdo indiretamente
+(mesma limitação das rodadas anteriores).
+
+### ✅ Aplicado nesta rodada
+
+1. **NOVO gatilho — Avaliação de Produto Enviada (Product Review
+   Submitted)** · `guia-highlevel-cat08.html` G4 (categoria Shopify/
+   E-commerce Stores). Dispara no instante em que o cliente clica
+   "Submit review" num produto da loja HighLevel. Campos confirmados via
+   doc oficial: Global Product (seleção única), Store Name, Review Rating
+   (1-5★), Review Headline (contains phrase / is not empty), Review
+   Comment (contains phrase), User Email, User Name. Mockup + painel de
+   config + entrada na sidebar + configData adicionados.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007386-workflow-trigger-product-review-submitted-for-e-commerce-stores-)
+2. **Nova Avaliação Recebida** (`guia-highlevel-cat02.html` G16) —
+   enhancement: o filtro Fonte da Avaliação (Review Source) era só
+   Google/Facebook; a atualização oficial "New Review Received Trigger
+   Now Supports All Integrated Review Platforms" expande pra qualquer
+   plataforma de reputação conectada (Trustpilot, Yelp, TripAdvisor,
+   BBB, etc.), preservando compatibilidade com workflows existentes.
+   Texto do gatilho, filtro e `data-name` atualizados. Não muda a
+   contagem — enhancement a item já existente.
+
+Totais atualizados: **88 gatilhos + 176 ações = 264 entries**
+(`search-index.json` e `AUDIT-TABLE.md` regenerados via script;
+`auto-refine.py --check` confirma 0 drift; sintaxe do `configData` de
+`guia-highlevel-cat08.html` validada com `node --check`).
+
+### 🔍 Candidatos revisados — sem mudança desde 2026-08-31
+
+Cross-check via busca web desta rodada confirma os mesmos volumes já
+registrados na rodada anterior, ainda sem campo-a-campo suficiente pra
+montar mockup sem inventar rótulo: **Jira** (2 triggers + 11 actions),
+**Housecall Pro** (9 triggers + 14 actions, só Create Customer com campo
+confirmado), **Monday.com** (ações no ar, gatilhos ainda "Coming Soon"),
+**Linear** (12 triggers + 13 actions, OAuth nativo), **Browse AI**, **Manus**,
+**Apify**, **Badge Issued** (gatilho — ação companion Issue Badge segue
+"em desenvolvimento"). Nenhum campo foi inventado pra nenhum desses.
+
+### 🟢 Já coberto, não precisou de mudança
+
+- **WhatsApp x WorkFlow Integration** (changelog oficial) — descreve
+  capacidades (Customer Replied filtrado por WhatsApp, ação Send
+  WhatsApp) que já existem no guia desde rodadas anteriores. Sem gap.
+- **Payment Failed** e **Form Partially Completed** — já cobertos em
+  `guia-highlevel-cat07.html`.
+- **Google Forms** — já coberto em `guia-highlevel-cat13.html`.
+- **Airtable** — sem doc oficial dedicada encontrada nesta rodada;
+  fontes indiretas mencionam a integração mas sem confirmação suficiente
+  pra virar candidato formal.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

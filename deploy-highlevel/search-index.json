@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 263,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -393,8 +393,8 @@
         "Tempo real",
         "Reputação"
       ],
-      "description": "Dispara quando chega uma nova avaliação no Google Meu Negócio ou Facebook. Diferente dos outros gatilhos, este não está vinculado a um contato específico — serve pra gestão de reputação.",
-      "keywords": "avaliação review recebida google facebook",
+      "description": "Dispara quando chega uma nova avaliação em qualquer plataforma de reputação conectada à conta — Google Meu Negócio, Facebook, Trustpilot, Yelp, TripAdvisor e demais integradas via Reputation Management. Diferente dos outros gatilhos, este não está vinculado a um contato específico — serve pra gestão de reputação.",
+      "keywords": "avaliação review recebida google facebook trustpilot yelp tripadvisor",
       "href": "guia-highlevel-cat02.html#g16"
     },
     {
@@ -986,6 +986,20 @@
       "description": "Dispara quando o pedido é marcado como concluído — geralmente quando o produto é entregue. Momento perfeito pra pedir feedback e avaliação.",
       "keywords": "pedido concluído order fulfilled",
       "href": "guia-highlevel-cat08.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Avaliação de Produto Enviada",
+      "en": "Product Review Submitted",
+      "category": "Pós-venda",
+      "tags": [
+        "Tempo real",
+        "Feedback"
+      ],
+      "description": "Dispara no instante em que um cliente clica em \"Submit review\" em qualquer produto da loja HighLevel. Captura os detalhes da avaliação — nota, título, comentário, quem avaliou, loja e produto — e lança a automação na hora.",
+      "keywords": "avaliação produto review submitted product review",
+      "href": "guia-highlevel-cat08.html#g4"
     },
     {
       "id": "g1",

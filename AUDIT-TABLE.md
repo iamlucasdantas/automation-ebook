@@ -10,7 +10,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
+| Gatilhos | 31 | 54 | 3 | **88** |
 | Ações | 40 | 90 | 46 | **176** |
 
 
@@ -117,6 +117,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Carrinho Abandonado](guia-highlevel-cat08.html#g1) | Abandoned Cart | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Compra Feita](guia-highlevel-cat08.html#g2) | Order Placed | 3 | 2/6 | 🟡 | [ ] | |
 | g3 | [Pedido Concluído](guia-highlevel-cat08.html#g3) | Order Fulfilled | 3 | 2/6 | 🟡 | [ ] | |
+| g4 | [Avaliação de Produto Enviada](guia-highlevel-cat08.html#g4) | Product Review Submitted | 4 | 2/6 | 🟡 | [ ] | |
 
 ### CAT09 · Atendimento Automatizado
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
