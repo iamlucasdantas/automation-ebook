@@ -242,6 +242,54 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-06 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com` em busca de itens nativos lançados desde então.
+Neste ambiente `help.gohighlevel.com` e `ideas.gohighlevel.com` estão
+**ambos** bloqueados por egress direto (na rodada de 2026-08-24 só o
+`ideas.` estava) — a checagem inteira foi feita via resultados/snippets de
+WebSearch, sem fetch de página. Também confirmado que o `ghl` CLI
+(`gohighlevel-cli`) não tem endpoint público pra listar o catálogo de
+tipos de gatilho/ação — só lista workflows já criados na subconta — então
+não dá pra usar a API como fonte alternativa de verdade pra esse tipo de
+checagem.
+
+### ✅ Nenhum item novo aplicado
+
+Todos os candidatos encontrados nesta rodada já estavam listados como
+pendentes desde 2026-07-29/08-24 (Monday.com, Jira, Linear, Housecall Pro,
+Apify, Browse AI, OpenRouter, Manus, Badge Issued) — sem novidade nativa
+adicional fora desse conjunto. Confirmado que os seguintes já estão
+cobertos no guia (não são gaps): New Review Received (cat02 G16), Payment
+Failed (via trigger Subscription, `acoes-highlevel-cat08.html` A5), New
+Affiliate Sales (cat05 G3), Community Group Member Leaderboard Level
+Changed (cat11 G5), Community Event Registration (guia-highlevel-cat11).
+
+### 🔍 Movimento nos candidatos pendentes (ainda sem campos confirmáveis)
+- **Jira** — agora tem artigo dedicado
+  `help.gohighlevel.com/.../155000008219-jira-workflow-actions-and-triggers`
+  (antes só o changelog). Ainda sem acesso de fetch nesse ambiente pra
+  extrair a lista exata de campos de cada ação (Create/Update/Link/
+  Comment/Watch/Attach/Log Work/Move to Sprint) — precisa de rodada com
+  acesso de fetch liberado ou confirmação humana antes de virar mockup.
+- **Badge Issued** (gatilho) — mudança de status desde 2026-08-24: o
+  changelog "Badge automation is now available in Workflows" e o artigo
+  "Automate Badge Issuance in Workflows (Using 'Issue Certificate'
+  Action)" indicam que a emissão continua sendo via ação **Issue
+  Certificate** existente (não uma ação "Issue Badge" separada) — isso
+  bate com a nota que já tínhamos. O gatilho **Badge Issued** em si
+  parece ter saído de "em desenvolvimento", mas não achamos os filtros
+  exatos (Badge Type? Community?) nos snippets disponíveis. Continua
+  pendente de confirmação humana.
+- Monday.com, Linear, Housecall Pro, Apify, Browse AI, OpenRouter, Manus —
+  sem mudança de status desde a rodada anterior.
+
+Nenhuma contagem mudou nesta rodada: **87 gatilhos + 175 ações = 262
+painéis**. `index.html` teve só a data de "Última atualização" recontada
+para hoje.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

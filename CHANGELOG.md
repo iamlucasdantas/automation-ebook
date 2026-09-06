@@ -10,6 +10,30 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-06 — Automation
+**Checagem de novidades nativas (rodada agendada)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `help.gohighlevel.com`/`ideas.gohighlevel.com` em busca de itens
+nativos lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-06--checagem-de-novidades-nativas).
+
+- Nenhum item novo confirmado com campos suficientes pra virar mockup —
+  os candidatos encontrados (Jira, Badge Issued, Monday.com, Linear,
+  Housecall Pro, Apify, Browse AI, OpenRouter, Manus) já estavam
+  pendentes desde rodadas anteriores. Jira agora tem artigo dedicado no
+  help center e o gatilho Badge Issued parece ter saído de "em
+  desenvolvimento", mas nenhum dos dois com campos exatos acessíveis
+  neste ambiente (`help.gohighlevel.com` e `ideas.gohighlevel.com` estão
+  ambos bloqueados por egress direto aqui — checagem via WebSearch only).
+- Confirmado que vários termos que apareceram nos resultados de busca
+  (New Review Received, Payment Failed, New Affiliate Sales, Leaderboard
+  Level Changed, Community Event Registration) já estão cobertos no
+  guia — não eram gaps.
+- Contagem não muda: **87 gatilhos + 175 ações = 262 painéis**.
+- `index.html`: data de "Última atualização" recontada para hoje
+  (6 de setembro de 2026).
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
