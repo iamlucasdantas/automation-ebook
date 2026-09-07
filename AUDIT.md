@@ -242,14 +242,130 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-07 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com` em busca de itens nativos lançados desde então.
+Ambos os domínios estão bloqueados por egress direto neste ambiente
+(`WebFetch` retornou `EGRESS_BLOCKED` em todas as tentativas, incluindo
+mirrors) — a checagem usou WebSearch pra ler o conteúdo indiretamente,
+cruzando múltiplas queries e blogs terceiros que acompanham o changelog
+semanal do HL antes de reportar qualquer achado.
+
+### ✅ Nenhum gatilho/ação nativo genuinamente novo confirmado nesta janela
+Buscas direcionadas por releases de 24/08 a 07/09/2026 não encontraram
+nenhum trigger/action novo com fonte oficial datada dentro da janela. Os
+itens relevantes que apareceram (Dynamic Value Chips, "Explain This
+Workflow", outbound setup movido pro builder) são UX do builder/IA
+assistente, não novos tipos de nó. O já aplicado "Claude e Gemini no AI
+Agent" (rodada 2026-08-24) continua sendo o único item real dessa
+janela — não é novidade.
+
+### 🔓 Candidatos pendentes que GANHARAM doc oficial com campos (ainda NÃO aplicados — pedem rodada dedicada)
+Confirmação por WebSearch de artigo oficial dedicado com nomes de campo
+reais pra cada um — mas são integrações multi-item (2 a 25 sub-itens),
+que pela própria regra deste arquivo ("Volume grande — precisa de rodada
+dedicada") pedem confirmação humana dos nomes exatos antes de montar
+mockup com fidelidade real. Nenhum campo foi inventado — o que segue é
+o que a busca confirmou, com fonte:
+
+- **Jira** — 2 gatilhos (Issue Created, Issue Updated — ambos filtram por
+  Project, com seletor de Cloud Site) + 11 ações (create/update/link/
+  comment/watch/attach/log-work/move-to-sprint/find issue). Create Issue
+  exige Project, Issue Type, Assignee, Summary. Auth OAuth via Atlassian.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers)
+- **Monday.com** — 4 gatilhos (New Item in a Board, New Board, Any Column
+  Value Changed — filtra por tipo de coluna, Any Item Moved to a Group) +
+  ações de create/update board/group/column/item/subitem + find items.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007216-monday-com-actions-and-triggers-in-workflows)
+- **Linear** — 12 gatilhos + 13 ações (issues/projects/customers/customer
+  needs/initiatives/documents). Auth OAuth nativo. Volume grande — precisa
+  de rodada própria só pra listar os 25 itens com confirmação humana.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows)
+- **Apify** — 1 gatilho (Actor Run finalizado) + 4 ações (Run a Task,
+  Scrape Single URL, Find Last Actor/Task Run, Fetch Dataset Items).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-workflows)
+- **OpenRouter** — 1 ação apenas (Generate Response: System Prompt,
+  Prompt, Model Selection entre 300+ modelos). Sem gatilho, ao contrário
+  do que rodadas anteriores supunham. Menor risco por ser item único, mas
+  ainda pendente de confirmação humana antes de virar mockup.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+- **Housecall Pro** — 2 gatilhos (Job Scheduled, Job Completed) + 1 ação
+  (Create New Customer). Conteúdo encontrado via snippet de busca parece
+  ser texto real do artigo, mas a URL exata do artigo (fora o changelog)
+  não foi capturada — confirmar antes de aplicar.
+  [Changelog](https://ideas.gohighlevel.com/changelog/housecall-pro-workflow-action-triggers)
+
+**Browse AI** e **Manus** continuam com doc oficial já confirmado desde
+2026-07-29, sem mudança nesta rodada.
+
+### 🔴 Badge Issued / Issue Badge — continua sem doc dedicada
+Mesmo changelog da rodada 2026-08-24, nenhum artigo novo com campos de
+filtro exatos. Um resultado de busca sugeria a ação "Issue Badge" já ter
+saído do "em desenvolvimento", mas sem fonte citável — tratando como
+ainda pendente, não aplicar.
+
+### 🆕 Achado lateral — integrações nativas com doc completa, nunca sinalizadas em nenhuma rodada anterior
+Não são novidade desta janela (docs parecem ser de meses atrás), mas
+nunca apareceram em nenhum "Rodada" anterior do AUDIT.md e não existem
+em nenhum HTML do guia (confirmado por grep — zero ocorrências em
+`deploy-highlevel/`). Ficam registradas aqui como backlog pra próxima
+rodada de decisão humana:
+
+- **Cal.com** — 6 gatilhos (Booking Created/Rescheduled/Cancelled, Meeting
+  Ended, Out-of-Office Updated, New Recording) + 4 ações (Create/Cancel/
+  Reschedule/Find Booking). Hoje o guia só cita Cal.com como exemplo de
+  caso de uso, não como painel real.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers)
+- **HubSpot** — 1 gatilho (New Contact Created) + 5 ações (Create/Find/Get
+  by ID/Search by Email Contact, Associate Contact with Company/Deal).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007955-hubspot-workflow-actions-trigger)
+- **Klaviyo** — 4 gatilhos por polling de 5min (New Event, New Profile,
+  Profile Added to List/Segment) + 17 ações.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008018-klaviyo-workflow-actions-triggers)
+- **Basecamp** — 2 gatilhos (New To-do, New Message Posted) + ações de
+  create project/to-do/message/document + find. Premium, cobrança por
+  execução, via de mão única.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006399-basecamp-actions-triggers-in-workflows)
+- **Google Forms — lado das ações** (o gatilho já existe no guia em
+  `guia-highlevel-cat13.html`, mas faltam as 4 ações: Find Form by ID/
+  Name, Find Response by ID, Find Responses by Form Name).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007217-google-forms-actions-and-triggers-in-workflows)
+
+### ✅ Conferido e já coberto corretamente (nada a fazer)
+- Operadores "Has Changed / Has Changed To" do gatilho Opportunity Changed
+  (`guia-highlevel-cat04.html` G2) — já batem com o changelog oficial.
+- WhatsApp × Workflow (Customer Replied + ações de WhatsApp) — já
+  cobertos em `guia-highlevel-cat02.html` G4 e `acoes-highlevel-cat02.html`.
+- Leaderboard de Community (gatilho + ação) — já cobertos desde 2026-07-29.
+- 4 gatilhos de Communities (Post/Comment/Join Request/Event) — já em
+  `guia-highlevel-cat11.html`.
+- New Affiliate Sales — já em `guia-highlevel-cat05.html` G3.
+
+### 🔍 Checado, não confirmável (não aplicar)
+- "Payment Failed" como gatilho próprio e "Form Partially Completed" —
+  só apareceram num blog terceiro, sem fonte oficial. Payment Failed já
+  existe corretamente como Event Type dentro do gatilho Subscription.
+- Client Portal + gatilho "User Login" — changelog sugere que o gatilho
+  já existente (`guia-highlevel-cat06.html` G12) agora também dispara do
+  novo Client Portal, não só do membership legado. Sem campos novos
+  confirmados — checar manualmente no HL antes de qualquer nota.
+
+Totais não mudaram: **87 gatilhos + 175 ações = 262 entries** (nenhum
+item novo tinha confiança suficiente pra virar mockup nesta rodada).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
-   candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   candidatos 🔍 acumulados — 5 já com doc oficial detalhada (Jira,
+   Monday.com, Linear, Apify, OpenRouter), Housecall Pro perto disso,
+   Browse AI/Manus/Badge Issued ainda sem confirmação de campo — mais o
+   backlog novo achado em 2026-09-07 (Cal.com, HubSpot, Klaviyo, Basecamp,
+   ações do Google Forms) — confirmar nome real do campo / da action
+   antes de qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

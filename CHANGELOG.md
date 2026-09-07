@@ -10,6 +10,32 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-07 — Automation
+**Checagem de novidades nativas (rotina agendada)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `help.gohighlevel.com`/`ideas.gohighlevel.com` em busca de itens
+nativos lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-07--checagem-de-novidades-nativas).
+
+- Nenhum gatilho/ação nativo genuinamente novo confirmado nesta janela.
+- **5 candidatos pendentes ganharam doc oficial com campos** (prontos pra
+  uma rodada dedicada de mockup, pendente validação humana): Jira (2
+  gatilhos + 11 ações), Monday.com (4 gatilhos + ações), Linear (12
+  gatilhos + 13 ações), Apify (1 gatilho + 4 ações), OpenRouter (1 ação).
+  Housecall Pro está perto (2 gatilhos + 1 ação), falta confirmar a URL
+  exata do artigo.
+- **Backlog novo**: 5 integrações nativas com doc completa nunca
+  sinalizadas em nenhuma rodada anterior e ausentes do guia — Cal.com,
+  HubSpot, Klaviyo, Basecamp, e as ações do Google Forms (o gatilho já
+  existe).
+- Contagem não muda — nada tinha confiança suficiente pra virar mockup
+  sem revisão humana (a checagem rodou via WebSearch porque
+  `help.gohighlevel.com`/`ideas.gohighlevel.com` estão bloqueados por
+  egress direto neste ambiente).
+- `index.html`: data de "Última atualização" avançada pra refletir a
+  checagem.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
