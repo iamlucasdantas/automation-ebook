@@ -242,6 +242,68 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-08 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `ideas.gohighlevel.com` e
+`help.gohighlevel.com` estão bloqueados por egress direto neste ambiente —
+a checagem usou busca web para ler o conteúdo indiretamente.
+
+### ✅ Aplicado nesta rodada
+Nenhum item novo confirmado com campos suficientes pra virar mockup fiel.
+Itens que a busca web trouxe como "novidade" já estavam cobertos no guia —
+conferidos um a um contra o HTML atual:
+- **Opportunity Changed — operadores Has Changed / Has Changed To**
+  (`guia-highlevel-cat04.html` G4) — já documentado.
+- **Review Received, Payment Failed** — já existem como gatilho/ação no
+  guia (`guia-highlevel-cat02.html`, `acoes-highlevel-cat02/08.html`).
+- **Workflow Scheduler Trigger** — já coberto (`guia-highlevel-cat02.html`,
+  `acoes-highlevel-cat04.html`).
+- **Community Leaderboard** (trigger + Grant Leaderboard Points action) —
+  já coberto desde a rodada 2026-07-29 (`acoes-highlevel-cat13.html`,
+  `guia-highlevel-cat11.html`).
+- **Cal.com** — já coberto (`guia-highlevel-cat02.html`).
+- **"Form Partially Completed" trigger** — citado só por blogs de
+  terceiros (resumos SEO), não aparece em nenhum artigo oficial
+  `help.gohighlevel.com` encontrado. Não aplicado — provável confusão
+  com o já existente Order Form Submission (parcial = opt-in sem
+  finalizar pedido, comportamento diferente de um trigger dedicado).
+- **"Triggers & Actions: Smoother Integration Setup with Field Previews"**
+  e **"Premium Triggers & Actions"** — mudanças de UX no builder (preview
+  de campos, badge de premium), não são triggers/ações novos — não geram
+  entrada no guia.
+
+### 🔍 Candidatos pendentes (sem mudança desde 2026-08-24)
+Mesma lista da rodada anterior — ainda sem campos suficientes pra montar
+mockup com fidelidade real:
+- **Badge Issued** (gatilho) + **Issue Badge** (ação, ainda "em
+  desenvolvimento" segundo a própria HL).
+- **Monday.com** — campos não detalhados.
+- **Jira** — progrediu: agora tem artigo oficial dedicado
+  ([doc](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers))
+  descrevendo o conjunto de ações (create/update/link/comment/watch/
+  attach/log work/move to sprint) e triggers (issue criada/atualizada),
+  mas sem lista campo-a-campo confiável via busca indireta — precisa de
+  captura de tela real do painel antes de virar mockup.
+- **Linear** (25 itens: 12 gatilhos + 13 ações) — sem mudança, ainda
+  precisa de rodada dedicada.
+- **Housecall Pro** — sem mudança nos detalhes de campo.
+- **Apify** — progrediu: agora tem artigo oficial dedicado
+  ([doc](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-workflows))
+  cobrindo trigger (job Apify concluído) + ações (rodar actor, scraping de
+  URL, buscar itens de dataset), mas ainda sem nomes exatos de campo
+  confirmados.
+- **Browse AI, OpenRouter, Manus** — sem mudança desde 2026-07-29.
+
+Nenhum candidato foi promovido a mockup nesta rodada: todos exigem
+integração de terceiros com múltiplos sub-itens, e o padrão do guia é não
+inventar campo nenhum sem confirmação humana (via print da UI real ou
+doc oficial campo-a-campo). Contagem permanece **87 gatilhos + 175 ações
+= 262 painéis**. `auto-refine.py --check` confirma 0 drift;
+`build-search-index.py` confirma 262 entries. `index.html`: data de
+"Última atualização" recontada para hoje.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

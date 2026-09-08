@@ -10,6 +10,25 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-08 — Automation
+**Checagem de novidades nativas (rotina quinzenal)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos lançados
+desde a rodada de 2026-08-24. Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-09-08--checagem-de-novidades-nativas).
+
+- Nenhum item novo aplicado: tudo que a busca web sinalizou como "novidade"
+  (Opportunity Changed operators, Review Received, Payment Failed,
+  Workflow Scheduler, Community Leaderboard, Cal.com) já estava coberto no
+  guia. Um suposto trigger "Form Partially Completed" citado por blogs de
+  terceiros não tem confirmação em fonte oficial — não aplicado.
+- Os 6 candidatos pendentes de rodadas anteriores (Badge Issued,
+  Monday.com, Jira, Linear, Housecall Pro, Apify) seguem sem mudança de
+  status — precisam de validação humana de campos antes de virar mockup.
+  Jira e Apify agora têm artigo oficial dedicado (link em AUDIT.md), mas
+  ainda sem lista campo-a-campo confiável.
+- `index.html`: data de "Última atualização" recontada para hoje.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
