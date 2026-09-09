@@ -242,14 +242,76 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-09 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog e a documentação oficial
+da HighLevel em busca de itens nativos lançados desde então. `ideas.
+gohighlevel.com` e `help.gohighlevel.com` continuam bloqueados por egress
+direto neste ambiente — a checagem usou busca web pra ler o conteúdo
+indiretamente (mesma limitação das rodadas anteriores).
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente, sem novo total)
+1. **Login de Usuário / User Login** (`guia-highlevel-cat06.html` G12) —
+   o gatilho passou a disparar também nos logins do novo **Client Portal**,
+   além do Membership/Courses legado, sem precisar reconfigurar workflows
+   existentes. No seletor de gatilhos do HL ele ganhou categoria própria
+   "Client Portal" (antes só em Courses). Nota adicionada ao texto do
+   gatilho. [Changelog oficial](https://ideas.gohighlevel.com/changelog/client-portal-user-login-workflow-trigger-now-supports-the-new-client-portal-exp)
+
+Não muda a contagem — é melhoria de um gatilho que já existe no guia,
+não item novo.
+
+### 🔍 Descartados nesta rodada (não confirmados / já cobertos)
+- **"Payment Failed" e "Form Partially Completed" como gatilhos dedicados**
+  — resumos de busca sugeriram lançamento recente, mas não achei artigo
+  oficial dedicado pra nenhum dos dois; o único achado concreto foi um
+  *pedido* de feature ainda em aberto em `ideas.gohighlevel.com/invoicing`
+  pra "Payment Failed" como trigger de invoice. Hoje "Payment Failed" já
+  existe no guia como *event type* dentro do gatilho **Assinatura
+  (Subscription)** (`guia-highlevel-cat07.html`) — não criei entrada
+  duplicada sem confirmação de que virou gatilho standalone.
+- **"Review Received"** — já coberto (`guia-highlevel-cat02.html` G16,
+  Nova Avaliação Recebida).
+- **"AI Image Generation" como ação de workflow** — busca só confirmou
+  geração de imagem dentro da Media Library, não uma ação dedicada no
+  Workflow Builder. Não aplicado por falta de doc oficial de ação.
+- **"Generate One Time Booking Link"** — já coberto (existia na busca do
+  índice).
+- **Google Forms (gatilho/ações nativos)** — já coberto em
+  `guia-highlevel-cat13.html` (Google Integrações).
+
+### 🔍 Candidatos novos encontrados, NÃO aplicados (precisam de validação humana)
+Integrações nativas reais confirmadas por doc oficial, mas com múltiplos
+sub-itens cada — mesma régua das rodadas anteriores (Linear, Monday.com,
+Jira, etc.): não dá pra montar mockup com fidelidade real sem confirmação
+humana dos campos exatos.
+- **ClickUp** — gatilhos: New Task, Task Changes (status/due date/
+  priority), New List, New Folder, New Comment on Task, New Attachment on
+  Task, New Reaction on Task Comment, New Reaction on Chat Message (8).
+  Ações: criar task/folder/list/space, update task, archive/delete
+  project, comment/attach file (6+). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000005671-clickup-actions-triggers-in-workflows)
+- **HubSpot** — 1 gatilho instantâneo (New Contact Created) + 5 ações
+  (Create/Find Contact, lookup por ID/email, associar contato a
+  company/deal). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007955-how-to-use-hubspot-workflow-actions-triggers-in-highlevel)
+- **Klaviyo** — 4 gatilhos por polling (New Event, New Profile, Profile
+  Added to List, Profile Added to Segment, a cada 5min) + 17 ações
+  (profile lifecycle, listas, segmentos, tags, campanhas). Todos
+  marcados Premium (créditos de ação premium). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008018-klaviyo-workflow-actions-triggers)
+
+Continuam pendentes das rodadas anteriores, sem novidade encontrada
+nesta rodada: **Browse AI, OpenRouter, Manus, Badge Issued, Monday.com,
+Jira, Linear, Housecall Pro, Apify** (ver rodada 2026-08-24 acima).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, ClickUp, HubSpot,
+   Klaviyo) — confirmar nome real do campo / da action antes de qualquer
+   um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

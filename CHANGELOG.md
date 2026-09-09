@@ -10,6 +10,33 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-09 — Content + Automation
+**Checagem de novidades nativas**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog e a documentação oficial da HighLevel em busca de itens
+nativos lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-09--checagem-de-novidades-nativas).
+
+- **Login de Usuário / User Login** (`guia-highlevel-cat06.html` G12):
+  nota adicionada sobre o gatilho agora também cobrir logins do novo
+  Client Portal, além do Membership/Courses legado. Não muda a contagem
+  (enhancement a item já existente).
+- 3 integrações nativas novas encontradas com doc oficial mas não
+  aplicadas ainda (precisam de confirmação humana de campos antes de
+  virar mockup): **ClickUp** (8 gatilhos + 6 ações), **HubSpot** (1
+  gatilho + 5 ações), **Klaviyo** (4 gatilhos + 17 ações, premium).
+- Descartado por falta de confirmação oficial: "Payment Failed" e "Form
+  Partially Completed" como gatilhos dedicados (Payment Failed já existe
+  como event type dentro do gatilho Assinatura); "AI Image Generation"
+  como ação de workflow (achado é da Media Library, não do Workflow
+  Builder).
+- `build-search-index.py` confirma 262 entries inalterados; `auto-refine.py
+  --check` reporta 0 drift.
+
+Data de "Última atualização" no `index.html` corrigida para 09 de
+setembro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
