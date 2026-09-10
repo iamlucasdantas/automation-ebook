@@ -10,6 +10,43 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-10 — Content
+**Checagem de novidades nativas: +1 ação (AI Image Generation) + fix de contadores desatualizados na home**
+
+Rotina automática comparou o guia (87 gatilhos + 176 ações = 263 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-31. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-10--checagem-de-novidades-nativas).
+
+- **Ação — Geração de Imagem com IA (AI Image Generation)**
+  (`acoes-highlevel-cat05.html` A12): gera imagem dentro do workflow a
+  partir de um prompt, com Enhance Prompt, templates, até 5 imagens de
+  referência, seletor de Model (GPT Image 2/2.5, Gemini "Nano Banana"),
+  Quality/Size/Background/File Format e Design Kit/Brand Voice. Mockup
+  interativo completo + painel de configuração.
+- **Login de Usuário** (`guia-highlevel-cat06.html` G12): nota sobre o
+  gatilho agora também cobrir logins do novo Client Portal, não só
+  Memberships/Courses legado.
+- Nenhuma mudança de status nos candidatos pendentes (Calendly, HubSpot,
+  Basecamp, Browse AI, Manus, Badge Issued, Monday.com, Jira, Linear,
+  Housecall Pro, Apify).
+
+Totais atualizados: **87 gatilhos + 177 ações = 264 entries** (mockups:
+211 → 212).
+
+### 🐛 Drift corrigido nesta rodada (bug nosso, não novidade do HL)
+- `index.html`: 8 cards de categoria de Ações mostravam contagens
+  desatualizadas de rodadas de conteúdo anteriores — cat01 (16→18), cat02
+  (29→37), cat04 (21→22), cat06 (3→4), cat07 (11→13), cat08 (5→9), cat09
+  (5→8), cat13 (6→8). O card do cat05 já tinha sido corrigido na rodada
+  2026-08-31; agora recebeu +1 pela A12 nova (11→12).
+- As 17 páginas de Ações tinham o rodapé com "Categoria NN de 14/15"
+  (denominador antigo) — corrigido pra "de 17" em todas; `cat16` e
+  `cat17` também mostravam o número errado da própria categoria.
+- `deploy-highlevel/index.html`: hero-stats, tab-counts e section-labels
+  atualizados pra 87 gatilhos + 177 ações = 264 painéis, 212 mockups;
+  "Última atualização" pra 10 de setembro de 2026.
+
 ## 2026-08-31 — Content
 **Checagem de novidades nativas: +1 ação (OpenRouter) + fix de drift no cat05**
 

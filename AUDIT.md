@@ -352,6 +352,79 @@ o nome exato do campo, o item ficou de fora do mockup.
   comportamento de UI — não muda nenhum mockup existente.
   [Changelog](https://ideas.gohighlevel.com/changelog/triggers-actions-smoother-integration-setup-with-field-previews)
 
+## 🆕 Rodada 2026-09-10 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 176 ações = 263 painéis,
+estado da rodada 2026-08-31) contra o changelog e os artigos oficiais da
+HighLevel em busca de itens nativos lançados desde então.
+`help.gohighlevel.com` e `ideas.gohighlevel.com` seguem bloqueados por
+egress direto neste ambiente — a checagem foi feita via busca web
+(snippets), mesmo método das rodadas anteriores.
+
+### ✅ Adicionado nesta rodada (fonte confirmada por múltiplos resultados de busca)
+1. **Ação — Geração de Imagem com IA (AI Image Generation)** ·
+   `acoes-highlevel-cat05.html` A12. Gera imagem dentro do workflow a
+   partir de um prompt (texto livre, custom value, campo do contato ou
+   saída de ação anterior), com botão "Enhance Prompt", templates
+   (Product Mockups/Social Post/Promo Flyer/Lifestyle), até 5 imagens de
+   referência, seletor de Model (GPT Image 2, GPT Image 2.5
+   Flare/Sunburst, Gemini 3 Pro Image "Nano Banana Pro", Gemini 3.1 Flash
+   Image "Nano Banana 2", Gemini 2.5 Flash Image "Nano Banana"), Quality,
+   Size, Background, File Format e toggles de Design Kit / Brand Voice.
+   Ação Premium (cobrança por execução). Mockup interativo completo (3
+   nós: Tag Added → AI Image Generation → Outbound Webhook) + painel de
+   configuração com fidelidade HighLevel. [Changelog oficial](https://ideas.gohighlevel.com/changelog/ai-image-generation-action-in-workflows)
+
+Totais atualizados: **87 gatilhos + 177 ações = 264 entries** (mockups
+interativos: 211 → 212). search-index.json e AUDIT-TABLE.md já
+regenerados.
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente, sem novo total)
+1. **Login de Usuário / User Login** (`guia-highlevel-cat06.html` G12) —
+   o gatilho passou a disparar também nos logins do novo **Client Portal**,
+   além dos logins legados de Memberships/Courses; workflows existentes
+   rodam automaticamente nesses logins sem reconfiguração. O picker de
+   gatilhos ganhou categoria dedicada "Client Portal". Nota adicionada ao
+   texto do gatilho. [Changelog oficial](https://ideas.gohighlevel.com/changelog/client-portal-user-login-workflow-trigger-now-supports-the-new-client-portal-exp)
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- **9 páginas de Ações** (`index.html`, cards de categoria): cat01 (16→18),
+  cat02 (29→37), cat04 (21→22), cat05 (11→12, já contando a A12 nova),
+  cat06 (3→4), cat07 (11→13), cat08 (5→9), cat09 (5→8), cat13 (6→8) —
+  contadores desatualizados de rodadas de conteúdo anteriores que nunca
+  tinham sido propagados pro card da home (mesma causa-raiz do drift do
+  cat05 corrigido na rodada 2026-08-31, só que nos outros 8 cards).
+  search-index.json e o total geral do site sempre estiveram corretos
+  (gerados varrendo o HTML real) — só os cards manuais da home é que
+  ficaram pra trás.
+- **17 páginas de Ações** (`acoes-highlevel-cat01.html` a `cat17.html`):
+  o rodapé (`footer-legal`) mostrava "Categoria NN de 14" ou "de 15"
+  (denominador de antes das categorias 15-17 existirem) — corrigido pra
+  "de 17" em todas. `acoes-highlevel-cat16.html` e `cat17.html` também
+  mostravam o número errado da própria categoria ("Categoria 14 de 15"
+  em vez de 16/17) — corrigido. Esse número é só texto de rodapé, não
+  afeta a contagem de gatilhos/ações.
+
+### 🔍 Candidatos acumulados de rodadas anteriores (ainda pendentes)
+Sem mudança nesta rodada — ainda esperando confirmação humana de campos
+antes de virar mockup: Calendly, HubSpot, Basecamp, Browse AI, Manus,
+Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify (ver rodada
+2026-08-31 acima para o detalhe de cada um).
+
+### Verificação técnica
+- `scripts/build-search-index.py` → 264 entries regenerados (87 + 177).
+- `scripts/build-audit.py` → AUDIT-TABLE.md regenerado.
+- `node --check` no `<script>` inline de `acoes-highlevel-cat05.html` → OK.
+- `scripts/validate-mockups.js` (Playwright, todas as 30 páginas) travou
+  no carregamento da primeira página sem consumir CPU — parece ser o
+  egress bloqueado deste ambiente represando o `waitUntil: 'load'` num
+  recurso externo (Google Fonts) em vez de falhar rápido, não um problema
+  de conteúdo. Como alternativa, rodei uma checagem equivalente
+  (`domcontentloaded`, sem esperar recursos externos) direto nas duas
+  páginas editadas nesta rodada: `acoes-highlevel-cat05.html` (10 mockups
+  interativos, todos com config-panel e todos os nós `.visible`, 0 erros
+  JS) e `guia-highlevel-cat06.html` (12 mockups, mesmo resultado limpo).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

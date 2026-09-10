@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 263,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -2438,6 +2438,21 @@
       "description": "",
       "keywords": "openrouter generate response",
       "href": "acoes-highlevel-cat05.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Geração de Imagem com IA",
+      "en": "AI Image Generation",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "ai image generation geração de imagem gpt image nano banana gemini",
+      "href": "acoes-highlevel-cat05.html#a12"
     },
     {
       "id": "a1",
