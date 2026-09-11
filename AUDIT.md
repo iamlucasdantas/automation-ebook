@@ -242,6 +242,83 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-11 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados/descobertos desde então. `ideas.gohighlevel.com`
+e `help.gohighlevel.com` seguem bloqueados por egress direto neste ambiente —
+a checagem usou WebSearch pra ler o conteúdo indiretamente (snippets de
+`help.gohighlevel.com` e do changelog oficial via busca).
+
+### ✅ Adicionado nesta rodada (gap fechado — não é lançamento novo desta semana)
+1. **Ação — Geração de Imagem com IA (AI Image Generation)**
+   (`acoes-highlevel-cat05.html` A11). Ação nativa Premium sob "AI Actions":
+   um modelo gera a imagem, salva num link público e devolve a URL como
+   texto. Existe desde ~02/05/2026 (mencionada num changelog antigo da
+   HighLevel) mas nunca tinha sido incluída no guia — auditorias anteriores
+   não a pegaram. Campos confirmados: **Model** (GPT Image 2 / GPT Image
+   2.5 Flare / GPT Image 2.5 Sunburst / Gemini 3 Pro Image "Nano Banana
+   Pro" / Gemini 3.1 Flash Image "Nano Banana 2" / Gemini 2.5 Flash Image
+   "Nano Banana"), **Prompt** (aceita custom values de contact
+   fields/webhook/ações anteriores), **Reference Images** (até 5 — System
+   upload, Media Library ou URL, ordem posicional), controle de marca via
+   **Design Kit + Brand Voice**, e saída configurável (tamanho/background/
+   formato). [Changelog oficial](https://ideas.gohighlevel.com/changelog/ai-image-generation-action-in-workflows) ·
+   [Reference Images](https://ideas.gohighlevel.com/changelog/add-reference-images-in-ai-image-generation-action) ·
+   [GPT Image 2.5](https://ideas.gohighlevel.com/changelog/gpt-image-25-in-ai-image-generation-action-in-workflows)
+
+Totais atualizados: **87 gatilhos + 176 ações = 263 entries**.
+
+### 🔍 Alegações de terceiros checadas e descartadas (não shipadas / já cobertas)
+Um post de blog agregador citava "3 novos gatilhos: Review Received,
+Payment Failed, Form Partially Completed". Verificação item a item contra
+`help.gohighlevel.com` e o board de feature requests oficial:
+
+- **Review Received** — ✅ já existe no guia (`guia-highlevel-cat02.html`
+  G16 "Nova Avaliação Recebida"), documentado desde antes desta rodada.
+  Nada a adicionar.
+- **Payment Failed** (como gatilho nativo dedicado) — ❌ não encontrado
+  como feature shipada. `help.gohighlevel.com` só confirma "Failed" como
+  **status dentro do Payment Received** (filtro Payment Status) e como
+  status de assinatura; existe um pedido em aberto "🔫Workflow trigger for
+  Invoice Payment Failed" em `ideas.gohighlevel.com/invoicing` — ou seja,
+  ainda é request, não recurso nativo. Não adicionado.
+- **Form Partially Completed** — ❌ não encontrado como feature shipada.
+  Continua como pedido em aberto ("Partial Survey Submission Workflow
+  Trigger" / "Partial Survey Fill Data — Please!" em
+  `ideas.gohighlevel.com`). O workaround existente é o filtro
+  **Submission Type = Opt-In** no gatilho Order Form Submission, que já
+  cobrimos. Não adicionado.
+
+Nenhum item foi adicionado sem confirmação — quando a fonte terciária
+(blog SEO) não bateu com `help.gohighlevel.com`/board oficial, o item foi
+descartado em vez de assumido como real.
+
+### 🐛 Drift de contagem corrigido nesta rodada (não era novidade do HL, era bug nosso)
+`acoes-highlevel-cat05.html` e o card "Workflow AI" em `index.html`
+diziam **8** e **7 ações** respectivamente — já estava desatualizado desde
+que A9 (AI Translate) e A10 (AI Decision Maker) foram adicionados em
+rodada anterior sem recontagem completa dessa página. Corrigido pra 11
+(10 existentes + A11 nova) em todos os pontos: side-nav, hero-stat,
+hero-desc, footer, meta tags e o card do índice.
+
+**Nota pra próxima rodada:** os `<span class="cat-stat">N ações</span>`
+por categoria em `index.html` não somam 176 (somam bem menos) — o card de
+Workflow AI foi corrigido agora, mas as outras 16 categorias de Ações
+provavelmente têm o mesmo tipo de drift acumulado de rodadas anteriores
+que nunca recontaram card por card. Precisa de uma rodada dedicada
+comparando cada card contra a contagem real de `side-link` de cada página
+de ação antes de reescrever os 16 números.
+
+### 🔍 Candidatos ainda pendentes (sem mudança desde a rodada 2026-08-24)
+Sem validação humana de campos ainda — continuam fora do guia: **Badge
+Issued** (gatilho, companion **Issue Badge** "em desenvolvimento" pela
+própria HighLevel), **Monday.com**, **Jira**, **Linear** (25 itens),
+**Housecall Pro**, **Apify**, além de **Browse AI**, **OpenRouter** e
+**Manus** (pendentes desde 2026-07-29). Nenhum tem campos exatos
+confirmados o suficiente pra virar mockup com fidelidade real ainda.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

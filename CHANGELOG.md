@@ -10,6 +10,37 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-11 — Content
+**Checagem de novidades nativas — +1 ação (AI Image Generation)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog e a documentação oficial da
+HighLevel em busca de gatilhos/ações nativos lançados ou ainda não cobertos.
+Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-09-11--checagem-de-novidades-nativas).
+
+- **NOVA ação — Geração de Imagem com IA (AI Image Generation)**
+  (`acoes-highlevel-cat05.html` A11). Ação nativa Premium existente desde
+  ~02/05/2026 (não é lançamento desta semana) mas que faltava no guia — gera
+  imagem a partir de prompt com Model dropdown (GPT Image 2 / GPT Image 2.5
+  Flare / GPT Image 2.5 Sunburst / Gemini 3 Pro Image "Nano Banana Pro" /
+  Gemini 3.1 Flash Image "Nano Banana 2" / Gemini 2.5 Flash Image "Nano
+  Banana"), Prompt, até 5 Reference Images (System upload/Media Library/URL)
+  e controle de marca via Design Kit + Brand Voice. [Doc oficial](https://ideas.gohighlevel.com/changelog/ai-image-generation-action-in-workflows)
+- Três alegados "novos gatilhos nativos" (Review Received, Payment Failed,
+  Form Partially Completed) citados por blogs de terceiros foram checados
+  contra `help.gohighlevel.com` e o board de feature requests: **Review
+  Received já existe no guia** (`guia-highlevel-cat02.html` G16 — Nova
+  Avaliação Recebida); **Payment Failed** e **Form Partially Completed**
+  **não são gatilhos nativos shipados** — ambos seguem como pedidos em
+  aberto em `ideas.gohighlevel.com`. Nada adicionado pra esses três, pra
+  não inventar itens que não existem na UI real.
+- Totais atualizados: **87 gatilhos + 176 ações = 263 entries**
+  (`search-index.json` e `AUDIT-TABLE.md` regenerados via
+  `auto-refine.py`/`build-audit.py`); `index.html` recontado (hero-stats,
+  tab-count, section-label, card da categoria Workflow AI — 7→11 ações,
+  já corrigindo drift anterior — e data de "Última atualização").
+
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
