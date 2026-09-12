@@ -10,6 +10,46 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-12 — Content + Automation
+**Checagem de novidades nativas: +1 ação (OpenRouter) + fix de drift nas contagens da homepage**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog e a doc oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-12--checagem-de-novidades-nativas).
+
+- **Nova ação — OpenRouter (Generate Response)** ·
+  `acoes-highlevel-cat05.html` A11. Conecta 300+ modelos de IA (Claude,
+  GPT, Gemini, Perplexity etc.) no workflow com API key própria da
+  OpenRouter, mesmo padrão "BYOK" da ação Mistral AI já existente. Doc
+  oficial confirmada com campos exatos.
+- **Fix — contagem de ações por categoria na homepage estava
+  dessincronizada** em 9 das 17 categorias (Contatos, Comunicação,
+  Ferramentas Internas, Workflow AI, Agendamentos, Oportunidades,
+  Pagamentos, Marketing, Comunidades) — corrigido pra bater com a
+  contagem real de cada página.
+- **Fix — denominador "Categoria NN de 15" desatualizado** em 5 páginas
+  de Ações (cat05, cat14, cat15, cat16, cat17) — corrigido pra "/17"
+  (são 17 categorias de Ações desde 2026-08-10). `cat16`/`cat17` também
+  tinham copy-paste do número de categoria errado no rodapé — corrigido.
+- **Fix — página `acoes-highlevel-cat05.html` dizia "8 ações"** no
+  side-nav/hero/footer desde que AI Translate e AI Decision Maker foram
+  adicionadas na rodada 2026-08-10 sem atualizar esse texto — corrigido
+  pra 11 (10 + OpenRouter).
+- Candidatos com doc dedicada mas campos incompletos (Browse AI, Manus,
+  Jira, Linear, Apify, Monday.com — ações live, triggers ainda "Coming
+  Soon") seguem pendentes de validação humana antes de virar mockup.
+  **AI Image Generation** e **AI Analyze Image** têm changelog detalhado
+  mas sem doc dedicada ainda — AI Analyze Image tem risco de ser
+  duplicata da ação já existente "Parse Image". **Badge Issued/Issue
+  Badge** removido da lista de observação (confirmado que a HL ainda não
+  lançou a ação dedicada; o workaround via Issue Certificate já está
+  coberto).
+
+Totais atualizados: **87 gatilhos + 176 ações = 263 entries**. `index.html`
+hero-stats, tab-counts, section-labels e "Última atualização" atualizados.
+`search-index.json` regenerado.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
