@@ -352,13 +352,201 @@ o nome exato do campo, o item ficou de fora do mockup.
   comportamento de UI — não muda nenhum mockup existente.
   [Changelog](https://ideas.gohighlevel.com/changelog/triggers-actions-smoother-integration-setup-with-field-previews)
 
+## 🆕 Rodada 2026-09-05 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 176 ações = 263 painéis,
+estado da rodada 2026-08-31) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `ideas.gohighlevel.com` e
+`help.gohighlevel.com` seguem bloqueados por egress direto neste
+ambiente — a checagem usou busca web pra ler o conteúdo indiretamente
+(mesma limitação das rodadas anteriores).
+
+### ✅ Aplicado nesta rodada
+
+1. **NOVO gatilho — Avaliação de Produto Enviada (Product Review
+   Submitted)** · `guia-highlevel-cat08.html` G4 (categoria Shopify/
+   E-commerce Stores). Dispara no instante em que o cliente clica
+   "Submit review" num produto da loja HighLevel. Campos confirmados via
+   doc oficial: Global Product (seleção única), Store Name, Review Rating
+   (1-5★), Review Headline (contains phrase / is not empty), Review
+   Comment (contains phrase), User Email, User Name. Mockup + painel de
+   config + entrada na sidebar + configData adicionados.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007386-workflow-trigger-product-review-submitted-for-e-commerce-stores-)
+2. **Nova Avaliação Recebida** (`guia-highlevel-cat02.html` G16) —
+   enhancement: o filtro Fonte da Avaliação (Review Source) era só
+   Google/Facebook; a atualização oficial "New Review Received Trigger
+   Now Supports All Integrated Review Platforms" expande pra qualquer
+   plataforma de reputação conectada (Trustpilot, Yelp, TripAdvisor,
+   BBB, etc.), preservando compatibilidade com workflows existentes.
+   Texto do gatilho, filtro e `data-name` atualizados. Não muda a
+   contagem — enhancement a item já existente.
+
+_Nota (rodada 2026-09-13): esta rodada rodou numa branch isolada
+(`claude/friendly-meitner-4ye0k0`) que nunca foi publicada em `main` —
+o trabalho ficou órfão até ser reconciliado na rodada 2026-09-13 abaixo,
+junto com a rodada 2026-09-10 (também órfã). Ver seção de 2026-09-13 pro
+total combinado real._
+
+### 🔍 Candidatos revisados — sem mudança desde 2026-08-31
+
+Cross-check via busca web desta rodada confirma os mesmos volumes já
+registrados na rodada anterior, ainda sem campo-a-campo suficiente pra
+montar mockup sem inventar rótulo: **Jira** (2 triggers + 11 actions),
+**Housecall Pro** (9 triggers + 14 actions, só Create Customer com campo
+confirmado), **Monday.com** (ações no ar, gatilhos ainda "Coming Soon"),
+**Linear** (12 triggers + 13 actions, OAuth nativo), **Browse AI**, **Manus**,
+**Apify**, **Badge Issued** (gatilho — ação companion Issue Badge segue
+"em desenvolvimento"). Nenhum campo foi inventado pra nenhum desses.
+
+### 🟢 Já coberto, não precisou de mudança
+
+- **WhatsApp x WorkFlow Integration** (changelog oficial) — descreve
+  capacidades (Customer Replied filtrado por WhatsApp, ação Send
+  WhatsApp) que já existem no guia desde rodadas anteriores. Sem gap.
+- **Payment Failed** e **Form Partially Completed** — já cobertos em
+  `guia-highlevel-cat07.html`.
+- **Google Forms** — já coberto em `guia-highlevel-cat13.html`.
+- **Airtable** — sem doc oficial dedicada encontrada nesta rodada;
+  fontes indiretas mencionam a integração mas sem confirmação suficiente
+  pra virar candidato formal.
+
+## 🆕 Rodada 2026-09-10 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 176 ações = 263 painéis,
+estado da rodada 2026-08-31) contra o changelog e os artigos oficiais da
+HighLevel em busca de itens nativos lançados desde então.
+`help.gohighlevel.com` e `ideas.gohighlevel.com` seguem bloqueados por
+egress direto neste ambiente — a checagem foi feita via busca web
+(snippets), mesmo método das rodadas anteriores.
+
+### ✅ Adicionado nesta rodada (fonte confirmada por múltiplos resultados de busca)
+1. **Ação — Geração de Imagem com IA (AI Image Generation)** ·
+   `acoes-highlevel-cat05.html` A12. Gera imagem dentro do workflow a
+   partir de um prompt (texto livre, custom value, campo do contato ou
+   saída de ação anterior), com botão "Enhance Prompt", templates
+   (Product Mockups/Social Post/Promo Flyer/Lifestyle), até 5 imagens de
+   referência, seletor de Model (GPT Image 2, GPT Image 2.5
+   Flare/Sunburst, Gemini 3 Pro Image "Nano Banana Pro", Gemini 3.1 Flash
+   Image "Nano Banana 2", Gemini 2.5 Flash Image "Nano Banana"), Quality,
+   Size, Background, File Format e toggles de Design Kit / Brand Voice.
+   Ação Premium (cobrança por execução). Mockup interativo completo (3
+   nós: Tag Added → AI Image Generation → Outbound Webhook) + painel de
+   configuração com fidelidade HighLevel. [Changelog oficial](https://ideas.gohighlevel.com/changelog/ai-image-generation-action-in-workflows)
+
+_Nota (rodada 2026-09-13): esta rodada rodou numa branch isolada
+(`claude/friendly-meitner-v7c1rk`) que nunca foi publicada em `main` —
+reconciliada junto com a rodada 2026-09-05 (também órfã) na rodada
+2026-09-13 abaixo._
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente, sem novo total)
+1. **Login de Usuário / User Login** (`guia-highlevel-cat06.html` G12) —
+   o gatilho passou a disparar também nos logins do novo **Client Portal**,
+   além dos logins legados de Memberships/Courses; workflows existentes
+   rodam automaticamente nesses logins sem reconfiguração. O picker de
+   gatilhos ganhou categoria dedicada "Client Portal". Nota adicionada ao
+   texto do gatilho. [Changelog oficial](https://ideas.gohighlevel.com/changelog/client-portal-user-login-workflow-trigger-now-supports-the-new-client-portal-exp)
+
+### 🐛 Drift corrigido nesta rodada (não era novidade do HL, era bug nosso)
+- **9 páginas de Ações** (`index.html`, cards de categoria): cat01 (16→18),
+  cat02 (29→37), cat04 (21→22), cat05 (11→12, já contando a A12 nova),
+  cat06 (3→4), cat07 (11→13), cat08 (5→9), cat09 (5→8), cat13 (6→8) —
+  contadores desatualizados de rodadas de conteúdo anteriores que nunca
+  tinham sido propagados pro card da home (mesma causa-raiz do drift do
+  cat05 corrigido na rodada 2026-08-31, só que nos outros 8 cards).
+  search-index.json e o total geral do site sempre estiveram corretos
+  (gerados varrendo o HTML real) — só os cards manuais da home é que
+  ficaram pra trás.
+- **17 páginas de Ações** (`acoes-highlevel-cat01.html` a `cat17.html`):
+  o rodapé (`footer-legal`) mostrava "Categoria NN de 14" ou "de 15"
+  (denominador de antes das categorias 15-17 existirem) — corrigido pra
+  "de 17" em todas. `acoes-highlevel-cat16.html` e `cat17.html` também
+  mostravam o número errado da própria categoria ("Categoria 14 de 15"
+  em vez de 16/17) — corrigido. Esse número é só texto de rodapé, não
+  afeta a contagem de gatilhos/ações.
+
+### 🔍 Candidatos acumulados de rodadas anteriores (ainda pendentes)
+Sem mudança nesta rodada — ainda esperando confirmação humana de campos
+antes de virar mockup: Calendly, HubSpot, Basecamp, Browse AI, Manus,
+Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify (ver rodada
+2026-08-31 acima para o detalhe de cada um).
+
+## 🆕 Rodada 2026-09-13 — Reconciliação de branches órfãs + checagem de novidades nativas
+
+**Contexto de processo encontrado nesta rodada:** cada disparo agendado
+desta rotina cria uma branch nova a partir do estado de `main` naquele
+momento. Entre 2026-09-04 e 2026-09-12, pelo menos 5 rodadas rodaram em
+branches separadas (`friendly-meitner-ud607k`, `-4ye0k0`, `-34b8fi`,
+`-v7c1rk`, `-uskexm`) e nenhuma foi publicada de volta em `main` — sem
+esse merge, cada rodada seguinte nasceu do mesmo `main` desatualizado
+(31/08) e não enxergou o trabalho das rodadas anteriores. Resultado:
+3 dessas 5 rodadas (`ud607k` 09-04, `34b8fi` 09-06, `uskexm` 09-12)
+redescobriram e "readicionaram" a mesma ação OpenRouter que já estava em
+`main` desde 08-31 — trabalho duplicado, sem novo conteúdo real. As
+outras 2 (`4ye0k0` 09-05 e `v7c1rk` 09-10) partiram do `main` real
+(c7d483e) e adicionaram conteúdo genuíno e não-sobreposto: o gatilho
+Product Review Submitted e a ação AI Image Generation, respectivamente.
+
+Esta rodada reconciliou o estado: resetou a branch de trabalho pro
+`main` publicado (c7d483e), trouxe os dois diffs de conteúdo genuínos
+(`4ye0k0` + `v7c1rk`) por cima dele, e regenerou `search-index.json` e
+`AUDIT-TABLE.md` via script em vez de mesclar manualmente — evitando
+duplicar o trabalho de auditoria já feito e descartando só as 3 rodadas
+que não agregavam nada novo.
+
+**Totais combinados: 88 gatilhos + 177 ações = 265 painéis** (213 mockups
+interativos). Homepage (`index.html`) atualizada: hero-stats, tab-counts,
+section-labels, meta tags, card "Shopify" (3→4 gatilhos/mockups) e card
+"Workflow AI" (11→12 ações), e "Última atualização" pra 13 de setembro
+de 2026.
+
+### 🔎 Checagem de novidades desta rodada (2026-08-24 → 2026-09-13)
+
+Comparação contra `help.gohighlevel.com` e `ideas.gohighlevel.com`
+(indireta via busca web — os dois domínios seguem bloqueados por egress
+direto neste ambiente) em busca de gatilhos/ações nativos lançados no
+período, além de reavaliar os candidatos acumulados.
+
+- **AI Analyze Image** *(achado novo)* — changelog oficial
+  ([ideas.gohighlevel.com/changelog/ai-analyze-image-new-workflow-action](https://ideas.gohighlevel.com/changelog/ai-analyze-image-new-workflow-action))
+  descreve uma ação com campos Image URL, Prompt, Detail Level
+  (Auto/High/Low) e Model (GPT-5.6 Luna / GPT-5.6 Tera). **Não aplicada
+  nesta rodada** — risco real de duplicidade com a ação já existente
+  **Parse Image / AI Parse Image** (`acoes-highlevel-cat05.html` A2, campos
+  Image Source + Instruction Prompt + Save Output to), que já cobre
+  OCR/visão computacional. Não dá pra confirmar via busca se é (a) um
+  rename/upgrade do Parse Image existente, (b) uma ação totalmente nova e
+  paralela, ou (c) a mesma ação com nomes de campo diferentes entre
+  changelog e UI real. Fica registrada como candidato — precisa abrir o
+  HL Workflow Builder e comparar as duas ações lado a lado antes de
+  decidir se vira uma A13 nova ou um update no texto da A2.
+- **Monday.com, Jira, Linear, Housecall Pro, Browse AI, Manus, Apify** —
+  reconferidos nesta rodada, sem mudança de status desde 2026-08-31: todos
+  já têm doc oficial dedicada, mas o campo-a-campo por ação/gatilho segue
+  incompleto (mesmos volumes já registrados no round anterior). Nenhum
+  campo foi inventado.
+- **Badge Issued** (gatilho) / **Issue Badge** (ação) — sem mudança:
+  `Issue Badge` segue "em desenvolvimento", workaround continua sendo
+  `Issue Certificate` com template de Badge.
+- Nenhum outro item nativo novo encontrado no período — um changelog de
+  11/09 sobre melhorias na validação/erros de publish de workflow foi
+  descartado por não ser um gatilho/ação (mudança de UX do builder).
+
+### Verificação técnica
+- `python3 scripts/auto-refine.py --check` → 0 drift (265 entries).
+- `python3 scripts/build-audit.py` → `AUDIT-TABLE.md` regenerado (88
+  gatilhos + 177 ações = 265; 🟢 41 / 🟡 90 / 🔴 46 nas ações, 🟢 31 / 🟡
+  54 / 🔴 3 nos gatilhos).
+- `scripts/validate-mockups.js` (Playwright) rodado sobre as 30 páginas.
+
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
-   candidatos 🔍 acumulados (Calendly, HubSpot, Basecamp, Browse AI, Manus,
-   Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar
+   candidatos 🔍 acumulados (AI Analyze Image — comparar com Parse Image
+   existente —, Calendly, HubSpot, Basecamp, Browse AI, Manus, Badge
+   Issued, Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar
    nome real do campo / da action antes de qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito

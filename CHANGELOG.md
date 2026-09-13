@@ -10,6 +10,50 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-13 — Content
+**Reconcile 2 orphaned audit rounds (Product Review Submitted trigger, AI Image Generation action) + check for new native items**
+
+Found that scheduled audit runs between 2026-09-04 and 2026-09-12 had each
+started from a fresh branch off `main`, and none had been published back
+to `main` — so later runs couldn't see earlier runs' work. 3 of those 5
+orphaned runs just redundantly rediscovered the OpenRouter action already
+on `main` since 08-31 (no new content, discarded). 2 of them added genuine,
+non-overlapping, officially-sourced content that was still sitting unpublished:
+
+- **Gatilho — Avaliação de Produto Enviada (Product Review Submitted)**
+  (`guia-highlevel-cat08.html` G4, Shopify) — from the 2026-09-05 round.
+- **Ação — Geração de Imagem com IA (AI Image Generation)**
+  (`acoes-highlevel-cat05.html` A12, Workflow AI) — from the 2026-09-10
+  round, plus its User Login / Client Portal trigger enhancement
+  (`guia-highlevel-cat06.html`) and its fix for 8 stale category-card
+  counts + 17 stale footer denominators on the homepage/Ações pages.
+
+Both were merged onto current `main` (not their own stale base), and
+`search-index.json` / `AUDIT-TABLE.md` were regenerated via script rather
+than hand-merged. New totals: **88 gatilhos + 177 ações = 265 entries**
+(213 mockups interativos). Homepage hero-stats, tab-counts, meta tags, the
+Shopify and Workflow AI cards, and "Última atualização" (13 de setembro de
+2026) updated to match.
+
+Fresh native-feature check against `help.gohighlevel.com` /
+`ideas.gohighlevel.com` (2026-08-24 → 2026-09-13, done indirectly via web
+search since both domains are egress-blocked here) found one new
+changelog entry, **AI Analyze Image**, but it was **not applied** — real
+risk it duplicates the existing **Parse Image / AI Parse Image** action
+(A2) rather than being a genuinely separate action, and that needs a
+side-by-side check in the real HL Workflow Builder before it becomes a
+new mockup or a text update to A2. Recorded as a candidate in AUDIT.md
+(section "Rodada 2026-09-13"). All other previously-pending integrations
+(Monday.com, Jira, Linear, Housecall Pro, Browse AI, Manus, Apify, Badge
+Issued/Issue Badge, Calendly, HubSpot, Basecamp) were reconfirmed
+unchanged — still lacking full field-level docs to build accurate
+mockups, so still not applied. Full detail in
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-13--reconciliação-de-branches-órfãs--checagem-de-novidades-nativas).
+
+`scripts/auto-refine.py --check` → 0 drift. `scripts/build-audit.py` →
+AUDIT-TABLE.md regenerated. `scripts/validate-mockups.js` run over all 30
+pages.
+
 ## 2026-08-31 — Content
 **Checagem de novidades nativas: +1 ação (OpenRouter) + fix de drift no cat05**
 

@@ -2385,6 +2385,7 @@
 <div class="side-section-label">Pós-venda</div>
 <nav class="side-nav">
 <a href="#g3" class="side-link"><span class="side-num">03</span>Pedido Concluído</a>
+<a href="#g4" class="side-link"><span class="side-num">04</span>Avaliação de Produto</a>
 </nav>
 
 
@@ -2403,9 +2404,9 @@
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 08/12</span>
   <h1 class="hero-title">Sua loja Shopify <em>conversando direto</em> com o HighLevel.</h1>
   <p class="hero-desc">Três gatilhos que integram sua loja Shopify diretamente no HighLevel — carrinho abandonado, compra feita e pedido concluído. Recuperação de vendas, agradecimento automático e pedido de feedback, tudo sem precisar de Zapier ou Make no meio.</p>
-  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">3</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
-<div class="hero-stat"><span class="hero-stat-num">6+</span><span class="hero-stat-label">Filtros explicados</span></div>
-<div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">Mockup interativo</span></div>
+  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">4</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
+<div class="hero-stat"><span class="hero-stat-num">12+</span><span class="hero-stat-label">Filtros explicados</span></div>
+<div class="hero-stat"><span class="hero-stat-num">4</span><span class="hero-stat-label">Mockups interativos</span></div>
 </div>
 
   <div class="hero-cta">
@@ -2986,6 +2987,217 @@
     </div>
   </div>
 
+</div><div class="trigger-block" id="g4" data-name="avaliação produto review submitted product review">
+  <div class="trigger-head">
+    <div class="trigger-num">04</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Pós-venda</div>
+      <h2 class="trigger-name">Avaliação de Produto Enviada</h2>
+      <div class="trigger-en">Product Review Submitted</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Feedback</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara no instante em que um cliente clica em "Submit review" em qualquer produto da loja HighLevel. Captura os detalhes da avaliação — nota, título, comentário, quem avaliou, loja e produto — e lança a automação na hora.</p>
+      <p>Diferente do "Nova Avaliação Recebida" (que cobre Google/Facebook/outras plataformas de reputação), este é específico pra avaliações de produto feitas dentro da própria loja e-commerce do HighLevel.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">1-2 estrelas → suporte</div><div class="use-case-desc">Nota baixa → notificação interna urgente + tarefa pro time de suporte investigar.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">5 estrelas → depoimento</div><div class="use-case-desc">Nota máxima → email pedindo permissão pra usar a review como prova social.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Palavra-chave no título</div><div class="use-case-desc">Título/comentário contém "defeito" ou "problema" → alerta imediato, mesmo com nota alta.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Produto</div>
+    <div class="filter-en">Global Product</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Seleção de um único produto por vez.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> monta um fluxo dedicado pro produto carro-chefe.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Nome da Loja</div>
+    <div class="filter-en">Store Name</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe a uma loja específica quando a conta tem mais de uma.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> necessário em contas multi-loja pra não misturar reviews.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Classificação da Review</div>
+    <div class="filter-en">Review Rating</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra de 1 a 5 estrelas.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> o coração do gatilho — triagem automática de review ruim vs. boa.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Título da Review</div>
+    <div class="filter-en">Review Headline</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Contém frase / não está vazio.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> pega palavras de alerta ("defeito", "quebrado") mesmo em reviews de nota alta.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Comentário da Review</div>
+    <div class="filter-en">Review Comment</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Contém frase, aplicado ao corpo do comentário.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> mesmo uso do título, com mais contexto no texto completo.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Email do Cliente</div>
+    <div class="filter-en">User Email</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por email específico de quem avaliou.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> útil pra cruzar a review com o histórico do contato.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="g4">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Shopify/ 04 — Avaliação de Produto · Triagem</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="g4">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+
+        <div class="ghl-node" data-node-id="g4-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div>
+              <div class="ghl-node-type">Trigger · Product Review Submitted</div>
+              <div class="ghl-node-title">Product Review Submitted</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Workflow Trigger Name</span><span class="pv highlight">Review ruim — triagem</span></div><div class="ghl-node-param"><span class="pk">Review Rating</span><span class="pv highlight">≤ 2 stars</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g4-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div>
+              <div class="ghl-node-type">Action · Internal Notification</div>
+              <div class="ghl-node-title">Alertar Suporte</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Alertar suporte — review ruim</span></div></div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="g4-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-task">✓</div>
+            <div>
+              <div class="ghl-node-type">Action · Create Task</div>
+              <div class="ghl-node-title">Follow-up com Cliente</div>
+            </div>
+          </div>
+          <div class="ghl-node-body"><div class="ghl-node-param"><span class="pk">Action Name</span><span class="pv highlight">Ligar pro cliente insatisfeito</span></div></div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G4 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona o gatilho. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Filtros: <span class='arrow'>→</span> <strong>Global Product</strong>, <span class='arrow'>→</span> <strong>Store Name</strong>, <span class='arrow'>→</span> <strong>Review Rating</strong>, <span class='arrow'>→</span> <strong>Review Headline</strong>, <span class='arrow'>→</span> <strong>Review Comment</strong>, <span class='arrow'>→</span> <strong>User Email/Name</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Product Review Submitted</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Review ruim — triagem" readonly>
+      </div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Global Product</div>
+        <div class="hl-dropdown placeholder">Qualquer produto</div>
+      </div>
+
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Review Rating</div>
+        <div class="hl-dropdown has-value">1–2 stars</div>
+      </div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara no instante em que o cliente envia a review do produto na loja</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat07.html" class="cat-nav-link prev">
@@ -3001,7 +3213,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 08 completa.</h3>
-    <p>3 gatilhos de Shopify explicados com impacto prático e mockups visuais.</p>
+    <p>4 gatilhos de Shopify explicados com impacto prático e mockups visuais.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -3036,7 +3248,10 @@
     'g2-3': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Marcar cliente comprou</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Comprou Loja</span> <span class="opt-chip">Cliente Ativo</span> <span class="opt-chip">LTV Track</span></div></div>` },
     'g3-1': { kind: 'Trigger · Order Completed', title: 'Order Completed', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Pedido entregue — pedir review</div></div><div class="config-section"><div class="config-label">Store *</div><div class="config-field dropdown">Loja Principal</div></div><div class="config-section"><div class="config-label">Min Order Value</div><div class="config-field">R$ 50,00</div></div>` },
     'g3-2': { kind: 'Action · Wait', title: 'Wait (5 dias)', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Aguardar 5 dias após entrega</div></div><div class="config-section"><div class="config-label">Wait Type *</div><div class="config-field dropdown">Wait For Time Delay</div></div><div class="config-section"><div class="config-label">Duration *</div><div class="config-field highlight">5 days</div></div>` },
-    'g3-3': { kind: 'Action · Send Review Request', title: 'Send Review Request', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Pedir review do produto</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field"><span class="opt-chip">Email</span> <span class="opt-chip">WhatsApp</span></div></div><div class="config-section"><div class="config-label">Review Source</div><div class="config-field dropdown">Google + Site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Pedido de Review — Pós-Compra</div></div>` }
+    'g3-3': { kind: 'Action · Send Review Request', title: 'Send Review Request', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Pedir review do produto</div></div><div class="config-section"><div class="config-label">Channel *</div><div class="config-field"><span class="opt-chip">Email</span> <span class="opt-chip">WhatsApp</span></div></div><div class="config-section"><div class="config-label">Review Source</div><div class="config-field dropdown">Google + Site</div></div><div class="config-section"><div class="config-label">Template</div><div class="config-field dropdown">Pedido de Review — Pós-Compra</div></div>` },
+    'g4-1': { kind: 'Trigger · Product Review Submitted', title: 'Product Review Submitted', body: `<div class="config-section"><div class="config-label">Workflow Trigger Name *</div><div class="config-field highlight">Review ruim — triagem</div></div><div class="config-section"><div class="config-label">Global Product</div><div class="config-field dropdown">Qualquer produto</div></div><div class="config-section"><div class="config-label">Store Name</div><div class="config-field dropdown">Loja Principal</div></div><div class="config-section"><div class="config-label">Review Rating *</div><div class="config-field highlight dropdown">1–2 stars</div></div>` },
+    'g4-2': { kind: 'Action · Internal Notification', title: 'Alertar Suporte', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Alertar suporte — review ruim</div></div><div class="config-section"><div class="config-label">User *</div><div class="config-field dropdown">Time de Suporte</div></div><div class="config-section"><div class="config-label">Notification Type *</div><div class="config-field"><span class="opt-chip">SMS</span> <span class="opt-chip">In-app</span></div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">Review {{trigger.review_rating}}★ de {{trigger.user_name}} — investigar.</div></div>` },
+    'g4-3': { kind: 'Action · Create Task', title: 'Follow-up com Cliente', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Ligar pro cliente insatisfeito</div></div><div class="config-section"><div class="config-label">Title *</div><div class="config-field highlight">Follow-up review negativa</div></div><div class="config-section"><div class="config-label">Assigned To *</div><div class="config-field dropdown">Time de Suporte</div></div><div class="config-section"><div class="config-label">Due Date</div><div class="config-field">Same day</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

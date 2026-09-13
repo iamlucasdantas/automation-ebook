@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 40 | 90 | 46 | **176** |
+| Gatilhos | 31 | 54 | 3 | **88** |
+| Ações | 41 | 90 | 46 | **177** |
 
 
 ## Gatilhos · 12 categorias
@@ -117,6 +117,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Carrinho Abandonado](guia-highlevel-cat08.html#g1) | Abandoned Cart | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Compra Feita](guia-highlevel-cat08.html#g2) | Order Placed | 3 | 2/6 | 🟡 | [ ] | |
 | g3 | [Pedido Concluído](guia-highlevel-cat08.html#g3) | Order Fulfilled | 3 | 2/6 | 🟡 | [ ] | |
+| g4 | [Avaliação de Produto Enviada](guia-highlevel-cat08.html#g4) | Product Review Submitted | 4 | 2/6 | 🟡 | [ ] | |
 
 ### CAT09 · Atendimento Automatizado
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -269,6 +270,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a9 | [Tradução com IA](acoes-highlevel-cat05.html#a9) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
 | a10 | [Decisor com IA](acoes-highlevel-cat05.html#a10) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
 | a11 | [OpenRouter](acoes-highlevel-cat05.html#a11) | OpenRouter: Generate Response | 2 | 3/6 | 🟢 | [ ] | |
+| a12 | [Geração de Imagem com IA](acoes-highlevel-cat05.html#a12) | AI Image Generation | 3 | 4/6 | 🟢 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
