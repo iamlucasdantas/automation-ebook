@@ -10,6 +10,36 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-14 — Content + Automation
+**Checagem de novidades nativas (sem novo total)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-14--checagem-de-novidades-nativas).
+
+- `help.gohighlevel.com` e `ideas.gohighlevel.com` continuam bloqueados
+  por egress direto neste ambiente; a checagem via WebSearch não
+  conseguiu isolar resultados por data desta vez, então nenhum item foi
+  confirmado como lançado especificamente depois de 24/08.
+- Nenhum gatilho/ação novo aplicado — nada encontrado com confiança
+  suficiente (nome + campos exatos) pra virar mockup fiel.
+- 2 novos candidatos encontrados (não aplicados, precisam de validação
+  humana): **Typeform** e **Calendly** — ambas já são integrações
+  nativas reais do HighLevel mas hoje só aparecem no guia como exemplos
+  genéricos de webhook, sem gatilho/ação dedicados.
+- Candidato **Linear** (pendente desde 24/08) ganhou mais detalhe: 12
+  gatilhos + 13 ações confirmados por doc oficial, mas ainda sem os 25
+  nomes exatos — segue precisando de rodada dedicada.
+- Achado de possível rename: nossa ação "Outbound Webhook (Slack)"
+  (`acoes-highlevel-cat02.html` A3) pode já corresponder ao Slack nativo
+  anunciado no changelog de "Premium Triggers & Actions" (mesma leva do
+  Google Sheets, que já está documentado como nativo) — precisa de
+  confirmação humana antes de renomear, já que isso afeta a busca da
+  ação no builder.
+- `index.html`: data de "Última atualização" recontada para hoje.
+  Nenhuma contagem mudou.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

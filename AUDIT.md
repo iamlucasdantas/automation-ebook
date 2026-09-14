@@ -242,14 +242,77 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-14 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. Igual à rodada anterior,
+`help.gohighlevel.com` e `ideas.gohighlevel.com` estão bloqueados por
+egress direto neste ambiente — a checagem usou WebSearch pra ler o
+conteúdo indiretamente. Dessa vez o WebSearch não conseguiu isolar
+resultados por data (a mesma lista de itens aparece independente de o
+termo de busca pedir "agosto 2026" ou "setembro 2026"), então não dá pra
+afirmar com certeza que algo foi lançado depois de 24/08 especificamente.
+
+### ✅ Aplicado nesta rodada
+Nenhum item novo aplicado — nenhuma novidade nativa foi confirmada com
+confiança suficiente (nome exato + campos exatos) pra virar mockup fiel.
+Apenas a data de "Última atualização" no `index.html` foi recontada pra
+hoje, registrando que a auditoria rodou.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **Typeform** — integração nativa confirmada (doc oficial:
+  [Typeform Actions & Triggers in HighLevel Workflows](https://help.gohighlevel.com/support/solutions/articles/155000006676-typeform-actions-triggers-in-workflows),
+  lançada ~julho/2026). Hoje o guia só cita "Typeform" como exemplo de
+  webhook externo genérico (`guia-highlevel-cat01.html` G1,
+  `acoes-highlevel-cat01.html` A1) — não tem gatilho/ação dedicados.
+  Campos exatos ainda não confirmados.
+- **Calendly** — integração nativa confirmada (~5 gatilhos + 9 ações,
+  lançada ~junho/2026). Hoje o guia só usa "estilo Calendly" como
+  descrição do gatilho genérico de agendamento
+  (`guia-highlevel-cat03.html` G1) — não tem entradas dedicadas. Campos
+  exatos ainda não confirmados.
+- **Linear** — candidato já pendente desde 24/08. Achamos um artigo
+  oficial mais detalhado desta vez ([Linear Integration in HighLevel
+  Workflows Guide](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows)):
+  12 gatilhos instantâneos (issue nova, status mudou, projeto novo,
+  cliente novo, customer need novo, atualização de projeto, comentário
+  em documento, atualização de iniciativa, etc.) + 13 ações (criar/
+  atualizar issues, comentários, anexos, labels, projects, customers,
+  customer needs). Ainda precisa de rodada dedicada pra levantar o nome
+  exato de cada um dos 25 itens antes de montar mockup.
+- **Slack** — achado que merece revisão humana, não uma correção
+  automática: o changelog oficial da HighLevel descreve Slack como
+  "Premium Trigger & Action" nativo (mesma leva que lançou o Google
+  Sheets nativo, já documentado em `acoes-highlevel-cat03.html` A2 com a
+  tag "Integração nativa"). No guia hoje, `acoes-highlevel-cat02.html`
+  A3 já tem um painel com cara de integração nativa (dropdown "Slack
+  Channel", aviso de pré-requisito "Slack precisa estar conectado em
+  Settings → Integrations") mas o nome em inglês ainda é "Outbound
+  Webhook (Slack)" — resquício de quando o `auto-refine.py` tratava
+  Slack como não-nativo e convertia pra webhook genérico (ver
+  `acoes-highlevel-cat01.html` A11-3 e `acoes-highlevel-cat10.html`
+  A3-2, que ainda mostram URL de Incoming Webhook do Slack ao invés do
+  dropdown nativo). Pode ser um rename (`Outbound Webhook (Slack)` →
+  `Slack`) mais unificação dos poucos nós de mockup que ainda usam o
+  webhook antigo — mas rename de ação afeta como o usuário busca ela no
+  builder, então fica pra confirmação humana antes de mexer.
+- **Monday.com / Jira** — mesmos candidatos pendentes desde 24/08, ainda
+  sem artigo oficial dedicado com campos exatos encontrado nesta busca.
+
+Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
+anteriores: são integrações nativas reais, mas exigem confirmação humana
+do nome e dos campos exatos antes de virar mockup com fidelidade real.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, Typeform, Calendly) +
+   o achado de rename do Slack — confirmar nome real do campo / da
+   action antes de qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
