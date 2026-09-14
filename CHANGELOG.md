@@ -10,6 +10,25 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-14 — Content
+**Remove Mistral AI action from cat05 (requested)**
+
+- Removida a ação **Mistral AI** (`acoes-highlevel-cat05.html`, era A8:
+  Create Chat Completion / Create Embeddings / Analyze Image) a pedido
+  do usuário. Ações seguintes renumeradas (A9 Tradução com IA → A8,
+  A10 Decisor com IA → A9) — sidebar, hero-stats, footer, meta tags e
+  `configData` do mockup atualizados. De quebra, corrigido um bug de
+  markup pré-existente na sidebar (o link "Mistral AI" tinha uma tag
+  `<a>` nunca fechada, que engolia os dois links seguintes).
+- Contagem real da categoria corrigida de 7 pra 9 ações (o "7" no
+  `index.html` já estava desatualizado desde antes desta rodada — nunca
+  tinha sido corrigido depois que Tradução com IA/Decisor com IA foram
+  adicionadas em 10/08).
+- Totais atualizados: **87 gatilhos + 174 ações = 261 entries**.
+  `search-index.json` e `AUDIT-TABLE.md` regenerados via
+  `auto-refine.py` / `build-audit.py`; `validate-mockups.js` confirma as
+  30 páginas OK.
+
 ## 2026-09-14 — Content + Automation
 **Checagem de novidades nativas (sem novo total)**
 
