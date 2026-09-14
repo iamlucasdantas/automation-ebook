@@ -10,6 +10,130 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-14 — Content
+**Reconcile Mistral AI removal with concurrent OpenRouter addition**
+
+O PR que removeu a ação Mistral AI (abaixo) foi aberto a partir do
+estado de 24/08, mas nesse meio-tempo a rodada de 31/08 (ver abaixo)
+já tinha rodado direto na `main` e adicionado a ação **OpenRouter**
+(A11) na mesma categoria (`acoes-highlevel-cat05.html`). Ao trazer a
+`main` pra dentro desta branch antes de publicar, resolvido o conflito
+mantendo as duas mudanças: Mistral removida, OpenRouter mantida.
+
+- `acoes-highlevel-cat05.html` final: A1-A7 inalteradas, A8 Tradução
+  com IA, A9 Decisor com IA, A10 OpenRouter (renumerada de A11) — 10
+  ações reais na categoria. `configData` do mockup do Mistral (a8-1/2/3)
+  removido; mockup e `configData` do OpenRouter preservados como a10-*.
+- Totais finais depois da reconciliação: **87 gatilhos + 175 ações =
+  262 entries** (o "174" logado no commit de remoção do Mistral e o
+  "176" logado no commit do OpenRouter — abaixo — eram totais parciais,
+  cada um sem ver a mudança do outro). Mockups interativos: 210.
+  `index.html`, `search-index.json` e `AUDIT-TABLE.md` regenerados;
+  `validate-mockups.js` confirma as 30 páginas OK.
+
+## 2026-08-31 — Content
+**Checagem de novidades nativas: +1 ação (OpenRouter) + fix de drift no cat05**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `help.gohighlevel.com` e o changelog oficial da HighLevel em busca de
+itens nativos lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-08-31--checagem-de-novidades-nativas).
+
+- **Ação — OpenRouter (Generate Response)** (`acoes-highlevel-cat05.html`
+  A11): conecta o workflow a mais de 300 modelos de IA via API key própria
+  da OpenRouter — Connect OpenRouter, Model Selection, System Prompt,
+  Prompt, Temperature/Max Tokens/Output Format. Resolve o candidato
+  pendente desde 2026-07-29.
+- 🐛 **Fix de drift pré-existente**: `acoes-highlevel-cat05.html` já tinha
+  10 ações reais no HTML (não 8) desde que A9/AI Translate e A10/AI
+  Decision Maker foram implementadas numa rodada passada — hero-stat,
+  section label, meta tags e rodapé da própria página nunca foram
+  atualizados, e o card da categoria em `index.html` ainda dizia "7 ações".
+  `search-index.json` sempre esteve correto (gerado varrendo o HTML real),
+  então o total do site nunca esteve errado — só os labels manuais dentro
+  da página e o card da home. Corrigido junto com a adição da A11, agora
+  todos os lugares dizem 11. Também corrigida uma tag `<a>` mal-fechada no
+  side-nav (item 08 aninhava o item 09 dentro do próprio link).
+- 9 candidatos encontrados mas **não aplicados** (campos exatos ainda sem
+  confirmação): Calendly e HubSpot (achados novos), Basecamp (achado novo,
+  sem campo nenhum ainda), Browse AI, Manus, Monday.com, Jira, Linear (25
+  itens), Housecall Pro, Apify (Browse AI/Monday/Jira/Linear/Housecall Pro
+  com mais detalhe de contagem que na rodada anterior, mas ainda sem schema
+  de campo item-a-item).
+- Totais atualizados: **87 gatilhos + 176 ações = 263 painéis** (mockups
+  interativos: 210 → 211). `index.html`: data de "Última atualização"
+  recontada para hoje.
+
+## 2026-09-14 — Content
+**Add tutorial video to Update Conversation AI Bot and Status action (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição da ação
+  **Atualizar Bot de IA e Status (Update Conversation AI Bot and
+  Status)** · `acoes-highlevel-cat05.html` A7, a pedido do usuário.
+
+## 2026-09-14 — Content
+**Add tutorial video to Order Submitted trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Ordem Submetida (Order Submitted)** ·
+  `guia-highlevel-cat07.html` G4, a pedido do usuário.
+
+## 2026-09-14 — Content
+**Add tutorial video to Order Form Submission trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Ordem em Formulário (Order Form Submission)** ·
+  `guia-highlevel-cat07.html` G3, a pedido do usuário.
+
+## 2026-09-14 — Content
+**Remove Mistral AI action from cat05 (requested)**
+
+- Removida a ação **Mistral AI** (`acoes-highlevel-cat05.html`, era A8:
+  Create Chat Completion / Create Embeddings / Analyze Image) a pedido
+  do usuário. Ações seguintes renumeradas (A9 Tradução com IA → A8,
+  A10 Decisor com IA → A9) — sidebar, hero-stats, footer, meta tags e
+  `configData` do mockup atualizados. De quebra, corrigido um bug de
+  markup pré-existente na sidebar (o link "Mistral AI" tinha uma tag
+  `<a>` nunca fechada, que engolia os dois links seguintes).
+- Contagem real da categoria corrigida de 7 pra 9 ações (o "7" no
+  `index.html` já estava desatualizado desde antes desta rodada — nunca
+  tinha sido corrigido depois que Tradução com IA/Decisor com IA foram
+  adicionadas em 10/08).
+- Totais atualizados: **87 gatilhos + 174 ações = 261 entries**.
+  `search-index.json` e `AUDIT-TABLE.md` regenerados via
+  `auto-refine.py` / `build-audit.py`; `validate-mockups.js` confirma as
+  30 páginas OK.
+
+## 2026-09-14 — Content + Automation
+**Checagem de novidades nativas (sem novo total)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-14--checagem-de-novidades-nativas).
+
+- `help.gohighlevel.com` e `ideas.gohighlevel.com` continuam bloqueados
+  por egress direto neste ambiente; a checagem via WebSearch não
+  conseguiu isolar resultados por data desta vez, então nenhum item foi
+  confirmado como lançado especificamente depois de 24/08.
+- Nenhum gatilho/ação novo aplicado — nada encontrado com confiança
+  suficiente (nome + campos exatos) pra virar mockup fiel.
+- 2 novos candidatos encontrados (não aplicados, precisam de validação
+  humana): **Typeform** e **Calendly** — ambas já são integrações
+  nativas reais do HighLevel mas hoje só aparecem no guia como exemplos
+  genéricos de webhook, sem gatilho/ação dedicados.
+- Candidato **Linear** (pendente desde 24/08) ganhou mais detalhe: 12
+  gatilhos + 13 ações confirmados por doc oficial, mas ainda sem os 25
+  nomes exatos — segue precisando de rodada dedicada.
+- Achado de possível rename: nossa ação "Outbound Webhook (Slack)"
+  (`acoes-highlevel-cat02.html` A3) pode já corresponder ao Slack nativo
+  anunciado no changelog de "Premium Triggers & Actions" (mesma leva do
+  Google Sheets, que já está documentado como nativo) — precisa de
+  confirmação humana antes de renomear, já que isso afeta a busca da
+  ação no builder.
+- `index.html`: data de "Última atualização" recontada para hoje.
+  Nenhuma contagem mudou.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

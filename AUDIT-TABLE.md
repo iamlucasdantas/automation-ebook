@@ -265,9 +265,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Intent Detection | 2 | 2/6 | 🟡 | [ ] | |
 | a6 | [Agente de IA](acoes-highlevel-cat05.html#a6) | AI Agent | 2 | 3/6 | 🟢 | [ ] | |
 | a7 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a7) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
-| a8 | [Mistral AI](acoes-highlevel-cat05.html#a8) | Mistral AI: Create Chat Completion / Create Embeddings / Analyze Image | 2 | 3/6 | 🟢 | [ ] | |
-| a9 | [Tradução com IA](acoes-highlevel-cat05.html#a9) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
-| a10 | [Decisor com IA](acoes-highlevel-cat05.html#a10) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
+| a8 | [Tradução com IA](acoes-highlevel-cat05.html#a8) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
+| a9 | [Decisor com IA](acoes-highlevel-cat05.html#a9) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
+| a10 | [OpenRouter](acoes-highlevel-cat05.html#a10) | OpenRouter: Generate Response | 2 | 3/6 | 🟢 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

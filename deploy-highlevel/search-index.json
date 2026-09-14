@@ -2386,21 +2386,6 @@
     {
       "id": "a8",
       "type": "Ação",
-      "name": "Mistral AI",
-      "en": "Mistral AI: Create Chat Completion / Create Embeddings / Analyze Image",
-      "category": "Ação",
-      "tags": [
-        "AI",
-        "Beta",
-        "Novo"
-      ],
-      "description": "",
-      "keywords": "mistral ai chat completion embeddings analyze image",
-      "href": "acoes-highlevel-cat05.html#a8"
-    },
-    {
-      "id": "a9",
-      "type": "Ação",
       "name": "Tradução com IA",
       "en": "AI Translate",
       "category": "Ação",
@@ -2409,10 +2394,10 @@
       ],
       "description": "",
       "keywords": "tradução com ia ai translate",
-      "href": "acoes-highlevel-cat05.html#a9"
+      "href": "acoes-highlevel-cat05.html#a8"
     },
     {
-      "id": "a10",
+      "id": "a9",
       "type": "Ação",
       "name": "Decisor com IA",
       "en": "AI Decision Maker",
@@ -2422,6 +2407,21 @@
       ],
       "description": "",
       "keywords": "decisor com ia ai decision maker",
+      "href": "acoes-highlevel-cat05.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "OpenRouter",
+      "en": "OpenRouter: Generate Response",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Premium",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "openrouter generate response",
       "href": "acoes-highlevel-cat05.html#a10"
     },
     {
