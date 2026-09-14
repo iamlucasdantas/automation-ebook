@@ -65,6 +65,13 @@ itens nativos lançados desde a rodada de 2026-08-24. Detalhe completo em
   recontada para hoje.
 
 ## 2026-09-14 — Content
+**Add tutorial video to Update Conversation AI Bot and Status action (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição da ação
+  **Atualizar Bot de IA e Status (Update Conversation AI Bot and
+  Status)** · `acoes-highlevel-cat05.html` A7, a pedido do usuário.
+
+## 2026-09-14 — Content
 **Add tutorial video to Order Submitted trigger (requested)**
 
 - Vídeo tutorial incorporado logo abaixo da descrição do gatilho
