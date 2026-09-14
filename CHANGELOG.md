@@ -11,6 +11,13 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-09-14 — Content
+**Add tutorial video to Order Form Submission trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Ordem em Formulário (Order Form Submission)** ·
+  `guia-highlevel-cat07.html` G3, a pedido do usuário.
+
+## 2026-09-14 — Content
 **Remove Mistral AI action from cat05 (requested)**
 
 - Removida a ação **Mistral AI** (`acoes-highlevel-cat05.html`, era A8:
