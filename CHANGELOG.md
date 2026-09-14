@@ -65,6 +65,13 @@ itens nativos lançados desde a rodada de 2026-08-24. Detalhe completo em
   recontada para hoje.
 
 ## 2026-09-14 — Content
+**Add tutorial video to Order Submitted trigger (requested)**
+
+- Vídeo tutorial incorporado logo abaixo da descrição do gatilho
+  **Ordem Submetida (Order Submitted)** ·
+  `guia-highlevel-cat07.html` G4, a pedido do usuário.
+
+## 2026-09-14 — Content
 **Add tutorial video to Order Form Submission trigger (requested)**
 
 - Vídeo tutorial incorporado logo abaixo da descrição do gatilho
