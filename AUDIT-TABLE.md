@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 38 | 90 | 46 | **174** |
+| Ações | 39 | 90 | 46 | **175** |
 
 
 ## Gatilhos · 12 categorias
@@ -267,6 +267,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a7 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a7) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
 | a8 | [Tradução com IA](acoes-highlevel-cat05.html#a8) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
 | a9 | [Decisor com IA](acoes-highlevel-cat05.html#a9) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
+| a10 | [OpenRouter](acoes-highlevel-cat05.html#a10) | OpenRouter: Generate Response | 2 | 3/6 | 🟢 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

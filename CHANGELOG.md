@@ -11,6 +11,60 @@ For full diffs, follow the commit hash link or browse the PR.
 ---
 
 ## 2026-09-14 — Content
+**Reconcile Mistral AI removal with concurrent OpenRouter addition**
+
+O PR que removeu a ação Mistral AI (abaixo) foi aberto a partir do
+estado de 24/08, mas nesse meio-tempo a rodada de 31/08 (ver abaixo)
+já tinha rodado direto na `main` e adicionado a ação **OpenRouter**
+(A11) na mesma categoria (`acoes-highlevel-cat05.html`). Ao trazer a
+`main` pra dentro desta branch antes de publicar, resolvido o conflito
+mantendo as duas mudanças: Mistral removida, OpenRouter mantida.
+
+- `acoes-highlevel-cat05.html` final: A1-A7 inalteradas, A8 Tradução
+  com IA, A9 Decisor com IA, A10 OpenRouter (renumerada de A11) — 10
+  ações reais na categoria. `configData` do mockup do Mistral (a8-1/2/3)
+  removido; mockup e `configData` do OpenRouter preservados como a10-*.
+- Totais finais depois da reconciliação: **87 gatilhos + 175 ações =
+  262 entries** (o "174" logado no commit de remoção do Mistral e o
+  "176" logado no commit do OpenRouter — abaixo — eram totais parciais,
+  cada um sem ver a mudança do outro). Mockups interativos: 210.
+  `index.html`, `search-index.json` e `AUDIT-TABLE.md` regenerados;
+  `validate-mockups.js` confirma as 30 páginas OK.
+
+## 2026-08-31 — Content
+**Checagem de novidades nativas: +1 ação (OpenRouter) + fix de drift no cat05**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `help.gohighlevel.com` e o changelog oficial da HighLevel em busca de
+itens nativos lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-08-31--checagem-de-novidades-nativas).
+
+- **Ação — OpenRouter (Generate Response)** (`acoes-highlevel-cat05.html`
+  A11): conecta o workflow a mais de 300 modelos de IA via API key própria
+  da OpenRouter — Connect OpenRouter, Model Selection, System Prompt,
+  Prompt, Temperature/Max Tokens/Output Format. Resolve o candidato
+  pendente desde 2026-07-29.
+- 🐛 **Fix de drift pré-existente**: `acoes-highlevel-cat05.html` já tinha
+  10 ações reais no HTML (não 8) desde que A9/AI Translate e A10/AI
+  Decision Maker foram implementadas numa rodada passada — hero-stat,
+  section label, meta tags e rodapé da própria página nunca foram
+  atualizados, e o card da categoria em `index.html` ainda dizia "7 ações".
+  `search-index.json` sempre esteve correto (gerado varrendo o HTML real),
+  então o total do site nunca esteve errado — só os labels manuais dentro
+  da página e o card da home. Corrigido junto com a adição da A11, agora
+  todos os lugares dizem 11. Também corrigida uma tag `<a>` mal-fechada no
+  side-nav (item 08 aninhava o item 09 dentro do próprio link).
+- 9 candidatos encontrados mas **não aplicados** (campos exatos ainda sem
+  confirmação): Calendly e HubSpot (achados novos), Basecamp (achado novo,
+  sem campo nenhum ainda), Browse AI, Manus, Monday.com, Jira, Linear (25
+  itens), Housecall Pro, Apify (Browse AI/Monday/Jira/Linear/Housecall Pro
+  com mais detalhe de contagem que na rodada anterior, mas ainda sem schema
+  de campo item-a-item).
+- Totais atualizados: **87 gatilhos + 176 ações = 263 painéis** (mockups
+  interativos: 210 → 211). `index.html`: data de "Última atualização"
+  recontada para hoje.
+
+## 2026-09-14 — Content
 **Add tutorial video to Order Form Submission trigger (requested)**
 
 - Vídeo tutorial incorporado logo abaixo da descrição do gatilho
