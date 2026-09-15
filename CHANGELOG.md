@@ -10,6 +10,35 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-15 — Content + Automation
+**Checagem de novidades nativas (rodada agendada)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-15--checagem-de-novidades-nativas).
+
+- **Login de Usuário** (`guia-highlevel-cat06.html` G12): nota adicionada
+  — o gatilho agora também dispara para logins na nova experiência de
+  Client Portal, além das memberships legadas. Não muda a contagem total
+  (enhancement a item já existente).
+- **Oportunidade Alterada** (`guia-highlevel-cat04.html` G2): revisado
+  contra o changelog oficial (novos operadores Has Changed/Has Changed
+  To/Equals) — os 7 filtros já documentados no guia já cobrem o
+  comportamento, nenhum campo faltando.
+- 4 candidatos novos encontrados mas **não aplicados** — precisam de
+  validação humana de campos exatos antes de virar mockup: **Cal.com**
+  (5 gatilhos + ações de booking), **Klaviyo** (4 gatilhos + 17 ações),
+  **Fathom** (1 gatilho + 3 ações) e **HubSpot** (1 gatilho + 5 ações).
+  Somam-se à lista já pendente (Monday.com, Jira, Linear, Housecall Pro,
+  Apify, Browse AI, OpenRouter, Manus, Badge Issued).
+- `index.html`: data de "Última atualização" atualizada para 15 de
+  setembro de 2026. Nenhum total mudou (87 gatilhos, 175 ações, 262
+  painéis, 30 categorias) — `auto-refine.py --check` confirma 0 drift e
+  `build-audit.py` regenera `AUDIT-TABLE.md` idêntico.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

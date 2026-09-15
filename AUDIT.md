@@ -242,14 +242,76 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-15 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `ideas.gohighlevel.com` e
+`help.gohighlevel.com` continuam bloqueados por egress direto neste
+ambiente — a checagem usou busca web para ler o conteúdo indiretamente.
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente, sem novo total)
+1. **Login de Usuário** (`guia-highlevel-cat06.html` G12) — desde 09/2026
+   este gatilho também dispara para logins na nova experiência de
+   **Client Portal**, não só memberships legadas. Sem reconfiguração
+   necessária; o item passou a aparecer também numa categoria dedicada
+   "Client Portal" no seletor de gatilhos, além de Courses/Memberships.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/client-portal-user-login-workflow-trigger-now-supports-the-new-client-portal-exp)
+
+Não muda a contagem — é melhoria em item já existente, não item novo.
+
+### 🔍 Revisado, sem ação necessária
+- **Oportunidade Alterada** (`guia-highlevel-cat04.html` G2) — changelog
+  oficial anuncia operadores "Has Changed / Has Changed To / Equals" por
+  campo. Conferido contra o guia: os 7 filtros já documentados (incl.
+  "Valor do Lead" com maior/menor/entre e "Campos Customizados") já
+  cobrem esse comportamento na prática — nenhum campo novo confirmado
+  que falte no painel.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+Integrações nativas novas desde a rodada anterior — todas com doc oficial
+dedicada, mas sem confirmação humana dos nomes exatos de campo/dropdown
+antes de montar mockup com fidelidade real:
+- **Cal.com** — 5 gatilhos instantâneos (Booking Created, Booking
+  Rescheduled, Booking Cancelled, Meeting Ended, Out of Office
+  Created/Updated) + ações pra criar/cancelar/reagendar/buscar bookings.
+  Premium. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers)
+- **Klaviyo** — 4 gatilhos por polling a cada 5min (New Event, New
+  Profile, Profile Added to List, Profile Added to Segment) + 17 ações
+  (perfil, listas, segmentos, tags, campanhas). Premium, volume grande —
+  precisa de rodada dedicada. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008018-klaviyo-workflow-actions-triggers)
+- **Fathom** — 1 gatilho (New Recording) + 3 ações (List Recordings,
+  Fetch Transcript, Fetch Summary) pra automatizar follow-up de calls
+  gravadas. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007578-fathom-actions-triggers-in-workflows)
+- **HubSpot** — 1 gatilho (New Contact Created) + 5 ações (Create/Find
+  Contact, lookup por ID/email, associar contato a company/deal).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007955-hubspot-workflow-actions-trigger)
+
+Igual às rodadas anteriores: são integrações nativas reais, mas com
+campos/sub-itens que precisam de confirmação humana antes de montar
+mockup com fidelidade real. Não foram inventados campos pra nenhuma delas.
+
+### 🔄 Candidatos de rodadas anteriores — status revisado
+- **Badge Issued** (gatilho) — doc oficial dedicada apareceu
+  ("Automate Badge Issuance in Workflows"), mas o título ainda é
+  "(Using 'Issue Certificate' Action)" — ou seja, a ação companion
+  **Issue Badge** aparentemente **ainda não** é um node dedicado; o
+  workaround (Issue Certificate com template de Badge) continua sendo o
+  caminho oficial. Filtros exatos do gatilho Badge Issued (por
+  Community/Group?) não foram confirmados. Continua pendente.
+- **Monday.com, Jira, Linear (25 itens), Housecall Pro, Apify, Browse AI,
+  OpenRouter, Manus** — sem mudança de status desde 2026-08-24, ainda
+  pendentes de validação humana.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, Cal.com, Klaviyo,
+   Fathom, HubSpot) — confirmar nome real do campo / da action antes de
+   qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
