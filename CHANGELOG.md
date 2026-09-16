@@ -10,6 +10,41 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-16 — Content + Automation
+**Checagem de novidades nativas + drift de contagem em 8 páginas de Ações**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-16--checagem-de-novidades-nativas).
+
+- **Ação — OpenRouter** (`acoes-highlevel-cat05.html` A11): geração de
+  texto via roteador OpenRouter (300+ modelos com API key própria).
+  Doc oficial confirmada, campos reais mapeados.
+- Nenhum outro trigger/ação genuinamente novo foi lançado pela HighLevel
+  entre 24/08 e 16/09 — o único changelog no período foi uma mudança de
+  UX do builder (Publish & Validation Gate), não um item novo.
+- **Drift de contagem corrigido em 8 páginas de Ações** (Contatos,
+  Comunicação, Ferramentas Internas, Agendamentos, Oportunidades,
+  Pagamentos, Marketing, Comunidades): o número real de ações por
+  categoria (via contagem de `acao-block`) estava dessincronizado dos
+  rótulos exibidos (side-nav, hero, meta description) em até 4 ações de
+  diferença, acumulado de rodadas anteriores que não atualizaram todos
+  os lugares onde o total aparece. Corrigido nas 8 páginas + nos cards
+  da home. Também corrigida uma tag `<a>` não fechada no side-nav de
+  `acoes-highlevel-cat05.html`.
+- 7 integrações nativas grandes (Browse AI, Manus, Jira, Linear,
+  Housecall Pro, Apify, Monday.com) agora têm doc oficial com campos
+  suficientes pra virar mockup — ~75 itens no total, registrados no
+  AUDIT.md como candidatos pra próximas rodadas dedicadas (precisam de
+  confirmação humana campo a campo antes de qualquer mockup, mesmo
+  processo usado pro Mistral AI).
+
+Totais atualizados: **87 gatilhos + 176 ações = 263 entries**.
+`build-search-index.py`, `build-audit.py` e `validate-mockups.js`
+rodados — 0 drift, 30/30 páginas OK. `index.html` recontado (data de
+"Última atualização" e todos os hero-stats/tab-counts/section-labels).
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

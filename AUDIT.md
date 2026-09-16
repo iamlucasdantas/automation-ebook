@@ -242,6 +242,91 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-16 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra `help.gohighlevel.com` e o changelog
+oficial em busca de itens nativos lançados desde então. Egress direto
+pros dois domínios segue bloqueado neste ambiente — a checagem usou busca
+web pra ler o conteúdo indiretamente.
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+1. **Ação — OpenRouter (OpenRouter Generate Response)** · cat05 A11.
+   Geração de texto via roteador OpenRouter (300+ modelos — OpenAI,
+   Anthropic, Google, Meta, Mistral etc.) usando API key própria da
+   OpenRouter. Campos: System Prompt (opcional), Prompt (obrigatório),
+   Model (seletor). Sem gatilho associado.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+
+Nenhum gatilho ou ação genuinamente novo foi lançado pela HighLevel no
+período 24/08–16/09/2026 — o único achado nesse intervalo foi um "Workflow
+Publish & Validation Gate" (11/09), que é uma mudança de UX do builder
+(bloqueia publish com erros pendentes), não um trigger/ação novo.
+
+Totais atualizados: **87 gatilhos + 176 ações = 263 entries** (homepage,
+`search-index.json` e `AUDIT-TABLE.md` já regenerados).
+
+### 🐛 Drift de contagem corrigido nesta rodada (não era novidade do HL, era bug nosso)
+Comparando o número real de `acao-block` por página contra os rótulos
+exibidos, várias páginas estavam com contagem desatualizada — acumulada
+de rodadas anteriores que adicionaram ações sem atualizar todos os
+lugares onde o total aparece (`side-section-label`, `hero-stat-num`,
+`hero-desc`, `<meta description>` e o card da home):
+
+| Página | Rótulo dizia | Real | 
+|---|---:|---:|
+| `acoes-highlevel-cat01.html` (Contatos) | 16 | 18 |
+| `acoes-highlevel-cat02.html` (Comunicação) | 29 | 37 |
+| `acoes-highlevel-cat04.html` (Ferramentas Internas) | 17–21 (inconsistente) | 22 |
+| `acoes-highlevel-cat05.html` (Workflow AI) | 8 | 10 (11 com OpenRouter) |
+| `acoes-highlevel-cat06.html` (Agendamentos) | 3 | 4 |
+| `acoes-highlevel-cat07.html` (Oportunidades) | 11 | 13 |
+| `acoes-highlevel-cat08.html` (Pagamentos) | 5 | 9 |
+| `acoes-highlevel-cat09.html` (Marketing) | 5 | 8 |
+| `acoes-highlevel-cat13.html` (Comunidades) | 7 | 8 |
+
+Corrigido em todos os locais (meta tags, hero, side-nav, home). Também
+corrigido: `acoes-highlevel-cat05.html` tinha uma tag `<a>` do side-nav
+não fechada (item A8 Mistral AI) que quebrava o aninhamento do link
+seguinte — corrigido.
+`acoes-highlevel-cat16.html` e `cat17.html` pareciam ter drift pelo mesmo
+teste automático, mas na verdade são só rótulos de subgrupo (ex.: "Custom
+Objects · 3 ações" dentro de um total de 9) — não é bug, ficou registrado
+aqui pra não reabrir a investigação à toa numa próxima rodada.
+
+### 🔍 Candidatos confirmados, NÃO aplicados ainda (precisam de validação humana antes do mockup)
+Ficaram prontos pra aplicar assim que alguém confirmar os campos exatos
+contra a UI real (evita inventar campo em integração multi-item):
+- **Browse AI** — 1 gatilho (New Completed Task) + 4 ações (Run Task,
+  Bulk Run Tasks, Get Task, Get Bulk Run). [Doc](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+- **Manus** — 2 gatilhos (New Task Created, Task Stopped) + 6 ações
+  (Create/Get/Update/Fetch/Delete Task, Continue Task w/ Prompt).
+  [Doc](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
+- **Jira** — 2 gatilhos (issue created/updated) + 11 ações (create/update/
+  link/comment/watch/attach/log work/move to sprint), com seletor de
+  Cloud Site (OAuth multi-site). [Doc](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers)
+- **Linear** — 12 gatilhos + 13 ações (issues, comments, projects,
+  customers, etc.), conexão nativa via OAuth. [Doc](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows)
+- **Housecall Pro** — 9 gatilhos + 14 ações (jobs, estimates, leads,
+  customer jobs). [Changelog](https://ideas.gohighlevel.com/changelog/housecall-pro-more-workflow-actions-triggers)
+- **Apify** — gatilho + ações, campos ainda rasos na doc oficial, precisa
+  de checagem direta antes de qualquer mockup. [Doc](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-highlevel-workflows)
+- **Monday.com** — só ações têm doc dedicada (create/update/find board,
+  group, column, item, subitem, etc.); os gatilhos (column changed, item
+  moved, new item) estão marcados como "coming soon" na doc oficial — não
+  adicionar gatilho nenhum até isso mudar. [Doc](https://help.gohighlevel.com/support/solutions/articles/155000007216-monday-com-actions-and-triggers-in-workflows)
+
+Volume grande (principalmente Jira/Linear/Housecall Pro, ~75 itens juntos)
+— cada um pede uma rodada dedicada com confirmação humana de campo por
+campo antes de virar mockup, igual o processo já usado pro Mistral AI e
+Browse AI anteriormente.
+
+### 🟢 Não é mais candidato — confirmado que NÃO deve ser adicionado
+- **Badge Issued / Issue Badge** — a doc oficial (155000005887) ainda
+  instrui usar a ação já existente **Issue Certificate** com um template
+  de Badge selecionado. Não existe uma ação "Issue Badge" dedicada com
+  campos próprios — não é um item novo, continua fora do guia.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
