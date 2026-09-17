@@ -7,21 +7,21 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
 <link rel="canonical" href="https://guia.magneticflows.com/acoes-highlevel-cat15.html" />
 
-<meta name="description" content="Guia completo das ações de integração Google do HighLevel. Criar, atualizar, buscar contatos Google e gerenciar grupos — sem Zapier. Parte 15/17 do guia oficial em português." />
+<meta name="description" content="Guia completo das ações de integração Google do HighLevel. Criar, atualizar, buscar contatos e grupos do Google, e consultar formulários/respostas do Google Forms — sem Zapier. Parte 15/17 do guia oficial em português." />
 <meta name="author" content="Magnetic Funnels" />
-<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, ações, Google, Google Contacts, Google Groups, CRM, workflow, PT-BR" />
+<meta name="keywords" content="HighLevel, Magnetic Funnels, automação, ações, Google, Google Contacts, Google Groups, Google Forms, CRM, workflow, PT-BR" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Ações Google — Guia HighLevel" />
-<meta property="og:description" content="Guia completo das ações de integração Google do HighLevel. Criar, atualizar, buscar contatos Google e gerenciar grupos — sem Zapier. Parte 15/17 do guia oficial em português." />
+<meta property="og:description" content="Guia completo das ações de integração Google do HighLevel. Criar, atualizar, buscar contatos e grupos do Google, e consultar formulários/respostas do Google Forms — sem Zapier. Parte 15/17 do guia oficial em português." />
 <meta property="og:site_name" content="Magnetic Funnels" />
 <meta property="og:locale" content="pt_BR" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ações Google — Guia HighLevel" />
-<meta name="twitter:description" content="Guia completo das ações de integração Google do HighLevel. Criar, atualizar, buscar contatos Google e gerenciar grupos — sem Zapier. Parte 15/17 do guia oficial em português." />
+<meta name="twitter:description" content="Guia completo das ações de integração Google do HighLevel. Criar, atualizar, buscar contatos e grupos do Google, e consultar formulários/respostas do Google Forms — sem Zapier. Parte 15/17 do guia oficial em português." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1246,6 +1246,14 @@
     <a href="#a6" class="side-link"><span class="side-num">06</span>Adicionar a Grupos Google</a>
   </nav>
 
+  <div class="side-section-label">Formulários Google</div>
+  <nav class="side-nav">
+    <a href="#a7" class="side-link"><span class="side-num">07</span>Buscar Formulário por ID</a>
+    <a href="#a8" class="side-link"><span class="side-num">08</span>Buscar Formulário por Nome</a>
+    <a href="#a9" class="side-link"><span class="side-num">09</span>Buscar Resposta por ID</a>
+    <a href="#a10" class="side-link"><span class="side-num">10</span>Buscar Respostas por Formulário</a>
+  </nav>
+
   <div class="side-cta-fixed">
     <div class="side-cta-card">
       <div class="side-cta-tag">Afiliado oficial · Oferta exclusiva</div>
@@ -1260,11 +1268,11 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 15/15</span>
   <h1 class="hero-title">Ações de <em>Google Integrações</em>.</h1>
-  <p class="hero-desc">6 ações nativas para manipular contatos e grupos do Google diretamente nos seus workflows HighLevel. Crie, atualize, busque contatos e gerencie grupos — sem sair do HighLevel, sem Zapier.</p>
+  <p class="hero-desc">10 ações nativas para manipular contatos, grupos e formulários do Google diretamente nos seus workflows HighLevel. Crie, atualize, busque contatos, gerencie grupos e consulte formulários/respostas do Google Forms — sem sair do HighLevel, sem Zapier.</p>
   <div class="hero-stats">
-    <div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">Ações cobertas</span></div>
-    <div class="hero-stat"><span class="hero-stat-num">12+</span><span class="hero-stat-label">Campos explicados</span></div>
-    <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-label">Mockups interativos</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">10</span><span class="hero-stat-label">Ações cobertas</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">16+</span><span class="hero-stat-label">Campos explicados</span></div>
+    <div class="hero-stat"><span class="hero-stat-num">3</span><span class="hero-stat-label">Mockups interativos</span></div>
   </div>
   <div class="hero-cta">
     <div class="hero-cta-text">
@@ -1726,6 +1734,266 @@
   </div>
 </div>
 
+<!-- ═══ AÇÃO A7 — BUSCAR FORMULÁRIO POR ID ═══ -->
+<div class="acao-block" id="a7" data-name="buscar formulário por id find form by id google forms">
+  <div class="acao-head">
+    <div class="acao-num">07</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Formulários Google</div>
+      <h2 class="acao-name">Buscar Formulário por ID</h2>
+      <div class="acao-en">Find Form by ID</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Google Forms</span><span class="info-tag">Lookup</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Busca um Google Form específico pelo ID e retorna seus metadados (nome, estrutura de perguntas, link) como variáveis pro resto do workflow. Elimina a necessidade de percorrer a lista de formulários manualmente.</p>
+      <p>Útil quando o ID do formulário já vem de outro sistema — por exemplo, gravado num custom field ou recebido via webhook externo.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Validação antes de processar</div>
+        <div class="use-case-desc">ID do form vem de um custom value → busca por ID → confirma que o formulário existe antes das próximas ações.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Referência cruzada</div>
+        <div class="use-case-desc">Sistema externo referencia formulários pelo ID → busca metadados pra exibir o nome real numa notificação.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">ID do Formulário</div>
+          <div class="field-en">Form ID</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">O ID único do Google Form (encontrado na URL do formulário ou retornado por uma ação/gatilho anterior).</div>
+          <div class="field-impact"><strong>Resultado:</strong> Retorna nome, link e estrutura de perguntas como variáveis nas ações seguintes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A8 — BUSCAR FORMULÁRIO POR NOME ═══ -->
+<div class="acao-block" id="a8" data-name="buscar formulário por nome find form by name google forms">
+  <div class="acao-head">
+    <div class="acao-num">08</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Formulários Google</div>
+      <h2 class="acao-name">Buscar Formulário por Nome</h2>
+      <div class="acao-en">Find Form by Name</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Google Forms</span><span class="info-tag">Lookup</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Busca um Google Form pelo nome exato (ao invés do ID) na conta Google conectada. Devolve o ID do formulário e sua estrutura, prontos pra usar em ações seguintes como "Buscar Respostas por Formulário".</p>
+      <p>Mais prática que a busca por ID quando o workflow é montado a partir do nome do formulário — que é o que o time de marketing normalmente conhece.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Workflow reutilizável</div>
+        <div class="use-case-desc">Nome do formulário fica num custom value editável → time de marketing troca o nome sem precisar saber o ID.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Encadeamento com outras ações</div>
+        <div class="use-case-desc">Busca por nome → usa o ID retornado em "Buscar Resposta por ID" pra localizar uma resposta específica.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">Nome do Formulário</div>
+          <div class="field-en">Form Name</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">Nome exato do Google Form, como aparece na conta Google conectada.</div>
+          <div class="field-impact"><strong>Resultado:</strong> Retorna o Form ID e a estrutura de perguntas como variáveis nas ações seguintes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A9 — BUSCAR RESPOSTA POR ID ═══ -->
+<div class="acao-block" id="a9" data-name="buscar resposta por id find response by id google forms">
+  <div class="acao-head">
+    <div class="acao-num">09</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Formulários Google</div>
+      <h2 class="acao-name">Buscar Resposta por ID</h2>
+      <div class="acao-en">Find Response by ID</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Google Forms</span><span class="info-tag">Lookup</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Busca uma resposta específica de um Google Form pelo ID da resposta, retornando cada pergunta/resposta como variável individual. Diferente do gatilho "Resposta de Formulário Google", que já injeta os dados automaticamente — essa ação serve pra reprocessar uma resposta específica sob demanda.</p>
+      <p>Combinar com "Buscar Formulário por ID/Nome" quando o response ID chega isolado, sem o contexto do formulário.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Reprocessamento manual</div>
+        <div class="use-case-desc">Resposta antiga precisa ser reprocessada → workflow disparado manualmente com o Response ID → busca os dados de novo.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Auditoria pontual</div>
+        <div class="use-case-desc">Sistema externo aponta um Response ID com problema → busca a resposta completa pra investigar.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Campos principais</div>
+    <div class="fields-grid">
+      <div class="field-item">
+        <div class="field-header">
+          <div class="field-name">ID da Resposta</div>
+          <div class="field-en">Response ID</div>
+          <div class="field-type required">obrigatório</div>
+        </div>
+        <div class="field-body">
+          <div class="field-desc">O ID único da resposta dentro do Google Form (retornado pelo gatilho "Resposta de Formulário Google" ou por outra ação anterior).</div>
+          <div class="field-impact"><strong>Resultado:</strong> Retorna cada pergunta/resposta individualmente como variável.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AÇÃO A10 — BUSCAR RESPOSTAS POR FORMULÁRIO (com mockup) ═══ -->
+<div class="acao-block" id="a10" data-name="buscar respostas por formulário find responses by form name google forms">
+  <div class="acao-head">
+    <div class="acao-num">10</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Formulários Google</div>
+      <h2 class="acao-name">Buscar Respostas por Formulário</h2>
+      <div class="acao-en">Find Responses by Form Name</div>
+      <div class="acao-tags"><span class="info-tag">LC Premium</span><span class="info-tag">Google Forms</span><span class="info-tag">Bulk</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Busca <strong>todas</strong> as respostas de um Google Form pelo nome, retornando a lista completa como variável — diferente das outras ações desta seção, que buscam um único formulário ou uma única resposta.</p>
+      <p>É a ação certa pra relatórios periódicos: rodar num Scheduler semanal/mensal e mandar um resumo de todas as respostas recebidas no período, sem precisar abrir o Google Forms manualmente.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases">
+      <div class="use-case">
+        <div class="use-case-label">Caso 01</div>
+        <div class="use-case-title">Relatório periódico</div>
+        <div class="use-case-desc">Scheduler toda segunda → busca todas as respostas da semana → envia resumo por webhook/email pro time.</div>
+      </div>
+      <div class="use-case">
+        <div class="use-case-label">Caso 02</div>
+        <div class="use-case-title">Backfill de contatos</div>
+        <div class="use-case-desc">Formulário existia antes da integração → busca todas as respostas já registradas → cria contatos retroativamente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Exemplo prático · Mockup interativo</div>
+    <div class="ghl-mockup" data-mockup="a10">
+      <div class="ghl-toolbar">
+        <div class="ghl-workflow-name">/Google/ 10 — Relatório Semanal de Pesquisa NPS</div>
+        <div class="ghl-toolbar-right">
+          <button class="ghl-btn play" data-play="a10">▶ Reproduzir montagem</button>
+          <button class="ghl-btn">Save</button>
+          <button class="ghl-btn primary">Publish</button>
+        </div>
+      </div>
+      <div class="ghl-canvas">
+        <div class="anim-indicator"><span class="dot"></span><span class="anim-text">Aguardando...</span></div>
+        <div class="ghl-node" data-node-id="a10-1">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon trigger">T</div>
+            <div><div class="ghl-node-type">Trigger · Scheduler</div><div class="ghl-node-title">Scheduler</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Recurrence</span><span class="pv highlight">Toda segunda-feira, 08:00</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a10-2">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-google">G</div>
+            <div><div class="ghl-node-type">Action · Google Forms</div><div class="ghl-node-title">Find Responses by Form Name</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">Form Name</span><span class="pv highlight">Pesquisa NPS — Pós-Atendimento</span></div>
+          </div>
+        </div>
+        <div class="ghl-connector"></div>
+        <div class="ghl-node" data-node-id="a10-3">
+          <div class="ghl-node-controls"><button class="ghl-node-control" title="Settings">&#9881;</button><button class="ghl-node-control" title="More">&#8942;</button></div>
+          <span class="click-hint">clique para ver ↗</span>
+          <div class="ghl-node-header">
+            <div class="ghl-node-icon action-notify">🔔</div>
+            <div><div class="ghl-node-type">Action · Internal Notification</div><div class="ghl-node-title">Send Internal Notification</div></div>
+          </div>
+          <div class="ghl-node-body">
+            <div class="ghl-node-param"><span class="pk">To</span><span class="pv highlight">Time de CS</span></div>
+            <div class="ghl-node-param"><span class="pk">Message</span><span class="pv">{{formResponses.count}} respostas NPS essa semana</span></div>
+          </div>
+        </div>
+        <div class="config-panel">
+          <div class="config-header">
+            <div><div class="config-kind">—</div><div class="config-title">—</div></div>
+            <button class="config-close">×</button>
+          </div>
+          <div class="config-body"></div>
+        </div>
+      </div>
+      <div class="mockup-caption">Clique em cada bloco pra ver a configuração</div>
+    </div>
+  </div>
+</div>
+
 <!-- NAV PREV/NEXT -->
 <nav class="cat-nav">
   <a href="acoes-highlevel-cat14.html" class="cat-nav-link prev">
@@ -1741,7 +2009,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 15 completa.</h3>
-    <p>6 ações de integração Google explicadas com exemplos práticos e mockups visuais. Adicionadas em julho/2026 — integração nativa sem precisar de Zapier ou Make.</p>
+    <p>10 ações de integração Google explicadas com exemplos práticos e mockups visuais. Contatos e Grupos adicionados em julho/2026; Formulários Google (Google Forms) adicionados em setembro/2026 — tudo integração nativa, sem precisar de Zapier ou Make.</p>
   </div>
 
   <div class="footer-main-cta">
@@ -1772,7 +2040,10 @@
     'a6-1': { kind: 'Trigger · Payment', title: 'Order Form Submission', body: `<div class="config-section"><div class="config-label">Trigger Name *</div><div class="config-field highlight">Compra Premium Anual → VIP Google</div></div><div class="config-section"><div class="config-label">Product *</div><div class="config-field highlight dropdown">Plano Premium Anual</div></div>` },
     'a6-2': { kind: 'Action · Google Contacts', title: 'Find or Create Google Contact', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Garantir contato no Google antes de adicionar ao grupo</div></div><div class="config-section"><div class="config-label">Google Account *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Email *</div><div class="config-field highlight">{{contact.email}}</div></div><div class="config-section"><div class="config-label">First Name</div><div class="config-field">{{contact.first_name}}</div></div>` },
     'a6-3': { kind: 'Action · Google Groups', title: 'Add to Google Groups', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Adicionar ao Grupo Premium Anuais</div></div><div class="config-section"><div class="config-label">Google Account *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Contact Group *</div><div class="config-field highlight dropdown">Clientes Premium Anuais</div></div>` },
-    'a6-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tag Cliente VIP Premium</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cliente VIP</span> <span class="opt-chip">Premium Anual</span></div></div>` }
+    'a6-4': { kind: 'Action · Add Tag', title: 'Add Contact Tag', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Tag Cliente VIP Premium</div></div><div class="config-section"><div class="config-label">Tag *</div><div class="config-field"><span class="opt-chip">Cliente VIP</span> <span class="opt-chip">Premium Anual</span></div></div>` },
+    'a10-1': { kind: 'Trigger · Scheduler', title: 'Scheduler', body: `<div class="config-section"><div class="config-label">Trigger Name *</div><div class="config-field highlight">Relatório Semanal NPS</div></div><div class="config-section"><div class="config-label">Recurrence *</div><div class="config-field highlight dropdown">Weekly</div></div><div class="config-section"><div class="config-label">Day *</div><div class="config-field dropdown">Monday</div></div><div class="config-section"><div class="config-label">Time *</div><div class="config-field">08:00</div></div>` },
+    'a10-2': { kind: 'Action · Google Forms', title: 'Find Responses by Form Name', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Buscar respostas NPS da semana</div></div><div class="config-section"><div class="config-label">Google Account *</div><div class="config-field dropdown">lucas@magneticflows.com.br</div></div><div class="config-section"><div class="config-label">Form Name *</div><div class="config-field highlight dropdown">Pesquisa NPS — Pós-Atendimento</div></div>` },
+    'a10-3': { kind: 'Action · Internal Notification', title: 'Send Internal Notification', body: `<div class="config-section"><div class="config-label">Action Name *</div><div class="config-field highlight">Avisar CS do total de respostas</div></div><div class="config-section"><div class="config-label">Recipient *</div><div class="config-field dropdown">Time de CS</div></div><div class="config-section"><div class="config-label">Message *</div><div class="config-field highlight">{{formResponses.count}} respostas NPS essa semana</div></div>` }
   };
 
   document.querySelectorAll('.ghl-mockup').forEach(m => {

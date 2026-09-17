@@ -10,6 +10,33 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-17 — Content + Automation
+**Checagem de novidades nativas: +4 ações Google Forms**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `help.gohighlevel.com`/`ideas.gohighlevel.com` em busca de itens
+nativos lançados desde a rodada de 2026-09-14. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-17--checagem-de-novidades-nativas).
+
+- **Google Forms** (`acoes-highlevel-cat15.html`, novas A7–A10): **Buscar
+  Formulário por ID**, **Buscar Formulário por Nome**, **Buscar Resposta
+  por ID** e **Buscar Respostas por Formulário** — as 4 ações de consulta
+  da integração nativa Google Forms, que já tinha o gatilho companion
+  ("Resposta de Formulário Google", cat13 G3) mas nunca teve as ações
+  cobertas. A10 ganhou mockup interativo completo (Scheduler → Find
+  Responses by Form Name → Send Internal Notification).
+- Totais: **87 gatilhos + 179 ações = 266 painéis**. `acoes-highlevel-cat15.html`:
+  6→10 ações, 2→3 mockups. `index.html`, `search-index.json` e
+  `AUDIT-TABLE.md` regenerados/atualizados; `auto-refine.py --check` e
+  `scripts/validate-mockups.js` confirmam 0 drift / 30 páginas OK.
+- Candidatos encontrados sem detalhe de campo suficiente pra virar
+  mockup ainda (ficam pendentes): Airtable, ações de imagem no workflow
+  — somam-se à lista já acumulada (Typeform, Calendly, HubSpot, Basecamp,
+  Browse AI, Manus, Badge Issued, Monday.com, Jira, Linear, Housecall
+  Pro, Apify, rename do Slack).
+- `index.html`: data de "Última atualização" recontada para hoje
+  (17 de setembro de 2026).
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

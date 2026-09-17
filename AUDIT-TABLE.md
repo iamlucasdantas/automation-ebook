@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 39 | 90 | 46 | **175** |
+| Ações | 39 | 91 | 49 | **179** |
 
 
 ## Gatilhos · 12 categorias
@@ -370,6 +370,10 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a4 | [Buscar ou Criar Contato Google](acoes-highlevel-cat15.html#a4) | Find or Create Google Contact | 2 | — | 🟡 | [ ] | |
 | a5 | [Criar Grupo Google](acoes-highlevel-cat15.html#a5) | Create Google Contact Group | 0 | — | 🔴 | [ ] | |
 | a6 | [Adicionar a Grupos Google](acoes-highlevel-cat15.html#a6) | Add to Google Groups | 2 | — | 🔴 | [ ] | |
+| a7 | [Buscar Formulário por ID](acoes-highlevel-cat15.html#a7) | Find Form by ID | 0 | — | 🔴 | [ ] | |
+| a8 | [Buscar Formulário por Nome](acoes-highlevel-cat15.html#a8) | Find Form by Name | 0 | — | 🔴 | [ ] | |
+| a9 | [Buscar Resposta por ID](acoes-highlevel-cat15.html#a9) | Find Response by ID | 0 | — | 🔴 | [ ] | |
+| a10 | [Buscar Respostas por Formulário](acoes-highlevel-cat15.html#a10) | Find Responses by Form Name | 4 | — | 🟡 | [ ] | |
 
 ### CAT16 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

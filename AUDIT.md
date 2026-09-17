@@ -406,6 +406,42 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-09-17 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-09-14) contra `help.gohighlevel.com` e
+`ideas.gohighlevel.com` via WebSearch em busca de itens nativos lançados
+ou com detalhe novo desde então. Igual às rodadas anteriores, os dois
+domínios seguem bloqueados por egress direto neste ambiente.
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+1. **4 ações — Google Forms (Find Form by ID / Find Form by Name / Find
+   Response by ID / Find Responses by Form Name)** ·
+   `acoes-highlevel-cat15.html` A7–A10. O gatilho companion ("Resposta de
+   Formulário Google", cat13 G3) já existia no guia, mas as 4 ações de
+   consulta nunca tinham sido cobertas — ficavam de fora mesmo a
+   integração Google Forms já estando documentada oficialmente.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007217-google-forms-actions-and-triggers-in-workflows)
+
+Totais atualizados: **87 gatilhos + 179 ações = 266 entries** (mockups
+interativos: 210 → 211). `acoes-highlevel-cat15.html`: 6 → 10 ações, 2 →
+3 mockups. `search-index.json`, `AUDIT-TABLE.md` e `index.html`
+regenerados/atualizados; `auto-refine.py --check` e
+`validate-mockups.js` confirmam 0 drift / 30 páginas OK.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+Sem novo detalhe de campo desta vez para os candidatos já acumulados —
+seguem pendentes: Typeform, Calendly, HubSpot, Basecamp, Browse AI,
+Manus, Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify, e o
+achado de rename do Slack (ver rodada 2026-09-14 acima). Também
+mencionados pelo WebSearch nesta rodada, sem detalhe de campo suficiente
+ainda: **Airtable** (create/update/sync de registros — [changelog](https://ideas.gohighlevel.com/changelog/airtable-new-actions-triggers-in-workflows))
+e **ações de imagem no workflow** ("Workflow image actions" — criar/ler
+imagens dentro do workflow, achado só por menção em changelog agregado,
+sem artigo dedicado localizado ainda).
+
+Nenhum campo foi inventado pra nenhum desses.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
@@ -413,8 +449,9 @@ A auditoria automática está completa. Os próximos passos são humanos:
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Typeform, Calendly, HubSpot, Basecamp,
    Browse AI, Manus, Badge Issued, Monday.com, Jira, Linear, Housecall
-   Pro, Apify) + o achado de rename do Slack — confirmar nome real do
-   campo / da action antes de qualquer um virar mockup.
+   Pro, Apify, Airtable, ações de imagem) + o achado de rename do Slack —
+   confirmar nome real do campo / da action antes de qualquer um virar
+   mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
