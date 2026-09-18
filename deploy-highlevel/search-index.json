@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 266,
   "items": [
     {
       "id": "g1",
@@ -3192,6 +3192,66 @@
       "description": "Adiciona o contato atual do workflow a um ou mais Grupos do Google Contacts. O contato precisa existir no Google — por isso é sempre combinada com \"Find or Create Google Contact\" antes.",
       "keywords": "adicionar grupos google add to google groups",
       "href": "acoes-highlevel-cat15.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Buscar Formulário por ID",
+      "en": "Find Form by ID",
+      "category": "Formulários Google",
+      "tags": [
+        "LC Premium",
+        "Google Forms",
+        "Lookup"
+      ],
+      "description": "Busca um Google Form específico pelo ID do formulário — o mesmo ID que aparece na URL do Forms ou que vem na variável do gatilho \"Resposta de Formulário Google\". Retorna os metadados do formulário (título e lista de perguntas) como variáveis disponíveis nas ações seguintes.",
+      "keywords": "buscar formulário por id find form by id google forms",
+      "href": "acoes-highlevel-cat15.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Buscar Formulário por Nome",
+      "en": "Find Form by Name",
+      "category": "Formulários Google",
+      "tags": [
+        "LC Premium",
+        "Google Forms",
+        "Lookup"
+      ],
+      "description": "Busca um Google Form pelo nome, selecionado direto de uma lista suspensa com todos os formulários da conta Google conectada — sem precisar copiar nenhum ID manualmente. Retorna os mesmos metadados da \"Buscar Formulário por ID\".",
+      "keywords": "buscar formulário por nome find form by name google forms",
+      "href": "acoes-highlevel-cat15.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Buscar Resposta por ID",
+      "en": "Find Response by ID",
+      "category": "Formulários Google",
+      "tags": [
+        "LC Premium",
+        "Google Forms",
+        "Lookup"
+      ],
+      "description": "Busca uma resposta específica de um Google Form pelo ID da resposta — o mesmo ID que vem no gatilho \"Resposta de Formulário Google\" ou na lista retornada por \"Buscar Respostas por Nome do Formulário\". Retorna todas as respostas às perguntas daquele envio específico.",
+      "keywords": "buscar resposta por id find response by id google forms",
+      "href": "acoes-highlevel-cat15.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Buscar Respostas por Nome do Formulário",
+      "en": "Find Responses by Form Name",
+      "category": "Formulários Google",
+      "tags": [
+        "LC Premium",
+        "Google Forms",
+        "Lote"
+      ],
+      "description": "Retorna todas as respostas já recebidas por um Google Form selecionado numa lista suspensa — não só a mais recente. Suporta paginação: se o formulário tiver muitas respostas, a ação devolve um next page token pra buscar a leva seguinte na mesma execução ou numa próxima.",
+      "keywords": "buscar respostas por nome do formulário find responses by form name google forms",
+      "href": "acoes-highlevel-cat15.html#a10"
     },
     {
       "id": "a1",

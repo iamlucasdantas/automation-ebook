@@ -10,6 +10,41 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-18 — Content
+**Checagem de novidades nativas: +4 ações Google Forms, gap fechado**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra `help.gohighlevel.com` e o changelog oficial da HighLevel em busca de
+itens nativos lançados/descobertos desde a rodada de 2026-08-24. Detalhe
+completo em [AUDIT.md](./AUDIT.md#-rodada-2026-09-18--checagem-de-novidades-nativas).
+
+- **+4 ações — Google Forms** (`acoes-highlevel-cat15.html` A7-A10): Buscar
+  Formulário por ID, Buscar Formulário por Nome, Buscar Resposta por ID,
+  Buscar Respostas por Nome do Formulário. O gatilho companion (Resposta de
+  Formulário Google) já existia desde julho/2026; essas 4 ações do mesmo doc
+  oficial ("Google Forms - Actions and Triggers in Workflows") estavam
+  faltando no guia. Sem mockup interativo — o nível de detalhe de campo
+  confirmado via busca indireta não chegou à fidelidade completa exigida
+  pros mockups (auto-refine bloqueado por egress pro domínio oficial neste
+  ambiente).
+- Totais atualizados: **87 gatilhos + 179 ações = 266 painéis** (`index.html`,
+  `search-index.json` e `AUDIT-TABLE.md` já regenerados).
+- 2 candidatos novos encontrados mas **não aplicados** — precisam de rodada
+  dedicada (volume grande + campos ainda não detalhados o bastante pra
+  mockup com fidelidade real):
+  - **HubSpot** — 1 gatilho (New Contact Created) + 5 ações (Create Contact,
+    Find Contact, Get Contact by ID, Search Contact by Email, Create
+    Association), nativo via OAuth, todas as ações Premium. Exigiria uma
+    18ª categoria de ações (não existe categoria de CRM externo hoje).
+  - **Linear** — agora com artigo oficial dedicado (antes só tinha entrada
+    de changelog), 12 gatilhos + 13 ações cobrindo issues/projects/
+    customers/initiatives/documents. Mesmo status "pendente" da rodada
+    2026-08-24, só que com doc confirmado.
+- Recap dos pendentes de rodadas anteriores sem novidade nesta: Badge
+  Issued, Monday.com, Jira, Housecall Pro, Apify, Browse AI, OpenRouter,
+  Manus.
+- `index.html`: data de "Última atualização" recontada para hoje.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

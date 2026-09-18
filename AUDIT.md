@@ -242,6 +242,67 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-18 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra `help.gohighlevel.com` e o changelog
+oficial da HighLevel em busca de itens nativos lançados ou descobertos desde
+então. `ideas.gohighlevel.com` e `help.gohighlevel.com` seguem bloqueados
+por egress direto neste ambiente — a checagem usou busca web pra ler o
+conteúdo indiretamente (resumo, não a página renderizada).
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada, gap fechado)
+1. **Ações — Google Forms** (`acoes-highlevel-cat15.html` A7-A10): Buscar
+   Formulário por ID (Find Form by ID), Buscar Formulário por Nome (Find
+   Form by Name), Buscar Resposta por ID (Find Response by ID), Buscar
+   Respostas por Nome do Formulário (Find Responses by Form Name). Não são
+   novidade do HL — o artigo oficial ["Google Forms - Actions and Triggers
+   in Workflows"](https://help.gohighlevel.com/support/solutions/articles/155000007217-google-forms-actions-and-triggers-in-workflows)
+   é de março/2026 — mas eram um gap nosso: o guia só tinha o gatilho
+   companion (Resposta de Formulário Google, `guia-highlevel-cat13.html`
+   g3) desde a rodada 2026-07-10, nunca as 4 ações do mesmo doc. Adicionadas
+   sem mockup interativo (como A3 "Buscar Contato Google") — a busca
+   indireta confirmou nomes de ação e o essencial de cada campo (Form ID
+   dinâmico, dropdown de formulário, paginação por Next Page Token em
+   "Find Responses by Form Name"), mas não a fidelidade pixel-a-pixel do
+   painel real que os mockups exigem.
+
+Totais atualizados: **87 gatilhos + 179 ações = 266 entries** (`index.html`,
+`search-index.json` e `AUDIT-TABLE.md` já regenerados; `auto-refine.py
+--check` e `validate-mockups.js` confirmam 0 drift / 30 páginas OK).
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **HubSpot** — integração nativa via OAuth, confirmada por artigo oficial
+  dedicado ["HubSpot Workflow Actions and Triggers"](https://help.gohighlevel.com/support/solutions/articles/155000007955-how-to-use-hubspot-workflow-actions-triggers-in-highlevel)
+  (desde maio/2026, também não é novidade — só não tinha sido pego antes).
+  1 gatilho instantâneo **New Contact Created** (não-Premium) + 5 ações
+  **Create Contact / Find Contact / Get Contact by ID / Search Contact by
+  Email / Create Association** (todas Premium, consomem crédito de ação
+  premium). Maior lift que Google Forms: não existe categoria de CRM
+  externo hoje — precisaria de uma 18ª categoria de ações (e gatilho em
+  categoria própria também), então fica pra rodada dedicada.
+- **Linear** — [changelog](https://ideas.gohighlevel.com/changelog/linear-workflow-actions-triggers)
+  ganhou artigo oficial dedicado ["Linear Integration in HighLevel
+  Workflows Guide"](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows)
+  — antes só tinha o stub de changelog. Continua pendente da rodada
+  2026-08-24: 12 gatilhos + 13 ações (issues, projects, customers,
+  customer needs, initiatives, documents) — volume grande demais pra uma
+  rodada só, precisa de levantamento dedicado dos 25 nomes exatos antes de
+  montar mockup.
+
+### 🔁 Pendentes de rodadas anteriores sem novidade nesta rodada
+Sem doc oficial dedicado novo encontrado via busca — seguem como estavam em
+2026-08-24: **Badge Issued** (gatilho), **Monday.com**, **Jira**,
+**Housecall Pro**, **Apify**, **Browse AI**, **OpenRouter**, **Manus**.
+
+### ℹ️ Não é um novo trigger/action (não vira entrada do guia)
+- **"Create Workflows from Ask AI"** (17/09/2026) — deixa o Ask AI (via
+  chat, incl. WhatsApp) chamar o Workflow AI agent pra criar/editar um
+  workflow inteiro a partir de uma descrição em linguagem natural. É uma
+  interface nova pra montar workflows (concorrente do builder visual), não
+  um novo nó de trigger ou action — fora do escopo deste guia (que cobre os
+  nós, não os jeitos de montá-los).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
