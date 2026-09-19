@@ -242,6 +242,107 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-19 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (estado 2026-08-24: 87 gatilhos + 175
+ações = 262 painéis) contra o changelog oficial da HighLevel
+(`ideas.gohighlevel.com/changelog`) e `help.gohighlevel.com` em busca de
+itens nativos lançados entre 24/08 e 19/09/2026. Acesso direto aos dois
+domínios segue bloqueado por egress neste ambiente — a checagem usou
+WebSearch pra ler o conteúdo indiretamente (tratar como paráfrase de
+snippet, não citação verbatim, até confirmação com fetch direto).
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+1. **Ação — Gerar Imagem com IA (AI Image Generation)** ·
+   `acoes-highlevel-cat05.html` A11. Gera imagem via prompt (texto ou
+   merge field); modelo de IA cria a imagem, fica hospedada numa URL
+   pública, devolvida como output de texto. Modelos: GPT Image 2,
+   Gemini 3 Pro Image (Nano Banana Pro), Gemini 3.1 Flash Image (Nano
+   Banana 2), Gemini 2.5 Flash Image (Nano Banana). Templates: Product
+   Mockups, Social Post, Promo Flyer, Lifestyle. Premium, cobrada por
+   execução. [Changelog oficial](https://ideas.gohighlevel.com/changelog/ai-image-generation-action-in-workflows)
+   — lançada semana de 31/08–04/09/2026.
+2. **Ação — Analisar Imagem com IA / Visão (AI Analyze Image)** ·
+   `acoes-highlevel-cat05.html` A12. Image URL + prompt → modelo de
+   visão (GPT-5.6 Luna / GPT-5.6 Tera) responde em texto. Campo Detail
+   Level (Auto/High/Low). Premium. [Changelog oficial](https://ideas.gohighlevel.com/changelog/ai-analyze-image-new-workflow-action)
+   — mesma semana de lançamento. Distinta da ação já existente **Parse
+   Image / A2** (mais antiga, GPT-4o vision, focada em OCR/extração
+   estruturada) — nota adicionada no texto da A12 pra não confundir as
+   duas.
+
+Totais atualizados: **87 gatilhos + 177 ações = 264 entries** (`index.html`,
+`search-index.json` e `AUDIT-TABLE.md` já regenerados).
+
+### 🐛 Drift corrigido nesta rodada (bug nosso, não novidade do HL)
+- `acoes-highlevel-cat05.html` já tinha 10 ações reais (a1-a10, incluindo
+  Mistral AI/Tradução/Decisor adicionadas em rodadas anteriores) mas o
+  hero-stat, side-nav label, footer e as 3 meta tags ainda diziam "8
+  ações" — corrigido junto com a adição das duas novas (agora 12).
+- Side-nav de `acoes-highlevel-cat05.html`: a tag `<a href="#a8">` do
+  item Mistral AI não tinha `</a>` de fechamento, fazendo os links dos
+  itens 09 e 10 ficarem aninhados dentro do link do item 08 (clique
+  neles ia pro lugar errado). Corrigido.
+- `index.html`: card da categoria "Workflow AI" mostrava 7 ações
+  (deveria ser 10 antes desta rodada / 12 depois).
+
+### 🔍 Candidatos encontrados, NÃO aplicados nesta rodada
+- **Trigger — Video Testimonial Received** — anunciado 18/09/2026
+  ([changelog](https://ideas.gohighlevel.com/changelog/reputation-management-video-testimonial-enhancements)),
+  dispara quando um testimonial em vídeo é enviado via Video Testimonial
+  Collector. Filtros mencionados em texto (campanha/produto/evento/
+  parceiro) mas sem nome exato de campo confirmado — precisa de leitura
+  direta da doc antes de virar entry.
+- **Browse AI** — 1 trigger ("New Completed Task", filtros Robot +
+  Select Operator) + 4 ações (Run Task, Bulk Run Tasks, Get Task, Get
+  Bulk Run). Bem documentado, API key própria, créditos premium.
+  Candidato mais maduro da lista — pendente desde 2026-07-29, pronto pra
+  entrar numa próxima rodada dedicada.
+- **Linear** — 12 triggers + 13 ações (issues/projects/customers/
+  customer needs/initiatives/documents) via OAuth nativo. Contagem
+  confirmada, nomes individuais ainda não.
+- **Jira** — 2 triggers (Issue Created, Issue Updated; filtro Cloud
+  Site) + 11 ações (create/update/link/comment/watch/attach/log
+  work/move sprint etc.).
+- **Housecall Pro** — expandiu de 2 triggers + 1 ação pra 9 triggers +
+  14 ações (jobs, estimates, leads, customers, job-appointments). Nomes
+  individuais não enumerados ainda.
+- **Monday.com** — 7 triggers nomeados (Any Column Value Changed in
+  Board, Any Item Moved to a Group, New Board, New Item in a Board, New
+  Subitem in Board, New Update in Board, New User) + ações de
+  criar/atualizar/arquivar/deletar itens e boards.
+- **Manus** — 2 triggers (task created, task stopped/completed) + até 6
+  ações (Create/Get/Update/Delete Task, Fetch Tasks, Continue Task With
+  Prompt).
+- **Apify, OpenRouter** — mencionados no changelog mas sem campos
+  suficientes pra montar mockup com fidelidade.
+- **Badge Issued (trigger) / Issue Badge (ação)** — a HighLevel
+  confirma que a ação companion segue "em desenvolvimento" (não
+  lançada). Workaround atual continua sendo `Issue Certificate`
+  selecionando um template de Badge. Não adicionar até a ação existir
+  de fato.
+
+Nenhum desses tem confiança suficiente pra virar mockup com fidelidade
+real sem leitura direta da página oficial (bloqueada por egress neste
+ambiente) — mesma situação das rodadas anteriores.
+
+### ⚠️ Nota operacional — backlog de PRs não mergeados
+Há **6 pull requests abertos** no repositório, nenhum mergeado, o mais
+antigo de 13/07/2026: #4 (Todoist/Jira), #7 (Leaderboard Points), #14
+(review platforms/inventory filters), #15 (AI Agent multi-provider),
+#19 (OpenRouter), #21 (remove Mistral AI). Cada um foi criado a partir
+de um snapshot diferente da branch padrão (`claude/loving-faraday-UK9eK`)
+em datas diferentes — não estão empilhados uns nos outros, então merge
+provavelmente vai gerar conflitos entre si (ex.: #21 remove a ação
+Mistral AI que #19 e esta própria rodada assumem que existe). A branch
+padrão em si não recebeu nenhuma atualização de conteúdo desde
+24/08/2026 apesar de haver documentos de "rodada diária" no Google
+Drive datados até 18/09/2026 — ou seja, semanas de rodadas automáticas
+geraram branches/PRs/docs mas nada chegou a ir pro ar. Esta rodada
+(2026-09-19) foi commitada a partir do estado real da branch padrão, não
+do conteúdo de nenhum PR aberto. Recomenda-se revisão humana pra decidir
+quais PRs mergear, em que ordem, e fechar os obsoletos.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

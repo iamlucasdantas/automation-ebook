@@ -10,6 +10,58 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-19 — Content
+**Checagem de novidades nativas: +2 ações Workflow AI (Gerar/Analisar Imagem com IA)**
+
+Rotina automática comparou o guia (estado 2026-08-24: 87 gatilhos + 175
+ações = 262 painéis) contra o changelog oficial da HighLevel via
+WebSearch (acesso direto a `ideas.gohighlevel.com` e
+`help.gohighlevel.com` seguem bloqueados por egress neste ambiente).
+
+- **Ação — Gerar Imagem com IA (AI Image Generation)** ·
+  `acoes-highlevel-cat05.html` A11. Gera imagem via IA a partir de
+  prompt, devolve URL pública como output. Premium.
+- **Ação — Analisar Imagem com IA / Visão (AI Analyze Image)** ·
+  `acoes-highlevel-cat05.html` A12. Modelo de visão dedicado responde
+  uma pergunta sobre uma imagem via URL. Diferente da Parse Image (A2)
+  já existente — nota explicativa adicionada no texto pra não confundir
+  as duas. Premium.
+
+Novo total: **87 gatilhos + 177 ações = 264 painéis.**
+
+Também corrigido nesta rodada (drift pré-existente, não era novidade do
+HL): `acoes-highlevel-cat05.html` mostrava "8 ações" no hero/side-nav/
+footer/meta tags quando já tinha 10 ações reais (a1-a10) — corrigido
+junto com a adição das duas novas, e a tag `<a>` do item 08 (Mistral AI)
+que faltava fechar no side-nav, quebrando os links 09/10 seguintes.
+`index.html` também estava desatualizado no card da categoria (7 ações
+ao invés de 10).
+
+`search-index.json` e `AUDIT-TABLE.md` regenerados via
+`scripts/build-search-index.py` e `scripts/build-audit.py`.
+`auto-refine.py --check`: 0 drift. `validate-mockups.js`: 30/30 OK.
+
+Candidatos encontrados mas não aplicados (documentação insuficiente
+pra fidelidade real ou volume grande demais pra essa rodada): trigger
+**Video Testimonial Received** (anunciado 18/09, campos de filtro ainda
+não documentados), **Browse AI** (1 trigger + 4 ações, bem documentado
+mas ainda não priorizado), **Linear** (12 triggers + 13 ações),
+**Jira** (2 triggers + 11 ações), **Housecall Pro** (9 triggers + 14
+ações), **Monday.com** (7 triggers + várias ações), **Manus** (2
+triggers + até 6 ações), **Apify** e **Badge Issued/Issue Badge**
+(ação companion segue "em desenvolvimento" pela própria HighLevel — não
+existe ainda). Ver `AUDIT.md` pra detalhes e fontes.
+
+⚠️ **Nota operacional:** há 6 PRs abertos e não mergeados no repositório
+(#4, #7, #14, #15, #19, #21), o mais antigo de 13/07/2026, cada um
+baseado num snapshot diferente da branch padrão — nenhuma dessas rodadas
+anteriores chegou a ir pro ar. Esta rodada foi construída a partir do
+estado real da branch padrão (`claude/loving-faraday-UK9eK`, mesmo
+conteúdo de `AUDIT.md`/`index.html` de 24/08), não do conteúdo de
+nenhum desses PRs.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
