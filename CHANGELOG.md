@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-20 — Automation
+**Checagem de novidades nativas: nenhum item novo aplicado**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos lançados
+desde a rodada de 2026-09-14. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-20--checagem-de-novidades-nativas).
+
+- **Video Testimonial Received** (gatilho, novo achado, lançado 18/09):
+  confirmado no changelog oficial da HighLevel, mas sem os nomes exatos
+  de campo/filtro — fica como candidato pendente de validação humana.
+- **Nova Avaliação Recebida / New Review Received** (gatilho existente):
+  possível enhancement no campo Source (passaria a listar todas as
+  plataformas de review integradas, não só Google) — sem lista exata de
+  opções confirmada, mockup não alterado.
+- Nenhuma mudança de conteúdo aplicada — totais e mockups permanecem
+  87 gatilhos + 175 ações = 262 painéis / 210 mockups interativos.
+  `auto-refine.py --check` confirma 0 drift; `search-index.json` já
+  batia com o total antes desta rodada.
+- `index.html`: data de "Última atualização" recontada para hoje.
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

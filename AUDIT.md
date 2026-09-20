@@ -406,15 +406,59 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-09-20 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-09-14) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `help.gohighlevel.com` e
+`ideas.gohighlevel.com` continuam bloqueados por egress direto neste
+ambiente — checagem via `WebSearch` apenas, igual às 3 rodadas anteriores.
+
+### ✅ Aplicado nesta rodada
+Nenhum. Nada encontrado tinha nome + campos exatos confirmados com
+confiança suficiente pra virar mockup fiel (mesmo critério das rodadas
+2026-08-24/08-31/09-14). Totais permanecem **87 gatilhos + 175 ações =
+262 painéis**.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **Video Testimonial Received** *(novo achado, gatilho)* — lançado
+  18/09/2026, dentro da janela desde a última rodada (14/09). Changelog
+  oficial confirma: dispara quando um novo depoimento em vídeo é
+  enviado via Video Testimonial Collector (Reputation Management),
+  com suporte a filtro pra separar automações por campanha/produto/
+  evento/parceiro, e os dados do depoimento ficam disponíveis como
+  custom values dentro de outras ações (notificação interna, nota,
+  email, SMS, webhook). Não sabemos ainda o nome exato do campo de
+  filtro (ex.: "Collector" como dropdown?) nem o formato dos custom
+  values expostos — fica de fora do mockup até confirmar contra a UI
+  real. [Changelog](https://ideas.gohighlevel.com/changelog/reputation-management-video-testimonial-enhancements)
+- **Nova Avaliação Recebida (New Review Received)** *(gatilho existente,
+  possível enhancement)* — `guia-highlevel-cat02.html` G16 já modela o
+  campo **Source** como dropdown com valor mockado "Google". Changelog
+  oficial ("New Review Received Trigger Now Supports All Integrated
+  Review Platforms") sugere que esse dropdown agora lista todas as
+  plataformas de review integradas (Facebook, Yelp etc.), não só
+  Google — mas o WebSearch não trouxe a lista exata de opções, então o
+  mockup não foi alterado. [Changelog](https://ideas.gohighlevel.com/changelog/new-review-received-trigger-now-supports-all-integrated-review-platforms)
+- **Typeform / Calendly / HubSpot / Basecamp / Browse AI / Manus /
+  Monday.com / Jira / Linear / Housecall Pro / Apify / Badge Issued** /
+  rename do Slack — mesmos candidatos acumulados desde 24/08–14/09, sem
+  detalhe novo de campo encontrado nesta rodada.
+
+Nenhum campo foi inventado. Mesmo critério de sempre: integrações
+nativas reais, mas exigem confirmação humana do nome e dos campos
+exatos antes de virar mockup com fidelidade real.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
-   candidatos 🔍 acumulados (Typeform, Calendly, HubSpot, Basecamp,
-   Browse AI, Manus, Badge Issued, Monday.com, Jira, Linear, Housecall
-   Pro, Apify) + o achado de rename do Slack — confirmar nome real do
-   campo / da action antes de qualquer um virar mockup.
+   candidatos 🔍 acumulados (Video Testimonial Received, enhancement do
+   Review Received, Typeform, Calendly, HubSpot, Basecamp, Browse AI,
+   Manus, Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify)
+   + o achado de rename do Slack — confirmar nome real do campo / da
+   action antes de qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
