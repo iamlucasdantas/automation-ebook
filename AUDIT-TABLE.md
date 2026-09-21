@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 39 | 90 | 46 | **175** |
+| Gatilhos | 31 | 53 | 6 | **90** |
+| Ações | 39 | 91 | 56 | **186** |
 
 
 ## Gatilhos · 12 categorias
@@ -155,6 +155,13 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g2 | [Novo Grupo de Contatos Google](guia-highlevel-cat13.html#g2) | New Google Contact Group | 3 | 2/6 | 🟡 | [ ] | |
 | g3 | [Resposta de Formulário Google](guia-highlevel-cat13.html#g3) | Google Form Response | 3 | 2/6 | 🟡 | [ ] | |
 
+### CAT14 · Browse AI
+| # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
+|---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
+| g1 | [Browse AI: Tarefa Concluída](guia-highlevel-cat14.html#g1) | New Completed Task | 2 | 2/6 | 🔴 | [ ] | |
+| g2 | [Manus: Nova Tarefa Criada](guia-highlevel-cat14.html#g2) | New Task Created | 2 | 2/6 | 🔴 | [ ] | |
+| g3 | [Manus: Tarefa Interrompida](guia-highlevel-cat14.html#g3) | Task Stopped | 2 | 2/6 | 🔴 | [ ] | |
+
 ## Ações · 14 categorias
 
 ### CAT01 · Ação
@@ -266,8 +273,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a6 | [Agente de IA](acoes-highlevel-cat05.html#a6) | AI Agent | 2 | 3/6 | 🟢 | [ ] | |
 | a7 | [Atualizar Bot de IA e Status](acoes-highlevel-cat05.html#a7) | Update Conversation AI Bot and Status | 3 | 3/6 | 🟢 | [ ] | |
 | a8 | [Mistral AI](acoes-highlevel-cat05.html#a8) | Mistral AI: Create Chat Completion / Create Embeddings / Analyze Image | 2 | 3/6 | 🟢 | [ ] | |
-| a9 | [Tradução com IA](acoes-highlevel-cat05.html#a9) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
-| a10 | [Decisor com IA](acoes-highlevel-cat05.html#a10) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
+| a9 | [OpenRouter — Gerar Resposta](acoes-highlevel-cat05.html#a9) | OpenRouter: Generate Response | 2 | 3/6 | 🟡 | [ ] | |
+| a10 | [Tradução com IA](acoes-highlevel-cat05.html#a10) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
+| a11 | [Decisor com IA](acoes-highlevel-cat05.html#a11) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -399,3 +407,17 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a10 | [Eliza: Agendamento com IA](acoes-highlevel-cat17.html#a10) | Eliza AI Appointment Booking | 0 | 2/6 | 🔴 | [ ] | |
 | a11 | [Enviar pra Plataforma Eliza](acoes-highlevel-cat17.html#a11) | Send to Eliza Agent Platform | 0 | 2/6 | 🔴 | [ ] | |
 | a12 | [Invocar Agente (Agent Studio)](acoes-highlevel-cat17.html#a12) | Invoke Agent in Agent Studio | 0 | 2/6 | 🔴 | [ ] | |
+
+### CAT18 · Browse AI
+| # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
+|---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
+| a1 | [Executar Tarefa](acoes-highlevel-cat18.html#a1) | Run Task | 2 | — | 🔴 | [ ] | |
+| a2 | [Executar Tarefas em Lote](acoes-highlevel-cat18.html#a2) | Bulk Run Tasks | 0 | — | 🔴 | [ ] | |
+| a3 | [Buscar Tarefa](acoes-highlevel-cat18.html#a3) | Get Task | 0 | — | 🔴 | [ ] | |
+| a4 | [Buscar Execução em Lote](acoes-highlevel-cat18.html#a4) | Get Bulk Run | 0 | — | 🔴 | [ ] | |
+| a5 | [Criar Tarefa](acoes-highlevel-cat18.html#a5) | Create Task | 2 | — | 🔴 | [ ] | |
+| a6 | [Buscar Tarefa](acoes-highlevel-cat18.html#a6) | Get Task | 0 | — | 🔴 | [ ] | |
+| a7 | [Atualizar Tarefa](acoes-highlevel-cat18.html#a7) | Update Task | 0 | — | 🔴 | [ ] | |
+| a8 | [Buscar Tarefas](acoes-highlevel-cat18.html#a8) | Fetch Tasks | 0 | — | 🔴 | [ ] | |
+| a9 | [Excluir Tarefa](acoes-highlevel-cat18.html#a9) | Delete Task | 0 | — | 🔴 | [ ] | |
+| a10 | [Continuar Tarefa com Prompt](acoes-highlevel-cat18.html#a10) | Continue a Task with a Prompt | 0 | — | 🔴 | [ ] | |

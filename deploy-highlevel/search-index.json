@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 276,
   "items": [
     {
       "id": "g1",
@@ -1234,6 +1234,49 @@
       "href": "guia-highlevel-cat13.html#g3"
     },
     {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Browse AI: Tarefa Concluída",
+      "en": "New Completed Task",
+      "category": "Browse AI",
+      "tags": [
+        "Instantâneo",
+        "Premium",
+        "Requer API key própria"
+      ],
+      "description": "Dispara instantaneamente quando um robô da Browse AI termina de rodar uma tarefa (extração de dados de um site, monitoramento de preço, scraping de lista, etc.). A Browse AI é uma plataforma de automação de navegador — \"robôs\" que você treina visualmente para navegar e extrair dados de qualquer site, sem código.",
+      "keywords": "browse ai tarefa concluída new completed task robô",
+      "href": "guia-highlevel-cat14.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Manus: Nova Tarefa Criada",
+      "en": "New Task Created",
+      "category": "Manus",
+      "tags": [
+        "Tempo real",
+        "Requer API key própria"
+      ],
+      "description": "Dispara quando uma nova tarefa é criada na sua conta Manus conectada. Manus é um agente autônomo de IA que executa tarefas complexas de várias etapas (pesquisa, geração de documentos, análise) a partir de um prompt — de forma parecida com o AI Agent nativo do HighLevel, mas rodando na infraestrutura da Manus, com sua própria API key.",
+      "keywords": "manus nova tarefa criada new task created robô agente",
+      "href": "guia-highlevel-cat14.html#g2"
+    },
+    {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Manus: Tarefa Interrompida",
+      "en": "Task Stopped",
+      "category": "Manus",
+      "tags": [
+        "Tempo real",
+        "Requer API key própria"
+      ],
+      "description": "Dispara quando uma tarefa em execução na Manus é interrompida — seja porque o usuário/API pediu explicitamente pra parar, seja por erro/timeout do lado da Manus. É o \"companion\" do G2 (Nova Tarefa Criada): um cobre o início do ciclo, o outro cobre uma interrupção antes da conclusão normal.",
+      "keywords": "manus tarefa interrompida task stopped robô agente",
+      "href": "guia-highlevel-cat14.html#g3"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Criar Contato",
@@ -2401,6 +2444,20 @@
     {
       "id": "a9",
       "type": "Ação",
+      "name": "OpenRouter — Gerar Resposta",
+      "en": "OpenRouter: Generate Response",
+      "category": "Ação",
+      "tags": [
+        "AI",
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "openrouter gerar resposta generate response",
+      "href": "acoes-highlevel-cat05.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
       "name": "Tradução com IA",
       "en": "AI Translate",
       "category": "Ação",
@@ -2409,10 +2466,10 @@
       ],
       "description": "",
       "keywords": "tradução com ia ai translate",
-      "href": "acoes-highlevel-cat05.html#a9"
+      "href": "acoes-highlevel-cat05.html#a10"
     },
     {
-      "id": "a10",
+      "id": "a11",
       "type": "Ação",
       "name": "Decisor com IA",
       "en": "AI Decision Maker",
@@ -2422,7 +2479,7 @@
       ],
       "description": "",
       "keywords": "decisor com ia ai decision maker",
-      "href": "acoes-highlevel-cat05.html#a10"
+      "href": "acoes-highlevel-cat05.html#a11"
     },
     {
       "id": "a1",
@@ -3466,6 +3523,140 @@
       "description": "",
       "keywords": "invocar agente (agent studio) invoke agent in agent studio",
       "href": "acoes-highlevel-cat17.html#a12"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Executar Tarefa",
+      "en": "Run Task",
+      "category": "Browse AI",
+      "tags": [
+        "Premium",
+        "Requer API key própria"
+      ],
+      "description": "Dispara a execução de um robô específico da Browse AI a partir do workflow, passando parâmetros de entrada pra essa execução (ex: uma URL específica, um termo de busca, um filtro). O robô roda do lado da Browse AI e o resultado fica disponível pras próximas etapas.",
+      "keywords": "executar tarefa run task browse ai robô",
+      "href": "acoes-highlevel-cat18.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Executar Tarefas em Lote",
+      "en": "Bulk Run Tasks",
+      "category": "Browse AI",
+      "tags": [
+        "Premium",
+        "Requer API key própria"
+      ],
+      "description": "Executa o mesmo robô da Browse AI várias vezes de uma vez, cada execução com um conjunto diferente de parâmetros de entrada — por exemplo, rodar o mesmo robô de extração de preço pra uma lista inteira de produtos/URLs, ao invés de disparar \"Run Task\" um por um.",
+      "keywords": "executar tarefas em lote bulk run tasks browse ai robô",
+      "href": "acoes-highlevel-cat18.html#a2"
+    },
+    {
+      "id": "a3",
+      "type": "Ação",
+      "name": "Buscar Tarefa",
+      "en": "Get Task",
+      "category": "Browse AI",
+      "tags": [
+        "Premium",
+        "Requer API key própria"
+      ],
+      "description": "Busca o status e o resultado de uma tarefa específica já disparada na Browse AI, usando o ID da tarefa. Útil quando a tarefa foi disparada em outro momento (por exemplo, via \"Executar Tarefa\" numa etapa anterior, ou até fora do HighLevel) e agora você precisa consultar o resultado.",
+      "keywords": "buscar tarefa get task browse ai robô",
+      "href": "acoes-highlevel-cat18.html#a3"
+    },
+    {
+      "id": "a4",
+      "type": "Ação",
+      "name": "Buscar Execução em Lote",
+      "en": "Get Bulk Run",
+      "category": "Browse AI",
+      "tags": [
+        "Premium",
+        "Requer API key própria"
+      ],
+      "description": "Busca o status e os resultados de uma execução em lote (disparada via \"Executar Tarefas em Lote\") usando o ID do lote. Retorna o progresso e os resultados já concluídos de cada item do lote.",
+      "keywords": "buscar execução em lote get bulk run browse ai robô",
+      "href": "acoes-highlevel-cat18.html#a4"
+    },
+    {
+      "id": "a5",
+      "type": "Ação",
+      "name": "Criar Tarefa",
+      "en": "Create Task",
+      "category": "Manus",
+      "tags": [
+        "Requer API key própria"
+      ],
+      "description": "Cria uma nova tarefa no agente autônomo Manus a partir de um prompt em linguagem natural — a mesma lógica do gatilho \"Manus: Nova Tarefa Criada\" só que disparada pelo próprio workflow do HighLevel, ao invés de vir de fora. A Manus processa o prompt de forma assíncrona e multi-etapas.",
+      "keywords": "criar tarefa create task manus agente robô",
+      "href": "acoes-highlevel-cat18.html#a5"
+    },
+    {
+      "id": "a6",
+      "type": "Ação",
+      "name": "Buscar Tarefa",
+      "en": "Get Task",
+      "category": "Manus",
+      "tags": [
+        "Requer API key própria"
+      ],
+      "description": "Busca o status e o resultado atual de uma tarefa da Manus usando o ID da tarefa. Retorna o que já foi processado até o momento — útil pra tarefas longas onde você quer consultar o progresso antes de decidir o próximo passo do workflow.",
+      "keywords": "buscar tarefa get task manus agente robô",
+      "href": "acoes-highlevel-cat18.html#a6"
+    },
+    {
+      "id": "a7",
+      "type": "Ação",
+      "name": "Atualizar Tarefa",
+      "en": "Update Task",
+      "category": "Manus",
+      "tags": [
+        "Requer API key própria"
+      ],
+      "description": "Atualiza campos de uma tarefa já existente na Manus, identificada pelo Task ID — por exemplo, ajustar instruções ou metadados da tarefa sem precisar criar uma nova do zero.",
+      "keywords": "atualizar tarefa update task manus agente robô",
+      "href": "acoes-highlevel-cat18.html#a7"
+    },
+    {
+      "id": "a8",
+      "type": "Ação",
+      "name": "Buscar Tarefas",
+      "en": "Fetch Tasks",
+      "category": "Manus",
+      "tags": [
+        "Requer API key própria"
+      ],
+      "description": "Lista várias tarefas da conta Manus conectada de uma vez, ao invés de buscar uma por uma pelo ID — útil pra montar relatórios ou verificar o volume de tarefas em andamento/concluídas.",
+      "keywords": "buscar tarefas fetch tasks manus agente robô",
+      "href": "acoes-highlevel-cat18.html#a8"
+    },
+    {
+      "id": "a9",
+      "type": "Ação",
+      "name": "Excluir Tarefa",
+      "en": "Delete Task",
+      "category": "Manus",
+      "tags": [
+        "Requer API key própria"
+      ],
+      "description": "Exclui permanentemente uma tarefa da Manus usando o Task ID. Use com cuidado — a ação é destrutiva e não tem \"desfazer\" do lado da Manus.",
+      "keywords": "excluir tarefa delete task manus agente robô",
+      "href": "acoes-highlevel-cat18.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Continuar Tarefa com Prompt",
+      "en": "Continue a Task with a Prompt",
+      "category": "Manus",
+      "tags": [
+        "Requer API key própria"
+      ],
+      "description": "Envia um novo prompt pra uma tarefa já existente da Manus, continuando a conversa/execução em vez de criar uma tarefa do zero — parecido com mandar mais uma mensagem num chat que já tem contexto acumulado.",
+      "keywords": "continuar tarefa com prompt continue a task with a prompt manus agente robô",
+      "href": "acoes-highlevel-cat18.html#a10"
     }
   ]
 }

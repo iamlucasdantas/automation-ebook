@@ -30,6 +30,18 @@ Tabela completa de status por entry em [AUDIT-TABLE.md](./AUDIT-TABLE.md).
 | **Ações cat14** (Certificados) | ✅ | 1 | 1 |
 | **Total** | **✅** | **185** | **170/185 (92%)** |
 
+> **Nota de escopo (2026-09-21):** esta tabela é um snapshot manual antigo e
+> para de cobrir em Ações cat14 — ela nunca foi estendida pras categorias
+> Ações cat15 (Google Integrações), cat16 (Objetos & Empresas), cat17
+> (Bots & Agentes) nem, agora, cat18 (Robôs & Agentes Externos), todas
+> adicionadas em rounds posteriores. Os números aqui **não** refletem mais
+> o total real do guia (hoje 90 gatilhos + 186 ações = 276 painéis). Pra
+> contagem atual por categoria com sinais de fidelidade auto-medidos, use
+> [AUDIT-TABLE.md](./AUDIT-TABLE.md) (gerado por `scripts/build-audit.py`,
+> já cobre cat01-cat14 gatilhos e cat01-cat18 ações). Pra histórico de cada
+> rodada de checagem de novidades nativas, veja as seções `## 🆕 Rodada
+> AAAA-MM-DD` abaixo.
+
 ## ✅ Fixes aplicados nesta auditoria
 
 ### Gatilhos
@@ -242,16 +254,139 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-21 — Checagem de novidades nativas
+
+Rotina de auditoria mensal comparou o guia (estado da rodada 2026-08-24:
+87 gatilhos + 175 ações = 262 painéis, 30 categorias) contra
+`help.gohighlevel.com` em busca de candidatos pendentes de rodadas
+anteriores (Browse AI, OpenRouter, Manus — pendentes desde 2026-07-29;
+Monday.com, Jira, Linear, Housecall Pro, Apify — pendentes desde
+2026-08-24) que já tivessem artigo oficial de KB com detalhe de campo
+suficiente pra virar mockup com fidelidade real.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+Três integrações nativas confirmadas com artigo dedicado no
+`help.gohighlevel.com` e campos claros o bastante pra montar o mockup:
+
+1. **Ação — OpenRouter: Gerar Resposta (OpenRouter: Generate Response)**
+   · `acoes-highlevel-cat05.html` A9 (Workflow AI — inserida logo depois da
+   Mistral AI, A8; Tradução com IA e Decisor com IA renumeradas de A9/A10
+   pra A10/A11). Roteador com acesso a 300+ modelos (Perplexity, Claude,
+   OpenAI, Gemini e outros) através de uma única integração. Campos:
+   System Prompt (opcional), Prompt (obrigatório, aceita variáveis
+   dinâmicas), Model Selection (obrigatório) e Test Action (roda uma vez e
+   salva o schema da resposta como custom value). Premium — cobrança
+   pass-through do provedor por execução. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007330-workflow-action-openrouter-generate-response)
+2. **Gatilhos e ações — Browse AI** · nova categoria **Robôs & Agentes
+   Externos** (`guia-highlevel-cat14.html` cat14 de gatilhos, 3 gatilhos;
+   `acoes-highlevel-cat18.html` cat18 de ações, 4 das 10 ações). 1 gatilho
+   (**New Completed Task**, instantâneo, filtro Robot) + 4 ações (**Run
+   Task**, **Bulk Run Tasks**, **Get Task**, **Get Bulk Run**). Todas
+   Premium, requer API key própria da Browse AI. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008028-browse-ai-workflow-actions-and-trigger)
+3. **Gatilhos e ações — Manus** · mesma nova categoria (2 gatilhos em
+   cat14, 6 das 10 ações em cat18). 2 gatilhos (**New Task Created**,
+   **Task Stopped**) + 6 ações (**Create Task**, **Get Task**, **Update
+   Task**, **Fetch Tasks**, **Delete Task**, **Continue a Task with a
+   Prompt**). Requer API key própria da Manus. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
+
+Totais atualizados: **90 gatilhos + 186 ações = 276 entries, 32
+categorias** (`search-index.json`, `AUDIT-TABLE.md` e `index.html`
+regenerados/atualizados; `validate-mockups.js` roda limpo nas 32 páginas).
+
+> ⚠ **Aplicar com revisão — categoria Robôs & Agentes Externos completa**
+> (`guia-highlevel-cat14.html` e `acoes-highlevel-cat18.html`, 13 entries
+> no total). Os artigos oficiais da HighLevel nomeiam e descrevem o
+> propósito de cada gatilho/ação da Browse AI e da Manus, mas **não**
+> publicam um schema campo-a-campo exaustivo como fazem ações mais
+> maduras. Os campos usados aqui (Robot, Input Parameters, Task ID, Prompt,
+> Fields to Update, etc.) são razoáveis e consistentes com o que a doc
+> descreve, mas nomes/ordem exatos dos campos **precisam ser confirmados
+> contra o builder real do HL por um humano** antes de considerar essa
+> categoria 100% final — mesmo tratamento que toda integração nova recebeu
+> neste guia (ex.: Mistral AI em 2026-07-29, Google Integrações em
+> 2026-08-10).
+
+### 🔍 Candidatos encontrados, NÃO aplicados (status atualizado desta rodada)
+Continuam pendentes de validação humana antes de virar mockup — agora com
+mais detalhe do que nas rodadas anteriores, mas ainda sem confiança
+suficiente pra montar campo-a-campo:
+
+- **Jira** — artigo de KB dedicado já existe. 2 gatilhos nomeados
+  (ex.: issue criada/atualizada); as 11 ações só aparecem listadas por
+  categoria no artigo, sem nome individual confirmado de cada uma. Precisa
+  de uma rodada dedicada pra extrair os 11 nomes exatos antes de montar
+  qualquer mockup.
+- **Linear** — artigo de KB dedicado já existe (conexão nativa via OAuth).
+  8 dos 12 gatilhos já aparecem nomeados no artigo; as ações continuam,
+  em sua maioria, só por categoria (issues, projects, customers, customer
+  needs, initiatives, documents), sem lista individual confirmada. Volume
+  grande (12 gatilhos + ~13 ações) — mesma recomendação da rodada
+  2026-08-24: rodada dedicada só pra levantar os nomes exatos.
+- **Monday.com** — 4 ações agora nomeadas e confirmadas no artigo oficial;
+  os gatilhos continuam explicitamente marcados como **"Coming Soon"**
+  pela própria HighLevel — ou seja, ainda não existem de fato no produto,
+  não é falta de documentação. Não dá pra adicionar gatilho nenhum até a
+  HL lançar.
+- **Housecall Pro** — 9 gatilhos agora nomeados, com cadência de polling
+  documentada (a integração não é 100% tempo real pra todos os eventos);
+  as 14 ações continuam só listadas por categoria, sem nome individual
+  confirmado. Achado só em changelog (`ideas.gohighlevel.com`), sem artigo
+  de KB dedicado ainda — sinal de que a integração é recente e a doc
+  formal pode vir depois.
+- **Apify** — artigo de KB dedicado existe e descreve o comportamento do
+  gatilho (robôs/atores rodando scraping dentro do workflow), mas o nome
+  exato do gatilho não está 100% confirmado no texto. 4 ações são
+  nomeadas, mas a lista pode estar incompleta (o artigo não deixa claro se
+  é exaustiva). Precisa confirmação humana antes de virar entrada nova.
+- **"AI Image Generation" / "AI Analyze Image"** — encontrados apenas em
+  changelog (`ideas.gohighlevel.com`), sem artigo de KB dedicado. Risco
+  real de sobreposição com a ação já existente **"AI Parse Image"**
+  (`acoes-highlevel-cat05.html` A2) — pode ser o mesmo recurso
+  renomeado/estendido, ou pode ser uma ação genuinamente nova de geração
+  (não só análise) de imagem. **Não adicionar** até um humano comparar
+  contra o builder real e decidir se é rename, extensão ou item novo.
+- **"Invoke Managed Agent"** — mencionado só num roundup de blog
+  third-party, sem artigo oficial da HighLevel nem changelog confirmando o
+  nome exato. Leitura mais provável: é apenas um rename da ação já
+  existente **"Invoke Agent in Agent Studio"** acompanhando o rebrand
+  interno da HighLevel de Agent Studio → Managed Agents (mesma família do
+  Conversation AI / `acoes-highlevel-cat17.html`) — não uma ação nova.
+  **Não adicionar como entrada nova** até um humano confirmar contra o
+  builder real se é rename (aplicar como rename, como já foi feito com AI
+  Extract Data e outros) ou se é de fato algo adicional.
+
+Nenhum campo foi inventado pra nenhum desses — são candidatos genuínos com
+mais sinal do que antes, mas ainda sem confiança suficiente pros nomes de
+campo exatos de cada sub-item.
+
+### 🐛 Drift verificado nesta rodada (nenhum encontrado além do já corrigido)
+`auto-refine.py --check` reportou 0 drift depois de todas as mudanças
+mecânicas (novas páginas adicionadas ao `HAND_CRAFTED`, denominadores
+"Parte NN/M" corrigidos em todas as 30 páginas existentes,
+`search-index.json` regenerado). As constantes `HAND_CRAFTED_TRIGGERS` /
+`HAND_CRAFTED_ACTIONS` no topo de `scripts/build-audit.py` (código morto,
+não referenciado no resto do script, mas mantido como documentação viva do
+range de categorias) ainda estavam paradas em `range(1, 13)` / `range(1,
+15)` — desatualizadas mesmo antes desta rodada (não cobriam cat13, cat15,
+cat16 nem cat17). Corrigidas pra `range(1, 15)` / `range(1, 19)`, cobrindo
+corretamente cat01–cat14 (gatilhos) e cat01–cat18 (ações) — mesmo espírito
+do fix do `auto-refine.py` logado na rodada 2026-08-24.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
-1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
-   candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+1. **Você abre HL** e valida (a) os campos exatos da nova categoria Robôs
+   & Agentes Externos (Browse AI + Manus, cat14 gatilhos / cat18 ações —
+   ver a nota ⚠ na rodada 2026-09-21 acima), (b) os ~15 itens ⚠ dos rounds
+   anteriores, e (c) os candidatos 🔍 acumulados (Badge Issued, Monday.com,
+   Jira, Linear, Housecall Pro, Apify, AI Image Generation/AI Analyze
+   Image, Invoke Managed Agent) — confirmar nome real do campo / da action
+   antes de qualquer um virar mockup ou de considerar cat14/cat18 100%
+   finais.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
-está em ~92% de fidelidade verificada contra docs oficiais.
+está em ~92% de fidelidade verificada contra docs oficiais (excluindo a
+categoria nova, que ainda não passou por essa verificação humana).

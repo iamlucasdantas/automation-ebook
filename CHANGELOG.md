@@ -10,6 +10,51 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-21 — Content
+**Rodada mensal: 3 novas integrações nativas confirmadas (OpenRouter, Browse AI, Manus)**
+
+Auditoria mensal contra `help.gohighlevel.com` encontrou artigo de KB
+dedicado, com detalhe de campo suficiente, pra três integrações que
+estavam pendentes de rodadas anteriores (2026-07-29 e 2026-08-24). Detalhe
+completo em [AUDIT.md](./AUDIT.md#-rodada-2026-09-21--checagem-de-novidades-nativas).
+
+- **Ação — OpenRouter: Gerar Resposta** · `acoes-highlevel-cat05.html` A9
+  (Workflow AI, logo após Mistral AI). Roteador com acesso a 300+ modelos
+  (Perplexity, Claude, OpenAI, Gemini e outros) numa única integração.
+  Premium — cobrança pass-through do provedor por execução.
+- **Nova categoria de gatilhos — Robôs & Agentes Externos**
+  (`guia-highlevel-cat14.html`, cat14 de 14): 3 gatilhos — Browse AI: Tarefa
+  Concluída (Premium) + Manus: Nova Tarefa Criada + Manus: Tarefa
+  Interrompida.
+- **Nova categoria de ações — Robôs & Agentes Externos**
+  (`acoes-highlevel-cat18.html`, cat18 de 18): 10 ações — 4 da Browse AI
+  (Executar Tarefa, Executar Tarefas em Lote, Buscar Tarefa, Buscar
+  Execução em Lote, todas Premium) + 6 da Manus (Criar Tarefa, Buscar
+  Tarefa, Atualizar Tarefa, Buscar Tarefas, Excluir Tarefa, Continuar
+  Tarefa com Prompt). Ambas as integrações usam API key própria do
+  usuário, não a conta de IA do HighLevel.
+- **14 entries novas, 2 categorias novas.** Totais atualizados: **90
+  gatilhos + 186 ações = 276 painéis, 32 categorias** (eram 87+175=262,
+  30 categorias). `index.html` (hero-stats, tab-counts, section-labels,
+  meta tags, 2 novos cat-cards, "Mockups interativos" recontado
+  programaticamente pra 216), `search-index.json` e `AUDIT-TABLE.md`
+  regenerados. Meta tags "Parte NN/13" → "/14" (13 páginas de gatilhos) e
+  "Parte NN/17" → "/18" (17 páginas de ações) corrigidas em todas as
+  páginas existentes. `sitemap.xml` com as 2 novas páginas.
+  `scripts/auto-refine.py` (`HAND_CRAFTED`) e `scripts/build-audit.py`
+  (constantes de range, já desatualizadas antes desta rodada) atualizados
+  pra cobrir as 2 categorias novas. `auto-refine.py --check` reporta 0
+  drift; `validate-mockups.js` passa nas 32 páginas.
+- ⚠ A categoria Robôs & Agentes Externos inteira (13 entries) está
+  marcada em AUDIT.md como "aplicar com revisão" — os artigos oficiais da
+  HighLevel nomeiam e descrevem o propósito de cada item da Browse AI e da
+  Manus, mas não publicam schema campo-a-campo exaustivo; os nomes/ordem
+  exatos dos campos usados aqui precisam de confirmação humana contra o
+  builder real antes de considerar a categoria 100% final.
+- Status atualizado dos candidatos pendentes (Jira, Linear, Monday.com,
+  Housecall Pro, Apify, "AI Image Generation"/"AI Analyze Image", "Invoke
+  Managed Agent") — nenhum aplicado ainda, detalhe completo em AUDIT.md.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

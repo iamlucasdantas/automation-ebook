@@ -23,8 +23,8 @@ import re
 ROOT = os.path.join(os.path.dirname(__file__), '..', 'deploy-highlevel')
 OUTPUT = os.path.join(os.path.dirname(__file__), '..', 'AUDIT-TABLE.md')
 
-HAND_CRAFTED_TRIGGERS = {f'cat{n:02d}' for n in range(1, 13)}  # all 12 trigger pages
-HAND_CRAFTED_ACTIONS = {f'cat{n:02d}' for n in range(1, 15)}   # all 14 action pages
+HAND_CRAFTED_TRIGGERS = {f'cat{n:02d}' for n in range(1, 15)}  # all 14 trigger pages
+HAND_CRAFTED_ACTIONS = {f'cat{n:02d}' for n in range(1, 19)}   # all 18 action pages
 
 
 def count_config_fields(panel_html):
