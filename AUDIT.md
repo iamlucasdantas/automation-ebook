@@ -242,6 +242,77 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-22 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `help.gohighlevel.com` e
+`ideas.gohighlevel.com` estão bloqueados por egress direto neste ambiente
+(confirmado via `curl` — 403 "organization policy" nos dois domínios) — a
+checagem usou WebSearch pra ler o conteúdo indiretamente, então nenhum
+campo abaixo foi inventado: só o que os resumos de busca citaram
+explicitamente com a fonte.
+
+### ✅ Aplicado nesta rodada
+Nada — nenhum item novo passou da barra de "campos confirmados o
+suficiente pra montar mockup fiel". **Totais inalterados: 87 gatilhos +
+175 ações = 262 entries.**
+
+### 🔍 Movimento nos candidatos pendentes (nenhum pronto pra aplicar ainda)
+- **Jira** — agora tem doc oficial dedicada (nova desde a rodada passada):
+  [artigo](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers).
+  Confirmado: **2 gatilhos + 11 ações** (create/update/link/comment/watch/
+  attach/log work/move sprint), todos com seletor **Cloud Site**. Auth via
+  OAuth Atlassian. Ainda faltam os nomes das outras 10 ações e os campos
+  completos de cada uma.
+- **Linear** — doc oficial dedicada nova:
+  [artigo](https://help.gohighlevel.com/support/solutions/articles/155000007978-linear-integration-in-highlevel-workflows).
+  Confirmado: **12 gatilhos instantâneos (webhook) + 13 ações**, cobrindo
+  issues/comments/attachments/labels/projects/customers/customer
+  needs/initiatives/documents. Auth OAuth nativa (sem API token). Uma ação
+  confirmada por nome: **"Create Issue Attachment"** (anexa link de um
+  registro do CRM num issue). Faltam nomes/campos dos outros 24 itens.
+- **Monday.com** — doc oficial dedicada nova:
+  [artigo](https://help.gohighlevel.com/support/solutions/articles/155000007216-monday-com-actions-and-triggers-in-workflows),
+  mas com uma discrepância não resolvida: o resumo do doc oficial diz
+  **"ações nativas disponíveis hoje... gatilhos em breve"** — ou seja, a
+  integração pode hoje ter só ações, sem gatilhos ainda. Um espelho
+  não-oficial lista 2 gatilhos possíveis ("Any Column Value Changed in
+  Board", "Any Item Moved to a Group") que conflitam com o doc oficial.
+  **Não aplicar gatilhos do Monday.com sem confirmação humana no builder
+  real do HL.**
+- **Apify** — doc oficial dedicada confirmada:
+  [artigo](https://help.gohighlevel.com/support/solutions/articles/155000007631-apify-actions-triggers-in-highlevel-workflows).
+  Gatilho dispara em run completo de actor/task; ação "Run Actor" só
+  retorna o **dataset ID**, não o conteúdo — precisa de uma ação separada
+  "Fetch Dataset Items" (com um Wait antes) pra puxar os dados de fato.
+  Faltam nomes exatos de campo (Actor ID, mapeamento de input schema).
+- **Browse AI** — mesma doc de antes, mas com mais detalhe de campo desta
+  vez: gatilho **"New Completed Task"** (instantâneo, filtra por
+  **Robot**); ação **"Run Task"** confirmada com campos **Robot ID** +
+  **Input Parameters** (ambos aceitam variáveis do workflow) + botão
+  **Test Action**. Esse é o candidato **mais perto de virar mockup** — só
+  faltam os campos de Bulk Run Tasks / Get Task / Get Bulk Run.
+- **Manus** — mesma doc de antes: ações create/update/continue/fetch/delete
+  de tasks; gatilhos em criação e conclusão/parada de task. Nenhum nome de
+  campo confirmado ainda (sem "Prompt"/"Task ID" citados literalmente).
+- **OpenRouter** — sem mudança: ainda nenhuma doc dedicada encontrada, só
+  changelog + recaps de terceiros.
+- **Badge Issued** — sem mudança: ação companion "Issue Badge" segue "em
+  desenvolvimento" pela própria HighLevel; workaround continua sendo
+  "Issue Certificate" com template de Badge.
+- **Housecall Pro** — mais detalhe agregado (9 gatilhos / 14 ações; polling
+  de 5-10min conforme o tipo; auth por API key com dropdown de conta) mas
+  ainda **sem doc oficial dedicada** — só recaps de blog/changelog. Segue
+  pendente.
+
+### Checagem de renomeações/depreciações em entries existentes
+Nada novo. `Create/Update Opportunity` combinado (deprecado desde abr/2025,
+fora da janela desta rodada) já está corretamente separado no guia
+(cat07). Trigger de substituição do Shopify Order Fulfilled já está
+documentado no `guia-highlevel-cat08.html`. Nenhuma outra renomeação
+encontrada além das já aplicadas em rodadas anteriores.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
@@ -249,7 +320,9 @@ A auditoria automática está completa. Os próximos passos são humanos:
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
    Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   do campo / da action antes de qualquer um virar mockup. **Prioridade
+   sugerida pela rodada 2026-09-22: Browse AI (gatilho + Run Task) e Jira
+   (confirmar as outras 10 ações) são os dois mais perto de ficar prontos.**
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

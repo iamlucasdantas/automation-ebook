@@ -10,6 +10,26 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-22 — Automation
+**Checagem de novidades nativas — nenhum item novo pronto pra aplicar**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel desde a rodada de 2026-08-24.
+Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-09-22--checagem-de-novidades-nativas).
+
+- Nenhum trigger/action nativo novo encontrado nesta janela — só uma
+  melhoria de UX no builder ("Field Previews" nos passos de integração),
+  sem nova entry pra documentar.
+- 4 dos 9 candidatos pendentes (Jira, Linear, Monday.com, Apify) ganharam
+  doc oficial dedicada pela primeira vez, mas ainda sem campos completos
+  o suficiente pra um mockup fiel.
+- Browse AI (gatilho "New Completed Task" + ação "Run Task") é o
+  candidato mais perto de ficar pronto — campos confirmados: Robot/Robot
+  ID + Input Parameters.
+- Totais inalterados: **87 gatilhos + 175 ações = 262 entries**.
+  `build-search-index.py` confirma 262 entries sem drift; `auto-refine.py
+  --check` reporta 0 drift.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
