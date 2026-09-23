@@ -393,8 +393,8 @@
         "Tempo real",
         "Reputação"
       ],
-      "description": "Dispara quando chega uma nova avaliação no Google Meu Negócio ou Facebook. Diferente dos outros gatilhos, este não está vinculado a um contato específico — serve pra gestão de reputação.",
-      "keywords": "avaliação review recebida google facebook",
+      "description": "Dispara quando chega uma nova avaliação. Diferente dos outros gatilhos, este não está vinculado a um contato específico — serve pra gestão de reputação.",
+      "keywords": "avaliação review recebida google facebook trustpilot yelp tripadvisor plataformas integradas",
       "href": "guia-highlevel-cat02.html#g16"
     },
     {

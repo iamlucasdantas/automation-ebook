@@ -242,14 +242,87 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-23 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. Neste ambiente, tanto
+`ideas.gohighlevel.com` quanto `help.gohighlevel.com` estão bloqueados por
+egress direto (diferente da rodada 2026-08-24, em que só o `ideas.` estava
+bloqueado) — a checagem inteira usou busca web pra ler o conteúdo
+indiretamente, sem conseguir abrir os artigos oficiais pra confirmar campo
+a campo.
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente, sem novo total)
+1. **Nova Avaliação Recebida / New Review Received** (`guia-highlevel-cat02.html`
+   G16) — o changelog oficial *"New Review Received Trigger Now Supports All
+   Integrated Review Platforms"* confirma que o filtro **Source** deixou de
+   ser limitado a Google/Facebook e agora cobre qualquer plataforma de
+   review integrada à subconta (Trustpilot, Yelp, TripAdvisor e outras).
+   Atualizado: texto do gatilho, descrição do filtro "Fonte da Avaliação",
+   opções do dropdown no painel HL fiel, hint do canvas e caption do painel.
+   Não muda a contagem de gatilhos — é enriquecimento de um item existente,
+   igual ao padrão do AI Agent/Email Events na rodada 2026-08-24.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+Integrações nativas reais, mas sem confirmação campo-a-campo da doc oficial
+(bloqueada neste ambiente) — não dá pra montar mockup com fidelidade real
+sem isso:
+
+- **Jira** — agora com mais detalhe do que na rodada 2026-08-24: 2 gatilhos
+  + 11 ações, cobrindo criar/atualizar issue, link, comentário, watch,
+  anexar arquivo, log work, mover pra sprint. Nomes exatos dos campos ainda
+  não confirmados. [Changelog](https://ideas.gohighlevel.com/changelog/jira-workflow-actions-and-triggers)
+- **Housecall Pro** — expandiu pra 9 gatilhos + 14 ações (era só "mais
+  itens, não detalhado" na rodada anterior). Gatilhos identificados: Job
+  Created/Scheduled/Finished/Canceled, Estimate Created/Scheduled/Finished,
+  Lead Created, Customer Created (cada um com intervalo de polling de 5-10
+  min). As 14 ações ainda não têm nomes confirmados. [Changelog](https://ideas.gohighlevel.com/changelog/housecall-pro-more-workflow-actions-triggers)
+- **Klaviyo** — integração nova: 4 gatilhos (polling) + 17 ações cobrindo
+  ciclo de vida de perfil, gestão de listas e operações de campanha. Campos
+  não detalhados. [Changelog](https://ideas.gohighlevel.com/changelog/klaviyo-workflow-actions-triggers)
+- **HubSpot** — integração nova: 1 gatilho instantâneo + 5 ações (criar,
+  buscar, buscar por ID, buscar por email, associar contato). [Changelog](https://ideas.gohighlevel.com/changelog/hubspot-workflow-actions-trigger)
+- **Cal.com** — integração nova: gatilhos de agendamento (ex.: "Booking
+  Created"). Lista completa não confirmada. [Changelog](https://ideas.gohighlevel.com/changelog/calcom-workflow-actions-triggers)
+- **Basecamp** — integração nova pra gestão de projetos: criação de tarefa
+  e comunicação entre HighLevel e Basecamp. Campos não detalhados.
+  [Changelog](https://ideas.gohighlevel.com/changelog/basecamp-new-actions-triggers-in-workflows)
+- **Fathom** — integração nova: gatilho de gravação de reunião + ações pra
+  buscar transcript e resumo gerado por IA. Campos não detalhados.
+  [Changelog](https://ideas.gohighlevel.com/changelog/fathom-actions-and-triggers-in-workflows)
+- **Badge Issued / Issue Badge** — changelog *"Badge automation is now
+  available in Workflows"* sugere que a ação **Issue Badge**, antes listada
+  como "em desenvolvimento" (ver rodada 2026-08-24), pode já ter sido
+  lançada de verdade, com um gatilho companion **Badge Issued**. Precisa de
+  confirmação humana no HL antes de trocar o workaround atual
+  (`acoes-highlevel-cat14.html` A1 Issue Certificate com template de Badge)
+  por uma ação própria.
+
+Sem novidade encontrada nesta rodada pra: Monday.com, Linear (25 itens),
+Apify, Browse AI, OpenRouter, Manus — seguem pendentes desde rodadas
+anteriores, mesmo status.
+
+### Nota sobre o ambiente
+Com `help.gohighlevel.com` também bloqueado nesta rodada (além do já
+esperado `ideas.gohighlevel.com`), a auditoria não conseguiu abrir nenhum
+artigo oficial diretamente — só resumos via busca web. Isso é suficiente
+pra *detectar* que algo mudou (como o Review Received), mas não pra
+confirmar nomes de campo com certeza suficiente pra montar mockup de
+fidelidade real em integrações novas e grandes (Jira, Housecall Pro,
+Klaviyo, HubSpot). Se esse bloqueio persistir, rodadas futuras vão
+continuar acumulando candidatos sem poder aplicá-los — pode valer a pena
+liberar egress pra `help.gohighlevel.com` especificamente.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   Monday.com, Jira, Linear, Housecall Pro, Apify, Klaviyo, HubSpot,
+   Cal.com, Basecamp, Fathom) — confirmar nome real do campo / da action
+   antes de qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 

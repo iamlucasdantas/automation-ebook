@@ -10,6 +10,32 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-23 — Content + Automation
+**Checagem de novidades nativas (rotina agendada)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos lançados
+desde a rodada de 2026-08-24. Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-09-23--checagem-de-novidades-nativas).
+
+- **Nova Avaliação Recebida / New Review Received** (`guia-highlevel-cat02.html`
+  G16): o filtro Source deixou de ser limitado a Google/Facebook — agora
+  cobre qualquer plataforma de review integrada à subconta (Trustpilot,
+  Yelp, TripAdvisor e outras). Enhancement a item já existente, não muda a
+  contagem total.
+- 8 candidatos encontrados mas **não aplicados** — precisam de validação
+  humana de campos antes de virar mockup: Jira (2 gatilhos + 11 ações,
+  mais detalhado que antes), Housecall Pro (agora 9 gatilhos + 14 ações,
+  nomes de gatilhos identificados), Klaviyo (4 gatilhos + 17 ações, nova),
+  HubSpot (1 gatilho + 5 ações, nova), Cal.com (nova), Basecamp (nova),
+  Fathom (nova), Badge Issued/Issue Badge (pode ter saído do "em
+  desenvolvimento").
+- `search-index.json` regenerado (262 entries, só texto mudou);
+  `auto-refine.py --check` e `validate-mockups.js` OK nas 30 páginas.
+- `index.html`: data de "Última atualização" recontada para hoje.
+- Nota de ambiente: `help.gohighlevel.com` também está bloqueado por
+  egress neste ambiente agora (antes só `ideas.gohighlevel.com` estava),
+  o que limitou a confirmação campo-a-campo dos candidatos grandes.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
