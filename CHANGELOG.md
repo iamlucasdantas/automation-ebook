@@ -10,6 +10,26 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-24 — Automation
+**Checagem de novidades nativas: nenhum item novo confirmado, data do rodapé atualizada**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-09-14. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-24--checagem-de-novidades-nativas).
+
+- Nenhum gatilho/ação novo aplicado — nada foi confirmado com nome e
+  campos exatos o suficiente pra virar mockup fiel. Totais inalterados.
+- `deploy-highlevel/index.html`: data de "Última atualização" no hero
+  avançada de 14/09/2026 para 24/09/2026.
+- Novo candidato registrado pra validação humana: **Managed Agents**
+  (rebrand de "Super Agents", possíveis gatilhos de agendamento/
+  compromisso dedicados) — ver AUDIT.md.
+- ⚠️ Nesta rodada `WebFetch` passou a estar bloqueado pra qualquer
+  domínio externo no sandbox (antes só `*.gohighlevel.com` estava),
+  então a checagem ficou limitada aos resumos do `WebSearch` — reduz
+  ainda mais a confiança pra aplicar itens sem revisão humana.
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

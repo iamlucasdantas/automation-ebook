@@ -406,15 +406,76 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-09-24 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-09-14) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `help.gohighlevel.com` e
+`ideas.gohighlevel.com` continuam bloqueados por egress direto neste
+ambiente — dessa vez o bloqueio se estendeu também a `WebFetch` em
+qualquer domínio (incluindo blogs terceiros como `netpartners.marketing`
+e `agencyarcade.com`), então a única ferramenta disponível foi o
+resumo indireto do `WebSearch`. Isso reduz ainda mais a confiança em
+detalhe de campo — nada foi aplicado com base em resumo de busca sem
+confirmação de nome exato.
+
+### ✅ Aplicado nesta rodada
+Nenhum item novo — nenhuma novidade nativa foi confirmada com confiança
+suficiente (nome exato + campos exatos) pra virar mockup fiel. Total
+inalterado: **87 gatilhos + 175 ações = 262 painéis** (210 mockups
+interativos). `index.html`, `search-index.json` e `AUDIT-TABLE.md`
+seguem corretos — só a data de "Última atualização" no rodapé do hero
+foi avançada pra 24/09/2026 pra refletir que a rodada rodou.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **Managed Agents** *(novo achado)* — a HighLevel renomeou "Super
+  Agents" para **Managed Agents**: um construtor de agentes por linguagem
+  natural (descreve o caso de uso em texto, sai um agente pronto) que roda
+  sobre o mesmo motor do Agent Studio. O guia hoje só cobre
+  `acoes-highlevel-cat17.html` A12 "Invocar Agente (Agent Studio)" —
+  não fica claro se isso é a mesma ação renomeada, uma ação nova
+  separada, ou se Agent Studio e Managed Agents têm nós distintos no
+  Workflow Builder. Docs oficiais mencionam também gatilhos dedicados
+  ("Scheduled Triggers for Managed Agents", "Appointment Triggers in
+  Managed Agents") que podem ser gatilhos nativos novos não cobertos
+  ainda — campos exatos não confirmados nesta rodada.
+- **Typeform / Calendly / HubSpot / Basecamp / Browse AI / Manus /
+  Badge Issued / Monday.com / Jira / Linear / Housecall Pro / Apify** —
+  mesmos candidatos pendentes desde as rodadas de 24/08 a 14/09, sem
+  novo detalhe de campo encontrado nesta busca.
+- **Slack rename** (`Outbound Webhook (Slack)` → `Slack` nativo) — segue
+  pendente, sem novidade.
+- **Opportunity Changed — possíveis filtros extras** (`Assigned To`,
+  `Source`, `Monetary Value`) apareceram em resumos de busca de páginas
+  de terceiros sobre esse gatilho, mas sem data de lançamento nem
+  confirmação de que são recentes (podem já ser antigos, ou podem ser o
+  próprio resumo inventando com base no que "faria sentido" o gatilho
+  ter) — não é tratado como achado novo, só registrado pra alguém
+  validar dentro do HL se quiser.
+
+Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
+anteriores: são integrações nativas reais (ou possíveis) que exigem
+confirmação humana do nome e dos campos exatos antes de virar mockup com
+fidelidade real.
+
+### ⚠️ Observação sobre o ambiente
+Esta rodada rodou com acesso de rede mais restrito que as anteriores:
+`WebFetch` está bloqueado para qualquer domínio externo neste sandbox
+(não só `*.gohighlevel.com`), então só o `WebSearch` (que já vem com
+resumo pronto, sem controle sobre a fonte primária) ficou disponível.
+Rodadas futuras podem ter esse acesso restaurado ou não — se continuar
+assim, o teto de confiança pra aplicar itens automaticamente sem revisão
+humana fica ainda mais baixo do que já estava.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
-   candidatos 🔍 acumulados (Typeform, Calendly, HubSpot, Basecamp,
-   Browse AI, Manus, Badge Issued, Monday.com, Jira, Linear, Housecall
-   Pro, Apify) + o achado de rename do Slack — confirmar nome real do
-   campo / da action antes de qualquer um virar mockup.
+   candidatos 🔍 acumulados (Managed Agents, Typeform, Calendly, HubSpot,
+   Basecamp, Browse AI, Manus, Badge Issued, Monday.com, Jira, Linear,
+   Housecall Pro, Apify) + o achado de rename do Slack — confirmar nome
+   real do campo / da action antes de qualquer um virar mockup.
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
