@@ -10,6 +10,37 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-25 — Automation
+**Checagem de novidades nativas (gatilhos/ações) — nenhum item novo aplicado**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos lançados
+desde a rodada de 2026-08-24. Detalhe completo em [AUDIT.md](./AUDIT.md#-rodada-2026-09-25--checagem-de-novidades-nativas).
+
+- Desta vez `help.gohighlevel.com` também ficou bloqueado por egress no
+  ambiente de automação (só `ideas.gohighlevel.com` estava bloqueado na
+  rodada anterior) — checagem feita só via resumos de busca web, sem
+  leitura direta da página oficial. Por segurança, nada foi aplicado sem
+  confirmação de campo exato.
+- **Community Group Event Registration**, uma das 4 novidades anunciadas
+  no changelog de Communities, já estava coberta desde 2026-07-10
+  (`guia-highlevel-cat11.html` G6) — nenhuma ação necessária.
+- **Badge Issued**: artigo oficial novo confirma que não existe ação
+  dedicada — o caminho continua sendo **Issue Certificate**
+  (`acoes-highlevel-cat14.html` A1) com template de Badge. Removido da
+  lista de pendências.
+- 3 candidatos novos encontrados mas **não aplicados** (integrações
+  nativas reais, faltando confirmação de campo exato): **Cal.com** (6
+  gatilhos + 4 ações, premium), **HubSpot** (1 gatilho + 5 ações),
+  **Basecamp** (~6 gatilhos + ~13 ações). Somam-se aos pendentes de
+  rodadas anteriores (Monday.com, Jira, Linear, Housecall Pro, Apify,
+  Browse AI, OpenRouter, Manus).
+- Um achado de baixa confiança (troca de modelo "GPT-6 Sol/Luna" no AI
+  Agent) não foi aplicado por falta de confirmação na fonte oficial.
+- Contagem **não muda** — segue 87 gatilhos + 175 ações = 262 painéis.
+- `index.html`: data de "Última atualização" recontada para hoje
+  (25 de setembro de 2026).
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

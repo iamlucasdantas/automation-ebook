@@ -242,14 +242,80 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-25 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. Desta vez `help.gohighlevel.com`
+**também** ficou bloqueado por egress direto neste ambiente (na rodada
+anterior só `ideas.gohighlevel.com` estava bloqueado) — a checagem toda foi
+feita via resumos de busca web, sem acesso direto à página fonte. Por isso
+o padrão de confiança desta rodada é mais conservador: nada foi aplicado
+sem conseguir ler o artigo oficial na íntegra.
+
+### ✅ Fechado sem alteração — já coberto
+- **Community Group Event Registration** (gatilho "Member Registers for
+  Event" do changelog `new-communities-triggers-in-workflows...`) já existe
+  no guia como `guia-highlevel-cat11.html` **G6**, aplicado na rodada
+  2026-07-10 junto com Join Request Rejected (G7), New Post (G8) e New
+  Comment (G9). As 4 novidades de Communities anunciadas no changelog já
+  estavam 100% cobertas — nenhuma ação necessária.
+- **Badge Issued / Issue Badge**: novo artigo oficial encontrado —
+  "Automate Badge Issuance in Workflows (Using 'Issue Certificate'
+  Action)" — confirma que não existe ação dedicada; o caminho oficial
+  continua sendo a ação **Issue Certificate** já existente
+  (`acoes-highlevel-cat14.html` A1) com um template de Badge. Mantém como
+  estava, sem gatilho "Badge Issued" dedicado documentado com campos.
+
+### 🔍 Novos candidatos encontrados nesta rodada (NÃO aplicados)
+Integrações nativas reais (confirmadas por múltiplas fontes via busca web),
+mas sem acesso à página oficial completa pra extrair os nomes de campo
+exatos — regra do projeto é não inventar campo de painel:
+- **Cal.com** — 6 gatilhos (Booking Created/Rescheduled/Cancelled, Meeting
+  Ended, Out-of-Office Updated, New Recording) + ações de
+  Create/Cancel/Reschedule/Find Booking. Marcado como Premium.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers)
+- **HubSpot** — 1 gatilho (New Contact Created) + 5 ações (Create/Find/Get
+  by ID/Search by Email/Associate Contact).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007955-how-to-use-hubspot-workflow-actions-triggers-in-highlevel)
+- **Basecamp** — ~6 gatilhos (New To-do, New Comment, New Document, New
+  Activity, New Message, New To-do List) + ~13 ações (Create/Update/Find
+  Project, To-do List, To-do, Message, Campfire Message, Document, Person).
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006399-basecamp-actions-triggers-in-workflows)
+
+### 🔍 Candidatos de rodadas anteriores — ainda pendentes, com mais detalhe
+- **Monday.com** — agora com lista mais completa via busca: ações Create
+  Board/Group/Column/Item/Subitem, Update Item/Subitem, Archive
+  Board/Group, Delete Item/Group, Get Board Items, Find Items by Column
+  Value/ID (11 ações). Gatilhos (Column Value Changed, Item Moved, New
+  Item/Subitem/Update/User) aparecem sinalizados como "coming soon" no
+  changelog — podem ainda não estar liberados pra todos os planos.
+- **Jira**, **Linear** (25 itens), **Housecall Pro**, **Apify**, **Browse
+  AI**, **OpenRouter**, **Manus** — seguem sem confirmação de campos
+  exatos, mesmo status da rodada 2026-08-24.
+
+### ⚠ Achado de baixa confiança — não aplicado
+- Busca mencionou modelos "GPT-6 Sol"/"GPT-6 Luna" substituindo GPT-5.6 no
+  AI Agent/GPT action (~23/09/2026). Sem conseguir abrir a página oficial
+  pra confirmar nomes exatos de modelo, e o próprio guia já usa nomes
+  genéricos (GPT-4o/4o-mini) nos painéis — não há artigo dedicado
+  encontrado com confiança suficiente. Fica como pendente de validação
+  humana antes de mexer em qualquer dropdown de Model.
+
+Nenhum item novo foi adicionado ao guia nesta rodada — contagem
+permanece **87 gatilhos + 175 ações = 262 painéis**. `index.html` teve
+apenas a data de "Última atualização" recontada para hoje.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
-   candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Badge Issued,
-   Monday.com, Jira, Linear, Housecall Pro, Apify) — confirmar nome real
-   do campo / da action antes de qualquer um virar mockup.
+   candidatos 🔍 acumulados (Browse AI, OpenRouter, Manus, Monday.com,
+   Jira, Linear, Housecall Pro, Apify, Cal.com, HubSpot, Basecamp) —
+   confirmar nome real do campo / da action antes de qualquer um virar
+   mockup. (Badge Issued saiu da lista — confirmado que não existe ação
+   dedicada, o caminho é a Issue Certificate já existente.)
 2. Me diz quais aplicar
 3. Eu mexo no HTML + commito
 
