@@ -242,6 +242,67 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-26 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `ideas.gohighlevel.com` e,
+nesta rodada, também `help.gohighlevel.com` estão bloqueados por egress
+direto neste ambiente — a checagem usou busca web para ler o conteúdo
+indiretamente, igual às rodadas anteriores.
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente, sem novo total)
+1. **AI Agent + ações GPT** (`acoes-highlevel-cat05.html` A6, nota também
+   cobre A1-A5) — desde 22-23/09/2026 os modelos OpenAI **GPT-6 Sol** e
+   **GPT-6 Luna** substituíram a geração GPT-5.6 no seletor de Model (Sol
+   pra tarefas multi-etapa com raciocínio cuidadoso, Luna pra
+   classificação/resumo de alto volume a custo menor — preço 50% menor,
+   menos erros factuais). [Changelog oficial](https://ideas.gohighlevel.com/changelog/gpt-6-sol-and-gpt-6-luna-now-available-in-ai-agent-and-gpt-actions).
+   Campo **Model** do mockup A6 atualizado pra "GPT-6 Sol"; nota explicativa
+   adicionada ao texto. Não muda a contagem de gatilhos/ações.
+
+### 🔍 Candidatos novos encontrados, NÃO aplicados (precisam de validação humana)
+Integrações nativas reais confirmadas por artigo dedicado do help center,
+mas sem os nomes exatos de campo por trigger/action — mesma barra das
+rodadas anteriores antes de montar mockup com fidelidade real:
+- **Typeform** — 1 gatilho instantâneo (New Entry) + 3 ações (Create Empty
+  Form, Duplicate Existing Form, Search Responses in a Form). Premium,
+  OAuth. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006676-typeform-actions-triggers-in-workflows)
+- **Calendly** — trigger(s) via webhook subscription (Instant, filtros por
+  event type / invitee email domain / custom question) + 9 ações
+  (criação de meeting one-off, booking do lado do invitee, find/cancel de
+  evento, marcar no-show, create/find/update de contato, lookup de user).
+  Premium, OAuth. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008110-calendly-workflow-actions-triggers)
+- **Cal.com** — integração nativa de calendário/agendamento equivalente à
+  do Calendly, artigo próprio ainda não detalhado campo a campo. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007879-cal-com-workflow-actions-triggers)
+- **Basecamp** — ações/gatilhos nativos, artigo próprio ainda não
+  detalhado campo a campo. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006399-basecamp-actions-triggers-in-workflows)
+
+### 🔍 Candidatos de rodadas anteriores — contagem refinada
+Ainda pendentes de validação humana antes de virar mockup, mas com mais
+detalhe sobre o tamanho de cada integração:
+- **Housecall Pro** — confirmado: **9 gatilhos** (job created/scheduled/
+  finished/canceled, estimate created/scheduled/finished, novo lead, novo
+  customer) + **14 ações** (customer create/get/update/find, address
+  create/get, job create/get, job-appointment create/update, estimate
+  create/get, lead create/get). [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008060-housecall-pro-workflow-action-and-triggers)
+- **Jira** — gatilhos em issue created/updated + ações find/create/update/
+  enrich/link/organize issues. Nomes exatos de campo ainda não
+  confirmados. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008219-jira-workflow-actions-and-triggers)
+- **Linear** — 12 gatilhos + 13 ações (sem mudança desde 2026-08-24).
+- **Monday.com**, **Apify**, **Browse AI**, **OpenRouter**, **Manus**,
+  **Badge Issued** — sem novidade de campo desde a rodada anterior.
+- **AI Decision Maker** (ação premium, roteamento por linguagem natural) —
+  estrutura geral agora mais clara: campos **Prompt**, **Options** (cada
+  opção vira um outcome-node separado no canvas), **Input Data** e os
+  próprios **Outcomes** ramificados. Ainda precisa confirmação humana do
+  rótulo exato de cada campo no painel antes de montar o mockup — é uma
+  ação com múltiplos caminhos de saída, mais complexa que uma action
+  linear comum.
+
+Nenhum destes muda a contagem de 87 gatilhos + 175 ações = 262 painéis
+enquanto não forem confirmados campo a campo.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

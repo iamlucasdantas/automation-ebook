@@ -10,6 +10,38 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-26 — Content
+
+**Audit round: checked native HighLevel changelog for new triggers/actions, applied GPT-6 model update**
+
+Scheduled audit compared the guide (87 gatilhos + 175 ações = 262 painéis)
+against the official HighLevel changelog/help center for native triggers
+and actions launched since the 2026-08-24 round.
+
+- **Applied:** `acoes-highlevel-cat05.html` A6 (AI Agent) — OpenAI's
+  **GPT-6 Sol** and **GPT-6 Luna** replaced the GPT-5.6 generation in the
+  Model selector (confirmed via official changelog: "GPT-6 Sol and GPT-6
+  Luna Now Available in AI Agent and GPT Actions"). Mockup `Model` field
+  and config panel updated to "GPT-6 Sol"; explanatory note added to the
+  action's description text. This is an enhancement to an existing item —
+  totals unchanged.
+- **New pending candidates found** (native integrations confirmed by a
+  dedicated help-center article, but without full per-field detail yet —
+  same bar as prior rounds before building a mockup): Typeform (1 trigger
+  + 3 actions), Calendly (trigger + 9 actions), Cal.com, Basecamp.
+- **Refined detail on carried-over candidates:** Housecall Pro now
+  confirmed at 9 triggers + 14 actions; Jira's action verbs (find/create/
+  update/enrich/link/organize issues) now known; AI Decision Maker's field
+  shape (Prompt/Options/Input Data/branching Outcomes) now clearer. None
+  of these were added — still need human confirmation of exact panel
+  field names before a mockup can be built with real fidelity.
+- Full findings logged in `AUDIT.md` under "Rodada 2026-09-26". Ran
+  `auto-refine.py --check` (clean) and regenerated `AUDIT-TABLE.md` and
+  `search-index.json` (both unchanged in content, still 262 entries).
+  `index.html` "Última atualização" bumped to 26 de setembro de 2026.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
