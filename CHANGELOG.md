@@ -10,6 +10,29 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-27 — Content
+**Checagem de novidades nativas: +1 gatilho (Conversation SLA)**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel em busca de itens nativos
+lançados desde a rodada de 2026-09-14. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-09-27--checagem-de-novidades-nativas).
+
+- **Gatilho — SLA de Conversa (Conversation SLA)** ·
+  `guia-highlevel-cat02.html` G23 (novo). Dispara a partir do SLA de
+  resposta configurado em Settings → Conversations → SLAs — 3 eventos
+  (Due Soon / Overdue / SLA Dismissed), filtros por canal/dono/tags, e
+  toggle Avoid Repeated Triggers.
+- Totais: **88 gatilhos + 175 ações = 263 entries** (mockups interativos:
+  210 → 211). `index.html`, `search-index.json` e `AUDIT-TABLE.md`
+  regenerados; `validate-mockups.js` confirma as 30 páginas OK.
+- Candidatos pesquisados mas não confirmados o suficiente pra aplicar:
+  "Form Partially Completed" (não existe gatilho nativo com esse nome —
+  descartado) e um enhancement de modelo no AI Agent sem fonte oficial
+  rastreável. Candidatos acumulados de rodadas anteriores seguem pendentes
+  (Typeform, Calendly, HubSpot, Basecamp, Browse AI, Manus, Badge Issued,
+  Monday.com, Jira, Linear, Housecall Pro, Apify, rename do Slack).
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

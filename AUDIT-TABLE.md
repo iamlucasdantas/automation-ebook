@@ -10,7 +10,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
+| Gatilhos | 31 | 54 | 3 | **88** |
 | Ações | 39 | 90 | 46 | **175** |
 
 
@@ -57,6 +57,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g20 | [Email Recebido](guia-highlevel-cat02.html#g20) | Inbound Email | 3 | 2/6 | 🟡 | [ ] | |
 | g21 | [Usuário Respondeu](guia-highlevel-cat02.html#g21) | User Replied | 3 | 3/6 | 🟡 | [ ] | |
 | g22 | [AI Studio — Formulário Enviado](guia-highlevel-cat02.html#g22) | AI Studio Form Submitted | 3 | 2/6 | 🟡 | [ ] | |
+| g23 | [SLA de Conversa](guia-highlevel-cat02.html#g23) | Conversation SLA | 3 | 3/6 | 🟡 | [ ] | |
 
 ### CAT03 · Agendamentos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

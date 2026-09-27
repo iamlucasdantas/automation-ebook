@@ -406,6 +406,50 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-09-27 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-09-14) contra `help.gohighlevel.com` e o changelog
+oficial em busca de itens nativos lançados desde então. Mesma limitação de
+sempre: `help.gohighlevel.com` e `ideas.gohighlevel.com` bloqueados por
+egress direto neste ambiente — checagem via `WebSearch`.
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+1. **Gatilho — SLA de Conversa (Conversation SLA)** · `guia-highlevel-cat02.html`
+   G23 (novo). Dispara a partir do SLA de resposta configurado em
+   Settings → Conversations → SLAs, com 3 eventos: **Due Soon** (prazo
+   prestes a vencer), **Overdue** (prazo já estourou) e **SLA Dismissed**
+   (encerrado manualmente). Filtros: Message Channel, Owner, Tags, e o
+   toggle **Avoid Repeated Triggers** (evita disparo repetido pra mesma
+   conversa presa em Overdue). [Changelog oficial](https://ideas.gohighlevel.com/changelog/conversations-sla-workflow-trigger-permissions)
+   · [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006745-conversations-how-to-setup-track-slas)
+
+Totais atualizados: **88 gatilhos + 175 ações = 263 entries** (mockups
+interativos: 210 → 211). `index.html`, `search-index.json` e
+`AUDIT-TABLE.md` regenerados; `validate-mockups.js` confirma as 30
+páginas OK.
+
+### 🔍 Candidatos pesquisados nesta rodada, NÃO confirmados o suficiente pra aplicar
+- **"Form Partially Completed"** — não encontrado nenhum artigo oficial
+  ou changelog com esse nome; o único gatilho de formulário incompleto
+  documentado continua sendo o **Abandoned Checkout** (carrinho/checkout,
+  já coberto) e o submission type **Opt-In** do Order Form (já coberto em
+  `guia-highlevel-cat09.html`). Não existe gatilho nativo genérico de
+  "formulário parcialmente preenchido" — descartado.
+- **GPT-6 Sol / GPT-6 Luna no AI Agent** — um resultado de busca mencionou
+  troca de modelo no seletor da ação AI Agent (`acoes-highlevel-cat05.html`
+  A6), mas sem link pra um artigo oficial dedicado — só um resumo de
+  busca sem fonte rastreável. Não é enhancement suficientemente
+  confirmado pra mexer no painel (o seletor Model Provider/Model já
+  cobre troca de modelo entre provedores, adicionado na rodada
+  2026-08-24). Fica pendente de confirmação numa rodada futura.
+- Candidatos acumulados de rodadas anteriores sem novo detalhe de campo
+  nesta busca: Typeform, Calendly, HubSpot, Basecamp, Browse AI, Manus,
+  Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify, e o
+  achado de rename do Slack (`Outbound Webhook (Slack)` → `Slack`).
+
+Nenhum campo foi inventado pra nenhum desses.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
