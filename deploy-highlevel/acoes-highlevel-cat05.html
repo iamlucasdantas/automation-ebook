@@ -2504,6 +2504,7 @@
     <div class="tblock-label">O que esta ação faz</div>
     <div class="tblock-content">
       <p>Gera texto customizado usando IA (GPT/Claude) baseado em prompt. Pode usar variáveis do contato pra personalizar — cada contato recebe algo único.</p>
+      <p><strong>Atualização (22/09/2026):</strong> os modelos <strong>GPT-6 Sol</strong> (raciocínio multi-etapa, tarefas complexas) e <strong>GPT-6 Luna</strong> (rápido, alto volume — classificação, resumo, respostas curtas) substituem o GPT-5.6 no seletor de Model, com custo 50% menor.</p>
     </div>
   </div>
 
@@ -2610,7 +2611,7 @@
     </p>
     <div class="hl-panel-wrapper">
       <div class="hl-panel-context">
-        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Model</strong> (gpt-4o-mini/4o/5/claude-sonnet), <span class='arrow'>→</span> <strong>Prompt</strong> com merge tags, <span class='arrow'>→</span> <strong>Save to</strong> custom value.</div>
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> <strong>Model</strong> (gpt-4o-mini/4o/5/gpt-6-sol/gpt-6-luna/claude-sonnet), <span class='arrow'>→</span> <strong>Prompt</strong> com merge tags, <span class='arrow'>→</span> <strong>Save to</strong> custom value.</div>
         <div class="hl-panel">
           <div class="hl-panel-head">
             <span class="hl-panel-back">←</span>
@@ -2623,7 +2624,7 @@
 <div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Gerar email personalizado" readonly></div>
 <div class="hl-filter-row"><div class="hl-filter-label">Model <span class="req">*</span></div>
 <div class="hl-dropdown has-value">gpt-4o-mini</div>
-<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">gpt-4o-mini</span><span class="opt-chip">gpt-4o</span><span class="opt-chip">gpt-5</span><span class="opt-chip">claude-3.5-sonnet</span></div></div></div>
+<div class="hl-conditional"><div class="field-spec-val" style="margin-top:4px;"><span class="opt-chip">gpt-4o-mini</span><span class="opt-chip">gpt-4o</span><span class="opt-chip">gpt-5</span><span class="opt-chip">gpt-6-sol</span><span class="opt-chip">gpt-6-luna</span><span class="opt-chip">claude-3.5-sonnet</span></div></div></div>
 <div class="hl-filter-row"><div class="hl-filter-label">Prompt <span class="req">*</span></div>
 <textarea class="hl-input" rows="6" style="resize: vertical;">Você é um copywriter da Magnetic Funnels. Escreva email de re-engajamento pra {{contact.first_name}}, que trabalha com {{contact.tipo_negocio}}. Tom amigável, 100 palavras.</textarea></div>
 <div class="hl-filter-row"><div class="hl-filter-label">Save Output to</div><div class="hl-dropdown has-value">{{contact.email_personalizado}}</div></div>
@@ -3262,6 +3263,7 @@
       <p>Automatiza tarefas multi-etapa dentro do workflow usando instruções em linguagem natural. O agente decide quais ferramentas usar, em que ordem e com quais parâmetros — eliminando a necessidade de configurar manualmente cada ação em sequência.</p>
       <p>Vem pré-carregado com ferramentas nativas: atualização de oportunidades, criação de contatos, envio de SMS, geração de links únicos e mais. Também pode conectar-se a knowledge bases e MCPs externos. É uma ação Premium com cobrança por execução.</p>
       <p><strong>Atualização (20/08/2026):</strong> o seletor de <strong>Model</strong> deixou de ser exclusivo da OpenAI — agora também lista modelos <strong>Anthropic (Claude)</strong> e <strong>Google (Gemini)</strong>, com uma interface redesenhada pra escolher o provedor, o modelo específico e o nível de raciocínio aplicado.</p>
+      <p><strong>Atualização (22/09/2026):</strong> quando o Model Provider é OpenAI, o dropdown de Model passa a listar <strong>GPT-6 Sol</strong> e <strong>GPT-6 Luna</strong> no lugar do GPT-5.6 — Sol pra tarefas multi-etapa que exigem raciocínio, Luna pra classificação/respostas rápidas em alto volume, ambos com custo 50% menor que a geração anterior.</p>
     </div>
   </div>
 

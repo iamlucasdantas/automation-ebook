@@ -242,6 +242,52 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-09-28 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog oficial da HighLevel em
+busca de itens nativos lançados desde então. `help.gohighlevel.com` e
+`ideas.gohighlevel.com` estão bloqueados por egress direto neste ambiente
+(mesma limitação da rodada anterior) — a checagem usou só WebSearch pra
+ler o conteúdo indiretamente, sem WebFetch nas páginas oficiais.
+
+### ✅ Aplicado nesta rodada (enhancement a itens já existentes, sem novo total)
+1. **GPT — Generate Text** (`acoes-highlevel-cat05.html` A1) e **AI Agent**
+   (A6) — desde ~22/09/2026 o seletor de Model lista **GPT-6 Sol** (raciocínio
+   multi-etapa) e **GPT-6 Luna** (rápido/alto volume) no lugar do GPT-5.6,
+   com custo 50% menor. Chips `gpt-6-sol`/`gpt-6-luna` adicionados ao painel
+   de A1 e nota explicativa em A1 e A6.
+   [Changelog oficial](https://ideas.gohighlevel.com/changelog/gpt-6-sol-and-gpt-6-luna-now-available-in-ai-agent-and-gpt-actions)
+
+Nenhuma mudança de contagem — são melhorias em campos de itens já
+existentes, não itens novos. `--check` confirma 0 drift, `validate-mockups.js`
+confirma as 30 páginas OK.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana + rodada dedicada)
+- **Jotform** — integração nativa nova e bem documentada: 2 gatilhos
+  (**New Submission**, instantâneo; **New Signed Document**, dispara quando
+  um documento com campo de assinatura é completado) + 1 ação (**Create
+  Submission**, escreve valores do workflow de volta num form do Jotform;
+  campos suportados: Full Name, Email, Address, Phone, Short Text, Long
+  Text, Number, Dropdown, Single Choice, Multiple Choice, Yes/No, Star
+  Rating, Scale Rating, Date Picker, Time — File Upload/Signature/Payment/etc.
+  não são suportados). Diferente das rodadas anteriores, aqui já dá pra
+  montar mockup com fidelidade real. Não apliquei porque (a) não existe
+  categoria natural pra "Create Submission" no guia atual — precisa decidir
+  se cria categoria nova "Jotform" (ação) ou encaixa em outra, e (b) sem
+  acesso às páginas oficiais pra confirmar o layout exato do painel lateral,
+  só a lista de campos via busca indireta. [Changelog](https://ideas.gohighlevel.com/changelog/jotform-new-actions-triggers-in-workflows)
+- **Conversation AI com chamada de API externa mid-conversation** — achado
+  em uma única fonte secundária (agregador semanal), não confirmado por
+  segunda fonte nem por doc oficial. Não aplicado — fica pendente até
+  confirmação melhor.
+- Segue pendente desde rodadas anteriores (nenhuma novidade encontrada
+  nesta rodada): **Browse AI**, **OpenRouter**, **Manus**, **Badge Issued**,
+  **Monday.com**, **Jira**, **Linear**, **Housecall Pro**, **Apify** — e
+  agora também aparecem no radar (achados só por título de changelog, sem
+  detalhamento de campos ainda): **Klaviyo**, **Cal.com**, **Basecamp**,
+  **Fathom**.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

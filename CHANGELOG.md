@@ -10,6 +10,41 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-28 — Content + Hotfix
+**Native trigger/action audit round + homepage per-category count drift fixed**
+
+Scheduled audit compared the guide (87 gatilhos + 175 ações = 262 painéis)
+against the official HighLevel changelog for native items released since
+the 2026-08-24 round. `help.gohighlevel.com` and `ideas.gohighlevel.com`
+are still blocked by egress in this environment, so the check relied on
+WebSearch only (no direct WebFetch of official docs).
+
+- **Applied — GPT-6 Sol/Luna model update.** `acoes-highlevel-cat05.html`
+  A1 (GPT — Generate Text) and A6 (AI Agent): the Model dropdown now lists
+  `gpt-6-sol` / `gpt-6-luna` alongside the existing options, replacing
+  GPT-5.6, per HighLevel's official changelog. Explanatory note added to
+  both action descriptions. No count change — see [AUDIT.md](./AUDIT.md#-rodada-2026-09-28--checagem-de-novidades-nativas)
+  for the candidates found but **not** applied this round (Jotform — new,
+  well-documented, 2 triggers + 1 action, needs a category-placement
+  decision; Klaviyo, Cal.com, Basecamp, Fathom — found but not detailed
+  enough yet; plus the running list from prior rounds: Browse AI,
+  OpenRouter, Manus, Badge Issued, Monday.com, Jira, Linear, Housecall Pro,
+  Apify).
+- **Hotfix — homepage (`index.html`) per-category counts were stale.**
+  The hero-stat totals (87/175/262) and the grand tab-counts were already
+  correct, but 9 of the 17 Ações category cards on the homepage grid still
+  showed old, undercounted numbers from before several rounds of additions
+  (WhatsApp/RCS actions, Payments, Marketing, Communities, etc. had grown
+  the real per-file counts without the homepage cards ever being updated
+  to match). Fixed: Contatos 16→18, Comunicação 29→37, Ferramentas
+  Internas 21→22, Workflow AI 7→10, Agendamentos 3→4, Oportunidades
+  11→13, Pagamentos 5→9, Marketing 5→8, Comunidades 6→8. Per-category
+  cards now sum to exactly 175, matching the hero-stat. The Gatilhos side
+  was already accurate. "Última atualização" date on the homepage bumped
+  to 28 de setembro de 2026.
+- Ran `auto-refine.py --check` (0 drift, search index already in sync at
+  262 entries) and `validate-mockups.js` (30/30 pages OK) after the edits.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
