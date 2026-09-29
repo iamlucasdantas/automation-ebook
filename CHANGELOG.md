@@ -10,6 +10,24 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-29 — Content
+**Checagem de novidades nativas (rodada automática)**
+
+Comparação do guia (87 gatilhos + 175 ações = 262 painéis) com o changelog
+oficial da HighLevel de 25/08 a 29/09/2026.
+
+- **Nenhum gatilho/ação nativo novo aplicado** — contagens inalteradas
+  (87 / 175 / 262 / 210 mockups).
+- **Jotform** (gatilhos *New Submission* e *New Signed Document*, ação
+  *Create Submission*): integração de terceiros, não nativa — não aplicada
+  (mesmo critério de Monday.com/Jira/Linear).
+- **Invoke Managed Agent** (semana 14–18/09): já coberto pela ação
+  *Invocar Agente (Agent Studio)* em `acoes-highlevel-cat17.html`;
+  campos exatos não confirmados (fontes oficiais bloqueadas nesta rodada),
+  sem alteração de painel. Candidato a revisão humana.
+- Modelos GPT-6 Sol/Luna no AI Agent e GPT actions: enhancement, sem novo item.
+- `index.html`: "Última atualização" → 29 de setembro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
