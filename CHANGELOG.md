@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-09-30 — Content
+**Weekly native-feature check: no new native triggers/actions**
+
+Checked HighLevel release notes (Aug 24 → Sep 30, 2026) against the guide.
+
+- **Already covered:** Communities triggers (Join Request Rejected, New Post,
+  New Comment, Event Registration), New Affiliate Sales, Community Group
+  Member Leaderboard Level Changed, Invoke Agent Studio Agent.
+- **Not added (non-native, per guide policy):** Jotform integration
+  (New Submission / New Signed Document triggers, Create Submission action).
+- **Not added (model update, not a new step):** GPT-6 Sol / GPT-6 Luna now
+  available in the AI Agent and GPT actions (replacing GPT-5.6 models).
+- **Needs human check:** "AI Analyze Image" (GPT vision, premium action, detail
+  Auto/High/Low) looks like the same feature as the guide's AI Parse Image
+  (cat05 A2); official pages were unreachable from the routine's sandbox, so
+  no content was changed.
+
+Homepage totals unchanged: 87 gatilhos, 175 ações, 262 painéis.
+Homepage "Última atualização" set to 30 de setembro de 2026.
+
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
