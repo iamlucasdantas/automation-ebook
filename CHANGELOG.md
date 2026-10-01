@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-01 — Content
+**Scheduled check for new native triggers/actions: no additions**
+
+- Searched public HighLevel updates (Sept 2026). New Communities triggers
+  (Group Join Request Rejected, Group Post/Comment Created) are already in
+  `guia-highlevel-cat11.html`. Jotform triggers/actions are a third-party
+  integration and GPT-6 are model options in existing AI actions, so neither
+  was added (native-only rule).
+- Counts unchanged: 87 gatilhos, 175 ações, 30 categorias. Homepage
+  "Última atualização" bumped to 1 de outubro de 2026.
+- Limitation: ideas.gohighlevel.com / help.gohighlevel.com were blocked by
+  the egress proxy, so only search snippets were available.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
