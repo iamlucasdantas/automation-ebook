@@ -536,3 +536,16 @@ were left stale at 5/6 — fixed in the 2026-07-29 round above.)
 
 - Index + 12 trigger category pages (74 gatilhos) + 14 action category
   pages (107 ações) + 181 HighLevel panels + 28 interactive mockups.
+
+## 2026-10-02 — Content
+**Weekly check for new native triggers/actions: no verified additions**
+
+- Searched for new native HighLevel workflow triggers/actions. Official
+  sources (help.gohighlevel.com, ideas.gohighlevel.com) were blocked by the
+  network proxy; only third-party summaries were reachable.
+- Candidates found but NOT added (unverified / not native): Payment Failed
+  and Form Partially Completed triggers (no official doc found), Jotform /
+  Basecamp / Todoist / Linear / Airtable integrations (third-party, excluded),
+  GPT-6 model options and Conversation AI API calls (not workflow actions).
+- Counts unchanged: 87 gatilhos, 175 ações, 30 categorias.
+- Homepage "Última atualização" set to 2 de outubro de 2026.
