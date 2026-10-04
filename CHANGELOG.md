@@ -10,6 +10,26 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-04 — Content
+**Weekly update: 1 new native trigger, 1 new native action**
+
+Checked HighLevel release notes from 2026-08-24 to 2026-10-04.
+
+- **New trigger — Video Testimonial Received** (`guia-highlevel-cat02.html` G23,
+  Reputação): fires when a customer submits a video testimonial; filters
+  Consent and Collector.
+- **New action — Invoke Managed Agent** (`acoes-highlevel-cat05.html` A11,
+  Workflow AI): hands the contact + context to a published Agent Studio agent
+  (requires the "Invoked from a workflow" agent trigger).
+- Homepage totals: 88 triggers, 176 actions, 264 panels, 211 mockups;
+  last-update date set to 4 Oct 2026. Search index rebuilt (264 entries).
+- **Excluded (not native):** Jotform triggers/actions, Monday.com and Google
+  Contacts integrations — third-party app integrations, out of scope.
+- Note: details come from release-note summaries (changelog sites were blocked
+  from the sandbox); verify filter names against the live UI.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
