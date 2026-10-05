@@ -10,6 +10,25 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-05 — Content
+**Checagem de novidades nativas: +1 ação (AI Image Generation)**
+
+Rotina comparou o guia (87 gatilhos + 175 ações) contra o changelog oficial
+desde 2026-08-24 (changelog direto bloqueado por egress; checagem via busca web).
+
+- **Nova ação nativa**: **Geração de Imagem com IA (AI Image Generation)** ·
+  `acoes-highlevel-cat05.html` A11 — modelos GPT Image 2 / Gemini, Prompt,
+  Quality, tamanho/fundo/formato; URL da imagem sai como variável.
+- Totais: 87 gatilhos + 176 ações = 263 painéis. `index.html` e data de
+  "Última atualização" (5 de outubro de 2026) atualizados.
+- **Não aplicados**: Jotform (New Submission / New Signed Document /
+  Create Submission — integração de terceiros, não nativa), Monday.com,
+  Jira, Linear, Basecamp (idem). *Invoke Managed Agent* já coberto por
+  `acoes-highlevel-cat17.html` A12 (Invocar agente · Agent Studio). Modelos
+  GPT-6 Sol/Luna agora no AI Agent e GPT actions (só seleção de modelo).
+- Pendente de validação humana: Badge Issued (gatilho) da rodada anterior.
+
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
