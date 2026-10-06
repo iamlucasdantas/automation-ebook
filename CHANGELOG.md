@@ -10,6 +10,24 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-06 — Content
+**New native Jotform triggers and action (HighLevel Sep 2026 release)**
+
+- **Gatilhos cat14 (new) — Jotform:** *New Submission* (instant, webhook) and
+  *New Signed Document* (checked every 5 min). Guide now at 89 triggers / 14 categories.
+- **Ações cat18 (new) — Jotform:** *Create Submission* (writes workflow data
+  to any Jotform form, 15 field types). Guide now at 176 actions / 18 categories.
+- Homepage counters updated (89 / 176 / 265 painéis / 213 mockups / 32 categorias)
+  and "Última atualização" set to 6 de outubro de 2026.
+- Sitemap, search index and prev/next navigation updated.
+- Not added: *Invoke Managed Agent* (Sep 14-18 release notes) — the guide
+  already covers *Invocar Agente (Agent Studio)* (Ações cat17 A12); needs
+  confirmation on help.gohighlevel.com whether it is a rename. Also not
+  added: Conversation AI external API call (not a workflow action),
+  GPT-6 models (model options, not new actions).
+- Source note: official changelog hosts were unreachable from the routine
+  sandbox; findings come from search summaries of the HighLevel changelog.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
