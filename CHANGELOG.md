@@ -10,6 +10,25 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-07 — Content
+**Checagem de novidades nativas (rodada automática)**
+
+- **AI Agent / GPT** (`acoes-highlevel-cat05.html` A6): nota sobre GPT-6 Sol
+  e GPT-6 Luna (23/09/2026), que substituíram o GPT-5.6. Enhancement, sem
+  mudança de contagem.
+- Totais inalterados: 87 gatilhos + 175 ações = 262 painéis. Já cobertos
+  (confirmado): gatilhos/ações de Communities (Leaderboard, Group Post/Comment,
+  Event Registration, Join Request Rejected).
+- Novos candidatos **não aplicados** (campos exatos não verificáveis — egress
+  bloqueado; nada inventado): **Jotform** (gatilhos New Submission e New
+  Signed Document; ação Create Submission), **Invoke Managed Agent** (ação),
+  **Basecamp**, **Calendly**, **Asana**, **HubSpot**, além dos pendentes
+  Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify, Browse AI,
+  OpenRouter, Manus.
+- `index.html`: "Última atualização" = 7 de outubro de 2026.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
