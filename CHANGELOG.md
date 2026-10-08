@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-08 — Content
+**New native triggers/actions: Jotform integration + Invoke Managed Agent**
+
+Scheduled check of HighLevel releases (Sep 14 – Oct 2, 2026). Only native
+workflow triggers/actions were added:
+
+- **Triggers (+2, Jotform)** · `guia-highlevel-cat13.html` G4 *Jotform: New
+  Submission* and G5 *Jotform: New Signed Document* (checked every 5 min).
+- **Actions (+2)** · `acoes-highlevel-cat15.html` A7 *Jotform: Create
+  Submission*; `acoes-highlevel-cat17.html` A13 *Invoke Managed Agent*.
+- Not added: Agent Studio "Invoked from a workflow" / "Invoked via API"
+  triggers (they live in Agent Studio, not the Workflow Builder).
+- Totals: 87 → **89 triggers**, 175 → **177 actions**, 262 → **266 panels**.
+  Homepage "last update" set to 8 Oct 2026; search index rebuilt (266).
+
+Sources: help.gohighlevel.com articles 155000008802 (Jotform) and
+155000008858 (Invoke Managed Agent). Panel field details are based on
+secondary summaries (help center not fetchable) — verify against the UI.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
