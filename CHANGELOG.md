@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-11 — Content
+**Scheduled check: no new native triggers/actions confirmed**
+
+- Searched for native HighLevel workflow triggers/actions released after
+  2026-08-24. Candidates found (Review Received, Payment Failed, Form
+  Partially Completed, Invoke Agent, Merge Contact, Google Forms,
+  Leaderboard Level Changed, Scheduler) are already in the guide.
+  Not added: OpenRouter action (no official doc reachable to verify) and
+  Manus / Monday.com / Basecamp / Linear / HubSpot / Apify / Browse AI
+  (third-party integrations, out of scope).
+- Counts unchanged: 87 triggers, 175 actions, 262 panels, 30 categories.
+- Homepage "Última atualização" bumped to 11 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
