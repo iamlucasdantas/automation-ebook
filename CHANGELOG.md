@@ -10,6 +10,21 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-11 — Content
+**Weekly trigger/action check — no new core native items; homepage date refreshed**
+
+- Checked HighLevel's changelog/help center for new workflow triggers and
+  actions since 2026-08-24. Nothing new found for the core native
+  workflow builder (the AI Studio Form Submitted trigger and Agent Studio
+  action are already covered).
+- New third-party app integrations were found (Jotform: New Submission and
+  New Signed Document triggers + Create Submission action; Jira: 2 triggers
+  and 11 actions). These are app-connector items, not core native
+  triggers/actions, so they were **not** added (guide scope: native only).
+- Counts unchanged: 87 triggers, 175 actions, 262 panels, 210 mockups.
+- Homepage "Última atualização" bumped to 11 de outubro de 2026.
+
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
