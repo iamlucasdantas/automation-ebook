@@ -10,6 +10,20 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-12 — Content
+**Checagem de novidades nativas (sem novos itens verificáveis)**
+
+Rotina automática buscou novos gatilhos/ações nativos desde 2026-08-24.
+O acesso direto ao help center/changelog está bloqueado neste ambiente;
+a busca web não retornou nenhuma entrada datada de set/out 2026.
+Nenhum item novo pôde ser confirmado com nome e campos reais, então nada
+foi inventado. Contagem mantida: 87 gatilhos + 175 ações = 262 painéis,
+30 categorias. Pendentes (precisam de validação humana): Badge Issued,
+Monday.com, Jira, Linear (12 gatilhos + 13 ações), Housecall Pro, Apify
+(2 gatilhos + 5 ações), Basecamp (6 gatilhos + 13 ações), HubSpot
+(1 gatilho + 2 ações), Browse AI, OpenRouter, Manus.
+`index.html`: "Última atualização" → 12 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
