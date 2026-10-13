@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-13 — Content
+**Weekly update: native Jotform integration (2 triggers + 1 action)**
+
+Checked HighLevel's changelog/release roundups for new native workflow
+triggers and actions. Only native HighLevel features were added.
+
+- **New Gatilhos category 14 — Jotform** (`guia-highlevel-cat14.html`):
+  *New Submission* (real time) and *New Signed Document* (polled every 5 min).
+- **New Ações category 18 — Jotform** (`acoes-highlevel-cat18.html`):
+  *Create Submission* (writes workflow data to a Jotform form; unsupported
+  fields are saved empty, no payment/booking data).
+- Totals: **89 gatilhos** (14 cat) · **176 ações** (18 cat) · **265 painéis**.
+- Homepage counts and "Última atualização" (13 de outubro de 2026) updated;
+  sitemap, prev/next links, part denominators (/14, /18) and search index
+  (265 entries) refreshed.
+- Not added: Wait action redesign (change to an existing action, not new);
+  Basecamp/other third-party integrations (not native).
+
+Caveat: Jotform details come from HighLevel's changelog via search; no
+dedicated mockups were built for these three entries.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

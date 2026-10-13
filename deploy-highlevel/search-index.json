@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 265,
   "items": [
     {
       "id": "g1",
@@ -1232,6 +1232,36 @@
       "description": "Dispara toda vez que alguém envia uma resposta em um Google Form conectado à subconta HighLevel. O gatilho captura os dados da resposta (nome, email, campos personalizados) e os injeta no workflow como variáveis.",
       "keywords": "resposta formulário google google form response",
       "href": "guia-highlevel-cat13.html#g3"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Nova Resposta no Jotform",
+      "en": "Jotform · New Submission",
+      "category": "Jotform",
+      "tags": [
+        "Tempo real",
+        "Novo",
+        "Jotform"
+      ],
+      "description": "Dispara no instante em que alguém envia uma nova resposta em um formulário do Jotform conectado à subconta. Os dados enviados ficam disponíveis no workflow como variáveis, prontos para criar ou atualizar o contato.",
+      "keywords": "nova resposta jotform new submission formulário",
+      "href": "guia-highlevel-cat14.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Novo Documento Assinado no Jotform",
+      "en": "Jotform · New Signed Document",
+      "category": "Jotform",
+      "tags": [
+        "A cada 5 min",
+        "Novo",
+        "Jotform"
+      ],
+      "description": "Dispara quando um documento com campo de assinatura eletrônica é preenchido e assinado no Jotform. Diferente da nova resposta, este gatilho é verificado a cada 5 minutos, então pode haver pequeno atraso.",
+      "keywords": "novo documento assinado jotform new signed document assinatura",
+      "href": "guia-highlevel-cat14.html#g2"
     },
     {
       "id": "a1",
@@ -3466,6 +3496,20 @@
       "description": "",
       "keywords": "invocar agente (agent studio) invoke agent in agent studio",
       "href": "acoes-highlevel-cat17.html#a12"
+    },
+    {
+      "id": "a1",
+      "type": "Ação",
+      "name": "Criar Resposta no Jotform",
+      "en": "Jotform · Create Submission",
+      "category": "Jotform",
+      "tags": [
+        "Novo",
+        "Jotform"
+      ],
+      "description": "",
+      "keywords": "criar resposta jotform create submission",
+      "href": "acoes-highlevel-cat18.html#a1"
     }
   ]
 }

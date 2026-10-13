@@ -74,6 +74,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://guia.magneticflows.com/guia-highlevel-cat14.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://guia.magneticflows.com/acoes-highlevel-cat01.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -155,6 +160,11 @@
   </url>
   <url>
     <loc>https://guia.magneticflows.com/acoes-highlevel-cat17.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://guia.magneticflows.com/acoes-highlevel-cat18.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
