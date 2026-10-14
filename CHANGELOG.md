@@ -10,6 +10,25 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-14 — Content
+**Checagem de novidades nativas (sem itens novos verificáveis)**
+
+Rotina automática buscou gatilhos/ações nativos lançados desde 2026-08-24.
+Nenhum item novo pôde ser confirmado em fonte oficial, então as contagens
+seguem **87 gatilhos + 175 ações = 262 painéis · 17 categorias de ações ·
+30 páginas**.
+
+- Gatilhos de Comunidades (Group Post Created, Group Comment Created,
+  Group Joining Request Rejected): já existem no guia.
+- Jotform (New Submission, New Signed Document, Create Submission):
+  integração de terceiros, não nativo — fora do escopo.
+- Managed Agents em workflows / gatilho "Invoked via API": só citados em
+  blogs secundários, sem doc oficial — não aplicado até validação.
+- GPT-6 Sol/Luna nos modelos do AI Agent/GPT: enhancement, a validar.
+- Pendentes de rodadas anteriores (Badge Issued, Monday.com, Jira, Linear,
+  Housecall Pro, Apify) continuam aguardando validação humana.
+- `index.html`: "Última atualização" → 14 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
