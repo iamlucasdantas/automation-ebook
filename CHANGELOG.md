@@ -10,6 +10,18 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-15 — Content
+**New native triggers: Company Created, Company Changed (category 14)**
+
+- Nova categoria **Empresas** (`guia-highlevel-cat14.html`) com 2 gatilhos
+  nativos do objeto Empresa: **Company Created** e **Company Changed**
+  ([help.gohighlevel.com](https://help.gohighlevel.com/support/solutions/articles/155000006609-workflow-trigger-company-created)).
+- Totais: 89 gatilhos, 175 ações, 264 entradas, 14+17 = 31 categorias.
+- Excluídos por não serem nativos: Basecamp, Jotform (integrações de terceiros).
+- Não adicionados (sem nome oficial confirmado): gatilhos de Custom Object
+  (nomes dependem do objeto criado na conta).
+- `index.html`: contagens e data da última atualização atualizadas.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

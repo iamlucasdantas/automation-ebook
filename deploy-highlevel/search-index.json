@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -1232,6 +1232,34 @@
       "description": "Dispara toda vez que alguém envia uma resposta em um Google Form conectado à subconta HighLevel. O gatilho captura os dados da resposta (nome, email, campos personalizados) e os injeta no workflow como variáveis.",
       "keywords": "resposta formulário google google form response",
       "href": "guia-highlevel-cat13.html#g3"
+    },
+    {
+      "id": "g1",
+      "type": "Gatilho",
+      "name": "Empresa Criada",
+      "en": "Company Created",
+      "category": "Empresas",
+      "tags": [
+        "Tempo real",
+        "Objeto Empresa"
+      ],
+      "description": "Dispara quando um novo registro de Empresa (Company) é adicionado ao CRM — manualmente, por importação, formulário, webhook ou integração. É o primeiro gatilho nativo baseado no objeto Empresa, e não no Contato.",
+      "keywords": "empresa criada company created",
+      "href": "guia-highlevel-cat14.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Empresa Alterada",
+      "en": "Company Changed",
+      "category": "Empresas",
+      "tags": [
+        "Tempo real",
+        "Objeto Empresa"
+      ],
+      "description": "Dispara quando um registro de Empresa (Company) existente é atualizado. Permite reagir a mudanças em campos da empresa — por exemplo, mudança de setor, porte ou campo customizado — sem depender do contato.",
+      "keywords": "empresa alterada company changed",
+      "href": "guia-highlevel-cat14.html#g2"
     },
     {
       "id": "a1",
