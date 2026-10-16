@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-16 — Audit
+**Weekly trigger/action check: no new native items confirmed**
+
+- Searched for new HighLevel workflow triggers/actions since 2026-08-24.
+  Only lead found: Jotform triggers/actions (Sept 2026) — third-party
+  integration, not native, so **not added**. "Review Received", "Payment
+  Failed", "Form Partially Completed" surfaced undated in a roundup;
+  unverified, not added. Official help/changelog hosts were unreachable
+  from the sandbox.
+- Totals unchanged: 87 triggers, 175 actions, 30 categories.
+- Homepage "Última atualização" bumped to 16 de outubro de 2026.
+
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
