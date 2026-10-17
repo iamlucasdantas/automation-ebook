@@ -10,6 +10,23 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-17 — Content
+**Checagem de novidades nativas (rodada agendada) — nenhum item novo aplicado**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis)
+contra o changelog oficial da HighLevel e roundups semanais (set/2026).
+Contagens inalteradas: 87 gatilhos, 175 ações, 262 painéis, 210 mockups.
+
+- **Badge Issued** (gatilho) e **Issue Badge** (ação) — nativos, mas os campos
+  não puderam ser verificados (help.gohighlevel.com inacessível nesta rodada) e
+  um artigo de ajuda indica que a ação dedicada pode ainda usar "Issue
+  Certificate" com template de badge. **Não aplicado** — precisa validação humana.
+- **Jotform** (gatilhos/ações) citado como nativo em roundup de terceiros
+  (21–25/set/2026) — integração de app, não aplicado (só itens nativos).
+- Enhancement sem novo item: checagem de segurança ao publicar workflow
+  (11/set/2026) — não afeta gatilhos/ações.
+- `index.html`: "Última atualização" → 17 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
