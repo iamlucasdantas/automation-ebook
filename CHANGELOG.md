@@ -10,6 +10,17 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-18 — Content
+**Scheduled check for new native triggers/actions: none found**
+
+- Revisão de novidades nativas (web search; sites oficiais da HighLevel
+  inacessíveis desta sandbox). Candidatos encontrados (Inbound Email,
+  Scheduler, Custom Objects) já estão cobertos no guia. Nenhum gatilho/ação
+  nativo novo confirmado; integrações de terceiros (Basecamp, HubSpot,
+  ClickUp) ignoradas por não serem nativas.
+- Contagens inalteradas: 87 gatilhos, 175 ações, 30 categorias (262 entradas).
+- Data de "Última atualização" da homepage: 18 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
