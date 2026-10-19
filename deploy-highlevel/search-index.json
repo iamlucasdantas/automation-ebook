@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 263,
   "items": [
     {
       "id": "g1",
@@ -169,6 +169,21 @@
       "description": "Dispara quando uma tarefa é marcada como concluída. Perfeito pra ações de follow-up pós-conclusão — disparar o próximo passo automático assim que o atual é cumprido.",
       "keywords": "tarefa completada task completed",
       "href": "guia-highlevel-cat01.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado no Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Tempo real",
+        "Client Portal",
+        "Novo · jun/2026"
+      ],
+      "description": "Dispara quando um contato envia um arquivo pela área de Documentos Compartilhados (Shared Documents) do Client Portal. O arquivo fica vinculado ao registro do contato no CRM e o workflow começa na hora.",
+      "keywords": "arquivo enviado portal do cliente client portal file uploaded documentos compartilhados",
+      "href": "guia-highlevel-cat01.html#g13"
     },
     {
       "id": "g1",

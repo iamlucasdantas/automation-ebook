@@ -10,6 +10,22 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-19 — Content
+**New native trigger: Client Portal File Uploaded**
+
+Weekly check for new native triggers/actions against HighLevel's changelog
+and help center.
+
+- **Added trigger** *Client Portal File Uploaded* (`guia-highlevel-cat01.html` G13,
+  Contatos) — fires when a contact uploads a file via Shared Documents in the
+  Client Portal (HighLevel changelog Jun/2026, help article Jul/2026).
+- Already covered, no change: AI Agent action, Send RCS / RCS Interactive Message.
+- Skipped (not native): Jira integration triggers/actions (third-party app).
+- Totals now: **88 gatilhos + 175 ações = 263 painéis** · 211 mockups.
+  Homepage numbers and "Última atualização" updated; search index rebuilt.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
