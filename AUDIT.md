@@ -255,3 +255,25 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+
+## 🆕 Rodada 2026-10-20 — Checagem de novidades nativas
+
+Rotina automática buscou novidades nativas de gatilhos/ações desde 2026-08-24.
+`ideas.gohighlevel.com` e `netpartners.marketing` não resolvem DNS neste
+ambiente; a checagem usou apenas busca web (resumos secundários).
+
+### ✅ Aplicado
+Nada novo — contagem inalterada (87 gatilhos + 175 ações = 262 painéis).
+Apenas a data de "Última atualização" da home foi atualizada.
+
+### 🔍 Candidatos, NÃO aplicados (fonte secundária, campos não verificados)
+- **Jotform (nativo)** — semana de 21–25/09/2026: 2 gatilhos (envio de
+  formulário via webhook; documento assinado, polling 5 min) + 1 ação
+  (Create Submission, 15 tipos de campo). Fonte: resumo netpartners.marketing.
+- **Event workflow triggers** — semana de 12–16/10/2026, mencionado só no
+  título de um resumo de terceiros; sem detalhes.
+- **GPT-6** adicionado ao AI Agent / ações GPT (semana de 21–25/09/2026) —
+  enhancement ao painel do AI Agent (cat05 A6), pendente de confirmação.
+- Pendentes de rodadas anteriores: Badge Issued, Monday.com, Jira, Linear,
+  Housecall Pro, Apify, Browse AI, OpenRouter, Manus.

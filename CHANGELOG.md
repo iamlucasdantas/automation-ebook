@@ -10,6 +10,14 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-20 — Content
+**Checagem de novidades nativas (sem novos itens aplicados)**
+
+Candidatos novos (Jotform nativo, event workflow triggers, GPT-6 no AI Agent)
+encontrados só em fontes secundárias — registrados em [AUDIT.md](./AUDIT.md),
+não aplicados. Totais inalterados: 87 gatilhos + 175 ações = 262 painéis.
+`index.html`: data de "Última atualização" atualizada para 20/10/2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
