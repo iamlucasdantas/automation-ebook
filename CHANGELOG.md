@@ -10,6 +10,15 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-21 — Content
+**Daily review: no verified new native triggers/actions**
+
+Searched for new HighLevel workflow triggers/actions. Third-party roundups
+mention "event workflow triggers" (Oct 12-16) and a date-based Wait redesign,
+but no official page could be fetched to confirm names or fields, so nothing
+was added. Counts unchanged (87 triggers, 175 actions, 30 categories).
+Homepage "Última atualização" bumped to 21 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
