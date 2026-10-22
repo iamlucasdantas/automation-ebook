@@ -7,21 +7,21 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
 <link rel="canonical" href="https://guia.magneticflows.com/acoes-highlevel-cat16.html" />
 
-<meta name="description" content="Guia completo das 9 ações de Objetos & Empresas do HighLevel: Custom Objects, Companies (CRM B2B) e Associations no workflow. Parte 16/17 do guia oficial em português." />
+<meta name="description" content="Guia completo das 11 ações de Objetos & Empresas do HighLevel: Custom Objects, Companies (CRM B2B) e Associations no workflow. Parte 16/17 do guia oficial em português." />
 <meta name="author" content="Magnetic Funnels" />
 <meta name="keywords" content="HighLevel, Magnetic Funnels, automação, ações, custom objects, companies, CRM B2B, workflow, PT-BR" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Ações de Objetos & Empresas — Guia HighLevel" />
-<meta property="og:description" content="Guia completo das 9 ações de Objetos & Empresas do HighLevel: Custom Objects, Companies (CRM B2B) e Associations no workflow. Parte 16/17 do guia oficial em português." />
+<meta property="og:description" content="Guia completo das 11 ações de Objetos & Empresas do HighLevel: Custom Objects, Companies (CRM B2B) e Associations no workflow. Parte 16/17 do guia oficial em português." />
 <meta property="og:site_name" content="Magnetic Funnels" />
 <meta property="og:locale" content="pt_BR" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ações de Objetos & Empresas — Guia HighLevel" />
-<meta name="twitter:description" content="Guia completo das 9 ações de Objetos & Empresas do HighLevel: Custom Objects, Companies (CRM B2B) e Associations no workflow. Parte 16/17 do guia oficial em português." />
+<meta name="twitter:description" content="Guia completo das 11 ações de Objetos & Empresas do HighLevel: Custom Objects, Companies (CRM B2B) e Associations no workflow. Parte 16/17 do guia oficial em português." />
 
 
 <!--
@@ -2463,6 +2463,8 @@
     <a href="#a7" class="side-link"><span class="side-num">07</span>Add Associados ao Workflow</a>
     <a href="#a8" class="side-link"><span class="side-num">08</span>Remover Associados do Workflow</a>
     <a href="#a9" class="side-link"><span class="side-num">09</span>Associar Registros (Beta)</a>
+    <a href="#a10" class="side-link"><span class="side-num">10</span>Buscar Empresa</a>
+    <a href="#a11" class="side-link"><span class="side-num">11</span>Buscar Registro de Objeto</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2481,7 +2483,7 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 16/15</span>
   <h1 class="hero-title">Ações de <em>Objetos &amp; Empresas</em>.</h1>
-  <p class="hero-desc">9 ações do modelo de dados avançado — Custom Objects, Companies (CRM B2B) e Associations. Registros relacionados ao contato criados, atualizados e automatizados direto no workflow.</p>
+  <p class="hero-desc">11 ações do modelo de dados avançado — Custom Objects, Companies (CRM B2B) e Associations. Registros relacionados ao contato criados, atualizados e automatizados direto no workflow.</p>
   <div class="hero-stats">
     <div class="hero-stat">
       <span class="hero-stat-num">1</span>
@@ -3160,6 +3162,153 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a10" data-name="buscar empresa find company">
+  <div class="acao-head">
+    <div class="acao-num">10</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Buscar Empresa</h2>
+      <div class="acao-en">Find Company</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Procura no CRM um registro de <strong>Company</strong> usando valores do payload de um gatilho <strong>Inbound Webhook</strong> (ex.: nome da empresa, domínio). Divide o fluxo em <em>Registro encontrado</em> e <em>Registro não encontrado</em>.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Evitar empresas duplicadas</div>
+  <div class="use-case-desc">Webhook do site traz o domínio → se a Company existe, atualiza; senão, cria.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Enriquecer com dados externos</div>
+  <div class="use-case-desc">Sistema externo envia companyName → localiza a Company e segue o fluxo.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Filtros por campo (Company Name, Domain, Record ID, External ID — todos com lógica AND) e critério de desempate quando há vários resultados: <strong>Earliest Created Record</strong> ou <strong>Latest Created Record</strong>. Prefira identificadores únicos (Record ID, External ID, Domain). Exige um gatilho Inbound Webhook no workflow.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A10 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Find Company</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Buscar Company pelo domínio" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Match Field <span class="req">*</span></div><div class="hl-dropdown has-value">Domain</div></div><div class="hl-filter-row"><div class="hl-filter-label">Webhook Value <span class="req">*</span></div><div class="hl-dropdown has-value">{{inboundWebhookRequest.domain}}</div></div><div class="hl-filter-row"><div class="hl-filter-label">If Multiple Matches</div><div class="hl-dropdown has-value">Earliest Created Record</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Localiza a Company e ramifica: encontrada × não encontrada.</strong>
+      </div>
+    </div>
+  </div>
+
+</div><div class="acao-block" id="a11" data-name="buscar registro de objeto find object record">
+  <div class="acao-head">
+    <div class="acao-num">11</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Buscar Registro de Objeto</h2>
+      <div class="acao-en">Find Object Record</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Procura um registro de <strong>Custom Object</strong> usando valores do payload de um gatilho <strong>Inbound Webhook</strong> (ex.: Record ID, External ID ou outro campo do objeto). Divide o fluxo em <em>Registro encontrado</em> e <em>Registro não encontrado</em>.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Sincronizar sistemas</div>
+  <div class="use-case-desc">Webhook traz o External ID de um Imóvel → localiza o registro e atualiza.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Criar só se não existir</div>
+  <div class="use-case-desc">Não achou o registro → ramo "não encontrado" cria um novo.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Escolha o Custom Object, os filtros por campo (Record ID, External ID ou campos personalizados — lógica AND) e o desempate <strong>Earliest/Latest Created Record</strong>. Exige um gatilho Inbound Webhook no workflow.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A11 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Find Object Record</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Buscar Imóvel por External ID" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Object <span class="req">*</span></div><div class="hl-dropdown has-value">Imóvel (Custom Object)</div></div><div class="hl-filter-row"><div class="hl-filter-label">Match Field <span class="req">*</span></div><div class="hl-dropdown has-value">External ID</div></div><div class="hl-filter-row"><div class="hl-filter-label">Webhook Value <span class="req">*</span></div><div class="hl-dropdown has-value">{{inboundWebhookRequest.external_id}}</div></div><div class="hl-filter-row"><div class="hl-filter-label">If Multiple Matches</div><div class="hl-dropdown has-value">Latest Created Record</div></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Localiza o registro do objeto e ramifica: encontrado × não encontrado.</strong>
+      </div>
+    </div>
+  </div>
+
+
 </div></main>
 </div>
 
@@ -3178,7 +3327,7 @@
 
   <div class="footer-top">
     <h3>Categoria 16 completa.</h3>
-    <p>9 ações explicadas com impacto prático e painéis de configuração fiéis. Continue explorando as outras categorias.</p>
+    <p>11 ações explicadas com impacto prático e painéis de configuração fiéis. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">

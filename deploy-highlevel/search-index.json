@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -3310,6 +3310,32 @@
       "description": "",
       "keywords": "associar registros associate records",
       "href": "acoes-highlevel-cat16.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Buscar Empresa",
+      "en": "Find Company",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "buscar empresa find company",
+      "href": "acoes-highlevel-cat16.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Buscar Registro de Objeto",
+      "en": "Find Object Record",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "buscar registro de objeto find object record",
+      "href": "acoes-highlevel-cat16.html#a11"
     },
     {
       "id": "a1",

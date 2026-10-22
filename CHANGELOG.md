@@ -10,6 +10,24 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-22 — Content
+**Routine audit: +2 native actions (Find Company, Find Object Record)**
+
+- Added `acoes-highlevel-cat16.html` A10 **Find Company** and A11 **Find
+  Object Record** (native workflow actions that look up a Company / Custom
+  Object record from an Inbound Webhook payload, branching on found / not
+  found; Earliest/Latest Created Record tie-break).
+- Homepage totals: 87 gatilhos + 177 ações = 264 painéis. Last-update date
+  set to 22 de outubro de 2026.
+- No new native triggers confirmed. Third-party integration triggers/actions
+  (Asana, Basecamp, HubSpot, Browse AI, Monday, Linear) were excluded — not
+  native. Unverified third-party claims (Payment Failed, Form Partially
+  Completed triggers) were not added.
+- Note: the official changelog/help sites were unreachable from the routine
+  sandbox; findings come from search-result summaries.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
