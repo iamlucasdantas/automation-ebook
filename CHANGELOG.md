@@ -10,6 +10,16 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-23 — Content
+**Daily review: no new native triggers/actions added**
+
+Reviewed HighLevel's October 2026 workflow updates. Candidates found were
+not added: Jotform triggers/actions (third-party integration, not native),
+Managed Agent "Invoked via API" trigger and "event workflow triggers"
+(details unverifiable — source pages unreachable from this environment).
+Counts unchanged: 87 triggers, 175 actions, 30 categories. Homepage
+"Última atualização" bumped to 23 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
