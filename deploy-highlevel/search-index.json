@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -482,6 +482,21 @@
       "description": "Dispara quando um visitante preenche um formulário conectado dentro de um site gerado pelo AI Studio (o site builder com IA do HighLevel). É o mesmo motor do gatilho \"Formulário Preenchido\" (Form Submitted) — só que aplicado a forms embutidos numa página AI Studio, com dois filtros específicos desse contexto: Domain (qual domínio do site AI Studio) e External Form (qual formulário embutido na página).",
       "keywords": "ai studio formulário enviado form submitted site ia domain external form",
       "href": "guia-highlevel-cat02.html#g22"
+    },
+    {
+      "id": "g23",
+      "type": "Gatilho",
+      "name": "Invocado via API",
+      "en": "Invoked via API",
+      "category": "Managed Agents",
+      "tags": [
+        "Tempo real",
+        "API",
+        "Novo"
+      ],
+      "description": "Dispara quando um Managed Agent publicado é chamado de fora da plataforma — o agente vira um endpoint de API sem precisar embrulhar tudo num workflow. No menu do agente, a opção Deploy to API cria o gatilho Invoked via API.",
+      "keywords": "invocado via api invoked via api managed agent agente gerenciado endpoint token",
+      "href": "guia-highlevel-cat02.html#g23"
     },
     {
       "id": "g1",
@@ -3466,6 +3481,19 @@
       "description": "",
       "keywords": "invocar agente (agent studio) invoke agent in agent studio",
       "href": "acoes-highlevel-cat17.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Invocar Agente Gerenciado",
+      "en": "Invoke Managed Agent",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "invocar agente gerenciado invoke managed agent managed agents",
+      "href": "acoes-highlevel-cat17.html#a13"
     }
   ]
 }

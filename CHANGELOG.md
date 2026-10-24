@@ -10,6 +10,27 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-24 — Content
+**Rodada de novidades nativas: +1 gatilho, +1 ação (88 gatilhos + 176 ações = 264 painéis)**
+
+Rotina automática comparou o guia contra o changelog oficial/roundups da
+HighLevel desde 2026-08-24. Só itens **nativos** entram no guia.
+
+- **Novo gatilho — Invocado via API (Invoked via API)** ·
+  `guia-highlevel-cat02.html` G23: um Managed Agent publicado vira endpoint
+  de API (Deploy to API), com Private Integration token, session ID e
+  idempotency key.
+- **Nova ação — Invocar Agente Gerenciado (Invoke Managed Agent)** ·
+  `acoes-highlevel-cat17.html` A13: entrega uma tarefa do workflow a um
+  Managed Agent publicado e usa a resposta nos passos seguintes.
+- **Fora do guia (não nativos):** Jotform (New Submission, New Signed
+  Document, Create Submission) — integração de terceiros.
+- **Não confirmado:** "event workflow triggers" (semana 12–16/out) — sem
+  detalhes acessíveis; fica pendente de checagem humana.
+- `index.html`: contadores (88/176/264/211) e data da última atualização.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

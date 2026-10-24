@@ -7,21 +7,21 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
 <link rel="canonical" href="https://guia.magneticflows.com/acoes-highlevel-cat17.html" />
 
-<meta name="description" content="Guia completo das 12 ações de Bots & Agentes do HighLevel: Conversation AI Bot, add-on Eliza e Agent Studio dentro do workflow. Parte 17/17 do guia oficial em português." />
+<meta name="description" content="Guia completo das 13 ações de Bots & Agentes do HighLevel: Conversation AI Bot, add-on Eliza e Agent Studio dentro do workflow. Parte 17/17 do guia oficial em português." />
 <meta name="author" content="Magnetic Funnels" />
 <meta name="keywords" content="HighLevel, Magnetic Funnels, automação, ações, conversation ai, bots, agentes, workflow, PT-BR" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Ações de Bots & Agentes — Guia HighLevel" />
-<meta property="og:description" content="Guia completo das 12 ações de Bots & Agentes do HighLevel: Conversation AI Bot, add-on Eliza e Agent Studio dentro do workflow. Parte 17/17 do guia oficial em português." />
+<meta property="og:description" content="Guia completo das 13 ações de Bots & Agentes do HighLevel: Conversation AI Bot, add-on Eliza e Agent Studio dentro do workflow. Parte 17/17 do guia oficial em português." />
 <meta property="og:site_name" content="Magnetic Funnels" />
 <meta property="og:locale" content="pt_BR" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ações de Bots & Agentes — Guia HighLevel" />
-<meta name="twitter:description" content="Guia completo das 12 ações de Bots & Agentes do HighLevel: Conversation AI Bot, add-on Eliza e Agent Studio dentro do workflow. Parte 17/17 do guia oficial em português." />
+<meta name="twitter:description" content="Guia completo das 13 ações de Bots & Agentes do HighLevel: Conversation AI Bot, add-on Eliza e Agent Studio dentro do workflow. Parte 17/17 do guia oficial em português." />
 
 
 <!--
@@ -2463,6 +2463,7 @@
     <a href="#a10" class="side-link"><span class="side-num">10</span>Eliza: Agendamento IA</a>
     <a href="#a11" class="side-link"><span class="side-num">11</span>Enviar pra Eliza</a>
     <a href="#a12" class="side-link"><span class="side-num">12</span>Invocar Agente (Studio)</a>
+    <a href="#a13" class="side-link"><span class="side-num">13</span>Invocar Agente Gerenciado</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2481,7 +2482,7 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 17/15</span>
   <h1 class="hero-title">Ações de <em>Bots &amp; Agentes</em>.</h1>
-  <p class="hero-desc">12 ações de agentes conversacionais — o fluxo interno do Conversation AI Bot (a maioria aparece desativada sem bot configurado), o add-on Eliza e o Agent Studio.</p>
+  <p class="hero-desc">13 ações de agentes conversacionais — o fluxo interno do Conversation AI Bot (a maioria aparece desativada sem bot configurado), o add-on Eliza e o Agent Studio.</p>
   <div class="hero-stats">
     <div class="hero-stat">
       <span class="hero-stat-num">1</span>
@@ -3327,6 +3328,80 @@
     </div>
   </div>
 
+</div><div class="acao-block" id="a13" data-name="invocar agente gerenciado invoke managed agent managed agents">
+  <div class="acao-head">
+    <div class="acao-num">13</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Invocar Agente Gerenciado</h2>
+      <div class="acao-en">Invoke Managed Agent</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esta ação faz</div>
+    <div class="tblock-content">
+      <p>Entrega uma tarefa do workflow a um <strong>Managed Agent publicado</strong> e continua quando o agente termina. O workflow pode passar dados do contato, contexto dinâmico e anexos, e usar a resposta do agente nos passos seguintes.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases">
+      <div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Qualificar lead com agente</div>
+  <div class="use-case-desc">Passa os dados do contato ao agente, que classifica o lead e devolve a nota pro workflow rotear.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso</div>
+  <div class="use-case-title">Processar anexos</div>
+  <div class="use-case-desc">Envia um documento recebido ao agente, que extrai as informações e o workflow grava nos campos do contato.</div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Agent (dropdown dos Managed Agents publicados), instrução/contexto enviado e a resposta do agente, disponível nos passos seguintes. O agente precisa estar publicado.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — ACTION A13 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é exatamente o painel lateral que abre no HighLevel quando você seleciona a ação. Cada campo tem o tipo correto — não confunda dropdown com texto livre.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">A resposta do agente volta numa <strong>variável</strong> pro workflow usar na sequência.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Invoke Managed Agent</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+<div class="hl-field-group"><div class="hl-field-label">Action Name <span class="req">*</span></div><input class="hl-input" value="Qualificar lead com agente" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Agent <span class="req">*</span></div><div class="hl-dropdown has-value">Qualificador de Leads</div></div><div class="hl-filter-row"><div class="hl-filter-label">Instruction</div><input class="hl-input" value="{{contact.name}} · {{contact.website}}" readonly></div><div class="hl-filter-row"><div class="hl-filter-label">Output Variable</div><input class="hl-input" value="{{agent.response}}" readonly></div>
+</div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Workflow chama um Managed Agent publicado e usa a resposta. Doc oficial: <a href="https://help.gohighlevel.com/support/solutions/articles/155000008858-workflow-action-invoke-managed-agent" target="_blank" rel="noopener">help.gohighlevel.com/...invoke-managed-agent</a>.</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -3345,7 +3420,7 @@
 
   <div class="footer-top">
     <h3>Categoria 17 completa.</h3>
-    <p>12 ações explicadas com impacto prático e painéis de configuração fiéis. Continue explorando as outras categorias.</p>
+    <p>13 ações explicadas com impacto prático e painéis de configuração fiéis. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">
