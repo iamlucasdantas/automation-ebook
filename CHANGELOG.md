@@ -10,6 +10,21 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-25 — Audit
+**Scheduled check for new native triggers/actions: none confirmed**
+
+- Web search surfaced candidate items (Basecamp triggers/actions, Payment
+  Failed, Membership Access Expiry, Survey Partially Submitted, Custom Object
+  field change). Basecamp is a third-party integration (not native) and the
+  others only appear in unreliable third-party roundups; official help pages
+  show no such dedicated triggers (failed payments = Payment Received +
+  status filter). Scheduler, Leaderboard Level Changed, Grant Leaderboard
+  Points and Opportunity Changed operators are already in the guide.
+- `ideas.gohighlevel.com` / `help.gohighlevel.com` were unreachable from the
+  runner, so the official list could not be diffed directly.
+- Counts unchanged (87 gatilhos, 175 ações, 262 painéis). Homepage
+  "Última atualização" bumped to 25 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
