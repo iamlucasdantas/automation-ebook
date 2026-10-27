@@ -536,3 +536,10 @@ were left stale at 5/6 — fixed in the 2026-07-29 round above.)
 
 - Index + 12 trigger category pages (74 gatilhos) + 14 action category
   pages (107 ações) + 181 HighLevel panels + 28 interactive mockups.
+
+## 2026-10-27 — Audit
+**Daily review for new native triggers/actions: no content added**
+
+- Candidates found via web search, none added (official HighLevel changelog unreachable from the sandbox, so not verified as native HL): Client Portal File Uploaded trigger (only seen on a white-label changelog), Monday.com actions/triggers, Manus AI actions/triggers.
+- Counts unchanged: 87 triggers, 175 actions, 30 categories.
+- `index.html` "Última atualização" bumped to 27 de outubro de 2026.
