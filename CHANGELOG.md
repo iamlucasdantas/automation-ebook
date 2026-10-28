@@ -10,6 +10,28 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-28 — Content
+**Scheduled check: 3 new native items added (89 triggers, 176 actions)**
+
+Checked the HighLevel changelog for new workflow triggers/actions since the
+2026-08-24 round. Only native HighLevel items were added (no third-party
+integrations such as Jotform / Mistral-style apps):
+
+- **Trigger — Social Planner Posts** (`guia-highlevel-cat10.html` G4):
+  fires on post status/publish events (Scheduled, Published, Failed,
+  approval states); filters: category, platform, status, post type,
+  account, tags.
+- **Trigger — Association Created** (`guia-highlevel-cat02.html` G23,
+  Labs): fires when CRM records are linked (Contacts, Opportunities,
+  Custom Objects, Companies); optional association-label filter.
+- **Action — AI Image Generation** (`acoes-highlevel-cat05.html` A11,
+  premium): prompt → public Image URL, up to 5 reference images.
+
+Not added: AI Analyze Image (already covered by *AI Parse Image* A2),
+Send SMS for Custom Object/Company workflows (variant of existing Send SMS),
+Jotform actions/triggers (third-party). Homepage counts and last-update date
+refreshed; search index rebuilt (265 entries); mockup validation passes.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
