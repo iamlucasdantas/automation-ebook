@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-29 — Audit
+**Daily review: no new native triggers/actions added (counts unchanged: 87 triggers, 175 actions)**
+
+Candidates found via third-party recaps (official changelog host was unreachable
+from the session, so details/filters could not be verified) and NOT added yet:
+
+- Trigger **Social Planner Posts** (changelog dated 2026-10-24)
+- Trigger **Association Created** (behind Labs flag)
+- Action **Internal Comment** (team-only comment with @mentions in a conversation)
+
+Already in the guide: Task Added / Completed / Reminder triggers and Add Task action.
+Homepage "Última atualização" bumped to 29 de outubro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
