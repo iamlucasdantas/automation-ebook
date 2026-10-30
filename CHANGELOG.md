@@ -10,6 +10,26 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-30 — Content
+**Checagem de novidades nativas (sem mudança de contagem)**
+
+Rotina diária comparou o guia (87 gatilhos + 175 ações = 262 painéis) com
+o changelog oficial. Os sites de changelog estão bloqueados por egress; a
+checagem usou só busca web, sem acesso aos campos exatos. Nenhum painel
+foi criado: campos não foram inventados. Candidatos **nativos** novos,
+pendentes de validação humana (ver [AUDIT.md](./AUDIT.md)):
+
+- Ações: **Router**, **Loop**, **AI Analyze Video**, **AI Video Generation**
+  (premium); **AI Agent**: Web Search e Skills anexáveis (enhancement).
+- Gatilho: **Client Portal File Uploaded** (jun/2026); atualização do
+  gatilho **User Login** para o novo Client Portal.
+- Ignorados por não serem nativos: integrações de terceiros (Apify,
+  Slack, Monday.com, Jira, Linear, HubSpot etc.).
+- `index.html`: "Última atualização" = 30 de outubro de 2026. Totais
+  inalterados (87 / 175 / 262 / 210).
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

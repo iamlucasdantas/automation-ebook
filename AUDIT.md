@@ -179,6 +179,13 @@ os mockups com fidelidade real:
   changelog). [Changelog](https://ideas.gohighlevel.com/changelog/openrouter-actions-triggers)
 - **Manus** — ações/gatilhos. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000007351-manus-actions-triggers-in-workflows)
 
+## 🆕 Rodada 2026-10-30 — Checagem de novidades nativas
+
+Apenas busca web (changelogs bloqueados). Candidatos nativos NÃO aplicados
+(faltam campos confirmados): Router, Loop, AI Analyze Video, AI Video
+Generation, AI Agent (Web Search + Skills), gatilho Client Portal File
+Uploaded, gatilho User Login (novo Client Portal). Guia segue em 262 painéis.
+
 ## 🆕 Rodada 2026-08-24 — Checagem de novidades nativas
 
 Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
