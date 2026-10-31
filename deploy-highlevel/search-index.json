@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 263,
   "items": [
     {
       "id": "g1",
@@ -1043,6 +1043,20 @@
       "description": "Dispara quando alguém comenta em um vídeo do TikTok conectado à conta. Mesma lógica dos gatilhos de Facebook e Instagram, mas agora para o canal com maior alcance orgânico do momento.",
       "keywords": "comentários do tiktok tiktok comment on a video",
       "href": "guia-highlevel-cat10.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Posts do Social Planner",
+      "en": "Social Planner Posts",
+      "category": "Engajamento Social",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um post do Social Planner muda de status — aprovado, agendado, publicado, falhou, aprovação solicitada ou rejeitada. Permite automatizar a operação de redes sociais com base no ciclo de vida do post.",
+      "keywords": "posts do social planner social planner posts",
+      "href": "guia-highlevel-cat10.html#g4"
     },
     {
       "id": "g1",

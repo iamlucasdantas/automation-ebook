@@ -10,6 +10,18 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-10-31 — Content
+**Audit round: new native trigger Social Planner Posts**
+
+- Novo gatilho nativo **Posts do Social Planner (Social Planner Posts)** ·
+  `guia-highlevel-cat10.html` G4. Filtros: Post Status, Platform, Post Type,
+  Category, Social Account, Tags. Só contas conectadas pelo Social Planner.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000009162-workflow-trigger-social-planner-posts)
+- Homepage: 88 gatilhos, 175 ações, 263 painéis, 211 mockups; última atualização 31/10/2026.
+- Candidatos NÃO adicionados (campos exatos não confirmados em doc oficial; rede bloqueou help.gohighlevel.com): ações **Loop**, **Router** (atualizada), **AI Analyze Video**, **AI Video Generation**, **AI Analyze Image**, **AI Image Generation**; gatilho **Event Registration** + ações Register for Ticketed/RSVP Event; gatilho Client Portal User Login.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
