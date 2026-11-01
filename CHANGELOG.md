@@ -10,6 +10,20 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-01 — Content
+**Weekly check for new native triggers/actions (no content added)**
+
+- Search found candidates but no official changelog page could be opened
+  (network policy blocked highlevel.canny.io / ideas.gohighlevel.com), so
+  field-level config could not be verified. Nothing added to avoid
+  inaccurate mockups. Counts unchanged: 87 triggers, 175 actions, 30 categories.
+- Candidates pending verification (native only): Client Portal File Uploaded
+  (trigger, Jun 2026), Association Created (trigger), Call disposition
+  (trigger), AI Image Generation (action, ~Sep 10), Loop/Router actions,
+  Slack/Google Sheets triggers. Excluded as non-native: Apify, Jotform.
+- Homepage "Última atualização" set to 1 de novembro de 2026.
+
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
