@@ -10,6 +10,13 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-03 — Content
+**Daily review: no verified new native triggers/actions**
+
+- Changelog sources (highlevel.canny.io, ideas.gohighlevel.com) are not reachable from the cloud session network policy; only web search was available.
+- Candidates found but NOT added: Client Portal "File Uploaded" trigger (June 2026, seen only on a white-label changelog, unverified as native) and Apify triggers/actions (third-party integration, not native).
+- Counts unchanged: 87 triggers, 175 actions, 30 categories. Homepage "Última atualização" set to 3 de novembro de 2026.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
