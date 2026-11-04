@@ -10,6 +10,14 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-04 — Content
+**Daily review: no new native triggers/actions confirmed**
+
+- Searched for new HighLevel workflow triggers/actions since 2026-08-24; none confirmed in official docs.
+- Apify triggers/actions found but skipped (third-party, not native).
+- Gap flagged: Company-based workflows (Company Created trigger, Create Associated Company / Update Associated Company / Create Company or Associated Contact actions) are native but not yet in the guide. help.gohighlevel.com is blocked in this session, so config details could not be verified; not added.
+- Counts unchanged: 87 triggers, 175 actions, 30 categories. Homepage date updated.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
