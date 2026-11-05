@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-05 — Content
+**Daily review: add native Router action**
+
+- Nova ação nativa **Router (Roteador)** em `acoes-highlevel-cat04.html` (A23):
+  executa todas as ramificações que baterem (Custom rules / Always run / Fallback),
+  ao contrário do If/Else. Fonte: HighLevel changelog "Router: New Workflow Action".
+- Homepage: 175 → **176 ações** (87 gatilhos, 17+13 categorias), data de última
+  atualização = 5 de novembro de 2026. Search index reconstruído (263 entradas).
+- Verificados e NÃO adicionados (sem fonte oficial confirmando): "Client Portal
+  File Uploaded", "Viewed Product / Add to Cart", triggers Slack/Google Sheets.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

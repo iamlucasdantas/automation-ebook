@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 263,
   "items": [
     {
       "id": "g1",
@@ -2286,6 +2286,19 @@
       "description": "",
       "keywords": "drip (liberação em lotes) drip",
       "href": "acoes-highlevel-cat04.html#a22"
+    },
+    {
+      "id": "a23",
+      "type": "Ação",
+      "name": "Router (Roteador)",
+      "en": "Router",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "router (roteador) multi-branch router",
+      "href": "acoes-highlevel-cat04.html#a23"
     },
     {
       "id": "a1",
