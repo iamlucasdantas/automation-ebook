@@ -10,6 +10,24 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-06 — Content
+**Weekly check for new native triggers/actions: 1 trigger + 1 action added**
+
+- **Novo gatilho nativo:** *Requested to Join Group* (Comunidades) —
+  `guia-highlevel-cat11.html` G10. Dispara quando alguém solicita entrada em um
+  grupo com acesso por solicitação; filtros Group + respostas das perguntas.
+- **Nova ação nativa:** *Router* (Ferramentas Internas) —
+  `acoes-highlevel-cat04.html` A23. Avalia todos os ramos (Custom rules /
+  Always run / Fallback), diferente do If/Else.
+- Homepage: 88 gatilhos, 176 ações, 264 painéis; data de atualização 6 nov 2026.
+  Contagem da categoria Ferramentas Internas corrigida para 23.
+- Ignorados (não nativos): triggers Premium Slack, Browse AI.
+- Não verificados (fonte oficial inacessível nesta sessão): triggers de
+  expiração de membership, Order Form Submission (mudança de comportamento),
+  "Send Email" para contatos ligados à oportunidade.
+
+---
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

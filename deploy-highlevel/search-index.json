@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -1175,6 +1175,21 @@
       "href": "guia-highlevel-cat11.html#g9"
     },
     {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Solicitou Entrada no Grupo",
+      "en": "Requested to Join Group",
+      "category": "Eventos de Grupo",
+      "tags": [
+        "Tempo real",
+        "Moderação",
+        "Novo"
+      ],
+      "description": "Dispara quando um contato envia um pedido de entrada em um grupo da comunidade — antes da aprovação. Só funciona em grupos configurados com acesso por solicitação.",
+      "keywords": "solicitou entrada no grupo requested to join group pedido de entrada",
+      "href": "guia-highlevel-cat11.html#g10"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Certificado Enviado",
@@ -2286,6 +2301,19 @@
       "description": "",
       "keywords": "drip (liberação em lotes) drip",
       "href": "acoes-highlevel-cat04.html#a22"
+    },
+    {
+      "id": "a23",
+      "type": "Ação",
+      "name": "Router (Roteador)",
+      "en": "Router",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "router roteador ramificações condicionais branches",
+      "href": "acoes-highlevel-cat04.html#a23"
     },
     {
       "id": "a1",
