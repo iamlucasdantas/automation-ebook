@@ -255,3 +255,8 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+## Candidatos pendentes (2026-11-07)
+Viewed Product, Add to Cart (gatilhos ecommerce), Association Created (gatilho, beta),
+A/B Test (ação de workflow, possível renome/extensão de "Split A/B"). Fonte: blogs de
+terceiros sobre o LevelUp Day 2026; confirmar na doc oficial antes de criar mockup.

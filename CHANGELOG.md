@@ -10,6 +10,19 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-07 — Content
+**Scheduled update check: no new native trigger/action confirmed**
+
+- Revisão de novidades nativas (LevelUp Day 2026, 27/10). Candidatos
+  encontrados, **apenas em fontes de terceiros** (sem doc oficial acessível):
+  gatilhos **Viewed Product** e **Add to Cart** (Shopify/HighLevel Stores),
+  gatilho **Association Created** (beta) e ação de workflow **A/B Test**
+  (até 10 caminhos; o guia já cobre "Split A/B" em Ações cat04).
+- Nenhum adicionado: campos não verificados, regra do guia é não inventar.
+  Pendentes em AUDIT.md para confirmação humana.
+- Homepage: data de atualização → 7 de novembro de 2026. Totais inalterados
+  (87 gatilhos, 175 ações, 262 painéis).
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
