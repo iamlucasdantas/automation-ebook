@@ -255,3 +255,12 @@ A auditoria automática está completa. Os próximos passos são humanos:
 
 Ou: você marca o estado atual como "good enough" e segue. O conteúdo
 está em ~92% de fidelidade verificada contra docs oficiais.
+
+## 🆕 Rodada 2026-11-08 — Checagem de novidades nativas
+
+Sem alteração de contagem (87 gatilhos + 175 ações). Candidatos nativos
+**não aplicados** por falta de validação dos campos (help.gohighlevel.com
+inacessível no ambiente):
+- **Product Viewed** e **Add Products To Cart** (gatilhos, Ecommerce Stores/Shopify) — [doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000009034-workflow-triggers-for-product-viewed-and-added-to-cart)
+- **Association Created** (gatilho), **Loop** e **Router** (ações) — citados no LevelUp Day 2026; confirmar.
+- Pendentes anteriores: Badge Issued, Monday.com, Jira, Linear, Housecall Pro, Apify, Browse AI, OpenRouter, Manus.

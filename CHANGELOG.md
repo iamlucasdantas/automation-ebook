@@ -10,6 +10,22 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-08 — Content
+**Checagem de novidades nativas (sem mudança de contagem)**
+
+Rotina automática buscou gatilhos/ações nativos novos desde 2026-08-24.
+Contagem mantida: 87 gatilhos + 175 ações = 262 painéis · 13 + 17 categorias.
+
+- Candidatos nativos novos **não aplicados** (falta validar campos exatos —
+  `help.gohighlevel.com` bloqueado neste ambiente): gatilhos **Product Viewed**
+  e **Add Products To Cart** (Ecommerce Stores / Shopify; doc oficial
+  modificada em 27/10/2026), gatilho **Association Created** e ações
+  **Loop** / **Router** (citados no LevelUp Day 2026; verificar se já cobertos).
+- Pendentes de rodadas anteriores: Badge Issued, Monday.com, Jira, Linear,
+  Housecall Pro, Apify, Browse AI, OpenRouter, Manus.
+- `index.html`: "Última atualização" → 8 de novembro de 2026.
+
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
