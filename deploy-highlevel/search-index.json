@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 264,
   "items": [
     {
       "id": "g1",
@@ -986,6 +986,34 @@
       "description": "Dispara quando o pedido é marcado como concluído — geralmente quando o produto é entregue. Momento perfeito pra pedir feedback e avaliação.",
       "keywords": "pedido concluído order fulfilled",
       "href": "guia-highlevel-cat08.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Produto Visualizado",
+      "en": "Product Viewed",
+      "category": "Pré-compra",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um visitante visualiza um produto na sua loja HighLevel Ecommerce ou Shopify conectada. A atividade é rastreada anonimamente e associada ao contato assim que ele se identifica.",
+      "keywords": "produto visualizado product viewed",
+      "href": "guia-highlevel-cat08.html#g4"
+    },
+    {
+      "id": "g5",
+      "type": "Gatilho",
+      "name": "Produto Adicionado ao Carrinho",
+      "en": "Add Product to Cart",
+      "category": "Pré-compra",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um produto é adicionado ao carrinho na sua loja HighLevel Ecommerce ou Shopify conectada, antes de o checkout ser iniciado.",
+      "keywords": "produto adicionado ao carrinho add product to cart",
+      "href": "guia-highlevel-cat08.html#g5"
     },
     {
       "id": "g1",

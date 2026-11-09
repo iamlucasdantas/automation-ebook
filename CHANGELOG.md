@@ -10,6 +10,21 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-09 — Content
+**Add 2 new native E-commerce triggers: Product Viewed, Add Product to Cart**
+
+- New triggers in `guia-highlevel-cat08.html` (G4 Produto Visualizado /
+  Product Viewed, G5 Produto Adicionado ao Carrinho / Add Product to Cart),
+  per the official HighLevel help article "Workflow Triggers for Product
+  Viewed and Added to Cart" (works with HighLevel Ecommerce Stores and
+  connected Shopify).
+- Homepage totals: 87 → **89 gatilhos**, 175 ações (unchanged), 264 search
+  entries. "Última atualização" set to 9 de novembro de 2026.
+- Not added: Slack and Google Sheets triggers (integration/premium, not
+  native workflow triggers). Order Fulfilled already existed (G3).
+- Primary changelog (ideas.gohighlevel.com) is not reachable from the
+  routine's network allowlist; no new native *actions* could be verified.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 
