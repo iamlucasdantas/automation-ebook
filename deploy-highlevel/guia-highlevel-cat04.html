@@ -2796,6 +2796,16 @@
   </div>
 
   <div class="tblock">
+    <div class="tblock-label">Operadores "Has Changed" e "Has Changed To"</div>
+    <div class="tblock-content">
+      <p>O filtro deste gatilho ganhou dois operadores que resolvem o problema de volume descrito acima:</p>
+      <p><strong>Has Changed</strong> — dispara só quando aquele campo específico <em>mudou de valor</em> nessa edição. Se o usuário salvou a oportunidade mexendo em outro campo, o workflow não entra.</p>
+      <p><strong>Has Changed To</strong> — dispara só quando o campo mudou <em>para um valor específico</em>. Ex.: "Estágio Has Changed To Proposta Enviada" entra uma vez, na transição, e não a cada novo save com o estágio já em Proposta Enviada.</p>
+      <p>Antes desses operadores a única saída era filtrar por valor atual (<em>is</em>), que redisparava em toda edição subsequente enquanto o campo continuasse igual. Se você tem workflows antigos com trava de tag ou custom value pra evitar re-disparo, dá pra simplificar trocando o filtro pelos novos operadores.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
     <div class="tblock-label">Quando usar</div>
     <div class="use-cases">
       <div class="use-case">
@@ -4038,7 +4048,7 @@
 <nav class="cat-nav">
   <a href="guia-highlevel-cat03.html" class="cat-nav-link prev">
     <span class="cat-nav-label">← Anterior · Categoria 03</span>
-    <span class="cat-nav-name">Compromissos</span>
+    <span class="cat-nav-name">Compromissos &amp; Eventos</span>
   </a>
   <a href="guia-highlevel-cat05.html" class="cat-nav-link next">
     <span class="cat-nav-label">Próxima · Categoria 05 →</span>

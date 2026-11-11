@@ -242,6 +242,127 @@ colapsava o conteúdo pra 1 campo genérico por nó. A rotina semanal teria
 aberto um PR corrompendo essas 4 páginas na próxima segunda-feira. Corrigido
 adicionando as 4 aos `HAND_CRAFTED`; `--check` confirma 0 drift agora.
 
+## 🆕 Rodada 2026-11-11 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis,
+estado da rodada 2026-08-24) contra o changelog e a central de ajuda oficiais
+da HighLevel em busca de itens **nativos** lançados desde então.
+`ideas.gohighlevel.com`, `help.gohighlevel.com` e os agregadores de release
+notes continuam bloqueados por egress direto neste ambiente — a checagem usou
+busca web pra ler o conteúdo dessas páginas indiretamente, igual às rodadas
+anteriores. Nenhum campo foi inventado: itens sem descrição de campo
+confiável ficaram na lista 🔍.
+
+### ✅ Gatilhos novos aplicados (+3 · 87 → 90)
+
+| # | Gatilho | Página | Filtros documentados |
+|---|---------|--------|----------------------|
+| 1 | **Produto Visualizado** · Product Viewed | `guia-highlevel-cat08.html` G4 | Store, Product, Duration, Checkout Status |
+| 2 | **Produto Adicionado ao Carrinho** · Add Products to Cart | `guia-highlevel-cat08.html` G5 | Store, Product, Cart Value, Duration, Checkout Status |
+| 3 | **Registro em Evento** · Event Registration | `guia-highlevel-cat03.html` G3 | Event, Ticket Type, Registration State |
+
+Os dois primeiros são da categoria **Ecommerce Stores** e valem tanto pra loja
+nativa do HighLevel quanto pra Shopify conectada — nesse caso exigindo o Web
+Pixel instalado. Visitante não logado é rastreado anonimamente no navegador até
+se identificar. O terceiro é do módulo **Events**, ainda em beta/Labs: cada
+registro entra no workflow de forma independente e o *wait* relativo à data do
+evento calcula em cima do evento em que o contato entrou.
+
+### ✅ Ações novas aplicadas (+7 · 175 → 182)
+
+| # | Ação | Página | Observação |
+|---|------|--------|------------|
+| 1 | **Loop** | `acoes-highlevel-cat04.html` A23 | List ou Number Range; item da vez exposto como custom value de Loop Item; aba Test por iteração |
+| 2 | **Router** | `acoes-highlevel-cat04.html` A24 | Executa **todas** as branches verdadeiras (If/Else para na primeira). Branch types: Custom Rules, Always Run, Fallback |
+| 3 | **Comentário Interno** · Add Internal Comment | `acoes-highlevel-cat02.html` A38 | @menção de usuários; notificação segue as preferências de cada usuário |
+| 4 | **Indicador de Digitação WhatsApp** · WhatsApp Typing Indicator | `acoes-highlevel-cat02.html` A39 | Expira em 25s ou na resposta; marca como lida (tiques azuis); WhatsApp Cloud API |
+| 5 | **Registrar em Evento com Ingresso** · Register for Ticketed Event | `acoes-highlevel-cat06.html` A5 | Events (beta/Labs) |
+| 6 | **Registrar em Evento RSVP** · Register for RSVP Event | `acoes-highlevel-cat06.html` A6 | Events (beta/Labs) |
+| 7 | **Invocar Managed Agent** · Invoke Managed Agent | `acoes-highlevel-cat17.html` A13 | Só lista agentes publicados com o trigger *Invoked from a workflow* |
+
+⚠ **Não confundir A13 com A12.** `Invoke Agent in Agent Studio` (A12) é pra
+agentes baseados em flow e tem configuração de gatilho própria; `Invoke Managed
+Agent` (A13) é pra Managed Agents publicados. A própria central de ajuda da HL
+faz essa separação explícita.
+
+⚠ **Events e Register for Ticketed/RSVP Event estão em beta (Labs).** Os nomes
+das duas ações vêm de roundup de release notes (semana de 12–16/10/2026), não de
+artigo dedicado da HL — o módulo Events tem artigo oficial, as duas ações não.
+Marcadas com a tag `Beta · Labs` no guia. **Vale confirmar os campos na UI real**
+antes de tratar esses dois painéis como definitivos.
+
+### ✅ Enhancements em itens já existentes (não mudam o total)
+
+1. **Pedido Concluído (Order Fulfilled)** · `guia-highlevel-cat08.html` G3 —
+   a versão unificada de Ecommerce Stores ganhou filtros de **Fulfilled
+   Products**, **Order Source** (Store/External) e **Tracking Details**
+   (transportadora + código). O gatilho legado passou a aparecer como
+   **Shopify Order Fulfilled (Deprecating Soon)**; workflows que já usam o
+   legado continuam funcionando, mas automação nova deve usar o unificado.
+   Filtros e nota de deprecação adicionados ao painel.
+2. **Oportunidade Alterada (Opportunity Changed)** · `guia-highlevel-cat04.html`
+   G2 — operadores **Has Changed** e **Has Changed To** adicionados ao guia num
+   bloco próprio. Eles resolvem exatamente o problema de volume que o próprio
+   bloco de alerta da página já descrevia: antes, filtrar por valor atual (*is*)
+   redisparava em toda edição subsequente enquanto o campo continuasse igual.
+
+### 🔍 Candidatos encontrados, NÃO aplicados
+
+**Fora do escopo "só nativo"** — são integrações de terceiros, mesma régua que
+já tinha excluído Slack (substituído por Outbound Webhook no guia) e deixado
+Monday/Jira/Linear/Apify de fora nas rodadas anteriores:
+
+- **Jotform** — gatilhos New Submission e New Signed Document + ação Create
+  Submission. Conexão por API key do Jotform. É integração nativa de um produto
+  de terceiro, não trigger/action nativo do HighLevel.
+- **Browse AI** — 1 gatilho instantâneo (New Completed Task) + 4 ações (Run
+  Task, Bulk Run Tasks, Get Task, Get Bulk Run). Pendente desde 2026-07-29 pelo
+  mesmo motivo.
+- **Slack** — 5 gatilhos premium anunciados no LevelUp Day 2026.
+- **Google Sheets** — gatilhos de nova linha e linha atualizada. (A **ação**
+  Google Sheets já está no guia em `acoes-highlevel-cat03.html` A2 desde antes;
+  os gatilhos novos ficam de fora pela mesma régua.)
+
+**Nativo, mas precisa de validação humana antes de virar painel:**
+
+- **Association Created** (gatilho) — nativo, dispara quando uma associação é
+  criada entre registros; funciona com Contacts, Opportunities, Custom Objects e
+  Companies, em workflows standard, de Custom Object e de Company. Tem filtro de
+  **Association label**. Está atrás de toggle no **Labs** e foi anunciado junto
+  com os Company-based workflows. O guia hoje não tem categoria de **gatilhos**
+  de Objetos & Empresas (só a de *ações*, `acoes-highlevel-cat16.html`) — entrar
+  com ele significa abrir uma 14ª categoria de gatilhos, com cascata de
+  renumeração "Parte NN/14", sitemap e canonicals. Decisão de escopo humana,
+  não de rotina automática.
+
+**Já cobertos, nenhuma ação necessária:** os 4 gatilhos novos de Communities
+(Join Request Rejected, New Post, New Comment, Group Event Registration) já
+tinham entrado como `guia-highlevel-cat11.html` G6–G9 na rodada de 2026-08-10.
+
+### 🐛 Bug de manutenção corrigido nesta rodada
+
+`scripts/build-search-index.py` extraía a descrição de cada entry com um regex
+que só casava `O que esse` e `O que essa`. As páginas de **ações** usam
+`O que esta ação faz` — ou seja, **169 das 175 ações estavam indexadas com
+descrição vazia** desde que o índice de busca foi criado. Na prática a busca do
+site achava ação por nome, EN, categoria, tag e keyword, mas **nunca pelo texto
+da descrição**, enquanto gatilho era encontrável por texto normalmente. Regex
+corrigido pra aceitar as três variantes; agora 272/272 entradas têm descrição.
+
+Efeito colateral esperado no diff: `search-index.json` cresce bastante nesta
+rodada, porque 169 descrições que antes eram `""` passaram a ter conteúdo.
+
+### 📊 Totais depois desta rodada
+
+| | Antes (2026-08-24) | Depois (2026-11-11) |
+|---|---:|---:|
+| Gatilhos | 87 | **90** |
+| Ações | 175 | **182** |
+| Painéis | 262 | **272** |
+| Páginas | 30 | 30 |
+
+`auto-refine.py --check` → 0 drift · `validate-mockups.js` → ALL 30 PAGES OK.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

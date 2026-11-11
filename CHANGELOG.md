@@ -10,6 +10,86 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-11 — Content + Automation
+**Checagem de novidades nativas: +3 gatilhos, +7 ações, 2 enhancements, fix no índice de busca**
+
+Rotina automática comparou o guia (87 gatilhos + 175 ações = 262 painéis) contra o
+changelog e a central de ajuda oficiais da HighLevel em busca de itens **nativos**
+lançados desde a rodada de 2026-08-24. Detalhe completo em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-11--checagem-de-novidades-nativas).
+
+### Gatilhos novos (+3 · 87 → 90)
+
+- **Produto Visualizado (Product Viewed)** · `guia-highlevel-cat08.html` G4 —
+  categoria Ecommerce Stores. Filtros: Store, Product, Duration, Checkout Status.
+  Loja nativa funciona sem setup; Shopify exige loja conectada + Web Pixel.
+- **Produto Adicionado ao Carrinho (Add Products to Cart)** ·
+  `guia-highlevel-cat08.html` G5 — Filtros: Store, Product, Cart Value, Duration,
+  Checkout Status. Dispara na hora, diferente do Carrinho Abandonado que espera a
+  janela de inatividade.
+- **Registro em Evento (Event Registration)** · `guia-highlevel-cat03.html` G3 —
+  módulo **Events** (beta/Labs). Filtros: Event, Ticket Type, Registration State.
+  Cada registro entra de forma independente e o *wait* relativo usa a data do
+  evento em que o contato entrou.
+
+### Ações novas (+7 · 175 → 182)
+
+- **Loop** · `acoes-highlevel-cat04.html` A23 — itera uma lista ou um intervalo
+  numérico; campos do item da vez expostos como custom values de Loop Item; a aba
+  Test mostra iteração por iteração.
+- **Router** · `acoes-highlevel-cat04.html` A24 — avalia todas as branches da
+  esquerda pra direita e executa **cada uma** que bater (ao contrário do If/Else,
+  que para na primeira). Branch types: Custom Rules, Always Run, Fallback.
+- **Comentário Interno (Add Internal Comment)** · `acoes-highlevel-cat02.html` A38 —
+  posta comentário interno na conversa com @menção de usuários. Substitui a
+  gambiarra de usar *Add to Notes* pra deixar recado pro time.
+- **Indicador de Digitação WhatsApp (WhatsApp Typing Indicator)** ·
+  `acoes-highlevel-cat02.html` A39 — some quando a resposta chega ou em 25s;
+  marca a mensagem do contato como lida (tiques azuis); canais WhatsApp Cloud API.
+- **Registrar em Evento com Ingresso (Register for Ticketed Event)** ·
+  `acoes-highlevel-cat06.html` A5 — beta/Labs.
+- **Registrar em Evento RSVP (Register for RSVP Event)** ·
+  `acoes-highlevel-cat06.html` A6 — beta/Labs.
+- **Invocar Managed Agent (Invoke Managed Agent)** · `acoes-highlevel-cat17.html`
+  A13 — só lista agentes publicados com o trigger *Invoked from a workflow*. Não
+  confundir com *Invoke Agent in Agent Studio* (A12), que é pra agentes de flow.
+
+### Enhancements em itens existentes
+
+- **Pedido Concluído (Order Fulfilled)** · `guia-highlevel-cat08.html` G3 — filtros
+  Fulfilled Products, Order Source (Store/External) e Tracking Details adicionados;
+  nota de que o gatilho legado agora aparece como **Shopify Order Fulfilled
+  (Deprecating Soon)** e que workflows antigos continuam rodando.
+- **Oportunidade Alterada (Opportunity Changed)** · `guia-highlevel-cat04.html` G2 —
+  bloco novo explicando os operadores **Has Changed** e **Has Changed To**, que
+  resolvem o re-disparo em toda edição subsequente.
+
+### Não aplicados (não são nativos ou precisam de validação humana)
+
+Jotform (New Submission / New Signed Document / Create Submission), Browse AI
+(1 gatilho + 4 ações), os 5 gatilhos premium de Slack e os gatilhos de Google
+Sheets são **integrações de terceiros**, fora do escopo "só nativo" do guia.
+**Association Created** (gatilho) é nativo mas está atrás de toggle no Labs e
+precisa de validação de campos na UI real antes de virar painel.
+
+### Correções
+
+- 🐛 **Fix em `scripts/build-search-index.py`**: o regex da descrição só casava
+  "O que esse" e "O que essa" — as páginas de **ações** usam "O que esta", então
+  **169 das 175 ações estavam indexadas sem descrição nenhuma**. A busca do site
+  só achava ação por nome/tag, nunca pelo texto. Corrigido: 272/272 entradas agora
+  têm descrição.
+- `index.html`: contagens por categoria estavam defasadas em **12 cartões** (ex.:
+  Comunicação dizia 29 ações quando já tinha 37). Agora todas as contagens da
+  home — hero, abas, labels de seção, cartões e meta tags — são recalculadas a
+  partir do `search-index.json`. Data de "Última atualização" para 11/11/2026.
+- Títulos/descrições de categoria ajustados onde o escopo mudou: Gatilhos cat08
+  "Shopify" → "Loja & Ecommerce", Gatilhos cat03 "Compromissos" → "Compromissos &
+  Eventos", Ações cat06 "Agendamentos" → "Agendamentos & Eventos".
+
+Totais: **90 gatilhos + 182 ações = 272 painéis** · 30 páginas ·
+`auto-refine.py --check` 0 drift · `validate-mockups.js` ALL 30 PAGES OK.
+
 ## 2026-08-24 — Deploy
 **SEO audit + fix: duplicate titles/descriptions, missing canonicals, stale sitemap**
 

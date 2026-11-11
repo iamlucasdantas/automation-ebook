@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 39 | 90 | 46 | **175** |
+| Gatilhos | 31 | 53 | 6 | **90** |
+| Ações | 39 | 90 | 53 | **182** |
 
 
 ## Gatilhos · 12 categorias
@@ -63,6 +63,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | g1 | [Status de Compromisso](guia-highlevel-cat03.html#g1) | Appointment Status | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Contato Marcou Agendamento](guia-highlevel-cat03.html#g2) | Customer Booked Appointment | 4 | 4/6 | 🟢 | [ ] | |
+| g3 | [Registro em Evento](guia-highlevel-cat03.html#g3) | Event Registration | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT04 · Ciclo de Vida
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -117,6 +118,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Carrinho Abandonado](guia-highlevel-cat08.html#g1) | Abandoned Cart | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Compra Feita](guia-highlevel-cat08.html#g2) | Order Placed | 3 | 2/6 | 🟡 | [ ] | |
 | g3 | [Pedido Concluído](guia-highlevel-cat08.html#g3) | Order Fulfilled | 3 | 2/6 | 🟡 | [ ] | |
+| g4 | [Produto Visualizado](guia-highlevel-cat08.html#g4) | Product Viewed | 0 | 2/6 | 🔴 | [ ] | |
+| g5 | [Produto Adicionado ao Carrinho](guia-highlevel-cat08.html#g5) | Add Products to Cart | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT09 · Atendimento Automatizado
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -219,6 +222,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a35 | [Enviar RCS](acoes-highlevel-cat02.html#a35) | Send RCS | 0 | 1/6 | 🔴 | [ ] | |
 | a36 | [Registrar Ligação Externa](acoes-highlevel-cat02.html#a36) | Log External Call | 0 | 3/6 | 🟡 | [ ] | |
 | a37 | [Bot de Agendamento (Conversation AI)](acoes-highlevel-cat02.html#a37) | Appointment Booking Conversation AI Bot | 0 | 2/6 | 🔴 | [ ] | |
+| a38 | [Comentário Interno](acoes-highlevel-cat02.html#a38) | Add Internal Comment | 0 | 2/6 | 🔴 | [ ] | |
+| a39 | [Indicador de Digitação (WhatsApp)](acoes-highlevel-cat02.html#a39) | WhatsApp Typing Indicator | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT03 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -254,6 +259,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a20 | [Formatar Array](acoes-highlevel-cat04.html#a20) | Array Formatter | 2 | 3/6 | 🟡 | [ ] | |
 | a21 | [Formatar Texto](acoes-highlevel-cat04.html#a21) | Text Formatter | 3 | 3/6 | 🟢 | [ ] | |
 | a22 | [Drip (Liberação em Lotes)](acoes-highlevel-cat04.html#a22) | Drip | 0 | 2/6 | 🔴 | [ ] | |
+| a23 | [Loop (Repetir)](acoes-highlevel-cat04.html#a23) | Loop | 0 | 2/6 | 🔴 | [ ] | |
+| a24 | [Router (Roteador)](acoes-highlevel-cat04.html#a24) | Router | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT05 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -276,6 +283,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a2 | [Marcar Agendamento](acoes-highlevel-cat06.html#a2) | Book Appointment | 3 | 4/6 | 🟢 | [ ] | |
 | a3 | [Criar Nota no Agendamento](acoes-highlevel-cat06.html#a3) | Create Appointment Note | 3 | 1/6 | 🟡 | [ ] | |
 | a4 | [Gerar Link de Agendamento Único](acoes-highlevel-cat06.html#a4) | Generate One Time Booking Link | 0 | 2/6 | 🔴 | [ ] | |
+| a5 | [Registrar em Evento com Ingresso](acoes-highlevel-cat06.html#a5) | Register for Ticketed Event | 0 | 2/6 | 🔴 | [ ] | |
+| a6 | [Registrar em Evento RSVP](acoes-highlevel-cat06.html#a6) | Register for RSVP Event | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT07 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -399,3 +408,4 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a10 | [Eliza: Agendamento com IA](acoes-highlevel-cat17.html#a10) | Eliza AI Appointment Booking | 0 | 2/6 | 🔴 | [ ] | |
 | a11 | [Enviar pra Plataforma Eliza](acoes-highlevel-cat17.html#a11) | Send to Eliza Agent Platform | 0 | 2/6 | 🔴 | [ ] | |
 | a12 | [Invocar Agente (Agent Studio)](acoes-highlevel-cat17.html#a12) | Invoke Agent in Agent Studio | 0 | 2/6 | 🔴 | [ ] | |
+| a13 | [Invocar Managed Agent](acoes-highlevel-cat17.html#a13) | Invoke Managed Agent | 0 | 2/6 | 🔴 | [ ] | |
