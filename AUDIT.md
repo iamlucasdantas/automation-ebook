@@ -406,6 +406,92 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-11-12 — Checagem de novidades nativas
+
+Comparação do guia (87 gatilhos + 175 ações = 262, estado da `main` em
+14/09) contra o changelog oficial (`ideas.gohighlevel.com/changelog`), a
+central de ajuda (`help.gohighlevel.com`) e o post oficial do LevelUp Day
+2026. Esses hosts continuam bloqueados pra acesso direto neste ambiente —
+a verificação foi feita via WebSearch, que devolve resumos dessas páginas.
+Só entrou o que tem fonte oficial com nome exato; os campos dos painéis
+usam apenas o que as fontes descrevem.
+
+### ✅ Aplicados — 11 gatilhos
+
+| Gatilho | Página | Fonte oficial |
+|---|---|---|
+| Association Created (Labs) | `guia-highlevel-cat01.html` G13 | changelog "Association Created Trigger: Start Workflows When CRM Records Are Linked" |
+| Company Created | `guia-highlevel-cat01.html` G14 | help "Company Based Workflows - Company Triggers & Actions" (155000006688) |
+| Company Changed | `guia-highlevel-cat01.html` G15 | help "Workflow Trigger - Company Changed" (155000006494) |
+| Event Registration (Labs) | `guia-highlevel-cat03.html` G3 | help "Events and Workflows Integration" (155000008431) |
+| Client Portal File Uploaded | `guia-highlevel-cat06.html` G13 | changelog "Workflow Trigger for file uploads via Client Portal" |
+| Estimates | `guia-highlevel-cat07.html` G11 | help "Trigger - Estimates" (155000003704) |
+| Viewed Product | `guia-highlevel-cat08.html` G4 | post LevelUp Day 2026 (categoria Ecommerce Stores) |
+| Add to Cart | `guia-highlevel-cat08.html` G5 | post LevelUp Day 2026 (categoria Ecommerce Stores) |
+| Product Review Submitted | `guia-highlevel-cat08.html` G6 | help 155000007386 |
+| Social Planner Posts | `guia-highlevel-cat10.html` G4 | changelog "Create Workflows with Social Planner Posts" |
+| Requested to Join Group | `guia-highlevel-cat11.html` G10 | help "Automate Group Join Requests with Workflows" (155000008439) |
+
+### ✅ Aplicados — 9 ações
+
+| Ação | Página | Fonte oficial |
+|---|---|---|
+| WhatsApp Typing Indicator | `acoes-highlevel-cat02.html` A38 | changelog "WhatsApp typing indicator action for workflows" (10/11) |
+| Add Internal Comment | `acoes-highlevel-cat02.html` A39 | changelog "Conversations: Add Internal Comments Using Workflows" |
+| Router | `acoes-highlevel-cat04.html` A23 | changelog "Router: New Workflow Action" |
+| Loop | `acoes-highlevel-cat04.html` A24 | changelog "Loop: New Workflow Action" |
+| AI Image Generation | `acoes-highlevel-cat05.html` A11 | help 155000008497 + changelog (incl. reference images) |
+| AI Video Generation | `acoes-highlevel-cat05.html` A12 | changelog "AI Video Generation: New Workflow Action" |
+| Find Object Record | `acoes-highlevel-cat16.html` A10 | help 155000006483 |
+| Find Company | `acoes-highlevel-cat16.html` A11 | help 155000006483 |
+| Invoke Managed Agent | `acoes-highlevel-cat17.html` A13 | help 155000008858 |
+
+### ⚠ Pontos pra conferir na UI real (aplicados com o que a fonte dá)
+
+- **Viewed Product / Add to Cart** — o post oficial cita filtros "produto,
+  valor do carrinho ou duração" sem dizer qual pertence a qual gatilho; um
+  blog de terceiros lista outros (store, order source, checkout status).
+  Documentei só os do post oficial.
+- **Client Portal File Uploaded** — nenhuma fonte lista filtros; painel
+  mostra o gatilho sem filtro obrigatório.
+- **Router** — as fontes não dizem se existe branch de fallback/"None";
+  não documentei nenhuma.
+- **Loop** — as fontes não confirmam limite de iterações; não documentei.
+- **Invoke Managed Agent** — rótulos exatos dos campos (Agent /
+  Instructions) inferidos da descrição do release, não de screenshot.
+- **Company Created / Company Changed / Association Created** foram pra
+  cat01 (Contatos) por falta de categoria própria de gatilhos de
+  Empresas/Objetos — vale decidir se merecem uma categoria nova.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **Register for Ticketed Event / Register for RSVP Event** (ações do
+  módulo Events) — nomes só aparecem num resumo de terceiros
+  (netpartners.marketing, semana 12–16/10); o artigo oficial confirma só o
+  gatilho. Sem campos.
+- **AI Analyze Video** e **AI Analyze Image** — existem no changelog
+  oficial, mas sem lista de campos. Analyze Image pode ser rename da nossa
+  "AI Parse Image" (cat05 A2).
+- **Google Sheets — 4 gatilhos premium** (planilha criada, aba criada,
+  linha adicionada, linha atualizada) e **Slack — 5 gatilhos premium**:
+  anunciados no LevelUp Day 2026, nomes exatos não obtidos.
+- **Payment Failed** e **Form Partially Completed** (gatilhos) — só em
+  resumo de terceiros (rsla.io).
+- Integrações de terceiros vistas no changelog (Todoist, Linear, Browse
+  AI, Jotform, Vapi, Mistral AI) — **fora do escopo** ("só nativos");
+  Mistral foi removida a pedido em 14/09 e não foi recolocada.
+
+### 🧹 Drift de contagem corrigido
+
+Hero-stat, meta tags, hero-desc e rodapé de 18 páginas agora batem com o
+número real de blocos no HTML (ex.: Ações cat02 dizia 29 e tinha 37;
+cat08 dizia 5 e tinha 9; cat16/cat17 mostravam "1"). Os cards da home
+também. O total do site (`search-index.json`) nunca esteve errado.
+
+Totais: **98 gatilhos + 184 ações = 282 painéis** · 210 mockups
+interativos (os 20 itens novos têm painel de configuração, sem mockup
+animado).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

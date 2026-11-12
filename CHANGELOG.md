@@ -10,6 +10,44 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-12 — Content + Automation
+**Checagem de novidades nativas: +11 gatilhos, +9 ações (262 → 282)**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel. Detalhe completo, fontes e pendências em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-12--checagem-de-novidades-nativas).
+
+- **Gatilhos novos (11):** Association Created, Company Created, Company
+  Changed (`guia-highlevel-cat01.html` G13–G15) · Event Registration
+  (`cat03` G3) · Client Portal File Uploaded (`cat06` G13) · Estimates
+  (`cat07` G11) · Viewed Product, Add to Cart, Product Review Submitted
+  (`cat08` G4–G6) · Social Planner Posts (`cat10` G4) · Requested to Join
+  Group (`cat11` G10).
+- **Ações novas (9):** WhatsApp Typing Indicator, Add Internal Comment
+  (`acoes-highlevel-cat02.html` A38–A39) · Router, Loop (`cat04` A23–A24)
+  · AI Image Generation, AI Video Generation (`cat05` A11–A12) · Find
+  Object Record, Find Company (`cat16` A10–A11) · Invoke Managed Agent
+  (`cat17` A13).
+- **Não aplicados** (sem nome/campos confirmados em fonte oficial):
+  Register for Ticketed/RSVP Event, AI Analyze Video/Image, gatilhos
+  premium de Google Sheets e Slack, Payment Failed, Form Partially
+  Completed. Integrações de terceiros ficaram de fora (só nativos).
+- 🐛 **Drift de contagem corrigido em 18 páginas** — hero-stat, meta
+  tags e rodapé agora batem com o número real de blocos; cards da home
+  idem.
+- ⚠ **Processo:** as ~60 rodadas diárias entre 15/09 e 11/11 foram
+  commitadas cada uma numa branch `claude/friendly-meitner-*` própria, a
+  partir de um snapshot de 24/08, e nenhuma chegou à `main` — o site
+  publicado ficou parado em 14/09. Esta rodada partiu da `main` atual e
+  consolida, revalidando contra fonte oficial, o que aquelas rodadas
+  tinham encontrado. Itens delas que não entraram: integrações de
+  terceiros (Jotform, Browse AI, Mistral) e itens sem fonte localizável
+  (Conversation SLA, Video Testimonial Received, "Invoked via API").
+- `index.html`: 98 gatilhos · 184 ações · 282 painéis · 210 mockups;
+  "Última atualização: 12 de novembro de 2026". `search-index.json` e
+  `AUDIT-TABLE.md` regenerados; `validate-mockups.js` OK nas 30 páginas;
+  `auto-refine.py --check` sem drift.
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

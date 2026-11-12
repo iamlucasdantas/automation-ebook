@@ -7,21 +7,21 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B223F'/%3E%3Cpath d='M50 20 L50 80 M30 50 L70 50 M50 20 L35 38 M50 20 L65 38' stroke='%23FEB902' stroke-width='8' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
 <link rel="canonical" href="https://guia.magneticflows.com/acoes-highlevel-cat04.html" />
 
-<meta name="description" content="Guia completo das 21 ações de Ferramentas Internas do HighLevel: IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B e Formatters. Mockups interativos. Parte 04/17 do guia oficial em português." />
+<meta name="description" content="Guia completo das 24 ações de Ferramentas Internas do HighLevel: IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B e Formatters. Mockups interativos. Parte 04/17 do guia oficial em português." />
 <meta name="author" content="Magnetic Funnels" />
 <meta name="keywords" content="HighLevel, Magnetic Funnels, automação, ações, if/else, wait, formatters, workflow, PT-BR" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Ações de Ferramentas Internas — Guia HighLevel" />
-<meta property="og:description" content="Guia completo das 21 ações de Ferramentas Internas do HighLevel: IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B e Formatters. Mockups interativos. Parte 04/17 do guia oficial em português." />
+<meta property="og:description" content="Guia completo das 24 ações de Ferramentas Internas do HighLevel: IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B e Formatters. Mockups interativos. Parte 04/17 do guia oficial em português." />
 <meta property="og:site_name" content="Magnetic Funnels" />
 <meta property="og:locale" content="pt_BR" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ações de Ferramentas Internas — Guia HighLevel" />
-<meta name="twitter:description" content="Guia completo das 21 ações de Ferramentas Internas do HighLevel: IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B e Formatters. Mockups interativos. Parte 04/17 do guia oficial em português." />
+<meta name="twitter:description" content="Guia completo das 24 ações de Ferramentas Internas do HighLevel: IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B e Formatters. Mockups interativos. Parte 04/17 do guia oficial em português." />
 
 
 <!--
@@ -2470,6 +2470,8 @@
     <a href="#a20" class="side-link"><span class="side-num">20</span>Formatar Array</a>
     <a href="#a21" class="side-link"><span class="side-num">21</span>Formatar Texto</a>
     <a href="#a22" class="side-link"><span class="side-num">22</span>Drip (Lotes)</a>
+    <a href="#a23" class="side-link"><span class="side-num">23</span>Router (Roteador)</a>
+    <a href="#a24" class="side-link"><span class="side-num">24</span>Loop (Repetir)</a>
   </nav>
 
   <div class="side-cta-fixed">
@@ -2488,10 +2490,10 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 2 · Ações · Categoria 04/14</span>
   <h1 class="hero-title">Ações de <em>Ferramentas Internas</em>.</h1>
-  <p class="hero-desc">As 21 ações de ferramentas internas controlam o fluxo da automação em si — IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B, chamadas pra outros workflows e os 4 Formatters (data, número, array, texto). São o "cérebro lógico" das automações complexas.</p>
+  <p class="hero-desc">As 24 ações de ferramentas internas controlam o fluxo da automação em si — IF/ELSE, Wait, Math, Custom Values, Goal Events, Split A/B, chamadas pra outros workflows e os 4 Formatters (data, número, array, texto). São o "cérebro lógico" das automações complexas.</p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">17</span>
+      <span class="hero-stat-num">24</span>
       <span class="hero-stat-label">Ações nesta categoria</span>
     </div>
     <div class="hero-stat">
@@ -5803,6 +5805,170 @@
     </div>
   </div>
 
+</div>
+
+<div class="acao-block" id="a23" data-name="router roteador ramificação branches condicional múltiplos caminhos">
+  <div class="acao-head">
+    <div class="acao-num">23</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Router (Roteador)</h2>
+      <div class="acao-en">Router</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Parecido com o If/Else, com uma diferença decisiva: o Router executa <strong>todas as ramificações (branches) que baterem</strong>, não só a primeira. As branches rodam uma depois da outra, da esquerda pra direita.</p>
+      <p>Cada branch é do tipo <strong>Custom rules</strong> (regras em "Only continue if": campo, operador e, se quiser, mais condições ou grupos de regras) ou <strong>Always run</strong> (todo contato passa por ela). A ordem na lista Branches define a ordem de execução, e o Test workflow mostra quais branches passaram e por quê.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Tratamentos cumulativos</div><div class="use-case-desc">Lead de ticket alto E de São Paulo → entra nas duas branches e recebe os dois tratamentos.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Log + atendimento</div><div class="use-case-desc">Uma branch Always run registra o evento; as branches com regra cuidam do atendimento.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Substituir If/Else em cascata</div><div class="use-case-desc">Três If/Else em sequência viram um único passo com três branches.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Lista de Branches; pra cada uma, o tipo (Custom rules ou Always run) e, em Custom rules, as condições em "Only continue if". A ordem das branches é a ordem de execução.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Diferente do <strong>If/Else</strong>: roda <em>todas</em> as branches verdadeiras, em ordem, da esquerda pra direita.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Router</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Action Name <span class="req">*</span></div>
+        <input class="hl-input" value="Rotear lead por perfil" readonly>
+      </div>
+      <div class="hl-section-head">Branches</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Branch 1 <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Custom rules</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Only continue if</div>
+        <div class="hl-dropdown has-value">Opportunity Value · Greater than · 5000</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Branch 2</div>
+        <div class="hl-dropdown has-value">Custom rules</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Only continue if</div>
+        <div class="hl-dropdown has-value">State · Is · SP</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Branch 3</div>
+        <div class="hl-dropdown has-value">Always run</div>
+      </div>
+          </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Avalia todas as branches e executa cada uma que bater, em ordem</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="acao-block" id="a24" data-name="loop repetir iteração lista de itens intervalo de números loop item">
+  <div class="acao-head">
+    <div class="acao-num">24</div>
+    <div class="acao-titles">
+      <div class="acao-cat">Ação</div>
+      <h2 class="acao-name">Loop (Repetir)</h2>
+      <div class="acao-en">Loop</div>
+      <div class="acao-tags"><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que essa ação faz</div>
+    <div class="tblock-content">
+      <p>Executa as ações que estão dentro dele <strong>uma vez pra cada item de uma lista</strong> — ou uma vez pra cada número de um intervalo. Em "Loop Over" você escolhe entre <strong>A list of items</strong> e <strong>A range of numbers</strong>.</p>
+      <p>Só as ações dentro da caixa tracejada do loop se repetem; o que vem abaixo dela roda uma única vez, depois que o loop termina. Dentro do loop, os campos do item da vez ficam em Custom values → <strong>Loop Item</strong> (em loops por intervalo esses campos vêm vazios — use o contador). A aba Test do passo mostra cada iteração e seu status.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Item a item do pedido</div><div class="use-case-desc">Pedido com 5 produtos → uma tarefa de separação pra cada item.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Resposta de API em lote</div><div class="use-case-desc">Custom API Call devolve uma lista → o Loop cria ou atualiza um registro por elemento.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Repetição controlada</div><div class="use-case-desc">Intervalo de 1 a 3 → três tentativas de contato, sem duplicar o workflow.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Configurações principais</div>
+    <div class="tblock-content">
+      <p>Loop Over (A list of items ou A range of numbers) e a origem da lista ou os limites do intervalo. As ações a repetir vão dentro da caixa tracejada do loop.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Clique no <strong>+</strong> onde o loop deve começar. Só o que está <strong>dentro da caixa tracejada</strong> se repete.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Action Configuration</span>
+              <span>Loop</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Action Name <span class="req">*</span></div>
+        <input class="hl-input" value="Repetir por item do pedido" readonly>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Loop Over <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">A list of items</div>
+      </div>
+      <div class="hl-section-head">Dentro do loop</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Custom values</div>
+        <div class="hl-dropdown has-value">Loop Item</div>
+      </div>
+          </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Action</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Repete as ações internas pra cada item da lista ou número do intervalo</strong>
+      </div>
+    </div>
+  </div>
+
 </div></main>
 </div>
 
@@ -5821,7 +5987,7 @@
 
   <div class="footer-top">
     <h3>Categoria 04 completa.</h3>
-    <p>17 ações de Ferramentas Internas explicadas com impacto prático. Continue explorando as outras categorias.</p>
+    <p>24 ações de Ferramentas Internas explicadas com impacto prático. Continue explorando as outras categorias.</p>
   </div>
 
   <div class="footer-main-cta">

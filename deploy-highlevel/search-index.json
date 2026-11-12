@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 282,
   "items": [
     {
       "id": "g1",
@@ -169,6 +169,49 @@
       "description": "Dispara quando uma tarefa é marcada como concluída. Perfeito pra ações de follow-up pós-conclusão — disparar o próximo passo automático assim que o atual é cumprido.",
       "keywords": "tarefa completada task completed",
       "href": "guia-highlevel-cat01.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Associação Criada",
+      "en": "Association Created",
+      "category": "Registros e Empresas",
+      "tags": [
+        "Tempo real",
+        "Labs",
+        "Novo"
+      ],
+      "description": "Dispara quando dois registros do CRM são vinculados — contato ↔ empresa, contato ↔ custom object, oportunidade ↔ custom object e por aí vai. Funciona com Contatos, Oportunidades, Custom Objects e Empresas, e está disponível em workflows padrão, de Custom Object e de Empresa.",
+      "keywords": "associação criada association created vínculo registros custom object empresa labs",
+      "href": "guia-highlevel-cat01.html#g13"
+    },
+    {
+      "id": "g14",
+      "type": "Gatilho",
+      "name": "Empresa Criada",
+      "en": "Company Created",
+      "category": "Registros e Empresas",
+      "tags": [
+        "Tempo real",
+        "Company Workflow"
+      ],
+      "description": "Dispara no instante em que um novo registro de Empresa (Company) é adicionado — manualmente, por importação, formulário, API ou integração.",
+      "keywords": "empresa criada company created company-based workflow b2b",
+      "href": "guia-highlevel-cat01.html#g14"
+    },
+    {
+      "id": "g15",
+      "type": "Gatilho",
+      "name": "Empresa Alterada",
+      "en": "Company Changed",
+      "category": "Registros e Empresas",
+      "tags": [
+        "Tempo real",
+        "Company Workflow"
+      ],
+      "description": "Dispara sempre que os campos selecionados de um registro de Empresa são atualizados. Você escolhe um ou mais campos (padrão ou customizados) pra monitorar — Industry, Status, Domain etc.",
+      "keywords": "empresa alterada company changed company-based workflow campos atualizados",
+      "href": "guia-highlevel-cat01.html#g15"
     },
     {
       "id": "g1",
@@ -512,6 +555,21 @@
       "href": "guia-highlevel-cat03.html#g2"
     },
     {
+      "id": "g3",
+      "type": "Gatilho",
+      "name": "Inscrição em Evento",
+      "en": "Event Registration",
+      "category": "Eventos",
+      "tags": [
+        "Tempo real",
+        "Labs",
+        "Novo"
+      ],
+      "description": "Dispara quando alguém se inscreve num evento criado no módulo Events do HighLevel (eventos com ingresso ou RSVP). Cada inscrição dispara o workflow de forma independente.",
+      "keywords": "inscrição em evento event registration events ingresso ticket rsvp",
+      "href": "guia-highlevel-cat03.html#g3"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Oportunidade Criada",
@@ -806,6 +864,20 @@
       "href": "guia-highlevel-cat06.html#g12"
     },
     {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado pelo Portal do Cliente",
+      "en": "Client Portal File Uploaded",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um contato envia um arquivo pelo Portal do Cliente, na área de documentos compartilhados (Shared Documents). O cliente pode subir até 10 arquivos por vez.",
+      "keywords": "arquivo enviado portal do cliente client portal file uploaded upload documento",
+      "href": "guia-highlevel-cat06.html#g13"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Cobrança (Invoice)",
@@ -946,6 +1018,19 @@
       "href": "guia-highlevel-cat07.html#g10"
     },
     {
+      "id": "g11",
+      "type": "Gatilho",
+      "name": "Orçamentos (Estimates)",
+      "en": "Estimates",
+      "category": "Orçamentos",
+      "tags": [
+        "Tempo real"
+      ],
+      "description": "Dispara em eventos de orçamento (Estimate): quando é enviado, visualizado, aceito ou recusado. O evento é escolhido pelo filtro Estimate Status.",
+      "keywords": "orçamento estimates estimate sent accepted declined viewed proposta",
+      "href": "guia-highlevel-cat07.html#g11"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Carrinho Abandonado",
@@ -986,6 +1071,47 @@
       "description": "Dispara quando o pedido é marcado como concluído — geralmente quando o produto é entregue. Momento perfeito pra pedir feedback e avaliação.",
       "keywords": "pedido concluído order fulfilled",
       "href": "guia-highlevel-cat08.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Produto Visualizado",
+      "en": "Viewed Product",
+      "category": "Pré-compra",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um visitante visualiza um produto na loja — tanto em lojas Shopify conectadas quanto na loja de ecommerce nativa do HighLevel. Fica na categoria Ecommerce Stores do seletor de gatilhos.",
+      "keywords": "produto visualizado viewed product product viewed ecommerce loja shopify web pixel",
+      "href": "guia-highlevel-cat08.html#g4"
+    },
+    {
+      "id": "g5",
+      "type": "Gatilho",
+      "name": "Produto Adicionado ao Carrinho",
+      "en": "Add to Cart",
+      "category": "Pré-compra",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando o visitante adiciona um produto ao carrinho, em lojas Shopify ou na loja de ecommerce do HighLevel. Também fica em Ecommerce Stores.",
+      "keywords": "produto adicionado ao carrinho add to cart added to cart ecommerce loja shopify",
+      "href": "guia-highlevel-cat08.html#g5"
+    },
+    {
+      "id": "g6",
+      "type": "Gatilho",
+      "name": "Avaliação de Produto Enviada",
+      "en": "Product Review Submitted",
+      "category": "Pós-venda",
+      "tags": [
+        "Tempo real"
+      ],
+      "description": "Dispara quando um comprador clica em \"Submit review\" em qualquer produto da loja de ecommerce do HighLevel. O gatilho captura os detalhes da avaliação — nota, título, comentário, dados do avaliador, loja e produto.",
+      "keywords": "avaliação de produto enviada product review submitted review ecommerce loja estrelas",
+      "href": "guia-highlevel-cat08.html#g6"
     },
     {
       "id": "g1",
@@ -1043,6 +1169,20 @@
       "description": "Dispara quando alguém comenta em um vídeo do TikTok conectado à conta. Mesma lógica dos gatilhos de Facebook e Instagram, mas agora para o canal com maior alcance orgânico do momento.",
       "keywords": "comentários do tiktok tiktok comment on a video",
       "href": "guia-highlevel-cat10.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Posts do Social Planner",
+      "en": "Social Planner Posts",
+      "category": "Publicações",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara com base no status e nos eventos de publicação dos posts do Social Planner — por exemplo quando um post é aprovado (Approved) ou quando é publicado com sucesso (Published).",
+      "keywords": "posts do social planner social planner posts post publicado aprovado published approved",
+      "href": "guia-highlevel-cat10.html#g4"
     },
     {
       "id": "g1",
@@ -1173,6 +1313,20 @@
       "description": "Dispara quando um novo comentário é adicionado a uma publicação do grupo. Permite reagir a interações específicas dentro da comunidade.",
       "keywords": "novo comentário no grupo community group new comment",
       "href": "guia-highlevel-cat11.html#g9"
+    },
+    {
+      "id": "g10",
+      "type": "Gatilho",
+      "name": "Solicitou Entrada no Grupo",
+      "en": "Requested to Join Group",
+      "category": "Grupos",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um usuário envia um pedido pra entrar num grupo da comunidade. Vale só pra grupos com acesso por solicitação — entrada direta não dispara.",
+      "keywords": "solicitou entrada no grupo requested to join group join request pedido de entrada comunidade",
+      "href": "guia-highlevel-cat11.html#g10"
     },
     {
       "id": "g1",
@@ -1938,6 +2092,32 @@
       "href": "acoes-highlevel-cat02.html#a37"
     },
     {
+      "id": "a38",
+      "type": "Ação",
+      "name": "WhatsApp: Indicador de Digitação",
+      "en": "WhatsApp Typing Indicator",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "Mostra a bolha de \"digitando…\" pro contato no WhatsApp e, ao mesmo tempo, marca a mensagem recebida como lida (os dois tiques azuis).",
+      "keywords": "whatsapp indicador de digitação typing indicator digitando marcar como lido read",
+      "href": "acoes-highlevel-cat02.html#a38"
+    },
+    {
+      "id": "a39",
+      "type": "Ação",
+      "name": "Adicionar Comentário Interno",
+      "en": "Add Internal Comment",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "Publica automaticamente um comentário interno na conversa do contato. Comentários internos são notas privadas no histórico da conversa — nunca são enviados nem ficam visíveis pro contato.",
+      "keywords": "adicionar comentário interno add internal comment conversations mention menção equipe",
+      "href": "acoes-highlevel-cat02.html#a39"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Webhook de Saída",
@@ -2288,6 +2468,32 @@
       "href": "acoes-highlevel-cat04.html#a22"
     },
     {
+      "id": "a23",
+      "type": "Ação",
+      "name": "Router (Roteador)",
+      "en": "Router",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "Parecido com o If/Else, com uma diferença decisiva: o Router executa todas as ramificações (branches) que baterem, não só a primeira. As branches rodam uma depois da outra, da esquerda pra direita.",
+      "keywords": "router roteador ramificação branches condicional múltiplos caminhos",
+      "href": "acoes-highlevel-cat04.html#a23"
+    },
+    {
+      "id": "a24",
+      "type": "Ação",
+      "name": "Loop (Repetir)",
+      "en": "Loop",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "Executa as ações que estão dentro dele uma vez pra cada item de uma lista — ou uma vez pra cada número de um intervalo. Em \"Loop Over\" você escolhe entre A list of items e A range of numbers.",
+      "keywords": "loop repetir iteração lista de itens intervalo de números loop item",
+      "href": "acoes-highlevel-cat04.html#a24"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Generate Text (Texto)",
@@ -2423,6 +2629,34 @@
       "description": "",
       "keywords": "openrouter generate response",
       "href": "acoes-highlevel-cat05.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Geração de Imagem com IA",
+      "en": "AI Image Generation",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "Gera uma imagem com um modelo de IA, salva no Media Storage com URL pública e devolve essa URL (variável Image URL) pras ações seguintes — pra usar num email, SMS ou post.",
+      "keywords": "geração de imagem com ia ai image generation gerar imagem gpt image gemini nano banana",
+      "href": "acoes-highlevel-cat05.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Geração de Vídeo com IA",
+      "en": "AI Video Generation",
+      "category": "Ação",
+      "tags": [
+        "Premium",
+        "Novo"
+      ],
+      "description": "Cria um vídeo curto com o Veo 3.1 do Google, salva na Media Library com URL pública e devolve essa URL pras ações seguintes.",
+      "keywords": "geração de vídeo com ia ai video generation gerar vídeo veo 3.1",
+      "href": "acoes-highlevel-cat05.html#a12"
     },
     {
       "id": "a1",
@@ -3312,6 +3546,32 @@
       "href": "acoes-highlevel-cat16.html#a9"
     },
     {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Buscar Registro de Objeto",
+      "en": "Find Object Record",
+      "category": "Ação",
+      "tags": [
+        "Custom Object Workflow"
+      ],
+      "description": "Localiza um registro de Custom Object pelos campos que você definir — Record ID, External ID ou qualquer campo identificador (o exemplo oficial é o VIN de um veículo). O registro encontrado vira o registro atual das ações seguintes, como Update ou Associate.",
+      "keywords": "buscar registro de objeto find object record custom object localizar",
+      "href": "acoes-highlevel-cat16.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Buscar Empresa",
+      "en": "Find Company",
+      "category": "Ação",
+      "tags": [
+        "Company Workflow"
+      ],
+      "description": "A versão do Find Object Record pra Empresas: localiza um registro de Company por Record ID, External ID ou Company Domain, e a empresa encontrada passa a ser o registro atual das ações seguintes.",
+      "keywords": "buscar empresa find company company domain localizar empresa b2b",
+      "href": "acoes-highlevel-cat16.html#a11"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Mensagem de IA",
@@ -3466,6 +3726,19 @@
       "description": "",
       "keywords": "invocar agente (agent studio) invoke agent in agent studio",
       "href": "acoes-highlevel-cat17.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Invocar Agente Gerenciado",
+      "en": "Invoke Managed Agent",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "Chama um Managed Agent (os antigos Super Agents do Agent Studio) no ponto em que o workflow chega na ação: envia o contato e o contexto configurado, e a resposta do agente fica disponível pras ações seguintes — atualizar o CRM, enviar mensagem ou decidir um caminho condicional.",
+      "keywords": "invocar agente gerenciado invoke managed agent managed agents super agents agent studio",
+      "href": "acoes-highlevel-cat17.html#a13"
     }
   ]
 }
