@@ -2398,6 +2398,7 @@
 <a href="#g8" class="side-link"><span class="side-num">08</span>Cupom Aplicado</a>
 <a href="#g9" class="side-link"><span class="side-num">09</span>Limite de Cupom</a>
 <a href="#g10" class="side-link"><span class="side-num">10</span>Cupom Expirado</a>
+    <a href="#g11" class="side-link"><span class="side-num">11</span>Orçamentos (Estimates)</a>
 </nav>
 
 
@@ -2415,8 +2416,8 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 07/12</span>
   <h1 class="hero-title">Tudo que envolve <em>dinheiro</em> merece automação.</h1>
-  <p class="hero-desc">Da cobrança inicial até reembolsos, passando por assinaturas, cupons e contratos. A categoria Pagamentos tem 10 gatilhos que cobrem todo o ciclo financeiro — pra reduzir churn, acelerar recebimento e manter o fluxo de caixa saudável.</p>
-  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">10</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
+  <p class="hero-desc">Da cobrança inicial até reembolsos, passando por assinaturas, cupons e contratos. A categoria Pagamentos tem 11 gatilhos que cobrem todo o ciclo financeiro — pra reduzir churn, acelerar recebimento e manter o fluxo de caixa saudável.</p>
+  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">11</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
 <div class="hero-stat"><span class="hero-stat-num">40+</span><span class="hero-stat-label">Filtros explicados</span></div>
 <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-label">Mockups interativos</span></div>
 </div>
@@ -4643,6 +4644,88 @@
     </div>
   </div>
 
+</div>
+
+<div class="trigger-block" id="g11" data-name="orçamento estimates estimate sent accepted declined viewed proposta">
+  <div class="trigger-head">
+    <div class="trigger-num">11</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Orçamentos</div>
+      <h2 class="trigger-name">Orçamentos (Estimates)</h2>
+      <div class="trigger-en">Estimates</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara em eventos de <strong>orçamento (Estimate)</strong>: quando é enviado, visualizado, aceito ou recusado. O evento é escolhido pelo filtro Estimate Status.</p>
+      <p>A recomendação da HighLevel é criar <strong>um workflow por status</strong> quando cada um pede um acompanhamento diferente — um pra "aceito" (gerar invoice, onboarding) e outro pra "recusado" (pesquisa de motivo, nova oferta).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Orçamento aceito</div><div class="use-case-desc">Status Accepted → move a oportunidade pra "Ganho" e dispara o onboarding.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Follow-up de visualização</div><div class="use-case-desc">Status Viewed e sem resposta em 2 dias → SMS perguntando se ficou alguma dúvida.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Recuperação</div><div class="use-case-desc">Status Declined → tarefa pro vendedor ligar e entender a objeção.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Status do Orçamento</div>
+    <div class="filter-en">Estimate Status</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Qual evento dispara: Sent, Viewed, Accepted ou Declined.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sem esse filtro o workflow roda em todos os eventos do orçamento.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Use <strong>Estimate Status → Is</strong> pra escolher o evento. Um workflow por status.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Estimates</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Orçamento aceito — iniciar onboarding" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Estimate Status <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Is · Accepted</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando um orçamento é enviado, visualizado, aceito ou recusado</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat06.html" class="cat-nav-link prev">
@@ -4658,7 +4741,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 07 completa.</h3>
-    <p>10 gatilhos de Pagamentos explicados com impacto prático e mockups visuais.</p>
+    <p>11 gatilhos de Pagamentos explicados com impacto prático e mockups visuais.</p>
   </div>
 
   <div class="footer-main-cta">

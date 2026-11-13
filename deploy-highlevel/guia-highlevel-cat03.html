@@ -2382,6 +2382,8 @@
   <nav class="side-nav">
     <a href="#g1" class="side-link"><span class="side-num">01</span>Status de Compromisso</a>
     <a href="#g2" class="side-link"><span class="side-num">02</span>Contato Marcou Agendamento</a>
+    <a href="#g3" class="side-link"><span class="side-num">03</span>Inscrição em Evento</a>
+    <a href="#g4" class="side-link"><span class="side-num">04</span>Check-in em Evento</a>
   </nav>
 
   <!-- CTA-FIXO -->
@@ -2407,11 +2409,11 @@
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 03/12</span>
   <h1 class="hero-title">Todo <em>agendamento</em> é uma oportunidade de automação.</h1>
   <p class="hero-desc">
-    A categoria Compromissos cobre tudo que acontece com calendários no HighLevel — quando o cliente marca, quando confirma, quando cancela, quando reagenda. São só 2 gatilhos, mas que cobrem praticamente todo o ciclo de vida de um agendamento no sistema.
+    A categoria Compromissos cobre tudo que acontece com calendários no HighLevel — quando o cliente marca, quando confirma, quando cancela, quando reagenda. São 4 gatilhos: dois cobrem praticamente todo o ciclo de vida de um agendamento, e outros dois cobrem inscrição e check-in no módulo Events.
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">2</span>
+      <span class="hero-stat-num">4</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -3082,6 +3084,207 @@
   </div>
 </div>
 
+<div class="trigger-block" id="g3" data-name="inscrição em evento event registration events ingresso ticket rsvp">
+  <div class="trigger-head">
+    <div class="trigger-num">03</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Eventos</div>
+      <h2 class="trigger-name">Inscrição em Evento</h2>
+      <div class="trigger-en">Event Registration</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Labs</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando alguém se inscreve num evento criado no módulo <strong>Events</strong> do HighLevel (eventos com ingresso ou RSVP). Cada inscrição dispara o workflow de forma independente.</p>
+      <p>O módulo Events ainda está em <strong>beta via Labs</strong> — ative em Settings → Labs pra o gatilho aparecer. É diferente do gatilho de evento de grupo das Comunidades (categoria 11).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Confirmação + lembretes</div><div class="use-case-desc">Inscrição confirmada → email com o ingresso e lembretes 24h e 1h antes.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Tratamento VIP</div><div class="use-case-desc">Ingresso do tipo VIP → tag, notificação pro time e criação de oportunidade.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Lista de espera</div><div class="use-case-desc">Status de inscrição diferente de confirmado → fluxo de acompanhamento.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Evento</div>
+    <div class="filter-en">Event</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por um evento específico (nome) ou pelo tipo de evento.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sem filtro, a inscrição em qualquer evento dispara.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Tipo de Ingresso</div>
+    <div class="filter-en">Ticket type</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe a um tipo de ingresso — por exemplo VIP, pago ou gratuito.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Permite réguas diferentes por categoria de ingresso.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Status da Inscrição</div>
+    <div class="filter-en">Registration status</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra pelo status da inscrição.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Separa confirmados dos demais.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Quem reservou</div>
+    <div class="filter-en">Booked by</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por quem fez a inscrição.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Útil pra distinguir compra própria de inscrição feita pela equipe.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Requer o módulo <strong>Events</strong> ativado em Labs. Filtre por <strong>evento</strong> e <strong>tipo de ingresso</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Event Registration</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Inscrição no workshop — confirmação e lembretes" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Event</div>
+        <div class="hl-dropdown has-value">Workshop Automação na Prática</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Ticket type</div>
+        <div class="hl-dropdown has-value">VIP</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara a cada nova inscrição num evento do módulo Events</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="trigger-block" id="g4" data-name="check-in em evento event checked in events presença checkin participante">
+  <div class="trigger-head">
+    <div class="trigger-num">04</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Eventos</div>
+      <h2 class="trigger-name">Check-in em Evento</h2>
+      <div class="trigger-en">Event Checked In</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Labs</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um participante faz <strong>check-in</strong> num evento do módulo <strong>Events</strong> do HighLevel — ou seja, quando a presença dele é registrada na entrada. É o par do gatilho <strong>Inscrição em Evento</strong>: aquele cobre quem se inscreveu, este cobre quem de fato apareceu.</p>
+      <p>Cada check-in dispara o workflow de forma independente. Como o módulo Events ainda está em <strong>beta via Labs</strong>, ative em Settings → Labs pra o gatilho aparecer.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Boas-vindas na chegada</div><div class="use-case-desc">Check-in feito → mensagem com a programação do dia e o link dos materiais.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Pós-evento só pra quem foi</div><div class="use-case-desc">Check-in feito → espera o fim do evento e envia pesquisa de satisfação e oferta.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Separar presentes de ausentes</div><div class="use-case-desc">Check-in feito → tag "compareceu"; quem ficou sem a tag entra na régua de no-show.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Evento</div>
+    <div class="filter-en">Event</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por um evento específico (nome) ou pelo tipo de evento.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sem filtro, o check-in em qualquer evento dispara.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Requer o módulo <strong>Events</strong> ativado em Labs. Filtre pelo <strong>evento</strong> pra não misturar públicos.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Event Checked In</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Check-in no workshop — boas-vindas" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Event</div>
+        <div class="hl-dropdown has-value">Workshop Automação na Prática</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando o participante faz check-in num evento do módulo Events</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -3101,7 +3304,7 @@
 
   <div class="footer-top">
     <h3>Categoria 03 completa.</h3>
-    <p>2 gatilhos de agendamento cobrindo todo o ciclo de vida de um compromisso — do booking ao no-show, passando por cancelamento e reagendamento.</p>
+    <p>4 gatilhos cobrindo todo o ciclo de vida de um compromisso — do booking ao no-show, passando por cancelamento e reagendamento — mais inscrição e check-in em eventos.</p>
   </div>
 
   <div class="footer-main-cta">

@@ -2402,6 +2402,9 @@
     <a href="#g10" class="side-link"><span class="side-num">10</span>Tarefa Adicionada</a>
     <a href="#g11" class="side-link"><span class="side-num">11</span>Lembrete de Tarefa</a>
     <a href="#g12" class="side-link"><span class="side-num">12</span>Tarefa Completada</a>
+    <a href="#g13" class="side-link"><span class="side-num">13</span>Associação Criada</a>
+    <a href="#g14" class="side-link"><span class="side-num">14</span>Empresa Criada</a>
+    <a href="#g15" class="side-link"><span class="side-num">15</span>Empresa Alterada</a>
   </nav>
 
   <!-- ============================================================
@@ -2430,11 +2433,11 @@
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 01/12</span>
   <h1 class="hero-title">Tudo que um <em>contato</em> pode fazer para disparar uma automação.</h1>
   <p class="hero-desc">
-    Os gatilhos de contato são a porta de entrada mais comum no HighLevel — quase toda automação começa com algo acontecendo num lead ou cliente. Este guia cobre os 12 gatilhos dessa categoria com <strong>fidelidade total à interface real</strong>: cada campo mostra o tipo correto (Dropdown, Tag Picker, Multi-Select, Toggle), todas as opções dos dropdowns listadas, operadores reais, e a lógica condicional de filtros que aparecem só quando outros são selecionados.
+    Os gatilhos de contato são a porta de entrada mais comum no HighLevel — quase toda automação começa com algo acontecendo num lead ou cliente. Este guia cobre os 15 gatilhos dessa categoria com <strong>fidelidade total à interface real</strong>: cada campo mostra o tipo correto (Dropdown, Tag Picker, Multi-Select, Toggle), todas as opções dos dropdowns listadas, operadores reais, e a lógica condicional de filtros que aparecem só quando outros são selecionados.
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">12</span>
+      <span class="hero-stat-num">15</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -5631,6 +5634,280 @@
     </div>
   </div>
 
+</div>
+
+<div class="trigger-block" id="g13" data-name="associação criada association created vínculo registros custom object empresa labs">
+  <div class="trigger-head">
+    <div class="trigger-num">13</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Registros e Empresas</div>
+      <h2 class="trigger-name">Associação Criada</h2>
+      <div class="trigger-en">Association Created</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Labs</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando dois registros do CRM são <strong>vinculados</strong> — contato ↔ empresa, contato ↔ custom object, oportunidade ↔ custom object e por aí vai. Funciona com Contatos, Oportunidades, Custom Objects e Empresas, e está disponível em workflows padrão, de Custom Object e de Empresa.</p>
+      <p>É um recurso de <strong>Labs</strong>: antes de aparecer na lista de gatilhos, precisa ser ativado em Settings → Labs ("Association Created Trigger"). Depois de publicar, crie um vínculo de teste e confira o Enrollment History e os Execution Logs.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Onboarding B2B</div><div class="use-case-desc">Contato associado a uma Empresa → entra na régua de boas-vindas corporativa.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Imóvel ↔ corretor</div><div class="use-case-desc">Registro de Imóvel vinculado a um contato com o label "Corretor" → notifica o responsável.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Auditoria de vínculos</div><div class="use-case-desc">Qualquer associação com o label "Decisor" → cria tarefa de qualificação.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Associação criada com</div>
+    <div class="filter-en">Association created with</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">O objeto do outro lado do vínculo (Company, Contact, Opportunity ou um Custom Object).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Define qual tipo de vínculo inicia o workflow.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Label da Associação</div>
+    <div class="filter-en">Association label</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe a um label específico da associação (ex.: "Decisor", "Corretor").</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Evita disparar pra todo e qualquer vínculo do mesmo objeto.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Ative primeiro em <strong>Labs</strong>. Depois escolha o objeto em <strong>Association created with</strong> e, se quiser, o <strong>Association label</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Association Created</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Contato vinculado a empresa — onboarding B2B" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Association created with <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Company</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Association label</div>
+        <div class="hl-dropdown has-value">Decisor</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara no momento em que dois registros do CRM são associados</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="trigger-block" id="g14" data-name="empresa criada company created company-based workflow b2b">
+  <div class="trigger-head">
+    <div class="trigger-num">14</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Registros e Empresas</div>
+      <h2 class="trigger-name">Empresa Criada</h2>
+      <div class="trigger-en">Company Created</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Company Workflow</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara no instante em que um novo registro de <strong>Empresa (Company)</strong> é adicionado — manualmente, por importação, formulário, API ou integração.</p>
+      <p>Só existe em <strong>Company-based Workflows</strong>: em Automation → Workflows → + Create Workflow, escolha o tipo "Company-based Workflow". Nesse tipo de workflow quem percorre o fluxo é a empresa, não o contato.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Enriquecimento</div><div class="use-case-desc">Empresa nova → Custom API Call busca dados do CNPJ e preenche os campos.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Distribuição de contas</div><div class="use-case-desc">Empresa criada → atribui o gerente de contas e cria tarefa de primeiro contato.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Campos da Empresa</div>
+    <div class="filter-en">Company fields</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por campos padrão ou customizados da empresa (ex.: Industry, Status, Domain). Vários filtros combinam com lógica E.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sem filtro, toda empresa criada entra no workflow.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Disponível apenas em <strong>Company-based Workflow</strong> — escolha esse tipo ao criar o workflow.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Company Created</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Nova empresa — distribuir pro gerente de contas" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Industry</div>
+        <div class="hl-dropdown has-value">Is · Software / SaaS</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando um novo registro de Empresa é criado, por qualquer origem</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="trigger-block" id="g15" data-name="empresa alterada company changed company-based workflow campos atualizados">
+  <div class="trigger-head">
+    <div class="trigger-num">15</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Registros e Empresas</div>
+      <h2 class="trigger-name">Empresa Alterada</h2>
+      <div class="trigger-en">Company Changed</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Company Workflow</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara sempre que os <strong>campos selecionados</strong> de um registro de Empresa são atualizados. Você escolhe um ou mais campos (padrão ou customizados) pra monitorar — Industry, Status, Domain etc.</p>
+      <p>Os filtros combinam com lógica <strong>E</strong>: todas as condições precisam bater pro gatilho disparar. Assim como o Company Created, só aparece em <strong>Company-based Workflows</strong>.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Mudança de status</div><div class="use-case-desc">Status da empresa vira "Cliente" → dispara onboarding da conta.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Conta em risco</div><div class="use-case-desc">Campo "Health Score" cai → notifica o CS responsável.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Campo monitorado</div>
+    <div class="filter-en">Company field</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Um ou mais campos da empresa cuja alteração inicia o workflow.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Sem escolher o campo, qualquer edição dispara — e o workflow vira ruído.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Condição do valor</div>
+    <div class="filter-en">Field condition</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe ao novo valor do campo (ex.: Status Is "Cliente"). Combina em E com os demais filtros.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Dispara só na transição que interessa.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Escolha os <strong>campos da empresa</strong> a monitorar; todos os filtros precisam ser verdadeiros (lógica E).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Company Changed</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Empresa virou cliente — onboarding da conta" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Status <span class="req">*</span></div>
+        <div class="hl-dropdown has-value">Has changed to · Cliente</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Industry</div>
+        <div class="hl-dropdown has-value">Is · Software / SaaS</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando os campos monitorados da Empresa são atualizados</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ COM TODOS OS CTAs
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -5650,7 +5927,7 @@
 
   <div class="footer-top">
     <h3>Categoria 01 completa.</h3>
-    <p>12 gatilhos de contato, todos os filtros explicados com impacto prático e mockups visuais reproduzindo a tela do HighLevel. Próximas 12 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>15 gatilhos de contato, todos os filtros explicados com impacto prático e mockups visuais reproduzindo a tela do HighLevel. Próximas 12 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <!-- CTA PRINCIPAL: HighLevel 30 dias grátis -->

@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 39 | 90 | 46 | **175** |
+| Gatilhos | 31 | 53 | 18 | **102** |
+| Ações | 39 | 90 | 55 | **184** |
 
 
 ## Gatilhos · 12 categorias
@@ -31,6 +31,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g10 | [Tarefa Adicionada](guia-highlevel-cat01.html#g10) | Task Added | 4 | 2/6 | 🟡 | [ ] | |
 | g11 | [Lembrete de Tarefa](guia-highlevel-cat01.html#g11) | Task Reminder | 4 | 3/6 | 🟢 | [ ] | |
 | g12 | [Tarefa Completada](guia-highlevel-cat01.html#g12) | Task Completed | 3 | 2/6 | 🟡 | [ ] | |
+| g13 | [Associação Criada](guia-highlevel-cat01.html#g13) | Association Created | 0 | 2/6 | 🔴 | [ ] | |
+| g14 | [Empresa Criada](guia-highlevel-cat01.html#g14) | Company Created | 0 | 2/6 | 🔴 | [ ] | |
+| g15 | [Empresa Alterada](guia-highlevel-cat01.html#g15) | Company Changed | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT02 · Integrações & Webhooks
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -63,6 +66,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | g1 | [Status de Compromisso](guia-highlevel-cat03.html#g1) | Appointment Status | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Contato Marcou Agendamento](guia-highlevel-cat03.html#g2) | Customer Booked Appointment | 4 | 4/6 | 🟢 | [ ] | |
+| g3 | [Inscrição em Evento](guia-highlevel-cat03.html#g3) | Event Registration | 0 | 2/6 | 🔴 | [ ] | |
+| g4 | [Check-in em Evento](guia-highlevel-cat03.html#g4) | Event Checked In | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT04 · Ciclo de Vida
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -96,6 +101,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g10 | [Produto Iniciado](guia-highlevel-cat06.html#g10) | Product Started | 2 | 2/6 | 🟡 | [ ] | |
 | g11 | [Produto Completado](guia-highlevel-cat06.html#g11) | Product Completed | 2 | 3/6 | 🟢 | [ ] | |
 | g12 | [Login de Usuário](guia-highlevel-cat06.html#g12) | User Login | 2 | 2/6 | 🟡 | [ ] | |
+| g13 | [Arquivo Enviado pelo Portal do Cliente](guia-highlevel-cat06.html#g13) | Client Portal File Uploaded | 0 | 1/6 | 🔴 | [ ] | |
 
 ### CAT07 · Recebimento
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -110,6 +116,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g8 | [Cupom Aplicado](guia-highlevel-cat07.html#g8) | Coupon Code Applied | 2 | 4/6 | 🟡 | [ ] | |
 | g9 | [Limite de Cupom Atingido](guia-highlevel-cat07.html#g9) | Coupon Redemption Limit Reached | 2 | 1/6 | 🟡 | [ ] | |
 | g10 | [Cupom Expirado](guia-highlevel-cat07.html#g10) | Coupon Code Expired | 2 | 2/6 | 🟡 | [ ] | |
+| g11 | [Orçamentos (Estimates)](guia-highlevel-cat07.html#g11) | Estimates | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT08 · Pré-compra
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -117,6 +124,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Carrinho Abandonado](guia-highlevel-cat08.html#g1) | Abandoned Cart | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Compra Feita](guia-highlevel-cat08.html#g2) | Order Placed | 3 | 2/6 | 🟡 | [ ] | |
 | g3 | [Pedido Concluído](guia-highlevel-cat08.html#g3) | Order Fulfilled | 3 | 2/6 | 🟡 | [ ] | |
+| g4 | [Produto Visualizado](guia-highlevel-cat08.html#g4) | Viewed Product | 0 | 2/6 | 🔴 | [ ] | |
+| g5 | [Produto Adicionado ao Carrinho](guia-highlevel-cat08.html#g5) | Add to Cart | 0 | 2/6 | 🔴 | [ ] | |
+| g6 | [Avaliação de Produto Enviada](guia-highlevel-cat08.html#g6) | Product Review Submitted | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT09 · Atendimento Automatizado
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -129,6 +139,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Comentários do Facebook](guia-highlevel-cat10.html#g1) | Facebook Comment on a Post | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Comentários do Instagram](guia-highlevel-cat10.html#g2) | Instagram Comment on a Post | 4 | 3/6 | 🟢 | [ ] | |
 | g3 | [Comentários do TikTok](guia-highlevel-cat10.html#g3) | TikTok – Comment(s) On A Video | 4 | 2/6 | 🟡 | [ ] | |
+| g4 | [Posts do Social Planner](guia-highlevel-cat10.html#g4) | Social Planner Posts | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT11 · Grupos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -142,6 +153,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g7 | [Solicitação de Entrada Rejeitada](guia-highlevel-cat11.html#g7) | Community Group Join Request Rejected | 0 | 2/6 | 🔴 | [ ] | |
 | g8 | [Nova Publicação no Grupo](guia-highlevel-cat11.html#g8) | Community Group New Post | 0 | 2/6 | 🔴 | [ ] | |
 | g9 | [Novo Comentário no Grupo](guia-highlevel-cat11.html#g9) | Community Group New Comment | 0 | 2/6 | 🔴 | [ ] | |
+| g10 | [Solicitou Entrada no Grupo](guia-highlevel-cat11.html#g10) | Requested to Join Group | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT12 · Conclusão
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -154,6 +166,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Contato Google Criado](guia-highlevel-cat13.html#g1) | Google Contact Created | 2 | 2/6 | 🟡 | [ ] | |
 | g2 | [Novo Grupo de Contatos Google](guia-highlevel-cat13.html#g2) | New Google Contact Group | 3 | 2/6 | 🟡 | [ ] | |
 | g3 | [Resposta de Formulário Google](guia-highlevel-cat13.html#g3) | Google Form Response | 3 | 2/6 | 🟡 | [ ] | |
+| g4 | [Nova Planilha no Google Sheets](guia-highlevel-cat13.html#g4) | Google Sheets · New Spreadsheet | 0 | 2/6 | 🔴 | [ ] | |
+| g5 | [Nova Linha no Google Sheets](guia-highlevel-cat13.html#g5) | Google Sheets · New Spreadsheet Row | 0 | 2/6 | 🔴 | [ ] | |
+| g6 | [Nova Aba no Google Sheets](guia-highlevel-cat13.html#g6) | Google Sheets · New Worksheet | 0 | 2/6 | 🔴 | [ ] | |
 
 ## Ações · 14 categorias
 
@@ -219,6 +234,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a35 | [Enviar RCS](acoes-highlevel-cat02.html#a35) | Send RCS | 0 | 1/6 | 🔴 | [ ] | |
 | a36 | [Registrar Ligação Externa](acoes-highlevel-cat02.html#a36) | Log External Call | 0 | 3/6 | 🟡 | [ ] | |
 | a37 | [Bot de Agendamento (Conversation AI)](acoes-highlevel-cat02.html#a37) | Appointment Booking Conversation AI Bot | 0 | 2/6 | 🔴 | [ ] | |
+| a38 | [WhatsApp: Indicador de Digitação](acoes-highlevel-cat02.html#a38) | WhatsApp Typing Indicator | 0 | 1/6 | 🔴 | [ ] | |
+| a39 | [Adicionar Comentário Interno](acoes-highlevel-cat02.html#a39) | Add Internal Comment | 0 | 1/6 | 🔴 | [ ] | |
 
 ### CAT03 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -254,12 +271,14 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a20 | [Formatar Array](acoes-highlevel-cat04.html#a20) | Array Formatter | 2 | 3/6 | 🟡 | [ ] | |
 | a21 | [Formatar Texto](acoes-highlevel-cat04.html#a21) | Text Formatter | 3 | 3/6 | 🟢 | [ ] | |
 | a22 | [Drip (Liberação em Lotes)](acoes-highlevel-cat04.html#a22) | Drip | 0 | 2/6 | 🔴 | [ ] | |
+| a23 | [Router (Roteador)](acoes-highlevel-cat04.html#a23) | Router | 0 | 2/6 | 🔴 | [ ] | |
+| a24 | [Loop (Repetir)](acoes-highlevel-cat04.html#a24) | Loop | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT05 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | a1 | [Generate Text (Texto)](acoes-highlevel-cat05.html#a1) | AI Generate Text | 3 | 3/6 | 🟢 | [ ] | |
-| a2 | [Parse Image (Analisar Imagem)](acoes-highlevel-cat05.html#a2) | AI Parse Image | 3 | 2/6 | 🟡 | [ ] | |
+| a2 | [Analisar Imagem com IA](acoes-highlevel-cat05.html#a2) | AI Analyze Image | 3 | 2/6 | 🟡 | [ ] | |
 | a3 | [Summarize Conversation](acoes-highlevel-cat05.html#a3) | AI Summarize | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Extract Info](acoes-highlevel-cat05.html#a4) | AI Extract Data | 2 | 1/6 | 🟡 | [ ] | |
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Intent Detection | 2 | 2/6 | 🟡 | [ ] | |
@@ -268,6 +287,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a8 | [Tradução com IA](acoes-highlevel-cat05.html#a8) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
 | a9 | [Decisor com IA](acoes-highlevel-cat05.html#a9) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
 | a10 | [OpenRouter](acoes-highlevel-cat05.html#a10) | OpenRouter: Generate Response | 2 | 3/6 | 🟢 | [ ] | |
+| a11 | [Geração de Imagem com IA](acoes-highlevel-cat05.html#a11) | AI Image Generation | 0 | 2/6 | 🔴 | [ ] | |
+| a12 | [Geração de Vídeo com IA](acoes-highlevel-cat05.html#a12) | AI Video Generation | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -383,6 +404,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a7 | [Adicionar Registros Associados ao Workflow](acoes-highlevel-cat16.html#a7) | Add Associated Records to Workflow | 0 | 2/6 | 🔴 | [ ] | |
 | a8 | [Remover Registros Associados do Workflow](acoes-highlevel-cat16.html#a8) | Remove Associated Records from Workflow | 0 | 2/6 | 🔴 | [ ] | |
 | a9 | [Associar Registros](acoes-highlevel-cat16.html#a9) | Associate Records | 0 | 2/6 | 🔴 | [ ] | |
+| a10 | [Buscar Registro de Objeto](acoes-highlevel-cat16.html#a10) | Find Object Record | 0 | 2/6 | 🔴 | [ ] | |
+| a11 | [Buscar Empresa](acoes-highlevel-cat16.html#a11) | Find Company | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT17 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -399,3 +422,4 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a10 | [Eliza: Agendamento com IA](acoes-highlevel-cat17.html#a10) | Eliza AI Appointment Booking | 0 | 2/6 | 🔴 | [ ] | |
 | a11 | [Enviar pra Plataforma Eliza](acoes-highlevel-cat17.html#a11) | Send to Eliza Agent Platform | 0 | 2/6 | 🔴 | [ ] | |
 | a12 | [Invocar Agente (Agent Studio)](acoes-highlevel-cat17.html#a12) | Invoke Agent in Agent Studio | 0 | 2/6 | 🔴 | [ ] | |
+| a13 | [Invocar Agente Gerenciado](acoes-highlevel-cat17.html#a13) | Invoke Managed Agent | 0 | 2/6 | 🔴 | [ ] | |
