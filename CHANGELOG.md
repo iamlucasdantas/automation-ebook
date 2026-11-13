@@ -10,6 +10,33 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-13 — Content
+**Checagem de novidades nativas: +4 gatilhos, 1 ação corrigida (282 → 286)**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel. Detalhe, fontes e pendências em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-13--checagem-de-novidades-nativas).
+
+- **Gatilhos novos (4):** Event Checked In (`guia-highlevel-cat03.html`
+  G4) · Google Sheets — New Spreadsheet, New Spreadsheet Row, New
+  Worksheet (`guia-highlevel-cat13.html` G4–G6).
+- **Ação corrigida:** `acoes-highlevel-cat05.html` A2 passa de "AI Parse
+  Image" pra **AI Analyze Image** (nome oficial), com os campos reais —
+  Image URL, Prompt, Detail, Model — e sem o campo "Save Output to", que
+  não existe na ação.
+- **Não aplicados:** 5 gatilhos do Slack (nomes confirmados, mas sem
+  categoria onde caibam e com filtros incompletos), Register for
+  Ticketed/RSVP Event, AI Analyze Video, Payment Failed, Form Partially
+  Completed.
+- Nenhum item novo foi publicado pela HighLevel entre 12/11 e 13/11 — os
+  5 itens acima eram pendências que ganharam fonte oficial.
+- `index.html`: 102 gatilhos · 184 ações · 286 painéis · 210 mockups;
+  "Última atualização: 13 de novembro de 2026". `search-index.json` e
+  `AUDIT-TABLE.md` regenerados; `validate-mockups.js` OK nas 30 páginas;
+  `auto-refine.py --check` sem drift.
+- ⚠ Esta rodada e a de 12/11 seguem **sem merge na `main`** — o site
+  publicado continua no estado de 14/09.
+
 ## 2026-11-12 — Content + Automation
 **Checagem de novidades nativas: +11 gatilhos, +9 ações (262 → 282)**
 

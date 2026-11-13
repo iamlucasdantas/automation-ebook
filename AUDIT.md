@@ -492,6 +492,79 @@ Totais: **98 gatilhos + 184 ações = 282 painéis** · 210 mockups
 interativos (os 20 itens novos têm painel de configuração, sem mockup
 animado).
 
+## 🆕 Rodada 2026-11-13 — Checagem de novidades nativas
+
+Comparação do guia (98 gatilhos + 184 ações = 282, estado da rodada
+2026-11-12) contra o changelog oficial e a central de ajuda da HighLevel.
+`ideas.gohighlevel.com` e `help.gohighlevel.com` continuam bloqueados pra
+acesso direto neste ambiente — a verificação foi feita via WebSearch, que
+devolve resumos dessas páginas. Nenhum gatilho/ação novo foi publicado
+pela HighLevel entre 12/11 e 13/11; o que entrou nesta rodada são
+pendências de rodadas anteriores que agora têm nome e campos em fonte
+oficial.
+
+### ✅ Aplicados — 4 gatilhos
+
+| Gatilho | Página | Fonte oficial |
+|---|---|---|
+| Event Checked In (Labs) | `guia-highlevel-cat03.html` G4 | help "Events and Workflows Integration" (155000008431) |
+| Google Sheets · New Spreadsheet (Premium) | `guia-highlevel-cat13.html` G4 | changelog "Google Sheets: Trigger Workflows from New Spreadsheets, Rows, and Worksheets" |
+| Google Sheets · New Spreadsheet Row (Premium) | `guia-highlevel-cat13.html` G5 | idem |
+| Google Sheets · New Worksheet (Premium) | `guia-highlevel-cat13.html` G6 | idem |
+
+### ✅ Aplicado — 1 correção de ação (sem mudar o total)
+
+- **AI Parse Image → AI Analyze Image** (`acoes-highlevel-cat05.html` A2).
+  O artigo oficial "How to Use AI Analyze Image Action in HighLevel
+  Workflows" (155000008506) e o changelog "AI Analyze Image: New Workflow
+  Action" confirmam o nome e os campos reais: **Image URL** (link público
+  e direto pro arquivo), **Prompt** (aceita custom values), **Detail**
+  (Auto / High / Low) e **Model**. É ação Premium, processa uma imagem
+  por ação, e a resposta sai pelo seletor de custom values — não existe
+  campo "Save Output to", que foi removido do painel. Resolve o rename
+  pendente de cat05 A2.
+
+### ⚠ Pontos pra conferir na UI real
+
+- **Event Checked In** — a fonte só confirma o filtro por evento
+  (nome/tipo); documentei só esse.
+- **Google Sheets** — a forma exata do painel (um gatilho "Google Sheets"
+  com seletor de evento, ou três gatilhos separados na lista) não está
+  clara nas fontes; o guia trata como três itens com campo **Event**. Um
+  quarto gatilho ("linha atualizada"), citado no LevelUp Day, não aparece
+  no changelog — não foi documentado.
+- **AI Analyze Image** — o changelog cita nomes de modelos que não
+  consegui confirmar em segunda fonte; o painel mostra o dropdown
+  **Model** sem valor.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **Slack — 5 gatilhos premium**: os nomes agora estão confirmados no
+  artigo oficial "Slack Workflow Triggers: Setup, Filters & Examples"
+  (155000009492) — New Reaction Added, New Direct Message, User Invited
+  to Channel, New Mention, New Message Posted to Channel. Não entraram
+  porque (a) não existe categoria de gatilhos onde eles caibam — precisa
+  de decisão: categoria 14 nova ou outro lugar; (b) os filtros de New
+  Reaction Added e New Message Posted to Channel não foram obtidos (os
+  outros: canal obrigatório; DM com filtros opcionais de texto e
+  remetente).
+- **Register for Ticketed Event / Register for RSVP Event** — continuam
+  só em resumo de terceiros.
+- **AI Analyze Video**, **Payment Failed**, **Form Partially Completed**
+  — sem fonte oficial com campos.
+
+Totais: **102 gatilhos + 184 ações = 286 painéis** · 210 mockups
+interativos (os 4 gatilhos novos têm painel de configuração, sem mockup
+animado).
+
+### ⚠ Processo — nada chegou à `main` desde 14/09
+
+Esta rodada foi construída em cima da branch da rodada de 12/11
+(`claude/friendly-meitner-wond0r`), que por sua vez parte da `main`. As
+duas continuam **sem merge** — o site publicado segue no estado de 14/09
+(87 gatilhos + 175 ações). Pra publicar, basta mergear
+`claude/friendly-meitner-gwh4wb` na `main` (contém 12/11 + 13/11).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

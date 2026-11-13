@@ -10,7 +10,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 14 | **98** |
+| Gatilhos | 31 | 53 | 18 | **102** |
 | Ações | 39 | 90 | 55 | **184** |
 
 
@@ -67,6 +67,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Status de Compromisso](guia-highlevel-cat03.html#g1) | Appointment Status | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Contato Marcou Agendamento](guia-highlevel-cat03.html#g2) | Customer Booked Appointment | 4 | 4/6 | 🟢 | [ ] | |
 | g3 | [Inscrição em Evento](guia-highlevel-cat03.html#g3) | Event Registration | 0 | 2/6 | 🔴 | [ ] | |
+| g4 | [Check-in em Evento](guia-highlevel-cat03.html#g4) | Event Checked In | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT04 · Ciclo de Vida
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -165,6 +166,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Contato Google Criado](guia-highlevel-cat13.html#g1) | Google Contact Created | 2 | 2/6 | 🟡 | [ ] | |
 | g2 | [Novo Grupo de Contatos Google](guia-highlevel-cat13.html#g2) | New Google Contact Group | 3 | 2/6 | 🟡 | [ ] | |
 | g3 | [Resposta de Formulário Google](guia-highlevel-cat13.html#g3) | Google Form Response | 3 | 2/6 | 🟡 | [ ] | |
+| g4 | [Nova Planilha no Google Sheets](guia-highlevel-cat13.html#g4) | Google Sheets · New Spreadsheet | 0 | 2/6 | 🔴 | [ ] | |
+| g5 | [Nova Linha no Google Sheets](guia-highlevel-cat13.html#g5) | Google Sheets · New Spreadsheet Row | 0 | 2/6 | 🔴 | [ ] | |
+| g6 | [Nova Aba no Google Sheets](guia-highlevel-cat13.html#g6) | Google Sheets · New Worksheet | 0 | 2/6 | 🔴 | [ ] | |
 
 ## Ações · 14 categorias
 
@@ -274,7 +278,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | a1 | [Generate Text (Texto)](acoes-highlevel-cat05.html#a1) | AI Generate Text | 3 | 3/6 | 🟢 | [ ] | |
-| a2 | [Parse Image (Analisar Imagem)](acoes-highlevel-cat05.html#a2) | AI Parse Image | 3 | 2/6 | 🟡 | [ ] | |
+| a2 | [Analisar Imagem com IA](acoes-highlevel-cat05.html#a2) | AI Analyze Image | 3 | 2/6 | 🟡 | [ ] | |
 | a3 | [Summarize Conversation](acoes-highlevel-cat05.html#a3) | AI Summarize | 3 | 3/6 | 🟢 | [ ] | |
 | a4 | [Extract Info](acoes-highlevel-cat05.html#a4) | AI Extract Data | 2 | 1/6 | 🟡 | [ ] | |
 | a5 | [Classify](acoes-highlevel-cat05.html#a5) | AI Intent Detection | 2 | 2/6 | 🟡 | [ ] | |
