@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 53 | 18 | **102** |
-| Ações | 39 | 90 | 55 | **184** |
+| Ações | 39 | 90 | 56 | **185** |
 
 
 ## Gatilhos · 12 categorias
@@ -289,6 +289,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a10 | [OpenRouter](acoes-highlevel-cat05.html#a10) | OpenRouter: Generate Response | 2 | 3/6 | 🟢 | [ ] | |
 | a11 | [Geração de Imagem com IA](acoes-highlevel-cat05.html#a11) | AI Image Generation | 0 | 2/6 | 🔴 | [ ] | |
 | a12 | [Geração de Vídeo com IA](acoes-highlevel-cat05.html#a12) | AI Video Generation | 0 | 2/6 | 🔴 | [ ] | |
+| a13 | [Analisar Vídeo com IA](acoes-highlevel-cat05.html#a13) | AI Analyze Video | 0 | 1/6 | 🔴 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

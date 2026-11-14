@@ -10,6 +10,32 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-14 — Content
+**Checagem de novidades nativas: +1 ação (AI Analyze Video) (286 → 287)**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel. Detalhe, fontes e pendências em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-14--checagem-de-novidades-nativas).
+
+- **Ação nova (1):** **AI Analyze Video** (`acoes-highlevel-cat05.html`
+  A13) — Video URL + Prompt, ação Premium em AI Actions. Era pendência
+  das rodadas de 12/11 e 13/11; o changelog oficial "AI Analyze Video:
+  New Workflow Action" agora dá os campos.
+- **Fix de navegação:** side-nav do `acoes-highlevel-cat05.html` dizia
+  "10 ações" e os itens 09 e 10 apontavam pra âncora errada (`#a8` e
+  `#a9`); agora diz 13 e aponta pra `#a9` e `#a10`.
+- **Não aplicados:** 5 gatilhos do Slack, Register for Ticketed/RSVP
+  Event, Payment Failed, Form Partially Completed (mesmos motivos de
+  13/11).
+- Nenhum gatilho ou ação novo foi publicado pela HighLevel entre 13/11 e
+  14/11.
+- `index.html`: 102 gatilhos · 185 ações · 287 painéis · 210 mockups;
+  "Última atualização: 14 de novembro de 2026". `search-index.json` e
+  `AUDIT-TABLE.md` regenerados; `validate-mockups.js` OK nas 30 páginas;
+  `auto-refine.py --check` sem drift.
+- ⚠ As rodadas de 12/11, 13/11 e esta seguem **sem merge na `main`** — o
+  site publicado continua no estado de 14/09.
+
 ## 2026-11-13 — Content
 **Checagem de novidades nativas: +4 gatilhos, 1 ação corrigida (282 → 286)**
 

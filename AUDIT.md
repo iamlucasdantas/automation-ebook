@@ -565,6 +565,59 @@ duas continuam **sem merge** — o site publicado segue no estado de 14/09
 (87 gatilhos + 175 ações). Pra publicar, basta mergear
 `claude/friendly-meitner-gwh4wb` na `main` (contém 12/11 + 13/11).
 
+## 🆕 Rodada 2026-11-14 — Checagem de novidades nativas
+
+Comparação do guia (102 gatilhos + 184 ações = 286, estado da rodada
+2026-11-13) contra o changelog oficial e a central de ajuda da HighLevel.
+`ideas.gohighlevel.com` e `help.gohighlevel.com` continuam bloqueados pra
+acesso direto neste ambiente — a verificação foi feita via WebSearch, que
+devolve resumos dessas páginas. Nenhum gatilho/ação novo foi publicado
+pela HighLevel entre 13/11 e 14/11.
+
+### ✅ Aplicado — 1 ação
+
+- **AI Analyze Video** (`acoes-highlevel-cat05.html` A13). Fonte:
+  changelog oficial "AI Analyze Video: New Workflow Action"
+  (`ideas.gohighlevel.com/changelog/ai-analyze-video-new-workflow-action`).
+  Fica em AI Actions; campos **Video URL** (link público pra MP4, MOV,
+  WebM, MPEG, FLV, WMV ou 3GP, fixo ou dinâmico) e **Prompt** (aceita
+  custom values). Ação Premium, cobrada por execução conforme tokens;
+  uma URL de vídeo por ação; dá pra testar no builder antes de publicar.
+
+### 🐛 Fix de navegação
+
+- Side-nav do `acoes-highlevel-cat05.html`: o rótulo dizia "10 ações" e
+  os itens 09 (Decisor com IA) e 10 (OpenRouter) apontavam pra `#a8` e
+  `#a9`. Corrigido pra 13 ações, `#a9` e `#a10`.
+
+### ⚠ Pontos pra conferir na UI real
+
+- **AI Analyze Video** — o changelog não lista todos os rótulos do
+  painel; documentei só Video URL e Prompt. Um resumo cita o Google
+  Gemini como modelo, outro não confirma — o guia não cita modelo.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **Slack — 5 gatilhos premium** — segue igual a 13/11: nomes
+  confirmados, mas falta decidir a categoria e faltam os filtros de New
+  Reaction Added e New Message Posted to Channel (o artigo oficial só
+  mostra esses dois em captura de tela).
+- **Register for Ticketed Event / Register for RSVP Event** — só em
+  resumo de terceiros; o artigo oficial "Events and Workflows
+  Integration" não cita essas ações.
+- **Payment Failed**, **Form Partially Completed** — só em guia de
+  terceiros.
+
+Totais: **102 gatilhos + 185 ações = 287 painéis** · 210 mockups
+interativos (a ação nova tem painel de configuração, sem mockup animado).
+
+### ⚠ Processo
+
+O PR #23 (`claude/friendly-meitner-gwh4wb`, rodadas de 12/11 e 13/11)
+segue aberto. Esta rodada foi feita em cima dele, na branch
+`claude/friendly-meitner-kedekw`, que contém as três rodadas. O site
+publicado continua no estado de 14/09 (87 gatilhos + 175 ações).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
