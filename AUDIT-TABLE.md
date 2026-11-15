@@ -11,7 +11,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
 | Gatilhos | 31 | 53 | 18 | **102** |
-| Ações | 39 | 90 | 56 | **185** |
+| Ações | 40 | 89 | 57 | **186** |
 
 
 ## Gatilhos · 12 categorias
@@ -265,7 +265,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a14 | [Jump to Action](acoes-highlevel-cat04.html#a14) | Jump to Action | 2 | 2/6 | 🟡 | [ ] | |
 | a15 | [Stop Workflow](acoes-highlevel-cat04.html#a15) | Stop Workflow | 3 | 1/6 | 🟡 | [ ] | |
 | a16 | [Restart Workflow](acoes-highlevel-cat04.html#a16) | Restart Workflow | 3 | 1/6 | 🟡 | [ ] | |
-| a17 | [Split (Teste A/B)](acoes-highlevel-cat04.html#a17) | Split | 3 | 1/6 | 🟡 | [ ] | |
+| a17 | [Split (Divisão)](acoes-highlevel-cat04.html#a17) | Split | 3 | 3/6 | 🟢 | [ ] | |
 | a18 | [Formatar Data/Hora](acoes-highlevel-cat04.html#a18) | Date/Time Formatter | 2 | 3/6 | 🟡 | [ ] | |
 | a19 | [Formatar Número](acoes-highlevel-cat04.html#a19) | Number Formatter | 2 | 3/6 | 🟡 | [ ] | |
 | a20 | [Formatar Array](acoes-highlevel-cat04.html#a20) | Array Formatter | 2 | 3/6 | 🟡 | [ ] | |
@@ -273,6 +273,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a22 | [Drip (Liberação em Lotes)](acoes-highlevel-cat04.html#a22) | Drip | 0 | 2/6 | 🔴 | [ ] | |
 | a23 | [Router (Roteador)](acoes-highlevel-cat04.html#a23) | Router | 0 | 2/6 | 🔴 | [ ] | |
 | a24 | [Loop (Repetir)](acoes-highlevel-cat04.html#a24) | Loop | 0 | 2/6 | 🔴 | [ ] | |
+| a25 | [Teste A/B](acoes-highlevel-cat04.html#a25) | A/B Test | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT05 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 287,
+  "total": 288,
   "items": [
     {
       "id": "g1",
@@ -2445,14 +2445,14 @@
     {
       "id": "a17",
       "type": "Ação",
-      "name": "Split (Teste A/B)",
+      "name": "Split (Divisão)",
       "en": "Split",
       "category": "Ação",
       "tags": [
         "Novo"
       ],
       "description": "",
-      "keywords": "split teste ab a/b experimento random percentage",
+      "keywords": "split divisão teste ab a/b experimento random split even split weighted split percentual distribuição",
       "href": "acoes-highlevel-cat04.html#a17"
     },
     {
@@ -2549,6 +2549,19 @@
       "description": "Executa as ações que estão dentro dele uma vez pra cada item de uma lista — ou uma vez pra cada número de um intervalo. Em \"Loop Over\" você escolhe entre A list of items e A range of numbers.",
       "keywords": "loop repetir iteração lista de itens intervalo de números loop item",
       "href": "acoes-highlevel-cat04.html#a24"
+    },
+    {
+      "id": "a25",
+      "type": "Ação",
+      "name": "Teste A/B",
+      "en": "A/B Test",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "Divide os contatos em partes iguais entre 2 a 10 caminhos, mede cada caminho contra uma mesma meta de conversão e, quando o teste termina, aponta o vencedor — o caminho com a maior taxa de conversão.",
+      "keywords": "teste a/b ab test a/b test comparar caminhos vencedor winner conversão declare winner reset test experimento",
+      "href": "acoes-highlevel-cat04.html#a25"
     },
     {
       "id": "a1",

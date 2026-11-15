@@ -618,6 +618,78 @@ segue aberto. Esta rodada foi feita em cima dele, na branch
 `claude/friendly-meitner-kedekw`, que contém as três rodadas. O site
 publicado continua no estado de 14/09 (87 gatilhos + 175 ações).
 
+## 🆕 Rodada 2026-11-15 — Checagem de novidades nativas
+
+Comparação do guia (102 gatilhos + 185 ações = 287, estado da rodada
+2026-11-14) contra o changelog oficial e a central de ajuda da HighLevel.
+`ideas.gohighlevel.com` e `help.gohighlevel.com` continuam bloqueados pra
+acesso direto neste ambiente — a verificação foi feita via WebSearch, que
+devolve resumos dessas páginas.
+
+### ✅ Aplicado — 1 ação nova
+
+- **A/B Test** (`acoes-highlevel-cat04.html` A25). Fontes: help "How to
+  Configure A/B Tests in HighLevel Workflows" (155000009305,
+  `workflow-action-a-b-test`) e changelog "A/B Test Action: Compare
+  Workflow Paths and Route Contacts to the Winner". Divide igualmente
+  entre 2 a 10 caminhos; meta de conversão (cliques em emails
+  selecionados do workflow, tag ou condição de custom field, pagamento
+  concluído); fim do teste por contatos que entraram, metas atingidas ou
+  data e hora; depois do vencedor, manda novos contatos pra ele ou segue
+  dividindo igual; selo Winner no canvas; empate → primeiro caminho;
+  Declare winner e Reset test. É ação separada do Split. Anunciada no
+  LevelUp Day (27/10); a data da entrada no changelog não foi obtida.
+
+### ✅ Aplicado — 1 ação atualizada (sem mudar o total)
+
+- **Split** (`acoes-highlevel-cat04.html` A17). Fonte: changelog de
+  12/11/2026 "Split Action: Now distribute contacts with Even split and
+  Weighted split". Even split (rodízio igual), Weighted split (rodízio
+  por percentuais inteiros que somam 100%) e Random split (o
+  comportamento antigo, mantido). Distribuição trava depois que contatos
+  entram num Even/Weighted split; Reset test destrava, zera as
+  estatísticas e reinicia o rodízio. Título PT trocado de "Split (Teste
+  A/B)" pra "Split (Divisão)".
+
+### 🐛 Fix de navegação
+
+- Side-nav do `acoes-highlevel-cat04.html`: rótulo dizia "17 ações";
+  corrigido pra 25.
+
+### ⚠ Pontos pra conferir na UI real
+
+- **A/B Test** — as fontes descrevem as opções, mas não obtive os
+  rótulos exatos dos campos em inglês. O painel usa rótulos descritivos
+  em português e avisa isso. O post do LevelUp Day cita também
+  "appointments" como critério de vencedor; o changelog não — ficou de
+  fora.
+- **Split** — o rótulo do dropdown que escolhe o tipo de distribuição não
+  foi obtido (o painel mostra "Tipo de distribuição"). O limite "até 5
+  branches" já estava no guia e vem de fonte de terceiros.
+- O `configData` do nó de mockup `a17-2` (gerado pelo `auto-refine.py`)
+  ainda mostra "Split Type: Random Percentage" e "Winner Metric", que
+  não batem com a ação Split real. Não mexi — é regenerado
+  mecanicamente; precisa de ajuste no mockup.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **Slack — 5 gatilhos premium**, **Register for Ticketed Event /
+  Register for RSVP Event**, **Payment Failed**, **Form Partially
+  Completed** — sem mudança desde 14/11.
+- Vistos nesta busca e que não são gatilho/ação: Workflow Maps (limpeza
+  de workflows e pastas vazias, 10/11) e análises do Workflow AI (09/11).
+
+Totais: **102 gatilhos + 186 ações = 288 painéis** · 210 mockups
+interativos (a ação nova tem painel de configuração, sem mockup animado).
+
+### ⚠ Processo
+
+O PR #23 (`claude/friendly-meitner-gwh4wb`, rodadas de 12/11 e 13/11)
+segue aberto. Esta rodada foi feita em cima da de 14/11, na branch
+`claude/friendly-meitner-z80u3c`, que contém as quatro rodadas (12 a
+15/11). O site publicado continua no estado de 14/09 (87 gatilhos + 175
+ações).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

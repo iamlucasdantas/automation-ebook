@@ -10,6 +10,38 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-15 — Content
+**Checagem de novidades nativas: +1 ação (A/B Test) e Split com 3 modos (287 → 288)**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel. Detalhe, fontes e pendências em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-15--checagem-de-novidades-nativas).
+
+- **Ação nova (1):** **A/B Test** (`acoes-highlevel-cat04.html` A25) —
+  divide igualmente entre 2 a 10 caminhos, mede contra uma meta de
+  conversão, declara vencedor e pode mandar os novos contatos pra ele.
+  Fontes: help "Workflow Action - A/B Test" (155000009305) e changelog
+  "A/B Test Action: Compare Workflow Paths and Route Contacts to the
+  Winner".
+- **Ação atualizada:** **Split** (`acoes-highlevel-cat04.html` A17) —
+  changelog de 12/11 "Split Action: Now distribute contacts with Even
+  split and Weighted split". Texto e painel agora cobrem Even split,
+  Weighted split e Random split, a trava de configuração e o Reset test.
+  Título PT passa de "Split (Teste A/B)" pra "Split (Divisão)", pra não
+  confundir com a ação A/B Test.
+- **Fix de navegação:** side-nav do `acoes-highlevel-cat04.html` dizia
+  "17 ações"; agora diz 25.
+- **Não aplicados:** 5 gatilhos do Slack, Register for Ticketed/RSVP
+  Event, Payment Failed, Form Partially Completed (mesmos motivos de
+  14/11).
+- `index.html`: 102 gatilhos · 186 ações · 288 painéis · 210 mockups;
+  card Ferramentas Internas 24 → 25; "Última atualização: 15 de novembro
+  de 2026". `search-index.json` e `AUDIT-TABLE.md` regenerados;
+  `validate-mockups.js` OK nas 30 páginas; `auto-refine.py --check` sem
+  drift.
+- ⚠ As rodadas de 12/11 a 15/11 seguem **sem merge na `main`** — o site
+  publicado continua no estado de 14/09.
+
 ## 2026-11-14 — Content
 **Checagem de novidades nativas: +1 ação (AI Analyze Video) (286 → 287)**
 
