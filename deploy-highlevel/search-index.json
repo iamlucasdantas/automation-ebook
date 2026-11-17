@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 262,
+  "total": 263,
   "items": [
     {
       "id": "g1",
@@ -836,6 +836,21 @@
     {
       "id": "g3",
       "type": "Gatilho",
+      "name": "Orçamento (Estimate)",
+      "en": "Estimate",
+      "category": "Recebimento",
+      "tags": [
+        "Tempo real",
+        "Financeiro",
+        "Vendas"
+      ],
+      "description": "Dispara quando um orçamento (estimate) muda de status — enviado, visualizado, aceito, recusado ou convertido em fatura. É o gatilho que transforma proposta parada em follow-up automático, sem ninguém precisar lembrar de cobrar resposta.",
+      "keywords": "orçamento (estimate) estimate estimates orcamento proposta proposal",
+      "href": "guia-highlevel-cat07.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
       "name": "Ordem em Formulário",
       "en": "Order Form Submission",
       "category": "Ordens de Compra",
@@ -845,10 +860,10 @@
       ],
       "description": "Dispara quando um formulário com informação de pagamento é preenchido — mas o pagamento NÃO precisa ter sido concluído. Ideal pra capturar leads que começaram o checkout.",
       "keywords": "ordem em formulário order form submission",
-      "href": "guia-highlevel-cat07.html#g3"
+      "href": "guia-highlevel-cat07.html#g4"
     },
     {
-      "id": "g4",
+      "id": "g5",
       "type": "Gatilho",
       "name": "Ordem Submetida",
       "en": "Order Submitted",
@@ -859,10 +874,10 @@
       ],
       "description": "Dispara quando um pedido é CONCLUÍDO com pagamento bem-sucedido. Diferente do \"Ordem em Formulário\", aqui é a venda realizada.",
       "keywords": "ordem submetida order submitted",
-      "href": "guia-highlevel-cat07.html#g4"
+      "href": "guia-highlevel-cat07.html#g5"
     },
     {
-      "id": "g5",
+      "id": "g6",
       "type": "Gatilho",
       "name": "Documentos e Contratos",
       "en": "Documents & Contracts",
@@ -873,10 +888,10 @@
       ],
       "description": "Dispara em mudanças de status de documentos/contratos — enviados, visualizados, assinados, completados.",
       "keywords": "documentos e contratos documents & contracts",
-      "href": "guia-highlevel-cat07.html#g5"
+      "href": "guia-highlevel-cat07.html#g6"
     },
     {
-      "id": "g6",
+      "id": "g7",
       "type": "Gatilho",
       "name": "Assinatura (Subscription)",
       "en": "Subscription",
@@ -887,10 +902,10 @@
       ],
       "description": "Dispara em mudanças de status de assinaturas recorrentes — ativação, cancelamento, trial, em atraso, falha, expiração.",
       "keywords": "assinatura (subscription) subscription",
-      "href": "guia-highlevel-cat07.html#g6"
+      "href": "guia-highlevel-cat07.html#g7"
     },
     {
-      "id": "g7",
+      "id": "g8",
       "type": "Gatilho",
       "name": "Reembolso",
       "en": "Refund",
@@ -901,10 +916,10 @@
       ],
       "description": "Dispara em qualquer reembolso — sucesso ou falha, total ou parcial, de qualquer origem (calendar, invoice, funnel, membership, etc.).",
       "keywords": "reembolso refund",
-      "href": "guia-highlevel-cat07.html#g7"
+      "href": "guia-highlevel-cat07.html#g8"
     },
     {
-      "id": "g8",
+      "id": "g9",
       "type": "Gatilho",
       "name": "Cupom Aplicado",
       "en": "Coupon Code Applied",
@@ -915,10 +930,10 @@
       ],
       "description": "Dispara no momento em que um cupom é aplicado no checkout — independentemente de a compra ser finalizada. Indica alta intenção de compra.",
       "keywords": "cupom aplicado coupon code applied",
-      "href": "guia-highlevel-cat07.html#g8"
+      "href": "guia-highlevel-cat07.html#g9"
     },
     {
-      "id": "g9",
+      "id": "g10",
       "type": "Gatilho",
       "name": "Limite de Cupom Atingido",
       "en": "Coupon Redemption Limit Reached",
@@ -929,10 +944,10 @@
       ],
       "description": "Dispara quando um cupom com limite máximo de resgates atinge esse limite (após a última transação bem-sucedida).",
       "keywords": "limite de cupom atingido coupon redemption limit reached",
-      "href": "guia-highlevel-cat07.html#g9"
+      "href": "guia-highlevel-cat07.html#g10"
     },
     {
-      "id": "g10",
+      "id": "g11",
       "type": "Gatilho",
       "name": "Cupom Expirado",
       "en": "Coupon Code Expired",
@@ -943,7 +958,7 @@
       ],
       "description": "Dispara quando um cupom atinge data de expiração e se torna inativo. Avaliação é feita pelo sistema quando o momento chega.",
       "keywords": "cupom expirado coupon code expired",
-      "href": "guia-highlevel-cat07.html#g10"
+      "href": "guia-highlevel-cat07.html#g11"
     },
     {
       "id": "g1",
