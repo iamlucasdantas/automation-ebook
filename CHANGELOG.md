@@ -10,6 +10,36 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-18 — Content
+**Checagem de novidades nativas: +1 gatilho, +9 ações, Split atualizado**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel (período desde 2026-09-14). Só itens nativos da
+própria HighLevel com fonte oficial. Detalhe completo, fontes e pendências
+em [AUDIT.md](./AUDIT.md#-rodada-2026-11-18--checagem-de-novidades-nativas).
+
+- **Novas ações (9):** Router (A23) e Loop (A24) em
+  `acoes-highlevel-cat04.html`; WhatsApp Typing Indicator (A38) e Add
+  Internal Comment (A39) em `acoes-highlevel-cat02.html`; AI Image
+  Generation (A11), AI Video Generation (A12) e AI Analyze Video (A13) em
+  `acoes-highlevel-cat05.html`; Find Object Record (A10) e Find Company
+  (A11) em `acoes-highlevel-cat16.html`.
+- **Novo gatilho (1):** Social Planner Posts (G4) em
+  `guia-highlevel-cat10.html`.
+- **Enhancement:** Split (cat04 A17) agora documenta Even split e Weighted
+  split (lançados em 12/11/2026) além do Random split.
+- 🐛 **Drift corrigido:** `index.html` não tinha contado o gatilho Estimate
+  de 17/11 (dizia 87, real 88) e 9 cards de categoria tinham contagem
+  antiga; labels internos de cat02/cat04/cat16 e 2 links do side-nav do
+  cat05 também corrigidos.
+- **Não aplicados** (beta/Labs, sem campo confirmado ou integração de
+  terceiros): Association Created, Event Registration + Register for
+  Event, Invoke Managed Agent, rename AI Parse Image → AI Analyze Image,
+  gatilhos de Google Sheets, Slack, Jotform.
+- Totais: **89 gatilhos + 184 ações = 273 painéis**, 219 mockups.
+  `index.html` com "Última atualização: 18 de novembro de 2026".
+  `validate-mockups.js`: 30 páginas OK; `auto-refine.py --check`: 0 drift.
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

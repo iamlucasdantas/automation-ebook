@@ -406,6 +406,108 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-11-18 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (88 gatilhos + 175 ações = 263 painéis
+reais no HTML — a home ainda dizia 87/262 porque o gatilho **Orçamento
+(Estimate)**, adicionado em 17/11, não tinha sido contado no `index.html`)
+contra o changelog oficial e a central de ajuda da HighLevel, cobrindo o
+período desde a rodada de 2026-09-14. `ideas.gohighlevel.com` e
+`help.gohighlevel.com` seguem bloqueados por egress direto neste ambiente —
+a checagem leu o conteúdo oficial indiretamente via WebSearch. Só entraram
+itens **nativos da própria HighLevel** com nome e comportamento confirmados
+em fonte oficial; integrações de terceiros ficaram de fora.
+
+### ✅ Adicionado nesta rodada (+1 gatilho, +9 ações)
+1. **Ação — Router** · `acoes-highlevel-cat04.html` A23. Roda todos os
+   branches que derem match, em sequência (esquerda → direita); tipos de
+   branch Custom rules / Always run / Fallback. [Changelog](https://ideas.gohighlevel.com/changelog/router-new-workflow-action)
+2. **Ação — Loop** · `acoes-highlevel-cat04.html` A24. Loop Over: "A list
+   of items" ou "A range of numbers"; custom values de Loop Item. [Changelog](https://ideas.gohighlevel.com/changelog/loop-new-workflow-action)
+3. **Ação — WhatsApp Typing Indicator** · `acoes-highlevel-cat02.html` A38
+   (10/11/2026). Some em 25s ou quando a resposta chega; marca a mensagem
+   como lida. [Changelog](https://ideas.gohighlevel.com/changelog/whatsapp-typing-indicator-action-for-workflows)
+4. **Ação — Add Internal Comment** · `acoes-highlevel-cat02.html` A39
+   (semana de 12/10/2026). Comentário interno na conversa, com @menções.
+   [Changelog](https://ideas.gohighlevel.com/changelog/conversations-add-internal-comments-using-workflows)
+5. **Ação — AI Image Generation** · `acoes-highlevel-cat05.html` A11
+   (Premium). Model (GPT Image 2 + 3 modelos Gemini), Quality
+   (Auto/High/Medium/Low), até 5 imagens de referência, saída Image URL.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008497-workflow-action-ai-image-generation)
+6. **Ação — AI Video Generation** · `acoes-highlevel-cat05.html` A12.
+   Veo 3.1 Quality / Fast, Enhance Prompt, Generate Audio, saída Video URL.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000009513-workflow-action-ai-video-generation)
+7. **Ação — AI Analyze Video** · `acoes-highlevel-cat05.html` A13. Model
+   (Gemini), Video URL, Prompt; saída em texto. [Changelog](https://ideas.gohighlevel.com/changelog/ai-analyze-video-new-workflow-action)
+8. **Ação — Find Object Record** · `acoes-highlevel-cat16.html` A10 e
+9. **Ação — Find Company** · `acoes-highlevel-cat16.html` A11. Busca por
+   Record ID / External ID / filtros; múltiplos resultados Earliest /
+   Latest / All; branches Record Found / Record Not Found. (Não são de
+   2026-11 — estavam faltando no guia.) [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000006483-workflow-action-find-object-record-find-company)
+10. **Gatilho — Social Planner Posts** · `guia-highlevel-cat10.html` G4.
+    Dispara por status do post (Published, Failed…); filtros Category,
+    Platform, Post Status, Post Type, Social Account, Tags. [Changelog](https://ideas.gohighlevel.com/changelog/create-workflows-with-social-planner-posts)
+
+### ✅ Enhancement em item existente (sem mudar total)
+- **Split** (`acoes-highlevel-cat04.html` A17) — desde 12/11/2026 tem
+  **Even split** e **Weighted split** além do Random split; Even/Weighted
+  travam a configuração depois que contatos entram. [Changelog](https://ideas.gohighlevel.com/changelog/split-action-now-distribute-contacts-with-even-split-and-weighted-split)
+
+Totais: **89 gatilhos + 184 ações = 273 painéis**, 219 mockups interativos.
+
+### ⚠ Pontos pra você conferir na UI real
+Os nomes/comportamentos acima vêm de fonte oficial, mas alguns **rótulos
+de campo** não apareceram literalmente no que o WebSearch devolveu — o
+painel mostra o que é confirmado e explica o resto em texto de ajuda, sem
+inventar campo:
+- **WhatsApp Typing Indicator** — nome exato da ação no builder (o
+  changelog só diz "busque por typing indicator").
+- **Router** — rótulo do seletor de tipo de branch; **Loop** — rótulos dos
+  campos de início/fim no modo "A range of numbers" (não mostrados).
+- **Find Object Record / Find Company** — rótulos dos seletores de modo de
+  busca e de múltiplos resultados.
+- **AI Image Generation** — controles de saída (tamanho, fundo, formato)
+  citados no changelog, sem nome de campo.
+- **Social Planner Posts** — lista completa de status (Approved, Approval
+  Rejected, Approval Requested, Scheduled vêm de guia de terceiro; só
+  Published e Failed estão no changelog oficial).
+
+### 🔍 Candidatos encontrados, NÃO aplicados
+Nativos da HighLevel, mas ainda sem detalhe suficiente ou em beta:
+- **Association Created** (gatilho) — precisa ser ligado em Labs; filtros:
+  objeto associado + label da associação. Não existe categoria de gatilhos
+  de Objetos/Empresas no guia — entra junto com Custom Object/Company
+  Created/Changed quando sair de Labs. [Changelog](https://ideas.gohighlevel.com/changelog/association-created-trigger-start-workflows-when-crm-records-are-linked)
+- **Event Registration** (gatilho; filtros: registration status, evento,
+  booked by) + ações **Register for Ticketed Event / Register for RSVP
+  Event** — Events está em beta no Labs; ações sem campo confirmado.
+  [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008431-events-and-workflows-integration)
+- **Invoke Managed Agent** (ação) — só em fontes de terceiros; pode ser o
+  rename de "Invoke Agent in Agent Studio" (`acoes-highlevel-cat17.html`
+  A12), já que Super Agents viraram Managed Agents.
+- **AI Analyze Image** — a doc oficial usa esse nome; o guia tem a mesma
+  ação como "AI Parse Image" (`acoes-highlevel-cat05.html` A2). Candidato
+  a rename, não a item novo. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008506-workflow-action-ai-analyze-image)
+- **5 ações de registros associados na seção Opportunity** — private beta.
+- **Google Sheets** — 3 gatilhos novos (new spreadsheet, new spreadsheet
+  row, new worksheet), sem nome exato de campo. [Changelog](https://ideas.gohighlevel.com/changelog/google-sheets-trigger-workflows-from-new-spreadsheets-rows-and-worksheets)
+
+Integrações de terceiros (fora do escopo "só nativo"; apenas registradas):
+**Slack** (5 gatilhos novos), **Jotform** (New Submission, New Signed
+Document, Create Submission) — mais as pendentes das rodadas anteriores
+(Typeform, Calendly, HubSpot, Basecamp, Browse AI, Manus, Monday.com,
+Jira, Linear, Housecall Pro, Apify, Badge Issued).
+
+### 🐛 Drift de contagem corrigido nesta rodada
+- `index.html`: total de gatilhos estava 87 (real 88 desde o Estimate de
+  17/11) e os cards de 9 categorias mostravam contagens antigas (ex.:
+  Comunicação "29" com 37 no HTML; Pagamentos "10 gatilhos" com 11). Todos
+  os cards agora são recalculados a partir do `search-index.json`.
+- Labels internos de `acoes-highlevel-cat02/04/16.html` (hero, side-nav,
+  meta tags, rodapé) estavam defasados (29, 17/21 e "1").
+- `acoes-highlevel-cat05.html`: links do side-nav 09 e 10 apontavam pra
+  âncora errada (#a8/#a9) — corrigidos pra #a9/#a10.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

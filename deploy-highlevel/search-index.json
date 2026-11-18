@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 263,
+  "total": 273,
   "items": [
     {
       "id": "g1",
@@ -1060,6 +1060,20 @@
       "href": "guia-highlevel-cat10.html#g3"
     },
     {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Posts do Social Planner",
+      "en": "Social Planner Posts",
+      "category": "Social Planner",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara com base nos status e eventos de publicação dos posts do Social Planner. Os dois usos principais documentados pela HighLevel: Published — iniciar follow-ups quando um post é publicado com sucesso — e Failed — avisar o time quando um post falha ao publicar.",
+      "keywords": "posts do social planner social planner posts publicado falhou post status",
+      "href": "guia-highlevel-cat10.html#g4"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Acesso a Grupo",
@@ -1953,6 +1967,34 @@
       "href": "acoes-highlevel-cat02.html#a37"
     },
     {
+      "id": "a38",
+      "type": "Ação",
+      "name": "Indicador de Digitação no WhatsApp",
+      "en": "WhatsApp Typing Indicator",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "WhatsApp"
+      ],
+      "description": "",
+      "keywords": "indicador de digitação whatsapp typing indicator digitando visto azul",
+      "href": "acoes-highlevel-cat02.html#a38"
+    },
+    {
+      "id": "a39",
+      "type": "Ação",
+      "name": "Adicionar Comentário Interno",
+      "en": "Add Internal Comment",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Interno"
+      ],
+      "description": "",
+      "keywords": "adicionar comentário interno add internal comment conversa menção @mention time equipe",
+      "href": "acoes-highlevel-cat02.html#a39"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Webhook de Saída",
@@ -2230,7 +2272,7 @@
         "Novo"
       ],
       "description": "",
-      "keywords": "split teste ab a/b experimento random percentage",
+      "keywords": "split teste ab a/b experimento random percentage even split weighted split random split",
       "href": "acoes-highlevel-cat04.html#a17"
     },
     {
@@ -2301,6 +2343,34 @@
       "description": "",
       "keywords": "drip (liberação em lotes) drip",
       "href": "acoes-highlevel-cat04.html#a22"
+    },
+    {
+      "id": "a23",
+      "type": "Ação",
+      "name": "Router (Roteador de Caminhos)",
+      "en": "Router",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Lógica"
+      ],
+      "description": "",
+      "keywords": "router roteador múltiplos caminhos branches ramificação fallback always run custom rules",
+      "href": "acoes-highlevel-cat04.html#a23"
+    },
+    {
+      "id": "a24",
+      "type": "Ação",
+      "name": "Loop (Repetir Ações)",
+      "en": "Loop",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Lógica"
+      ],
+      "description": "",
+      "keywords": "loop repetir para cada item lista intervalo de números for each iteração loop item",
+      "href": "acoes-highlevel-cat04.html#a24"
     },
     {
       "id": "a1",
@@ -2438,6 +2508,50 @@
       "description": "",
       "keywords": "openrouter generate response",
       "href": "acoes-highlevel-cat05.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Geração de Imagem com IA",
+      "en": "AI Image Generation",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Premium",
+        "AI"
+      ],
+      "description": "",
+      "keywords": "geração de imagem com ia ai image generation gpt image gemini nano banana imagem",
+      "href": "acoes-highlevel-cat05.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Geração de Vídeo com IA",
+      "en": "AI Video Generation",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Premium",
+        "AI"
+      ],
+      "description": "",
+      "keywords": "geração de vídeo com ia ai video generation veo 3.1 vídeo",
+      "href": "acoes-highlevel-cat05.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Analisar Vídeo com IA",
+      "en": "AI Analyze Video",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "AI"
+      ],
+      "description": "",
+      "keywords": "analisar vídeo com ia ai analyze video gemini vídeo análise áudio",
+      "href": "acoes-highlevel-cat05.html#a13"
     },
     {
       "id": "a1",
@@ -3325,6 +3439,32 @@
       "description": "",
       "keywords": "associar registros associate records",
       "href": "acoes-highlevel-cat16.html#a9"
+    },
+    {
+      "id": "a10",
+      "type": "Ação",
+      "name": "Encontrar Registro de Objeto",
+      "en": "Find Object Record",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "encontrar registro de objeto find object record custom object buscar record found not found",
+      "href": "acoes-highlevel-cat16.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Encontrar Empresa",
+      "en": "Find Company",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "encontrar empresa find company buscar company record found not found domínio",
+      "href": "acoes-highlevel-cat16.html#a11"
     },
     {
       "id": "a1",
