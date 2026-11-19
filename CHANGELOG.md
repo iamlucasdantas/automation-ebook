@@ -10,6 +10,149 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-19 — Content
+**Checagem de novidades nativas (nada novo) + consolidação das rodadas de 12–15/11 com a `main`**
+
+Detalhe em [AUDIT.md](./AUDIT.md#-rodada-2026-11-19--checagem-de-novidades-nativas--consolidação).
+
+- **Novidades nativas:** nenhuma entre 15/11 e 19/11 (changelog oficial
+  só trouxe Managed Agents e Ad Manager nesses dias).
+- **Consolidação:** as rodadas de 12 a 15/11 (PR #23 + duas rodadas
+  seguintes) foram juntadas com a `main`, que em 17/11 ganhou o gatilho
+  Orçamento (Estimate) pelo PR #22. O gatilho existia nas duas linhas;
+  ficou a versão da `main` (`guia-highlevel-cat07.html` G3, com mockup e
+  o status Invoiced) e a duplicata G11 saiu.
+- `index.html`: 102 gatilhos · 186 ações · 288 painéis · mockups 210 →
+  211; card Pagamentos 10 → 11 mockups; "Última atualização: 19 de
+  novembro de 2026". `search-index.json` e `AUDIT-TABLE.md` regenerados;
+  `validate-mockups.js` OK nas 30 páginas; `auto-refine.py --check` sem
+  drift.
+- ⚠ Ainda **sem merge na `main`** — o site publicado segue mostrando
+  87 gatilhos + 175 ações.
+
+## 2026-11-15 — Content
+**Checagem de novidades nativas: +1 ação (A/B Test) e Split com 3 modos (287 → 288)**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel. Detalhe, fontes e pendências em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-15--checagem-de-novidades-nativas).
+
+- **Ação nova (1):** **A/B Test** (`acoes-highlevel-cat04.html` A25) —
+  divide igualmente entre 2 a 10 caminhos, mede contra uma meta de
+  conversão, declara vencedor e pode mandar os novos contatos pra ele.
+  Fontes: help "Workflow Action - A/B Test" (155000009305) e changelog
+  "A/B Test Action: Compare Workflow Paths and Route Contacts to the
+  Winner".
+- **Ação atualizada:** **Split** (`acoes-highlevel-cat04.html` A17) —
+  changelog de 12/11 "Split Action: Now distribute contacts with Even
+  split and Weighted split". Texto e painel agora cobrem Even split,
+  Weighted split e Random split, a trava de configuração e o Reset test.
+  Título PT passa de "Split (Teste A/B)" pra "Split (Divisão)", pra não
+  confundir com a ação A/B Test.
+- **Fix de navegação:** side-nav do `acoes-highlevel-cat04.html` dizia
+  "17 ações"; agora diz 25.
+- **Não aplicados:** 5 gatilhos do Slack, Register for Ticketed/RSVP
+  Event, Payment Failed, Form Partially Completed (mesmos motivos de
+  14/11).
+- `index.html`: 102 gatilhos · 186 ações · 288 painéis · 210 mockups;
+  card Ferramentas Internas 24 → 25; "Última atualização: 15 de novembro
+  de 2026". `search-index.json` e `AUDIT-TABLE.md` regenerados;
+  `validate-mockups.js` OK nas 30 páginas; `auto-refine.py --check` sem
+  drift.
+- ⚠ As rodadas de 12/11 a 15/11 seguem **sem merge na `main`** — o site
+  publicado continua no estado de 14/09.
+
+## 2026-11-14 — Content
+**Checagem de novidades nativas: +1 ação (AI Analyze Video) (286 → 287)**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel. Detalhe, fontes e pendências em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-14--checagem-de-novidades-nativas).
+
+- **Ação nova (1):** **AI Analyze Video** (`acoes-highlevel-cat05.html`
+  A13) — Video URL + Prompt, ação Premium em AI Actions. Era pendência
+  das rodadas de 12/11 e 13/11; o changelog oficial "AI Analyze Video:
+  New Workflow Action" agora dá os campos.
+- **Fix de navegação:** side-nav do `acoes-highlevel-cat05.html` dizia
+  "10 ações" e os itens 09 e 10 apontavam pra âncora errada (`#a8` e
+  `#a9`); agora diz 13 e aponta pra `#a9` e `#a10`.
+- **Não aplicados:** 5 gatilhos do Slack, Register for Ticketed/RSVP
+  Event, Payment Failed, Form Partially Completed (mesmos motivos de
+  13/11).
+- Nenhum gatilho ou ação novo foi publicado pela HighLevel entre 13/11 e
+  14/11.
+- `index.html`: 102 gatilhos · 185 ações · 287 painéis · 210 mockups;
+  "Última atualização: 14 de novembro de 2026". `search-index.json` e
+  `AUDIT-TABLE.md` regenerados; `validate-mockups.js` OK nas 30 páginas;
+  `auto-refine.py --check` sem drift.
+- ⚠ As rodadas de 12/11, 13/11 e esta seguem **sem merge na `main`** — o
+  site publicado continua no estado de 14/09.
+
+## 2026-11-13 — Content
+**Checagem de novidades nativas: +4 gatilhos, 1 ação corrigida (282 → 286)**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel. Detalhe, fontes e pendências em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-13--checagem-de-novidades-nativas).
+
+- **Gatilhos novos (4):** Event Checked In (`guia-highlevel-cat03.html`
+  G4) · Google Sheets — New Spreadsheet, New Spreadsheet Row, New
+  Worksheet (`guia-highlevel-cat13.html` G4–G6).
+- **Ação corrigida:** `acoes-highlevel-cat05.html` A2 passa de "AI Parse
+  Image" pra **AI Analyze Image** (nome oficial), com os campos reais —
+  Image URL, Prompt, Detail, Model — e sem o campo "Save Output to", que
+  não existe na ação.
+- **Não aplicados:** 5 gatilhos do Slack (nomes confirmados, mas sem
+  categoria onde caibam e com filtros incompletos), Register for
+  Ticketed/RSVP Event, AI Analyze Video, Payment Failed, Form Partially
+  Completed.
+- Nenhum item novo foi publicado pela HighLevel entre 12/11 e 13/11 — os
+  5 itens acima eram pendências que ganharam fonte oficial.
+- `index.html`: 102 gatilhos · 184 ações · 286 painéis · 210 mockups;
+  "Última atualização: 13 de novembro de 2026". `search-index.json` e
+  `AUDIT-TABLE.md` regenerados; `validate-mockups.js` OK nas 30 páginas;
+  `auto-refine.py --check` sem drift.
+- ⚠ Esta rodada e a de 12/11 seguem **sem merge na `main`** — o site
+  publicado continua no estado de 14/09.
+
+## 2026-11-12 — Content + Automation
+**Checagem de novidades nativas: +11 gatilhos, +9 ações (262 → 282)**
+
+Rotina automática comparou o guia contra o changelog oficial e a central
+de ajuda da HighLevel. Detalhe completo, fontes e pendências em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-12--checagem-de-novidades-nativas).
+
+- **Gatilhos novos (11):** Association Created, Company Created, Company
+  Changed (`guia-highlevel-cat01.html` G13–G15) · Event Registration
+  (`cat03` G3) · Client Portal File Uploaded (`cat06` G13) · Estimates
+  (`cat07` G11) · Viewed Product, Add to Cart, Product Review Submitted
+  (`cat08` G4–G6) · Social Planner Posts (`cat10` G4) · Requested to Join
+  Group (`cat11` G10).
+- **Ações novas (9):** WhatsApp Typing Indicator, Add Internal Comment
+  (`acoes-highlevel-cat02.html` A38–A39) · Router, Loop (`cat04` A23–A24)
+  · AI Image Generation, AI Video Generation (`cat05` A11–A12) · Find
+  Object Record, Find Company (`cat16` A10–A11) · Invoke Managed Agent
+  (`cat17` A13).
+- **Não aplicados** (sem nome/campos confirmados em fonte oficial):
+  Register for Ticketed/RSVP Event, AI Analyze Video/Image, gatilhos
+  premium de Google Sheets e Slack, Payment Failed, Form Partially
+  Completed. Integrações de terceiros ficaram de fora (só nativos).
+- 🐛 **Drift de contagem corrigido em 18 páginas** — hero-stat, meta
+  tags e rodapé agora batem com o número real de blocos; cards da home
+  idem.
+- ⚠ **Processo:** as ~60 rodadas diárias entre 15/09 e 11/11 foram
+  commitadas cada uma numa branch `claude/friendly-meitner-*` própria, a
+  partir de um snapshot de 24/08, e nenhuma chegou à `main` — o site
+  publicado ficou parado em 14/09. Esta rodada partiu da `main` atual e
+  consolida, revalidando contra fonte oficial, o que aquelas rodadas
+  tinham encontrado. Itens delas que não entraram: integrações de
+  terceiros (Jotform, Browse AI, Mistral) e itens sem fonte localizável
+  (Conversation SLA, Video Testimonial Received, "Invoked via API").
+- `index.html`: 98 gatilhos · 184 ações · 282 painéis · 210 mockups;
+  "Última atualização: 12 de novembro de 2026". `search-index.json` e
+  `AUDIT-TABLE.md` regenerados; `validate-mockups.js` OK nas 30 páginas;
+  `auto-refine.py --check` sem drift.
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

@@ -406,6 +406,337 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-11-12 — Checagem de novidades nativas
+
+Comparação do guia (87 gatilhos + 175 ações = 262, estado da `main` em
+14/09) contra o changelog oficial (`ideas.gohighlevel.com/changelog`), a
+central de ajuda (`help.gohighlevel.com`) e o post oficial do LevelUp Day
+2026. Esses hosts continuam bloqueados pra acesso direto neste ambiente —
+a verificação foi feita via WebSearch, que devolve resumos dessas páginas.
+Só entrou o que tem fonte oficial com nome exato; os campos dos painéis
+usam apenas o que as fontes descrevem.
+
+### ✅ Aplicados — 11 gatilhos
+
+| Gatilho | Página | Fonte oficial |
+|---|---|---|
+| Association Created (Labs) | `guia-highlevel-cat01.html` G13 | changelog "Association Created Trigger: Start Workflows When CRM Records Are Linked" |
+| Company Created | `guia-highlevel-cat01.html` G14 | help "Company Based Workflows - Company Triggers & Actions" (155000006688) |
+| Company Changed | `guia-highlevel-cat01.html` G15 | help "Workflow Trigger - Company Changed" (155000006494) |
+| Event Registration (Labs) | `guia-highlevel-cat03.html` G3 | help "Events and Workflows Integration" (155000008431) |
+| Client Portal File Uploaded | `guia-highlevel-cat06.html` G13 | changelog "Workflow Trigger for file uploads via Client Portal" |
+| Estimates | `guia-highlevel-cat07.html` G11 (em 19/11 passou a ser o G3 "Orçamento (Estimate)" vindo da `main`) | help "Trigger - Estimates" (155000003704) |
+| Viewed Product | `guia-highlevel-cat08.html` G4 | post LevelUp Day 2026 (categoria Ecommerce Stores) |
+| Add to Cart | `guia-highlevel-cat08.html` G5 | post LevelUp Day 2026 (categoria Ecommerce Stores) |
+| Product Review Submitted | `guia-highlevel-cat08.html` G6 | help 155000007386 |
+| Social Planner Posts | `guia-highlevel-cat10.html` G4 | changelog "Create Workflows with Social Planner Posts" |
+| Requested to Join Group | `guia-highlevel-cat11.html` G10 | help "Automate Group Join Requests with Workflows" (155000008439) |
+
+### ✅ Aplicados — 9 ações
+
+| Ação | Página | Fonte oficial |
+|---|---|---|
+| WhatsApp Typing Indicator | `acoes-highlevel-cat02.html` A38 | changelog "WhatsApp typing indicator action for workflows" (10/11) |
+| Add Internal Comment | `acoes-highlevel-cat02.html` A39 | changelog "Conversations: Add Internal Comments Using Workflows" |
+| Router | `acoes-highlevel-cat04.html` A23 | changelog "Router: New Workflow Action" |
+| Loop | `acoes-highlevel-cat04.html` A24 | changelog "Loop: New Workflow Action" |
+| AI Image Generation | `acoes-highlevel-cat05.html` A11 | help 155000008497 + changelog (incl. reference images) |
+| AI Video Generation | `acoes-highlevel-cat05.html` A12 | changelog "AI Video Generation: New Workflow Action" |
+| Find Object Record | `acoes-highlevel-cat16.html` A10 | help 155000006483 |
+| Find Company | `acoes-highlevel-cat16.html` A11 | help 155000006483 |
+| Invoke Managed Agent | `acoes-highlevel-cat17.html` A13 | help 155000008858 |
+
+### ⚠ Pontos pra conferir na UI real (aplicados com o que a fonte dá)
+
+- **Viewed Product / Add to Cart** — o post oficial cita filtros "produto,
+  valor do carrinho ou duração" sem dizer qual pertence a qual gatilho; um
+  blog de terceiros lista outros (store, order source, checkout status).
+  Documentei só os do post oficial.
+- **Client Portal File Uploaded** — nenhuma fonte lista filtros; painel
+  mostra o gatilho sem filtro obrigatório.
+- **Router** — as fontes não dizem se existe branch de fallback/"None";
+  não documentei nenhuma.
+- **Loop** — as fontes não confirmam limite de iterações; não documentei.
+- **Invoke Managed Agent** — rótulos exatos dos campos (Agent /
+  Instructions) inferidos da descrição do release, não de screenshot.
+- **Company Created / Company Changed / Association Created** foram pra
+  cat01 (Contatos) por falta de categoria própria de gatilhos de
+  Empresas/Objetos — vale decidir se merecem uma categoria nova.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **Register for Ticketed Event / Register for RSVP Event** (ações do
+  módulo Events) — nomes só aparecem num resumo de terceiros
+  (netpartners.marketing, semana 12–16/10); o artigo oficial confirma só o
+  gatilho. Sem campos.
+- **AI Analyze Video** e **AI Analyze Image** — existem no changelog
+  oficial, mas sem lista de campos. Analyze Image pode ser rename da nossa
+  "AI Parse Image" (cat05 A2).
+- **Google Sheets — 4 gatilhos premium** (planilha criada, aba criada,
+  linha adicionada, linha atualizada) e **Slack — 5 gatilhos premium**:
+  anunciados no LevelUp Day 2026, nomes exatos não obtidos.
+- **Payment Failed** e **Form Partially Completed** (gatilhos) — só em
+  resumo de terceiros (rsla.io).
+- Integrações de terceiros vistas no changelog (Todoist, Linear, Browse
+  AI, Jotform, Vapi, Mistral AI) — **fora do escopo** ("só nativos");
+  Mistral foi removida a pedido em 14/09 e não foi recolocada.
+
+### 🧹 Drift de contagem corrigido
+
+Hero-stat, meta tags, hero-desc e rodapé de 18 páginas agora batem com o
+número real de blocos no HTML (ex.: Ações cat02 dizia 29 e tinha 37;
+cat08 dizia 5 e tinha 9; cat16/cat17 mostravam "1"). Os cards da home
+também. O total do site (`search-index.json`) nunca esteve errado.
+
+Totais: **98 gatilhos + 184 ações = 282 painéis** · 210 mockups
+interativos (os 20 itens novos têm painel de configuração, sem mockup
+animado).
+
+## 🆕 Rodada 2026-11-13 — Checagem de novidades nativas
+
+Comparação do guia (98 gatilhos + 184 ações = 282, estado da rodada
+2026-11-12) contra o changelog oficial e a central de ajuda da HighLevel.
+`ideas.gohighlevel.com` e `help.gohighlevel.com` continuam bloqueados pra
+acesso direto neste ambiente — a verificação foi feita via WebSearch, que
+devolve resumos dessas páginas. Nenhum gatilho/ação novo foi publicado
+pela HighLevel entre 12/11 e 13/11; o que entrou nesta rodada são
+pendências de rodadas anteriores que agora têm nome e campos em fonte
+oficial.
+
+### ✅ Aplicados — 4 gatilhos
+
+| Gatilho | Página | Fonte oficial |
+|---|---|---|
+| Event Checked In (Labs) | `guia-highlevel-cat03.html` G4 | help "Events and Workflows Integration" (155000008431) |
+| Google Sheets · New Spreadsheet (Premium) | `guia-highlevel-cat13.html` G4 | changelog "Google Sheets: Trigger Workflows from New Spreadsheets, Rows, and Worksheets" |
+| Google Sheets · New Spreadsheet Row (Premium) | `guia-highlevel-cat13.html` G5 | idem |
+| Google Sheets · New Worksheet (Premium) | `guia-highlevel-cat13.html` G6 | idem |
+
+### ✅ Aplicado — 1 correção de ação (sem mudar o total)
+
+- **AI Parse Image → AI Analyze Image** (`acoes-highlevel-cat05.html` A2).
+  O artigo oficial "How to Use AI Analyze Image Action in HighLevel
+  Workflows" (155000008506) e o changelog "AI Analyze Image: New Workflow
+  Action" confirmam o nome e os campos reais: **Image URL** (link público
+  e direto pro arquivo), **Prompt** (aceita custom values), **Detail**
+  (Auto / High / Low) e **Model**. É ação Premium, processa uma imagem
+  por ação, e a resposta sai pelo seletor de custom values — não existe
+  campo "Save Output to", que foi removido do painel. Resolve o rename
+  pendente de cat05 A2.
+
+### ⚠ Pontos pra conferir na UI real
+
+- **Event Checked In** — a fonte só confirma o filtro por evento
+  (nome/tipo); documentei só esse.
+- **Google Sheets** — a forma exata do painel (um gatilho "Google Sheets"
+  com seletor de evento, ou três gatilhos separados na lista) não está
+  clara nas fontes; o guia trata como três itens com campo **Event**. Um
+  quarto gatilho ("linha atualizada"), citado no LevelUp Day, não aparece
+  no changelog — não foi documentado.
+- **AI Analyze Image** — o changelog cita nomes de modelos que não
+  consegui confirmar em segunda fonte; o painel mostra o dropdown
+  **Model** sem valor.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **Slack — 5 gatilhos premium**: os nomes agora estão confirmados no
+  artigo oficial "Slack Workflow Triggers: Setup, Filters & Examples"
+  (155000009492) — New Reaction Added, New Direct Message, User Invited
+  to Channel, New Mention, New Message Posted to Channel. Não entraram
+  porque (a) não existe categoria de gatilhos onde eles caibam — precisa
+  de decisão: categoria 14 nova ou outro lugar; (b) os filtros de New
+  Reaction Added e New Message Posted to Channel não foram obtidos (os
+  outros: canal obrigatório; DM com filtros opcionais de texto e
+  remetente).
+- **Register for Ticketed Event / Register for RSVP Event** — continuam
+  só em resumo de terceiros.
+- **AI Analyze Video**, **Payment Failed**, **Form Partially Completed**
+  — sem fonte oficial com campos.
+
+Totais: **102 gatilhos + 184 ações = 286 painéis** · 210 mockups
+interativos (os 4 gatilhos novos têm painel de configuração, sem mockup
+animado).
+
+### ⚠ Processo — nada chegou à `main` desde 14/09
+
+Esta rodada foi construída em cima da branch da rodada de 12/11
+(`claude/friendly-meitner-wond0r`), que por sua vez parte da `main`. As
+duas continuam **sem merge** — o site publicado segue no estado de 14/09
+(87 gatilhos + 175 ações). Pra publicar, basta mergear
+`claude/friendly-meitner-gwh4wb` na `main` (contém 12/11 + 13/11).
+
+## 🆕 Rodada 2026-11-14 — Checagem de novidades nativas
+
+Comparação do guia (102 gatilhos + 184 ações = 286, estado da rodada
+2026-11-13) contra o changelog oficial e a central de ajuda da HighLevel.
+`ideas.gohighlevel.com` e `help.gohighlevel.com` continuam bloqueados pra
+acesso direto neste ambiente — a verificação foi feita via WebSearch, que
+devolve resumos dessas páginas. Nenhum gatilho/ação novo foi publicado
+pela HighLevel entre 13/11 e 14/11.
+
+### ✅ Aplicado — 1 ação
+
+- **AI Analyze Video** (`acoes-highlevel-cat05.html` A13). Fonte:
+  changelog oficial "AI Analyze Video: New Workflow Action"
+  (`ideas.gohighlevel.com/changelog/ai-analyze-video-new-workflow-action`).
+  Fica em AI Actions; campos **Video URL** (link público pra MP4, MOV,
+  WebM, MPEG, FLV, WMV ou 3GP, fixo ou dinâmico) e **Prompt** (aceita
+  custom values). Ação Premium, cobrada por execução conforme tokens;
+  uma URL de vídeo por ação; dá pra testar no builder antes de publicar.
+
+### 🐛 Fix de navegação
+
+- Side-nav do `acoes-highlevel-cat05.html`: o rótulo dizia "10 ações" e
+  os itens 09 (Decisor com IA) e 10 (OpenRouter) apontavam pra `#a8` e
+  `#a9`. Corrigido pra 13 ações, `#a9` e `#a10`.
+
+### ⚠ Pontos pra conferir na UI real
+
+- **AI Analyze Video** — o changelog não lista todos os rótulos do
+  painel; documentei só Video URL e Prompt. Um resumo cita o Google
+  Gemini como modelo, outro não confirma — o guia não cita modelo.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **Slack — 5 gatilhos premium** — segue igual a 13/11: nomes
+  confirmados, mas falta decidir a categoria e faltam os filtros de New
+  Reaction Added e New Message Posted to Channel (o artigo oficial só
+  mostra esses dois em captura de tela).
+- **Register for Ticketed Event / Register for RSVP Event** — só em
+  resumo de terceiros; o artigo oficial "Events and Workflows
+  Integration" não cita essas ações.
+- **Payment Failed**, **Form Partially Completed** — só em guia de
+  terceiros.
+
+Totais: **102 gatilhos + 185 ações = 287 painéis** · 210 mockups
+interativos (a ação nova tem painel de configuração, sem mockup animado).
+
+### ⚠ Processo
+
+O PR #23 (`claude/friendly-meitner-gwh4wb`, rodadas de 12/11 e 13/11)
+segue aberto. Esta rodada foi feita em cima dele, na branch
+`claude/friendly-meitner-kedekw`, que contém as três rodadas. O site
+publicado continua no estado de 14/09 (87 gatilhos + 175 ações).
+
+## 🆕 Rodada 2026-11-15 — Checagem de novidades nativas
+
+Comparação do guia (102 gatilhos + 185 ações = 287, estado da rodada
+2026-11-14) contra o changelog oficial e a central de ajuda da HighLevel.
+`ideas.gohighlevel.com` e `help.gohighlevel.com` continuam bloqueados pra
+acesso direto neste ambiente — a verificação foi feita via WebSearch, que
+devolve resumos dessas páginas.
+
+### ✅ Aplicado — 1 ação nova
+
+- **A/B Test** (`acoes-highlevel-cat04.html` A25). Fontes: help "How to
+  Configure A/B Tests in HighLevel Workflows" (155000009305,
+  `workflow-action-a-b-test`) e changelog "A/B Test Action: Compare
+  Workflow Paths and Route Contacts to the Winner". Divide igualmente
+  entre 2 a 10 caminhos; meta de conversão (cliques em emails
+  selecionados do workflow, tag ou condição de custom field, pagamento
+  concluído); fim do teste por contatos que entraram, metas atingidas ou
+  data e hora; depois do vencedor, manda novos contatos pra ele ou segue
+  dividindo igual; selo Winner no canvas; empate → primeiro caminho;
+  Declare winner e Reset test. É ação separada do Split. Anunciada no
+  LevelUp Day (27/10); a data da entrada no changelog não foi obtida.
+
+### ✅ Aplicado — 1 ação atualizada (sem mudar o total)
+
+- **Split** (`acoes-highlevel-cat04.html` A17). Fonte: changelog de
+  12/11/2026 "Split Action: Now distribute contacts with Even split and
+  Weighted split". Even split (rodízio igual), Weighted split (rodízio
+  por percentuais inteiros que somam 100%) e Random split (o
+  comportamento antigo, mantido). Distribuição trava depois que contatos
+  entram num Even/Weighted split; Reset test destrava, zera as
+  estatísticas e reinicia o rodízio. Título PT trocado de "Split (Teste
+  A/B)" pra "Split (Divisão)".
+
+### 🐛 Fix de navegação
+
+- Side-nav do `acoes-highlevel-cat04.html`: rótulo dizia "17 ações";
+  corrigido pra 25.
+
+### ⚠ Pontos pra conferir na UI real
+
+- **A/B Test** — as fontes descrevem as opções, mas não obtive os
+  rótulos exatos dos campos em inglês. O painel usa rótulos descritivos
+  em português e avisa isso. O post do LevelUp Day cita também
+  "appointments" como critério de vencedor; o changelog não — ficou de
+  fora.
+- **Split** — o rótulo do dropdown que escolhe o tipo de distribuição não
+  foi obtido (o painel mostra "Tipo de distribuição"). O limite "até 5
+  branches" já estava no guia e vem de fonte de terceiros.
+- O `configData` do nó de mockup `a17-2` (gerado pelo `auto-refine.py`)
+  ainda mostra "Split Type: Random Percentage" e "Winner Metric", que
+  não batem com a ação Split real. Não mexi — é regenerado
+  mecanicamente; precisa de ajuste no mockup.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **Slack — 5 gatilhos premium**, **Register for Ticketed Event /
+  Register for RSVP Event**, **Payment Failed**, **Form Partially
+  Completed** — sem mudança desde 14/11.
+- Vistos nesta busca e que não são gatilho/ação: Workflow Maps (limpeza
+  de workflows e pastas vazias, 10/11) e análises do Workflow AI (09/11).
+
+Totais: **102 gatilhos + 186 ações = 288 painéis** · 210 mockups
+interativos (a ação nova tem painel de configuração, sem mockup animado).
+
+### ⚠ Processo
+
+O PR #23 (`claude/friendly-meitner-gwh4wb`, rodadas de 12/11 e 13/11)
+segue aberto. Esta rodada foi feita em cima da de 14/11, na branch
+`claude/friendly-meitner-z80u3c`, que contém as quatro rodadas (12 a
+15/11). O site publicado continua no estado de 14/09 (87 gatilhos + 175
+ações).
+
+## 🆕 Rodada 2026-11-19 — Checagem de novidades nativas + consolidação
+
+Comparação do guia contra o changelog oficial e a central de ajuda da
+HighLevel. `ideas.gohighlevel.com` e `help.gohighlevel.com` continuam
+bloqueados pra acesso direto neste ambiente — a verificação foi feita via
+WebSearch, que devolve resumos dessas páginas.
+
+### ✅ Novidades nativas — nenhuma
+
+Nada novo entre 15/11 e 19/11. As entradas do changelog oficial nesses
+dias são de Managed Agents (análise de vídeo em 16/11, geração de imagem
+em 17/11) e de Ad Manager — não são gatilho nem ação de workflow. Os
+itens de workflow mais recentes (WhatsApp Typing Indicator de 10/11,
+Split Even/Weighted de 12–13/11, A/B Test) já estão no guia.
+
+### 🔀 Consolidação com a `main`
+
+A `main` recebeu em 17/11 o PR #22 (gatilho Orçamento/Estimate em
+`guia-highlevel-cat07.html` G3, com mockup animado). As rodadas de 12 a
+15/11 tinham adicionado o mesmo gatilho como G11, sem mockup. Esta
+rodada juntou as duas linhas na branch `claude/friendly-meitner-pg42nh`:
+
+- Mantida a versão da `main` (G3, 5 status: Sent, Viewed, Accepted,
+  Declined, Invoiced, com mockup). A versão G11 das rodadas anteriores
+  foi descartada — o gatilho aparece uma vez só.
+- Todo o resto das rodadas de 12 a 15/11 foi preservado.
+- A rodada de 18/11 (`claude/friendly-meitner-9krycn`) partiu da `main`
+  e refez um subconjunto do que já existia aqui (Router, Loop, Typing
+  Indicator, Internal Comment, AI Image/Video, Analyze Video, Find
+  Object Record/Company, Social Planner Posts). Nada dela faltava;
+  não foi incorporada.
+
+Totais: **102 gatilhos + 186 ações = 288 painéis** · **211** mockups
+interativos (210 → 211 pelo mockup do Estimate).
+
+### 🔍 Candidatos NÃO aplicados
+
+Sem mudança desde 15/11: 5 gatilhos do Slack, Register for Ticketed
+Event / Register for RSVP Event, Payment Failed, Form Partially
+Completed (os dois últimos só aparecem em fonte de terceiros).
+
+### ⚠ Processo
+
+Esta branch substitui o PR #23 e as branches das rodadas de 14, 15 e
+18/11. O site publicado continua no estado de 17/11 da `main` (home
+ainda mostrando 87 gatilhos + 175 ações, de 14/09) até o merge.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

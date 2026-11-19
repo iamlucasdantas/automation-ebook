@@ -2385,6 +2385,9 @@
 <div class="side-section-label">Pós-venda</div>
 <nav class="side-nav">
 <a href="#g3" class="side-link"><span class="side-num">03</span>Pedido Concluído</a>
+    <a href="#g4" class="side-link"><span class="side-num">04</span>Produto Visualizado</a>
+    <a href="#g5" class="side-link"><span class="side-num">05</span>Adicionado ao Carrinho</a>
+    <a href="#g6" class="side-link"><span class="side-num">06</span>Avaliação de Produto</a>
 </nav>
 
 
@@ -2402,8 +2405,8 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 08/12</span>
   <h1 class="hero-title">Sua loja Shopify <em>conversando direto</em> com o HighLevel.</h1>
-  <p class="hero-desc">Três gatilhos que integram sua loja Shopify diretamente no HighLevel — carrinho abandonado, compra feita e pedido concluído. Recuperação de vendas, agradecimento automático e pedido de feedback, tudo sem precisar de Zapier ou Make no meio.</p>
-  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">3</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
+  <p class="hero-desc">Seis gatilhos de ecommerce — os três do Shopify (carrinho abandonado, compra feita e pedido concluído) mais produto visualizado, produto adicionado ao carrinho e avaliação de produto, que também valem pra loja nativa do HighLevel. Recuperação de vendas, agradecimento automático e pedido de feedback, tudo sem precisar de Zapier ou Make no meio.</p>
+  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">6</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
 <div class="hero-stat"><span class="hero-stat-num">6+</span><span class="hero-stat-label">Filtros explicados</span></div>
 <div class="hero-stat"><span class="hero-stat-num">1</span><span class="hero-stat-label">Mockup interativo</span></div>
 </div>
@@ -2986,6 +2989,333 @@
     </div>
   </div>
 
+</div>
+
+<div class="trigger-block" id="g4" data-name="produto visualizado viewed product product viewed ecommerce loja shopify web pixel">
+  <div class="trigger-head">
+    <div class="trigger-num">04</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Pré-compra</div>
+      <h2 class="trigger-name">Produto Visualizado</h2>
+      <div class="trigger-en">Viewed Product</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um visitante <strong>visualiza um produto</strong> na loja — tanto em lojas Shopify conectadas quanto na loja de ecommerce nativa do HighLevel. Fica na categoria <strong>Ecommerce Stores</strong> do seletor de gatilhos.</p>
+      <p>É comportamento de pré-compra em tempo real. No Shopify, o rastreamento depende do <strong>Web Pixel</strong>, que é instalado automaticamente ao conectar (ou reconectar) a loja.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Interesse sem compra</div><div class="use-case-desc">Viu o produto e não comprou → email com prova social daquele item.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Lead quente pra vendas</div><div class="use-case-desc">Viu um produto de ticket alto → notifica o vendedor.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Segmentação</div><div class="use-case-desc">Viu a linha X → tag de interesse pra campanhas futuras.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Produto</div>
+    <div class="filter-en">Product</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe a produtos específicos.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Réguas por produto ou linha, em vez de uma genérica.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Duração</div>
+    <div class="filter-en">Duration</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Condição de tempo associada ao evento.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Ajuda a separar curiosidade de interesse real.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Categoria <strong>Ecommerce Stores</strong>. No Shopify, reconecte a loja pra instalar o <strong>Web Pixel</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Viewed Product</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Viu produto e não comprou — prova social" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Product</div>
+        <div class="hl-dropdown has-value">Curso Automação Pro</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando o visitante visualiza um produto da loja</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="trigger-block" id="g5" data-name="produto adicionado ao carrinho add to cart added to cart ecommerce loja shopify">
+  <div class="trigger-head">
+    <div class="trigger-num">05</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Pré-compra</div>
+      <h2 class="trigger-name">Produto Adicionado ao Carrinho</h2>
+      <div class="trigger-en">Add to Cart</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando o visitante <strong>adiciona um produto ao carrinho</strong>, em lojas Shopify ou na loja de ecommerce do HighLevel. Também fica em <strong>Ecommerce Stores</strong>.</p>
+      <p>Acontece antes do checkout — portanto antes do gatilho de Carrinho Abandonado. Serve pra agir no momento da intenção, não só depois do abandono.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Incentivo imediato</div><div class="use-case-desc">Adicionou ao carrinho → cupom de frete grátis válido por 1 hora.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Carrinho de alto valor</div><div class="use-case-desc">Valor do carrinho acima de R$ 1.000 → vendedor entra em contato.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Cross-sell</div><div class="use-case-desc">Adicionou o produto A → mensagem sugerindo o complemento B.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Produto</div>
+    <div class="filter-en">Product</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe a produtos específicos adicionados.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Réguas por produto.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Valor do Carrinho</div>
+    <div class="filter-en">Cart value</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Condição sobre o valor total do carrinho.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Prioriza carrinhos de maior valor.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Duração</div>
+    <div class="filter-en">Duration</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Condição de tempo associada ao evento.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Controla quando a régua começa.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Categoria <strong>Ecommerce Stores</strong>. Filtre por <strong>produto</strong> ou <strong>valor do carrinho</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Add to Cart</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Carrinho de alto valor — avisar vendedor" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Cart value</div>
+        <div class="hl-dropdown has-value">Greater than · 1000</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando um produto é adicionado ao carrinho</strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="trigger-block" id="g6" data-name="avaliação de produto enviada product review submitted review ecommerce loja estrelas">
+  <div class="trigger-head">
+    <div class="trigger-num">06</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Pós-venda</div>
+      <h2 class="trigger-name">Avaliação de Produto Enviada</h2>
+      <div class="trigger-en">Product Review Submitted</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um comprador clica em "Submit review" em qualquer produto da <strong>loja de ecommerce do HighLevel</strong>. O gatilho captura os detalhes da avaliação — nota, título, comentário, dados do avaliador, loja e produto.</p>
+      <p>Fica em Add Trigger → <strong>Ecommerce Stores</strong>. Sem filtros, toda avaliação entra no workflow. Com filtros, você escolhe entre <strong>Require All</strong> (todas as condições) e <strong>Require Any</strong> (qualquer uma).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Agradecer 5 estrelas</div><div class="use-case-desc">Nota 5 → agradecimento e pedido de avaliação no Google.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Contenção de dano</div><div class="use-case-desc">Nota 1 ou 2 → tarefa urgente pro suporte e pausa nas réguas de venda.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Palavra-chave</div><div class="use-case-desc">Comentário contém "atraso" → notifica a logística.</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Produto</div>
+    <div class="filter-en">Product</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe a um produto. No filtro Global Product só dá pra selecionar um produto por vez.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Réguas específicas por produto.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Nota</div>
+    <div class="filter-en">Rating</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra pela nota da avaliação.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Separa promotores de detratores.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Loja</div>
+    <div class="filter-en">Store</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Restringe a uma loja.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Necessário em contas com mais de uma loja.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Comentário</div>
+    <div class="filter-en">Comment</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra por palavras-chave no texto da avaliação.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Roteia por assunto.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Avaliador</div>
+    <div class="filter-en">Reviewer email / name</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Filtra pelo email ou nome de quem avaliou.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Trata clientes específicos à parte.</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Categoria <strong>Ecommerce Stores</strong>. Escolha <strong>Require All</strong> ou <strong>Require Any</strong> pra combinar os filtros.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Product Review Submitted</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Avaliação baixa — acionar suporte" readonly>
+      </div>
+      <div class="hl-section-head">Filters</div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Rating</div>
+        <div class="hl-dropdown has-value">Is · 1</div>
+      </div>
+      <div class="hl-filter-row">
+        <div class="hl-filter-label">Store</div>
+        <div class="hl-dropdown has-value">Loja Magnetic</div>
+      </div>
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara a cada avaliação enviada num produto da loja HighLevel</strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat07.html" class="cat-nav-link prev">
@@ -3001,7 +3331,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 08 completa.</h3>
-    <p>3 gatilhos de Shopify explicados com impacto prático e mockups visuais.</p>
+    <p>6 gatilhos de Shopify e Ecommerce explicados com impacto prático e mockups visuais.</p>
   </div>
 
   <div class="footer-main-cta">
