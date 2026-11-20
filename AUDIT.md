@@ -737,6 +737,68 @@ Esta branch substitui o PR #23 e as branches das rodadas de 14, 15 e
 18/11. O site publicado continua no estado de 17/11 da `main` (home
 ainda mostrando 87 gatilhos + 175 ações, de 14/09) até o merge.
 
+## 🆕 Rodada 2026-11-20 — Checagem de novidades nativas
+
+Comparação do guia (102 gatilhos + 186 ações = 288 painéis) contra o
+changelog oficial e a central de ajuda da HighLevel. `ideas.gohighlevel.com`
+e `help.gohighlevel.com` continuam bloqueados pra acesso direto neste
+ambiente — a verificação foi feita via WebSearch, que devolve resumos
+dessas páginas.
+
+### ✅ Novidades nativas — nenhum gatilho ou ação nova
+
+Contagens inalteradas: **102 gatilhos + 186 ações = 288 painéis** ·
+**211** mockups interativos.
+
+### ✅ Aplicado nesta rodada (enhancement a itens já existentes)
+
+**Workflows sem contato pra Oportunidades e Tarefas** — changelog oficial
+de 18/11/2026: [Workflows: Now enroll opportunities and tasks without a
+contact](https://ideas.gohighlevel.com/changelog/workflows-now-enroll-opportunities-and-tasks-without-a-contact). A rodada de 19/11 registrou "nada novo entre 15/11 e
+19/11" e não pegou esta entrada.
+
+O que a fonte oficial diz, e o que foi escrito no guia:
+
+- Antes, uma oportunidade ou tarefa precisava de um contato associado pra
+  entrar num workflow. Essa exigência foi removida.
+- **Oportunidades**: o workflow inicia quando a oportunidade é criada,
+  alterada, muda de estágio, muda de status ou fica ociosa, mesmo sem
+  contato → nota em `guia-highlevel-cat04.html` G1, G2, G3, G4 e G5.
+- **Tarefas**: Task added, Task completed e Task reminder funcionam pra
+  tarefas sem contato → nota em `guia-highlevel-cat01.html` G10, G11 e G12.
+- **Custom date reminder** com campo de data da Oportunidade inicia o
+  workflow → nota em `guia-highlevel-cat01.html` G7.
+- Ações que dependem de dados ou destinatário do contato ficam sem essas
+  informações; em Internal Notification, o destinatário Assigned User é
+  pulado se faltar contato; Enrollment History e Execution Logs filtram
+  por objeto (Contacts, Opportunities, Tasks).
+
+Só texto — nenhum campo novo foi adicionado aos painéis/mockups, porque a
+fonte não descreve mudança nos campos de configuração.
+
+### 🔍 Candidatos NÃO aplicados
+
+- **User Signup (Client Portal / Memberships)** (gatilho) — existe no
+  changelog oficial ([link](https://ideas.gohighlevel.com/changelog/introducing-user-signup-workflow-trigger-for-client-portal)),
+  mas sem data visível e sem lista de filtros. O guia já tem **New
+  Signup** (`guia-highlevel-cat06.html` G5), que o artigo oficial "A List
+  of Workflow Triggers" descreve como inscrição em curso/oferta. Não deu
+  pra confirmar se são dois gatilhos distintos no seletor ou o mesmo
+  renomeado → precisa de olho humano no Workflow Builder.
+- **Inbound Webhook com ações sugeridas** (contato, oportunidade, tarefa),
+  datado de 18/11 — só aparece em fonte de terceiros; sem confirmação
+  oficial.
+- Sem mudança nos anteriores: 5 gatilhos do Slack, Register for Ticketed
+  Event / Register for RSVP Event, Payment Failed, Form Partially
+  Completed.
+
+### ⚠ Processo
+
+Esta rodada foi feita em cima da branch consolidada de 19/11
+(`claude/friendly-meitner-pg42nh`) e está em
+`claude/friendly-meitner-sdgzhw`. Nada disso está na `main` ainda: o site
+publicado continua mostrando 87 gatilhos + 175 ações até o merge.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

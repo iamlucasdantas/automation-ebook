@@ -10,6 +10,28 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-20 — Content
+**Rodada 2026-11-20: gatilhos de Oportunidade e Tarefa agora rodam sem contato**
+
+Checagem do guia (102 gatilhos + 186 ações = 288 painéis) contra o
+changelog oficial da HighLevel. Detalhe em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-20--checagem-de-novidades-nativas).
+
+- **Nenhum gatilho ou ação nativa nova.** Contagens inalteradas:
+  102 gatilhos · 186 ações · 288 painéis · 211 mockups.
+- **Atualização em 9 gatilhos existentes** (changelog oficial de
+  18/11/2026, [Workflows: Now enroll opportunities and tasks without a
+  contact](https://ideas.gohighlevel.com/changelog/workflows-now-enroll-opportunities-and-tasks-without-a-contact)) — a rodada de 19/11 não tinha pego esta entrada:
+  - `guia-highlevel-cat04.html` G1–G5 (Opportunity Created, Opportunity
+    Changed, Opportunity Status Changed, Pipeline Stage Changed, Stale
+    Opportunities): a oportunidade entra no workflow mesmo sem contato
+    associado.
+  - `guia-highlevel-cat01.html` G10–G12 (Task Added, Task Reminder, Task
+    Completed): funcionam pra tarefas sem contato.
+  - `guia-highlevel-cat01.html` G7 (Custom Date Reminder): aceita campo
+    de data da Oportunidade.
+- `index.html`: data de "Última atualização" → 20 de novembro de 2026.
+
 ## 2026-11-19 — Content
 **Checagem de novidades nativas (nada novo) + consolidação das rodadas de 12–15/11 com a `main`**
 

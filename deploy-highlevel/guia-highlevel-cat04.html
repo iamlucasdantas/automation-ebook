@@ -2459,6 +2459,7 @@
     <div class="tblock-content">
       <p>Dispara sempre que uma nova oportunidade nasce no sistema — seja criada manualmente, via formulário, por outra automação, ou por integração externa.</p>
       <p>É o ponto de partida do funil de vendas automatizado. Toda oportunidade nova merece pelo menos uma reação: notificação pro responsável, atribuição de tarefa, segmentação por valor, entrada em sequência de nutrição.</p>
+      <p><strong>Atualização (18/11/2026):</strong> a oportunidade não precisa mais ter um contato associado pra entrar no workflow — quando é criada, mesmo <strong>sem contato</strong>, ela entra e segue o fluxo sozinha. Atenção nas ações que dependem de dados ou de destinatário do contato (merge fields <code>{{contact.*}}</code>, envio de SMS/e-mail pro contato): sem contato, essas informações ficam indisponíveis. Em <em>Internal Notification</em>, o destinatário <em>Assigned User</em> depende do contato — se faltar, o passo é pulado e o workflow continua. Em <em>Enrollment History</em> e <em>Execution Logs</em> dá pra filtrar por objeto (Contacts, Opportunities ou Tasks). <a href="https://ideas.gohighlevel.com/changelog/workflows-now-enroll-opportunities-and-tasks-without-a-contact" target="_blank" rel="noopener">Changelog oficial</a>.</p>
     </div>
   </div>
 
@@ -2777,6 +2778,7 @@
     <div class="tblock-content">
       <p>Dispara sempre que qualquer campo da oportunidade é editado — valor, status, nome, pipeline, estágio, campos customizados. É o gatilho mais <strong>sensível</strong> da categoria.</p>
       <p>Por pegar qualquer edição, se você usar sem filtros vai disparar centenas de vezes ao dia. O poder dele está em filtrar precisamente o que importa — ex.: "só quando o valor muda pra mais de X", "só quando um campo customizado específico é preenchido".</p>
+      <p><strong>Atualização (18/11/2026):</strong> a oportunidade não precisa mais ter um contato associado pra entrar no workflow — quando é alterada, mesmo <strong>sem contato</strong>, ela entra e segue o fluxo sozinha. Atenção nas ações que dependem de dados ou de destinatário do contato (merge fields <code>{{contact.*}}</code>, envio de SMS/e-mail pro contato): sem contato, essas informações ficam indisponíveis. Em <em>Internal Notification</em>, o destinatário <em>Assigned User</em> depende do contato — se faltar, o passo é pulado e o workflow continua. Em <em>Enrollment History</em> e <em>Execution Logs</em> dá pra filtrar por objeto (Contacts, Opportunities ou Tasks). <a href="https://ideas.gohighlevel.com/changelog/workflows-now-enroll-opportunities-and-tasks-without-a-contact" target="_blank" rel="noopener">Changelog oficial</a>.</p>
     </div>
   </div>
 
@@ -3089,6 +3091,7 @@
     <div class="tblock-content">
       <p>Dispara especificamente quando o <strong>status</strong> de uma oportunidade muda. Status é diferente de estágio — os 4 possíveis são: <em>Open</em> (aberto), <em>Won</em> (ganho), <em>Lost</em> (perdido), <em>Abandoned</em> (abandonado).</p>
       <p>A grande vantagem desse gatilho sobre "Oportunidade Alterada" é o filtro único de <strong>Moved From Status</strong> — você pode reagir a transições específicas como "Open → Won" ou "Open → Lost", evitando disparos falsos.</p>
+      <p><strong>Atualização (18/11/2026):</strong> a oportunidade não precisa mais ter um contato associado pra entrar no workflow — quando muda de status, mesmo <strong>sem contato</strong>, ela entra e segue o fluxo sozinha. Atenção nas ações que dependem de dados ou de destinatário do contato (merge fields <code>{{contact.*}}</code>, envio de SMS/e-mail pro contato): sem contato, essas informações ficam indisponíveis. Em <em>Internal Notification</em>, o destinatário <em>Assigned User</em> depende do contato — se faltar, o passo é pulado e o workflow continua. Em <em>Enrollment History</em> e <em>Execution Logs</em> dá pra filtrar por objeto (Contacts, Opportunities ou Tasks). <a href="https://ideas.gohighlevel.com/changelog/workflows-now-enroll-opportunities-and-tasks-without-a-contact" target="_blank" rel="noopener">Changelog oficial</a>.</p>
     </div>
   </div>
 
@@ -3450,6 +3453,7 @@
     <div class="tblock-content">
       <p>Dispara quando uma oportunidade muda de <strong>estágio</strong> dentro do pipeline — ex.: "Qualificação" → "Proposta" → "Negociação" → "Fechamento".</p>
       <p>Diferente da Mudança de Status (que é sobre Open/Won/Lost/Abandoned), este é sobre a <strong>posição no funil</strong>. É o gatilho perfeito pra gerenciar movimentação no pipeline — acionar tarefas específicas quando a oportunidade avança, disparar nurturing quando estaciona, alertar gerentes em estágios críticos.</p>
+      <p><strong>Atualização (18/11/2026):</strong> a oportunidade não precisa mais ter um contato associado pra entrar no workflow — quando muda de estágio, mesmo <strong>sem contato</strong>, ela entra e segue o fluxo sozinha. Atenção nas ações que dependem de dados ou de destinatário do contato (merge fields <code>{{contact.*}}</code>, envio de SMS/e-mail pro contato): sem contato, essas informações ficam indisponíveis. Em <em>Internal Notification</em>, o destinatário <em>Assigned User</em> depende do contato — se faltar, o passo é pulado e o workflow continua. Em <em>Enrollment History</em> e <em>Execution Logs</em> dá pra filtrar por objeto (Contacts, Opportunities ou Tasks). <a href="https://ideas.gohighlevel.com/changelog/workflows-now-enroll-opportunities-and-tasks-without-a-contact" target="_blank" rel="noopener">Changelog oficial</a>.</p>
     </div>
   </div>
 
@@ -3775,6 +3779,7 @@
     <div class="tblock-content">
       <p>Dispara quando uma oportunidade fica <strong>parada sem nenhuma alteração</strong> por X dias. É o gatilho "anti-esquecimento" — aquele que resgata oportunidades que ficaram perdidas no pipeline.</p>
       <p>Diferente dos outros dessa categoria, esse não é em tempo real — ele é <strong>avaliado diariamente</strong> pelo sistema, verificando quais oportunidades passaram do prazo definido sem atividade.</p>
+      <p><strong>Atualização (18/11/2026):</strong> a oportunidade não precisa mais ter um contato associado pra entrar no workflow — quando fica ociosa, mesmo <strong>sem contato</strong>, ela entra e segue o fluxo sozinha. Atenção nas ações que dependem de dados ou de destinatário do contato (merge fields <code>{{contact.*}}</code>, envio de SMS/e-mail pro contato): sem contato, essas informações ficam indisponíveis. Em <em>Internal Notification</em>, o destinatário <em>Assigned User</em> depende do contato — se faltar, o passo é pulado e o workflow continua. Em <em>Enrollment History</em> e <em>Execution Logs</em> dá pra filtrar por objeto (Contacts, Opportunities ou Tasks). <a href="https://ideas.gohighlevel.com/changelog/workflows-now-enroll-opportunities-and-tasks-without-a-contact" target="_blank" rel="noopener">Changelog oficial</a>.</p>
     </div>
   </div>
 
