@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 288,
+  "total": 289,
   "items": [
     {
       "id": "g1",
@@ -891,6 +891,20 @@
       "description": "Dispara quando um contato envia um arquivo pelo Portal do Cliente, na área de documentos compartilhados (Shared Documents). O cliente pode subir até 10 arquivos por vez.",
       "keywords": "arquivo enviado portal do cliente client portal file uploaded upload documento",
       "href": "guia-highlevel-cat06.html#g13"
+    },
+    {
+      "id": "g14",
+      "type": "Gatilho",
+      "name": "Cadastro de Usuário no Portal do Cliente",
+      "en": "User Signup (Client Portal / Memberships)",
+      "category": "Portal do Cliente",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um novo usuário conclui o cadastro pelo Portal do Cliente. Antes dele não existia um gatilho dedicado pra registro bem-sucedido no portal.",
+      "keywords": "cadastro de usuário portal do cliente user signup client portal memberships registro novo usuário",
+      "href": "guia-highlevel-cat06.html#g14"
     },
     {
       "id": "g1",

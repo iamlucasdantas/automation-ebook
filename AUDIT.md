@@ -799,6 +799,55 @@ Esta rodada foi feita em cima da branch consolidada de 19/11
 `claude/friendly-meitner-sdgzhw`. Nada disso está na `main` ainda: o site
 publicado continua mostrando 87 gatilhos + 175 ações até o merge.
 
+## 🆕 Rodada 2026-11-21 — Checagem de novidades nativas
+
+Comparação do guia (102 gatilhos + 186 ações = 288 painéis) contra o
+changelog oficial da HighLevel. `ideas.gohighlevel.com` e
+`help.gohighlevel.com` continuam bloqueados pra acesso direto neste
+ambiente — a verificação foi feita via WebSearch, que devolve resumos
+dessas páginas.
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+
+**User Signup (Client Portal / Memberships)** (gatilho) →
+`guia-highlevel-cat06.html` G14. Fonte: [Introducing User Signup Workflow
+Trigger for Client Portal](https://ideas.gohighlevel.com/changelog/introducing-user-signup-workflow-trigger-for-client-portal).
+
+- A rodada de 20/11 deixou este item como candidato por não saber se era
+  o mesmo gatilho que New Signup (G5). O texto oficial resolve: diz que
+  antes não havia gatilho dedicado pra cadastro bem-sucedido no Portal do
+  Cliente, e o nome no seletor é "User Signup (Client Portal /
+  Memberships)". New Signup é de inscrição em curso/oferta — são dois
+  gatilhos.
+- ⚠ Data: um resumo aponta 20/11/2026, outro mostra a página como mais
+  antiga. O nome e a função estão confirmados; a data não.
+- Sem filtros no painel: a fonte só descreve "adicionar o gatilho e
+  publicar". Sem mockup animado. Vale um olho no Workflow Builder pra
+  confirmar se há filtros.
+
+Totais: **103 gatilhos + 186 ações = 289 painéis** · **211** mockups.
+
+### ✅ Aplicado nesta rodada (enhancement a item já existente)
+
+**Internal Notification sem contato** — changelog oficial de 20/11/2026:
+[Workflows: Now Send Internal Notifications Without Linking a
+Contact](https://ideas.gohighlevel.com/changelog/workflows-now-send-internal-notifications-without-linking-a-contact)
+→ nota em `acoes-highlevel-cat02.html` A10. In-App, Email ou SMS pra
+usuários selecionados; Assigned User em Email/SMS é pulado se faltar
+contato ou usuário atribuído. Só texto, nenhum campo novo.
+
+### 🔍 Candidatos NÃO aplicados
+
+Sem mudança: Inbound Webhook com ações sugeridas (só fonte de
+terceiros), 5 gatilhos do Slack, Register for Ticketed Event / Register
+for RSVP Event, Payment Failed, Form Partially Completed.
+
+### ⚠ Processo
+
+Feita em cima da branch de 20/11 e gravada em
+`claude/friendly-meitner-pvi7hr`. Nada disso está na `main` ainda: o
+site publicado continua mostrando 87 gatilhos + 175 ações até o merge.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

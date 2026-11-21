@@ -10,6 +10,25 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-21 — Content
+**Rodada 2026-11-21: +1 gatilho nativo (User Signup do Portal do Cliente) e Internal Notification sem contato (288 → 289)**
+
+Checagem do guia contra o changelog oficial da HighLevel. Detalhe em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-21--checagem-de-novidades-nativas).
+
+- **Novo gatilho:** **Cadastro de Usuário no Portal do Cliente (User
+  Signup (Client Portal / Memberships))** · `guia-highlevel-cat06.html`
+  G14. Fonte: [changelog oficial](https://ideas.gohighlevel.com/changelog/introducing-user-signup-workflow-trigger-for-client-portal).
+  Sem mockup animado e sem filtros (a fonte não lista nenhum).
+- **Atualização em ação existente:** **Notificação Interna (Internal
+  Notification)** · `acoes-highlevel-cat02.html` A10 — agora roda em
+  workflows sem contato. Fonte: [changelog oficial de 20/11/2026](https://ideas.gohighlevel.com/changelog/workflows-now-send-internal-notifications-without-linking-a-contact).
+- `index.html`: 102 → **103 gatilhos** · 186 ações · 288 → **289
+  painéis** · 211 mockups; card Cursos 13 → 14 gatilhos; "Última
+  atualização: 21 de novembro de 2026".
+- ⚠ Ainda **sem merge na `main`** — o site publicado segue mostrando
+  87 gatilhos + 175 ações.
+
 ## 2026-11-20 — Content
 **Rodada 2026-11-20: gatilhos de Oportunidade e Tarefa agora rodam sem contato**
 

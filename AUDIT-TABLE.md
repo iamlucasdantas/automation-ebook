@@ -10,7 +10,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 32 | 53 | 17 | **102** |
+| Gatilhos | 32 | 53 | 18 | **103** |
 | Ações | 40 | 89 | 57 | **186** |
 
 
@@ -102,6 +102,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g11 | [Produto Completado](guia-highlevel-cat06.html#g11) | Product Completed | 2 | 3/6 | 🟢 | [ ] | |
 | g12 | [Login de Usuário](guia-highlevel-cat06.html#g12) | User Login | 2 | 2/6 | 🟡 | [ ] | |
 | g13 | [Arquivo Enviado pelo Portal do Cliente](guia-highlevel-cat06.html#g13) | Client Portal File Uploaded | 0 | 1/6 | 🔴 | [ ] | |
+| g14 | [Cadastro de Usuário no Portal do Cliente](guia-highlevel-cat06.html#g14) | User Signup (Client Portal / Memberships) | 0 | 1/6 | 🔴 | [ ] | |
 
 ### CAT07 · Recebimento
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
