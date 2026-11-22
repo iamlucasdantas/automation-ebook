@@ -2395,6 +2395,10 @@
 <a href="#g11" class="side-link"><span class="side-num">11</span>Produto Completado</a>
 <a href="#g12" class="side-link"><span class="side-num">12</span>Login de Usuário</a>
 </nav>
+<div class="side-section-label">Client Portal</div>
+<nav class="side-nav">
+<a href="#g13" class="side-link"><span class="side-num">13</span>Arquivo Enviado (Client Portal)</a>
+</nav>
 
 
   <div class="side-cta-fixed">
@@ -2411,8 +2415,8 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 06/12</span>
   <h1 class="hero-title">Acompanhe cada passo da <em>jornada do aluno</em>.</h1>
-  <p class="hero-desc">Dos primeiros cliques nas aulas até o certificado de conclusão. A categoria Cursos tem 10 gatilhos que monitoram engajamento, progresso e acesso — ideais pra plataformas de curso, memberships, cursos corporativos ou qualquer produto educacional.</p>
-  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">10</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
+  <p class="hero-desc">Dos primeiros cliques nas aulas até o certificado de conclusão. A categoria Cursos tem 13 gatilhos que monitoram engajamento, progresso, acesso e uploads pelo Client Portal — ideais pra plataformas de curso, memberships, cursos corporativos ou qualquer produto educacional.</p>
+  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">13</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
 <div class="hero-stat"><span class="hero-stat-num">25+</span><span class="hero-stat-label">Filtros explicados</span></div>
 <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-label">Mockups interativos</span></div>
 </div>
@@ -4602,6 +4606,75 @@
     </div>
   </div>
 
+</div>
+<div class="trigger-block" id="g13" data-name="arquivo enviado pelo client portal client portal file uploaded upload documento shared documents portal do cliente">
+  <div class="trigger-head">
+    <div class="trigger-num">13</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Client Portal</div>
+      <h2 class="trigger-name">Arquivo Enviado pelo Client Portal</h2>
+      <div class="trigger-en">Client Portal File Uploaded</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag new">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando um contato <strong>envia um documento pelo Client Portal</strong>, na área de documentos compartilhados (Shared Documents). O cliente pode subir um arquivo ou vários de uma vez (até 10).</p>
+      <p>Os arquivos ficam associados ao contato e aparecem em <strong>Documents → Received → Client Portal</strong>. No seletor de gatilhos do HighLevel ele fica na categoria <strong>Client Portal</strong> (foi movido pra lá, saindo de Membership) — aqui no guia está junto dos gatilhos de Cursos e área de membros.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case"><div class="use-case-label">Caso 01</div><div class="use-case-title">Onboarding com documentos</div><div class="use-case-desc">Cliente sobe contrato social/RG → tarefa pro time conferir + mensagem de confirmação.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 02</div><div class="use-case-title">Avisar o responsável</div><div class="use-case-desc">Upload recebido → notificação interna pro dono do contato.</div></div>
+<div class="use-case"><div class="use-case-label">Caso 03</div><div class="use-case-title">Destravar a próxima etapa</div><div class="use-case-desc">Documento chegou → move a oportunidade pra "Documentação recebida".</div></div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="tblock-content"><p>A documentação oficial não lista filtros pra esse gatilho — ele dispara em qualquer upload feito pelo fluxo de Shared Documents do Client Portal. Se precisar segmentar, use um If/Else logo depois.</p></div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é o painel lateral que abre no HighLevel quando você seleciona o gatilho. Só entram aqui os campos confirmados na documentação oficial — os valores preenchidos são exemplos.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint">Pré-requisito: Client Portal ativo com a área de documentos compartilhados (Shared Documents).</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Client Portal File Uploaded</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group">
+        <div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div>
+        <input class="hl-input" value="Client Portal File Uploaded" readonly>
+      </div>
+
+      <div class="hl-field-help">Sem filtros documentados. Dispara a cada upload feito pelo contato em Shared Documents (um ou vários arquivos, até 10 por vez).</div>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Upload do cliente vira automação. Fonte oficial: <a href="https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal" target="_blank" rel="noopener">changelog · Workflow Trigger for file uploads via Client Portal</a></strong>
+      </div>
+    </div>
+  </div>
+
 </div><!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat05.html" class="cat-nav-link prev">
@@ -4617,7 +4690,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 06 completa.</h3>
-    <p>12 gatilhos de Cursos explicados com impacto prático e mockups visuais.</p>
+    <p>13 gatilhos de Cursos explicados com impacto prático e mockups visuais.</p>
   </div>
 
   <div class="footer-main-cta">

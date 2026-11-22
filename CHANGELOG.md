@@ -10,6 +10,37 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-22 — Content
+**Checagem de novidades nativas: +7 ações, +2 gatilhos, home recalculada**
+
+Rotina automática comparou o guia (88 gatilhos + 175 ações = 263 painéis)
+contra o changelog oficial da HighLevel e `help.gohighlevel.com` em busca
+de itens nativos lançados desde 2026-09-14. Detalhe completo, fontes e
+candidatos não aplicados em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-22--checagem-de-novidades-nativas).
+
+- **Ações novas (7):** Router, Loop e A/B Test
+  (`acoes-highlevel-cat04.html` A23–A25); WhatsApp Typing Indicator
+  (`acoes-highlevel-cat02.html` A38); Internal Comment
+  (`acoes-highlevel-cat01.html` A19); AI Analyze Video e AI Video
+  Generation (`acoes-highlevel-cat05.html` A11–A12).
+- **Gatilhos novos (2):** Social Planner Posts
+  (`guia-highlevel-cat10.html` G4) e Client Portal File Uploaded
+  (`guia-highlevel-cat06.html` G13).
+- Os 9 entram com descrição, casos de uso e painel de configuração só
+  com campos confirmados em fonte oficial — sem mockup animado (mesmo
+  formato do Drip).
+- **Totais: 90 gatilhos + 182 ações = 272 painéis; 211 mockups.**
+- **`index.html`:** hero, abas, meta tags e data ("22 de novembro de
+  2026") atualizados; todos os cards de categoria recalculados a partir
+  do `search-index.json` — 11 cards estavam com contagem antiga
+  (inclusive o gatilho Estimate de 17/11, que não tinha chegado na home).
+- 🐛 Side-nav do `acoes-highlevel-cat05.html` (links duplicados pra
+  `#a8`) e `</a>` sobrando no `acoes-highlevel-cat01.html` corrigidos.
+- `search-index.json` e `AUDIT-TABLE.md` regenerados;
+  `validate-mockups.js` confirma as 30 páginas OK; `auto-refine.py`
+  sem drift.
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

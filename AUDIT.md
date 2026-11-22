@@ -406,6 +406,136 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-11-22 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (88 gatilhos + 175 ações = 263 painéis —
+estado da `main` depois do gatilho Orçamento/Estimate de 17/11) contra o
+changelog oficial da HighLevel e `help.gohighlevel.com` em busca de itens
+nativos lançados desde a rodada de 2026-09-14. Igual às rodadas
+anteriores, `help.gohighlevel.com` e `ideas.gohighlevel.com` continuam
+bloqueados por egress direto neste ambiente — toda a checagem usou
+WebSearch pra ler o conteúdo indiretamente. Nenhum campo foi inventado:
+só entrou no painel o que o changelog/doc oficial nomeia; os valores
+preenchidos são exemplos.
+
+### ✅ Adicionados nesta rodada (fonte oficial confirmada)
+
+**Ações (+7)**
+1. **Router** · `acoes-highlevel-cat04.html` A23 — executa todo ramo que
+   casar (o If/Else para no primeiro). Tipos de ramo: Custom rules
+   ("Only continue if"), Always run, Fallback; ordem por arrastar.
+   [Changelog](https://ideas.gohighlevel.com/changelog/router-new-workflow-action)
+2. **Loop** · `acoes-highlevel-cat04.html` A24 — Loop Over (A list of
+   items / A range of numbers), Execution Mode (Sequential / Parallel),
+   Custom values → Loop Item. Limites de iteração não documentados.
+   [Changelog](https://ideas.gohighlevel.com/changelog/loop-new-workflow-action)
+3. **A/B Test** · `acoes-highlevel-cat04.html` A25 — 2 a 10 caminhos,
+   Winning Criteria (Goal event / Custom condition), After the Test Ends.
+   É uma ação separada do Split (A17, até 5 caminhos, sem medição).
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000009305-workflow-action-a-b-test)
+4. **WhatsApp Typing Indicator** · `acoes-highlevel-cat02.html` A38 —
+   sem campos; some na resposta ou em 25s; marca a mensagem como lida.
+   [Changelog](https://ideas.gohighlevel.com/changelog/whatsapp-typing-indicator-action-for-workflows)
+5. **Internal Comment** · `acoes-highlevel-cat01.html` A19 — comentário
+   interno na conversa com @menção de usuários.
+   [Changelog](https://ideas.gohighlevel.com/changelog/conversations-add-internal-comments-using-workflows)
+6. **AI Analyze Video** · `acoes-highlevel-cat05.html` A11 — Video URL
+   (pública) + Prompt; Premium, cobrada por tokens.
+   [Changelog](https://ideas.gohighlevel.com/changelog/ai-analyze-video-new-workflow-action)
+7. **AI Video Generation** · `acoes-highlevel-cat05.html` A12 — Veo 3.1
+   Quality / Fast, Prompt, até 3 Reference Images, Generate Audio; saídas
+   Video URL e Video File Path.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000009513-workflow-action-ai-video-generation)
+
+**Gatilhos (+2)**
+8. **Social Planner Posts** · `guia-highlevel-cat10.html` G4 — filtros
+   Category, Platform, Post Status (Approved / Published / Failed),
+   Post Type, Social Account, Tags.
+   [Changelog](https://ideas.gohighlevel.com/changelog/create-workflows-with-social-planner-posts)
+9. **Client Portal File Uploaded** · `guia-highlevel-cat06.html` G13 —
+   sem filtros documentados.
+   [Changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+
+Totais atualizados: **90 gatilhos + 182 ações = 272 painéis**. Mockups
+interativos seguem em **211** — os 9 itens novos entraram no formato
+"painel de configuração sem mockup animado" (mesmo formato do Drip, A22
+do cat04), porque um mockup fiel pede nomes de campo que ainda não foram
+vistos na UI real.
+
+### ⚠ Pontos pra você conferir na UI real
+- **Datas de lançamento**: o WebSearch não devolve a data de cada post do
+  changelog oficial. Router/Loop/A/B Test/Social Planner aparecem em
+  roundups de terceiros como fim de outubro/2026 e o Typing Indicator
+  como 10/11/2026; Internal Comment como semana de 12/10. O Client Portal
+  File Uploaded pode ser anterior a setembro — entrou porque não estava
+  no guia, não porque a data foi confirmada.
+- **Nome exato na UI** de "WhatsApp Typing Indicator" e "Internal
+  Comment" (o changelog usa "typing indicator" e "Internal Comment"; pode
+  haver prefixo/variação no builder).
+- **Social Planner Posts**: um guia de terceiros lista mais status
+  (Approval Rejected, Approval Requested, Scheduled). Só os 3 do
+  changelog oficial entraram no painel.
+- **AI Video Generation**: a doc cita ajustes de tamanho e duração do
+  vídeo, mas as opções exatas não vieram na busca — ficaram fora do
+  painel, citadas só no texto.
+- **Categoria no guia**: Client Portal File Uploaded ficou em Cursos
+  (cat06) e Social Planner Posts em TikTok/Facebook/Instagram (cat10)
+  por afinidade — no HL eles ficam em "Client Portal" e "Social
+  Planner". Se preferir categorias próprias, é só pedir.
+
+### 🐛 Drift corrigido nesta rodada
+- `index.html` não tinha sido atualizado quando o gatilho Estimate entrou
+  (17/11): hero ainda dizia 87 gatilhos / 262 painéis / 210 mockups.
+- Os cards de categoria da home estavam com contagem antiga em 9
+  categorias de Ações (cat01 16→19, cat02 29→38, cat04 21→25, cat05
+  10→12, cat06 3→4, cat07 11→13, cat08 5→9, cat09 5→8, cat13 6→8 — os
+  números da direita já incluem os itens novos desta rodada) e em 2 de
+  Gatilhos (cat07 10→11; cat11 5→6 mockups). Agora todo card é
+  recalculado a partir do `search-index.json`.
+- Labels internos das páginas tocadas (hero-stat, side-section-label,
+  meta tags, rodapé) estavam atrás do conteúdo real (ex.: cat02 dizia 29
+  com 37 ações; cat04 dizia 17/21 com 22) — alinhados.
+- Side-nav: `acoes-highlevel-cat05.html` tinha dois links apontando pra
+  `#a8` e o OpenRouter apontando pra `#a9` (corrigido pra a9/a10);
+  `acoes-highlevel-cat01.html` tinha um `</a>` sobrando.
+- **Não corrigido** (fora do escopo desta rodada): páginas não tocadas
+  ainda têm labels internos antigos (ex.: "Categoria NN/14" nos heros das
+  Ações, contagens de cat06–cat09/cat13 de Ações dentro da própria
+  página). Vale uma passada dedicada.
+
+### 🔍 Candidatos encontrados, NÃO aplicados (precisam de validação humana)
+- **User Signup (Client Portal / Memberships)** — gatilho anunciado no
+  changelog oficial ("Introducing User Signup Workflow Trigger for Client
+  Portal"). Não aplicado porque o guia já tem **New Signup** (cat06 G5) e
+  não deu pra confirmar se é um gatilho novo ou a extensão do existente
+  pro novo Client Portal; filtros não documentados.
+  [Changelog](https://ideas.gohighlevel.com/changelog/introducing-user-signup-workflow-trigger-for-client-portal)
+- **User Login** (cat06 G12) — changelog diz que o gatilho agora também
+  dispara pra logins do novo Client Portal. Enhancement, sem campo novo.
+- **Viewed Product / Add to Cart** — gatilhos de e-commerce (Shopify e
+  lojas HighLevel) citados em roundups do LevelUp 2026; filtros só em
+  fonte de terceiros de baixa qualidade, sem changelog oficial achado.
+- **Association Created** — gatilho em beta (LevelUp Day 2026).
+- **Google Sheets** (4 gatilhos: nova planilha, nova aba, linha
+  adicionada, linha atualizada) e **Slack** (5 gatilhos Premium: DM,
+  entrada em canal, menção ao app, mensagem em canal, reação) — nomes
+  exatos e filtros não confirmados.
+- **Managed Agents em Workflows** — roundups dizem que workflows rodam
+  Managed Agents desde ~14/09; nome da ação e campos não confirmados.
+- **Payment Failed / Form Partially Completed / Review Received** —
+  citados em roundups de terceiros sem data nem fonte oficial (o último
+  provavelmente é o New Review Received já documentado em cat02 G16).
+- **AI Analyze Image** — citado por um roundup como ação nova (07/09);
+  provavelmente é o AI Parse Image já documentado (cat05 A2) — conferir
+  se houve rename.
+- **Modelos do AI Agent / GPT actions** — um roundup de terceiros fala em
+  troca de modelos em 23/09; fonte não confiável, nada alterado.
+- **Opportunity Workflows** e **Workflow MCP** — em beta privado.
+- **Typeform, Calendly, Slack (rename), HubSpot, Basecamp, Browse AI,
+  Manus, Monday.com, Jira, Linear, Housecall Pro, Apify, Badge Issued**
+  — pendentes das rodadas anteriores, sem novo detalhe (integrações de
+  terceiros; ficam fora do critério "só nativo" até decisão sua).
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

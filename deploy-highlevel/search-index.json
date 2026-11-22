@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 263,
+  "total": 272,
   "items": [
     {
       "id": "g1",
@@ -806,6 +806,20 @@
       "href": "guia-highlevel-cat06.html#g12"
     },
     {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Arquivo Enviado pelo Client Portal",
+      "en": "Client Portal File Uploaded",
+      "category": "Client Portal",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um contato envia um documento pelo Client Portal, na área de documentos compartilhados (Shared Documents). O cliente pode subir um arquivo ou vários de uma vez (até 10).",
+      "keywords": "arquivo enviado pelo client portal client portal file uploaded upload documento shared documents portal do cliente",
+      "href": "guia-highlevel-cat06.html#g13"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Cobrança (Invoice)",
@@ -1058,6 +1072,20 @@
       "description": "Dispara quando alguém comenta em um vídeo do TikTok conectado à conta. Mesma lógica dos gatilhos de Facebook e Instagram, mas agora para o canal com maior alcance orgânico do momento.",
       "keywords": "comentários do tiktok tiktok comment on a video",
       "href": "guia-highlevel-cat10.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Posts do Social Planner",
+      "en": "Social Planner Posts",
+      "category": "Social Planner",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um post do Social Planner muda de situação — por exemplo quando é aprovado (Approved), publicado com sucesso (Published) ou falha ao publicar (Failed).",
+      "keywords": "posts do social planner social planner posts post aprovado publicado falhou approved published failed",
+      "href": "guia-highlevel-cat10.html#g4"
     },
     {
       "id": "g1",
@@ -1477,6 +1505,20 @@
       "description": "",
       "keywords": "verificação de email email verification",
       "href": "acoes-highlevel-cat01.html#a18"
+    },
+    {
+      "id": "a19",
+      "type": "Ação",
+      "name": "Comentário Interno",
+      "en": "Internal Comment",
+      "category": "Ação",
+      "tags": [
+        "Equipe",
+        "Novo"
+      ],
+      "description": "Publica um comentário interno na conversa do contato quando o workflow passa por esse ponto. O comentário fica visível só pra equipe — nunca é enviado ao contato — e você pode @mencionar usuários pra avisar a pessoa certa direto na thread.",
+      "keywords": "comentário interno internal comment add internal comment conversa menção mention equipe",
+      "href": "acoes-highlevel-cat01.html#a19"
     },
     {
       "id": "a1",
@@ -1953,6 +1995,20 @@
       "href": "acoes-highlevel-cat02.html#a37"
     },
     {
+      "id": "a38",
+      "type": "Ação",
+      "name": "WhatsApp: Indicador de Digitação",
+      "en": "WhatsApp Typing Indicator",
+      "category": "Ação",
+      "tags": [
+        "WhatsApp",
+        "Novo"
+      ],
+      "description": "Mostra a bolha \"digitando...\" pro cliente no WhatsApp antes da sua resposta automática chegar. Coloque a ação em qualquer workflow que responde a uma mensagem recebida no WhatsApp, logo antes do envio.",
+      "keywords": "whatsapp indicador de digitação typing indicator digitando visto read receipt",
+      "href": "acoes-highlevel-cat02.html#a38"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Webhook de Saída",
@@ -2303,6 +2359,49 @@
       "href": "acoes-highlevel-cat04.html#a22"
     },
     {
+      "id": "a23",
+      "type": "Ação",
+      "name": "Router (Roteador)",
+      "en": "Router",
+      "category": "Ação",
+      "tags": [
+        "Lógica",
+        "Novo"
+      ],
+      "description": "Avalia todos os ramos e executa cada um cujas condições batem. É a diferença pro If/Else: o If/Else para no primeiro ramo que casar; o Router manda o contato por todos os ramos que casarem.",
+      "keywords": "router roteador branches ramos múltiplos fallback always run custom rules condição",
+      "href": "acoes-highlevel-cat04.html#a23"
+    },
+    {
+      "id": "a24",
+      "type": "Ação",
+      "name": "Loop (Repetição)",
+      "en": "Loop",
+      "category": "Ação",
+      "tags": [
+        "Lógica",
+        "Novo"
+      ],
+      "description": "Repete as ações que estão dentro dele uma vez pra cada item de uma lista ou uma vez pra cada número de um intervalo. A lista vem de um passo anterior — por exemplo, um array recebido no Webhook de Entrada.",
+      "keywords": "loop repetição repetir iterar lista array range for each loop item sequential parallel",
+      "href": "acoes-highlevel-cat04.html#a24"
+    },
+    {
+      "id": "a25",
+      "type": "Ação",
+      "name": "Teste A/B",
+      "en": "A/B Test",
+      "category": "Ação",
+      "tags": [
+        "Lógica",
+        "Otimização",
+        "Novo"
+      ],
+      "description": "Divide os contatos igualmente entre 2 a 10 caminhos e mede todos contra uma mesma meta de conversão. O caminho com a maior taxa de conversão vira o vencedor.",
+      "keywords": "teste a/b a/b test ab test caminhos paths vencedor winner conversão winning criteria experimento",
+      "href": "acoes-highlevel-cat04.html#a25"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Generate Text (Texto)",
@@ -2438,6 +2537,36 @@
       "description": "",
       "keywords": "openrouter generate response",
       "href": "acoes-highlevel-cat05.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Analisar Vídeo com IA",
+      "en": "AI Analyze Video",
+      "category": "Ação",
+      "tags": [
+        "IA",
+        "Premium",
+        "Novo"
+      ],
+      "description": "Recebe a URL de um vídeo e um prompt dizendo o que a IA deve procurar e como responder — e devolve a resposta pros próximos passos do workflow. Fica em AI Actions.",
+      "keywords": "analisar vídeo com ia ai analyze video análise de vídeo video url prompt",
+      "href": "acoes-highlevel-cat05.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Gerar Vídeo com IA",
+      "en": "AI Video Generation",
+      "category": "Ação",
+      "tags": [
+        "IA",
+        "Premium",
+        "Novo"
+      ],
+      "description": "Cria um vídeo curto com o Veo 3.1 do Google a partir de um prompt, salva na Media Library e devolve a URL pública pros próximos passos — pra mandar por mensagem, gravar num campo ou analisar com o AI Analyze Video.",
+      "keywords": "gerar vídeo com ia ai video generation veo 3.1 geração de vídeo generate audio reference images",
+      "href": "acoes-highlevel-cat05.html#a12"
     },
     {
       "id": "a1",
