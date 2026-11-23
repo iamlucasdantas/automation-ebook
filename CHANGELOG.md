@@ -10,6 +10,35 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-23 — Content
+**Checagem de novidades nativas: +7 ações, +2 gatilhos, home recontada**
+
+Rotina automática comparou o guia contra o changelog e a central de ajuda
+oficiais da HighLevel (via WebSearch — os dois domínios seguem bloqueados
+neste ambiente) em busca de itens nativos lançados desde 2026-09-14.
+Detalhe completo, fontes e pontos a conferir em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-23--checagem-de-novidades-nativas).
+
+- **Ações novas (7):** Router e Loop (`acoes-highlevel-cat04.html` A23/A24);
+  AI Image Generation, AI Video Generation e AI Analyze Video
+  (`acoes-highlevel-cat05.html` A11–A13); Add Internal Comment e WhatsApp
+  Typing Indicator (`acoes-highlevel-cat02.html` A38/A39).
+- **Gatilhos novos (2):** Social Planner Posts (`guia-highlevel-cat10.html`
+  G4) e Association Created, beta/Labs (`guia-highlevel-cat01.html` G13).
+- Os 9 entraram com texto + painel de configuração, sem mockup interativo.
+- **Não aplicados** (faltam nome/filtros exatos): User Signup e Client Portal
+  File Uploaded (gatilhos), gatilhos de e-commerce e Project Management,
+  rename AI Parse Image → AI Analyze Image. Jotform fica na fila de
+  integrações de terceiros.
+- 🐛 **Drift corrigido:** `index.html` ainda não refletia o gatilho Estimate
+  de 17/11 e tinha contagem antiga em 9 cards de Ações; contagens internas
+  de `acoes-highlevel-cat02/04` desatualizadas; dois links da sidebar do
+  `acoes-highlevel-cat05` apontavam pra ação errada.
+- Totais: **90 gatilhos + 182 ações = 272 painéis** (antes 88 + 175 = 263);
+  mockups interativos: 211. `index.html` com totais, cards e "Última
+  atualização: 23 de novembro de 2026". `search-index.json` e
+  `AUDIT-TABLE.md` regenerados; `validate-mockups.js` confirma as 30 páginas.
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 31 | 53 | 3 | **87** |
-| Ações | 39 | 90 | 46 | **175** |
+| Gatilhos | 32 | 53 | 5 | **90** |
+| Ações | 39 | 90 | 53 | **182** |
 
 
 ## Gatilhos · 12 categorias
@@ -31,6 +31,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g10 | [Tarefa Adicionada](guia-highlevel-cat01.html#g10) | Task Added | 4 | 2/6 | 🟡 | [ ] | |
 | g11 | [Lembrete de Tarefa](guia-highlevel-cat01.html#g11) | Task Reminder | 4 | 3/6 | 🟢 | [ ] | |
 | g12 | [Tarefa Completada](guia-highlevel-cat01.html#g12) | Task Completed | 3 | 2/6 | 🟡 | [ ] | |
+| g13 | [Associação Criada](guia-highlevel-cat01.html#g13) | Association Created | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT02 · Integrações & Webhooks
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -102,14 +103,15 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | g1 | [Cobrança (Invoice)](guia-highlevel-cat07.html#g1) | Invoice | 3 | 4/6 | 🟢 | [ ] | |
 | g2 | [Pagamento Recebido](guia-highlevel-cat07.html#g2) | Payment Received | 3 | 3/6 | 🟢 | [ ] | |
-| g3 | [Ordem em Formulário](guia-highlevel-cat07.html#g3) | Order Form Submission | 2 | 3/6 | 🟡 | [ ] | |
-| g4 | [Ordem Submetida](guia-highlevel-cat07.html#g4) | Order Submitted | 3 | 3/6 | 🟢 | [ ] | |
-| g5 | [Documentos e Contratos](guia-highlevel-cat07.html#g5) | Documents & Contracts | 2 | 3/6 | 🟢 | [ ] | |
-| g6 | [Assinatura (Subscription)](guia-highlevel-cat07.html#g6) | Subscription | 3 | 3/6 | 🟢 | [ ] | |
-| g7 | [Reembolso](guia-highlevel-cat07.html#g7) | Refund | 2 | 3/6 | 🟡 | [ ] | |
-| g8 | [Cupom Aplicado](guia-highlevel-cat07.html#g8) | Coupon Code Applied | 2 | 4/6 | 🟡 | [ ] | |
-| g9 | [Limite de Cupom Atingido](guia-highlevel-cat07.html#g9) | Coupon Redemption Limit Reached | 2 | 1/6 | 🟡 | [ ] | |
-| g10 | [Cupom Expirado](guia-highlevel-cat07.html#g10) | Coupon Code Expired | 2 | 2/6 | 🟡 | [ ] | |
+| g3 | [Orçamento (Estimate)](guia-highlevel-cat07.html#g3) | Estimate | 3 | 4/6 | 🟢 | [ ] | |
+| g4 | [Ordem em Formulário](guia-highlevel-cat07.html#g4) | Order Form Submission | 2 | 3/6 | 🟡 | [ ] | |
+| g5 | [Ordem Submetida](guia-highlevel-cat07.html#g5) | Order Submitted | 3 | 3/6 | 🟢 | [ ] | |
+| g6 | [Documentos e Contratos](guia-highlevel-cat07.html#g6) | Documents & Contracts | 2 | 3/6 | 🟢 | [ ] | |
+| g7 | [Assinatura (Subscription)](guia-highlevel-cat07.html#g7) | Subscription | 3 | 3/6 | 🟢 | [ ] | |
+| g8 | [Reembolso](guia-highlevel-cat07.html#g8) | Refund | 2 | 3/6 | 🟡 | [ ] | |
+| g9 | [Cupom Aplicado](guia-highlevel-cat07.html#g9) | Coupon Code Applied | 2 | 4/6 | 🟡 | [ ] | |
+| g10 | [Limite de Cupom Atingido](guia-highlevel-cat07.html#g10) | Coupon Redemption Limit Reached | 2 | 1/6 | 🟡 | [ ] | |
+| g11 | [Cupom Expirado](guia-highlevel-cat07.html#g11) | Coupon Code Expired | 2 | 2/6 | 🟡 | [ ] | |
 
 ### CAT08 · Pré-compra
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -129,6 +131,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | g1 | [Comentários do Facebook](guia-highlevel-cat10.html#g1) | Facebook Comment on a Post | 4 | 4/6 | 🟢 | [ ] | |
 | g2 | [Comentários do Instagram](guia-highlevel-cat10.html#g2) | Instagram Comment on a Post | 4 | 3/6 | 🟢 | [ ] | |
 | g3 | [Comentários do TikTok](guia-highlevel-cat10.html#g3) | TikTok – Comment(s) On A Video | 4 | 2/6 | 🟡 | [ ] | |
+| g4 | [Posts do Social Planner](guia-highlevel-cat10.html#g4) | Social Planner Posts | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT11 · Grupos
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -219,6 +222,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a35 | [Enviar RCS](acoes-highlevel-cat02.html#a35) | Send RCS | 0 | 1/6 | 🔴 | [ ] | |
 | a36 | [Registrar Ligação Externa](acoes-highlevel-cat02.html#a36) | Log External Call | 0 | 3/6 | 🟡 | [ ] | |
 | a37 | [Bot de Agendamento (Conversation AI)](acoes-highlevel-cat02.html#a37) | Appointment Booking Conversation AI Bot | 0 | 2/6 | 🔴 | [ ] | |
+| a38 | [Adicionar Comentário Interno](acoes-highlevel-cat02.html#a38) | Add Internal Comment | 0 | 1/6 | 🔴 | [ ] | |
+| a39 | [WhatsApp: Indicador de Digitação](acoes-highlevel-cat02.html#a39) | WhatsApp Typing Indicator | 0 | 1/6 | 🔴 | [ ] | |
 
 ### CAT03 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -254,6 +259,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a20 | [Formatar Array](acoes-highlevel-cat04.html#a20) | Array Formatter | 2 | 3/6 | 🟡 | [ ] | |
 | a21 | [Formatar Texto](acoes-highlevel-cat04.html#a21) | Text Formatter | 3 | 3/6 | 🟢 | [ ] | |
 | a22 | [Drip (Liberação em Lotes)](acoes-highlevel-cat04.html#a22) | Drip | 0 | 2/6 | 🔴 | [ ] | |
+| a23 | [Router (Roteador)](acoes-highlevel-cat04.html#a23) | Router | 0 | 2/6 | 🔴 | [ ] | |
+| a24 | [Loop (Repetição)](acoes-highlevel-cat04.html#a24) | Loop | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT05 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -268,6 +275,9 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | a8 | [Tradução com IA](acoes-highlevel-cat05.html#a8) | AI Translate | 0 | 2/6 | 🔴 | [ ] | |
 | a9 | [Decisor com IA](acoes-highlevel-cat05.html#a9) | AI Decision Maker | 0 | 2/6 | 🔴 | [ ] | |
 | a10 | [OpenRouter](acoes-highlevel-cat05.html#a10) | OpenRouter: Generate Response | 2 | 3/6 | 🟢 | [ ] | |
+| a11 | [Geração de Imagem com IA](acoes-highlevel-cat05.html#a11) | AI Image Generation | 0 | 2/6 | 🔴 | [ ] | |
+| a12 | [Geração de Vídeo com IA](acoes-highlevel-cat05.html#a12) | AI Video Generation | 0 | 2/6 | 🔴 | [ ] | |
+| a13 | [Analisar Vídeo com IA](acoes-highlevel-cat05.html#a13) | AI Analyze Video | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT06 · Ação
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

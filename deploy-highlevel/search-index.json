@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 263,
+  "total": 272,
   "items": [
     {
       "id": "g1",
@@ -169,6 +169,21 @@
       "description": "Dispara quando uma tarefa é marcada como concluída. Perfeito pra ações de follow-up pós-conclusão — disparar o próximo passo automático assim que o atual é cumprido.",
       "keywords": "tarefa completada task completed",
       "href": "guia-highlevel-cat01.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Associação Criada",
+      "en": "Association Created",
+      "category": "Registros Associados",
+      "tags": [
+        "Tempo real",
+        "Novo",
+        "Beta · Labs"
+      ],
+      "description": "Dispara quando um novo vínculo é criado entre dois registros do CRM — por exemplo, um contato associado a uma empresa, a uma oportunidade ou a um registro de Custom Object.",
+      "keywords": "associação criada association created registros associados custom object empresa oportunidade vínculo label",
+      "href": "guia-highlevel-cat01.html#g13"
     },
     {
       "id": "g1",
@@ -1058,6 +1073,20 @@
       "description": "Dispara quando alguém comenta em um vídeo do TikTok conectado à conta. Mesma lógica dos gatilhos de Facebook e Instagram, mas agora para o canal com maior alcance orgânico do momento.",
       "keywords": "comentários do tiktok tiktok comment on a video",
       "href": "guia-highlevel-cat10.html#g3"
+    },
+    {
+      "id": "g4",
+      "type": "Gatilho",
+      "name": "Posts do Social Planner",
+      "en": "Social Planner Posts",
+      "category": "Social Planner",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara a partir de eventos dos posts do Social Planner — post aprovado, publicado ou que falhou ao publicar. Com ele, a operação de redes sociais entra no workflow: avisar o time, registrar, cobrar aprovação, reagir a falhas.",
+      "keywords": "posts do social planner social planner posts publicação agendada post publicado post falhou aprovado",
+      "href": "guia-highlevel-cat10.html#g4"
     },
     {
       "id": "g1",
@@ -1953,6 +1982,32 @@
       "href": "acoes-highlevel-cat02.html#a37"
     },
     {
+      "id": "a38",
+      "type": "Ação",
+      "name": "Adicionar Comentário Interno",
+      "en": "Add Internal Comment",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "adicionar comentário interno add internal comment internal comment conversa menção equipe",
+      "href": "acoes-highlevel-cat02.html#a38"
+    },
+    {
+      "id": "a39",
+      "type": "Ação",
+      "name": "WhatsApp: Indicador de Digitação",
+      "en": "WhatsApp Typing Indicator",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "whatsapp indicador de digitação typing indicator digitando",
+      "href": "acoes-highlevel-cat02.html#a39"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Webhook de Saída",
@@ -2303,6 +2358,32 @@
       "href": "acoes-highlevel-cat04.html#a22"
     },
     {
+      "id": "a23",
+      "type": "Ação",
+      "name": "Router (Roteador)",
+      "en": "Router",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "router roteador branches ramificação multiplos caminhos if/else",
+      "href": "acoes-highlevel-cat04.html#a23"
+    },
+    {
+      "id": "a24",
+      "type": "Ação",
+      "name": "Loop (Repetição)",
+      "en": "Loop",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "loop repetição iterar lista array range for each",
+      "href": "acoes-highlevel-cat04.html#a24"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Generate Text (Texto)",
@@ -2438,6 +2519,48 @@
       "description": "",
       "keywords": "openrouter generate response",
       "href": "acoes-highlevel-cat05.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Geração de Imagem com IA",
+      "en": "AI Image Generation",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Premium"
+      ],
+      "description": "",
+      "keywords": "geração de imagem com ia ai image generation gerar imagem gpt image gemini",
+      "href": "acoes-highlevel-cat05.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Geração de Vídeo com IA",
+      "en": "AI Video Generation",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Premium"
+      ],
+      "description": "",
+      "keywords": "geração de vídeo com ia ai video generation gerar vídeo veo",
+      "href": "acoes-highlevel-cat05.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Analisar Vídeo com IA",
+      "en": "AI Analyze Video",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Premium"
+      ],
+      "description": "",
+      "keywords": "analisar vídeo com ia ai analyze video análise de vídeo gemini youtube",
+      "href": "acoes-highlevel-cat05.html#a13"
     },
     {
       "id": "a1",

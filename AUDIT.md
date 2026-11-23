@@ -406,6 +406,108 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-11-23 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (88 gatilhos + 175 ações = 263 painéis —
+estado da `main` depois do gatilho Estimate adicionado em 17/11) contra o
+changelog oficial e a central de ajuda da HighLevel em busca de itens
+nativos lançados desde a rodada de 2026-09-14. `help.gohighlevel.com` e
+`ideas.gohighlevel.com` continuam bloqueados por egress direto neste
+ambiente (assim como os blogs de terceiros que resumem o changelog) — a
+checagem leu o conteúdo indiretamente via WebSearch. Nome de cada item e
+campos vêm do changelog/artigo oficial; **nada foi conferido no builder real**.
+
+### ✅ Adicionados nesta rodada (9 itens — fonte oficial confirmada)
+**Ações (7)**
+1. **Router** (`acoes-highlevel-cat04.html` A23) — executa todas as branches
+   que baterem (o If/Else para na primeira). Branches de regra customizada
+   ("Only Continue If": field/operator/value, Add condition / Add rule
+   group), sempre executar e fallback; ordem pela lista Branches.
+   [Changelog](https://ideas.gohighlevel.com/changelog/router-new-workflow-action) ·
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000009512-router-action)
+2. **Loop** (`acoes-highlevel-cat04.html` A24) — Loop Over (A list of items /
+   A range of numbers), Execution Mode (Sequential / Parallel), custom values
+   em Loop Item. [Changelog](https://ideas.gohighlevel.com/changelog/loop-new-workflow-action)
+3. **AI Image Generation** (`acoes-highlevel-cat05.html` A11, Premium) —
+   Model (GPT Image 2, Gemini 3 Pro Image, Gemini 3.1 Flash Image, Gemini 2.5
+   Flash Image), Quality, Prompt, até 5 imagens de referência; saída Image
+   URL / File Path / File Name. [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008497-workflow-action-ai-image-generation)
+4. **AI Video Generation** (`acoes-highlevel-cat05.html` A12) — Model (Veo 3.1
+   Quality / Fast), Prompt; vídeo salvo na Media Library.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000009513-workflow-action-ai-video-generation)
+5. **AI Analyze Video** (`acoes-highlevel-cat05.html` A13) — Video URL, Prompt,
+   Model (dois modelos Gemini: Flash padrão e Flash Lite).
+   [Changelog](https://ideas.gohighlevel.com/changelog/ai-analyze-video-new-workflow-action)
+6. **Add Internal Comment** (`acoes-highlevel-cat02.html` A38) — comentário
+   interno na conversa, com @menção.
+   [Changelog](https://ideas.gohighlevel.com/changelog/conversations-add-internal-comments-using-workflows)
+7. **WhatsApp Typing Indicator** (`acoes-highlevel-cat02.html` A39) — sem
+   configuração própria; dura até a resposta ou ~25s; marca como lida.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000009791-whatsapp-typing-indicator-action-for-workflows)
+
+**Gatilhos (2)**
+8. **Social Planner Posts** (`guia-highlevel-cat10.html` G4) — filtros
+   Category, Platform, Post Status, Post Type, Social Account, Tags.
+   [Changelog](https://ideas.gohighlevel.com/changelog/create-workflows-with-social-planner-posts)
+9. **Association Created** (`guia-highlevel-cat01.html` G13, beta — Labs) —
+   "Association created with" (objeto) + filtro Association label.
+   [Changelog](https://ideas.gohighlevel.com/changelog/association-created-trigger-start-workflows-when-crm-records-are-linked)
+
+Os 9 entraram como bloco de texto + painel de configuração, **sem mockup
+interativo** (mesmo formato do Drip) — o total de mockups segue 211.
+
+### ⚠ Pontos pra conferir no builder (dos 9 itens acima)
+- **Add Internal Comment**: o changelog usa "Add Internal Comment" no título e
+  "Internal Comment" no passo a passo — o rótulo exato no seletor de ações e
+  o rótulo do campo de texto ("Comment") não estão confirmados.
+- **Router**: os três tipos de branch estão confirmados, mas não os rótulos
+  exatos do seletor de tipo — o painel mostra o tipo como nota, não como campo.
+- **AI Analyze Video**: o changelog cita versões específicas dos modelos
+  Gemini; o painel usa só "Gemini Flash / Flash Lite" porque a numeração
+  retornada pela busca não era confiável.
+- **Social Planner Posts**: status oficiais confirmados = Approved, Published,
+  Failed. Um guia de terceiros lista também Scheduled, Approval Requested e
+  Approval Rejected — não incluídos.
+- **AI Image Generation**: opções do campo Quality não confirmadas ("High" no
+  painel é exemplo).
+- **Association Created** ficou em Gatilhos › Contatos por falta de categoria
+  de gatilhos pra objetos/empresas — vale decidir se merece categoria própria.
+
+### 🔍 Candidatos encontrados, NÃO aplicados
+- **User Signup (Client Portal / Memberships)** (gatilho) — dispara no
+  cadastro pelo Client Portal; nenhum filtro documentado.
+  [Changelog](https://ideas.gohighlevel.com/changelog/introducing-user-signup-workflow-trigger-for-client-portal)
+- **Client Portal File Uploaded** (gatilho) — nova categoria "Client Portal"
+  no seletor de gatilhos (junto com User login); filtros não documentados.
+  [Changelog](https://ideas.gohighlevel.com/changelog/workflow-trigger-for-file-uploads-via-client-portal)
+- **Gatilhos de e-commerce** (produto visualizado, adicionado ao carrinho) e
+  **de Project Management** (tarefa adicionada/concluída/lembrete) — citados
+  no post do LevelUp Day 2026, sem nome exato nem filtros.
+- **Rename possível**: nossa "AI Parse Image" (`acoes-highlevel-cat05.html`
+  A2) — a doc oficial agora se chama **AI Analyze Image**
+  ([doc](https://help.gohighlevel.com/support/solutions/articles/155000008506-workflow-action-ai-analyze-image)).
+  Rename afeta a busca da ação, fica pra confirmação humana.
+- **Send SMS em workflows de Custom Object / Company** — extensão de ação já
+  existente, sem detalhe de campo.
+- **Jotform** (integração de terceiros: gatilhos New Submission e New Signed
+  Document + ação Create Submission) — fora do escopo "só nativos", mesma
+  fila de Typeform, Calendly, HubSpot, Basecamp, Browse AI, Manus,
+  Monday.com, Jira, Linear, Housecall Pro e Apify (sem novidade nesta rodada).
+- **Badge Issued / Slack rename** — sem mudança desde 14/09.
+
+### 🐛 Drift corrigido nesta rodada
+- `index.html` não tinha sido atualizado depois do gatilho Estimate (17/11):
+  dizia 87 gatilhos / 262 painéis / 210 mockups e "10 gatilhos" no card de
+  Pagamentos. Além disso, os cards de 9 categorias de Ações mostravam
+  contagens antigas (ex.: Comunicação 29 em vez de 37, Pagamentos 5 em vez de
+  9). Todos os cards agora são recontados a partir do HTML real.
+- `acoes-highlevel-cat02.html` (dizia 29, tinha 37) e
+  `acoes-highlevel-cat04.html` (dizia 17/21, tinha 22): hero, sidebar, meta
+  tags e rodapé corrigidos junto com as adições.
+- `acoes-highlevel-cat05.html`: sidebar tinha dois links apontando pra `#a8`
+  (Decisor com IA e OpenRouter abriam a ação errada) — corrigido pra
+  `#a9`/`#a10`.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
