@@ -2403,6 +2403,10 @@
     <a href="#g11" class="side-link"><span class="side-num">11</span>Lembrete de Tarefa</a>
     <a href="#g12" class="side-link"><span class="side-num">12</span>Tarefa Completada</a>
   </nav>
+  <div class="side-section-label">Associações (Labs)</div>
+  <nav class="side-nav">
+    <a href="#g13" class="side-link"><span class="side-num">13</span>Associação Criada</a>
+  </nav>
 
   <!-- ============================================================
        CTA-FIXO · Card promocional que segue o leitor na sidebar
@@ -2430,11 +2434,11 @@
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 01/12</span>
   <h1 class="hero-title">Tudo que um <em>contato</em> pode fazer para disparar uma automação.</h1>
   <p class="hero-desc">
-    Os gatilhos de contato são a porta de entrada mais comum no HighLevel — quase toda automação começa com algo acontecendo num lead ou cliente. Este guia cobre os 12 gatilhos dessa categoria com <strong>fidelidade total à interface real</strong>: cada campo mostra o tipo correto (Dropdown, Tag Picker, Multi-Select, Toggle), todas as opções dos dropdowns listadas, operadores reais, e a lógica condicional de filtros que aparecem só quando outros são selecionados.
+    Os gatilhos de contato são a porta de entrada mais comum no HighLevel — quase toda automação começa com algo acontecendo num lead ou cliente. Este guia cobre os 13 gatilhos dessa categoria com <strong>fidelidade total à interface real</strong>: cada campo mostra o tipo correto (Dropdown, Tag Picker, Multi-Select, Toggle), todas as opções dos dropdowns listadas, operadores reais, e a lógica condicional de filtros que aparecem só quando outros são selecionados.
   </p>
   <div class="hero-stats">
     <div class="hero-stat">
-      <span class="hero-stat-num">12</span>
+      <span class="hero-stat-num">13</span>
       <span class="hero-stat-label">Gatilhos cobertos</span>
     </div>
     <div class="hero-stat">
@@ -2446,7 +2450,7 @@
       <span class="hero-stat-label">Mockups interativos</span>
     </div>
     <div class="hero-stat">
-      <span class="hero-stat-num">12</span>
+      <span class="hero-stat-num">13</span>
       <span class="hero-stat-label">Painéis HighLevel</span>
     </div>
   </div>
@@ -5634,6 +5638,112 @@
 </div><!-- ═══════════════════════════════════════════════════════════════════════
      RODAPÉ COM TODOS OS CTAs
      ═══════════════════════════════════════════════════════════════════════ -->
+<div class="trigger-block" id="g13" data-name="associação criada association created vínculo registro objeto custom object empresa labs beta">
+  <div class="trigger-head">
+    <div class="trigger-num">13</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Associações entre Registros</div>
+      <h2 class="trigger-name">Associação Criada</h2>
+      <div class="trigger-en">Association Created</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Labs · Beta</span><span class="info-tag">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara quando dois registros do CRM são <strong>vinculados</strong> — ou seja, quando nasce uma nova associação entre eles (ex.: um contato ligado a um imóvel, a uma empresa ou a um registro de Custom Object). Funciona com Contatos, Oportunidades, Custom Objects e Empresas.</p>
+      <p>É um recurso de <strong>Labs</strong>: precisa ativar "Association Created Trigger" em Settings → Labs da subconta antes de o gatilho aparecer no builder. Como está em beta, o comportamento ainda pode mudar.</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case">
+  <div class="use-case-label">Caso 01</div>
+  <div class="use-case-title">Contato ↔ Imóvel</div>
+  <div class="use-case-desc">Corretor vincula o lead a um imóvel → dispara a sequência com os detalhes daquele imóvel.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 02</div>
+  <div class="use-case-title">Contato ↔ Empresa</div>
+  <div class="use-case-desc">Contato associado a uma empresa → notifica o dono da conta e cria tarefa de onboarding.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 03</div>
+  <div class="use-case-title">Label específico</div>
+  <div class="use-case-desc">Só quando o vínculo recebe o label "Decisor" → entra no fluxo de proposta.</div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="filters-grid"><div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Associação criada com</div>
+    <div class="filter-en">Association created with</div>
+    <div class="filter-type required">principal</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Objeto do outro lado do vínculo (ex.: Empresa, Oportunidade, um Custom Object).</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Define qual tipo de vínculo inicia o workflow.</div>
+  </div>
+</div>
+<div class="filter-item">
+  <div class="filter-header">
+    <div class="filter-name">Label da Associação</div>
+    <div class="filter-en">Association label</div>
+    <div class="filter-type">condicional</div>
+  </div>
+  <div class="filter-body">
+    <div class="filter-desc">Adicionado em Add filters — restringe a um label específico da associação.</div>
+    <div class="filter-impact"><strong>Impacto:</strong> Separa vínculos do mesmo objeto com papéis diferentes (ex.: Comprador vs. Proprietário).</div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G13 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é o painel lateral que abre no HighLevel quando você seleciona o gatilho. Só aparecem aqui os campos confirmados na fonte oficial — os valores são exemplos.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> Primeiro ative o gatilho em <strong>Settings → Labs</strong>. Depois escolha o objeto em <strong>Association created with</strong>.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>Association Created</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group"><div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div><input class="hl-input" value="Association Created" readonly></div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-filter-row"><div class="hl-filter-label">Association created with <span class="req">*</span></div><div class="hl-dropdown has-value">Imóveis (Custom Object)</div></div>
+      <div class="hl-filter-row"><div class="hl-filter-label">Association label</div><div class="hl-dropdown has-value">Comprador</div><div class="hl-conditional"><div class="hl-conditional-note">Opcional — adicionado via Add filters</div></div></div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando dois registros do CRM são vinculados. Recurso em Labs (beta). <a href="https://ideas.gohighlevel.com/changelog/association-created-trigger-start-workflows-when-crm-records-are-linked" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Fonte oficial</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div>
 <!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="index.html" class="cat-nav-link prev">
@@ -5650,7 +5760,7 @@
 
   <div class="footer-top">
     <h3>Categoria 01 completa.</h3>
-    <p>12 gatilhos de contato, todos os filtros explicados com impacto prático e mockups visuais reproduzindo a tela do HighLevel. Próximas 12 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
+    <p>13 gatilhos de contato, todos os filtros explicados com impacto prático e mockups visuais reproduzindo a tela do HighLevel. Próximas 12 categorias de gatilhos + 10 de ações seguem o mesmo padrão.</p>
   </div>
 
   <!-- CTA PRINCIPAL: HighLevel 30 dias grátis -->

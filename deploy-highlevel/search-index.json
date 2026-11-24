@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 263,
+  "total": 273,
   "items": [
     {
       "id": "g1",
@@ -169,6 +169,21 @@
       "description": "Dispara quando uma tarefa é marcada como concluída. Perfeito pra ações de follow-up pós-conclusão — disparar o próximo passo automático assim que o atual é cumprido.",
       "keywords": "tarefa completada task completed",
       "href": "guia-highlevel-cat01.html#g12"
+    },
+    {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Associação Criada",
+      "en": "Association Created",
+      "category": "Associações entre Registros",
+      "tags": [
+        "Tempo real",
+        "Labs · Beta",
+        "Novo"
+      ],
+      "description": "Dispara quando dois registros do CRM são vinculados — ou seja, quando nasce uma nova associação entre eles (ex.: um contato ligado a um imóvel, a uma empresa ou a um registro de Custom Object). Funciona com Contatos, Oportunidades, Custom Objects e Empresas.",
+      "keywords": "associação criada association created vínculo registro objeto custom object empresa labs beta",
+      "href": "guia-highlevel-cat01.html#g13"
     },
     {
       "id": "g1",
@@ -806,6 +821,21 @@
       "href": "guia-highlevel-cat06.html#g12"
     },
     {
+      "id": "g13",
+      "type": "Gatilho",
+      "name": "Cadastro de Usuário (Client Portal)",
+      "en": "User Signup",
+      "category": "Conclusão e Atividade",
+      "tags": [
+        "Tempo real",
+        "Client Portal",
+        "Novo"
+      ],
+      "description": "Dispara toda vez que um novo usuário conclui o cadastro pelo Client Portal. No seletor de gatilhos aparece como User Signup (Client Portal / Memberships), na categoria Client Portal — a mesma onde hoje fica o gatilho Login de Usuário.",
+      "keywords": "cadastro de usuário user signup client portal memberships registro portal do cliente",
+      "href": "guia-highlevel-cat06.html#g13"
+    },
+    {
       "id": "g1",
       "type": "Gatilho",
       "name": "Cobrança (Invoice)",
@@ -1202,6 +1232,20 @@
       "description": "Dispara quando um certificado é emitido e enviado a um aluno. Normalmente acionado após \"Produto Completado\" (cat 06), mas pode ser emitido manualmente.",
       "keywords": "certificado enviado certificate issued",
       "href": "guia-highlevel-cat12.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Badge Emitido",
+      "en": "Badge Issued",
+      "category": "Conclusão",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um badge (selo de conquista) é emitido pra um contato — não importa o caminho: emissão manual, pela ação Issue Badge num workflow ou por qualquer outro meio. É o par do gatilho Certificado Enviado, só que pra marcos menores ao longo da jornada.",
+      "keywords": "badge emitido badge issued selo conquista",
+      "href": "guia-highlevel-cat12.html#g2"
     },
     {
       "id": "g1",
@@ -1953,6 +1997,20 @@
       "href": "acoes-highlevel-cat02.html#a37"
     },
     {
+      "id": "a38",
+      "type": "Ação",
+      "name": "WhatsApp: Indicador de Digitação",
+      "en": "WhatsApp Typing Indicator",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "WhatsApp"
+      ],
+      "description": "",
+      "keywords": "whatsapp indicador de digitação typing indicator digitando visto",
+      "href": "acoes-highlevel-cat02.html#a38"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Webhook de Saída",
@@ -2303,6 +2361,34 @@
       "href": "acoes-highlevel-cat04.html#a22"
     },
     {
+      "id": "a23",
+      "type": "Ação",
+      "name": "Router (Roteador)",
+      "en": "Router",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Lógica"
+      ],
+      "description": "",
+      "keywords": "router roteador ramificação branches todas as condições fallback always run",
+      "href": "acoes-highlevel-cat04.html#a23"
+    },
+    {
+      "id": "a24",
+      "type": "Ação",
+      "name": "Loop (Repetição)",
+      "en": "Loop",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Lógica"
+      ],
+      "description": "",
+      "keywords": "loop repetição iterar lista itens intervalo de números for each loop item",
+      "href": "acoes-highlevel-cat04.html#a24"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Generate Text (Texto)",
@@ -2438,6 +2524,36 @@
       "description": "",
       "keywords": "openrouter generate response",
       "href": "acoes-highlevel-cat05.html#a10"
+    },
+    {
+      "id": "a11",
+      "type": "Ação",
+      "name": "Gerar Imagem com IA",
+      "en": "AI Image Generation",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Premium",
+        "Imagem"
+      ],
+      "description": "",
+      "keywords": "gerar imagem com ia ai image generation imagem personalizada gpt image nano banana gemini",
+      "href": "acoes-highlevel-cat05.html#a11"
+    },
+    {
+      "id": "a12",
+      "type": "Ação",
+      "name": "Analisar Imagem com IA",
+      "en": "AI Analyze Image",
+      "category": "Ação",
+      "tags": [
+        "Novo",
+        "Premium",
+        "Visão"
+      ],
+      "description": "",
+      "keywords": "analisar imagem com ia ai analyze image visão vision url imagem leitura",
+      "href": "acoes-highlevel-cat05.html#a12"
     },
     {
       "id": "a1",
@@ -3121,6 +3237,19 @@
       "href": "acoes-highlevel-cat14.html#a1"
     },
     {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Emitir Badge",
+      "en": "Issue Badge",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "emitir badge issue badge selo conquista gamificação",
+      "href": "acoes-highlevel-cat14.html#a2"
+    },
+    {
       "id": "a1",
       "type": "Ação",
       "name": "Criar Contato Google",
@@ -3481,6 +3610,19 @@
       "description": "",
       "keywords": "invocar agente (agent studio) invoke agent in agent studio",
       "href": "acoes-highlevel-cat17.html#a12"
+    },
+    {
+      "id": "a13",
+      "type": "Ação",
+      "name": "Invocar Managed Agent",
+      "en": "Invoke Managed Agent",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "invocar managed agent invoke managed agent agente gerenciado agent studio instruções",
+      "href": "acoes-highlevel-cat17.html#a13"
     }
   ]
 }

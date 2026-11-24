@@ -406,6 +406,126 @@ Nenhum campo foi inventado pra nenhum desses. Igual às rodadas
 anteriores: são integrações nativas reais, mas exigem confirmação humana
 do nome e dos campos exatos antes de virar mockup com fidelidade real.
 
+## 🆕 Rodada 2026-11-24 — Checagem de novidades nativas
+
+Rotina automática comparou o guia (88 gatilhos + 175 ações = 263 painéis,
+estado da `main` em 17/11 — já com o gatilho Estimate) contra o changelog
+oficial da HighLevel em busca de itens nativos lançados desde a rodada de
+2026-09-14. `help.gohighlevel.com`, `ideas.gohighlevel.com` e
+`www.gohighlevel.com` continuam bloqueados por egress direto neste
+ambiente — toda a checagem usou WebSearch pra ler o conteúdo dos posts
+oficiais indiretamente. Só entrou o que tinha nome exato + campos
+confirmados em fonte oficial; onde a fonte não trazia o nome de um campo,
+o campo ficou de fora do painel.
+
+### ✅ Adicionado nesta rodada (3 gatilhos + 7 ações)
+
+**Gatilhos**
+1. **Badge Emitido (Badge Issued)** · `guia-highlevel-cat12.html` G2 —
+   dispara quando um badge é emitido (manual, via Issue Badge ou outro
+   meio); filtro: badge. Resolve o candidato pendente desde 24/08.
+   [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008492-automate-badge-issuance-with-workflows)
+2. **Associação Criada (Association Created)** · `guia-highlevel-cat01.html`
+   G13 — dispara quando dois registros do CRM são vinculados (Contatos,
+   Oportunidades, Custom Objects, Empresas). Campo *Association created
+   with* + filtro *Association label*. **Labs/beta** — precisa ativar em
+   Settings → Labs. [Changelog](https://ideas.gohighlevel.com/changelog/association-created-trigger-start-workflows-when-crm-records-are-linked)
+3. **Cadastro de Usuário (User Signup)** · `guia-highlevel-cat06.html` G13
+   — dispara a cada cadastro bem-sucedido no Client Portal (~20/11/2026).
+   Nenhum filtro documentado no lançamento; o painel mostra só o nome.
+   [Changelog](https://ideas.gohighlevel.com/changelog/introducing-user-signup-workflow-trigger-for-client-portal)
+
+**Ações**
+4. **Router** · `acoes-highlevel-cat04.html` A23 — executa todos os
+   branches que derem match (If/Else para no primeiro). Tipos de branch:
+   Custom rules, Always run, Fallback (~29/10/2026).
+   [Changelog](https://ideas.gohighlevel.com/changelog/router-new-workflow-action)
+5. **Loop** · `acoes-highlevel-cat04.html` A24 — repete as ações internas
+   por item de lista ou por número de intervalo (*Loop Over*); dados em
+   Custom values → Loop Item.
+   [Changelog](https://ideas.gohighlevel.com/changelog/loop-new-workflow-action)
+6. **WhatsApp Typing Indicator** · `acoes-highlevel-cat02.html` A38 —
+   mostra "digitando…" até a resposta chegar ou 25s; marca a mensagem
+   como lida (~10/11/2026).
+   [Changelog](https://ideas.gohighlevel.com/changelog/whatsapp-typing-indicator-action-for-workflows)
+7. **AI Image Generation** · `acoes-highlevel-cat05.html` A11 — Model (4
+   opções), Prompt, até 5 Reference Images; saídas Image URL / File Path /
+   File Name. Premium (~início de 09/2026).
+   [Changelog](https://ideas.gohighlevel.com/changelog/ai-image-generation-action-in-workflows)
+8. **AI Analyze Image** · `acoes-highlevel-cat05.html` A12 — Image URL
+   pública, Prompt, Model, Detail (Auto/High/Low). Premium (~09/2026).
+   [Changelog](https://ideas.gohighlevel.com/changelog/ai-analyze-image-new-workflow-action)
+9. **Issue Badge** · `acoes-highlevel-cat14.html` A2 — emite o badge
+   selecionado, sem duplicar. Mesmo doc do item 1.
+10. **Invoke Managed Agent** · `acoes-highlevel-cat17.html` A13 — passa a
+    tarefa a um Managed Agent publicado (com gatilho "Invoked from a
+    workflow") e segue com a resposta (~14/09/2026).
+    [Doc oficial](https://help.gohighlevel.com/support/solutions/articles/155000008858-workflow-action-invoke-managed-agent)
+
+Totais: **91 gatilhos + 182 ações = 273 painéis** (mockups interativos:
+211 — as 10 entradas novas usam o formato compacto, sem mockup animado,
+igual às adições de 10/08).
+
+### ⚠ Pontos das novas entradas que pedem olho humano
+- **Rótulos de campo aproximados**: a fonte oficial descreve o campo mas
+  o WebSearch não trouxe o rótulo literal em 4 casos — "Badge" (gatilho e
+  ação), "List" (Loop), "Agent"/"Instructions"/"Attachments" (Invoke
+  Managed Agent), "Reference Images" (AI Image Generation). Conferir no
+  builder.
+- **Loop — modo intervalo**: os nomes dos campos de início/fim do
+  intervalo não foram confirmados, então o painel só mostra o modo lista.
+- **AI Analyze Image × AI Parse Image (cat05 A2)**: a HighLevel anunciou
+  Analyze Image como ação *nova*, mas ela cobre o mesmo uso da nossa A2
+  "AI Parse Image". Se A2 não existir mais no builder com esse nome, vale
+  remover/fundir.
+- **Invoke Managed Agent × Invoke Agent in Agent Studio (cat17 A12)**:
+  uma fonte terceira diz que "Super Agents" foram renomeados pra "Managed
+  Agents". Pode ser que A12 e A13 sejam a mesma ação com nome novo —
+  conferir no builder.
+- **AI Analyze Image — modelos**: o lançamento listava GPT-5.6 Luna/Tera;
+  um roundup terceiro diz que modelos GPT-6 substituíram os GPT-5.6 nas
+  ações de IA em 23/09. O painel avisa que a lista pode mudar.
+- **User Signup × New Signup (cat06 G5)**: tratados como gatilhos
+  distintos (portal vs. oferta/produto); confirmar que ambos aparecem.
+
+### 🐛 Drift de contagem corrigido
+- `index.html` estava parado em 87/175/262 desde 14/09 — o gatilho
+  **Estimate** (17/11, PR #22) nunca tinha sido somado. Recontado direto
+  do HTML.
+- Cards de categoria da home estavam defasados em 12 categorias (ex.:
+  Comunicação dizia 29 ações, a página tem 38; Pagamentos 5 → 9). Todos
+  recontados a partir dos blocos reais de cada página.
+- Labels internos (meta tags, sidebar, hero, rodapé) das 8 páginas
+  editadas alinhados com a contagem real (ex.: cat04 dizia 17 e 21 em
+  lugares diferentes; agora 24).
+
+### 🔍 Candidatos encontrados, NÃO aplicados
+- **Slack — 5 gatilhos novos** (New direct message, New mention, New
+  message posted to channel, User invited to channel + um 5º que as
+  fontes divergem: reação com emoji). Premium. Reforça o achado de rename
+  do Slack de 14/09. [Changelog](https://ideas.gohighlevel.com/changelog/slack-integration-5-new-triggers-for-workflows)
+- **Google Sheets — 3 gatilhos** (New spreadsheet, New spreadsheet row,
+  New worksheet). Premium. Nomes confirmados, campos de saída não.
+  [Changelog](https://ideas.gohighlevel.com/changelog/google-sheets-trigger-workflows-from-new-spreadsheets-rows-and-worksheets)
+- **A/B Test (ação)** — anunciada no LevelUp Day (27/10): até 10 caminhos
+  medidos contra uma meta de conversão. Só fonte terceira pros detalhes, e
+  pode ser evolução do nosso Split (cat04 A17) em vez de ação nova.
+- **Jotform** — "New Actions & Triggers in Workflows" (09/2026), sem
+  detalhe.
+- **Workflow Trigger for file uploads via Client Portal** — título de
+  changelog oficial visto, sem data nem campos.
+- **Workflows sem contato** (~20/11): gatilhos de oportunidade e de
+  tarefa passam a rodar sem contato vinculado, e Internal Notification
+  funciona sem contato. Enhancement de itens existentes — só fonte
+  terceira pros detalhes, não apliquei nota.
+- **Pendentes de rodadas anteriores, sem novidade**: Typeform, Calendly,
+  HubSpot, Basecamp, Browse AI, Manus, Monday.com, Jira, Linear, Housecall
+  Pro, Apify.
+
+Integrações de terceiros (Slack, Google Sheets, Jotform etc.) seguem fora
+por decisão de escopo — "somente gatilhos e ações nativos" — até você
+dizer se integrações Premium construídas pela HighLevel contam.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:

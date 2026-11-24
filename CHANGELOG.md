@@ -10,6 +10,34 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-24 — Content
+**Checagem de novidades nativas: +3 gatilhos, +7 ações, recontagem da home**
+
+Rotina automática comparou o guia contra o changelog oficial da HighLevel
+(itens lançados desde 14/09). Detalhe completo, fontes e pontos pra
+revisão em [AUDIT.md](./AUDIT.md#-rodada-2026-11-24--checagem-de-novidades-nativas).
+
+- **Gatilhos novos**: Badge Emitido / Badge Issued (`guia-highlevel-cat12.html`
+  G2), Associação Criada / Association Created — Labs/beta
+  (`guia-highlevel-cat01.html` G13), Cadastro de Usuário / User Signup —
+  Client Portal (`guia-highlevel-cat06.html` G13).
+- **Ações novas**: Router e Loop (`acoes-highlevel-cat04.html` A23/A24),
+  WhatsApp Typing Indicator (`acoes-highlevel-cat02.html` A38), AI Image
+  Generation e AI Analyze Image (`acoes-highlevel-cat05.html` A11/A12),
+  Issue Badge (`acoes-highlevel-cat14.html` A2), Invoke Managed Agent
+  (`acoes-highlevel-cat17.html` A13).
+- Entradas no formato compacto (descrição, casos, configurações, painel
+  HL) — sem mockup animado. Só campos confirmados em fonte oficial.
+- 🐛 **Drift corrigido**: `index.html` não somava o gatilho Estimate
+  (17/11) e 12 cards de categoria estavam com contagem antiga; tudo
+  recontado a partir do HTML real. Labels internos das 8 páginas editadas
+  também alinhados.
+- Totais: **91 gatilhos + 182 ações = 273 painéis** · 211 mockups · 30
+  páginas · `validate-mockups.js` OK · `auto-refine.py --check` 0 drift.
+- `index.html`: "Última atualização" → 24 de novembro de 2026.
+- Não aplicados (ver AUDIT.md): Slack (5 gatilhos), Google Sheets (3
+  gatilhos), A/B Test, Jotform e os pendentes de rodadas anteriores.
+
 ## 2026-09-14 — Content
 **Reconcile Mistral AI removal with concurrent OpenRouter addition**
 

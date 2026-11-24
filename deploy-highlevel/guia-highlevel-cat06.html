@@ -2394,7 +2394,8 @@
 <a href="#g10" class="side-link"><span class="side-num">10</span>Produto Iniciado</a>
 <a href="#g11" class="side-link"><span class="side-num">11</span>Produto Completado</a>
 <a href="#g12" class="side-link"><span class="side-num">12</span>Login de Usuário</a>
-</nav>
+  <a href="#g13" class="side-link"><span class="side-num">13</span>Cadastro no Client Portal</a>
+  </nav>
 
 
   <div class="side-cta-fixed">
@@ -2411,8 +2412,8 @@
 <div class="hero-area">
   <span class="hero-tag">Parte 1 · Gatilhos · Categoria 06/12</span>
   <h1 class="hero-title">Acompanhe cada passo da <em>jornada do aluno</em>.</h1>
-  <p class="hero-desc">Dos primeiros cliques nas aulas até o certificado de conclusão. A categoria Cursos tem 10 gatilhos que monitoram engajamento, progresso e acesso — ideais pra plataformas de curso, memberships, cursos corporativos ou qualquer produto educacional.</p>
-  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">10</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
+  <p class="hero-desc">Dos primeiros cliques nas aulas até o certificado de conclusão. A categoria Cursos tem 13 gatilhos que monitoram engajamento, progresso e acesso — ideais pra plataformas de curso, memberships, cursos corporativos ou qualquer produto educacional.</p>
+  <div class="hero-stats"><div class="hero-stat"><span class="hero-stat-num">13</span><span class="hero-stat-label">Gatilhos cobertos</span></div>
 <div class="hero-stat"><span class="hero-stat-num">25+</span><span class="hero-stat-label">Filtros explicados</span></div>
 <div class="hero-stat"><span class="hero-stat-num">2</span><span class="hero-stat-label">Mockups interativos</span></div>
 </div>
@@ -4602,7 +4603,92 @@
     </div>
   </div>
 
-</div><!-- NAV PREV/NEXT entre categorias -->
+</div><div class="trigger-block" id="g13" data-name="cadastro de usuário user signup client portal memberships registro portal do cliente">
+  <div class="trigger-head">
+    <div class="trigger-num">13</div>
+    <div class="trigger-titles">
+      <div class="trigger-cat">Conclusão e Atividade</div>
+      <h2 class="trigger-name">Cadastro de Usuário (Client Portal)</h2>
+      <div class="trigger-en">User Signup</div>
+      <div class="trigger-tags"><span class="info-tag realtime">Tempo real</span><span class="info-tag">Client Portal</span><span class="info-tag">Novo</span></div>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">O que esse gatilho faz</div>
+    <div class="tblock-content">
+      <p>Dispara toda vez que um novo usuário conclui o cadastro pelo <strong>Client Portal</strong>. No seletor de gatilhos aparece como <strong>User Signup (Client Portal / Memberships)</strong>, na categoria Client Portal — a mesma onde hoje fica o gatilho Login de Usuário.</p>
+      <p>Diferente do gatilho <strong>Novo Cadastro (New Signup)</strong>, que é ligado a uma oferta/produto de curso, este cobre o cadastro no portal em si — útil pra quem usa o Client Portal sem produto de membership (documentos, comunidades, afiliados).</p>
+    </div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Quando usar na operação</div>
+    <div class="use-cases"><div class="use-case">
+  <div class="use-case-label">Caso 01</div>
+  <div class="use-case-title">Boas-vindas ao portal</div>
+  <div class="use-case-desc">Usuário se cadastra → email com o que ele encontra no portal e o link de acesso.</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 02</div>
+  <div class="use-case-title">Onboarding de cliente</div>
+  <div class="use-case-desc">Cadastro concluído → cria tarefa pro time e adiciona tag "Portal ativo".</div>
+</div>
+<div class="use-case">
+  <div class="use-case-label">Caso 03</div>
+  <div class="use-case-title">Aviso interno</div>
+  <div class="use-case-desc">Novo cadastro → notificação interna pro responsável pela conta.</div>
+</div>
+</div>
+  </div>
+
+  <div class="tblock">
+    <div class="tblock-label">Filtros disponíveis</div>
+    <div class="tblock-content">
+      <p>A HighLevel não documentou filtros pra este gatilho no lançamento — ele roda a cada cadastro bem-sucedido no Client Portal. Pra segmentar, use um <strong>If/Else</strong> logo depois do gatilho.</p>
+    </div>
+  </div>
+
+  <!-- ═════════════════════ HL CONFIG PANEL — TRIGGER G13 ═════════════════════ -->
+  <div class="tblock">
+    <div class="tblock-label">⚡ Painel de configuração — fidelidade HighLevel</div>
+    <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 16px; line-height: 1.55;">
+      Esse é o painel lateral que abre no HighLevel quando você seleciona o gatilho. Só aparecem aqui os campos confirmados na fonte oficial — os valores são exemplos.
+    </p>
+    <div class="hl-panel-wrapper">
+      <div class="hl-panel-context">
+        <div class="hl-canvas-hint"><span class='arrow'>→</span> Sem filtro obrigatório: adicione o gatilho, publique o workflow e ele roda a cada cadastro no Client Portal.</div>
+        <div class="hl-panel">
+          <div class="hl-panel-head">
+            <span class="hl-panel-back">←</span>
+            <div class="hl-panel-title">
+              <span class="en">Trigger Configuration</span>
+              <span>User Signup</span>
+            </div>
+          </div>
+          <div class="hl-panel-body">
+      <div class="hl-field-group"><div class="hl-field-label">Workflow Trigger Name <span class="req">*</span></div><input class="hl-input" value="User Signup" readonly></div>
+
+      <div class="hl-section-head">Filters</div>
+
+      <div class="hl-conditional"><div class="hl-conditional-note">Nenhum filtro documentado no lançamento — dispara em todo cadastro bem-sucedido</div></div>
+
+      <button class="hl-add-filter">+ Add Filters</button>
+    </div>
+          <div class="hl-panel-footer">
+            <button class="hl-btn-cancel">Cancel</button>
+            <button class="hl-btn-save">Save Trigger</button>
+          </div>
+        </div>
+      </div>
+      <div class="hl-panel-caption">
+        <strong>Dispara quando um novo usuário se cadastra pelo Client Portal. <a href="https://ideas.gohighlevel.com/changelog/introducing-user-signup-workflow-trigger-for-client-portal" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">Fonte oficial</a></strong>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- NAV PREV/NEXT entre categorias -->
 <nav class="cat-nav">
   <a href="guia-highlevel-cat05.html" class="cat-nav-link prev">
     <span class="cat-nav-label">← Anterior · Categoria 05</span>
@@ -4617,7 +4703,7 @@
 <div class="guide-footer">
   <div class="footer-top">
     <h3>Categoria 06 completa.</h3>
-    <p>12 gatilhos de Cursos explicados com impacto prático e mockups visuais.</p>
+    <p>13 gatilhos de Cursos explicados com impacto prático e mockups visuais.</p>
   </div>
 
   <div class="footer-main-cta">
