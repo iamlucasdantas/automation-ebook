@@ -10,8 +10,8 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 ## Resumo
 | Tipo | 🟢 Alta | 🟡 Média | 🔴 Baixa | **Total** |
 |------|--------:|--------:|--------:|----------:|
-| Gatilhos | 32 | 53 | 18 | **103** |
-| Ações | 40 | 89 | 57 | **186** |
+| Gatilhos | 32 | 53 | 19 | **104** |
+| Ações | 40 | 89 | 58 | **187** |
 
 
 ## Gatilhos · 12 categorias
@@ -160,6 +160,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | g1 | [Certificado Enviado](guia-highlevel-cat12.html#g1) | Certificate Issued | 3 | 2/6 | 🟡 | [ ] | |
+| g2 | [Badge Emitido](guia-highlevel-cat12.html#g2) | Badge Issued | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT13 · Contatos Google
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
@@ -384,6 +385,7 @@ _Use a coluna `Verificar` pra marcar `[x]` conforme você confere contra o HL re
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |
 |---|-----------|-----------|------------:|---------:|:-----:|:---------:|-------|
 | a1 | [Emitir Certificado](acoes-highlevel-cat14.html#a1) | Issue Certificate | 4 | 3/6 | 🟢 | [ ] | |
+| a2 | [Emitir Badge](acoes-highlevel-cat14.html#a2) | Issue Badge | 0 | 2/6 | 🔴 | [ ] | |
 
 ### CAT15 · Contatos Google
 | # | Nome (PT) | Nome (EN) | Click panel | HL panel | Conf. | Verificar | Notas |

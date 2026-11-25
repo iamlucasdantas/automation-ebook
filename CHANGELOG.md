@@ -10,6 +10,38 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-25 — Content
+**Rodada 2026-11-25: +1 gatilho (Badge Issued), +1 ação (Issue Badge), 2 atualizações em itens existentes (289 → 291)**
+
+Checagem do guia contra o changelog oficial da HighLevel. Detalhe em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-25--checagem-de-novidades-nativas).
+
+- **Novo gatilho:** **Badge Emitido (Badge Issued)** ·
+  `guia-highlevel-cat12.html` G2. Filtro: Badge.
+- **Nova ação:** **Emitir Badge (Issue Badge)** ·
+  `acoes-highlevel-cat14.html` A2. Campo: Badge. Fontes:
+  [changelog oficial](https://ideas.gohighlevel.com/changelog/badge-automation-is-now-available-in-workflows)
+  e [artigo oficial](https://help.gohighlevel.com/support/solutions/articles/155000008492-automate-badge-issuance-with-workflows).
+  Os dois entram sem mockup animado; vieram da rodada de 24/11, que tinha
+  ficado numa branch separada.
+- **Atualização em gatilho existente:** **Custom Date Reminder** ·
+  `guia-highlevel-cat01.html` G7 — em lembretes de campo de data da
+  Oportunidade, os dados da oportunidade ficam disponíveis sem Find
+  Opportunity ([changelog de 24/11/2026](https://ideas.gohighlevel.com/changelog/custom-date-reminders-access-opportunity-details-natively-no-find-opportunity-ne)).
+- **Atualização em ações existentes:** **Create Contact** (A1) e
+  **Update Contact Field** (A3) · `acoes-highlevel-cat01.html` — campos
+  Date-Time aceitam valor dinâmico (Standard/Dynamic)
+  ([changelog oficial](https://ideas.gohighlevel.com/changelog/workflows-populate-date-time-contact-fields-with-dynamic-values)).
+- `index.html`: 103 → **104 gatilhos** · 186 → **187 ações** · 289 →
+  **291 painéis** · 211 mockups; cards Certificados (gatilhos e ações)
+  1 → 2; "Última atualização: 25 de novembro de 2026".
+- Base desta rodada: a linha acumulada de 12–21/11
+  (`claude/friendly-meitner-pvi7hr`), não a `main`. As rodadas de 22, 23
+  e 24/11 tinham recomeçado da `main` e não trouxeram nada além dos dois
+  itens de Badge.
+- ⚠ Ainda **sem merge na `main`** — o site publicado segue mostrando
+  87 gatilhos + 175 ações.
+
 ## 2026-11-21 — Content
 **Rodada 2026-11-21: +1 gatilho nativo (User Signup do Portal do Cliente) e Internal Notification sem contato (288 → 289)**
 

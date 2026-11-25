@@ -1,6 +1,6 @@
 {
   "generated_at": null,
-  "total": 289,
+  "total": 291,
   "items": [
     {
       "id": "g1",
@@ -1372,6 +1372,20 @@
       "description": "Dispara quando um certificado é emitido e enviado a um aluno. Normalmente acionado após \"Produto Completado\" (cat 06), mas pode ser emitido manualmente.",
       "keywords": "certificado enviado certificate issued",
       "href": "guia-highlevel-cat12.html#g1"
+    },
+    {
+      "id": "g2",
+      "type": "Gatilho",
+      "name": "Badge Emitido",
+      "en": "Badge Issued",
+      "category": "Conclusão",
+      "tags": [
+        "Tempo real",
+        "Novo"
+      ],
+      "description": "Dispara quando um badge (selo de conquista) é emitido pra um contato — não importa o caminho: emissão manual, pela ação Issue Badge num workflow ou por qualquer outro meio. É o par do gatilho Certificado Enviado, só que pra marcos menores ao longo da jornada.",
+      "keywords": "badge emitido badge issued selo conquista",
+      "href": "guia-highlevel-cat12.html#g2"
     },
     {
       "id": "g1",
@@ -3439,6 +3453,19 @@
       "description": "",
       "keywords": "emitir certificado issue certificate",
       "href": "acoes-highlevel-cat14.html#a1"
+    },
+    {
+      "id": "a2",
+      "type": "Ação",
+      "name": "Emitir Badge",
+      "en": "Issue Badge",
+      "category": "Ação",
+      "tags": [
+        "Novo"
+      ],
+      "description": "",
+      "keywords": "emitir badge issue badge selo conquista gamificação",
+      "href": "acoes-highlevel-cat14.html#a2"
     },
     {
       "id": "a1",

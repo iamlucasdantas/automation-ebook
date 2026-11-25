@@ -848,13 +848,70 @@ Feita em cima da branch de 20/11 e gravada em
 `claude/friendly-meitner-pvi7hr`. Nada disso está na `main` ainda: o
 site publicado continua mostrando 87 gatilhos + 175 ações até o merge.
 
+## 🆕 Rodada 2026-11-25 — Checagem de novidades nativas
+
+Comparação do guia (103 gatilhos + 186 ações = 289 painéis) contra o
+changelog oficial da HighLevel. `ideas.gohighlevel.com` e
+`help.gohighlevel.com` continuam bloqueados pra acesso direto neste
+ambiente — a verificação foi feita via WebSearch, que devolve resumos
+dessas páginas. Nada foi conferido dentro do Workflow Builder.
+
+### ✅ Adicionado nesta rodada (fonte oficial confirmada)
+
+- **Badge Issued** (gatilho) → `guia-highlevel-cat12.html` G2.
+- **Issue Badge** (ação) → `acoes-highlevel-cat14.html` A2.
+
+Fontes: [Badge automation is now available in Workflows](https://ideas.gohighlevel.com/changelog/badge-automation-is-now-available-in-workflows)
+e [Automate Badge Issuance with Workflows](https://help.gohighlevel.com/support/solutions/articles/155000008492-automate-badge-issuance-with-workflows).
+Resolve o candidato "Badge Issued / Issue Badge" pendente desde 24/08.
+O gatilho dispara pra qualquer forma de emissão (manual, pela ação ou
+outro meio); os badges precisam existir na conta.
+
+- ⚠ O rótulo literal do campo/filtro não veio na fonte: o artigo diz
+  "Select the Badge to Issue" na ação e não lista os filtros do gatilho.
+  Os painéis mostram um único campo "Badge". Conferir no builder.
+- Sem mockup animado nos dois.
+
+Totais: **104 gatilhos + 187 ações = 291 painéis** · **211** mockups.
+
+### ✅ Aplicado nesta rodada (enhancements a itens já existentes)
+
+- **Custom Date Reminder** (`guia-highlevel-cat01.html` G7) — [changelog
+  de 24/11/2026](https://ideas.gohighlevel.com/changelog/custom-date-reminders-access-opportunity-details-natively-no-find-opportunity-ne):
+  em lembretes de campo de data da Oportunidade, os campos da
+  oportunidade aparecem no seletor de custom values (menu Opportunity)
+  sem Find Opportunity. Só texto.
+- **Create Contact / Update Contact Field**
+  (`acoes-highlevel-cat01.html` A1 e A3) — [Workflows: Populate Date-Time
+  Contact Fields with Dynamic Values](https://ideas.gohighlevel.com/changelog/workflows-populate-date-time-contact-fields-with-dynamic-values):
+  campos Date-Time aceitam valor dinâmico. Só texto, sem data na nota:
+  um resumo aponta 24/11, o índice do changelog indica cerca de 61 dias
+  atrás.
+
+### 🔍 Candidatos NÃO aplicados
+
+Sem mudança: Inbound Webhook com ações sugeridas, 5 gatilhos do Slack,
+Register for Ticketed Event / Register for RSVP Event, Payment Failed,
+Form Partially Completed. As entradas do changelog de 22 e 23/11 que a
+busca devolveu não são de workflow (Media Library em Managed Agents).
+
+### ⚠ Processo
+
+Feita em cima da linha acumulada de 12–21/11
+(`claude/friendly-meitner-pvi7hr`) e gravada em
+`claude/friendly-meitner-a2wuvs`. As rodadas de 22, 23 e 24/11
+recomeçaram da `main` e ficaram com 272–273 painéis cada; tudo o que
+elas tinham já estava na linha acumulada, exceto os dois itens de Badge,
+trazidos agora. Nada disso está na `main`: o site publicado continua em
+87 gatilhos + 175 ações.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
 
 1. **Você abre HL** e valida os ~15 itens ⚠ dos rounds anteriores + os
    candidatos 🔍 acumulados (Typeform, Calendly, HubSpot, Basecamp,
-   Browse AI, Manus, Badge Issued, Monday.com, Jira, Linear, Housecall
+   Browse AI, Manus, Monday.com, Jira, Linear, Housecall
    Pro, Apify) + o achado de rename do Slack — confirmar nome real do
    campo / da action antes de qualquer um virar mockup.
 2. Me diz quais aplicar
