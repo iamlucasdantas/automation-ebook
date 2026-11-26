@@ -10,6 +10,29 @@ For full diffs, follow the commit hash link or browse the PR.
 
 ---
 
+## 2026-11-26 — Content
+**Rodada 2026-11-26: nenhum gatilho ou ação nova; notas de Project Management em 4 itens de Tarefa (291 painéis, sem mudança)**
+
+Checagem do guia contra o changelog oficial da HighLevel. Detalhe em
+[AUDIT.md](./AUDIT.md#-rodada-2026-11-26--checagem-de-novidades-nativas).
+
+- **Nenhum gatilho ou ação nativa nova** desde a rodada de 25/11. A busca
+  não devolveu entrada de workflow datada de 25 ou 26/11.
+- **Atualização em itens existentes (só texto):** os gatilhos **Task
+  Added**, **Task Reminder** e **Task Completed**
+  (`guia-highlevel-cat01.html` G10–G12) e a ação **Add Task**
+  (`acoes-highlevel-cat01.html` A11) ganharam uma nota sobre o uso com o
+  **Project Management** do HighLevel (Space / Folder / List, Status,
+  Assignee, Priority). Fonte: [artigo oficial](https://help.gohighlevel.com/support/solutions/articles/155000009157)
+  (modificado em 30/10/2026; ainda não estava refletido no guia).
+- `index.html`: contagens conferidas e mantidas — **104 gatilhos** ·
+  **187 ações** · **291 painéis** · 211 mockups; "Última atualização:
+  26 de novembro de 2026".
+- Base: `claude/friendly-meitner-a2wuvs` (rodada de 25/11). Gravada em
+  `claude/friendly-meitner-ol2tsv`.
+- ⚠ Ainda **sem merge na `main`** — o site publicado segue mostrando
+  87 gatilhos + 175 ações. O PR #23 aberto cobre só até 13/11.
+
 ## 2026-11-25 — Content
 **Rodada 2026-11-25: +1 gatilho (Badge Issued), +1 ação (Issue Badge), 2 atualizações em itens existentes (289 → 291)**
 

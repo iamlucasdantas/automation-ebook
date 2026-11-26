@@ -905,6 +905,59 @@ elas tinham já estava na linha acumulada, exceto os dois itens de Badge,
 trazidos agora. Nada disso está na `main`: o site publicado continua em
 87 gatilhos + 175 ações.
 
+## 🆕 Rodada 2026-11-26 — Checagem de novidades nativas
+
+Comparação do guia (104 gatilhos + 187 ações = 291 painéis) contra o
+changelog oficial da HighLevel. `ideas.gohighlevel.com` continua
+bloqueado pra acesso direto neste ambiente — a verificação foi feita via
+WebSearch, que devolve resumos dessas páginas. Nada foi conferido dentro
+do Workflow Builder.
+
+### ✅ Itens novos
+
+Nenhum. A busca não devolveu entrada de workflow datada de 25 ou 26/11;
+as mais recentes continuam sendo as duas de 24/11, já aplicadas ontem.
+Todos os nomes que voltaram nas buscas (User Signup, Client Portal File
+Uploaded, User Login, 4 gatilhos de Communities, Scheduler, Inbound
+Email, User Replied, Estimates, Create Appointment Note, Log External
+Call, Merge Contact, Email Verification, AI Extract Data, Send Live Chat
+Message, Badge Issued / Issue Badge) já estão no guia.
+
+Totais mantidos: **104 gatilhos + 187 ações = 291 painéis** · **211** mockups.
+
+### ✅ Aplicado nesta rodada (enhancement a itens já existentes)
+
+- **Task Added / Task Reminder / Task Completed**
+  (`guia-highlevel-cat01.html` G10–G12) e **Add Task**
+  (`acoes-highlevel-cat01.html` A11) — [HighLevel Project Management
+  Workflow Triggers & Actions](https://help.gohighlevel.com/support/solutions/articles/155000009157)
+  (modificado em 30/10/2026). O artigo lista os três gatilhos e a ação
+  Add Task pro Project Management: Add Task com Space, Folder (opcional),
+  List, Status, Assignee, Priority (Urgent/High/Medium/Low), datas,
+  descrição e campos personalizados; Task Reminder por data de
+  vencimento, de início ou campo personalizado. Só texto.
+  - ⚠ Os nomes são iguais aos dos itens que já existem, então entraram
+    como nota e não como itens novos. Conferir no builder se o Add Task
+    de Project Management é a mesma ação ou uma ação separada na lista —
+    se for separada, vira +1 ação (e possivelmente +3 gatilhos).
+  - ⚠ Os filtros exatos de Task Added e Task Completed não vieram na
+    fonte; as notas só repetem o que o resumo do artigo diz.
+
+### 🔍 Candidatos NÃO aplicados
+
+Sem mudança em relação a 25/11: Inbound Webhook com ações sugeridas,
+5 gatilhos do Slack, Register for Ticketed Event / Register for RSVP
+Event, Payment Failed, Form Partially Completed. Integrações de
+terceiros (Klaviyo, Cal.com, Todoist, Linear, Jira, Asana etc.) seguem
+fora do escopo.
+
+### ⚠ Processo
+
+Feita em cima de `claude/friendly-meitner-a2wuvs` (rodada de 25/11) e
+gravada em `claude/friendly-meitner-ol2tsv`. Nada disso está na `main`:
+o site publicado continua em 87 gatilhos + 175 ações. O PR #23 aberto
+aponta pra uma branch que parou em 13/11.
+
 ## Como agora prossegue
 
 A auditoria automática está completa. Os próximos passos são humanos:
